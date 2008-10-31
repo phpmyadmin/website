@@ -8,7 +8,7 @@
         <p>Released ${theme.date}, see <a href="${theme.notes}">release notes</a> for details.</p>
         <ul class="dl">
             <py:for each="file in theme.files">
-            <li><a href="${file.url}">${file.name}</a> (${file.size} bytes, ${file.dlcount} downloads</li>
+            <li><a href="${file.url}">${file.name}</a> (${file.size} bytes, ${file.dlcount} downloads)</li>
             </py:for>
         </ul> 
     </py:for>
