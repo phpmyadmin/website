@@ -1,0 +1,32 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2006-1<br />
+Date: 2006-04-06<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS vulnerabilities
+</p>
+<p>
+<b>Description</b>:<br />
+It was possible to conduct an XSS attack with a direct call to some scripts under the themes directory. We wish to thank Toni Koivunen/CERT-FI for this advisory. 
+<br />
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+All previous versions that support theming are affected.
+</p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.8.0.3 for the fixes in the two included themes. New versions of the custom themes will be posted on our themes download page.
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

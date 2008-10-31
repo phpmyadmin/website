@@ -1,0 +1,57 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2005-1<br />
+Date: 2005-02-25
+</p>
+<p>
+<b>Summary</b>:<br />
+A variable injection vulnerability was found in phpMyAdmin, that may allow an attacker to conduct Cross-site scripting (XSS) attacks and / or perform remote file inclusion.
+</p>
+<p>
+<b>Description</b>:<br />
+We received two bug reports by Maksymilian Arciemowicz about those vulnerabilities and we wish to thank him for his work.
+<br />
+The vulnerabilities apply to those points:
+<ol>
+ <li>
+css/phpmyadmin.css.php was vulnerable against $cfg and GLOBALS variable injections. This way, a possible attacker could manipulate any configuration parameter. Using phpMyAdmin's theming mechanism, he was able to include arbitrary files. This is especially dangerous if php is not running in safe mode.
+ </li>
+ <li>
+A possible attacker could manipulate phpMyAdmin's localized strings via the URL and inject harmful JavaScript code this way, which could be used for XSS attacks.
+ </li>
+</ol>
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider both vulnerabilities to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Because the theming mechanism was used to perform the remote file inclusion, only the 2.6 branch is affected. Regarding the XSS attacks, we have to assume that all versions down to 1.3.1 are affected.
+</p>
+<p>
+<b>Unaffected versions</b>:<br />
+CVS HEAD, QA_2_6_0 and QA_2_6_1 have been fixed. The current version, 2.6.1-pl2, should not be vulnerable, either - as long as phpMyAdmin is run with "register_globals = off".
+</p>
+<p>
+<b>Solution</b>:<br />
+We strongly advise everyone to upgrade to phpMyAdmin 2.6.1-pl2 or later and to disable register_globals at least for the phpMyAdmin directory.
+</p>
+<p>
+<b>References</b>:<br />
+<a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1149381&group_id=23067&atid=377408">
+http://sourceforge.net/tracker/index.php<br />?func=detail&aid=1149381&group_id=23067&atid=377408
+</a>
+
+<a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1149383&group_id=23067&atid=377408">
+http://sourceforge.net/tracker/index.php<br />?func=detail&aid=1149383&group_id=23067&atid=377408
+</a>
+<br />
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

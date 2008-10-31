@@ -1,0 +1,40 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2006-5<br />
+Date: 2006-10-01<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSRF (Cross Site Request Forgery) vulnerabilities
+</p>
+<p>
+<b>Description</b>:<br />
+We received a security advisory from Stefan Esser (sesser@hardened-php.net) and we wish to thank him for his work.
+<br />
+<br />
+It was possible to inject arbitrary SQL commands by forcing an authenticated user to follow a crafted link.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+At least versions since 2.8.2.x.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.9.0.1 or newer.
+</p>
+<p>
+<b>References:</b><br />
+(will follow)
+<br />
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

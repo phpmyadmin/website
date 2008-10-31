@@ -1,0 +1,34 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2007-4<br />
+Date: 2007-04-24<br />
+Updated: 2007-05-17 (real name of reporter)<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS vulnerabilities
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Lukasz Plonka "sp3x" (SecurityReason) and we wish to thank him for his work.<br /><br />
+It was possible to trigger these attacks on various scripts due to shortcomings in the JavaScript code detection.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Probably all versions to 2.10.0.2.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.10.1 or newer.
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

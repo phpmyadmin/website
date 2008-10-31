@@ -1,0 +1,38 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-4<br />
+Date: 2008-06-23<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS on plausible insecure PHP installation
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Tim Starling (Wikimedia), and we wish to thank him for his work. Some scripts in the /libraries directory were vulnerable to XSS. 
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Mitigation factor:</b><br />
+We were able to reproduce this only on systems where both of these conditions are true: the PHP register_globals setting is "on" and the web server does not apply the settings contained in the .htaccess file that we placed in /libraries.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.7. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.7 or newer.
+</p>
+<b>References:</b><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11326">Revision 11326</a><br />
+<p>
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

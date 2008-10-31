@@ -1,0 +1,42 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-3<br />
+Date: 2008-04-22<br />
+Updated: 2008-04-27<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+File disclosure on shared hosts via a crafted HTTP POST request. 
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Cezary Tomczak, and we wish to thank him for his work. It is possible to read the contents of any file that the web server's user can access. The exact mechanism to achieve this won't be disclosed.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Mitigation factor:</b><br />
+If a user can upload on the same host where phpMyAdmin is running, a PHP script that can read files with the rights of the web server's user, the current advisory does not describe an additional threat.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.5.2. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.5.2 or newer.
+</p>
+<b>References:</b><br />
+<a href="http://code.gosu.pl/pma_bug.html">Cezary Tomczak's advisory</a><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11205">Revision 11205</a><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11211">Revision 11211</a><br />
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1924">CVE-2008-1924</a></p>
+<p>
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

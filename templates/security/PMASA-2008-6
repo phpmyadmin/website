@@ -1,0 +1,38 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-6<br />
+Date: 2008-07-28<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+Cross-site Framing; XSS in setup.php
+</p>
+<p>
+<b>Description</b>:<br />
+We received two advisories from Aung Khant (YGN Ethical Hacker Group), and we wish to thank him for his work. It was permitted to display phpMyAdmin's frames
+inside another page, opening phishing or fooling possibilities; now, a parameter AllowThirdPartyFraming must be set to true in config.inc.php to allow this behavior. Also, XSS was possible for someone who could overwrite config/config.inc.php during the time this file is present in this directory. 
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. See YGN's advisories for
+some mitigation factors.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.8. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.8 or newer.
+</p>
+<b>References:</b><br />
+These advisories are available from the reporter:<br />
+<a href="http://yehg.net/lab/pr0js/advisories/Cross-Site_Framing_inphpMyAdmin2.11.7.pdf">http://yehg.net/lab/pr0js/advisories/Cross-Site_Framing_inphpMyAdmin2.11.7.pdf</a>
+<a href="http://yehg.net/lab/pr0js/advisories/XSS_inPhpMyAdmin2.11.7.pdf">http://yehg.net/lab/pr0js/advisories/XSS_inPhpMyAdmin2.11.7.pdf</a>
+<p>
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

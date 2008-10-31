@@ -1,0 +1,39 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2007-5<br />
+Date: 2007-10-15<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS vulnerability
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Omer Singer, The DigiTrust Group, and we wish to thank him for his work.<br /><br />
+It was possible to trigger this attack on setup.php.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious; however, we could only trigger it when using Internet Explorer with the 'send URLs as UTF8' setting disabled. The default value of this setting being 'enabled' reduces the impact of this problem.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Probably all versions before 2.11.1.1. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.1.1 or newer.
+</p>
+<p>
+<b>References:</b><br />
+<a href="http://www.securityfocus.com/bid/26020/info">http://www.securityfocus.com/bid/26020/info</a><br />
+A patch is referenced here:
+<a href="https://sourceforge.net/tracker/index.php?func=detail&aid=1810629&group_id=23067&atid=377408">https://sourceforge.net/tracker/index.php?func=detail&aid=1810629&group_id=23067&atid=377408</a>
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

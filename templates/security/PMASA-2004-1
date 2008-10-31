@@ -1,0 +1,58 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2004-1<br />
+Date: 2004-06-29
+</p>
+<p>
+<b>Summary</b>:<br />
+When faking table with specific name, an attacker can make phpMyAdmin
+to execute arbitrary php code and add custom server configuration.
+</p>
+<p>
+<b>Description</b>:<br />
+phpMyAdmin used eval function to fill some values and one parameter
+used there was table name. When specifying specially formatted table
+name, this could lead to eval attacker code. However this requires also
+a modified MySQL server, that will return these table names, as normally
+MySQL doesn't allow it. With conjunction to not checking input variables,
+attacker can make phpMyAdmin use patched MySQL server he wants.
+</p>
+<p>
+<b>Severity</b>:<br />
+Default configuration is not affected by this issue, it can happen only
+when $cfg['LeftFrameLight'] is FALSE. When this condition is met,
+attacker can execute arbitrary php code which is shipped by his patched
+MySQL version. If php is running in safe mode or there is firewall not
+allowing outgoing connections to outside machines, this issue can not
+cause any harm. As this can cause serious problems, we consider this
+issue as critical.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+All releases starting with 2.5.1 up to and including 2.5.7.
+</p>
+<p>
+<b>Unaffected versions</b>:<br />
+All releases older than 2.5.1.
+CVS HEAD has been fixed.
+The upcoming 2.5.7-pl1 release.
+</p>
+<p>
+<b>Solution</b>:<br />
+If you are vulnerable to this issue, we recommend to enable light left
+frame mode, which disables eval code. We strongly advise everyone to
+upgrade to CVS HEAD or to the next version of phpMyAdmin, which is to be
+released soon.
+</p>
+<p>
+<b>References</b>:<br />
+<a href="http://www.securityfocus.com/archive/1/367486">
+http://www.securityfocus.com/archive/1/367486</a>
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

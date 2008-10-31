@@ -1,0 +1,45 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2005-5<br />
+Date: 2005-10-22<br />
+Updated: 2005-10-25 (reference from T.K.)
+</p>
+<p>
+<b>Summary</b>:<br />
+(1) Local file inclusion vulnerability and (2) Cross-Site Scripting vulnerability
+</p>
+<p>
+<b>Description</b>:<br />
+We received a security advisory from Stefan Esser (sesser@hardened-php.net) about (1). We received a security advisory from Tobias Klein (tk@trapkit.de) about (2). We wish to thank both of them for their work.
+<br />
+<br />
+(1) : Due to the sequence of execution in the code that gets form parameters in some scripts, it was possible to craft a special attack form that overwrites configuration parameters.
+<br />
+<br />
+(2) : Some scripts were vulnerable to XSS attacks: left.php, queryframe.php and server_databases.php.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. However, (1) can be exploited only on systems not running in PHP safe mode (unless a deliberate hole was opened by including in open_basedir some paths containing sensitive data).
+</p>
+<p>
+<b>Affected versions</b>:<br />
+We did not make an extensive verification on this. Probably all previous versions.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.6.4-pl3 or newer.
+</p>
+<p>
+<b>References:</b><br />
+For (1): <a href="http://www.hardened-php.net/advisory_162005.73.html">http://www.hardened-php.net/advisory_162005.73.html</a>
+<br />
+For (2): <a href="http://www.trapkit.de/advisories/TKADV2005-10-001.txt">http://www.trapkit.de/advisories/TKADV2005-10-001.txt</a>
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

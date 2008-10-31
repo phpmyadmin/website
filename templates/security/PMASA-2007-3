@@ -1,0 +1,40 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2007-3<br />
+Date: 2007-03-02<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+PHP Executor Deep Recursion Stack Overflow
+</p>
+<p>
+<b>Description</b>:<br />
+Stefan Esser from the Hardened-PHP Project is publishing the Month of PHP Bugs. One of these PHP bugs can be triggered by phpMyAdmin which uses a recursive function in its normal operation.<br /><br />
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+All versions prior to 2.10.0.2.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.10.0.2 or newer. Note that upgrading phpMyAdmin does not protect a server against an attacker that targets other vulnerable PHP applications.
+</p>
+<p>
+<b>Patches:</b><br />
+Patches are available in this tracker:<a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1671813&group_id=23067&atid=377408">http://sourceforge.net/tracker/index.php?func=detail&aid=1671813&group_id=23067&atid=377408</a>
+</p>
+<p>
+<b>Reference:</b><br />
+<a href="http://www.php-security.org/MOPB/MOPB-02-2007.html">http://www.php-security.org/MOPB/MOPB-02-2007.html</a>
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

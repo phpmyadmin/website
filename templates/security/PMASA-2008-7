@@ -1,0 +1,36 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-7<br />
+Date: 2008-09-15<br />
+Updated: 2008-09-17 (CVE id)<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+Code execution vulnerability
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Norman Hippert and we wish to thank him for his work. The <tt>server_databases.php</tt> script was vulnerable to an attack coming from a user who is already logged-on to phpMyAdmin, where he can execute shell code (if the PHP configuration permits commands like <tt>exec</tt>).
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.9.1. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.9.1 or newer.
+</p>
+<b>References:</b><br />
+<p>
+<a href="http://fd.the-wildcat.de/pma_e36a091q11.php">http://fd.the-wildcat.de/pma_e36a091q11.php</a><br />
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4096">http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4096</a><br />
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

@@ -1,0 +1,33 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2005-7<br />
+Date: 2005-11-23<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS vulnerabilities
+</p>
+<p>
+<b>Description</b>:<br />
+During the course of phpMyAdmin 2.6.4 development, some XSS vulnerabilities were fixed but were not documented here. The cookie-based login panel, the title parameter and the table creation dialog were vulnerable.
+<br />
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+We did not make an extensive verification on this. Probably all previous versions are affected.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.6.4-pl4.
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

@@ -1,0 +1,63 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2004-3<br />
+Date: 2004-11-18
+</p>
+<p>
+<b>Summary</b>:<br />
+Multiple XSS vulnerability were found in phpMyAdmin, that may allow an
+attacker to conduct Cross-site scripting (XSS) attacks.
+</p>
+<p>
+<b>Description</b>:<br />
+We received a security advisory from Cedric Cochin (netvigilance.com)
+about those vulnerabilities and we wish to thank him for his work.
+The vulnerabilities apply to those points:
+<ol>
+ <li>The logic used to auto-detect the PmaAbsoluteUri parameter can be fooled
+by adding an extra &quot;/&quot; and a crafted URL.
+ </li>
+ <li>read_dump.php can be called with a crafted url; using the fact that
+the zero_rows variable is not sanitized can lead to an attack.
+ </li>
+ <li>The confirm form (for example after a DROP DATABASE statement) can 
+be used for a XSS attack.
+ </li>
+ <li>The internal phpMyAdmin parser does not sanitize the error message sent
+after an error like a punctuation problem.
+ </li>
+</ol>
+</p>
+<p>
+<b>Severity</b>:<br />
+As any of those vulnerabilites can be used for a XSS attack, we consider them 
+to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Not all previous versions are affected by all vulnerabilities, but it's safe
+to say that releases up to and including 2.6.0-pl2 are at risk.
+</p>
+<p>
+<b>Unaffected versions</b>:<br />
+CVS HEAD has been fixed.
+The upcoming 2.6.0-pl3 release.
+</p>
+<p>
+<b>Solution</b>:<br />
+We strongly advise everyone to upgrade to the next version of phpMyAdmin, which is to be released soon.
+</p>
+<p>
+<b>References</b>:<br />
+<a href="http://www.netvigilance.com/html/advisory0005.htm">
+http://www.netvigilance.com/html/advisory0005.htm</a><br />
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1055">
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1055</a>
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

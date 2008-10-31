@@ -1,0 +1,40 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2005-9<br />
+Date: 2005-12-07<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+Cross-Site Scripting, local and remote code execution vulnerabilities
+</p>
+<p>
+<b>Description</b>:<br />
+Two days after the release of version 2.7.0, we received a security advisory from Stefan Esser (sesser@hardened-php.net) and we wish to thank him for his work.
+<br />
+<br />
+It is possible to overwrite the global import_blacklist variable to open phpMyAdmin 2.7.0 to those vulnerabilities.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider these vulnerabilities to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Only the unpatched 2.7.0 version.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.7.0-pl1 or newer.
+</p>
+<p>
+<b>References:</b><br />
+<a href="http://www.hardened-php.net/advisory_252005.110.html">http://www.hardened-php.net/advisory_252005.110.html</a>
+<br />
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

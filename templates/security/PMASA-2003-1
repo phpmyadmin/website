@@ -1,0 +1,62 @@
+<p>
+phpMyAdmin security announcement<br />
+<hr>
+<p>
+Announcement-ID: PMASA-2003-1<br />
+Date: 2003-06-18
+</p>
+<p>
+<b>Summary</b>:<br />
+Several security issues were reported to BugTraq mailing list. However
+most of these issues were already fixed some time ago.
+</p>
+<p>
+<b>Description</b>:<br />
+Reporter wrote that he found following issues within phpMyAdmin code
+(each issue is followed by our comment):
+<ul>
+ <li>Directory transversal attack - Already fixed in 2.5.0 release</li>
+ <li>Remote local file retrieving - Author didn't show any proof of this</li>
+ <li>Remote internal directory listing - It was possible to retrieve
+listing of phpMyAdmin directory, however content of this directory is
+  publicly known. This was fixed for upcoming 2.5.2 release.</li>
+ <li>XSS and Path disclosures - Most of these issues were fixed in 2.5.0
+  release, however some of these were still there and these will be
+  fixed in upcoming 2.5.2 release.</li>
+ <li>Information encoding weakness -  We believe that an exploit for this
+  weakness would be difficult to achieve. However version 2.5.2 now
+  encrypts the password with the well-known blowfish algorithm.</li>
+</ul>
+</p>
+<p>
+<b>Severity</b>:<br />
+Only really problematic issue in current versions is XSS attack, which
+in combination with clever javascript could be used to steal
+authentication, but this would require to force user to click on link
+supplied by attacker. Therefore we consider this issue as important.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+All releases up to and not including 2.5.2. See description for more
+details about this.
+</p>
+<p>
+<b>Unaffected versions</b>:<br />
+CVS HEAD has been fixed.
+The upcoming 2.5.2 release.
+</p>
+<p>
+<b>Solution</b>:<br />
+We strongly advise everyone to upgrade to CVS HEAD or to the next
+version of phpMyAdmin, which is to be released soon.
+</p>
+<p>
+<b>References</b>:<br />
+<a href="http://www.securityfocus.com/archive/1/325641">
+http://www.securityfocus.com/archive/1/325641</a>
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net/">
+http://www.phpmyadmin.net</a>.
+</p>

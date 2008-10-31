@@ -1,0 +1,7 @@
+Website generator for phpMyAdmin
+================================
+
+This is currently in alpha state, but later it will hopefully replace
+phpMyAdmin homepage.
+
+# vim: et ts=4 sw=4 sts=4 tw=72 spell spelllang=en_us

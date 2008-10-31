@@ -1,0 +1,64 @@
+<p>
+phpMyAdmin security announcement<br />
+<hr>
+</p>
+<p>
+Announcement-ID: PMASA-2004-2<br />
+Date: 2004-10-12
+</p>
+<p>
+<b>Summary</b>:<br />
+When specifying specially formatted options to external MIME
+transformation, an attacker can execute any shell command restricted by
+privileges of httpd user.
+</p>
+<p>
+<b>Description</b>:<br />
+phpMyAdmin allows to use MIME transformations for displaying fields from
+database. These transformations are not enabled by default
+(administrator needs to prepare special table for keeping some
+information and specify it in configuration). One of these
+transformations allows to pipe field content through external program
+which needs to be hardcoded in php script.  However user can specify
+parameters to that program and this parameter was not checked for shell
+meta characters, so attacker could pass there anything from redirection
+of output to executing any other command.
+</p>
+<p>
+<b>Severity</b>:<br />
+In default setup this feature is not enabled and many hosting providers
+run php in safe mode with disabled exec support, which both make them
+unaffected by this issue. User also need to be logged in into
+phpMyAdmin, what limites range of attackers to users of the server, who
+usually also can execute php code directly, so this possibility doesn't
+extend his privileges. However this could cause some harm, so we
+consider this as important.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+All releases starting with 2.5.0 up to and including 2.6.0-pl1.
+</p>
+<p>
+<b>Unaffected versions</b>: <br />
+All releases older than 2.5.0.
+CVS HEAD has been fixed.
+The upcoming 2.6.0-pl2 release.
+</p>
+<p>
+<b>Solution</b>:<br />
+If you are vulnerable to this issue, easiest fix is to disable external
+transformation - just remove file
+libraries/transformations/text_plain__external.inc.php. The attached
+patch fixes the problem but should only be used by distributors who do
+not want to upgrade. Otherwise, we strongly advise everyone to upgrade
+to CVS HEAD or to the next version of phpMyAdmin, which is to be
+released soon.
+</p>
+<p>
+<b>References</b>:<br />
+none
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

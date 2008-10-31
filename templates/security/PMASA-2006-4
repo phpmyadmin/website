@@ -1,0 +1,37 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2006-4<br />
+Date: 2006-06-30<br />
+Updated: 2006-07-01<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS vulnerability
+</p>
+<p>
+<b>Description</b>:<br />
+It was possible to craft a request that contains XSS by attacking the &quot;table&quot; parameter. 
+<br />
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Some versions previous to 2.8.2 suffer from this vulneribility.
+</p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.8.2.
+</p>
+<p>
+<b>References:</b><br />
+</p>
+We wish to thank bug@securitynews.ir for informing us in a responsible manner. Their advisory is located at <a href="http://securitynews.ir/advisories/phpmyadmin281.txt">http://securitynews.ir/advisories/phpmyadmin281.txt</a>.
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

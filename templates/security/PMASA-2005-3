@@ -1,0 +1,40 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2005-3<br />
+Date: 2005-04-03
+</p>
+<p>
+<b>Summary</b>:<br />
+Cross-Site Scripting vulnerability
+</p>
+<p>
+<b>Description</b>:<br />
+We received a security advisory from Oriol Torrent Santiago and we wish to thank him for his work and report. The <tt>convcharset</tt> parameter was not correctly validated, opening the door to a XSS attack.
+<br />
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Probably all phpMyAdmin versions before 2.6.2-rc1.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.6.2-rc1 or newer.
+</p>
+<p>
+<b>References</b>:<br />
+<a href="http://www.arrelnet.com/advisories/adv20050403.html">
+http://www.arrelnet.com/advisories/adv20050403.html</a>
+<br />
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

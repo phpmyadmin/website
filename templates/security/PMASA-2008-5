@@ -1,0 +1,40 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-5<br />
+Date: 2008-07-15<br />
+Updated: 2008-07-16<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSRF/CSRF for creating a database and modifying user charset
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Aung Khant (YGN Ethical Hacker Group), and we wish to thank him for his work. A logged-in user, if abused into clicking a crafted link or loading an attack page, would create a database he did not intend to, or would change his connection character set. 
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.7.1. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.7.1 or newer.
+</p>
+<b>References:</b><br />
+Revisions 11389 and 11391 were applied on the MAINT_2_11_7 branch:<br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11389">Revision 11389</a><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11391">Revision 11391</a><br />
+These advisories are available from the reporter:<br />
+<a href="http://yehg.net/lab/pr0js/advisories/XSRF_CreateDB_inPhpMyAdmin2.11.7.pdf">http://yehg.net/lab/pr0js/advisories/XSRF_CreateDB_inPhpMyAdmin2.11.7.pdf</a>
+<a href="http://yehg.net/lab/pr0js/advisories/XSRF_ConvertCharset_inPhpMyAdmin2.11.7.pdf">http://yehg.net/lab/pr0js/advisories/XSRF_ConvertCharset_inPhpMyAdmin2.11.7.pdf</a>
+<p>
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

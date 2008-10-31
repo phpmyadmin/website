@@ -1,0 +1,36 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-9<br />
+Date: 2008-10-30<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS on a Designer component 
+</p>
+<p>
+<b>Description</b>:<br />
+A logged-in user can be subject of cross site scripting attack via the <tt>pmd_pdf.php</tt> script.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+For 2.11.x: versions before 2.11.9.3.<br />
+For 3.0.x: versions before 3.0.1.1.<br />
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.9.3 or 3.0.1.1.
+</p>
+<b>References:</b><br />
+<a href="http://www.securityfocus.com/bid/31928/info">Advisory: http://www.securityfocus.com/bid/31928/info</a><br />
+<p>
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>
+

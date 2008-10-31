@@ -1,0 +1,38 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2006-3<br />
+Date: 2006-05-20<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSRF vulnerabilities
+</p>
+<p>
+<b>Description</b>:<br />
+It was possible to inject arbitrary SQL commands by forcing an authenticated user to follow a crafted link.
+<br />
+</p>
+<p>
+<b>Severity</b>:<br />
+Such issue is quite common in many PHP applications and users should
+take care what links they follow. We consider these vulnerabilities
+to be quite dangerous.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Some versions previous to 2.8.1 suffer from this vulneribility.
+</p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.8.1.
+</p>
+<p>
+<b>References:</b><br />
+</p>
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1804">http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1804</a><br />
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

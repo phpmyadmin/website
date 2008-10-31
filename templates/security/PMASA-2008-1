@@ -1,0 +1,40 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-1<br />
+Date: 2008-03-01<br />
+Updated: 2008-03-03<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+SQL injection vulnerability (Delayed Cross Site Request Forgery)
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Richard Cunningham, and we wish to thank him for his work. phpMyAdmin used the $_REQUEST superglobal as a source for its parameters, instead of $_GET and $_POST. This means that on most servers, a cookie with the same name as one of phpMyAdmin's parameters can interfere.<br /></br />
+Another application could set a cookie for the root path "/" with a "sql_query" name, therefore overriding the user-submitted sql_query because by default, the $_REQUEST superglobal imports first GET, then POST then COOKIE data.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Mitigation factor</b>:<br />
+An attacker must trick the victim into visiting a page on the same web server where he has placed code that creates a malicious cookie.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.5. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.5 or newer, where $_REQUEST is rebuilt to not contain cookies.
+</p>
+<b>References:</b><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/branches/QA_2_11/phpMyAdmin/libraries/common.inc.php?r1=11134&r2=11135&view=patch">The patch for the QA_2_11 branch.</a></p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

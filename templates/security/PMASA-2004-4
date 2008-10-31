@@ -1,0 +1,58 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2004-4<br />
+Date: 2004-12-13
+</p>
+<p>
+<b>Summary</b>:<br />
+Two vulnerabilities were found in phpMyAdmin, that may allow
+command execution and file disclosure.
+</p>
+<p>
+<b>Description</b>:<br />
+We received a security advisory from Nicolas Gregoire (exaprobe.com) 
+about those vulnerabilities and we wish to thank him for his work.
+Both vulnerabilites can be exploited only on a web server where PHP 
+safe mode is off.<br />
+The vulnerabilities apply to those points:
+<ol>
+ <li>Command execution: since phpMyAdmin 2.6.0-pl2, on a system where
+external MIME-based transformations are activated, an attacker can put
+into MySQL data an offensive value that starts a shell command when browsed.
+ </li>
+ <li>File disclosure: on systems where the UploadDir mecanism is active, read_dump.php can be called with a crafted form; using the fact that
+the sql_localfile variable is not sanitized can lead to a file disclosure.
+ </li>
+</ol>
+</p>
+<p>
+<b>Severity</b>:<br />
+As any of those vulnerabilites can be used for command execution or file
+disclosure, we consider them to be serious (on servers where PHP safe mode is off).
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Command execution problem: since phpMyAdmin 2.6.0-pl2. File disclosure problem: 
+vulnerable since at least version 2.4.0.
+</p>
+<p>
+<b>Unaffected versions</b>:<br />
+CVS HEAD has been fixed.
+The 2.6.1-rc1 release.
+</p>
+<p>
+<b>Solution</b>:<br />
+We strongly advise everyone to upgrade to version 2.6.1 when released. Meanwhile, setting PHP safe mode to on avoids those problems. If not feasible, you should deactivate MIME-based external transformations and the UploadDir mecanism.
+</p>
+<p>
+<b>Reference</b>:<br />
+<a href="http://www.exaprobe.com/labs/advisories/esa-2004-1213.html">
+http://www.exaprobe.com/labs/advisories/esa-2004-1213.html</a><br />
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

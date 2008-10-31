@@ -1,0 +1,34 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-2<br />
+Date: 2008-03-29<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+Credentials disclosure on shared hosts via session data
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Jim Hermann, and we wish to thank him for his work. phpMyAdmin saves sensitive information like the MySQL username and password and the Blowfish secret key in session data, which might be unprotected on a shared host.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.5.1. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.5.1 or newer.
+</p>
+<b>References:</b><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11175">Revision 11175</a></p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>

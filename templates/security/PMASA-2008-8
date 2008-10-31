@@ -1,0 +1,38 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2008-8<br />
+Date: 2008-09-23<br />
+Updated: 2008-10-01<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+XSS for Microsoft Internet Explorer on several places
+</p>
+<p>
+<b>Description</b>:<br />
+We received an advisory from Masako Oono of NetAgent Co.,Ltd. via JPCERT/CC Vulnerability Handling Team and we wish to thank them for their work. A logged-in user (when using Microsoft Internet Explorer) can be subject of cross site scripting attack using several variables. This issue does not affect other browsers (tested with Mozilla Firefox, Google Chrome, Konqueror and Apple Safari).
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious.
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Versions before 2.11.9.2. 
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.11.9.2 or newer.
+</p>
+<b>References:</b><br />
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&revision=11603">Revision 11603</a> was applied on all branches.<br />
+<a href="http://jvn.jp/en/jp/JVN54824688">Advisory: http://jvn.jp/en/jp/JVN54824688</a><br />
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4326">CVE: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4326</a>
+<p>
+In case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>
+

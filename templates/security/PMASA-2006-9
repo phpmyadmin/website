@@ -1,0 +1,35 @@
+<p>
+phpMyAdmin security announcement
+</p>
+<hr>
+<p>
+Announcement-ID: PMASA-2006-9<br />
+Date: 2006-11-17<br />
+</p>
+<p>
+<b>Summary</b>:<br />
+Bad IP Allow/Deny checking
+</p>
+<p>
+<b>Description</b>:<br />
+We received a security advisory from Christian Schmidt, Peytz & Co. and we wish to thank him for his work.
+<br />
+<br />
+It was possible to get around IP-based Allow/Deny checking by faking proxy headers.
+</p>
+<p>
+<b>Severity</b>:<br />
+We consider this vulnerability to be serious. 
+</p>
+<p>
+<b>Affected versions</b>:<br />
+Probably all versions to 2.9.1.
+</p>
+<p>
+<b>Solution:</b><br />
+Upgrade to phpMyAdmin 2.9.1.1 or newer.
+</p>
+<p>
+For further information and in case of questions, please contact the
+phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
+</p>
