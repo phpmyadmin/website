@@ -29,6 +29,7 @@ import shutil
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 
+import md5sums
 
 # Project part
 PROJECT_ID = 23067
@@ -131,7 +132,11 @@ class SFGenerator:
                 url = PROJECT_DL % filename
                 ext = os.path.splitext(filename)[1]
                 featured = (filename.find(FILES_MARK) != -1)
-                release['files'].append({'name': filename, 'url': url, 'ext': ext, 'featured': featured, 'size': size, 'dlcount': dlcount})
+                try:
+                    md5 = md5sums.md5sum[filename]
+                except KeyError:
+                    md5 = 'N/A'
+                release['files'].append({'name': filename, 'url': url, 'ext': ext, 'featured': featured, 'size': size, 'dlcount': dlcount, 'md5': md5})
             releases.append(release)
 
         dbg('Sorting file lists...')
