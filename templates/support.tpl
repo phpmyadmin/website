@@ -9,7 +9,6 @@
    <li><strong><a href="http://sourceforge.net/forum/forum.php?forum_id=72909">Help Forum</a></strong></li>
    <li><a href="http://sourceforge.net/forum/forum.php?forum_id=296543">Forum d'aide (en français)</a></li>
    <li><a href="http://sourceforge.net/forum/forum.php?forum_id=297172">Anwenderforum (auf Deutsch)</a></li>
-   <li><a href="http://sourceforge.net/mail/?group_id=23067">Mailing Lists (news/users/devel/translators)</a></li>
    <li>IRC: #phpmyadmin on <a href="http://freenode.net/">irc.freenode.net</a></li>
 </ul>
 
@@ -23,11 +22,12 @@
     <li><a href="http://sourceforge.net/tracker/?atid=377409&amp;group_id=23067">Support requests</a></li>
 </ul>
 
-<h2>Mailing lists</h2>
+<h2>Mailing Lists</h2>
 <ul>
     <li>For users: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-users">phpmyadmin-users@lists.sourceforge.net</a></li>
     <li>For developers: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">phpmyadmin-devel@lists.sourceforge.net</a></li>
     <li>SVN commit notifications: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-svn">phpmyadmin-svn@lists.sourceforge.net</a></li>
+    <li><a href="http://sourceforge.net/mail/?group_id=23067">Mailing lists overview</a></li>
 </ul>
 </div>
 
