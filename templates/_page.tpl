@@ -4,6 +4,7 @@
       xmlns:xi="http://www.w3.org/2001/XInclude">
  <head>
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
+  <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" /></py:if>
   <link rel="stylesheet" type="text/css" href="${base_url}css/style.css" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />

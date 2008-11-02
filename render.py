@@ -25,6 +25,7 @@ import feedparser
 import re
 import cPickle
 import glob
+import shutil
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 
@@ -34,7 +35,7 @@ PROJECT_ID = 23067
 PROJECT_NAME = 'phpmyadmin'
 
 # Filtering
-FILES_FILTER = [('phpMyAdmin', True), ('theme', False)]
+#FILES_FILTER = [('phpMyAdmin', True), ('theme', False)]
 FILES_MARK = 'all-languages.'
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
@@ -57,6 +58,7 @@ MENU = [
 # File locations
 TEMPLATES = './templates'
 CSS = './css'
+IMAGES = './images'
 OUTPUT = './output'
 
 # Generic sourceforge.net part
@@ -76,13 +78,15 @@ def dbg(text):
 class SFGenerator:
     def __init__(self, templates = [TEMPLATES], css = [CSS]):
         self.data = {
-            'files': {},
+            'releases': [],
+            'themes': [],
             'news': [],
             'donations': [],
             'base_url': BASE_URL,
+            'rss_files': PROJECT_FILES_RSS,
+            'rss_donations': DONATIONS_RSS,
+            'rss_news': PROJECT_NEWS_RSS,
             }
-        for filetype in FILES_FILTER:
-            self.data['files'][filetype[0]] = []
         self.loader = TemplateLoader(templates)
         self.cssloader = TemplateLoader(css, default_class = NewTextTemplate)
 
@@ -97,17 +101,20 @@ class SFGenerator:
         return result
 
     def process_releases(self, rss_downloads):
-        dbg('Processing releases feed...')
+        dbg('Processing file releases...')
         for entry in rss_downloads.entries:
             titleparts = entry.title.split(' ')
             type = titleparts[0]
+            if type != 'phpMyAdmin':
+                continue
             version = titleparts[1]
             release = {}
             release['show'] = False
             release['notes'] = entry.link
             release['version'] = version
             release['date'] = entry.updated
-            release['name'] = '%s %s' % (type, version)
+            release['name'] = type
+            release['fullname'] = '%s %s' % (type, version)
             text = entry.summary
             fileslist = text[text.find('Includes files:') + 15:]
             fileslist = fileslist[:fileslist.find('<br />')]
@@ -121,38 +128,62 @@ class SFGenerator:
                 ext = os.path.splitext(filename)[1]
                 mark = (filename.find(FILES_MARK) != -1)
                 release['files'].append({'name': filename, 'url': url, 'ext': ext, 'mark': mark, 'size': size, 'dlcount': dlcount})
-            found = False
-            for filetype in FILES_FILTER:
-                if filetype[0] == type[:len(filetype[0])]:
-                    self.data['files'][filetype[0]].append(release)
-                    found = True
-                    break
-            if not found:
-                print 'Not matched file type: %s' % type
+            self.data['releases'].append(release)
 
         dbg('Sorting file lists...')
-        self.data['files']['phpMyAdmin'].sort(key = lambda x: x['version'], reverse = True)
-        self.data['files']['theme'].sort(key = lambda x: x['name'])
+        self.data['releases'].sort(key = lambda x: x['version'], reverse = True)
 
         dbg('Detecting actual versions...')
-        for filetype in FILES_FILTER:
-            if not filetype[1]:
-                continue
-            outversions = {}
-            for idx in xrange(len(self.data['files'][filetype[0]])):
-                version = self.data['files'][filetype[0]][idx]
-                branch = BRANCH_REGEXP.match(version['version']).group(1)
-                try:
-                    if self.data['files'][filetype[0]][outversions[branch]]['version'] < version['version']:
-                        outversions[branch] = idx
-                except KeyError:
+        outversions = {}
+        for idx in xrange(len(self.data['releases'])):
+            version = self.data['releases'][idx]
+            branch = BRANCH_REGEXP.match(version['version']).group(1)
+            try:
+                if self.data['releases'][outversions[branch]]['version'] < version['version']:
                     outversions[branch] = idx
+            except KeyError:
+                outversions[branch] = idx
 
-            newlist = {}
-            dbg('Actual versions detected:')
-            for version in outversions.values():
-                dbg('  %s' % self.data['files'][filetype[0]][version]['version'])
-                self.data['files'][filetype[0]][version]['show'] = True
+        dbg('Actual versions detected:')
+        for version in outversions.values():
+            dbg('  %s' % self.data['releases'][version]['version'])
+            self.data['releases'][version]['show'] = True
+
+    def process_themes(self, rss_downloads):
+        dbg('Processing themes releases...')
+        for entry in rss_downloads.entries:
+            titleparts = entry.title.split(' ')
+            type = titleparts[0]
+            if type[:6] != 'theme-':
+                continue
+            type = type[6:]
+            version = titleparts[1]
+            release = {}
+            release['show'] = False
+            release['notes'] = entry.link
+            release['version'] = version
+            release['date'] = entry.updated
+            release['name'] = type
+            release['fullname'] = '%s %s' % (type, version)
+            text = entry.summary
+            fileslist = text[text.find('Includes files:') + 15:]
+            fileslist = fileslist[:fileslist.find('<br />')]
+            files = fileslist.split('),')
+            if len(files) > 1:
+                raise Exception('Too much files in theme %s' % type)
+            part = files[0]
+            m = SIZE_REGEXP.match(part)
+            size = m.group(1)
+            dlcount = m.group(2)
+            filename = part.strip().split(' ')[0]
+            url = PROJECT_DL % filename
+            ext = os.path.splitext(filename)[1]
+            mark = (filename.find(FILES_MARK) != -1)
+            release['file'] = {'name': filename, 'url': url, 'ext': ext, 'mark': mark, 'size': size, 'dlcount': dlcount}
+            self.data['themes'].append(release)
+
+        dbg('Sorting file lists...')
+        self.data['themes'].sort(key = lambda x: x['name'])
 
     def process_news(self, feed):
         dbg('Processing news feed...')
@@ -223,9 +254,16 @@ class SFGenerator:
         issues = [os.path.basename(x) for x in issues]
         self.data['issues'] = [{'name' : x, 'link': '%ssecurity/%s.html' % (BASE_URL, x)} for x in issues]
 
+    def prepare_output(self):
+        dbg('Copying static content to output...')
+        shutil.rmtree(os.path.join(OUTPUT, 'images'))
+        shutil.copytree(IMAGES, os.path.join(OUTPUT, 'images'))
+
     def main(self):
+        self.prepare_output()
         rss_downloads = self.get_feed('releases', PROJECT_FILES_RSS)
         self.process_releases(rss_downloads)
+        self.process_themes(rss_downloads)
 
         rss_news = self.get_feed('news', PROJECT_NEWS_RSS)
         self.process_news(rss_news)

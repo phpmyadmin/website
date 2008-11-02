@@ -1,6 +1,7 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
 <py:def function="page_title">Donations</py:def>
+<py:def function="page_rss">${rss_donations}</py:def>
 
 <div py:match="content" id="body">
 <h2>Donations</h2>

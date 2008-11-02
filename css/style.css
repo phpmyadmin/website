@@ -1,5 +1,5 @@
 body {
-    background: url('${base_url}logo.png') no-repeat fixed bottom right;
+    background: url('${base_url}images/logo.png') no-repeat fixed bottom right;
 }
 
 #header {
@@ -230,4 +230,23 @@ ul.dllist li {
 
 div.clearer {
     clear: both;
+}
+
+div.themeimgborder {
+    border: 1px solid #7584b3;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+div.themeimg {
+    overflow: hidden;
+    height: 8em;
+}
+
+div.theme {
+    float: left;
+    width: 35em;
+    border: 1px solid #7584b3;
+    margin: 0.2em;
+    padding: 0.2em;
 }

@@ -1,14 +1,15 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
+<py:def function="page_rss">${rss_news}</py:def>
 
 <div py:match="content" id="body">
 
-  <py:for each="pma in files.phpMyAdmin">
-     <py:if test="pma.show">
+  <py:for each="release in releases">
+     <py:if test="release.show">
       <div class="downloadbutton">
-       <span class="dlname">Download <a href="${pma.notes}">${pma.version}</a>:</span>
+       <span class="dlname">Download <a href="${release.notes}">${release.version}</a>:</span>
        <ul class="dllist">
-       <py:for each="file in pma.files">
+       <py:for each="file in release.files">
         <py:if test="file.mark">
          <li><a href="${file.url}">${file.ext}</a></li>
         </py:if>

@@ -1,6 +1,7 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
 <py:def function="page_title">Security</py:def>
+<py:def function="page_rss">Security</py:def>
 
 <div py:match="content" py:strip="">
 <xi:include href="_list.tpl" />
