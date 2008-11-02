@@ -13,6 +13,16 @@
             </py:for>
         </ul> 
     </py:for>
+    <h2>Older releases</h2>
+    <py:for each="release in releases_older">
+    <h3>${release.fullname}</h3>
+        <p>Released ${release.date}, see <a href="${release.notes}">release notes</a> for details.</p>
+        <ul class="dl">
+            <py:for each="file in release.files">
+            <li><a href="${file.url}">${file.name}</a> (${file.size} bytes, ${file.dlcount} downloads)</li>
+            </py:for>
+        </ul> 
+    </py:for>
 </div>
 
 <xi:include href="_page.tpl" />

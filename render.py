@@ -70,15 +70,18 @@ PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
 VERBOSE = True
 
 
+def warn(text):
+    sys.stderr.write('%s\n' % text)
+
 def dbg(text):
     if VERBOSE:
-        sys.stderr.write(text)
-        sys.stderr.write('\n')
+        sys.stderr.write('%s\n' % text)
 
 class SFGenerator:
     def __init__(self, templates = [TEMPLATES], css = [CSS]):
         self.data = {
             'releases': [],
+            'releases_older': [],
             'themes': [],
             'news': [],
             'donations': [],
@@ -102,6 +105,7 @@ class SFGenerator:
 
     def process_releases(self, rss_downloads):
         dbg('Processing file releases...')
+        releases = []
         for entry in rss_downloads.entries:
             titleparts = entry.title.split(' ')
             type = titleparts[0]
@@ -126,28 +130,30 @@ class SFGenerator:
                 filename = part.strip().split(' ')[0]
                 url = PROJECT_DL % filename
                 ext = os.path.splitext(filename)[1]
-                mark = (filename.find(FILES_MARK) != -1)
-                release['files'].append({'name': filename, 'url': url, 'ext': ext, 'mark': mark, 'size': size, 'dlcount': dlcount})
-            self.data['releases'].append(release)
+                featured = (filename.find(FILES_MARK) != -1)
+                release['files'].append({'name': filename, 'url': url, 'ext': ext, 'featured': featured, 'size': size, 'dlcount': dlcount})
+            releases.append(release)
 
         dbg('Sorting file lists...')
-        self.data['releases'].sort(key = lambda x: x['version'], reverse = True)
+        releases.sort(key = lambda x: x['version'], reverse = True)
 
         dbg('Detecting actual versions...')
         outversions = {}
-        for idx in xrange(len(self.data['releases'])):
-            version = self.data['releases'][idx]
+        for idx in xrange(len(releases)):
+            version = releases[idx]
             branch = BRANCH_REGEXP.match(version['version']).group(1)
             try:
-                if self.data['releases'][outversions[branch]]['version'] < version['version']:
+                if releases[outversions[branch]]['version'] < version['version']:
                     outversions[branch] = idx
             except KeyError:
                 outversions[branch] = idx
 
         dbg('Actual versions detected:')
-        for version in outversions.values():
-            dbg('  %s' % self.data['releases'][version]['version'])
-            self.data['releases'][version]['show'] = True
+        for idx in xrange(len(releases)):
+            if idx in outversions.values():
+                self.data['releases'].append(releases[idx])
+            else:
+                self.data['releases_older'].append(releases[idx])
 
     def process_themes(self, rss_downloads):
         dbg('Processing themes releases...')
