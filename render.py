@@ -50,6 +50,8 @@ MENU = [
     ('', 'About'),
     ('news', 'News'),
     ('security/', 'Security'),
+    ('support', 'Support'),
+    ('docs', 'Docs'),
     ('screenshots', 'Screenshots'),
     ('translations', 'Translations'),
     ('themes', 'Themes'),
