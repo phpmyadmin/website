@@ -40,6 +40,7 @@ PROJECT_NAME = 'phpmyadmin'
 FILES_MARK = 'all-languages.'
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
+COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
 
 # Base URL (including trailing /)
 BASE_URL = '/mcihar/phpmyadmin/output/'
@@ -201,10 +202,13 @@ class SFGenerator:
     def process_news(self, feed):
         dbg('Processing news feed...')
         for entry in feed.entries:
+            matches = COMMENTS_REGEXP.match(entry.summary)
             item = {}
             item['link'] = entry.link
             item['date'] = entry.updated
-            item['text'] = entry.summary
+            item['text'] = matches.group(1)
+            item['comments_link'] = matches.group(2)
+            item['comments_number'] = matches.group(3)
             item['title'] = entry.title
             self.data['news'].append(item)
 

@@ -254,3 +254,11 @@ div.theme {
 div.filedetails {
     font-size: smaller;
 }
+
+p.date {
+    font-size: smaller;
+}
+
+p.comments {
+    font-size: smaller;
+}

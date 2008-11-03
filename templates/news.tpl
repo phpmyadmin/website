@@ -5,8 +5,10 @@
 
 <div py:match="content" id="body">
     <py:for each="item in news">
-        <h2>${item.title} (${item.date})</h2>
+        <h2>${item.title}</h2>
+        <p class="date">${item.date}</p>
         <p>${Markup(item.text)}</p>
+        <p class="comments"><a href="${item.comments_link}">${item.comments_number} comments</a></p>
     </py:for>
 </div>
 
