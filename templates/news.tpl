@@ -4,6 +4,9 @@
 <py:def function="page_rss">${rss_news}</py:def>
 
 <div py:match="content" id="body">
+
+    <xi:include href="_littleboxes.tpl" />
+
     <py:for each="item in news">
         <h2>${item.title}</h2>
         <p class="date">${item.date}</p>

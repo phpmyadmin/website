@@ -4,29 +4,11 @@
 
 <div py:match="content" id="body">
 
-<py:for each="release in releases">
-    <div class="downloadbutton">
-    <span class="dlname">Download <a href="${release.notes}">${release.version}</a>:</span>
-    <ul class="dllist">
-    <py:for each="file in release.files"><py:if test="file.featured">
-        <li><a href="${file.url}">${file.ext}</a></li>
-    </py:if></py:for>
-    </ul> 
-    </div>
-</py:for>
-
-    <div class="downloadbutton">
-    <span class="dlname"><a href="${base_url}try.${file_ext}">Try phpMyAdmin now</a></span>
-    </div>
-
-    <div class="downloadbutton">
-    <span class="dlname"><a href="${base_url}donate.${file_ext}">Donate to phpMyAdmin</a></span>
-    </div>
-
+<xi:include href="_littleboxes.tpl" />
 
     <h2>About</h2>
-   <p>
-   phpMyAdmin is a tool written in PHP intended to handle the administration
+    <p>
+    phpMyAdmin is a tool written in PHP intended to handle the administration
    of MySQL over the Web. Currently it can create and drop databases,
    create/drop/alter tables, delete/edit/add fields, execute any SQL statement,
    manage keys on fields, manage privileges,export data into various formats
