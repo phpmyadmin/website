@@ -5,27 +5,34 @@
 <div py:match="content" id="body">
 
 <h2>Documentation</h2>
+
+<div class="book">
+<h3>Official Documentation</h3>
 <ul>
     <li><b><a href="http://www.phpmyadmin.net/documentation/">Main documentation</a></b> (from the development version)</li>
     <li><b><a href="http://wiki.cihar.com/">Official phpMyAdmin wiki</a></b></li>
     <li><a href="http://www.phpmyadmin.net/documentation/#faq">Frequently Asked Questions</a></li>
     <li><a href="http://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
-    <li><b>Localized documentation</b>
-        <ul>
-            <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation-pl-2.5.2-pl1-1.html">Polish</a></li>
-            <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation-it.html">Italian (partial)</a></li>
-            <li><a href="http://www.phpmyadmin.net/pma_localized_docs/fr">French</a></li>
-            <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation_ja.html">Japanese</a></li>
-       </ul>
-    </li>
 </ul>
+</div>
 
-<h2>Tutorials and Articles</h2>
+<div class="book">
+<h3>Localized Documentation</h3>
+
+<p>Please note that these translations are not always up to date.</p>
+
 <ul>
-    <li><a href="http://www.ohloh.net/projects/3344">phpMyAdmin at ohloh (Open Source Directory)</a></li>
+    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation-pl-2.5.2-pl1-1.html">Polish</a></li>
+    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation-it.html">Italian (partial)</a></li>
+    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/fr">French</a></li>
+    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation_ja.html">Japanese</a></li>
+</ul>
+</div>
+
+<div class="book">
+<h3>Third Party Tutorials and Articles</h3>
+<ul>
     <li><a href="http://www.phparch.com/webcasts/recordings/recording.php?ID=2">Webcast recording (2006-02-03)</a></li>
-    <li><a href="http://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
-    <li><a href="http://phpmyadmin.cz">phpmyadmin.cz: Czech site dedicated to phpMyAdmin</a></li>
     <li><a href="http://dev.mysql.com/tech-resources/articles/mysql_intro.html">Getting Started with MySQL</a></li>
     <li><a href="http://www.garvinhicking.de/tops/texte/mimetutorial">Having fun with phpMyAdmin's MIME-transformations &amp; PDF-features</a></li>
     <li><a href="http://www.linuxsoft.cz/article_list.php?id_kategory=215">Seriál o phpMyAdminovi (Česky)</a></li>
@@ -33,6 +40,17 @@
         <a href="http://www.devshed.com/c/a/PHP/Doing-More-With-phpMyAdmin-Part-2/">part 2</a></li>
     <li><a href="http://www.php-editors.com/articles/sql_phpmyadmin.php">Learning SQL Using phpMyAdmin</a></li>
 </ul>
+</div>
+
+<div class="book">
+<h3>Sites Dedicated to phpMyAdmin</h3>
+<ul>
+    <li><a href="http://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
+    <li><a href="http://phpmyadmin.cz">phpmyadmin.cz: Czech site dedicated to phpMyAdmin</a></li>
+</ul>
+</div>
+
+<div class="clearer"></div>
 
 <h2>Books</h2>
 
