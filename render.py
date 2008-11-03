@@ -36,7 +36,6 @@ PROJECT_ID = 23067
 PROJECT_NAME = 'phpmyadmin'
 
 # Filtering
-#FILES_FILTER = [('phpMyAdmin', True), ('theme', False)]
 FILES_MARK = 'all-languages.'
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
