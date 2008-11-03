@@ -185,7 +185,7 @@ p {
     margin: 1em;
 }
 
-ul {
+ul, dl {
     margin: 1em;
 }
 
@@ -214,4 +214,8 @@ div.book img {
     margin: 1em;
     float: left;
     border: 1px solid black;
+}
+
+dl.cvslist dt {
+    font-family: monospace;
 }

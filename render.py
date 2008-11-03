@@ -53,7 +53,7 @@ MENU = [
     ('support', 'Support'),
     ('docs', 'Docs'),
     ('screenshots', 'Screenshots'),
-    ('translations', 'Translations'),
+    ('improve', 'Improve'),
     ('themes', 'Themes'),
     ('download', 'Download'),
 ]
