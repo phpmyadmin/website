@@ -265,9 +265,30 @@ p.comments {
 
 p {
     max-width: 70em;
+    margin: 1em;
+}
+
+ul {
+    margin: 1em;
 }
 
 ul.security li.active a {
 	color: black;
 }
+
+p.signature {
+    text-align: right;
+    font-style: italic;
+}
+
+div.book {
+    float: left;
+    width: 40em;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+div.book img {
+    margin: 1em;
+    float: left;
 }
