@@ -103,15 +103,12 @@ div.downloadbutton a {
     color: white;
 }
 
-#footer ul {
-    border-top: 1px solid black;
-}
-
 #footer li {
     font-size: smaller;
     list-style: none;
     float: left;
 	padding: 0.5em;
+    border-top: 1px solid black;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 }
