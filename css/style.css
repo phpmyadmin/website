@@ -262,3 +262,7 @@ p.date {
 p.comments {
     font-size: smaller;
 }
+
+p {
+    max-width: 70em;
+}
