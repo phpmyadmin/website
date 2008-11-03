@@ -269,8 +269,19 @@ class SFGenerator:
 
     def prepare_output(self):
         dbg('Copying static content to output...')
-        shutil.rmtree(os.path.join(OUTPUT, 'images'))
+        try:
+            shutil.rmtree(os.path.join(OUTPUT, 'images'))
+        except OSError:
+            pass
         shutil.copytree(IMAGES, os.path.join(OUTPUT, 'images'))
+        try:
+            os.mkdir(os.path.join(OUTPUT, 'security'))
+        except OSError:
+            pass
+        try:
+            os.mkdir(os.path.join(OUTPUT, 'css'))
+        except OSError:
+            pass
 
     def main(self):
         self.prepare_output()
