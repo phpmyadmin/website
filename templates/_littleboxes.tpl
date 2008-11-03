@@ -1,4 +1,5 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+<!--! Little boxes with downloads and other quick links -->
 
 <py:for each="release in releases">
     <div class="downloadbutton">
