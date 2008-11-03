@@ -43,6 +43,7 @@ COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$'
 
 # Base URL (including trailing /)
 BASE_URL = '/'
+EXTENSION = 'html'
 
 # Main menu
 MENU = [
@@ -104,6 +105,24 @@ class SFGenerator:
             result = feedparser.parse(url)
             cPickle.dump(result, open('./cache/feed-%s.dump' % name, 'w'))
         return result
+
+    def get_outname(self, page):
+        '''
+        Converts page name to file name. Basically only extension is appended
+        if none is already used.
+        '''
+        if page.find('.') == -1:
+            return '%s.%s' % (page, EXTENSION)
+        else:
+            return page
+
+    def get_renderer(self, page):
+        '''
+        Returns genshi renderer type for chosen page.
+        '''
+        if page[:-4] == '.xml':
+            return 'xml'
+        return 'xhtml'
 
     def process_releases(self, rss_downloads):
         dbg('Processing file releases...')
@@ -232,7 +251,7 @@ class SFGenerator:
             if name == active or '%sindex' % name == active:
                 field['class'] = { 'class': 'active' }
             if len(name) > 0 and name[-1] != '/':
-                name = '%s.html' % name
+                name = self.get_outname(name)
             field['link'] = '%s%s' % (BASE_URL, name)
             menu.append(field)
         return menu
@@ -248,8 +267,8 @@ class SFGenerator:
         dbg('  %s' % page)
         template = self.loader.load('%s.tpl' % page)
         menu = self.get_menu(page)
-        out = open(os.path.join(OUTPUT, '%s.html' % page), 'w')
-        out.write(template.generate(menu = menu, **self.data).render('xhtml'))
+        out = open(os.path.join(OUTPUT, self.get_outname(page)), 'w')
+        out.write(template.generate(menu = menu, **self.data).render(self.get_renderer(page)))
         out.close()
 
     def render_security(self, issue):
@@ -258,7 +277,7 @@ class SFGenerator:
         #template = self.loader.load('security/_page.tpl')
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
-        out = open(os.path.join(OUTPUT, 'security', '%s.html' % issue), 'w')
+        out = open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w')
         #
         #out.write(template.generate(menu = menu, issue = issue, content = content, **self.data).render('xhtml'))
         out.write(template.generate(menu = menu, **self.data).render('xhtml'))
@@ -269,7 +288,9 @@ class SFGenerator:
         issues = glob.glob('templates/security/PMASA*')
         issues.sort(reverse = True)
         issues = [os.path.basename(x) for x in issues]
-        self.data['issues'] = [{'name' : x, 'link': '%ssecurity/%s.html' % (BASE_URL, x)} for x in issues]
+        self.data['issues'] = [{
+            'name' : x,
+            'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(x))} for x in issues]
 
     def prepare_output(self):
         dbg('Copying static content to output...')
