@@ -9,7 +9,19 @@
 <div id="body">
 <h2>Security</h2>
 
-  We seriously take care about any security issues found in our code. <br />In left box you can check security issues we already dealt with. <br /><br />If you find any  security problem in our code, please contact the <a href="mailto:security@phpmyadmin.net">phpMyAdmin security team</a> (this is <strong>not a support list</strong>, use one of ways mentioned on <a href="${base_url}feedback.${file_ext}">feedback</a> page to get support).
+<p>
+We seriously take care about any security issues found in our code. On left
+side, you can see past security issues which were discovered and fixed.
+</p>
+
+<xi:include href="../_security_contact.tpl" />
+
+<p>
+Please note that any support requests on this address will not be answered,
+you should use standard support ways mentioned on 
+<a href="${base_url}support.${file_ext}">support</a> page.
+</p>
+
 </div>
 <div class="clearer"></div>
 </div>

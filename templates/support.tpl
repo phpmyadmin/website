@@ -36,6 +36,13 @@
 </ul>
 </div>
 
+<div class="floatbox">
+<h2>Security Issues</h2>
+
+<xi:include href="_security_contact.tpl" />
+
+</div>
+
 <div class="clearer"></div>
 </div>
 
