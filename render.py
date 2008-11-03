@@ -52,7 +52,7 @@ MENU = [
     ('security/', 'Security'),
     ('support', 'Support'),
     ('docs', 'Docs'),
-    ('screenshots', 'Screenshots'),
+    ('try', 'Try'),
     ('improve', 'Improve'),
     ('themes', 'Themes'),
     ('download', 'Download'),

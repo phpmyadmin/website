@@ -216,3 +216,22 @@ div.book img {
 dl.cvslist dt {
     font-family: monospace;
 }
+
+div.screenshotimgborder {
+    border: 1px solid #7584b3;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+div.screenshotimg {
+    overflow: hidden;
+    height: 8em;
+}
+
+div.screenshot {
+    float: left;
+    width: 35em;
+    border: 1px solid #7584b3;
+    margin: 0.2em;
+    padding: 0.2em;
+}
