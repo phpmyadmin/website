@@ -71,7 +71,7 @@ h2 {
 
 h3 {
 	color: #727e0a;
-	padding-left: 20px;
+	padding-left: 2em;
 }
 
 body {
@@ -79,89 +79,6 @@ body {
 	background-color: white;
 	font-family: sans-serif;
 	color: black;
-}
-
-th {
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-td {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-td.testing {
-	   font-size: 14px;
-	   padding-right: 10px;
-}
-
-p.text {
-	   margin: 10px;
-	   padding: 10px;
-	   border: 1px solid #000;
-	   text-align: center;
-}
-
-pre {
-	font-size: 12pt;
-	font-family: monospace;
-}
-
-.screenshot{
-	width: 262px;
-	float: left;
-	height: 260px;
-	margin: 0;
-	padding: 0;
-}
-
-.screenshot a{
-	position: relative;
-	display: block;
-	height: 200px;
-	background: #fff;
-	font: 11px arial,verdana,sans-serif;
-	text-decoration: none;
-	margin: 20px;
-	padding: 10px;
-	border: 1px solid #c17d11;
-	text-align:center;
-}
-
-.screenshot a:hover{
-	background: #f3f3f3;
-	font: 11px arial,verdana,sans-serif;
-	text-decoration: none;
-	border: 1px solid #8f5902;
-}
-
-.screenshot a span{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 0;
-	padding: 0 0 10px 10px;
-	color: #000;
-	float: left;
-	display: inline;
-	cursor: pointer;
-	width: 200px;
-	text-align: left;
-}
-
-.screenshot a img{
-	margin: 0;
-	border: 0;
-	padding: 0;
-}
-
-p.code {
-       margin-left: 20px;
-       padding: 10px;
-       font-family: monospace;
-       border: 1px dotted;
-       
 }
 
 div.downloadbutton {
