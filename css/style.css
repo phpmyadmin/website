@@ -266,3 +266,8 @@ p.comments {
 p {
     max-width: 70em;
 }
+
+ul.security li.active a {
+	color: black;
+}
+}

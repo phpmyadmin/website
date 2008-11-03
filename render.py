@@ -280,7 +280,7 @@ class SFGenerator:
         out = open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w')
         #
         #out.write(template.generate(menu = menu, issue = issue, content = content, **self.data).render('xhtml'))
-        out.write(template.generate(menu = menu, **self.data).render('xhtml'))
+        out.write(template.generate(menu = menu, issue = issue, **self.data).render('xhtml'))
         out.close()
 
 
