@@ -4,4 +4,10 @@ Website generator for phpMyAdmin
 This is currently in alpha state, but later it will hopefully replace
 phpMyAdmin homepage.
 
+Security announcements
+----------------------
+
+To create new security announcement, copy templates/security/_PMASA_ to
+templates/security/PMASA-YYYY-N and edit it's content.
+
 # vim: et ts=4 sw=4 sts=4 tw=72 spell spelllang=en_us

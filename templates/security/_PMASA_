@@ -1,0 +1,57 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2008-?
+</py:def>
+
+<py:def function="announcement_date">
+2008-??-??
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2008-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+</py:def>
+
+
+<!--! If you need to avoid toplevel <p></p>, use this:
+<py:def function="announcement_description_fmt">
+-->
+<py:def function="announcement_description">
+</py:def>
+
+<py:def function="announcement_severity">
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_mitigation">
+</py:def>
+-->
+
+<py:def function="announcement_affected">
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin ???? or newer.
+</py:def>
+
+<!--! Links to reporter, CVE etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+</py:def>
+
+<!--! Links to SVN or tracker, do not forget to escape & to &amp; -->
+<py:def function="announcement_patches">
+</py:def>
+
+</html>
