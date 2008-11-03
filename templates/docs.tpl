@@ -6,7 +6,7 @@
 
 <h2>Documentation</h2>
 
-<div class="book">
+<div class="floatbox">
 <h3>Official Documentation</h3>
 <ul>
     <li><b><a href="http://www.phpmyadmin.net/documentation/">Main documentation</a></b> (from the development version)</li>
@@ -16,7 +16,7 @@
 </ul>
 </div>
 
-<div class="book">
+<div class="floatbox">
 <h3>Localized Documentation</h3>
 
 <p>Please note that these translations are not always up to date.</p>
@@ -29,7 +29,7 @@
 </ul>
 </div>
 
-<div class="book">
+<div class="floatbox">
 <h3>Third Party Tutorials and Articles</h3>
 <ul>
     <li><a href="http://www.phparch.com/webcasts/recordings/recording.php?ID=2">Webcast recording (2006-02-03)</a></li>
@@ -42,7 +42,7 @@
 </ul>
 </div>
 
-<div class="book">
+<div class="floatbox">
 <h3>Sites Dedicated to phpMyAdmin</h3>
 <ul>
     <li><a href="http://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
@@ -54,7 +54,7 @@
 
 <h2>Books</h2>
 
-<div class="book">
+<div class="floatbox book">
 
 <h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
 
@@ -69,7 +69,7 @@ I am pleased to announce an update of my book. It is now up to date with phpMyAd
 </div>
 
 
-<div class="book">
+<div class="floatbox book">
 
 <h3>phpMyAdmin - efektivní správa MySQL</h3>
 
@@ -90,7 +90,7 @@ Pro více informací navštivte stránku věnovanou
 
 </div>
                 
-<div class="book">
+<div class="floatbox book">
 <h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
 
 <a href="http://www.packtpub.com/dominary-phpMyAdmin-es"><img src="${base_url}images/books/pma_es_100x123.png" alt="Book cover" width="100" height="123" /></a>
@@ -105,7 +105,7 @@ Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencia
 
 </div>
 
-<div class="book">
+<div class="floatbox book">
 <h3>phpMyAdmin - MySQL-Datenbanken effizient über das Web verwalten</h3>
 
 <a href="http://www.addison-wesley.de/main/main.asp?page=home/bookdetails&amp;ProductID=106639"><img src="${base_url}images/books/pma_de_90x122.jpg" alt="Book cover" width="90" height="122" /></a>

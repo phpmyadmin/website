@@ -286,7 +286,7 @@ p.signature {
     font-style: italic;
 }
 
-div.book {
+div.floatbox {
     float: left;
     width: 40em;
     margin: 0.2em;
