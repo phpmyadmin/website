@@ -14,8 +14,13 @@
     </ul> 
     </div>
 </py:for>
+
     <div class="downloadbutton">
     <span class="dlname"><a href="${base_url}try.${file_ext}">Try phpMyAdmin now</a></span>
+    </div>
+
+    <div class="downloadbutton">
+    <span class="dlname"><a href="${base_url}donate.${file_ext}">Donate to phpMyAdmin</a></span>
     </div>
 
 
