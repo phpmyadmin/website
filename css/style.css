@@ -250,3 +250,7 @@ div.theme {
     margin: 0.2em;
     padding: 0.2em;
 }
+
+div.filedetails {
+    font-size: smaller;
+}
