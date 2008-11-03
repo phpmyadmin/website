@@ -42,7 +42,6 @@ SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
 COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
 
 # Base URL (including trailing /)
-BASE_URL = '/mcihar/phpmyadmin/output/'
 BASE_URL = '/'
 
 # Main menu
