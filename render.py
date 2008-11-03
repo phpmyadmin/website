@@ -89,6 +89,7 @@ class SFGenerator:
             'news': [],
             'donations': [],
             'base_url': BASE_URL,
+            'file_ext': EXTENSION,
             'rss_files': PROJECT_FILES_RSS,
             'rss_donations': DONATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
