@@ -58,6 +58,10 @@ MENU = [
     ('download', 'Download'),
 ]
 
+SCREENSHOTS = [
+    {'name': 'main_page', 'title': 'Main page screenshot'},
+    ]
+
 # File locations
 TEMPLATES = './templates'
 CSS = './css'
@@ -93,6 +97,7 @@ class SFGenerator:
             'rss_files': PROJECT_FILES_RSS,
             'rss_donations': DONATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
+            'screenshots': SCREENSHOTS,
             }
         self.loader = TemplateLoader(templates)
         self.cssloader = TemplateLoader(css, default_class = NewTextTemplate)

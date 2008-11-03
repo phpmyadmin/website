@@ -4,8 +4,7 @@
 <py:def function="page_rss">${rss_files}</py:def>
 
 <div py:match="content" id="body">
-    <py:for each="theme in themes">
-    <div class="theme">
+    <div class="theme" py:for="theme in themes">
         <h2>${theme.fullname}</h2>
             <p>Released ${theme.date}, see <a href="${theme.notes}">release notes</a> for details.</p>
             <ul class="dl">
@@ -13,13 +12,12 @@
             </ul> 
             <div class="themeimgborder">
             <div class="themeimg">
-                <a href="${base_url}images/themes/${theme.name}.png" target="pmadocs">
+                <a href="${base_url}images/themes/${theme.name}.png">
                     <img src="${base_url}images/themes/${theme.name}.png" alt="${theme.name} thumbnail" />
                 </a>
             </div>
             </div>
     </div>
-    </py:for>
     <div class="clearer"></div>
 </div>
 
