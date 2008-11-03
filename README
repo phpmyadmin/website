@@ -22,4 +22,35 @@ Security announcements
 To create new security announcement, copy templates/security/_PMASA_ to
 templates/security/PMASA-YYYY-N and edit it's content.
 
+
+Page generating
+---------------
+
+All page has it's own template. For most things it mean inclusion of
+other templates to generate full page. These partial includes should be
+named with underscore as first character (eg. _page.tpl).
+
+To add new page, simply drop file to templates directory named
+something.tpl and it will be automatically used as a template on next
+run.
+
+All pages should at the end include _page.tpl to get layout and other
+common things. You can see example page at templates/_sample_.tpl
+
+
+Menu
+----
+
+Menu is configured in render.py, first element always means page name
+(extension is added automatically) second menu item title.
+
+
+Markup rules
+------------
+
+(See genshi docs for more details).
+
+- $ is special char to indicate template variable, to escape it, use $$
+- comments which first char is ! (eg. <!--! comment -->) will not be in output
+
 # vim: et ts=4 sw=4 sts=4 tw=72 spell spelllang=en_us

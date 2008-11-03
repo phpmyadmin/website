@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       xmlns:py="http://genshi.edgewall.org/"
       xmlns:xi="http://www.w3.org/2001/XInclude">
+<!--! This is main page template used for all other pages. -->
  <head>
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
   <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" /></py:if>

@@ -1,5 +1,7 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
+<!--! Contact information for security issues -->
+
 <p>
 If you have found security issue in phpMyAdmin code, we please you to contact
 <a href="mailto:security@phpmyadmin.net">phpMyAdmin security team</a> in
