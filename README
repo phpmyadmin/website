@@ -4,6 +4,18 @@ Website generator for phpMyAdmin
 This is currently in alpha state, but later it will hopefully replace
 phpMyAdmin homepage.
 
+
+Requirements
+------------
+
+Python - http://www.python.org/
+(2.5 tested, other should work also)
+Genshi -  http://genshi.edgewall.org/
+(0.5.0 tested)
+python-feedparser - http://www.feedparser.org
+(4.1 tested)
+
+
 Security announcements
 ----------------------
 
