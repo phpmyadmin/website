@@ -40,7 +40,7 @@
 
 <h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
 
-<a href="http://www.packtpub.com/phpmyadmin-3rd-edition/book"><img src="${base_url}images/books/pma_en_100x123.png" alt="Book cover" width="100" height="123" class="imgborder" /></a>
+<a href="http://www.packtpub.com/phpmyadmin-3rd-edition/book"><img src="${base_url}images/books/pma_en_100x123.png" alt="Book cover" width="100" height="123" /></a>
 
 <p>
 I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 2.11. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
@@ -55,7 +55,7 @@ I am pleased to announce an update of my book. It is now up to date with phpMyAd
 
 <h3>phpMyAdmin - efektivní správa MySQL</h3>
 
-<a href="http://www.zonerpress.cz/kniha-phpmyadmin-efektivni-sprava-mysql.html"><img src="${base_url}images/books/pma_cz_90x122.jpg" alt="Book cover" width="90" height="122" class="imgborder" /></a>
+<a href="http://www.zonerpress.cz/kniha-phpmyadmin-efektivni-sprava-mysql.html"><img src="${base_url}images/books/pma_cz_90x122.jpg" alt="Book cover" width="90" height="122" /></a>
 
 <p lang="cs">
 V edici encyklopedie webdesignera vychází tentokrát ryze praktická kniha – kompletní a podrobná příručka pro uživatele phpMyAdmin, grafického rozhraní pro efektivní správu serveru a databází MySQL. Kniha popisuje v době vydání aktuální českou verzi phpMyAdmin 2.6.0, která obsahuje celou řadu novinek, rozšíření a vylepšení oproti verzi předchozí.
@@ -75,7 +75,7 @@ Pro více informací navštivte stránku věnovanou
 <div class="book">
 <h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
 
-<a href="http://www.packtpub.com/dominary-phpMyAdmin-es"><img src="${base_url}images/books/pma_es_100x123.png" alt="Book cover" width="100" height="123" class="imgborder" /></a>
+<a href="http://www.packtpub.com/dominary-phpMyAdmin-es"><img src="${base_url}images/books/pma_es_100x123.png" alt="Book cover" width="100" height="123" /></a>
 
 <p lang="es">
 Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencial de phpMyAdmin. Ya sea un programador experimentado, un administrador de sistemas, un dise&ntilde;ador Web o nuevo a las tecnolog&iacute;as de MySQL y phpMyAdmin, este libro le mostrar&aacute; como aumentar su productividad y control cuando trabaje con MySQL. Por ello se ha traducido, de modo que esta gu&iacute;a completa sea m&aacute;s accesible al lector espa&ntilde;ol.
@@ -90,7 +90,7 @@ Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencia
 <div class="book">
 <h3>phpMyAdmin - MySQL-Datenbanken effizient über das Web verwalten</h3>
 
-<a href="http://www.addison-wesley.de/main/main.asp?page=home/bookdetails&amp;ProductID=106639"><img src="${base_url}images/books/pma_de_90x122.jpg" alt="Book cover" width="90" height="122" class="imgborder" /></a>
+<a href="http://www.addison-wesley.de/main/main.asp?page=home/bookdetails&amp;ProductID=106639"><img src="${base_url}images/books/pma_de_90x122.jpg" alt="Book cover" width="90" height="122" /></a>
 
 <p lang="de">
 Dieses Buch gibt Ihnen einen profunden Einstieg in die effiziente Verwaltung von MySQL-Datenbanken mit phpMyAdmin (neue Version 2.6.0) bis hin zur professionellen Administration. Der Autor zeigt, wie Sie mit phpMyAdmin Datenbanken anlegen, editieren, abfragen und pflegen und wie Sie Benutzer anlegen und verwalten.
