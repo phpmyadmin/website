@@ -272,6 +272,11 @@ ul {
     margin: 1em;
 }
 
+ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 ul.security li.active a {
 	color: black;
 }
