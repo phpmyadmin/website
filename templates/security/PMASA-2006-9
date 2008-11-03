@@ -1,35 +1,40 @@
-<p>
-phpMyAdmin security announcement
-</p>
-<hr>
-<p>
-Announcement-ID: PMASA-2006-9<br />
-Date: 2006-11-17<br />
-</p>
-<p>
-<b>Summary</b>:<br />
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2006-9
+</py:def>
+
+<py:def function="announcement_date">
+2006-11-17
+</py:def>
+
+
+<py:def function="announcement_summary">
 Bad IP Allow/Deny checking
-</p>
-<p>
-<b>Description</b>:<br />
-We received a security advisory from Christian Schmidt, Peytz & Co. and we wish to thank him for his work.
-<br />
-<br />
+</py:def>
+
+
+<py:def function="announcement_description">
+We received a security advisory from Christian Schmidt, Peytz &amp; Co. and we wish to thank him for his work.
 It was possible to get around IP-based Allow/Deny checking by faking proxy headers.
-</p>
-<p>
-<b>Severity</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_severity">
 We consider this vulnerability to be serious. 
-</p>
-<p>
-<b>Affected versions</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_affected">
 Probably all versions to 2.9.1.
-</p>
-<p>
-<b>Solution:</b><br />
+</py:def>
+
+
+<py:def function="announcement_solution">
 Upgrade to phpMyAdmin 2.9.1.1 or newer.
-</p>
-<p>
-For further information and in case of questions, please contact the
-phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
-</p>
+</py:def>
+
+
+<xi:include href="_page.tpl" />
+</html>

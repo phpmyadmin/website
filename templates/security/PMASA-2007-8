@@ -1,39 +1,50 @@
-<p>
-phpMyAdmin security announcement
-</p>
-<hr>
-<p>
-Announcement-ID: PMASA-2007-8<br />
-Date: 2007-11-20<br />
-</p>
-<p>
-<b>Summary</b>:<br />
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2007-8
+</py:def>
+
+<py:def function="announcement_date">
+2007-11-20
+</py:def>
+
+
+<py:def function="announcement_summary">
 XSS vulnerability
-</p>
-<p>
-<b>Description</b>:<br />
-We received an advisory from Tim Brown, Nth Dimension, and we wish to thank him for his work. The login page (auth_type cookie) was vulnerable to XSS via the convcharset parameter.<br /></br />
-</p>
-<p>
-<b>Severity</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_description">
+We received an advisory from Tim Brown, Nth Dimension, and we wish to thank him for his work. The login page (auth_type cookie) was vulnerable to XSS via the convcharset parameter.
+</py:def>
+
+
+<py:def function="announcement_severity">
 We consider this vulnerability to be serious.
-</p>
-<p>
-<b>Affected versions</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_affected">
 Probably all versions before 2.11.2.2. 
-</p>
-<p>
-<b>Solution:</b><br />
+</py:def>
+
+
+<py:def function="announcement_solution">
 Upgrade to phpMyAdmin 2.11.2.2 or newer.
-</p>
-<p>
-<b>References:</b><br />
+</py:def>
+
+
+<py:def function="announcement_references">
 <a href="http://www.nth-dimension.org.uk/downloads.php?id=38">http://www.nth-dimension.org.uk/downloads.php?id=38</a>
-<br /><br />
+</py:def>
+
+
+<py:def function="announcement_patches">
 The patch is attached to:
-<a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1835123&group_id=23067&atid=377408">http://sourceforge.net/tracker/index.php?func=detail&aid=1835123&group_id=23067&atid=377408</a>
-</p>
-<p>
-For further information and in case of questions, please contact the
-phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
-</p>
+<a
+href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1835123&amp;group_id=23067&amp;atid=377408">http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1835123&amp;group_id=23067&amp;atid=377408</a>
+</py:def>
+
+
+<xi:include href="_page.tpl" />
+</html>

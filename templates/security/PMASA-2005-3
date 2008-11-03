@@ -1,40 +1,45 @@
-<p>
-phpMyAdmin security announcement
-</p>
-<hr>
-<p>
-Announcement-ID: PMASA-2005-3<br />
-Date: 2005-04-03
-</p>
-<p>
-<b>Summary</b>:<br />
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2005-3
+</py:def>
+
+<py:def function="announcement_date">
+2005-04-03
+</py:def>
+
+<py:def function="announcement_summary">
 Cross-Site Scripting vulnerability
-</p>
-<p>
-<b>Description</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_description">
 We received a security advisory from Oriol Torrent Santiago and we wish to thank him for his work and report. The <tt>convcharset</tt> parameter was not correctly validated, opening the door to a XSS attack.
-<br />
-</p>
-<p>
-<b>Severity</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_severity">
 We consider this vulnerability to be serious.
 
-</p>
-<p>
-<b>Affected versions</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_affected">
 Probably all phpMyAdmin versions before 2.6.2-rc1.
-</p>
-<p>
-<b>Solution:</b><br />
+</py:def>
+
+
+<py:def function="announcement_solution">
 Upgrade to phpMyAdmin 2.6.2-rc1 or newer.
-</p>
-<p>
-<b>References</b>:<br />
+</py:def>
+
+
+<py:def function="announcement_references">
 <a href="http://www.arrelnet.com/advisories/adv20050403.html">
 http://www.arrelnet.com/advisories/adv20050403.html</a>
-<br />
-</p>
-<p>
-For further information and in case of questions, please contact the
-phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net">http://www.phpmyadmin.net/</a>.
-</p>
+</py:def>
+
+
+<xi:include href="_page.tpl" />
+</html>

@@ -256,12 +256,14 @@ class SFGenerator:
 
     def render_security(self, issue):
         dbg('  %s' % issue)
-        content = unicode(open('templates/security/%s' % issue, 'r').read(), 'utf-8')
-        template = self.loader.load('security/_page.tpl')
+        #content = unicode(open('templates/security/%s' % issue, 'r').read(), 'utf-8')
+        #template = self.loader.load('security/_page.tpl')
+        template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
         out = open(os.path.join(OUTPUT, 'security', '%s.html' % issue), 'w')
         #
-        out.write(template.generate(menu = menu, issue = issue, content = content, **self.data).render('xhtml'))
+        #out.write(template.generate(menu = menu, issue = issue, content = content, **self.data).render('xhtml'))
+        out.write(template.generate(menu = menu, **self.data).render('xhtml'))
         out.close()
 
 
