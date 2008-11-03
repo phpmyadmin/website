@@ -1,6 +1,6 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
-<py:def function="page_title">Support</py:def>
+<py:def function="page_title">Documentation</py:def>
 
 <div py:match="content" id="body">
 
