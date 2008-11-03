@@ -67,7 +67,7 @@ parts of repository include:
 <dt>trunk/website</dt><dd>Website code.</dd>
 <dt>trunk/themes</dt><dd>Themes.</dd>
 <dt>trunk/pma_localized_docs</dt><dd>Localised documentation.</dd>
-<dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code></dd>
+<dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code>)</dd>
 <dt>branches/</dt><dd>Maintenance branches for older versions (as <code>QA_X_Y</code>)</dd>
 </dl>
 
