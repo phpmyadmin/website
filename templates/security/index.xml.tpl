@@ -12,7 +12,7 @@
 <description>phpMyAdmin security announcements</description>
 <dc:language>en-us</dc:language>
 <dc:creator>phpMyAdmin devel team</dc:creator>
-<dc:date>${generated.isoformat()}</dc:date>
+<dc:date>${generated.w3cdtf()}</dc:date>
 <admin:generatorAgent rdf:resource="${server}" />
 <items>
 <rdf:Seq>
@@ -24,7 +24,7 @@
 <item  py:for="issue in topissues" rdf:about="${issue.fulllink}">
 <link>${issue.fulllink}</link>
 <title>${issue.name}</title>
-<dc:date>${issue.date.isoformat()}</dc:date>
+<dc:date>${issue.date.w3cdtf()}</dc:date>
 <dc:creator></dc:creator>
 <dc:subject>phpMyAdmin security</dc:subject>
 <description>

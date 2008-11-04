@@ -80,20 +80,24 @@ PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
 
 VERBOSE = True
 
-class fmtdate(datetime.datetime):
+class basedatetime(datetime.datetime):
+    def w3cdtf(self):
+        return self.strftime('%Y-%m-%dT%H:%M:%S+00:00')
+
+class fmtdate(basedatetime):
     def __str__(self):
         return self.strftime('%a, %d %b %Y')
 
     def parse(text):
-        return datetime.datetime.strptime(text.strip(), '%Y-%m-%d')
+        return basedatetime.strptime(text.strip(), '%Y-%m-%d')
     parse = staticmethod(parse)
 
-class fmtdatetime(datetime.datetime):
+class fmtdatetime(basedatetime):
     def __str__(self):
         return self.strftime('%a, %d %b %Y %H:%M:%S GMT')
 
     def parse(text):
-        return datetime.datetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
+        return basedatetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
     parse = staticmethod(parse)
 
 def warn(text):
