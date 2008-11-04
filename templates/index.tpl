@@ -37,6 +37,14 @@
     <li>And much more...</li>
    </ul>
 
+    <h2>Latest News</h2>
+    <ul>
+    <li py:for="item in shortnews">
+        <a href="${base_url}news.${file_ext}#${item.anchor}">${item.title}</a> (${item.date})
+    </li>
+    </ul>
+    <p class="signature"><a href="${base_url}news.${file_ext}">...more news.</a></p>
+
    <h2>Mailing lists</h2>
    <ul>
      <li>For users: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-users">phpmyadmin-users@lists.sourceforge.net</a></li>

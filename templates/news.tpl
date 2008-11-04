@@ -8,7 +8,7 @@
     <xi:include href="_littleboxes.tpl" />
 
     <py:for each="item in news">
-        <h2>${item.title}</h2>
+        <h2><a name="${item.anchor}"></a>${item.title}</h2>
         <p class="date">${item.date}</p>
         <p>${Markup(item.text)}</p>
         <p class="comments"><a href="${item.comments_link}">${item.comments_number} comments</a></p>

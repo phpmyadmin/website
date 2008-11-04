@@ -45,6 +45,8 @@ COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$'
 BASE_URL = '/'
 EXTENSION = 'html'
 
+SHORTNEWS_COUNT = 5
+
 # Main menu
 MENU = [
     ('', 'About'),
@@ -129,6 +131,13 @@ class SFGenerator:
         if page[:-4] == '.xml':
             return 'xml'
         return 'xhtml'
+
+    def text_to_id(self, text):
+        '''
+        Converts text to something what can be used as a anchor or id (no spaces
+        or other special chars).
+        '''
+        return re.sub('[^a-z0-9A-Z.-]', '_', text)
 
     def process_releases(self, rss_downloads):
         dbg('Processing file releases...')
@@ -233,7 +242,9 @@ class SFGenerator:
             item['comments_link'] = matches.group(2)
             item['comments_number'] = matches.group(3)
             item['title'] = entry.title
+            item['anchor'] = self.text_to_id(entry.title)
             self.data['news'].append(item)
+        self.data['shortnews'] = self.data['news'][:SHORTNEWS_COUNT]
 
     def process_donations(self, feed):
         dbg('Processing news feed...')
