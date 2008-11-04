@@ -120,6 +120,11 @@ div.downloadbutton a {
     border-right: 1px solid black;
 }
 
+#footer li.logo {
+    border: none;
+    padding: 0;
+}
+
 ul.dllist {
 	padding: 0.5em;
     margin: 0;
