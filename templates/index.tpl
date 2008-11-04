@@ -35,12 +35,6 @@ f.start();
 </script>
 
 <p>
-To ease usage to wide range of people, phpMyAdmin is translated to <a
-href="${base_url}languages.${file_ext}">55 languages</a> and supports both LTR
-and RTL languages.
-</p>
-
-<p>
 phpMyAdmin comes with wide range of <a
 href="${base_url}docs.${file_ext}">documentation</a> and users are welcome to
 update <a href="http://wiki.cihar.com/">our wiki pages</a> to share ideas and
@@ -52,6 +46,12 @@ phpMyAdmin is also very deeply documented in book written by one of developers
 &ndash; <a href="${base_url}docs.${file_ext}#books">Mastering phpMyAdmin for
 Effective MySQL Management</a>, which is available in English, Czech, German
 and Spanish.
+</p>
+
+<p>
+To ease usage to wide range of people, phpMyAdmin is translated to <a
+href="${base_url}languages.${file_ext}">55 languages</a> and supports both LTR
+and RTL languages.
 </p>
 
 <p>
