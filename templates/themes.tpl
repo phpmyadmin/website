@@ -22,9 +22,5 @@
     <div class="clearer"></div>
 </div>
 
-<!--!
-<div style="border: 1px solid #7584b3; width: 227px; height: 132px;"><div style="border: 1px solid #ffffff; width: 225px; height: 130px; overflow: hidden;" onfocus="this.blur();"><a href="./images/themes/paradice.png" target="pmadocs" onclick="pmaScreen(this.href,'PARADICE','http://prdownloads.sourceforge.net/phpmyadmin/paradice-3.0.zip?download');return false;" onfocus="this.blur();"><img src="./images/themes/paradice.png" width="450" height="260" border="0" alt="screen" title="click to enlarge" /></a></div>
--->
-
 <xi:include href="_page.tpl" />
 </html>
