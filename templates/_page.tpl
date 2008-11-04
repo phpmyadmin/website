@@ -11,9 +11,9 @@
   <link rel="stylesheet" type="text/css" href="${base_url}css/slimbox.css" media="screen" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <script src="${base_url}js/common.js" type="text/javascript"></script>
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
   <script src="${base_url}js/slimbox.js" type="text/javascript"></script>
+  <script src="${base_url}js/fader.js" type="text/javascript"></script>
  </head>
  <body>
   <div id="header">

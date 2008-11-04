@@ -282,7 +282,7 @@ class SFGenerator:
     def render_js(self, filename):
         dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
-        if filename in ['mootools.js', 'slimbox.js']:
+        if filename in ['mootools.js', 'slimbox.js', 'fader.js']:
             shutil.copy(os.path.join(JS, filename), outpath)
             return
         template = self.jsloader.load(filename)

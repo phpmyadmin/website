@@ -234,5 +234,8 @@ div.bookbanner img {
 div.bookbanner {
     float: left;
     margin: 1em;
+    width: 110px;
+    height: 133px;
+    overflow: none;
 }
 

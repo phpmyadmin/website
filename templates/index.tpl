@@ -18,9 +18,21 @@ SQL statement.
 </p>
 
 <div class="bookbanner">
-<a href="${base_url}docs.${file_ext}#books"><img src="images/books/pma_en_100x123.png" width="100" height="123"
-id="bookbanner" alt="phpMyAdmin books" /></a>
+<a href="${base_url}docs.${file_ext}#books">
+<div id="container">
+<img src="images/books/pma_en_100x123.png" alt="phpMyAdmin book" />
+<img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
+<img src="images/books/pma_de_90x122.jpg" alt="phpMyAdmin book" />
+<img src="images/books/pma_es_100x123.png" alt="phpMyAdmin book" />
 </div>
+</a>
+</div>
+<script type="text/javascript">
+window.addEvent('domready',function() {
+var f = new Fader('container');
+f.start();
+});
+</script>
 
 <p>
 To ease usage to wide range of people, phpMyAdmin is translated to <a
