@@ -65,6 +65,8 @@ SCREENSHOTS = [
     {'name': 'main_page', 'title': 'Main page screenshot'},
     ]
 
+TOP_ISSUES = 10
+
 # File locations
 TEMPLATES = './templates'
 CSS = './css'
@@ -165,6 +167,10 @@ class SFGenerator:
         return re.sub('[^a-z0-9A-Z.-]', '_', text)
 
     def process_releases(self, rss_downloads):
+        '''
+        Gets phpMyAdmin releases out of releases feed and fills releases
+        and releases_older.
+        '''
         dbg('Processing file releases...')
         releases = []
         for entry in rss_downloads.entries:
@@ -221,6 +227,9 @@ class SFGenerator:
                 self.data['releases_older'].append(releases[idx])
 
     def process_themes(self, rss_downloads):
+        '''
+        Gets theme releases out of releases feed and fills themes.
+        '''
         dbg('Processing themes releases...')
         for entry in rss_downloads.entries:
             titleparts = entry.title.split(' ')
@@ -257,6 +266,9 @@ class SFGenerator:
         self.data['themes'].sort(key = lambda x: x['name'])
 
     def process_news(self, feed):
+        '''
+        Fills in news based on news feed.
+        '''
         dbg('Processing news feed...')
         for entry in feed.entries:
             matches = COMMENTS_REGEXP.match(entry.summary)
@@ -271,6 +283,9 @@ class SFGenerator:
             self.data['news'].append(item)
 
     def process_donations(self, feed):
+        '''
+        Fills in donations based on donations feed.
+        '''
         dbg('Processing news feed...')
         for entry in feed.entries:
             item = {}
@@ -281,6 +296,9 @@ class SFGenerator:
             self.data['donations'].append(item)
 
     def get_menu(self, active):
+        '''
+        Returns list of menu entries with marked active one.
+        '''
         menu = []
         for item in MENU:
             title = item[1]
@@ -298,6 +316,9 @@ class SFGenerator:
         return menu
 
     def render_css(self, filename):
+        '''
+        Renders CSS file from template.
+        '''
         dbg('  %s' % filename)
         template = self.cssloader.load(filename)
         out = open(os.path.join(OUTPUT, 'css', filename), 'w')
@@ -305,6 +326,10 @@ class SFGenerator:
         out.close()
 
     def render_js(self, filename):
+        '''
+        Renders JavaScript file from template. Some defined files are not processed
+        through template engine as they were taken from other projects.
+        '''
         dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
         if filename in ['mootools.js', 'slimbox.js', 'fader.js']:
@@ -316,6 +341,9 @@ class SFGenerator:
         out.close()
 
     def render(self, page):
+        '''
+        Renders standard page.
+        '''
         dbg('  %s' % page)
         template = self.loader.load('%s.tpl' % page)
         menu = self.get_menu(page)
@@ -324,19 +352,21 @@ class SFGenerator:
         out.close()
 
     def render_security(self, issue):
+        '''
+        Renders security issue.
+        '''
         dbg('  %s' % issue)
-        #content = unicode(open('templates/security/%s' % issue, 'r').read(), 'utf-8')
-        #template = self.loader.load('security/_page.tpl')
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
         out = open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w')
-        #
-        #out.write(template.generate(menu = menu, issue = issue, content = content, **self.data).render('xhtml'))
         out.write(template.generate(menu = menu, issue = issue, **self.data).render('xhtml'))
         out.close()
 
 
     def list_security_issues(self):
+        '''
+        Fills in issues and topissues with security issues information.
+        '''
         issues = glob.glob('templates/security/PMASA*')
         issues.sort(reverse = True)
         for issue in issues:
@@ -349,9 +379,12 @@ class SFGenerator:
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
                 'date': fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
             })
-        self.data['topissues'] = self.data['issues'][:10]
+        self.data['topissues'] = self.data['issues'][:TOP_ISSUES]
 
     def prepare_output(self):
+        '''
+        Copies static content to output and creates required directories.
+        '''
         dbg('Copying static content to output...')
         try:
             shutil.rmtree(os.path.join(OUTPUT, 'images'))
@@ -371,8 +404,10 @@ class SFGenerator:
         except OSError:
             pass
 
-    def main(self):
-        self.prepare_output()
+    def fetch_data(self):
+        '''
+        Fetches data from remote or local sources and prepares template data.
+        '''
         rss_downloads = self.get_feed('releases', PROJECT_FILES_RSS)
         self.process_releases(rss_downloads)
         self.process_themes(rss_downloads)
@@ -385,6 +420,10 @@ class SFGenerator:
 
         self.list_security_issues()
 
+    def render_pages(self):
+        '''
+        Renders all content pages.
+        '''
         dbg('Rendering pages:')
         templates = [os.path.basename(x) for x in glob.glob('templates/*.tpl')]
         templates.extend([os.path.join('security', os.path.basename(x)) for x in glob.glob('templates/security/*.tpl')])
@@ -400,9 +439,18 @@ class SFGenerator:
 
         for css in [os.path.basename(x) for x in glob.glob('css/*.css')]:
             self.render_css(css)
+
         for js in [os.path.basename(x) for x in glob.glob('js/*.js')]:
             self.render_js(js)
 
+
+    def main(self):
+        '''
+        Main program which does everything.
+        '''
+        self.prepare_output()
+        self.fetch_data()
+        self.render_pages()
         dbg('Done!')
 
 if __name__ == '__main__':
