@@ -227,6 +227,10 @@ div.screenshot {
     padding: 0.2em;
 }
 
+div.bookbanner img {
+    border: 1px solid black;
+}
+
 div.bookbanner {
     float: left;
     margin: 1em;
