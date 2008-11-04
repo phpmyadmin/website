@@ -26,8 +26,10 @@ import re
 import cPickle
 import glob
 import shutil
+import datetime
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
+from genshi.input import XML
 
 import md5sums
 
@@ -77,6 +79,21 @@ PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
 
 VERBOSE = True
 
+class fmtdate(datetime.date):
+    def __str__(self):
+        return self.strftime('%a, %d %b %Y')
+
+    def parse(text):
+        return datetime.datetime.strptime(text.strip(), '%Y-%m-%d').date()
+    parse = staticmethod(parse)
+
+class fmtdatetime(datetime.datetime):
+    def __str__(self):
+        return self.strftime('%a, %d %b %Y %H:%M:%S GMT')
+
+    def parse(text):
+        return datetime.datetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
+    parse = staticmethod(parse)
 
 def warn(text):
     sys.stderr.write('%s\n' % text)
@@ -92,6 +109,7 @@ class SFGenerator:
             'releases_older': [],
             'themes': [],
             'news': [],
+            'issues': [],
             'donations': [],
             'base_url': BASE_URL,
             'file_ext': EXTENSION,
@@ -99,6 +117,7 @@ class SFGenerator:
             'rss_donations': DONATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
             'screenshots': SCREENSHOTS,
+            'generated': fmtdatetime.utcnow(),
             }
         self.loader = TemplateLoader(templates)
         self.cssloader = TemplateLoader(css, default_class = NewTextTemplate)
@@ -152,7 +171,7 @@ class SFGenerator:
             release['show'] = False
             release['notes'] = entry.link
             release['version'] = version
-            release['date'] = entry.updated
+            release['date'] = fmtdatetime.parse(entry.updated)
             release['name'] = type
             release['fullname'] = '%s %s' % (type, version)
             text = entry.summary
@@ -208,7 +227,7 @@ class SFGenerator:
             release['show'] = False
             release['notes'] = entry.link
             release['version'] = version
-            release['date'] = entry.updated
+            release['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
             release['name'] = type
             release['fullname'] = '%s %s' % (type, version)
             text = entry.summary
@@ -237,7 +256,7 @@ class SFGenerator:
             matches = COMMENTS_REGEXP.match(entry.summary)
             item = {}
             item['link'] = entry.link
-            item['date'] = entry.updated
+            item['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
             item['text'] = matches.group(1)
             item['comments_link'] = matches.group(2)
             item['comments_number'] = matches.group(3)
@@ -250,7 +269,7 @@ class SFGenerator:
         for entry in feed.entries:
             item = {}
             item['link'] = entry.link
-            item['date'] = entry.updated
+            item['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
             item['text'] = entry.summary
             item['title'] = entry.title
             self.data['donations'].append(item)
@@ -314,10 +333,15 @@ class SFGenerator:
     def list_security_issues(self):
         issues = glob.glob('templates/security/PMASA*')
         issues.sort(reverse = True)
-        issues = [os.path.basename(x) for x in issues]
-        self.data['issues'] = [{
-            'name' : x,
-            'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(x))} for x in issues]
+        for issue in issues:
+            data = XML(open(issue, 'r').read())
+            name = os.path.basename(issue)
+            self.data['issues'].append({
+                'name' : name,
+                'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
+                'summary': str(data.select('def[@function="announcement_summary"]/text()')),
+                'date': fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
+            })
 
     def prepare_output(self):
         dbg('Copying static content to output...')

@@ -14,6 +14,7 @@
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
   <script src="${base_url}js/slimbox.js" type="text/javascript"></script>
   <script src="${base_url}js/fader.js" type="text/javascript"></script>
+  <meta http-equiv="X-Generated" content="${generated}" />
  </head>
  <body>
   <div id="header">
