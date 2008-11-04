@@ -81,9 +81,12 @@ body {
 	color: black;
 }
 
-div.downloadbutton {
+div.rightbuttons {
     float: right;
     clear: both;
+}
+
+div.downloadbutton {
     padding: 0.5em;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -223,3 +226,9 @@ div.screenshot {
     margin: 0.2em;
     padding: 0.2em;
 }
+
+div.bookbanner {
+    float: left;
+    margin: 1em;
+}
+
