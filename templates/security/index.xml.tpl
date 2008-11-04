@@ -25,7 +25,7 @@
 <link>${issue.fulllink}</link>
 <title>${issue.name}</title>
 <dc:date>${issue.date.w3cdtf()}</dc:date>
-<dc:creator></dc:creator>
+<dc:creator>phpMyAdmin devel team</dc:creator>
 <dc:subject>phpMyAdmin security</dc:subject>
 <description>
 ${issue.summary}
