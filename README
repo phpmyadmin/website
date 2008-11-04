@@ -57,10 +57,12 @@ Markup rules
 License
 -------
 
-The website generator is licensed under GNU GPL version 2.
+The website generator is licensed under GNU GPL version 2 or later.
 
 Website itself uses mootools <http://mootools.net/> and slimbox
 <http://www.digitalia.be/software/slimbox> which are licensed under
 terms of MIT license.
+
+The website content is licensed under GNU FDL version 1.2 or later.
 
 # vim: et ts=4 sw=4 sts=4 tw=72 spell spelllang=en_us
