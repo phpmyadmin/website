@@ -53,4 +53,14 @@ Markup rules
 - $ is special char to indicate template variable, to escape it, use $$
 - comments which first char is ! (eg. <!--! comment -->) will not be in output
 
+
+License
+-------
+
+The website generator is licensed under GNU GPL version 2.
+
+Website itself uses mootools <http://mootools.net/> and slimbox
+<http://www.digitalia.be/software/slimbox> which are licensed under
+terms of MIT license.
+
 # vim: et ts=4 sw=4 sts=4 tw=72 spell spelllang=en_us

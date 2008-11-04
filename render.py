@@ -281,8 +281,12 @@ class SFGenerator:
 
     def render_js(self, filename):
         dbg('  %s' % filename)
+        outpath = os.path.join(OUTPUT, 'js', filename)
+        if filename in ['mootools.js', 'slimbox.js']:
+            shutil.copy(os.path.join(JS, filename), outpath)
+            return
         template = self.jsloader.load(filename)
-        out = open(os.path.join(OUTPUT, 'js', filename), 'w')
+        out = open(outpath, 'w')
         out.write(template.generate(**self.data).render())
         out.close()
 
@@ -362,8 +366,10 @@ class SFGenerator:
         for issue in self.data['issues']:
             self.render_security(issue['name'])
 
-        self.render_css('style.css')
-        self.render_js('common.js')
+        for css in [os.path.basename(x) for x in glob.glob('css/*.css')]:
+            self.render_css(css)
+        for js in [os.path.basename(x) for x in glob.glob('js/*.js')]:
+            self.render_js(js)
 
         dbg('Done!')
 

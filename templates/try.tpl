@@ -22,7 +22,8 @@ there full control on MySQL, default login is root with empty password.
 <h2>Screenshots</h2>
 
 <div class="screenshot" py:for="screen in screenshots">
-    <a href="${base_url}images/screenshots/${screen.name}.png">
+    <a href="${base_url}images/screenshots/${screen.name}.png"
+    rel="lightbox[screenshots]" title="${screen.title}">
         <img src="${base_url}images/screenshots/${screen.name}-small.png"
         alt="${screen.title}" /><br />
     ${screen.title}

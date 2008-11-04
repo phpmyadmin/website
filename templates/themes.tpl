@@ -12,7 +12,8 @@
             </ul> 
             <div class="themeimgborder">
             <div class="themeimg">
-                <a href="${base_url}images/themes/${theme.name}.png">
+                <a href="${base_url}images/themes/${theme.name}.png"
+                rel="lightbox[themes]" title="${theme.name}">
                     <img src="${base_url}images/themes/${theme.name}.png" alt="${theme.name} thumbnail" />
                 </a>
             </div>
