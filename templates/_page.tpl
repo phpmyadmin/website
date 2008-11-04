@@ -30,7 +30,7 @@
   <div id="footer">
    <ul>
     <li>Copyright &copy; 2003 - 2008 <a href="http://sourceforge.net/projects/phpmyadmin/">phpMyAdmin devel team</a></li>
-    <li><a href="${base_url}license.html">License</a></li>
+    <li><a href="${base_url}license.${file_ext}">License</a></li>
     <li><a href="${base_url}donate.${file_ext}">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}">Sitemap</a></li>
     <li class="last">Valid <a href="http://validator.w3.org/check/referer">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></li>
