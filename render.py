@@ -64,7 +64,8 @@ MENU = [
 
 # List of screenshots
 SCREENSHOTS = [
-    {'name': 'main_page', 'title': 'Main page screenshot'},
+    {'name': 'main-page', 'title': 'Main page screenshot'},
+    {'name': 'main-page-rtl', 'title': 'RTL language with Darkblue/orange theme'},
     ]
 
 # How many security issues are shown in RSS
