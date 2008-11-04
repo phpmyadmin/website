@@ -13,6 +13,10 @@
         <p>${Markup(item.text)}</p>
         <p class="comments"><a href="${item.comments_link}">${item.comments_number} comments</a></p>
     </py:for>
+
+    <p>
+    Older news are available at <a href="https://sourceforge.net/news/?group_id=23067">news archive at SourceForge</a>.
+    </p>
 </div>
 
 <xi:include href="_page.tpl" />

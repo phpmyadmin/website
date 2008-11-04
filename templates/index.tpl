@@ -18,10 +18,8 @@ SQL statement.
 </p>
 
 <div class="bookbanner">
-<a href="${base_url}docs.${file_ext}#books">
-<img src="images/books/pma_en_100x123.png" width="100" height="123"
-id="bookbanner" alt="phpMyAdmin books" />
-</a>
+<a href="${base_url}docs.${file_ext}#books"><img src="images/books/pma_en_100x123.png" width="100" height="123"
+id="bookbanner" alt="phpMyAdmin books" /></a>
 </div>
 
 <p>
@@ -63,7 +61,7 @@ releases.
 <div class="floatbox">
     <h2>Latest News</h2>
     <ul>
-    <li py:for="item in shortnews">
+    <li py:for="item in news">
         <a href="${base_url}news.${file_ext}#${item.anchor}">${item.title}</a> (${item.date})
     </li>
     </ul>

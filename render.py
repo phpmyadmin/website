@@ -45,8 +45,6 @@ COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$'
 BASE_URL = '/'
 EXTENSION = 'html'
 
-SHORTNEWS_COUNT = 5
-
 # Main menu
 MENU = [
     ('', 'About'),
@@ -246,7 +244,6 @@ class SFGenerator:
             item['title'] = entry.title
             item['anchor'] = self.text_to_id(entry.title)
             self.data['news'].append(item)
-        self.data['shortnews'] = self.data['news'][:SHORTNEWS_COUNT]
 
     def process_donations(self, feed):
         dbg('Processing news feed...')

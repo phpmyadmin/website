@@ -12,7 +12,7 @@
 </div>
 
 <div class="downloadbutton">
-    <span class="dlname"><a href="${base_url}try.${file_ext}">Try phpMyAdmin now</a></span>
+    <span class="dlname"><a href="${base_url}try.${file_ext}">Try phpMyAdmin</a></span>
 </div>
 
 <div class="downloadbutton">
