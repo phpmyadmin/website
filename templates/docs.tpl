@@ -52,7 +52,7 @@
 
 <div class="clearer"></div>
 
-<h2>Books</h2>
+<h2><a name="books"></a>Books</h2>
 
 <div class="floatbox book">
 
