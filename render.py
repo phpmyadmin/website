@@ -27,6 +27,7 @@ import cPickle
 import glob
 import shutil
 import datetime
+import time
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -61,11 +62,16 @@ MENU = [
     ('download', 'Download'),
 ]
 
+# List of screenshots
 SCREENSHOTS = [
     {'name': 'main_page', 'title': 'Main page screenshot'},
     ]
 
+# How many security issues are shown in RSS
 TOP_ISSUES = 10
+
+# How long is cache valid (in seconds)
+CACHE_TIME = 60 * 60
 
 # File locations
 TEMPLATES = './templates'
@@ -134,11 +140,17 @@ class SFGenerator:
     def get_feed(self, name, url):
         dbg('Downloading and parsing %s feed...' % name)
         dbg('URL: %s' % url)
+        cache = './cache/feed-%s.dump' % name
         try:
-            result = cPickle.load(open('./cache/feed-%s.dump' % name, 'r'))
-        except IOError:
+            mtime = os.path.getmtime(cache)
+        except OSError:
+            mtime = 0
+        if mtime + CACHE_TIME > time.time():
+            dbg('Using cache!')
+            result = cPickle.load(open(cache, 'r'))
+        else:
             result = feedparser.parse(url)
-            cPickle.dump(result, open('./cache/feed-%s.dump' % name, 'w'))
+            cPickle.dump(result, open(cache, 'w'))
         return result
 
     def get_outname(self, page):
