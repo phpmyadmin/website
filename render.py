@@ -44,6 +44,7 @@ SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
 COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
 
 # Base URL (including trailing /)
+SERVER = 'http://new.cihar.com'
 BASE_URL = '/'
 EXTENSION = 'html'
 
@@ -79,12 +80,12 @@ PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
 
 VERBOSE = True
 
-class fmtdate(datetime.date):
+class fmtdate(datetime.datetime):
     def __str__(self):
         return self.strftime('%a, %d %b %Y')
 
     def parse(text):
-        return datetime.datetime.strptime(text.strip(), '%Y-%m-%d').date()
+        return datetime.datetime.strptime(text.strip(), '%Y-%m-%d')
     parse = staticmethod(parse)
 
 class fmtdatetime(datetime.datetime):
@@ -112,6 +113,7 @@ class SFGenerator:
             'issues': [],
             'donations': [],
             'base_url': BASE_URL,
+            'server': SERVER,
             'file_ext': EXTENSION,
             'rss_files': PROJECT_FILES_RSS,
             'rss_donations': DONATIONS_RSS,
@@ -339,9 +341,11 @@ class SFGenerator:
             self.data['issues'].append({
                 'name' : name,
                 'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
+                'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
                 'date': fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
             })
+        self.data['topissues'] = self.data['issues'][:10]
 
     def prepare_output(self):
         dbg('Copying static content to output...')
