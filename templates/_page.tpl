@@ -4,12 +4,13 @@
       xmlns:xi="http://www.w3.org/2001/XInclude">
 <!--! This is main page template used for all other pages. -->
  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
   <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" /></py:if>
   <link rel="stylesheet" type="text/css" href="${base_url}css/style.css" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="${base_url}js/common.js" type="text/javascript"></script>
  </head>
  <body>
   <div id="header">

@@ -17,34 +17,10 @@ users, permissions, etc), while you still have ability to directly execute any
 SQL statement.  
 </p>
 
-<script type="text/javascript">
-//<![CDATA[
-var counter = 1;
-var banArray = new Array(4);
-if(document.images) {
-    banArray[0] = new Image(97,123);
-    banArray[0].src = "images/books/pma_en_100x123.png";
-    banArray[1] = new Image(90,122);
-    banArray[1].src = "images/books/pma_cz_90x122.jpg";
-    banArray[2] = new Image(90,122);
-    banArray[2].src = "images/books/pma_de_90x122.jpg";
-    banArray[3] = new Image(100,123);
-    banArray[3].src = "images/books/pma_es_100x123.png";
-}
-function changeBanner() {
-    if(counter > 3)
-       counter = 0;
-    document.bookbanner.src = banArray[counter].src;
-    counter++;
-}
-var timer = window.setInterval("changeBanner()", 10000);
-//]]>
-</script>
-
-
 <div class="bookbanner">
 <a href="${base_url}docs.${file_ext}#books">
-<img src="images/books/pma_en_100x123.png" width="100" height="123" id="bookbanner" alt="phpMyAdmin books" />
+<img src="images/books/pma_en_100x123.png" width="100" height="123"
+id="bookbanner" alt="phpMyAdmin books" />
 </a>
 </div>
 

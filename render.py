@@ -67,6 +67,7 @@ SCREENSHOTS = [
 # File locations
 TEMPLATES = './templates'
 CSS = './css'
+JS = './js'
 IMAGES = './images'
 OUTPUT = './output'
 
@@ -87,7 +88,7 @@ def dbg(text):
         sys.stderr.write('%s\n' % text)
 
 class SFGenerator:
-    def __init__(self, templates = [TEMPLATES], css = [CSS]):
+    def __init__(self, templates = [TEMPLATES], css = [CSS], js = [JS]):
         self.data = {
             'releases': [],
             'releases_older': [],
@@ -103,6 +104,7 @@ class SFGenerator:
             }
         self.loader = TemplateLoader(templates)
         self.cssloader = TemplateLoader(css, default_class = NewTextTemplate)
+        self.jsloader = TemplateLoader(js, default_class = NewTextTemplate)
 
     def get_feed(self, name, url):
         dbg('Downloading and parsing %s feed...' % name)
@@ -280,6 +282,13 @@ class SFGenerator:
         out.write(template.generate(**self.data).render())
         out.close()
 
+    def render_js(self, filename):
+        dbg('  %s' % filename)
+        template = self.jsloader.load(filename)
+        out = open(os.path.join(OUTPUT, 'js', filename), 'w')
+        out.write(template.generate(**self.data).render())
+        out.close()
+
     def render(self, page):
         dbg('  %s' % page)
         template = self.loader.load('%s.tpl' % page)
@@ -324,6 +333,10 @@ class SFGenerator:
             os.mkdir(os.path.join(OUTPUT, 'css'))
         except OSError:
             pass
+        try:
+            os.mkdir(os.path.join(OUTPUT, 'js'))
+        except OSError:
+            pass
 
     def main(self):
         self.prepare_output()
@@ -353,6 +366,7 @@ class SFGenerator:
             self.render_security(issue['name'])
 
         self.render_css('style.css')
+        self.render_js('common.js')
 
         dbg('Done!')
 
