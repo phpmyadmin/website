@@ -276,3 +276,10 @@ a.awardlink {
     margin: 5px;
     width: 300px;
 }
+
+img.head {
+    float: left;
+    border: none;
+    margin: 0.2em;
+    padding: 0.2em;
+}

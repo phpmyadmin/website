@@ -29,7 +29,7 @@
 
   <div id="footer">
    <ul>
-    <li>Copyright &copy; 2003 - 2008 <a href="http://sourceforge.net/projects/phpmyadmin/">phpMyAdmin devel team</a></li>
+    <li>Copyright &copy; 2003 - 2008 <a href="${base_url}team.${file_ext}">phpMyAdmin devel team</a></li>
     <li><a href="${base_url}license.${file_ext}">License</a></li>
     <li><a href="${base_url}donate.${file_ext}">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}">Sitemap</a></li>
