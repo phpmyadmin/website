@@ -66,6 +66,9 @@ MENU = [
 SCREENSHOTS = [
     {'name': 'main-page', 'title': 'Main page screenshot'},
     {'name': 'main-page-rtl', 'title': 'RTL language with Darkblue/orange theme'},
+    {'name': 'designer', 'title': 'Database designer'},
+    {'name': 'sql-export', 'title': 'SQL export options'},
+    {'name': 'privileges', 'title': 'Setting per column privileges for table'},
     ]
 
 # How many security issues are shown in RSS
