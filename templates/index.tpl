@@ -62,6 +62,13 @@ and MySQL 5+ to use it. To use with older PHP or MySQL versions, use older
 (but still maintained) branch of 2.x releases.
 </p>
 
+<p>
+phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
+Among others was as chosen a best PHP application in various awards and
+every year wins SourceForge.net Community Choice Awards as Best Tool or
+Utility for SysAdmins.
+</p>
+
 <div class="floatbox">
     <h2>Features</h2>
     <ul>

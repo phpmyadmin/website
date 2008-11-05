@@ -33,6 +33,7 @@ from genshi.template import NewTextTemplate
 from genshi.input import XML
 
 import md5sums
+import awards
 
 # Project part
 PROJECT_ID = 23067
@@ -135,6 +136,7 @@ class SFGenerator:
             'rss_donations': DONATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
             'screenshots': SCREENSHOTS,
+            'awards': awards.AWARDS,
             'generated': fmtdatetime.utcnow(),
             }
         self.loader = TemplateLoader(templates)
