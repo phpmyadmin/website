@@ -424,8 +424,9 @@ class SFGenerator:
             pass
 
     def generate_sitemap(self):
-        import os
-        from os.path import join, getsize
+        '''
+        Generates list of pages with titles.
+        '''
         self.data['sitemap'] = []
         for root, dirs, files in os.walk(TEMPLATES):
             if '.svn' in dirs:
