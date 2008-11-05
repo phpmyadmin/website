@@ -55,10 +55,11 @@ and RTL languages.
 </p>
 
 <p>
-Since version 3.0.0, phpMyAdmin dropped compatibility code for older PHP and
-MySQL versions and you require PHP 5.2 and MySQL 5+ to use it. To use with
-older PHP or MySQL versions, use older (but still maintained) branch of 2.x
-releases.
+Since version 3.0.0, phpMyAdmin joined <a
+href="${base_url}gophp5.${file_ext}">GoPHP5 initiative</a> and dropped
+compatibility code for older PHP and MySQL versions and you require PHP 5.2
+and MySQL 5+ to use it. To use with older PHP or MySQL versions, use older
+(but still maintained) branch of 2.x releases.
 </p>
 
 <div class="floatbox">
