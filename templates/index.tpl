@@ -73,7 +73,42 @@ Utility for SysAdmins.
     <h2>Features</h2>
     <ul>
         <li>Intuitive web interface</li>
-        <li></li>
+        <li>Support for most MySQL features:
+        <ul>
+            <li>browse and drop databases, tables, views, fields and indexes</li>
+            <li>create, copy, drop, rename and alter databases, tables, fields and
+                indexes</li>
+            <li>maintenance server, databases and tables, with proposals on server
+                configuration</li>
+            <li>execute, edit and bookmark any
+                <abbr title="structured query language">SQL</abbr>-statement, even
+                batch-queries</li>
+            <li>manage MySQL users and privileges</li>
+        </ul>
+        </li>
+        <li>Import data from 
+            <abbr title="comma separated values">CSV</abbr> and
+            <abbr title="structured query language">SQL</abbr>
+            </li>
+        <li>Export data to various formats:
+            <abbr title="comma separated values">CSV</abbr>,
+            <abbr title="structured query language">SQL</abbr>,
+            <abbr title="Extensible Markup Language">XML</abbr>,
+            <abbr title="Portable Document Format">PDF</abbr>,
+            <abbr title="International Standards Organisation">ISO</abbr>/<abbr
+            title="International Electrotechnical Commission">IEC</abbr> 26300 -
+            OpenDocument Text and Spreadsheet,
+            <abbr title="Microsoft Word 2000">Word</abbr>,
+            <abbr title="Microsoft Excel 2000">Excel</abbr> and L<sup>A</sup>T<sub><big>E</big></sub>X formats
+            </li>
+        <li>Administering multiple servers</li>
+        <li>Creating <abbr title="Portable Document Format">PDF</abbr> graphics of
+            your database layout</li>
+        <li>Creating complex queries using Query-by-example (QBE)</li>
+        <li>Searching globally in a database or a subset of it</li>
+        <li>Transforming stored data into any format using a set of predefined
+            functions, like displaying BLOB-data as image or download-link
+            </li>
         <li>And much more...</li>
     </ul>
 </div>
