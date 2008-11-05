@@ -423,6 +423,38 @@ class SFGenerator:
         except OSError:
             pass
 
+    def generate_sitemap(self):
+        import os
+        from os.path import join, getsize
+        self.data['sitemap'] = []
+        for root, dirs, files in os.walk(TEMPLATES):
+            if '.svn' in dirs:
+                dirs.remove('.svn')  # don't visit .svn directories
+            files.sort()
+            dir = root[len(TEMPLATES):].strip('/')
+            if len(dir) > 0:
+                dir += '/'
+            for file in files:
+                name, ext = os.path.splitext(file)
+                if name[:5] != 'PMASA' and ext != '.tpl':
+                    continue
+                if name[0] in ['_', '.']:
+                    continue
+                if file == 'index.xml.tpl':
+                    continue
+                data = XML(open(os.path.join(root, file), 'r').read())
+                title = str(data.select('def[@function="page_title"]/text()'))
+                title = title.strip()
+                if len(title) == 0:
+                    title = str(data.select('def[@function="announcement_id"]/text()'))
+                    title = title.strip()
+                if len(title) == 0:
+                    title = 'Index'
+                self.data['sitemap'].append({
+                    'link': dir + self.get_outname(name),
+                    'title': title
+                    })
+
     def fetch_data(self):
         '''
         Fetches data from remote or local sources and prepares template data.
@@ -438,6 +470,8 @@ class SFGenerator:
         self.process_donations(rss_donations)
 
         self.list_security_issues()
+
+        self.generate_sitemap()
 
     def render_pages(self):
         '''
