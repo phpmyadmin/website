@@ -125,13 +125,6 @@ Utility for SysAdmins.
 
 <div class="clearer"></div>
 
-    <h2>Mailing lists</h2>
-    <ul>
-        <li>For users: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-users">phpmyadmin-users@lists.sourceforge.net</a></li>
-        <li>For developers: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">phpmyadmin-devel@lists.sourceforge.net</a></li>
-        <li>SVN commit notifications: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-svn">phpmyadmin-svn@lists.sourceforge.net</a></li>
-    </ul>
-
 </div>
 
 <xi:include href="_page.tpl" />
