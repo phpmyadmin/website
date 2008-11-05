@@ -396,6 +396,7 @@ class SFGenerator:
                 'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
                 'date': fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
+                'cve': str(data.select('def[@function="announcement_cve"]/text()')),
             })
         self.data['topissues'] = self.data['issues'][:TOP_ISSUES]
 

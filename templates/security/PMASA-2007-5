@@ -43,6 +43,10 @@ Upgrade to phpMyAdmin 2.11.1.1 or newer.
 <a href="http://www.securityfocus.com/bid/26020/info">http://www.securityfocus.com/bid/26020/info</a>
 </py:def>
 
+<py:def function="announcement_cve">
+CVE-2007-5386
+</py:def>
+
 <py:def function="announcement_patches">
 Patches are available in this tracker: 
 <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1810629&amp;group_id=23067&amp;atid=377408">https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1810629&amp;group_id=23067&amp;atid=377408</a>

@@ -33,6 +33,9 @@ Probably all versions to 2.9.1.
 Upgrade to phpMyAdmin 2.9.1.1 or newer.
 </py:def>
 
+<py:def function="announcement_cve">
+CVE-2006-6374
+</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

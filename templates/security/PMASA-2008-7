@@ -38,8 +38,11 @@ Upgrade to phpMyAdmin 2.11.9.1 or newer.
 </py:def>
 
 <py:def function="announcement_references">
-<a href="http://fd.the-wildcat.de/pma_e36a091q11.php">http://fd.the-wildcat.de/pma_e36a091q11.php</a><br />
-<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4096">http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4096</a><br />
+<a href="http://fd.the-wildcat.de/pma_e36a091q11.php">http://fd.the-wildcat.de/pma_e36a091q11.php</a>
+</py:def>
+
+<py:def function="announcement_cve">
+CVE-2008-4096
 </py:def>
 
 <xi:include href="_page.tpl" />

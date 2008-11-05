@@ -1,6 +1,7 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
 <py:def function="page_title">Security - ${announcement_id()}</py:def>
+<py:def function="page_rss">${base_url}security/index.xml</py:def>
 
 <div py:match="content">
 
@@ -39,9 +40,10 @@
     <h3>Solution</h3>
     <p>${announcement_solution()}</p>
 
-    <py:if test="defined('announcement_references')">
+    <py:if test="defined('announcement_references') or defined('announcement_cve')">
     <h3>References</h3>
-    <p>${announcement_references()}</p>
+    <p py:if="defined('announcement_references')">${announcement_references()}</p>
+    <p py:if="defined('announcement_cve')"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=${announcement_cve()}">${announcement_cve()}</a></p>
     </py:if>
 
     <py:if test="defined('announcement_patches')">

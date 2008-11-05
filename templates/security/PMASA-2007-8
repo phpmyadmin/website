@@ -46,5 +46,9 @@ href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1835123&amp;g
 </py:def>
 
 
+<py:def function="announcement_cve">
+CVE-2007-6100
+</py:def>
+
 <xi:include href="_page.tpl" />
 </html>

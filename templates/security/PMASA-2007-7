@@ -50,6 +50,9 @@ The patch is attached to:
 <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1829884&amp;group_id=23067&amp;atid=377408">https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1829884&amp;group_id=23067&amp;atid=377408</a>
 </py:def>
 
+<py:def function="announcement_cve">
+CVE-2007-5977
+</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

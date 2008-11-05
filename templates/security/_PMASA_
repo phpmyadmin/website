@@ -46,8 +46,12 @@ PMASA-2008-?
 Upgrade to phpMyAdmin ???? or newer.
 </py:def>
 
-<!--! Links to reporter, CVE etc, do not forget to escape & to &amp; -->
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">
 </py:def>
 
 <!--! Links to SVN or tracker, do not forget to escape & to &amp; -->

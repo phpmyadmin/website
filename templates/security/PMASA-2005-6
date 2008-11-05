@@ -34,6 +34,9 @@ We did not make an extensive verification on this. Probably all previous version
 Upgrade to phpMyAdmin 2.6.4-pl4.
 </py:def>
 
+<py:def function="announcement_cve">
+CVE-2005-3621
+</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

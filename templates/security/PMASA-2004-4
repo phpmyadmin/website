@@ -62,6 +62,9 @@ We strongly advise everyone to upgrade to version 2.6.1 when released. Meanwhile
 http://www.exaprobe.com/labs/advisories/esa-2004-1213.html</a>
 </py:def>
 
+<py:def function="announcement_cve">
+CVE-2004-1148
+</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

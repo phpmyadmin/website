@@ -29,8 +29,8 @@ We did not make an extensive verification on this. Probably all previous version
 </py:def>
 
 
-<py:def function="announcement_references">
-CVE-2005-3665 (to be published)
+<py:def function="announcement_cve">
+CVE-2005-3665
 </py:def>
 
 <py:def function="announcement_solution">

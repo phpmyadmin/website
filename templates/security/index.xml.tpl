@@ -28,7 +28,11 @@
 <dc:creator>phpMyAdmin devel team</dc:creator>
 <dc:subject>phpMyAdmin security</dc:subject>
 <description>
-${issue.summary}
+<![CDATA[
+<p>${issue.summary}</p>
+
+<p py:if="issue.cve"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=${issue.cve}">${issue.cve}</a></p>
+]]>
 </description>
 </item>
 
