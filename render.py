@@ -48,7 +48,9 @@ COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$'
 
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
+SERVER = 'http://new.cihar.com'
 BASE_URL = '/test/'
+BASE_URL = '/'
 EXTENSION = 'html'
 
 # Main menu
@@ -471,6 +473,7 @@ class SFGenerator:
         Generates list of pages with titles.
         '''
         self.data['sitemap'] = []
+        dbg('Generating sitemap:')
         for root, dirs, files in os.walk(TEMPLATES):
             if '.svn' in dirs:
                 dirs.remove('.svn')  # don't visit .svn directories
@@ -486,6 +489,7 @@ class SFGenerator:
                     continue
                 if file == 'index.xml.tpl':
                     continue
+                dbg('- %s' % file)
                 data = XML(open(os.path.join(root, file), 'r').read())
                 title = str(data.select('def[@function="page_title"]/text()'))
                 title = title.strip()
