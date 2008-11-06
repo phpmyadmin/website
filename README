@@ -45,6 +45,11 @@ Menu is configured in render.py, first element always means page name
 (extension is added automatically) second menu item title.
 
 
+Themes
+------
+
+Themes require additional metadata, which is stored in themes.py.
+
 Markup rules
 ------------
 
