@@ -89,6 +89,9 @@ JS = './js'
 IMAGES = './images'
 OUTPUT = './output'
 
+# Which JS files are not templates
+JS_NOTEMPLATES = ['mootools.js', 'slimbox.js', 'fader.js', 'master_sorting_table.js']
+
 # Generic sourceforge.net part
 PROJECT_FILES_RSS = 'https://sourceforge.net/export/rss2_projfiles.php?group_id=%d&rss_limit=100' % PROJECT_ID
 PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
@@ -416,8 +419,7 @@ class SFGenerator:
         '''
         dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
-        if filename in ['mootools.js', 'slimbox.js', 'fader.js',
-            'master_sorting_table.js']:
+        if filename in JS_NOTEMPLATES:
             shutil.copy2(os.path.join(JS, filename), outpath)
             return
         template = self.jsloader.load(filename)
