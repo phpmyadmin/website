@@ -48,12 +48,7 @@ Subversion</a>.
 </p>
 
 <h3>Source Code Repository</h3>
-<p>
-Subversion repository is located at
-<code>https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin</code> and you
-can browse it online using <a
-href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/">ViewVC</a>.
-</p>
+<xi:include href="_svndl.tpl" />
 
 <p>
 To start development you want to start with <code>trunk/phpMyAdmin</code>,
