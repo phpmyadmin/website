@@ -491,9 +491,11 @@ class SFGenerator:
         for issue in self.data['issues']:
             self.render_security(issue['name'])
 
+        dbg('Generating CSS:')
         for css in [os.path.basename(x) for x in glob.glob('css/*.css')]:
             self.render_css(css)
 
+        dbg('Generating JavaScript:')
         for js in [os.path.basename(x) for x in glob.glob('js/*.js')]:
             self.render_js(js)
 

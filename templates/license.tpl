@@ -7,7 +7,7 @@
 
 <p>
 phpMyAdmin is released under <a
-href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU General
+href="http://creativecommons.org/licenses/GPL/2.0/">GNU General
 Public License, version 2</a>.
 </p>
 
@@ -36,7 +36,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 <p>
 Website generator is released under <a
-href="http://www.gnu.org/copyleft/gpl.html">GNU General
+href="http://creativecommons.org/licenses/GPL/2.0/">GNU General
 Public License, version 2 or later</a>.
 </p>
 
@@ -64,17 +64,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 <p>
 Website content is released under 
-<a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
-License, version 1.2 or later</a>.
+<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons
+Attribution-Share Alike 3.0 Unported</a>.
 </p>
 
 <p>
-Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version 1.2
-or any later version published by the Free Software Foundation;
-with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-A copy of the license is included in the section entitled "GNU
-Free Documentation License".
+All products mentioned on these pages are trademarks of their respective
+owners, where appropriate.
 </p>
 
 </div>
