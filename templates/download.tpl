@@ -8,7 +8,8 @@
     <p>
     Many operating systems already include a phpMyAdmin package and some of
     them offer a way to upgrade to the latest version. Please contact your OS
-    vendor for more information.
+    vendor for more information. Some informations are also available <a
+    href="#distributions">bellow on this page</a>.
     </p>
     <p>
     If you do not have the possibility, you can download one of following
@@ -39,6 +40,23 @@
     <h3>${release.fullname}</h3>
     <xi:include href="_release.tpl" />
     </py:for>
+
+    <h2><a name="distributions"></a>Distributions</h2>
+    <h3>OpenSUSE</h3>
+    <p>
+        OpenSUSE already comes with phpMyAdmin package, however if you want to
+        use recent version, you can use packages from <a
+        href="http://software.opensuse.org/search?q=phpmyadmin">openSUSE Build
+        Service</a>.
+    </p>
+    <h3>Ubuntu</h3>
+    <p>
+        Ubuntu ships phpMyAdmin package, however if you want to use recent
+        version, you can use packages from <a
+        href="https://launchpad.net/~nijel/+archive/">PPA for Michal
+        Čihař</a>.
+    </p>
+
 
 </div>
 
