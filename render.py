@@ -21,7 +21,6 @@
 
 import sys
 import os
-import stat
 import feedparser
 import re
 import cPickle
@@ -29,6 +28,8 @@ import glob
 import shutil
 import datetime
 import time
+import csv
+import urllib
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -93,6 +94,7 @@ PROJECT_FILES_RSS = 'https://sourceforge.net/export/rss2_projfiles.php?group_id=
 PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
+TRANSLATION_STATS_URL = 'http://cihar.com/phpMyAdmin/translations/dump.php'
 
 # Enable verbose messages?
 VERBOSE = True
@@ -105,10 +107,10 @@ class basedatetime(datetime.datetime):
 
 class fmtdate(basedatetime):
     def __str__(self):
-        return self.strftime('%a, %d %b %Y')
+        return self.strftime('%Y-%m-%d')
 
     def parse(text):
-        return basedatetime.strptime(text.strip(), '%Y-%m-%d')
+        return fmtdate.strptime(text.strip(), '%Y-%m-%d')
     parse = staticmethod(parse)
 
 class fmtdatetime(basedatetime):
@@ -116,8 +118,11 @@ class fmtdatetime(basedatetime):
         return self.strftime('%a, %d %b %Y %H:%M:%S GMT')
 
     def parse(text):
-        return basedatetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
+        return fmtdatetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
     parse = staticmethod(parse)
+
+class NoCache(Exception):
+    pass
 
 def warn(text):
     sys.stderr.write('%s\n' % text)
@@ -181,20 +186,43 @@ class SFGenerator:
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
 
-    def get_feed(self, name, url):
-        dbg('Downloading and parsing %s feed...' % name)
-        dbg('URL: %s' % url)
-        cache = './cache/feed-%s.dump' % name
+    def get_cache_name(self, name):
+        '''
+        Returns cache filename for given name.
+        '''
+        return os.path.join('.', 'cache', '%s.dump' % name)
+
+    def load_cache(self, name):
+        '''
+        Loads cache if it is available and valid, raises exception otherwise.
+        '''
+        filename = self.get_cache_name(name)
         try:
-            mtime = os.path.getmtime(cache)
+            mtime = os.path.getmtime(filename)
         except OSError:
             mtime = 0
         if mtime + CACHE_TIME > time.time():
-            dbg('Using cache!')
-            result = cPickle.load(open(cache, 'r'))
-        else:
+            dbg('Using cache for %s!' % name)
+            return cPickle.load(open(filename, 'r'))
+        raise NoCache()
+
+    def save_cache(self, name, data):
+        '''
+        Saves cache.
+        '''
+        filename = self.get_cache_name(name)
+        cPickle.dump(data, open(filename, 'w'))
+
+
+    def get_feed(self, name, url):
+        dbg('Downloading and parsing %s feed...' % name)
+        dbg('URL: %s' % url)
+        cache = 'feed-%s' % name
+        try:
+            result = self.load_cache(cache)
+        except NoCache:
             result = feedparser.parse(url)
-            cPickle.dump(result, open(cache, 'w'))
+            self.save_cache(cache, result)
         return result
 
     def get_outname(self, page):
@@ -503,6 +531,31 @@ class SFGenerator:
                     'title': title
                     })
 
+    def get_translation_stats(self):
+        '''
+        Receives translation stats from external server and parses it.
+        '''
+        dbg('Processing translation stats...')
+        try:
+            lines = self.load_cache('translations')
+        except NoCache:
+            lines = urllib.urlopen(TRANSLATION_STATS_URL).readlines()
+            self.save_cache('translations', lines)
+        self.data['translations'] = []
+        data = csv.reader(lines)
+        for row in data:
+            if row[4] != '':
+                dt = fmtdate.parse(row[4][:10])
+            else:
+                dt = ''
+            self.data['translations'].append({
+                'name': row[0],
+                'short': row[1],
+                'translated': row[2],
+                'percent': row[3],
+                'updated': dt,
+            })
+
     def fetch_data(self):
         '''
         Fetches data from remote or local sources and prepares template data.
@@ -516,6 +569,8 @@ class SFGenerator:
 
         rss_donations = self.get_feed('donations', DONATIONS_RSS)
         self.process_donations(rss_donations)
+
+        self.get_translation_stats()
 
         self.list_security_issues()
 
