@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 #
 # phpMyAdmin web site generator
 #
@@ -18,7 +19,6 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-
 import sys
 import os
 import feedparser
@@ -36,6 +36,7 @@ from genshi.input import XML
 
 import md5sums
 import awards
+import themes
 
 # Project part
 PROJECT_ID = 23067
@@ -90,7 +91,7 @@ IMAGES = './images'
 OUTPUT = './output'
 
 # Which JS files are not templates
-JS_NOTEMPLATES = ['mootools.js', 'slimbox.js', 'fader.js', 'master_sorting_table.js']
+JS_TEMPLATES = []
 
 # Generic sourceforge.net part
 PROJECT_FILES_RSS = 'https://sourceforge.net/export/rss2_projfiles.php?group_id=%d&rss_limit=100' % PROJECT_ID
@@ -184,6 +185,7 @@ class SFGenerator:
             'screenshots': SCREENSHOTS,
             'awards': awards.AWARDS,
             'generated': fmtdatetime.utcnow(),
+            'themecssversions': themes.CSSVERSIONS,
             }
         self.loader = TemplateLoader([TEMPLATES])
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
@@ -330,8 +332,18 @@ class SFGenerator:
             release['notes'] = entry.link
             release['version'] = version
             release['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
-            release['name'] = type
-            release['fullname'] = '%s %s' % (type, version)
+            release['shortname'] = type
+            release['imgname'] = 'images/themes/%s.png' % type
+            try:
+                release.update(themes.THEMES['%s-%s' % (type, version)])
+            except KeyError:
+                warn('No meatadata for theme %s-%s!' % (type, version))
+                release['name'] = type
+                release['support'] = 'N/A'
+                release['info'] = ''
+            release['fullname'] = '%s %s' % (release['name'], version)
+            release['classes'] = themes.CSSMAP[release['support']]
+
             text = entry.summary
             fileslist = text[text.find('Includes files:') + 15:]
             fileslist = fileslist[:fileslist.find('<br />')]
@@ -350,7 +362,7 @@ class SFGenerator:
             self.data['themes'].append(release)
 
         dbg('Sorting file lists...')
-        self.data['themes'].sort(key = lambda x: x['name'])
+        self.data['themes'].sort(key = lambda x: x['date'], reverse = True)
 
     def process_news(self, feed):
         '''
@@ -419,7 +431,7 @@ class SFGenerator:
         '''
         dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
-        if filename in JS_NOTEMPLATES:
+        if filename not in JS_TEMPLATES:
             shutil.copy2(os.path.join(JS, filename), outpath)
             return
         template = self.jsloader.load(filename)
