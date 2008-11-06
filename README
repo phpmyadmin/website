@@ -59,9 +59,10 @@ License
 
 The website generator is licensed under GNU GPL version 2 or later.
 
-Website itself uses mootools <http://mootools.net/> and slimbox
-<http://www.digitalia.be/software/slimbox> which are licensed under
-terms of MIT license.
+Website itself uses mootools <http://mootools.net/>, slimbox
+<http://www.digitalia.be/software/slimbox>, fader and sorting_table
+<http://madhatted.com/2008/6/20/the-joy-of-tables-on-cows> which are
+licensed under terms of MIT license.
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
