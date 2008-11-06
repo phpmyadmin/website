@@ -50,7 +50,7 @@ and Spanish.
 
 <p>
 To ease usage to wide range of people, phpMyAdmin is translated to <a
-href="${base_url}languages.${file_ext}">55 languages</a> and supports both LTR
+href="${base_url}translations.${file_ext}">55 languages</a> and supports both LTR
 and RTL languages.
 </p>
 
