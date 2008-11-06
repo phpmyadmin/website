@@ -416,7 +416,8 @@ class SFGenerator:
         '''
         dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
-        if filename in ['mootools.js', 'slimbox.js', 'fader.js']:
+        if filename in ['mootools.js', 'slimbox.js', 'fader.js',
+            'master_sorting_table.js']:
             shutil.copy2(os.path.join(JS, filename), outpath)
             return
         template = self.jsloader.load(filename)
@@ -548,12 +549,20 @@ class SFGenerator:
                 dt = fmtdate.parse(row[4][:10])
             else:
                 dt = ''
+            percent = float(row[3])
+            if percent < 50:
+                css = ' b50'
+            elif percent < 80:
+                css = ' b80'
+            else:
+                css =''
             self.data['translations'].append({
                 'name': row[0],
                 'short': row[1],
                 'translated': row[2],
                 'percent': row[3],
                 'updated': dt,
+                'css': css
             })
 
     def fetch_data(self):
