@@ -21,6 +21,7 @@
 
 import sys
 import os
+import stat
 import feedparser
 import re
 import cPickle
@@ -46,8 +47,8 @@ SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
 COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
 
 # Base URL (including trailing /)
-SERVER = 'http://new.cihar.com'
-BASE_URL = '/'
+SERVER = 'http://www.phpmyadmin.net'
+BASE_URL = '/test/'
 EXTENSION = 'html'
 
 # Main menu
@@ -91,7 +92,10 @@ PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
 
+# Enable verbose messages?
 VERBOSE = True
+# Clean output before generating
+CLEAN_OUTPUT = True
 
 class basedatetime(datetime.datetime):
     def w3cdtf(self):
@@ -120,8 +124,40 @@ def dbg(text):
     if VERBOSE:
         sys.stderr.write('%s\n' % text)
 
+def copytree(src, dst):
+    '''
+    Trimmed down version of shutil.copytree. Recursively copies a directory
+    tree using shutil.copy2().
+
+    The destination directory must not already exist.
+    If exception(s) occur, an Error is raised with a list of reasons.
+
+    It handles only files and dirs and ignores .svn and *.swp* files.
+    '''
+    names = os.listdir(src)
+    os.makedirs(dst)
+    errors = []
+    for name in names:
+        if name == '.svn' or name.find('.swp') != -1:
+            continue
+        srcname = os.path.join(src, name)
+        dstname = os.path.join(dst, name)
+        try:
+            if os.path.isdir(srcname):
+                copytree(srcname, dstname)
+            else:
+                shutil.copy2(srcname, dstname)
+        except (IOError, os.error), why:
+            errors.append((srcname, dstname, str(why)))
+        # catch the Error from the recursive copytree so that we can
+        # continue with other files
+        except OSError, err:
+            errors.extend(err.args[0])
+    if errors:
+        raise OSError, errors
+
 class SFGenerator:
-    def __init__(self, templates = [TEMPLATES], css = [CSS], js = [JS]):
+    def __init__(self):
         self.data = {
             'releases': [],
             'releases_older': [],
@@ -139,9 +175,9 @@ class SFGenerator:
             'awards': awards.AWARDS,
             'generated': fmtdatetime.utcnow(),
             }
-        self.loader = TemplateLoader(templates)
-        self.cssloader = TemplateLoader(css, default_class = NewTextTemplate)
-        self.jsloader = TemplateLoader(js, default_class = NewTextTemplate)
+        self.loader = TemplateLoader([TEMPLATES])
+        self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
+        self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
 
     def get_feed(self, name, url):
         dbg('Downloading and parsing %s feed...' % name)
@@ -351,7 +387,7 @@ class SFGenerator:
         dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
         if filename in ['mootools.js', 'slimbox.js', 'fader.js']:
-            shutil.copy(os.path.join(JS, filename), outpath)
+            shutil.copy2(os.path.join(JS, filename), outpath)
             return
         template = self.jsloader.load(filename)
         out = open(outpath, 'w')
@@ -405,11 +441,18 @@ class SFGenerator:
         Copies static content to output and creates required directories.
         '''
         dbg('Copying static content to output...')
-        try:
-            shutil.rmtree(os.path.join(OUTPUT, 'images'))
-        except OSError:
-            pass
-        shutil.copytree(IMAGES, os.path.join(OUTPUT, 'images'))
+        if CLEAN_OUTPUT:
+            try:
+                shutil.rmtree(OUTPUT)
+                os.mkdir(OUTPUT)
+            except OSError:
+                pass
+        else:
+            try:
+                shutil.rmtree(os.path.join(OUTPUT, 'images'))
+            except OSError:
+                pass
+        copytree(IMAGES, os.path.join(OUTPUT, 'images'))
         try:
             os.mkdir(os.path.join(OUTPUT, 'security'))
         except OSError:
