@@ -292,3 +292,11 @@ img.head {
     margin: 0.2em;
     padding: 0.2em;
 }
+
+pre {
+    border: 1px solid black;
+    margin: 1em;
+    background: #ccc;
+    width: auto;
+    padding: 0.5em;
+}

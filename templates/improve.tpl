@@ -63,8 +63,23 @@ parts of repository include:
 <dt>trunk/themes</dt><dd>Themes.</dd>
 <dt>trunk/pma_localized_docs</dt><dd>Localised documentation.</dd>
 <dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code>)</dd>
+<dt>tags/STABLE</dt><dd>Special moving tag which always contains latest
+released stable version</dd>
+<dt>tags/TESTING</dt><dd>Special moving tag which always contains latest
+released testing version</dd>
 <dt>branches/</dt><dd>Maintenance branches for older versions (as <code>QA_X_Y</code>)</dd>
 </dl>
+
+<p>
+Examples how to checkout phpMyAdmin code:
+</p>
+
+<pre>
+#  Latest development version:
+svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin phpMyAdmin-dev
+# Latest stable version:
+svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/tags/STABLE/phpMyAdmin phpMyAdmin-stable
+</pre>
 
 <h3>Coding Standards</h3>
 <p>
