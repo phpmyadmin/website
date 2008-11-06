@@ -27,8 +27,7 @@
 
   </content>
 
-  <div id="footer">
-   <ul>
+  <ul id="footer">
     <li>Copyright &copy; 2003 - 2008 <a href="${base_url}team.${file_ext}">phpMyAdmin devel team</a></li>
     <li><a href="${base_url}license.${file_ext}">License</a></li>
     <li><a href="${base_url}donate.${file_ext}">Donate</a></li>
@@ -37,8 +36,7 @@
     <li class="logo"><a href="http://sourceforge.net"><img
     src="http://sflogo.sourceforge.net/sflogo.php?group_id=23067&amp;type=1"
     alt="SourceForge.net Logo" /></a></li>
-   </ul>
-  </div>
+  </ul>
  </body>
 </html>
 
