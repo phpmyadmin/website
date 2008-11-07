@@ -168,6 +168,7 @@ div.themeimgborder {
 div.themeimg {
     overflow: hidden;
     height: 8em;
+    max-width: 30em;
 }
 
 div.theme {
