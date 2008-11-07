@@ -4,14 +4,12 @@
  * as a parameter.
  */
 function show_theme(version) {
-	var divs1 = $$("div").filter(function(el) {
-		return el.hasClass("theme") && el.hasClass(version);
-	});
-	var divs2 = $$("div").filter(function(el) {
-		return el.hasClass("theme") && !el.hasClass(version);
-	});
-    $$(divs1).setStyle("display", "block")
-    $$(divs2).setStyle("display", "none")
+    if (version == "all") {
+        $$("div.theme").setStyle("display", "block");
+        return;
+    }
+    $$("div.theme." + version).setStyle("display", "block");
+    $$("div.theme:not(." + version + ")").setStyle("display", "none");
 }
 
 // AUTOLOAD CODE BLOCK
