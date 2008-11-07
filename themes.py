@@ -64,6 +64,12 @@ THEMES = {
         'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
         'author': u'Andy Scherzinger',
     },
+    'paradice-2.11e' : {
+        'name' : 'Paradice',
+        'support' : '2.11',
+        'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
+        'author': u'Andy Scherzinger',
+    },
     'very_small-2.9b' : {
         'name' : 'Very small',
         'support' : '2.7 - 2.9',
@@ -100,29 +106,23 @@ THEMES = {
         'info' : u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
     },
+    'crimson_gray-2.11b' : {
+        'name' : 'Crimson Gray',
+        'support' : '2.11',
+        'info' : u'Theme based on Original.',
+        'author': u'Audrius Kovalenko',
+    },
     'pixeline-2.10' : {
         'name' : 'Pixeline',
         'support' : '2.9 - 2.10',
         'info' : u'By <a href="http://www.pixeline.be">Pixeline</a>.',
         'author': u'Pixeline',
     },
-    'paradice-2.11e' : {
-        'name' : 'Paradice',
-        'support' : '2.11',
-        'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
-        'author': u'Andy Scherzinger',
-    },
     'pixeline-2.11a' : {
         'name' : 'Pixeline',
         'support' : '2.11',
         'info' : u'By <a href="http://www.pixeline.be">Pixeline</a>.',
         'author': u'Pixeline',
-    },
-    'crimson_gray-2.11b' : {
-        'name' : 'Crimson Gray',
-        'support' : '2.11',
-        'info' : u'Theme based on Original.',
-        'author': u'Audrius Kovalenko',
     },
     'hillside-2.11' : {
         'name' : 'Hillside',
