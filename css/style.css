@@ -180,6 +180,10 @@ div.theme {
     padding: 0.2em;
 }
 
+a.themelink {
+    padding-left: 0.5em;
+}
+
 div.filedetails {
     font-size: smaller;
 }

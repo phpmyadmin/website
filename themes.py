@@ -175,6 +175,7 @@ CSSMAP = {
 }
 
 CSSVERSIONS = [
+    {'name': 'All', 'css': 'all'},
     {'name': '2.6', 'css': 'pma_2_6'},
     {'name': '2.7', 'css': 'pma_2_7'},
     {'name': '2.8', 'css': 'pma_2_8'},

@@ -35,15 +35,11 @@ your theme for downloading here.
 </p>
 
 <h2>Available Themes</h2>
-<p>Select your phpMyAdmin version (requires JavaScript):</p>
-<ul class="select">
-<li py:for="css in themecssversions">
-    <a href="#${css.css}" onclick="show_theme('${css.css}')">${css.name}</a>
-</li>
-<div class="clearer"></div>
-</ul>
+<p>Select your phpMyAdmin version (requires JavaScript):
+<a py:for="css in themecssversions" class="themelink" href="#${css.css}" onclick="show_theme('${css.css}')">${css.name}</a>
+</p>
     <div py:for="theme in themes" class="theme ${theme.classes}">
-        <h2>${theme.fullname}</h2>
+        <h3>${theme.fullname}</h3>
             <div class="themeimgborder">
             <div class="themeimg">
                 <a href="${base_url}${theme.imgname}"
