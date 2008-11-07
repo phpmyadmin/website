@@ -26,7 +26,7 @@ THEMES = {
         'name' : 'Aqua',
         'support' : '2.7 - 2.8',
         'info' : u'With crystal icons.',
-        'author': u'',
+        'author': u'Scummer',
     },
     'xp_dirty-1.2' : {
         'name' : 'WinXP - Dirty',
@@ -43,13 +43,13 @@ THEMES = {
     'grid-2.11c' : {
         'name' : 'Grid',
         'support' : '2.8 - 2.11',
-        'info' : u'Small table margins; Fontsize & colors are set to be optimal readable and show maximum amount of data on screen.',
+        'info' : u'Small table margins, fontsize and colors are set to be optimal readable and show maximum amount of data on screen.',
         'author': u'Jürgen Wind',
     },
     'grid-2.11d' : {
         'name' : 'Grid',
         'support' : '2.8 - 3.0',
-        'info' : u'Small table margins; Fontsize & colors are set to be optimal readable and show maximum amount of data on screen.',
+        'info' : u'Small table margins, fontsize and colors are set to be optimal readable and show maximum amount of data on screen.',
         'author': u'Jürgen Wind',
     },
     'original_small-2.9' : {
@@ -140,7 +140,7 @@ THEMES = {
         'name' : 'Silkline',
         'support' : '2.11',
         'info' : u'Theme based on themes Silk and Pixeline.',
-        'author': u'',
+        'author': u'Douwe Ikkuh',
     },
     'xampp-2.11' : {
         'name' : 'XAMPP (Apachefriends.org)',
