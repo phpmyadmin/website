@@ -44,13 +44,6 @@ your theme for downloading here.
 </ul>
     <div py:for="theme in themes" class="theme ${theme.classes}">
         <h2>${theme.fullname}</h2>
-            <p>Released ${theme.date}, see <a href="${theme.notes}">release notes</a> for details.</p>
-            <p>Compatible with phpMyAdmin <strong>${theme.support}</strong>.</p>
-            <p py:if="theme.author">Author: ${theme.author}</p>
-            <p>${Markup(theme.info)}</p>
-            <ul class="dl">
-                <li><a href="${theme.file.url}">${theme.file.name}</a> (${theme.file.size} bytes, ${theme.file.dlcount} downloads)</li>
-            </ul> 
             <div class="themeimgborder">
             <div class="themeimg">
                 <a href="${base_url}${theme.imgname}"
@@ -59,6 +52,13 @@ your theme for downloading here.
                 </a>
             </div>
             </div>
+            <p>Released ${theme.date}, see <a href="${theme.notes}">release notes</a> for details.</p>
+            <p>Compatible with phpMyAdmin <strong>${theme.support}</strong>.</p>
+            <p py:if="theme.author">Author: ${theme.author}</p>
+            <p>${Markup(theme.info)}</p>
+            <ul class="dl">
+                <li><a href="${theme.file.url}">${theme.file.name}</a> (${theme.file.size} bytes, ${theme.file.dlcount} downloads)</li>
+            </ul> 
     </div>
     <div class="clearer"></div>
 </div>
