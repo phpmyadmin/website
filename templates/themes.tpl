@@ -46,7 +46,8 @@ your theme for downloading here.
         <h2>${theme.fullname}</h2>
             <p>Released ${theme.date}, see <a href="${theme.notes}">release notes</a> for details.</p>
             <p>Compatible with phpMyAdmin <strong>${theme.support}</strong>.</p>
-            <p>${theme.info}</p>
+            <p py:if="theme.author">Author: ${theme.author}</p>
+            <p>${Markup(theme.info)}</p>
             <ul class="dl">
                 <li><a href="${theme.file.url}">${theme.file.name}</a> (${theme.file.size} bytes, ${theme.file.dlcount} downloads)</li>
             </ul> 
