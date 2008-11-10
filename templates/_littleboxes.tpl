@@ -3,12 +3,11 @@
 
 <div class="rightbuttons">
 <div class="downloadbutton" py:for="release in releases">
-    <span class="dlname">Download <a href="${release.notes}">${release.version}</a>:</span>
-    <ul class="dllist">
-    <py:for each="file in release.files"><py:if test="file.featured">
-        <li><a href="${file.url}">${file.ext}</a></li>
-    </py:if></py:for>
-    </ul> 
+    <xi:include href="_dlbox.tpl" />
+</div>
+
+<div class="downloadbutton" py:for="release in releases_beta">
+    <xi:include href="_dlbox.tpl" />
 </div>
 
 <div class="downloadbutton">

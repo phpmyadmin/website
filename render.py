@@ -45,6 +45,7 @@ PROJECT_NAME = 'phpmyadmin'
 # Filtering
 FILES_MARK = 'all-languages.'
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
+TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
 COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
 
@@ -172,6 +173,7 @@ class SFGenerator:
         self.data = {
             'releases': [],
             'releases_older': [],
+            'releases_beta': [],
             'themes': [],
             'news': [],
             'issues': [],
@@ -257,8 +259,8 @@ class SFGenerator:
 
     def process_releases(self, rss_downloads):
         '''
-        Gets phpMyAdmin releases out of releases feed and fills releases
-        and releases_older.
+        Gets phpMyAdmin releases out of releases feed and fills releases,
+        releases_beta and releases_older.
         '''
         dbg('Processing file releases...')
         releases = []
@@ -297,23 +299,46 @@ class SFGenerator:
         dbg('Sorting file lists...')
         releases.sort(key = lambda x: x['version'], reverse = True)
 
-        dbg('Detecting actual versions...')
+        dbg('Detecting versions...')
         outversions = {}
+        outbetaversions = {}
+
         for idx in xrange(len(releases)):
             version = releases[idx]
             branch = BRANCH_REGEXP.match(version['version']).group(1)
-            try:
-                if releases[outversions[branch]]['version'] < version['version']:
+            test = TESTING_REGEXP.match(version['version'])
+            if test is not None:
+                try:
+                    if releases[outbetaversions[branch]]['version'] < version['version']:
+                        outbetaversions[branch] = idx
+                except KeyError:
+                    outbetaversions[branch] = idx
+            else:
+                try:
+                    if releases[outversions[branch]]['version'] < version['version']:
+                        outversions[branch] = idx
+                except KeyError:
                     outversions[branch] = idx
-            except KeyError:
-                outversions[branch] = idx
 
-        dbg('Actual versions detected:')
+        for beta in outbetaversions.keys():
+            try:
+                if releases[outversions[beta]]['version'] > releases[outbetaversions[beta]]['version']:
+                    dbg('Old beta: %s' % releases[outbetaversions[beta]]['version'])
+                    del outbetaversions[beta]
+            except KeyError:
+                pass
+
+        dbg('Versions detected:')
         for idx in xrange(len(releases)):
             if idx in outversions.values():
                 self.data['releases'].append(releases[idx])
+                dbg(' %s' % releases[idx]['version'])
+            elif idx in outbetaversions.values():
+                self.data['releases_beta'].append(releases[idx])
+                dbg(' beta: %s' % releases[idx]['version'])
             else:
                 self.data['releases_older'].append(releases[idx])
+                dbg(' old: %s' % releases[idx]['version'])
 
     def process_themes(self, rss_downloads):
         '''

@@ -23,14 +23,19 @@
     <xi:include href="_release.tpl" />
     </py:for>
 
-    <h2>Development versions</h2>
+    <py:for each="release in releases_beta">
+    <h2>Testing: ${release.fullname}</h2>
+    <xi:include href="_release.tpl" />
+    </py:for>
+
+    <h2>Development Versions</h2>
     <xi:include href="_svndl.tpl" />
     <p>
     More information about using subversion is available on <a
     href="${base_url}improve.${file_ext}#devel">development page</a>.
     </p>
 
-    <h2>Older releases</h2>
+    <h2>Older Releases</h2>
     <p>
     You can find older releases on <a
     href="https://sourceforge.net/project/showfiles.php?group_id=23067">SourceForge
