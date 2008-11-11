@@ -3,18 +3,18 @@ body {
 }
 
 #header {
-	width: 100%;
     margin: 0px;
-    padding: 1em 0 1em 0;
-	background: #036; /*#1f4a87;*/
+    padding: 1em 2em 1.5em 2em;
+	background: #036;
 	border: 0px;
     border-bottom: 1px solid black;
 }
 
 #header h1 {
-    width: auto;
-    padding: 2em;
-    display: inline;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-right: 1em;
 }
 
 #header h1 a {
@@ -26,8 +26,9 @@ body {
 }
 
 #header ul#links {
-    display: inline; 
-    border: 1px solid red;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 #header #links li {
@@ -168,6 +169,8 @@ ul.dllist li {
 
 div.clearer {
     clear: both;
+    padding: 0;
+    margin: 0;
 }
 
 div.themeimgborder {
