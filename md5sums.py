@@ -83,3 +83,12 @@ md5sum['phpMyAdmin-3.0.0-english.tar.bz2'] = 'b27f0e73c7d0b9957266d91983c328b7'
 md5sum['phpMyAdmin-3.0.0-all-languages.7z'] = 'fdf718e0f4e225833cf25d9a2bd37ebd'
 md5sum['phpMyAdmin-3.0.0-english.7z'] = 'fd99ac32ddf50b471d4243ff073264f8'
 
+md5sum['phpMyAdmin-3.1.0-beta1-all-languages.tar.gz'] = '4dbf093081c518987bf6e29d3ec33d51'
+md5sum['phpMyAdmin-3.1.0-beta1-english.tar.gz'] = '04a6557dc630b06a23e87f802c3e3d49'
+md5sum['phpMyAdmin-3.1.0-beta1-all-languages.zip'] = 'de2f98ea0a68c91cce0e286cbfb26a5b'
+md5sum['phpMyAdmin-3.1.0-beta1-english.zip'] = '72c81aaff718ad7d11eacc03c82d1bcd'
+md5sum['phpMyAdmin-3.1.0-beta1-all-languages.tar.bz2'] = 'f6041a3f2b8ecb704d8428e1a0898cfd'
+md5sum['phpMyAdmin-3.1.0-beta1-english.tar.bz2'] = '601eb6e59147d8773df3472181b30c3f'
+md5sum['phpMyAdmin-3.1.0-beta1-all-languages.7z'] = '6478778e7324f91668a32802b1e8d9fc'
+md5sum['phpMyAdmin-3.1.0-beta1-english.7z'] = '92a5dfa2a54a71c529fe745871578ee3'
+
