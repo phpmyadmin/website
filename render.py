@@ -292,6 +292,7 @@ class SFGenerator:
                 try:
                     md5 = md5sums.md5sum[filename]
                 except KeyError:
+                    warn('No MD5 for %s!' % filename)
                     md5 = 'N/A'
                 release['files'].append({'name': filename, 'url': url, 'ext': ext, 'featured': featured, 'size': size, 'dlcount': dlcount, 'md5': md5})
             releases.append(release)
