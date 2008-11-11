@@ -38,7 +38,8 @@ f.start();
 phpMyAdmin comes with wide range of <a
 href="${base_url}docs.${file_ext}">documentation</a> and users are welcome to
 update <a href="http://wiki.cihar.com/">our wiki pages</a> to share ideas and
-howtos for various operations. phpMyAdmin team</a> will try to help you if
+howtos for various operations. <a
+href="${base_url}team.${file_ext}">phpMyAdmin team</a> will try to help you if
 you face any problem, you can use <a
 href="${base_url}support.${file_ext}">variety of support channels</a> to get
 help.

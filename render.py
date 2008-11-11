@@ -54,7 +54,6 @@ SERVER = 'http://www.phpmyadmin.net'
 SERVER = 'http://new.cihar.com'
 BASE_URL = '/test/'
 BASE_URL = '/'
-BASE_URL = '/pma/'
 EXTENSION = 'html'
 
 # Main menu
