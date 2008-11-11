@@ -2,19 +2,19 @@
 <!--! Little boxes with downloads and other quick links -->
 
 <div class="rightbuttons">
-<div class="downloadbutton" py:for="release in releases_featured">
+<div class="rightbutton downloadbutton" py:for="release in releases_featured">
     <xi:include href="_dlbox.tpl" />
 </div>
 
-<div class="downloadbutton" py:for="release in releases_beta">
+<div class="rightbutton downloadbutton" py:for="release in releases_beta">
     <xi:include href="_dlbox.tpl" />
 </div>
 
-<div class="downloadbutton">
+<div class="rightbutton">
     <span class="dlname"><a href="${base_url}try.${file_ext}">Try phpMyAdmin</a></span>
 </div>
 
-<div class="downloadbutton">
+<div class="rightbutton">
     <span class="dlname"><a href="${base_url}donate.${file_ext}">Donate to phpMyAdmin</a></span>
 </div>
 </div>

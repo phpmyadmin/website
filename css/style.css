@@ -27,6 +27,7 @@ body {
 
 #header ul#links {
     display: inline; 
+    border: 1px solid red;
 }
 
 #header #links li {
@@ -86,7 +87,7 @@ div.rightbuttons {
     clear: both;
 }
 
-div.downloadbutton {
+div.rightbutton {
     padding: 0.5em;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -102,8 +103,19 @@ div.downloadbutton {
     text-align: center;
 }
 
-div.downloadbutton a {
+div.rightbutton a {
     color: white;
+}
+
+div.tip {
+    border: 1px solid black;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #ffff87;
+    font-size: smaller;
+    padding: 0.2em;
+    width: 15em;
 }
 
 ul#footer {

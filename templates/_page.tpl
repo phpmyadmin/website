@@ -12,6 +12,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
+  <script src="${base_url}js/mootools-more.js" type="text/javascript"></script>
   <script src="${base_url}js/slimbox.js" type="text/javascript"></script>
   <script src="${base_url}js/fader.js" type="text/javascript"></script>
   <script src="${base_url}js/master_sorting_table.js" type="text/javascript"></script>
