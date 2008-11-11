@@ -6,16 +6,21 @@
 <div py:match="content" id="body">
     <h2>Download</h2>
     <p>
-    Many operating systems already include a phpMyAdmin package and some of
-    them offer a way to upgrade to the latest version. Please contact your OS
-    vendor for more information. Some informations are also available <a
-    href="#distributions">bellow on this page</a>.
+    Many operating systems already include a phpMyAdmin package and will
+    automatically keep it updated, however these versions are sometimes
+    slightly outdated and therefore may be missing the latest features.
+    Additionally, the configuration process varies widely by package and
+    may not adhere to the official phpMyAdmin documentation. That being said,
+    it is usually the quickest way to an updated installation. Please contact your OS
+    vendor for more information. Some additional information is also available <a
+    href="#distributions">further down on this page</a>.
     </p>
     <p>
-    If you do not have the possibility, you can download one of following
+    If you do not have a package available or desire to install your own phpMyAdmin,
+    you can download one of following
     source packages. Please note that 3.x versions require at least PHP 5.2
     and MySQL 5 to use them. If you are using older versions, please choose
-    2.x brach, which is still supported by development team.
+    the 2.x branch, which is still supported for security fixes.
     </p>
 
     <py:for each="release in releases">
@@ -47,6 +52,14 @@
     </py:for>
 
     <h2><a name="distributions"></a>Distributions</h2>
+    <h3>Debian</h3>
+    <p>
+        Debian's package repositories include a phpMyAdmin package, but be aware
+        that the configuration file is maintained in /etc/phpmyadmin and may
+        differ in some ways from the official phpMyAdmin documentation. The
+	package maintainer often visits the official IRC channel (#phpmyadmin on
+	irc.freenode.net).
+    </p>
     <h3>OpenSUSE</h3>
     <p>
         OpenSUSE already comes with phpMyAdmin package, however if you want to

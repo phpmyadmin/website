@@ -7,22 +7,22 @@
 <h2>Team</h2>
 
 <p>
-phpMyAdmin development team is organised on <a
+The phpMyAdmin development team has been organized on <a
 href="http://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> since
-it's start in 2001. It is responsible for development phpMyAdmin and represets
-it on various conferences.
+it's start in 2001. They are responsible for the development of phpMyAdmin and represents
+it at various conferences.
 </p>
 
 <div class="floatbox">
 <h3>Marc Delisle</h3>
 <img class="head" src="${base_url}images/heads/marc.png" alt="Marc Delisle" />
 <p>
-Marc has took over phpMyAdmin project from his founder Tobias Ratschiller and
-started new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux
+Marc took over the phpMyAdmin project from founder Tobias Ratschiller and
+started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux
 in 2001. 
 </p>
 <p>
-He is currently the project administrator and he contributed largest amount of
+He is currently the project administrator and he has contributed the largest amount of
 code to the project. He lives in Québec, Canada.
 </p>
 </div>
@@ -31,12 +31,12 @@ code to the project. He lives in Québec, Canada.
 <h3>Michal Čihař</h3>
 <img class="head" src="${base_url}images/heads/nijel.png" alt="Michal Čihař" />
 <p>
-Michal has made first contribution to phpMyAdmin in 2001 by updating Czech
+Michal made his first contribution to phpMyAdmin in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
 and import handling to support plugins.
 </p>
 <p>
-He currently maintains project web site, demo server, wiki and other useful
+He currently maintains the project web site, demo server, wiki and other useful
 services. He lives in Prague, Czech Republic.
 </p>
 </div>
@@ -45,8 +45,8 @@ services. He lives in Prague, Czech Republic.
 <h3>Sebastian Mendel</h3>
 <img class="head" src="${base_url}images/heads/sebastian.png" alt="Sebastian Mendel" />
 <p>
-Sebastian is member of phpMyAdmin development team since 2005. He did major
-work on improving user interface and introduced using of classes in phpMyAdmin
+Sebastian has been a member of the phpMyAdmin development team since 2005. He did major
+work on improving user interface and introduced the use of classes in the phpMyAdmin
 code.
 </p>
 <p>
@@ -59,8 +59,8 @@ He lives in Leipzig, Germany.
 <h2>Team meetings</h2>
 
 <p>
-We would like to meed other members of the team more often, but so far only
-single team meeting in real life has happen. It was at big party in Karlsruhe,
+We would like to meet other members of the team more often, but so far only a
+single team meeting in real life has happened. It was at big party in Karlsruhe,
 Germany for the 10th anniversary of PHP and MySQL at the 
 <a href="http://www.linuxtag.org/2005">LinuxTag</a>
 <a href="http://www.lamparea.org/">LAMP Area</a>, with some special
@@ -88,7 +88,7 @@ guests.
 <h2>Contributors</h2>
 
 <p>
-In past, various other people contributed to phpMyAdmin:
+Over the years, many other people have contributed to phpMyAdmin:
 </p>
 
 <ul>

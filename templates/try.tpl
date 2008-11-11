@@ -7,8 +7,8 @@
 <h2>Try</h2>
 
 <p>
-Best way to see phpMyAdmin in action is to try it on our demo server. You have
-there full control on MySQL, default login is root with empty password.
+The best way to see phpMyAdmin in action is to try it on our demo server, where you have
+full control on MySQL. The default login is root with empty password.
 </p>
 
 <ul>

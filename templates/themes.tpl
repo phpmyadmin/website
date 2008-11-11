@@ -7,7 +7,7 @@
 <h2>Themes</h2>
 <p>
 phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
-with all phpMyAdmin versions, you should select bellow which version are you
+with all phpMyAdmin versions; you should select below which version are you
 using.
 </p>
 <p>
@@ -16,8 +16,8 @@ from trusted servers. All themes available on this page have been checked by
 one of phpMyAdmin team members.
 </p>
 <p>
-To install theme, unzip your downloaded theme into the directory /themes/ of
-your PMA. When you open phpMyAdmin, you should be able to select the theme.
+To install a theme, unzip your downloaded theme into the directory /themes/ of
+your phpMyAdmin folder. When you open phpMyAdmin, you should be able to select the theme.
 Please read the documentation for more details.
 </p>
 <p>

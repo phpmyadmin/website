@@ -7,9 +7,9 @@
 <h2>Improve phpMyAdmin</h2>
 
 <p>
-phpMyAdmin as a free software is very open to your contributions. You don't
-need developer skills to help, there are always possibilities to get involved
-in a project.
+As a free software project, phpMyAdmin is very open to your contributions. You don't
+need developer skills to help, there are several non-coding ways to get involved
+in a project (code is welcome too, of course!).
 </p>
 
 <p>Ways in which you can contribute:</p>
@@ -43,7 +43,7 @@ creating or debugging some features.
 For storing our code we use <a href="http://subversion.tigris.org/">Subversion</a>.
 If you don't know it, you can get some basic facts in <a
 href="http://en.wikipedia.org/wiki/Subversion_(software)">Wikipedia</a> or
-read quite comprehensive book <a href="http://svnbook.red-bean.com/">Version Control with
+reference the comprehensive book <a href="http://svnbook.red-bean.com/">Version Control with
 Subversion</a>.
 </p>
 
@@ -52,7 +52,7 @@ Subversion</a>.
 
 <p>
 To start development you want to start with <code>trunk/phpMyAdmin</code>,
-where current development version of phpMyAdmin is stored. Other interesting
+where the current development version of phpMyAdmin is stored. Other interesting
 parts of repository include:
 </p>
 
@@ -61,7 +61,7 @@ parts of repository include:
 <dt>trunk/phpMyAdmin</dt><dd>phpMyAdmin code.</dd>
 <dt>trunk/website</dt><dd>Website code.</dd>
 <dt>trunk/themes</dt><dd>Themes.</dd>
-<dt>trunk/pma_localized_docs</dt><dd>Localised documentation.</dd>
+<dt>trunk/pma_localized_docs</dt><dd>Localized documentation.</dd>
 <dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code>)</dd>
 <dt>tags/STABLE</dt><dd>Special moving tag which always contains latest
 released stable version</dd>
@@ -71,7 +71,7 @@ released testing version</dd>
 </dl>
 
 <p>
-Examples how to checkout phpMyAdmin code:
+Examples of how to checkout phpMyAdmin code:
 </p>
 
 <pre>
@@ -82,7 +82,7 @@ svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/tags/STAB
 </pre>
 
 <h3>Repository Statistics</h3>
-<p>Several analysis of the repository are available:</p>
+<p>Several analyses of the repository are available:</p>
 <ul>
 <li><a href="http://cihar.com/phpMyAdmin/stats/">mpy-svn-stats</a></li>
 <li><a href="http://cia.vc/stats/project/phpmyadmin/">CIA.vc</a></li>
@@ -100,7 +100,7 @@ and documented using <a href="http://www.phpdoc.org/">phpDocumentator</a>.
 
 <h3>Developer Documentation</h3>
 
-<p>More documentation can be found on following places:</p>
+<p>More documentation can be found in the following places:</p>
 <ul>
 <li><a href="http://wiki.cihar.com/pma/Devel:Main">Developers wiki</a></li>
 <li><a href="http://cihar.com/phpMyAdmin/doc/">Documentation of phpMyAdmin

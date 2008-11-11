@@ -8,8 +8,8 @@
 
 <p>
 The phpMyAdmin project is a member of the <a
-href="http://gophp5.org">GoPHP5</a> initiative. Starting February 5, 2008, we
-will accept PHP 5.2 features into our codebase and our new feature releases
+href="http://gophp5.org">GoPHP5</a> initiative. As of February 5, 2008, we
+have accepted PHP 5.2 features into our codebase and our new feature releases
 will no longer provide support for older PHP versions.
 </p>
 

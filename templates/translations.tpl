@@ -6,13 +6,13 @@
 <h2>Translations</h2>
 
 <p>
-Translations inside phpMyAdmin are in different shape. The ones that have less
-than 80% translated strings are shown in dark red, the ones bellow 50% in more
-intensive red (those are considered  orphaned and the phpMyAdmin project would
+Translations inside phpMyAdmin are in various states. The ones that have less
+than 80% translated strings are shown in dark red, the ones below 50% in more
+intensive red (those are considered orphaned and the phpMyAdmin project would
 appreciate any help in updating them).
 </p>
 <p>
-If you want to help improving translation, please follow intructions in <a
+If you want to help improving a translation, please follow intructions in <a
 href="http://wiki.cihar.com/pma/FAQ_7.2">FAQ 7.2</a> in documentation.
 </p>
 

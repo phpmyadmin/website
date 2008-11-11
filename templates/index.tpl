@@ -10,9 +10,9 @@
 
 <p>
 phpMyAdmin is a free software tool written in PHP intended to handle the
-administration of the MySQL over the World Wide Web. phpMyAdmin supports wide
+administration of the MySQL over the World Wide Web. phpMyAdmin supports a wide
 range of operations with MySQL. Most frequently used operations are supported
-by user interface (managing databases, tables, fields, relations, indexes,
+by the user interface (managing databases, tables, fields, relations, indexes,
 users, permissions, etc), while you still have ability to directly execute any
 SQL statement.  
 </p>
@@ -42,7 +42,7 @@ howtos for various operations.
 </p>
 
 <p>
-phpMyAdmin is also very deeply documented in book written by one of developers
+phpMyAdmin is also very deeply documented in a book written by one of developers
 &ndash; <a href="${base_url}docs.${file_ext}#books">Mastering phpMyAdmin for
 Effective MySQL Management</a>, which is available in English, Czech, German
 and Spanish.
@@ -55,18 +55,18 @@ and RTL languages.
 </p>
 
 <p>
-Since version 3.0.0, phpMyAdmin joined <a
+Since version 3.0.0, phpMyAdmin joined the <a
 href="${base_url}gophp5.${file_ext}">GoPHP5 initiative</a> and dropped
-compatibility code for older PHP and MySQL versions and you require at least
-PHP 5.2 and MySQL 5 to use it. To use with older PHP or MySQL versions, use
-older (but still maintained) branch of 2.x releases. You can find them on <a
+compatibility code for older PHP and MySQL versions; version 3 and later requires
+at least PHP 5.2 and MySQL 5. To use with older PHP or MySQL versions, use
+the older (but still maintained) branch of 2.x releases, which you can find on the <a
 href="${base_url}download.${file_ext}">download page</a>.
 </p>
 
 <p>
 phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
-Among others was as chosen a best PHP application in various awards and
-every year wins SourceForge.net Community Choice Awards as Best Tool or
+Among others, it was chosen as best PHP application in various awards and
+every year wins the SourceForge.net Community Choice Awards as Best Tool or
 Utility for SysAdmins.
 </p>
 
@@ -96,7 +96,7 @@ Utility for SysAdmins.
             <abbr title="structured query language">SQL</abbr>,
             <abbr title="Extensible Markup Language">XML</abbr>,
             <abbr title="Portable Document Format">PDF</abbr>,
-            <abbr title="International Standards Organisation">ISO</abbr>/<abbr
+            <abbr title="International Organization for Standards">ISO</abbr>/<abbr
             title="International Electrotechnical Commission">IEC</abbr> 26300 -
             OpenDocument Text and Spreadsheet,
             <abbr title="Microsoft Word 2000">Word</abbr>,
