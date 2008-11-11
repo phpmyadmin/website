@@ -172,6 +172,7 @@ class SFGenerator:
     def __init__(self):
         self.data = {
             'releases': [],
+            'releases_featured': [],
             'releases_older': [],
             'releases_beta': [],
             'themes': [],
@@ -329,17 +330,24 @@ class SFGenerator:
             except KeyError:
                 pass
 
+        featured = max(outversions.keys())
+        featured_id = outversions[featured]
+
         dbg('Versions detected:')
         for idx in xrange(len(releases)):
             if idx in outversions.values():
                 self.data['releases'].append(releases[idx])
-                dbg(' %s' % releases[idx]['version'])
+                if featured_id == idx:
+                    self.data['releases_featured'].append(releases[idx])
+                    dbg(' %s (featured)' % releases[idx]['version'])
+                else:
+                    dbg(' %s' % releases[idx]['version'])
             elif idx in outbetaversions.values():
                 self.data['releases_beta'].append(releases[idx])
-                dbg(' beta: %s' % releases[idx]['version'])
+                dbg(' %s (beta)' % releases[idx]['version'])
             else:
                 self.data['releases_older'].append(releases[idx])
-                dbg(' old: %s' % releases[idx]['version'])
+                dbg(' %s (old)' % releases[idx]['version'])
 
     def process_themes(self, rss_downloads):
         '''

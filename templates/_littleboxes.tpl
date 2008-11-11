@@ -2,7 +2,7 @@
 <!--! Little boxes with downloads and other quick links -->
 
 <div class="rightbuttons">
-<div class="downloadbutton" py:for="release in releases">
+<div class="downloadbutton" py:for="release in releases_featured">
     <xi:include href="_dlbox.tpl" />
 </div>
 
