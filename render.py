@@ -258,6 +258,33 @@ class SFGenerator:
         '''
         return re.sub('[^a-z0-9A-Z.-]', '_', text)
 
+    def get_version_info(self, version):
+        '''
+        Returns description to the phpMyAdmin version.
+        '''
+        if version[:2] == '2.':
+            text ='Version compatible with PHP 4 and MySQL 3 and 4.'
+        elif version[:2] == '3.':
+            text = 'Version compatible with PHP 5 and MySQL 5.'
+        if version.find('beta1') != -1:
+            text += ' First beta version.'
+        elif version.find('beta2') != -1:
+            text += ' Second beta version.'
+        elif version.find('beta') != -1:
+            warn('Generic beta: %s' % version)
+            text += ' Beta version.'
+        elif version.find('rc1') != -1:
+            text += ' First release candidate.'
+        elif version.find('rc2') != -1:
+            text += ' Second release candidate.'
+        elif version.find('rc3') != -1:
+            text += ' Third release candidate.'
+        elif version.find('rc') != -1:
+            text += ' Release candidate.'
+            warn('Generic RC: %s' % version)
+
+        return text
+
     def process_releases(self, rss_downloads):
         '''
         Gets phpMyAdmin releases out of releases feed and fills releases,
@@ -275,6 +302,7 @@ class SFGenerator:
             release['show'] = False
             release['notes'] = entry.link
             release['version'] = version
+            release['info'] = self.get_version_info(version)
             release['date'] = fmtdatetime.parse(entry.updated)
             release['name'] = type
             release['fullname'] = '%s %s' % (type, version)
@@ -338,6 +366,7 @@ class SFGenerator:
             if idx in outversions.values():
                 self.data['releases'].append(releases[idx])
                 if featured_id == idx:
+                    releases[idx]['info'] += ' Currently recommended version.'
                     self.data['releases_featured'].append(releases[idx])
                     dbg(' %s (featured)' % releases[idx]['version'])
                 else:
