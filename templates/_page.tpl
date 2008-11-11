@@ -20,7 +20,7 @@
  </head>
  <body>
   <div id="header">
-   <h1><a href="/">php<span class="myadmin">MyAdmin</span></a></h1>
+   <h1><a href="${base_url}">php<span class="myadmin">MyAdmin</span></a></h1>
     <xi:include href="_menu.tpl" />
   </div>
 
