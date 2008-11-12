@@ -53,7 +53,7 @@ your theme for downloading here.
             <p py:if="theme.author">Author: ${theme.author}</p>
             <p>${Markup(theme.info)}</p>
             <ul class="dl">
-                <li><a href="${theme.file.url}">${theme.file.name}</a> (${theme.file.size} bytes, ${theme.file.dlcount} downloads)</li>
+                <li><a href="${theme.file.url}">${theme.file.name}</a> (${theme.file.humansize}, ${theme.file.dlcount} downloads)</li>
             </ul> 
     </div>
     <div class="clearer"></div>

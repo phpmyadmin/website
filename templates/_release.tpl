@@ -6,7 +6,7 @@
             <li>
             <a href="${file.url}#!md5!${file.md5}">${file.name}</a>
             <div class="filedetails">
-                ${file.size} bytes, ${file.dlcount} downloads, MD5: ${file.md5}
+                ${file.humansize}, ${file.dlcount} downloads, MD5: ${file.md5}
             </div>
             </li>
             </py:for>

@@ -168,6 +168,22 @@ def copytree(src, dst):
     if errors:
         raise OSError, errors
 
+def fmt_bytes(number):
+    '''
+    Formats bytes to human readable form.
+    '''
+    number = int(number)
+    if number > 10 * 1024 * 1024:
+        return '%d MiB' % (number / ( 1024 * 1024 ))
+    elif number > 1024 * 1024:
+        return '%.1f MiB' % (number / ( 1024.0 * 1024 ))
+    if number > 10 * 1024:
+        return '%d KiB' % (number / 1024 )
+    elif number > 1024:
+        return '%.1f KiB' % (number / 1024.0 )
+    else:
+        return '%d bytes' % number
+
 class SFGenerator:
     def __init__(self):
         self.data = {
@@ -285,6 +301,32 @@ class SFGenerator:
 
         return text
 
+    def parse_file_info(self, text):
+        '''
+        Parses file information from releases feed.
+        '''
+        m = SIZE_REGEXP.match(text)
+        size = m.group(1)
+        dlcount = m.group(2)
+        filename = text.strip().split(' ')[0]
+        url = PROJECT_DL % filename
+        ext = os.path.splitext(filename)[1]
+        featured = (filename.find(FILES_MARK) != -1)
+        try:
+            md5 = md5sums.md5sum[filename]
+        except KeyError:
+            warn('No MD5 for %s!' % filename)
+            md5 = 'N/A'
+        return {
+            'name': filename,
+            'url': url,
+            'ext': ext,
+            'featured': featured,
+            'size': size,
+            'humansize': fmt_bytes(size),
+            'dlcount': dlcount,
+            'md5': md5}
+
     def process_releases(self, rss_downloads):
         '''
         Gets phpMyAdmin releases out of releases feed and fills releases,
@@ -311,19 +353,7 @@ class SFGenerator:
             fileslist = fileslist[:fileslist.find('<br />')]
             release['files'] = []
             for part in fileslist.split('),'):
-                m = SIZE_REGEXP.match(part)
-                size = m.group(1)
-                dlcount = m.group(2)
-                filename = part.strip().split(' ')[0]
-                url = PROJECT_DL % filename
-                ext = os.path.splitext(filename)[1]
-                featured = (filename.find(FILES_MARK) != -1)
-                try:
-                    md5 = md5sums.md5sum[filename]
-                except KeyError:
-                    warn('No MD5 for %s!' % filename)
-                    md5 = 'N/A'
-                release['files'].append({'name': filename, 'url': url, 'ext': ext, 'featured': featured, 'size': size, 'dlcount': dlcount, 'md5': md5})
+                release['files'].append(self.parse_file_info(part))
             releases.append(release)
 
         dbg('Sorting file lists...')
@@ -413,15 +443,7 @@ class SFGenerator:
             files = fileslist.split('),')
             if len(files) > 1:
                 raise Exception('Too much files in theme %s' % type)
-            part = files[0]
-            m = SIZE_REGEXP.match(part)
-            size = m.group(1)
-            dlcount = m.group(2)
-            filename = part.strip().split(' ')[0]
-            url = PROJECT_DL % filename
-            ext = os.path.splitext(filename)[1]
-            mark = (filename.find(FILES_MARK) != -1)
-            release['file'] = {'name': filename, 'url': url, 'ext': ext, 'mark': mark, 'size': size, 'dlcount': dlcount}
+            release['file'] = self.parse_file_info(files[0])
             self.data['themes'].append(release)
 
         dbg('Sorting file lists...')
