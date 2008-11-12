@@ -30,6 +30,8 @@ import datetime
 import time
 import csv
 import urllib
+import pysvn
+import traceback
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -37,6 +39,7 @@ from genshi.input import XML
 import md5sums
 import awards
 import themes
+import langnames
 
 # Project part
 PROJECT_ID = 23067
@@ -48,6 +51,7 @@ BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
 COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
+LANG_REGEXP ='((translation|lang|%s).*update|update.*(translation|lang|%s)|^updated?$|new lang|better word|fix.*translation)'
 
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
@@ -99,12 +103,14 @@ PROJECT_FILES_RSS = 'https://sourceforge.net/export/rss2_projfiles.php?group_id=
 PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
-TRANSLATION_STATS_URL = 'http://cihar.com/phpMyAdmin/translations/dump.php'
+TRANSLATIONS_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/lang/'
 
 # Enable verbose messages?
 VERBOSE = True
 # Clean output before generating
 CLEAN_OUTPUT = True
+# Debug cache
+DBG_CACHE = False
 
 class basedatetime(datetime.datetime):
     def w3cdtf(self):
@@ -209,14 +215,15 @@ class SFGenerator:
         self.loader = TemplateLoader([TEMPLATES])
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
+        self.svn = pysvn.Client()
 
-    def get_cache_name(self, name):
+    def get_cache_name(self, name, fnmask = '%s.dump'):
         '''
         Returns cache filename for given name.
         '''
-        return os.path.join('.', 'cache', '%s.dump' % name)
+        return os.path.join('.', 'cache', fnmask % name)
 
-    def load_cache(self, name):
+    def load_cache(self, name, force = False):
         '''
         Loads cache if it is available and valid, raises exception otherwise.
         '''
@@ -224,9 +231,12 @@ class SFGenerator:
         try:
             mtime = os.path.getmtime(filename)
         except OSError:
+            if force:
+                raise NoCache()
             mtime = 0
-        if mtime + CACHE_TIME > time.time():
-            dbg('Using cache for %s!' % name)
+        if force or mtime + CACHE_TIME > time.time():
+            if DBG_CACHE:
+                dbg('Using cache for %s!' % name)
             return cPickle.load(open(filename, 'r'))
         raise NoCache()
 
@@ -631,37 +641,120 @@ class SFGenerator:
                     'title': title
                     })
 
+    def svn_cat_lang(self, name):
+        '''
+        Performs cached svn ls, returs list of URLs.
+        '''
+        dir = self.get_cache_name('svn-lang', '%s')
+        if not os.path.exists(dir):
+            self.svn.checkout(TRANSLATIONS_SVN, dir)
+        else:
+            if not hasattr(self, 'svn_updated'):
+                self.svn.update(dir)
+                self.svn_updated = True
+        return open(os.path.join(dir, name), 'r').read()
+
+    def svn_ls(self, dir):
+        '''
+        Performs cached svn ls, returs list of URLs.
+        '''
+        cachename = 'svn-ls-%s' % dir.replace(':', '_').replace('/', '_').strip('_')
+        try:
+            list = self.load_cache(cachename)
+        except NoCache:
+            try:
+                list = [x.name for x in self.svn.ls(dir)]
+                self.save_cache(cachename, list)
+            except pysvn.ClientError:
+                traceback.print_last()
+                list = self.load_cache(cachename, True)
+        return list
+
+    def svn_log(self, name):
+        '''
+        Performs cached svn log, returs list of revisions as dict with
+        message, date, author and revision fields.
+
+        1. If cache is up to date, use cache.
+        2. If cache exists, use it as base, request only remaining logs.
+        3. Request missing logs.
+        4. Save log to cache and return it.
+        '''
+        cachename = 'svn-log-%s' % name.replace(':', '_').replace('/', '_').strip('_')
+
+        try:
+            list = self.load_cache(cachename)
+            return list
+        except NoCache:
+            pass
+
+        try:
+            list = self.load_cache(cachename, True)
+            base = list[-1]['revision']
+        except NoCache:
+            list = []
+            base = 0
+        try:
+            base_rev = pysvn.Revision(pysvn.opt_revision_kind.number, base)
+            svnlog = self.svn.log(name, revision_end = base_rev)
+            newlog = [{
+                'message': x['message'],
+                'revision': x['revision'].number,
+                'date': fmtdate.fromtimestamp(x['date']),
+                'author': x['author'],
+                } for x in svnlog]
+            list.extend(newlog)
+            self.save_cache(cachename, list)
+        except pysvn.ClientError:
+            list = self.load_cache(cachename, True)
+        return list
+
     def get_translation_stats(self):
         '''
         Receives translation stats from external server and parses it.
         '''
         dbg('Processing translation stats...')
-        try:
-            lines = self.load_cache('translations')
-        except NoCache:
-            lines = urllib.urlopen(TRANSLATION_STATS_URL).readlines()
-            self.save_cache('translations', lines)
         self.data['translations'] = []
-        data = csv.reader(lines)
-        for row in data:
-            if row[4] != '':
-                dt = fmtdate.parse(row[4][:10])
-            else:
-                dt = ''
-            percent = float(row[3])
+        list = self.svn_ls(TRANSLATIONS_SVN)
+        english = self.svn_cat_lang('english-utf-8.inc.php')
+        allmessages = len(re.compile('\n\$str').findall(english))
+        for file in list:
+            base = os.path.basename(file)
+            if base[-14:] != '-utf-8.inc.php':
+                continue
+            lang = base[:-14]
+            short = langnames.MAP[lang]
+            dbg(' - %s [%s]' % (lang, short))
+            log = self.svn_log(file)
+            log.sort(key = lambda x: x['revision'], reverse = True)
+            langs = '%s|%s' % (lang, short)
+            regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
+            found = None
+            for x in log:
+                if regexp.findall(x['message']) != []:
+                    found = x
+                    break
+            content = self.svn_cat_lang(base)
+            missing = len(re.compile('\n\$str.*to translate').findall(content))
+            translated = allmessages - missing
+            percent = 100.0 * translated / allmessages
             if percent < 50:
                 css = ' b50'
             elif percent < 80:
                 css = ' b80'
             else:
                 css =''
+            try:
+                dt = found['date']
+            except TypeError:
+                dt = ''
             self.data['translations'].append({
-                'name': row[0],
-                'short': row[1],
-                'translated': row[2],
-                'percent': row[3],
+                'name': lang,
+                'short': short,
+                'translated': translated,
+                'percent': '%0.1f' % percent,
                 'updated': dt,
-                'css': css
+                'css': css,
             })
 
     def fetch_data(self):
