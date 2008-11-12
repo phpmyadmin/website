@@ -424,7 +424,7 @@ class SFGenerator:
             release['show'] = False
             release['notes'] = entry.link
             release['version'] = version
-            release['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
+            release['date'] = fmtdatetime.parse(entry.updated)
             release['shortname'] = type
             release['imgname'] = 'images/themes/%s.png' % type
             try:
@@ -458,7 +458,7 @@ class SFGenerator:
             matches = COMMENTS_REGEXP.match(entry.summary)
             item = {}
             item['link'] = entry.link
-            item['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
+            item['date'] = fmtdatetime.parse(entry.updated)
             item['text'] = matches.group(1)
             item['comments_link'] = matches.group(2)
             item['comments_number'] = matches.group(3)
@@ -474,7 +474,7 @@ class SFGenerator:
         for entry in feed.entries:
             item = {}
             item['link'] = entry.link
-            item['date'] = fmtdatetime.strptime(entry.updated, '%a, %d %b %Y %H:%M:%S %Z')
+            item['date'] = fmtdatetime.parse(entry.updated)
             item['text'] = entry.summary
             item['title'] = entry.title
             self.data['donations'].append(item)
