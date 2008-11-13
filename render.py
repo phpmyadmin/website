@@ -29,7 +29,6 @@ import shutil
 import datetime
 import time
 import csv
-import urllib
 import pysvn
 import traceback
 from genshi.template import TemplateLoader
