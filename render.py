@@ -690,7 +690,7 @@ class SFGenerator:
 
         try:
             list = self.load_cache(cachename, True)
-            base = list[-1]['revision']
+            base = list[0]['revision']
         except NoCache:
             list = []
             base = 0
@@ -704,6 +704,7 @@ class SFGenerator:
                 'author': x['author'],
                 } for x in svnlog]
             list.extend(newlog)
+            list.sort(key = lambda x: x['revision'], reverse = True)
             self.save_cache(cachename, list)
         except pysvn.ClientError:
             list = self.load_cache(cachename, True)
@@ -723,17 +724,23 @@ class SFGenerator:
             if base[-14:] != '-utf-8.inc.php':
                 continue
             lang = base[:-14]
+            try:
+                baselang, ignore = lang.split('_')
+            except:
+                baselang = lang
             short = langnames.MAP[lang]
             dbg(' - %s [%s]' % (lang, short))
             log = self.svn_log(file)
-            log.sort(key = lambda x: x['revision'], reverse = True)
-            langs = '%s|%s' % (lang, short)
+            langs = '%s|%s|%s' % (lang, short, baselang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
             found = None
-            for x in log:
-                if regexp.findall(x['message']) != []:
-                    found = x
-                    break
+            if lang == 'english':
+                found = log[0]
+            else:
+                for x in log:
+                    if regexp.findall(x['message']) != []:
+                        found = x
+                        break
             content = self.svn_cat_lang(base)
             missing = len(re.compile('\n\$str.*to translate').findall(content))
             translated = allmessages - missing
