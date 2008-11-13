@@ -660,6 +660,14 @@ if __name__ == '__main__':
                     action='store_false',
                     dest='verbose',
                     help='Only show errors and warnings.')
+    parser.add_option('-V', '--verbose-cache',
+                    action='store_true',
+                    dest='verbose_cache',
+                    help='Output verbose caching information.')
+    parser.add_option('-Q', '--quiet-cache',
+                    action='store_false',
+                    dest='verbose_cache',
+                    help='No information from caching in output.')
     parser.add_option('-s', '--server',
                     action='store', type='string',
                     dest='server',
@@ -675,6 +683,7 @@ if __name__ == '__main__':
 
     parser.set_defaults(
         verbose = helper.log.VERBOSE,
+        verbose_cache = helper.cache.DBG_CACHE,
         server = SERVER,
         base_url = BASE_URL,
         extension = EXTENSION
@@ -683,6 +692,7 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
 
     helper.log.VERBOSE = options.verbose
+    helper.cache.DBG_CACHE = options.verbose_cache
     SERVER = options.server
     BASE_URL = options.base_url
     EXTENSION = options.extension
