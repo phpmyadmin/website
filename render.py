@@ -660,12 +660,32 @@ if __name__ == '__main__':
                     action='store_false',
                     dest='verbose',
                     help='Only show errors and warnings.')
+    parser.add_option('-s', '--server',
+                    action='store', type='string',
+                    dest='server',
+                    help='Name of server where data will be published, eg.: %s.' % SERVER)
+    parser.add_option('-b', '--base-url',
+                    action='store', type='string',
+                    dest='base_url',
+                    help='Base URL of document, eg.: %s.' % BASE_URL)
+    parser.add_option('-e', '--extension',
+                    action='store', type='string',
+                    dest='server',
+                    help='Extension of generated files, default is %s.' % EXTENSION)
 
-    parser.set_defaults(verbose = True)
+    parser.set_defaults(
+        verbose = helper.log.VERBOSE,
+        server = SERVER,
+        base_url = BASE_URL,
+        extension = EXTENSION
+        )
 
     (options, args) = parser.parse_args()
 
     helper.log.VERBOSE = options.verbose
+    SERVER = options.server
+    BASE_URL = options.base_url
+    EXTENSION = options.extension
 
     gen = SFGenerator()
     gen.main()
