@@ -88,38 +88,11 @@ guests.
 <h2>Contributors</h2>
 
 <p>
-Over the years, many other people have contributed to phpMyAdmin:
+We'd like to thank all the former developers and contributors,
+whom over the years have contributed to the success of phpMyAdmin.
+A full list is maintained in the <a
+href="http://www.phpmyadmin.net/documentation/#credits">documentation</a>.
 </p>
-
-<ul>
-<li>Tobias Ratschiller</li>
-<li>Olivier M&uuml;ller</li>
-<li>Lo&iuml;c Chapeaux</li>
-<li>Robin Johnson</li>
-<li>Armel Fauveau</li>
-<li>Geert Lund</li>
-<li>Korakot Chaovavanich</li>
-<li>Pete Kelly</li>
-<li>Steve Alberty</li>
-<li>Benjamin Gandon</li>
-<li>Alexander M. Turek</li>
-<li>Mike Beck</li>
-<li>Christophe Gesch&eacute;</li>
-<li>Garvin Hicking</li>
-<li>Yukihiro Kawada</li>
-<li>Piotr Roszatycki</li>
-<li>Axel Sander</li>
-<li>Maxime Delorme</li>
-<li>Olof Edlund</li>
-<li>Ivan R. Lanin</li>
-<li>Mike Cochrane</li>
-<li>Marcel Tschopp</li>
-<li>Michael Keck</li>
-<li>Mathias Landh&auml;u&szlig;er</li>
-<li>Ivan A Kirillov</li>
-<li>Raj Kissu Rajandran</li>
-<li>Piotr Przybylski</li>
-</ul>
     
 </div>
 
