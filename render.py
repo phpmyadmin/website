@@ -30,9 +30,9 @@ from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
 
-import cache
-import log
-import date
+import helper.cache
+import helper.log
+import helper.date
 
 import md5sums
 import awards
@@ -170,14 +170,14 @@ class SFGenerator:
             'rss_news': PROJECT_NEWS_RSS,
             'screenshots': SCREENSHOTS,
             'awards': awards.AWARDS,
-            'generated': date.fmtdatetime.utcnow(),
+            'generated': helper.date.fmtdatetime.utcnow(),
             'themecssversions': themes.CSSVERSIONS,
             }
         self.loader = TemplateLoader([TEMPLATES])
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
-        self.feeds = cache.FeedCache()
-        self.svn = cache.SVNCache(TRANSLATIONS_SVN)
+        self.feeds = helper.cache.FeedCache()
+        self.svn = helper.cache.SVNCache(TRANSLATIONS_SVN)
 
     def get_outname(self, page):
         '''
@@ -217,7 +217,7 @@ class SFGenerator:
         elif version.find('beta2') != -1:
             text += ' Second beta version.'
         elif version.find('beta') != -1:
-            log.warn('Generic beta: %s' % version)
+            helper.log.warn('Generic beta: %s' % version)
             text += ' Beta version.'
         elif version.find('rc1') != -1:
             text += ' First release candidate.'
@@ -227,7 +227,7 @@ class SFGenerator:
             text += ' Third release candidate.'
         elif version.find('rc') != -1:
             text += ' Release candidate.'
-            log.warn('Generic RC: %s' % version)
+            helper.log.warn('Generic RC: %s' % version)
 
         return text
 
@@ -245,7 +245,7 @@ class SFGenerator:
         try:
             md5 = md5sums.md5sum[filename]
         except KeyError:
-            log.warn('No MD5 for %s!' % filename)
+            helper.log.warn('No MD5 for %s!' % filename)
             md5 = 'N/A'
         return {
             'name': filename,
@@ -262,7 +262,7 @@ class SFGenerator:
         Gets phpMyAdmin releases out of releases feed and fills releases,
         releases_beta and releases_older.
         '''
-        log.dbg('Processing file releases...')
+        helper.log.dbg('Processing file releases...')
         releases = []
         for entry in rss_downloads.entries:
             titleparts = entry.title.split(' ')
@@ -275,7 +275,7 @@ class SFGenerator:
             release['notes'] = entry.link
             release['version'] = version
             release['info'] = self.get_version_info(version)
-            release['date'] = date.fmtdatetime.parse(entry.updated)
+            release['date'] = helper.date.fmtdatetime.parse(entry.updated)
             release['name'] = type
             release['fullname'] = '%s %s' % (type, version)
             text = entry.summary
@@ -286,10 +286,10 @@ class SFGenerator:
                 release['files'].append(self.parse_file_info(part))
             releases.append(release)
 
-        log.dbg('Sorting file lists...')
+        helper.log.dbg('Sorting file lists...')
         releases.sort(key = lambda x: x['version'], reverse = True)
 
-        log.dbg('Detecting versions...')
+        helper.log.dbg('Detecting versions...')
         outversions = {}
         outbetaversions = {}
 
@@ -313,7 +313,7 @@ class SFGenerator:
         for beta in outbetaversions.keys():
             try:
                 if releases[outversions[beta]]['version'] > releases[outbetaversions[beta]]['version']:
-                    log.dbg('Old beta: %s' % releases[outbetaversions[beta]]['version'])
+                    helper.log.dbg('Old beta: %s' % releases[outbetaversions[beta]]['version'])
                     del outbetaversions[beta]
             except KeyError:
                 pass
@@ -321,28 +321,28 @@ class SFGenerator:
         featured = max(outversions.keys())
         featured_id = outversions[featured]
 
-        log.dbg('Versions detected:')
+        helper.log.dbg('Versions detected:')
         for idx in xrange(len(releases)):
             if idx in outversions.values():
                 self.data['releases'].append(releases[idx])
                 if featured_id == idx:
                     releases[idx]['info'] += ' Currently recommended version.'
                     self.data['releases_featured'].append(releases[idx])
-                    log.dbg(' %s (featured)' % releases[idx]['version'])
+                    helper.log.dbg(' %s (featured)' % releases[idx]['version'])
                 else:
-                    log.dbg(' %s' % releases[idx]['version'])
+                    helper.log.dbg(' %s' % releases[idx]['version'])
             elif idx in outbetaversions.values():
                 self.data['releases_beta'].append(releases[idx])
-                log.dbg(' %s (beta)' % releases[idx]['version'])
+                helper.log.dbg(' %s (beta)' % releases[idx]['version'])
             else:
                 self.data['releases_older'].append(releases[idx])
-                log.dbg(' %s (old)' % releases[idx]['version'])
+                helper.log.dbg(' %s (old)' % releases[idx]['version'])
 
     def process_themes(self, rss_downloads):
         '''
         Gets theme releases out of releases feed and fills themes.
         '''
-        log.dbg('Processing themes releases...')
+        helper.log.dbg('Processing themes releases...')
         for entry in rss_downloads.entries:
             titleparts = entry.title.split(' ')
             type = titleparts[0]
@@ -354,13 +354,13 @@ class SFGenerator:
             release['show'] = False
             release['notes'] = entry.link
             release['version'] = version
-            release['date'] = date.fmtdatetime.parse(entry.updated)
+            release['date'] = helper.date.fmtdatetime.parse(entry.updated)
             release['shortname'] = type
             release['imgname'] = 'images/themes/%s.png' % type
             try:
                 release.update(themes.THEMES['%s-%s' % (type, version)])
             except KeyError:
-                log.warn('No meatadata for theme %s-%s!' % (type, version))
+                helper.log.warn('No meatadata for theme %s-%s!' % (type, version))
                 release['name'] = type
                 release['support'] = 'N/A'
                 release['info'] = ''
@@ -376,19 +376,19 @@ class SFGenerator:
             release['file'] = self.parse_file_info(files[0])
             self.data['themes'].append(release)
 
-        log.dbg('Sorting file lists...')
+        helper.log.dbg('Sorting file lists...')
         self.data['themes'].sort(key = lambda x: x['date'], reverse = True)
 
     def process_news(self, feed):
         '''
         Fills in news based on news feed.
         '''
-        log.dbg('Processing news feed...')
+        helper.log.dbg('Processing news feed...')
         for entry in feed.entries:
             matches = COMMENTS_REGEXP.match(entry.summary)
             item = {}
             item['link'] = entry.link
-            item['date'] = date.fmtdatetime.parse(entry.updated)
+            item['date'] = helper.date.fmtdatetime.parse(entry.updated)
             item['text'] = matches.group(1)
             item['comments_link'] = matches.group(2)
             item['comments_number'] = matches.group(3)
@@ -400,11 +400,11 @@ class SFGenerator:
         '''
         Fills in donations based on donations feed.
         '''
-        log.dbg('Processing news feed...')
+        helper.log.dbg('Processing news feed...')
         for entry in feed.entries:
             item = {}
             item['link'] = entry.link
-            item['date'] = date.fmtdatetime.parse(entry.updated)
+            item['date'] = helper.date.fmtdatetime.parse(entry.updated)
             item['text'] = entry.summary
             item['title'] = entry.title
             self.data['donations'].append(item)
@@ -433,7 +433,7 @@ class SFGenerator:
         '''
         Renders CSS file from template.
         '''
-        log.dbg('  %s' % filename)
+        helper.log.dbg('  %s' % filename)
         template = self.cssloader.load(filename)
         out = open(os.path.join(OUTPUT, 'css', filename), 'w')
         out.write(template.generate(**self.data).render())
@@ -444,7 +444,7 @@ class SFGenerator:
         Renders JavaScript file from template. Some defined files are not processed
         through template engine as they were taken from other projects.
         '''
-        log.dbg('  %s' % filename)
+        helper.log.dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
         if filename not in JS_TEMPLATES:
             shutil.copy2(os.path.join(JS, filename), outpath)
@@ -458,7 +458,7 @@ class SFGenerator:
         '''
         Renders standard page.
         '''
-        log.dbg('  %s' % page)
+        helper.log.dbg('  %s' % page)
         template = self.loader.load('%s.tpl' % page)
         menu = self.get_menu(page)
         out = open(os.path.join(OUTPUT, self.get_outname(page)), 'w')
@@ -469,7 +469,7 @@ class SFGenerator:
         '''
         Renders security issue.
         '''
-        log.dbg('  %s' % issue)
+        helper.log.dbg('  %s' % issue)
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
         out = open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w')
@@ -491,7 +491,7 @@ class SFGenerator:
                 'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
                 'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
-                'date': date.fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
+                'date': helper.date.fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
                 'cve': str(data.select('def[@function="announcement_cve"]/text()')),
             })
         self.data['topissues'] = self.data['issues'][:TOP_ISSUES]
@@ -500,7 +500,7 @@ class SFGenerator:
         '''
         Copies static content to output and creates required directories.
         '''
-        log.dbg('Copying static content to output...')
+        helper.log.dbg('Copying static content to output...')
         if CLEAN_OUTPUT:
             try:
                 shutil.rmtree(OUTPUT)
@@ -531,7 +531,7 @@ class SFGenerator:
         Generates list of pages with titles.
         '''
         self.data['sitemap'] = []
-        log.dbg('Generating sitemap:')
+        helper.log.dbg('Generating sitemap:')
         for root, dirs, files in os.walk(TEMPLATES):
             if '.svn' in dirs:
                 dirs.remove('.svn')  # don't visit .svn directories
@@ -547,7 +547,7 @@ class SFGenerator:
                     continue
                 if file == 'index.xml.tpl':
                     continue
-                log.dbg('- %s' % file)
+                helper.log.dbg('- %s' % file)
                 data = XML(open(os.path.join(root, file), 'r').read())
                 title = str(data.select('def[@function="page_title"]/text()'))
                 title = title.strip()
@@ -565,7 +565,7 @@ class SFGenerator:
         '''
         Receives translation stats from external server and parses it.
         '''
-        log.dbg('Processing translation stats...')
+        helper.log.dbg('Processing translation stats...')
         self.data['translations'] = []
         list = self.svn.ls()
         english = self.svn.cat('english-utf-8.inc.php')
@@ -579,7 +579,7 @@ class SFGenerator:
             except:
                 baselang = lang
             short = langnames.MAP[lang]
-            log.dbg(' - %s [%s]' % (lang, short))
+            helper.log.dbg(' - %s [%s]' % (lang, short))
             svnlog = self.svn.log(name)
             langs = '%s|%s|%s' % (lang, short, baselang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
@@ -638,7 +638,7 @@ class SFGenerator:
         '''
         Renders all content pages.
         '''
-        log.dbg('Rendering pages:')
+        helper.log.dbg('Rendering pages:')
         templates = [os.path.basename(x) for x in glob.glob('templates/*.tpl')]
         templates.extend([os.path.join('security', os.path.basename(x)) for x in glob.glob('templates/security/*.tpl')])
         for template in templates:
@@ -647,15 +647,15 @@ class SFGenerator:
                 continue
             self.render(name)
 
-        log.dbg('Rendering security issues pages:')
+        helper.log.dbg('Rendering security issues pages:')
         for issue in self.data['issues']:
             self.render_security(issue['name'])
 
-        log.dbg('Generating CSS:')
+        helper.log.dbg('Generating CSS:')
         for css in [os.path.basename(x) for x in glob.glob('css/*.css')]:
             self.render_css(css)
 
-        log.dbg('Generating JavaScript:')
+        helper.log.dbg('Generating JavaScript:')
         for js in [os.path.basename(x) for x in glob.glob('js/*.js')]:
             self.render_js(js)
 
@@ -667,7 +667,7 @@ class SFGenerator:
         self.prepare_output()
         self.fetch_data()
         self.render_pages()
-        log.dbg('Done!')
+        helper.log.dbg('Done!')
 
 if __name__ == '__main__':
     gen = SFGenerator()

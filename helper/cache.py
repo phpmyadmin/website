@@ -27,8 +27,8 @@ import pysvn
 import glob
 import traceback
 
-import log
-import date
+import helper.log
+import helper.date
 
 # How long is cache valid (in seconds)
 CACHE_TIME = 60 * 60
@@ -71,7 +71,7 @@ class Cache(object):
         Logs messages if debugging is enabled.
         '''
         if DBG_CACHE:
-            log.dbg(message)
+            helper.log.dbg(message)
 
     def get(self, name):
         '''

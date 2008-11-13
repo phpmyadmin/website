@@ -52,6 +52,13 @@ Themes
 
 Themes require additional metadata, which is stored in themes.py.
 
+
+Awards
+------
+
+All awards are listed in awards.py.
+
+
 Markup rules
 ------------
 
