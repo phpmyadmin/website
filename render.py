@@ -29,6 +29,7 @@ import traceback
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
+from optparse import OptionParser
 
 import helper.cache
 import helper.log
@@ -670,5 +671,21 @@ class SFGenerator:
         helper.log.dbg('Done!')
 
 if __name__ == '__main__':
+    parser = OptionParser()
+    parser.add_option('-v', '--verbose',
+                    action='store_true',
+                    dest='verbose',
+                    help='Output verbose information.')
+    parser.add_option('-q', '--quiet',
+                    action='store_false',
+                    dest='verbose',
+                    help='Only show errors and warnings.')
+
+    parser.set_defaults(quiet = False)
+
+    (options, args) = parser.parse_args()
+
+    helper.log.VERBOSE = options.verbose
+
     gen = SFGenerator()
     gen.main()
