@@ -151,7 +151,8 @@ class SVNCache(Cache):
         if not os.path.exists(self._wc):
             self.dbg('svn co %s' % self._url)
             self._svn.checkout(self._url, self._wc)
-        if not self.check_timeout(self._wc):
+            self._updated = True
+        elif not self.check_timeout(self._wc):
             try:
                 self.dbg('svn up %s' % self._url)
                 self._svn.update(self._wc)
@@ -192,7 +193,7 @@ class SVNCache(Cache):
             newlog = [{
                 'message': x['message'],
                 'revision': x['revision'].number,
-                'date': date.fmtdate.fromtimestamp(x['date']),
+                'date': helper.date.fmtdate.fromtimestamp(x['date']),
                 'author': x['author'],
                 } for x in svnlog]
             list.extend(newlog)
