@@ -74,7 +74,12 @@
         href="https://launchpad.net/~nijel/+archive/">PPA for Michal
         Čihař</a>.
     </p>
-
+    <h3>Gentoo</h3>
+    <p>
+        Gentoo ships the phpMyAdmin package, both in a near stock configuration
+        as well as in a <code>webapp-config</code> configuration.  <code>emerge
+        dev-db/phpmyadmin</code> to install.
+    </p>
 
 </div>
 
