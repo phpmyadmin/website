@@ -35,10 +35,12 @@ import helper.cache
 import helper.log
 import helper.date
 
-import md5sums
-import awards
-import themes
-import langnames
+import data.md5sums
+import data.awards
+import data.themes
+import data.langnames
+import data.menu
+import data.screenshots
 
 # Project part
 PROJECT_ID = 23067
@@ -58,28 +60,6 @@ SERVER = 'http://new.cihar.com'
 BASE_URL = '/test/'
 BASE_URL = '/'
 EXTENSION = 'html'
-
-# Main menu
-MENU = [
-    ('', 'About'),
-    ('news', 'News'),
-    ('security/', 'Security'),
-    ('support', 'Support'),
-    ('docs', 'Docs'),
-    ('try', 'Try'),
-    ('improve', 'Improve'),
-    ('themes', 'Themes'),
-    ('download', 'Download'),
-]
-
-# List of screenshots
-SCREENSHOTS = [
-    {'name': 'main-page', 'title': 'Main page screenshot'},
-    {'name': 'main-page-rtl', 'title': 'RTL language with Darkblue/orange theme'},
-    {'name': 'designer', 'title': 'Database designer'},
-    {'name': 'sql-export', 'title': 'SQL export options'},
-    {'name': 'privileges', 'title': 'Setting per column privileges for table'},
-    ]
 
 # How many security issues are shown in RSS
 TOP_ISSUES = 10
@@ -169,10 +149,10 @@ class SFGenerator:
             'rss_files': PROJECT_FILES_RSS,
             'rss_donations': DONATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
-            'screenshots': SCREENSHOTS,
-            'awards': awards.AWARDS,
+            'screenshots': data.screenshots.SCREENSHOTS,
+            'awards': data.awards.AWARDS,
             'generated': helper.date.fmtdatetime.utcnow(),
-            'themecssversions': themes.CSSVERSIONS,
+            'themecssversions': data.themes.CSSVERSIONS,
             }
         self.loader = TemplateLoader([TEMPLATES])
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
@@ -244,7 +224,7 @@ class SFGenerator:
         ext = os.path.splitext(filename)[1]
         featured = (filename.find(FILES_MARK) != -1)
         try:
-            md5 = md5sums.md5sum[filename]
+            md5 = data.md5sums.md5sum[filename]
         except KeyError:
             helper.log.warn('No MD5 for %s!' % filename)
             md5 = 'N/A'
@@ -359,14 +339,14 @@ class SFGenerator:
             release['shortname'] = type
             release['imgname'] = 'images/themes/%s.png' % type
             try:
-                release.update(themes.THEMES['%s-%s' % (type, version)])
+                release.update(data.themes.THEMES['%s-%s' % (type, version)])
             except KeyError:
                 helper.log.warn('No meatadata for theme %s-%s!' % (type, version))
                 release['name'] = type
                 release['support'] = 'N/A'
                 release['info'] = ''
             release['fullname'] = '%s %s' % (release['name'], version)
-            release['classes'] = themes.CSSMAP[release['support']]
+            release['classes'] = data.themes.CSSMAP[release['support']]
 
             text = entry.summary
             fileslist = text[text.find('Includes files:') + 15:]
@@ -415,7 +395,7 @@ class SFGenerator:
         Returns list of menu entries with marked active one.
         '''
         menu = []
-        for item in MENU:
+        for item in data.menu.MENU:
             title = item[1]
             name = item[0]
             field = {
@@ -579,7 +559,7 @@ class SFGenerator:
                 baselang, ignore = lang.split('_')
             except:
                 baselang = lang
-            short = langnames.MAP[lang]
+            short = data.langnames.MAP[lang]
             helper.log.dbg(' - %s [%s]' % (lang, short))
             svnlog = self.svn.log(name)
             langs = '%s|%s|%s' % (lang, short, baselang)
@@ -681,7 +661,7 @@ if __name__ == '__main__':
                     dest='verbose',
                     help='Only show errors and warnings.')
 
-    parser.set_defaults(quiet = False)
+    parser.set_defaults(verbose = True)
 
     (options, args) = parser.parse_args()
 

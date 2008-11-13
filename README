@@ -39,24 +39,31 @@ run.
 All pages should at the end include _page.tpl to get layout and other
 common things. You can see example page at templates/_sample_.tpl
 
+Static data required for generating pages is stored in data/ folder.
 
 Menu
 ----
 
-Menu is configured in render.py, first element always means page name
+Menu is configured in data/menu.py, first element always means page name
 (extension is added automatically) second menu item title.
 
 
 Themes
 ------
 
-Themes require additional metadata, which is stored in themes.py.
+Themes require additional metadata, which is stored in data/themes.py.
 
 
 Awards
 ------
 
-All awards are listed in awards.py.
+All awards are listed in data/awards.py.
+
+
+Screenshots
+-----------
+
+All screenshots are listed in data/screenshots.py.
 
 
 Markup rules
