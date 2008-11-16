@@ -3,9 +3,8 @@
 <!--! Contact information for security issues -->
 
 <p>
-If you have found security issue in phpMyAdmin code, we please you to contact
-<a href="mailto:security@phpmyadmin.net">phpMyAdmin security team</a> in
-advance. This way we can prepare fix and release fix together with your
+If you have a found security issue in phpMyAdmin code, we ask you to contact the <a href="mailto:security@phpmyadmin.net">phpMyAdmin security team</a> in
+advance. This way we can prepare a fix and release the fix together with your
 announcement. You will be also given credit in our security announcement.  
 </p>
 
