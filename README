@@ -21,20 +21,19 @@ pysvn - http://pysvn.tigris.org/
 Security announcements
 ----------------------
 
-To create new security announcement, copy templates/security/_PMASA_ to
-templates/security/PMASA-YYYY-N and edit it's content.
+To create a new security announcement, copy templates/security/_PMASA_ to
+templates/security/PMASA-YYYY-N and edit its contents.
 
 
 Page generating
 ---------------
 
-All page has it's own template. For most things it mean inclusion of
+All page has its own template. For most things it means inclusion of
 other templates to generate full page. These partial includes should be
 named with underscore as first character (eg. _page.tpl).
 
-To add new page, simply drop file to templates directory named
-something.tpl and it will be automatically used as a template on next
-run.
+To add a new page, simply put a file named something.tpl to the templates 
+directory and it will be automatically used as a template on next run.
 
 All pages should at the end include _page.tpl to get layout and other
 common things. You can see example page at templates/_sample_.tpl
@@ -44,7 +43,7 @@ Static data required for generating pages is stored in data/ folder.
 Menu
 ----
 
-Menu is configured in data/menu.py, first element always means page name
+Menu is configured in data/menu.py, the first element always means page name
 (extension is added automatically) second menu item title.
 
 
