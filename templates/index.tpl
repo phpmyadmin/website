@@ -9,12 +9,12 @@
 <h2>About</h2>
 
 <p>
-phpMyAdmin is a free software tool written in PHP intended to handle the
-administration of the MySQL over the World Wide Web. phpMyAdmin supports a wide
-range of operations with MySQL. Most frequently used operations are supported
-by the user interface (managing databases, tables, fields, relations, indexes,
-users, permissions, etc), while you still have ability to directly execute any
-SQL statement.  
+phpMyAdmin is a free software tool written in <a href="http://php.net">PHP</a>
+intended to handle the administration of <a href="http://mysql.com">MySQL</a>
+over the World Wide Web. phpMyAdmin supports a wide range of operations with 
+MySQL. The most frequently used operations are supported by the user interface
+ (managing databases, tables, fields, relations, indexes, users, permissions, 
+etc), while you still have the ability to directly execute any SQL statement.  
 </p>
 
 <div class="bookbanner">
@@ -35,10 +35,10 @@ f.start();
 </script>
 
 <p>
-phpMyAdmin comes with wide range of <a
+phpMyAdmin comes with a wide range of <a
 href="${base_url}docs.${file_ext}">documentation</a> and users are welcome to
 update <a href="http://wiki.cihar.com/">our wiki pages</a> to share ideas and
-howtos for various operations. <a
+howtos for various operations. The <a
 href="${base_url}team.${file_ext}">phpMyAdmin team</a> will try to help you if
 you face any problem, you can use <a
 href="${base_url}support.${file_ext}">variety of support channels</a> to get
@@ -53,7 +53,7 @@ and Spanish.
 </p>
 
 <p>
-To ease usage to wide range of people, phpMyAdmin is translated to <a
+To ease usage to a wide range of people, phpMyAdmin is translated into <a
 href="${base_url}translations.${file_ext}">55 languages</a> and supports both LTR
 and RTL languages.
 </p>
@@ -69,9 +69,9 @@ href="${base_url}download.${file_ext}">download page</a>.
 
 <p>
 phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
-Among others, it was chosen as best PHP application in various awards and
-every year wins the SourceForge.net Community Choice Awards as Best Tool or
-Utility for SysAdmins.
+Among others, it was chosen as the best PHP application in various awards and
+every year wins the SourceForge.net Community Choice Awards as &quot;Best Tool or
+Utility for SysAdmins&quot;.
 </p>
 
 <div class="floatbox">
