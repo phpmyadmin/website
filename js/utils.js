@@ -12,7 +12,8 @@ function show_theme(version) {
     $$("div.theme:not(." + version + ")").setStyle("display", "none");
 }
 
-// AUTOLOAD CODE BLOCK
+/* Auto load blocks */
+
 function theme_load() {
     /* Is this document with themes? */
     if ($$("div.theme").length == 0) return;
@@ -29,6 +30,15 @@ function theme_load() {
 }
 
 window.addEvent("domready", theme_load);
+
+function fader_autoload() {
+    if ($("fader").length == 0) return;
+
+    var f = new Fader('fader');
+    f.start();
+}
+
+window.addEvent('domready', fader_autoload);
 
 /*
 function dl_hint() {

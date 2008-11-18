@@ -18,19 +18,13 @@ etc), while you still have the ability to directly execute any SQL statement.
 </p>
 
 <div class="bookbanner">
-<a href="${base_url}docs.${file_ext}#books" id="container">
+<a href="${base_url}docs.${file_ext}#books" id="fader">
 <img src="images/books/pma_en_100x123.png" alt="phpMyAdmin book" />
 <img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
 <img src="images/books/pma_de_90x122.jpg" alt="phpMyAdmin book" />
 <img src="images/books/pma_es_100x123.png" alt="phpMyAdmin book" />
 </a>
 </div>
-<script type="text/javascript">
-window.addEvent('domready',function() {
-var f = new Fader('container');
-f.start();
-});
-</script>
 
 <p>
 phpMyAdmin comes with a wide range of <a
