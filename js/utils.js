@@ -28,11 +28,14 @@ function theme_load() {
     show_theme(hash);
 }
 
+window.addEvent("domready", theme_load);
+
+/*
 function dl_hint() {
     if ($$("div.downloadbutton").length == 0) return;
     var myTips = new Tips('div.downloadbutton');
     $$("div.downloadbutton").store('tip:text', 'There are more download options available on the downloads page.');
 }
 
-window.addEvent("domready", theme_load);
 window.addEvent("domready", dl_hint);
+*/
