@@ -688,6 +688,10 @@ if __name__ == '__main__':
                     action='store', type='string',
                     dest='server',
                     help='Extension of generated files, default is %s.' % EXTENSION)
+    parser.add_option('-l', '--log',
+                    action='store', type='string',
+                    dest='log',
+                    help='Log filename, default is none.')
 
     parser.set_defaults(
         verbose = helper.log.VERBOSE,
@@ -695,6 +699,7 @@ if __name__ == '__main__':
         server = SERVER,
         base_url = BASE_URL,
         clean = CLEAN_OUTPUT,
+        log = None,
         extension = EXTENSION
         )
 
@@ -706,6 +711,8 @@ if __name__ == '__main__':
     BASE_URL = options.base_url
     EXTENSION = options.extension
     CLEAN_OUTPUT = options.clean
+    if options.log is not None:
+        helper.log.LOG = open(options.log, 'w')
 
     gen = SFGenerator()
     gen.main()

@@ -24,13 +24,23 @@ import sys
 # Enable verbose messages?
 VERBOSE = True
 # Debug cache
-DBG_CACHE = True
+DBG_CACHE = False
+# Log file
+LOG = None
+
+def logwrite(text):
+    '''
+    Writes message to log if logging is enabled.
+    '''
+    if LOG is not None:
+        LOG.write('%s\n' % text)
 
 def warn(text):
     '''
     Issues warning to stderr.
     '''
     sys.stderr.write('%s\n' % text)
+    logwrite('WARNING: %s' % text)
 
 def dbg(text, type = None):
     '''
@@ -39,7 +49,12 @@ def dbg(text, type = None):
     if type is not None:
         if type == 'cache' and DBG_CACHE:
             sys.stderr.write('%s\n' % text)
+        else:
+            if VERBOSE:
+                sys.stderr.write('%s\n' % text)
+        logwrite('%s: %s' % (type, text))
     else:
         if VERBOSE:
             sys.stderr.write('%s\n' % text)
+        logwrite(text)
 
