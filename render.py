@@ -686,7 +686,7 @@ if __name__ == '__main__':
                     help='Base URL of document, eg.: %s.' % BASE_URL)
     parser.add_option('-e', '--extension',
                     action='store', type='string',
-                    dest='server',
+                    dest='extension',
                     help='Extension of generated files, default is %s.' % EXTENSION)
     parser.add_option('-l', '--log',
                     action='store', type='string',
