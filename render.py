@@ -705,7 +705,7 @@ if __name__ == '__main__':
     SERVER = options.server
     BASE_URL = options.base_url
     EXTENSION = options.extension
-    CLEAN_OUTPUT = clean
+    CLEAN_OUTPUT = options.clean
 
     gen = SFGenerator()
     gen.main()
