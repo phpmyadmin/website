@@ -522,7 +522,7 @@ class SFGenerator:
                 dir += '/'
             for file in files:
                 name, ext = os.path.splitext(file)
-                if name[:5] != 'PMASA' and ext != '.tpl':
+                if ext != '.tpl':
                     continue
                 if name[0] in ['_', '.']:
                     continue
