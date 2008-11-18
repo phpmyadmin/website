@@ -47,8 +47,9 @@ def dbg(text, type = None):
     Prints debug information to stderr.
     '''
     if type is not None:
-        if type == 'cache' and DBG_CACHE:
-            sys.stderr.write('%s\n' % text)
+        if type == 'cache':
+            if DBG_CACHE:
+                sys.stderr.write('%s\n' % text)
         else:
             if VERBOSE:
                 sys.stderr.write('%s\n' % text)
