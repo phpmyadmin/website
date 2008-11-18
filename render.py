@@ -660,6 +660,14 @@ if __name__ == '__main__':
                     action='store_false',
                     dest='verbose',
                     help='Only show errors and warnings.')
+    parser.add_option('-C', '--clean',
+                    action='store_true',
+                    dest='clean',
+                    help='Clean output directory (default).')
+    parser.add_option('-N', '--no-clean',
+                    action='store_false',
+                    dest='clean',
+                    help='Do  not clean output directory.')
     parser.add_option('-V', '--verbose-cache',
                     action='store_true',
                     dest='verbose_cache',
@@ -686,6 +694,7 @@ if __name__ == '__main__':
         verbose_cache = helper.cache.DBG_CACHE,
         server = SERVER,
         base_url = BASE_URL,
+        clean = CLEAN_OUTPUT,
         extension = EXTENSION
         )
 
@@ -696,6 +705,7 @@ if __name__ == '__main__':
     SERVER = options.server
     BASE_URL = options.base_url
     EXTENSION = options.extension
+    CLEAN_OUTPUT = clean
 
     gen = SFGenerator()
     gen.main()
