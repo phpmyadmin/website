@@ -691,7 +691,7 @@ if __name__ == '__main__':
 
     parser.set_defaults(
         verbose = helper.log.VERBOSE,
-        verbose_cache = helper.cache.DBG_CACHE,
+        verbose_cache = helper.log.DBG_CACHE,
         server = SERVER,
         base_url = BASE_URL,
         clean = CLEAN_OUTPUT,
@@ -701,7 +701,7 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
 
     helper.log.VERBOSE = options.verbose
-    helper.cache.DBG_CACHE = options.verbose_cache
+    helper.log.DBG_CACHE = options.verbose_cache
     SERVER = options.server
     BASE_URL = options.base_url
     EXTENSION = options.extension

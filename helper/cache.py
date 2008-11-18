@@ -34,8 +34,6 @@ import helper.date
 CACHE_TIME = 60 * 60
 # How long is svn cache valid (in seconds)
 SVN_CACHE_TIME = 60 * 60 * 24
-# Debug cache
-DBG_CACHE = True
 
 class NoCache(Exception):
     pass
@@ -70,8 +68,7 @@ class Cache(object):
         '''
         Logs messages if debugging is enabled.
         '''
-        if DBG_CACHE:
-            helper.log.dbg(message)
+        helper.log.dbg(message, 'cache')
 
     def get(self, name):
         '''

@@ -23,6 +23,8 @@ import sys
 
 # Enable verbose messages?
 VERBOSE = True
+# Debug cache
+DBG_CACHE = True
 
 def warn(text):
     '''
@@ -30,10 +32,14 @@ def warn(text):
     '''
     sys.stderr.write('%s\n' % text)
 
-def dbg(text):
+def dbg(text, type = None):
     '''
     Prints debug information to stderr.
     '''
-    if VERBOSE:
-        sys.stderr.write('%s\n' % text)
+    if type is not None:
+        if type == 'cache' and DBG_CACHE:
+            sys.stderr.write('%s\n' % text)
+    else:
+        if VERBOSE:
+            sys.stderr.write('%s\n' % text)
 
