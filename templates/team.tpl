@@ -69,7 +69,7 @@ guests.
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4187.JPG"
-    rel="lightbox[meeting]" title="phpMyAdmin team with Rasmus (PHP)">
+    rel="lightbox[meeting]" title="phpMyAdmin team with Rasmus (PHP) - Marc Delisle, Olivier Müller, Alexander M. Turek, Rasmus Lerdorf, Garvin Hicking, Michal Čihař, Robin Johnson">
         <img src="${base_url}images/linuxtag/IMG_4187_tn.JPG"
         alt="phpMyAdmin team with Rasmus (PHP)" />
     </a>
@@ -77,7 +77,7 @@ guests.
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4189.JPG"
-    rel="lightbox[meeting]" title="phpMyAdmin team with Monty (MySQL)">
+    rel="lightbox[meeting]" title="phpMyAdmin team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
         <img src="${base_url}images/linuxtag/IMG_4189_tn.JPG"
         alt="phpMyAdmin team with Rasmus (PHP)" />
     </a>
