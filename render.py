@@ -166,7 +166,7 @@ class SFGenerator:
         if none is already used.
         '''
         if page.find('.') == -1:
-            return '%s.%s' % (page, EXTENSION)
+            return '%s.%s' % (page, self.data['file_ext'])
         else:
             return page
 
