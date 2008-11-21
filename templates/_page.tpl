@@ -9,8 +9,8 @@
   <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" /></py:if>
   <link rel="stylesheet" type="text/css" href="${base_url}css/style.css" />
   <link rel="stylesheet" type="text/css" href="${base_url}css/slimbox.css" media="screen" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="${base_url}favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="${base_url}favicon.ico" type="image/x-icon" />
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
   <script src="${base_url}js/mootools-more.js" type="text/javascript"></script>
   <script src="${base_url}js/slimbox.js" type="text/javascript"></script>
