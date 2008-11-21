@@ -11,7 +11,9 @@
         <h2><a name="${item.anchor}"></a>${item.title}</h2>
         <p class="date">${item.date}</p>
         <p>${Markup(item.text)}</p>
+<!--!   Removed because it was misused for support questions and spam.
         <p class="comments"><a href="${item.comments_link}">${item.comments_number} comments</a></p>
+-->
     </py:for>
 
     <p>
