@@ -658,6 +658,7 @@ class SFGenerator:
 
         helper.log.dbg('Generating static pages:')
         self.render_static('_version.php', 'version.php')
+        self.render_static('_version.txt', 'version.txt')
         self.render_static('_security.php', 'security.php')
         for redir in data.redirects.REDIRECTS:
             self.render_static('_redirect.tpl',
