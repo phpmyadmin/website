@@ -58,10 +58,8 @@ LANG_REGEXP ='((translation|lang|%s).*update|update.*(translation|lang|%s)|^upda
 
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
-SERVER = 'http://new.cihar.com'
-BASE_URL = '/test/'
-BASE_URL = '/'
-EXTENSION = 'html'
+BASE_URL = '/home_page/'
+EXTENSION = 'php'
 
 # How many security issues are shown in RSS
 TOP_ISSUES = 10
