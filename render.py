@@ -98,7 +98,6 @@ def copytree(src, dst):
     files starting with underscore (_).
     '''
     names = os.listdir(src)
-    os.makedirs(dst)
     errors = []
     for name in names:
         if name == '.svn' or name.find('.swp') != -1 or name[0] == '_':
@@ -107,6 +106,7 @@ def copytree(src, dst):
         dstname = os.path.join(dst, name)
         try:
             if os.path.isdir(srcname):
+                os.makedirs(dstname)
                 copytree(srcname, dstname)
             else:
                 shutil.copy2(srcname, dstname)
@@ -525,8 +525,10 @@ class SFGenerator:
                 shutil.rmtree(os.path.join(OUTPUT, 'images'))
             except OSError:
                 pass
-        copytree(IMAGES, os.path.join(OUTPUT, 'images'))
-        copytree(STATIC, os.path.join(OUTPUT))
+        imgdst = os.path.join(OUTPUT, 'images')
+        os.makedirs(imgdst)
+        copytree(IMAGES, imgdst)
+        copytree(STATIC, OUTPUT)
         try:
             os.mkdir(os.path.join(OUTPUT, 'security'))
         except OSError:
