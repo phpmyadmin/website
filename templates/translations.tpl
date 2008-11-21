@@ -15,7 +15,7 @@ list</a>.
 </p>
 <p>
 If you want to help improving a translation, please follow intructions on <a
-href="${base_url}improve.${file_ext}">how to improve page</a>.
+href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
 </p>
 
 
