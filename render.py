@@ -80,7 +80,8 @@ PROJECT_FILES_RSS = 'https://sourceforge.net/export/rss2_projfiles.php?group_id=
 PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
-TRANSLATIONS_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/lang/'
+PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
+TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
 
 # Clean output before generating
 CLEAN_OUTPUT = True
@@ -163,6 +164,7 @@ class SFGenerator:
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
         self.feeds = helper.cache.FeedCache()
         self.svn = helper.cache.SVNCache(TRANSLATIONS_SVN)
+        self.simplesvn = helper.cache.SimpleSVNCache(PROJECT_SVN)
 
     def get_outname(self, page):
         '''
@@ -188,6 +190,21 @@ class SFGenerator:
         or other special chars).
         '''
         return re.sub('[^a-z0-9A-Z.-]', '_', text)
+
+    def fmt_translator(self, translator):
+        '''
+        Formats translator information.
+        '''
+        lines = [x.strip() for x in translator.split('\n')]
+        output = []
+        for line in lines:
+            try:
+                name, email = line.split('(')
+            except ValueError:
+                name = line
+                email = None
+            output.append(name.strip())
+        return ', '.join(output)
 
     def get_version_info(self, version):
         '''
@@ -565,6 +582,7 @@ class SFGenerator:
         helper.log.dbg('Processing translation stats...')
         self.data['translations'] = []
         list = self.svn.ls()
+        translators = XML(self.simplesvn.cat('translators.html'))
         english = self.svn.cat('english-utf-8.inc.php')
         allmessages = len(re.compile('\n\$str').findall(english))
         for name in list:
@@ -575,6 +593,12 @@ class SFGenerator:
                 baselang, ignore = lang.split('_')
             except:
                 baselang = lang
+            translator = translators.select('tr[@id="%s"]/td[2]/text()' % lang)
+            translator = unicode(translator).strip()
+            if translator == '':
+                translator = translators.select('tr[@id="%s"]/td[2]/text()' % baselang)
+                translator = unicode(translator).strip()
+            translator = self.fmt_translator(translator)
             short = data.langnames.MAP[lang]
             helper.log.dbg(' - %s [%s]' % (lang, short))
             svnlog = self.svn.log(name)
@@ -606,6 +630,7 @@ class SFGenerator:
                 'name': lang,
                 'short': short,
                 'translated': translated,
+                'translator': translator,
                 'percent': '%0.1f' % percent,
                 'updated': dt,
                 'css': css,

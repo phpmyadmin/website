@@ -9,7 +9,9 @@
 Translations inside phpMyAdmin are in various states. The ones that have less
 than 80% translated strings are shown in dark red, the ones below 50% in more
 intensive red (those are considered orphaned and the phpMyAdmin project would
-appreciate any help in updating them).
+appreciate any help in updating them). Translators contacts are available on
+our <a href="http://www.phpmyadmin.net/documentation/translators.html">translators
+list</a>.
 </p>
 <p>
 If you want to help improving a translation, please follow intructions on <a
@@ -24,6 +26,7 @@ href="${base_url}improve.${file_ext}">how to improve page</a>.
     <th>Strings</th>
     <th colspan="2">Translated strings percent</th>
     <th>Last modification</th>
+    <th>Translators</th>
 </tr>
 </thead>
 
@@ -38,6 +41,7 @@ href="${base_url}improve.${file_ext}">how to improve page</a>.
 <div class="bar" style="width: ${round(float(item.percent))}%;"></div>
 </td>
 <td class="date">${item.updated}</td>
+<td>${item.translator}</td>
 </tr>
 </tbody>
 </table>

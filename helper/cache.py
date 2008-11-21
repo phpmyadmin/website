@@ -115,47 +115,26 @@ class FeedCache(Cache):
             self.set(cache, result)
         return result
 
-class SVNCache(Cache):
+class SimpleSVNCache(Cache):
     def __init__(self, url, timeout = SVN_CACHE_TIME):
-        super(SVNCache, self).__init__(timeout)
+        super(SimpleSVNCache, self).__init__(timeout)
         self._svn = pysvn.Client()
         self._url = url
-        self._updated = False
-        self._wc = self.get_name('svn-%s' % self._url, '%s')
-
-    def ls(self):
-        '''
-        Performs cached svn ls, returs list of URLs.
-        '''
-        self.update_wc()
-        files = glob.glob(os.path.join(self._wc, '*'))
-        files.sort()
-        return [os.path.basename(x) for x in files]
 
     def cat(self, name):
         '''
         Performs cached svn cat, returns string with file content.
         '''
-        self.update_wc()
-        return open(os.path.join(self._wc, name), 'r').read()
+        fullname = '%s/%s' % (self._url, name)
+        cachename = 'svn-log-%s' % fullname
 
-    def update_wc(self):
-        '''
-        Updates working copy of repository.
-        '''
-        if self._updated:
-            return
-        if not os.path.exists(self._wc):
-            self.dbg('svn co %s' % self._url)
-            self._svn.checkout(self._url, self._wc)
-            self._updated = True
-        elif not self.check_timeout(self._wc):
-            try:
-                self.dbg('svn up %s' % self._url)
-                self._svn.update(self._wc)
-            except pysvn.ClientError:
-                traceback.print_last()
-            self._updated = True
+        try:
+            data = self.get(cachename)
+            return data
+        except NoCache:
+            data = self._svn.cat(fullname)
+            self.set(cachename, data)
+            return data
 
     def log(self, name):
         '''
@@ -200,3 +179,44 @@ class SVNCache(Cache):
             traceback.print_exc()
         return list
 
+class SVNCache(SimpleSVNCache):
+    def __init__(self, url, timeout = SVN_CACHE_TIME):
+        super(SVNCache, self).__init__(timeout)
+        self._svn = pysvn.Client()
+        self._url = url
+        self._updated = False
+        self._wc = self.get_name('svn-%s' % self._url, '%s')
+
+    def ls(self):
+        '''
+        Performs cached svn ls, returs list of URLs.
+        '''
+        self.update_wc()
+        files = glob.glob(os.path.join(self._wc, '*'))
+        files.sort()
+        return [os.path.basename(x) for x in files]
+
+    def cat(self, name):
+        '''
+        Performs cached svn cat, returns string with file content.
+        '''
+        self.update_wc()
+        return open(os.path.join(self._wc, name), 'r').read()
+
+    def update_wc(self):
+        '''
+        Updates working copy of repository.
+        '''
+        if self._updated:
+            return
+        if not os.path.exists(self._wc):
+            self.dbg('svn co %s' % self._url)
+            self._svn.checkout(self._url, self._wc)
+            self._updated = True
+        elif not self.check_timeout(self._wc):
+            try:
+                self.dbg('svn up %s' % self._url)
+                self._svn.update(self._wc)
+            except pysvn.ClientError:
+                traceback.print_last()
+            self._updated = True
