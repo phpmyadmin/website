@@ -74,6 +74,17 @@ Markup rules
 - comments which first char is ! (eg. <!--! comment -->) will not be in output
 
 
+Special pages
+-------------
+
+Directory static contains some special pages, which have to be present
+on the website. First there is version.php script, which shows most
+current phpMyAdmin version, which is then offered as an update. The rest
+are currently just compatibility files with old website - security.php,
+which redirects security issues to new pages and _redirect.tpl which is
+used for generating redirects based on data/redirects.py.
+
+
 Generating website
 ------------------
 
