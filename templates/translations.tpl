@@ -12,8 +12,8 @@ intensive red (those are considered orphaned and the phpMyAdmin project would
 appreciate any help in updating them).
 </p>
 <p>
-If you want to help improving a translation, please follow intructions in <a
-href="http://wiki.cihar.com/pma/FAQ_7.2">FAQ 7.2</a> in documentation.
+If you want to help improving a translation, please follow intructions on <a
+href="${base_url}improve.${file_ext}">how to improve page</a>.
 </p>
 
 
