@@ -29,6 +29,6 @@ MENU = [
     ('try', 'Try'),
     ('improve', 'Improve'),
     ('themes', 'Themes'),
-    ('download', 'Download'),
+    ('downloads', 'Download'),
 ]
 

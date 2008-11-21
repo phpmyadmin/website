@@ -56,7 +56,7 @@ href="${base_url}gophp5.${file_ext}">GoPHP5 initiative</a> and dropped
 compatibility code for older PHP and MySQL versions; version 3 and later requires
 at least PHP 5.2 and MySQL 5. To use with older PHP or MySQL versions, use
 the older (but still maintained) branch of 2.x releases, which you can find on the <a
-href="${base_url}download.${file_ext}">download page</a>.
+href="${base_url}downloads.${file_ext}">download page</a>.
 </p>
 
 <p>
