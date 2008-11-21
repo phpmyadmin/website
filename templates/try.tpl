@@ -4,7 +4,7 @@
 
 <div py:match="content" id="body">
 
-<h2>Try</h2>
+<h2>Demo Server</h2>
 
 <p>
 The best way to see phpMyAdmin in action is to try it on our demo server, where you have
