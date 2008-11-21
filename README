@@ -74,6 +74,29 @@ Markup rules
 - comments which first char is ! (eg. <!--! comment -->) will not be in output
 
 
+Generating website
+------------------
+
+The website itself is rendered using render.py, here are options which
+are currently used for http://www.phpmyadmin.net/home_page/:
+
+./render.py \
+    --quiet \
+    --server http://www.phpmyadmin.net \
+    --base-url /home_page/ \
+    --quiet-cache \
+    --log render.log \
+    --extension php
+
+If you want to make log visible on website, copy it to output folder:
+
+cp render.log output/
+
+And finally rsync it to sourceforge:
+
+rsync -az --delete output/ user,phpmyadmin@web.sourceforge.net:htdocs/home_page/
+
+
 License
 -------
 
