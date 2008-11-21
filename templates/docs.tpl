@@ -13,6 +13,7 @@
     <li><b><a href="http://wiki.cihar.com/">Official phpMyAdmin wiki</a></b></li>
     <li><a href="http://www.phpmyadmin.net/documentation/#faq">Frequently Asked Questions</a></li>
     <li><a href="http://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
+    <li><a href="${base_url}translations.${file_ext}">Translations overview</a></li>
 </ul>
 </div>
 
