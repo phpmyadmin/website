@@ -526,7 +526,7 @@ class SFGenerator:
             except OSError:
                 pass
         copytree(IMAGES, os.path.join(OUTPUT, 'images'))
-        copytree(STATIC, os.path.join(OUTPUT, 'static'))
+        copytree(STATIC, os.path.join(OUTPUT))
         try:
             os.mkdir(os.path.join(OUTPUT, 'security'))
         except OSError:
