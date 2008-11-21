@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 #
 # phpMyAdmin web site generator
-#  - date formatting and parsing
+#  - redirects
 #
 # Copyright (C) 2008 Michal Cihar <michal@cihar.com>
 #
@@ -19,31 +19,10 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-import datetime
-
-class basedatetime(datetime.datetime):
-    def w3cdtf(self):
-        return self.strftime('%Y-%m-%dT%H:%M:%S+00:00')
-
-    def datestring(self):
-        return self.strftime('%Y-%m-%d')
-
-    def datetimestring(self):
-        return self.strftime('%a, %d %b %Y %H:%M:%S GMT')
-
-class fmtdate(basedatetime):
-    def __str__(self):
-        return self.datestring()
-
-    def parse(text):
-        return fmtdate.strptime(text.strip(), '%Y-%m-%d')
-    parse = staticmethod(parse)
-
-class fmtdatetime(basedatetime):
-    def __str__(self):
-        return self.datetimestring()
-
-    def parse(text):
-        return fmtdatetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
-    parse = staticmethod(parse)
-
+REDIRECTS = {
+    'books' : 'docs',
+    'demos' : 'try',
+    'feedback': 'support',
+    'relnotes': 'news',
+    'stats': 'team',
+}

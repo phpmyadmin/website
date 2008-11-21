@@ -41,6 +41,8 @@ import data.themes
 import data.langnames
 import data.menu
 import data.screenshots
+import data.redirects
+import data.sf
 
 # Project part
 PROJECT_ID = 23067
@@ -70,6 +72,7 @@ CSS = './css'
 JS = './js'
 IMAGES = './images'
 OUTPUT = './output'
+STATIC = './static'
 
 # Which JS files are not templates
 JS_TEMPLATES = []
@@ -92,13 +95,14 @@ def copytree(src, dst):
     The destination directory must not already exist.
     If exception(s) occur, an Error is raised with a list of reasons.
 
-    It handles only files and dirs and ignores .svn and *.swp* files.
+    It handles only files and dirs and ignores .svn and *.swp* files and
+    files starting with underscore (_).
     '''
     names = os.listdir(src)
     os.makedirs(dst)
     errors = []
     for name in names:
-        if name == '.svn' or name.find('.swp') != -1:
+        if name == '.svn' or name.find('.swp') != -1 or name[0] == '_':
             continue
         srcname = os.path.join(src, name)
         dstname = os.path.join(dst, name)
@@ -153,9 +157,11 @@ class SFGenerator:
             'awards': data.awards.AWARDS,
             'generated': helper.date.fmtdatetime.utcnow(),
             'themecssversions': data.themes.CSSVERSIONS,
+            'sfservers': data.sf.SERVERS,
             }
         self.loader = TemplateLoader([TEMPLATES])
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
+        self.staticloader = TemplateLoader([STATIC], default_class = NewTextTemplate)
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
         self.feeds = helper.cache.FeedCache()
         self.svn = helper.cache.SVNCache(TRANSLATIONS_SVN)
@@ -420,6 +426,17 @@ class SFGenerator:
         out.write(template.generate(**self.data).render())
         out.close()
 
+    def render_static(self, templatename, outfile, extradata = {}):
+        '''
+        Renders "static" file from template.
+        '''
+        helper.log.dbg('  %s' % outfile)
+        template = self.staticloader.load(templatename)
+        out = open(os.path.join(OUTPUT, outfile), 'w')
+        extradata.update(self.data)
+        out.write(template.generate(**extradata).render())
+        out.close()
+
     def render_js(self, filename):
         '''
         Renders JavaScript file from template. Some defined files are not processed
@@ -494,6 +511,7 @@ class SFGenerator:
             except OSError:
                 pass
         copytree(IMAGES, os.path.join(OUTPUT, 'images'))
+        copytree(STATIC, os.path.join(OUTPUT, 'static'))
         try:
             os.mkdir(os.path.join(OUTPUT, 'security'))
         except OSError:
@@ -639,6 +657,13 @@ class SFGenerator:
         helper.log.dbg('Generating JavaScript:')
         for js in [os.path.basename(x) for x in glob.glob('js/*.js')]:
             self.render_js(js)
+
+        helper.log.dbg('Generating static pages:')
+        self.render_static('_version.php', 'version.php')
+        for redir in data.redirects.REDIRECTS:
+            self.render_static('_redirect.tpl',
+                '%s.php' % redir,
+                {'location': self.get_outname(data.redirects.REDIRECTS[redir])})
 
 
     def main(self):
