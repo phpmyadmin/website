@@ -26,6 +26,7 @@ import time
 import pysvn
 import glob
 import traceback
+import urllib
 
 import helper.log
 import helper.date
@@ -112,6 +113,23 @@ class FeedCache(Cache):
             result = self.get(cache)
         except NoCache:
             result = feedparser.parse(url)
+            self.set(cache, result)
+        return result
+
+class URLCache(Cache):
+    '''
+    URL caching class.
+    '''
+    def __init__(self, timeout = CACHE_TIME):
+        super(URLCache, self).__init__(timeout)
+
+    def load(self, url):
+        self.dbg('Downloading %s...' % url)
+        cache = 'url-%s' % url
+        try:
+            result = self.get(cache)
+        except NoCache:
+            result = urllib.urlopen(url).read()
             self.set(cache, result)
         return result
 

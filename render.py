@@ -83,6 +83,10 @@ PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
 PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
 TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
 
+# Data sources
+SVN_MD5 = 'http://dl.cihar.com/phpMyAdmin/trunk/md5.sums'
+SVN_SIZES = 'http://dl.cihar.com/phpMyAdmin/trunk/files.list'
+
 # Clean output before generating
 CLEAN_OUTPUT = True
 
@@ -163,6 +167,7 @@ class SFGenerator:
         self.staticloader = TemplateLoader([STATIC], default_class = NewTextTemplate)
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
         self.feeds = helper.cache.FeedCache()
+        self.urls = helper.cache.URLCache()
         self.svn = helper.cache.SVNCache(TRANSLATIONS_SVN)
         self.simplesvn = helper.cache.SimpleSVNCache(PROJECT_SVN)
 
@@ -339,6 +344,34 @@ class SFGenerator:
             else:
                 self.data['releases_older'].append(releases[idx])
                 helper.log.dbg(' %s (old)' % releases[idx]['version'])
+
+    def get_snapshots_info(self):
+        '''
+        Retrieves SVN snapshots info and fills it in data['releases_svn'].
+        '''
+        md5_strings = self.urls.load(SVN_MD5).split('\n')
+        size_strings = self.urls.load(SVN_SIZES).split('\n')
+        md5s = {}
+        for line in md5_strings:
+            if line.strip() == '':
+                continue
+            md5, name = line.split('  ')
+            md5s[name] = md5
+        svn = []
+        for line in size_strings:
+            if line.strip() == '':
+                continue
+            name, size = line.split(' ')
+            svn.append({
+                'name' : name,
+                'size' : int(size),
+                'humansize' : fmt_bytes(size),
+                'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/trunk/%s' % name,
+                'md5' : md5s[name],
+            })
+        self.data['releases_svn'] = [{
+            'files' : svn,
+        }]
 
     def process_themes(self, rss_downloads):
         '''
@@ -642,6 +675,8 @@ class SFGenerator:
         '''
         Fetches data from remote or local sources and prepares template data.
         '''
+        self.get_snapshots_info()
+
         rss_downloads = self.feeds.load('releases', PROJECT_FILES_RSS)
         self.process_releases(rss_downloads)
         self.process_themes(rss_downloads)

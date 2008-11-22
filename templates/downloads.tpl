@@ -35,6 +35,17 @@
 
     <h2>Development Versions</h2>
     <xi:include href="_svndl.tpl" />
+<p>
+Bellow are listed SVN snapshots for trunk branch, more daily snapshots of the
+code are available at <a
+href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
+</p>
+
+<py:for each="release in releases_svn">
+<xi:include href="_release.tpl" />
+</py:for>
+
+
     <p>
     More information about using subversion is available on <a
     href="${base_url}improve.${file_ext}#devel">development page</a>.
