@@ -38,7 +38,7 @@
 
     <p>
     Bellow are listed SVN snapshots for trunk branch, more daily snapshots of the
-    code are available at <a
+    code are available on <a
     href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
     </p>
 
