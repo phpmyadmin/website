@@ -35,15 +35,23 @@
 
     <h2>Development Versions</h2>
     <xi:include href="_svndl.tpl" />
-<p>
-Bellow are listed SVN snapshots for trunk branch, more daily snapshots of the
-code are available at <a
-href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
-</p>
 
-<py:for each="release in releases_svn">
-<xi:include href="_release.tpl" />
-</py:for>
+    <p>
+    Bellow are listed SVN snapshots for trunk branch, more daily snapshots of the
+    code are available at <a
+    href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
+    </p>
+
+    <ul class="dl">
+        <py:for each="file in release_svn">
+        <li>
+        <a href="${file.url}#!md5!${file.md5}">${file.name}</a>
+        <div class="filedetails">
+            ${file.humansize}, MD5: ${file.md5}
+        </div>
+        </li>
+        </py:for>
+    </ul> 
 
 
     <p>

@@ -369,9 +369,7 @@ class SFGenerator:
                 'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/trunk/%s' % name,
                 'md5' : md5s[name],
             })
-        self.data['releases_svn'] = [{
-            'files' : svn,
-        }]
+        self.data['release_svn'] = svn
 
     def process_themes(self, rss_downloads):
         '''
