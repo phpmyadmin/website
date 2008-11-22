@@ -16,6 +16,14 @@ that it no longer works. Please follow to our <a href="${base_url}">main
 page</a> to find information you were looking for or use navigation bar above.
 </p>
 
+<script type="text/javascript">
+<![CDATA[
+var GOOG_FIXURL_LANG = 'en';
+var GOOG_FIXURL_SITE = 'http://www.phpmyadmin.net/';
+]]>
+</script>
+<script type="text/javascript" src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+
 </div>
 
 <xi:include href="_page.tpl" />
