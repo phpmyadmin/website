@@ -216,7 +216,7 @@ class SFGenerator:
         Returns description to the phpMyAdmin version.
         '''
         if version[:2] == '2.':
-            text ='Version compatible with PHP 4 and MySQL 3 and 4.'
+            text ='Version compatible with PHP 4+ and MySQL 3+.'
         elif version[:2] == '3.':
             text = 'Version compatible with PHP 5 and MySQL 5.'
         if version.find('beta1') != -1:
