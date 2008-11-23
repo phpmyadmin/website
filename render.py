@@ -592,7 +592,7 @@ class SFGenerator:
                     continue
                 if name[0] in ['_', '.']:
                     continue
-                if file == 'index.xml.tpl':
+                if file in ['index.xml.tpl', 'sitemap.xml.tpl', '404.tpl']:
                     continue
                 helper.log.dbg('- %s' % file)
                 data = XML(open(os.path.join(root, file), 'r').read())
