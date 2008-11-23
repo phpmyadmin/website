@@ -15,7 +15,7 @@
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="${base_url}donate.${file_ext}">Donate to phpMyAdmin</a></span>
+    <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate to phpMyAdmin</a></span>
 </div>
 </div>
 

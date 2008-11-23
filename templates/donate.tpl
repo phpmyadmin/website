@@ -6,7 +6,7 @@
 <div py:match="content" id="body">
 <h2>Donations</h2>
 <p>
-We invite you to <a href="http://sourceforge.net/donate/index.php?group_id=23067">contribute money</a> to our project. Donations will be used for
+We invite you to <a href="http://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> to our project. Donations will be used for
 the promotion of phpMyAdmin. Thanks.
 </p>
 
