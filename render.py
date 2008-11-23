@@ -43,6 +43,7 @@ import data.menu
 import data.screenshots
 import data.redirects
 import data.sf
+import data.sitemap
 
 # Project part
 PROJECT_ID = 23067
@@ -573,11 +574,48 @@ class SFGenerator:
         except OSError:
             pass
 
+    def get_sitemap_data(self, page):
+        '''
+        Returns metadata for page for sitemap as per http://sitemaps.org.
+        '''
+        priority = '0.8'
+        changefreq = 'daily'
+        if page[:15] == 'security/PMASA-':
+            priority = '0.5'
+            changefreq = 'monthly'
+        elif page[:15] == '/documentation/':
+            priority = '0.7'
+            changefreq = 'weekly'
+        elif page[:20] == '/pma_localized_docs/':
+            priority = '0.6'
+            changefreq = 'monthly'
+        elif page in ['index', 'news']:
+            priority = '1.0'
+            changefreq = 'daily'
+        elif page in ['improve', 'team', 'docs']:
+            priority = '1.0'
+            changefreq = 'weekly'
+        elif page in ['downloads', 'donate', 'themes', 'translations']:
+            priority = '0.9'
+            changefreq = 'daily'
+        elif page in ['support']:
+            priority = '0.9'
+            changefreq = 'weekly'
+        elif page in ['sitemap']:
+            priority = '0.2'
+            changefreq = 'weekly'
+        return {
+            'lastmod' : helper.date.fmtdate.utcnow(),
+            'changefreq' : changefreq,
+            'priority' : priority,
+        }
+
     def generate_sitemap(self):
         '''
         Generates list of pages with titles.
         '''
         self.data['sitemap'] = []
+        self.data['sitemapxml'] = []
         helper.log.dbg('Generating sitemap:')
         for root, dirs, files in os.walk(TEMPLATES):
             if '.svn' in dirs:
@@ -588,25 +626,37 @@ class SFGenerator:
                 dir += '/'
             for file in files:
                 name, ext = os.path.splitext(file)
-                if ext != '.tpl':
+                if ext != '.tpl' and name[:6] != 'PMASA-':
                     continue
                 if name[0] in ['_', '.']:
                     continue
                 if file in ['index.xml.tpl', 'sitemap.xml.tpl', '404.tpl']:
                     continue
                 helper.log.dbg('- %s' % file)
-                data = XML(open(os.path.join(root, file), 'r').read())
-                title = str(data.select('def[@function="page_title"]/text()'))
+                xmldata = XML(open(os.path.join(root, file), 'r').read())
+                title = str(xmldata.select('def[@function="page_title"]/text()'))
                 title = title.strip()
                 if len(title) == 0:
-                    title = str(data.select('def[@function="announcement_id"]/text()'))
+                    title = str(xmldata.select('def[@function="announcement_id"]/text()'))
                     title = title.strip()
                 if len(title) == 0:
                     title = 'Index'
-                self.data['sitemap'].append({
-                    'link': dir + self.get_outname(name),
-                    'title': title
-                    })
+                link = dir + self.get_outname(name)
+                sitemap = {
+                        'link': link,
+                        'loc': '%s%s%s' % (SERVER, BASE_URL, link),
+                        'title': title
+                        }
+                if name[:6] != 'PMASA-':
+                    self.data['sitemap'].append(sitemap)
+                sitemap.update(self.get_sitemap_data(dir + name))
+                self.data['sitemapxml'].append(sitemap)
+        for link in data.sitemap.ENTRIES:
+            sitemap = {
+                    'loc': SERVER + link,
+                    }
+            sitemap.update(self.get_sitemap_data(link))
+            self.data['sitemapxml'].append(sitemap)
 
     def get_translation_stats(self):
         '''
@@ -720,6 +770,7 @@ class SFGenerator:
         self.render_static('_version.php', 'version.php')
         self.render_static('_version.txt', 'version.txt')
         self.render_static('_security.php', 'security.php')
+        self.render_static('_robots.txt', 'robots.txt')
         for redir in data.redirects.REDIRECTS:
             self.render_static('_redirect.tpl',
                 '%s.php' % redir,
