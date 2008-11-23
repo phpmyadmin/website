@@ -11,7 +11,7 @@
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="${base_url}try.${file_ext}">Try phpMyAdmin</a></span>
+    <span class="dlname"><a href="http://pma.cihar.com/trunk-config/" title="Go to demo server">Try phpMyAdmin</a></span>
 </div>
 
 <div class="rightbutton">
