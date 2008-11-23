@@ -2,6 +2,7 @@
 
 <py:def function="page_title">Donations</py:def>
 <py:def function="page_rss">${rss_donations}</py:def>
+<py:def function="page_rss_title">phpMyAdmin donations</py:def>
 
 <div py:match="content" id="body">
 <h2>Donations</h2>

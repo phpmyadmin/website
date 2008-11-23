@@ -2,6 +2,7 @@
 
 <py:def function="page_title">Security - ${announcement_id()}</py:def>
 <py:def function="page_rss">${base_url}security/index.xml</py:def>
+<py:def function="page_rss_title">phpMyAdmin security issues</py:def>
 
 <div py:match="content">
 

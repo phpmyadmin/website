@@ -2,6 +2,7 @@
 
 <py:def function="page_title">Themes</py:def>
 <py:def function="page_rss">${rss_files}</py:def>
+<py:def function="page_rss_title">phpMyAdmin file releases</py:def>
 
 <div py:match="content" id="body">
 <h2>Themes</h2>

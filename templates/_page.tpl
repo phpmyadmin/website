@@ -6,7 +6,7 @@
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
-  <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" /></py:if>
+  <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" title="${page_rss_title()}"/></py:if>
   <link rel="stylesheet" type="text/css" href="${base_url}css/style.css" />
   <link rel="stylesheet" type="text/css" href="${base_url}css/slimbox.css" media="screen" />
   <link rel="shortcut icon" href="${base_url}favicon.ico" type="image/x-icon" />

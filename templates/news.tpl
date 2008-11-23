@@ -2,6 +2,7 @@
 
 <py:def function="page_title">News</py:def>
 <py:def function="page_rss">${rss_news}</py:def>
+<py:def function="page_rss_title">phpMyAdmin project news</py:def>
 
 <div py:match="content" id="body">
 
