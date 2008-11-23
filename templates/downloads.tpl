@@ -38,22 +38,25 @@
     <xi:include href="_svndl.tpl" />
 
     <p>
-    Bellow are listed SVN snapshots for trunk branch, more daily snapshots of the
+    Below are listed SVN snapshots for trunk branch, more daily snapshots of the
     code are available on <a
     href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
     </p>
 
-    <ul class="dl">
-        <py:for each="file in release_svn">
-        <li>
-        <a href="${file.url}#!md5!${file.md5}">${file.name}</a>
-        <div class="filedetails">
-            ${file.humansize}, MD5: ${file.md5}
-        </div>
-        </li>
-        </py:for>
-    </ul> 
-
+	<table cellpadding="2">
+	  <tr>
+	  <th>File</th>
+	  <th>Size</th>
+	  <th>MD5 checksum</th>
+          </tr>
+            <py:for each="file in release_svn">
+	      <tr>
+	       <td><a href="${file.url}#!md5!${file.md5}">${file.name}</a></td>
+	       <td>${file.humansize}</td>
+	       <td>${file.md5}</td>
+	      </tr>
+            </py:for>
+        </table> 
 
     <p>
     More information about using subversion is available on <a

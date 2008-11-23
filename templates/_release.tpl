@@ -1,14 +1,20 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
         <p>Released ${release.date}, see <a href="${release.notes}">release notes</a> for details.</p>
         <p>${release.info}</p>
-        <ul class="dl">
+	<table cellpadding="2">
+	  <tr>
+	  <th>File</th>
+	  <th>Size</th>
+	  <th>MD5 checksum</th>
+	  <th>Downloads</th>
+          </tr>
             <py:for each="file in release.files">
-            <li>
-            <a href="${file.url}#!md5!${file.md5}">${file.name}</a>
-            <div class="filedetails">
-                ${file.humansize}, ${file.dlcount} downloads, MD5: ${file.md5}
-            </div>
-            </li>
+	      <tr>
+	       <td><a href="${file.url}#!md5!${file.md5}">${file.name}</a></td>
+	       <td>${file.humansize}</td>
+	       <td>${file.md5}</td>
+	       <td align="right">${file.dlcount}</td>
+	      </tr>
             </py:for>
-        </ul> 
+        </table> 
 </html>
