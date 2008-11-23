@@ -31,7 +31,7 @@
 <![CDATA[
 <p>${issue.summary}</p>
 
-<p py:if="issue.cve"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=${issue.cve}">${issue.cve}</a></p>
+<p><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=${issue.cve}">${issue.cve}</a></p>
 ]]>
 </description>
 </item>
