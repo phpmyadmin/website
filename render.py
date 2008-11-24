@@ -434,7 +434,7 @@ class SFGenerator:
         '''
         Fills in donations based on donations feed.
         '''
-        helper.log.dbg('Processing news feed...')
+        helper.log.dbg('Processing donations feed...')
         for entry in feed.entries:
             item = {}
             item['link'] = entry.link
