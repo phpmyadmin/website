@@ -377,3 +377,8 @@ ul.select li a {
     display: block;
 	padding: 0.2em;
 }
+
+table.dllist td { 
+    padding: 2px;
+}
+

@@ -43,7 +43,7 @@
     href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
     </p>
 
-	<table cellpadding="2">
+	<table class="dllist">
 	  <tr>
 	  <th>File</th>
 	  <th>Size</th>
