@@ -32,7 +32,7 @@ function theme_load() {
 window.addEvent("domready", theme_load);
 
 function fader_autoload() {
-    if ($("fader").length == 0) return;
+    if ($("fader") == null) return;
 
     var f = new Fader('fader');
     f.start();
