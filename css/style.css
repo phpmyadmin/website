@@ -382,3 +382,10 @@ table.dllist td {
     padding: 2px;
 }
 
+td.size {
+    text-align: right;
+}
+
+td.count {
+    text-align: right;
+}

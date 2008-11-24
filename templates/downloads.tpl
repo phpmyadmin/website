@@ -43,20 +43,22 @@
     href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
     </p>
 
-	<table class="dllist">
-	  <tr>
-	  <th>File</th>
-	  <th>Size</th>
-	  <th>MD5 checksum</th>
-          </tr>
-            <py:for each="file in release_svn">
-	      <tr>
-	       <td><a href="${file.url}#!md5!${file.md5}">${file.name}</a></td>
-	       <td>${file.humansize}</td>
-	       <td>${file.md5}</td>
-	      </tr>
-            </py:for>
-        </table> 
+    <table class="dllist">
+    <thead>
+        <tr>
+            <th>File</th>
+            <th>Size</th>
+            <th>MD5 checksum</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr py:for="file in release_svn">
+            <td><a href="${file.url}#!md5!${file.md5}">${file.name}</a></td>
+            <td class="size">${file.humansize}</td>
+            <td>${file.md5}</td>
+        </tr>
+    </tbody>
+    </table> 
 
     <p>
     More information about using subversion is available on <a
