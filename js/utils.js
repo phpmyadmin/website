@@ -51,7 +51,7 @@ window.addEvent("domready", dl_hint);
 */
 
 var dl_match = /https?:\/\/prdownloads\.sourceforge\.net\/phpmyadmin\/(.*)\?download.*/;
-var notes_match = /https?:\/\/sourceforge\.net\/project\/shownotes.php?release_id=([0-9]*)/
+var notes_match = /https?:\/\/sourceforge\.net\/project\/shownotes.php\?release_id=([0-9]*)/
 
 /**
  * Returns tracking string for the URL.
