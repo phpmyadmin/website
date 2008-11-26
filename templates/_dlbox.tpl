@@ -4,7 +4,7 @@
 <span class="dlname"><a href="${release.notes}" title="Release notes">Download ${release.version}</a>:</span>
 <ul class="dllist">
 <py:for each="file in release.files"><py:if test="file.featured">
-    <li><a href="${file.url}#!md5!${file.md5}" title="Download ${file.ext} compressed release, ${file.humansize}">${file.ext}</a></li>
+    <li><a href="${file.url}#!md5!${file.md5}" title="Download ${file.ext} compressed release, ${file.humansize}" rel="quick-download">${file.ext}</a></li>
 </py:if></py:for>
 </ul> 
 

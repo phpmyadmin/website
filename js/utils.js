@@ -56,8 +56,11 @@ var notes_match = /https?:\/\/sourceforge\.net\/project\/shownotes.php\?release_
 /**
  * Returns tracking string for the URL.
  */
-function get_track_string(href) {
+function get_track_string(href, rel) {
     if (href.search(dl_match) != -1) {
+        if (rel == 'quick-download') {
+            pageTracker._trackPageview('/external/sf/quick-download/' + href.replace(dl_match, '$1'));
+        }
         return '/external/sf/download/' + href.replace(dl_match, '$1');
     }
     if (href.search(notes_match) != -1) {
@@ -110,7 +113,8 @@ function get_track_string(href) {
  */
 function onclick_callback(e) {
     var href = this.get('href');
-    var track = get_track_string(href);
+    var rel = this.get('rel');
+    var track = get_track_string(href, rel);
     pageTracker._trackPageview(track);
 }
 
