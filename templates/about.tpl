@@ -72,6 +72,40 @@ different project, which has been started in 2007 as a minimalistic
 alternative to <a href="http://www.phpmyadmin.net/">phpMyAdmin</a>.
 </p>
 
+<h2>Factoids</h2>
+
+<p>
+phpMyAdmin project currently has <a
+href="${links.developers}">${info.developers} developers</a> and its activity
+on SourceForge.net is currently ranked at ${info.activity}. Over the life of
+project on SourceForge.net, users have downloaded ${info.downloads} copies of
+phpMyAdmin, wrote ${info.forumposts} posts into <a
+href="${links.forums}">${info.forums} forums</a> and discussed various topics
+in <a href="${links.mailinglists}">${info.mailinglists} mailing lists</a>.
+</p>
+
+<h2>Tracker Statistics</h2>
+
+<table class="graph sortable" id="sorttable">
+<thead>
+<tr>
+    <th class="forward_sort">Tracker</th>
+    <th>Description</th>
+    <th>Open issues</th>
+    <th>Total issues</th>
+</tr>
+</thead>
+
+<tbody>
+<tr py:for="tracker in trackers">
+<td class="name"><a href="${tracker.link}">${tracker.name}</a></td>
+<td class="name">${tracker.description}</td>
+<td class="size">${tracker.open}</td>
+<td class="size">${tracker.total}</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 
 <xi:include href="_page.tpl" />

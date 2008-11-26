@@ -17,12 +17,7 @@
 <div class="floatbox">
 <h2>Trackers</h2>
 <ul>
-    <li><a href="http://sourceforge.net/tracker/?atid=377408&amp;group_id=23067">Bugs</a></li>
-    <li><a href="http://sourceforge.net/tracker/?atid=377411&amp;group_id=23067">Feature requests</a></li>
-    <li><a href="http://sourceforge.net/tracker/?atid=377410&amp;group_id=23067">Patches</a></li>
-    <li><a href="http://sourceforge.net/tracker/?atid=689412&amp;group_id=23067">Themes</a></li>
-    <li><a href="http://sourceforge.net/tracker/?atid=387645&amp;group_id=23067">Translations</a></li>
-    <li><a href="http://sourceforge.net/tracker/?atid=377409&amp;group_id=23067">Support requests</a></li>
+    <li py:for="tracker in trackers"><a href="${tracker.link}">${tracker.name}</a> - ${tracker.description}</li>
 </ul>
 </div>
 

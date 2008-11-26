@@ -92,6 +92,14 @@ SVN_SIZES = 'http://dl.cihar.com/phpMyAdmin/trunk/files.list'
 # Clean output before generating
 CLEAN_OUTPUT = True
 
+# RSS parsing
+SUMMARY_DEVS = re.compile('Developers on project: ([0-9]*)')
+SUMMARY_ACTIVITY = re.compile('Activity percentile \(last week\): ([0-9.]*%)')
+SUMMARY_DOWNLOADS = re.compile('Downloadable files: ([0-9]*) total downloads to date')
+SUMMARY_LISTS = re.compile('Mailing lists \(public\): ([0-9]*)')
+SUMMARY_FORUMS = re.compile('Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages')
+SUMMARY_TRACKER = re.compile('Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)')
+
 def copytree(src, dst):
     '''
     Trimmed down version of shutil.copytree. Recursively copies a directory
@@ -445,6 +453,50 @@ class SFGenerator:
             item['title'] = entry.title
             self.data['donations'].append(item)
 
+    def process_summary(self, feed):
+        '''
+        Reads summary feed and fills some useful information into data.
+        '''
+        helper.log.dbg('Processing summary feed...')
+        data = {}
+        links = {}
+        trackers = []
+        for entry in feed.entries:
+            if entry.title[:22] == 'Developers on project:':
+                m = SUMMARY_DEVS.match(entry.title)
+                data['developers'] = m.group(1)
+                links['developers'] = entry.link
+            elif entry.title[:19] == 'Activity percentile':
+                m = SUMMARY_ACTIVITY.match(entry.title)
+                data['activity'] = m.group(1)
+                links['activity'] = entry.link
+            elif entry.title[:19] == 'Downloadable files:':
+                m = SUMMARY_DOWNLOADS.match(entry.title)
+                data['downloads'] = m.group(1)
+                links['downloads'] = entry.link
+            elif entry.title[:13] == 'Mailing lists':
+                m = SUMMARY_LISTS.match(entry.title)
+                data['mailinglists'] = m.group(1)
+                links['mailinglists'] = entry.link
+            elif entry.title[:17] == 'Discussion forums':
+                m = SUMMARY_FORUMS.match(entry.title)
+                data['forums'] = m.group(1)
+                data['forumposts'] = m.group(2)
+                links['forums'] = entry.link
+            elif entry.title[:8] == 'Tracker:':
+                m = SUMMARY_TRACKER.match(entry.title)
+                trackers.append({
+                    'name': m.group(1),
+                    'open': m.group(2),
+                    'total': m.group(3),
+                    'description': entry.summary[21:],
+                    'link': entry.link,
+                })
+        self.data['info'] = data
+        self.data['links'] = links
+        trackers.sort(key = lambda x: x['name'])
+        self.data['trackers'] = trackers
+
     def get_menu(self, active):
         '''
         Returns list of menu entries with marked active one.
@@ -733,6 +785,9 @@ class SFGenerator:
 
         rss_news = self.feeds.load('news', PROJECT_NEWS_RSS)
         self.process_news(rss_news)
+
+        rss_summary = self.feeds.load('summary', PROJECT_SUMMARY_RSS)
+        self.process_summary(rss_summary)
 
         rss_donations = self.feeds.load('donations', DONATIONS_RSS)
         self.process_donations(rss_donations)
