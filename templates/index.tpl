@@ -67,6 +67,12 @@ every year wins the SourceForge.net Community Choice Awards as &quot;Best Tool o
 Utility for SysAdmins&quot;.
 </p>
 
+<p>
+phpMyAdmin is more than ten years old project with stable and flexible code
+base base, to find out more about the project and it's history, see <a
+href="${base_url}about.${file_ext}">seprate page</a>.
+</p>
+
 <div class="floatbox">
     <h2>Features</h2>
     <ul>

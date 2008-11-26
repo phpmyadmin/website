@@ -217,6 +217,7 @@ p {
 
 ul, dl {
     margin: 1em;
+    max-width: 70em;
 }
 
 ul ul {
