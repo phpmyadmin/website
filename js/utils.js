@@ -66,6 +66,9 @@ function get_track_string(href, rel) {
     if (href.search(notes_match) != -1) {
         return '/external/sf/release-notes/' + href.replace(notes_match, '$1');
     }
+    if (href.indexOf('/sourceforge.net/project/showfiles.php?group_id=23067') != -1) {
+        return '/external/sf/downloads';
+    }
     if (href.indexOf('/sourceforge.net/donate/index.php?group_id=23067') != -1) {
         return '/external/sf/donate';
     }
