@@ -42,8 +42,8 @@ AWARDS = [
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
 <p class="award">Most Likely to Be the Next $1B Acquisition (winner)</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photo': 'sf_cca_2008_trophies.jpg',
+        'phototext': 'The two trophies',
     },
     {
         'image': 'sf_cca_2007_sysadmin.gif',
@@ -54,8 +54,8 @@ AWARDS = [
 <p class="award">Best Tool or Utility for Developers (nominated)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photo': 'sf_cca_2007_trophy.jpg',
+        'phototext': 'The trophy',
     },
     {
         'image': '2006-trophees-logo.png',
