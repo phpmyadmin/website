@@ -54,7 +54,7 @@ development in 2001.
 <li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.11.0">2.11.0</a> (August 22, 2007): Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers handling large number of databases/tables.</li>
 
 <li><a href="http://wiki.cihar.com/pma/phpMyAdmin_3.0.0">3.0.0</a> (September 27, 2008): Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_3.1.0">3.1.0</a> (near future): Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
+<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_3.1.0">3.1.0</a> (November 28, 2008): Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
 </ul>
 
 
