@@ -9,7 +9,7 @@
     <xi:include href="_littleboxes.tpl" />
 
     <py:for each="item in news">
-        <h2><a name="${item.anchor}"></a>${item.title}</h2>
+        <h2><a id="${item.anchor}"></a>${item.title}</h2>
         <p class="date">${item.date}</p>
         <p>${Markup(item.text)}</p>
 <!--!   Removed because it was misused for support questions and spam.

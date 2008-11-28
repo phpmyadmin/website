@@ -76,7 +76,7 @@
     <xi:include href="_release.tpl" />
     </py:for>
 
-    <h2><a name="distributions"></a>Distributions</h2>
+    <h2><a id="distributions"></a>Distributions</h2>
     <h3>Debian</h3>
     <p>
         Debian's package repositories include a phpMyAdmin package, but be aware
