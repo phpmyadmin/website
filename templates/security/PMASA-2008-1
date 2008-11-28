@@ -58,9 +58,7 @@ Upgrade to phpMyAdmin 2.11.5 or newer, where $$_REQUEST is rebuilt to not contai
 href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/branches/QA_2_11/phpMyAdmin/libraries/common.inc.php?r1=11134&amp;r2=11135&amp;view=patch">The patch for the QA_2_11 branch.</a>
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2008-1149
-</py:def>
+<py:def function="announcement_cve">CVE-2008-1149</py:def>
 
 
 <xi:include href="_page.tpl" />

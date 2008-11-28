@@ -41,9 +41,7 @@ Upgrade to phpMyAdmin 2.11.9.1 or newer.
 <a href="http://fd.the-wildcat.de/pma_e36a091q11.php">http://fd.the-wildcat.de/pma_e36a091q11.php</a>
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2008-4096
-</py:def>
+<py:def function="announcement_cve">CVE-2008-4096</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

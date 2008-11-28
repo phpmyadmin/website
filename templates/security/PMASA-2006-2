@@ -40,9 +40,7 @@ Upgrade to phpMyAdmin 2.8.0.4.
 We wish to thank Sven Vetsch/Disenchant for informing us in a responsible manner. His site is <a href="http://www.disenchant.ch">http://www.disenchant.ch</a>.
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2006-2031
-</py:def>
+<py:def function="announcement_cve">CVE-2006-2031</py:def>
 
 
 

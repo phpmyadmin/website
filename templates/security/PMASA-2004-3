@@ -66,9 +66,7 @@ We strongly advise everyone to upgrade to the next version of phpMyAdmin, which 
 http://www.netvigilance.com/html/advisory0005.htm</a>
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2004-1055
-</py:def>
+<py:def function="announcement_cve">CVE-2004-1055</py:def>
 
 
 <xi:include href="_page.tpl" />

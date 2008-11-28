@@ -31,9 +31,7 @@ All previous versions that support theming are affected.
 Upgrade to phpMyAdmin 2.8.0.3 for the fixes in the two included themes. New versions of the custom themes will be posted on our themes download page.
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2006-1678
-</py:def>
+<py:def function="announcement_cve">CVE-2006-1678</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

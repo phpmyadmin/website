@@ -40,9 +40,7 @@ Upgrade to phpMyAdmin 2.6.2-rc1 or newer.
 http://www.arrelnet.com/advisories/adv20050403.html</a>
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2005-0992
-</py:def>
+<py:def function="announcement_cve">CVE-2005-0992</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

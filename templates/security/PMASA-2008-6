@@ -41,9 +41,7 @@ These advisories are available from the reporter:<br />
 <a href="http://yehg.net/lab/pr0js/advisories/XSS_inPhpMyAdmin2.11.7.pdf">http://yehg.net/lab/pr0js/advisories/XSS_inPhpMyAdmin2.11.7.pdf</a>
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2008-3457
-</py:def>
+<py:def function="announcement_cve">CVE-2008-3457</py:def>
 
 
 <xi:include href="_page.tpl" />

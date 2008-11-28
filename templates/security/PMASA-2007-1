@@ -39,9 +39,7 @@ Upgrade to phpMyAdmin 2.9.2 or newer.
 <a href="http://www.securityfocus.com/archive/1/453432">http://www.securityfocus.com/archive/1/453432</a>
 </py:def>
 
-<py:def function="announcement_cve">
-CVE-2006-6374
-</py:def>
+<py:def function="announcement_cve">CVE-2006-6374</py:def>
 
 <xi:include href="_page.tpl" />
 </html>
