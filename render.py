@@ -330,7 +330,9 @@ class SFGenerator:
 
         for beta in outbetaversions.keys():
             try:
-                if releases[outversions[beta]]['version'] > releases[outbetaversions[beta]]['version']:
+                stable_rel = releases[outversions[beta]]['version']
+                beta_rel = releases[outbetaversions[beta]]['version'].split('-')[0]
+                if stable_rel > beta_rel or stable_rel == beta_rel:
                     helper.log.dbg('Old beta: %s' % releases[outbetaversions[beta]]['version'])
                     del outbetaversions[beta]
             except KeyError:
