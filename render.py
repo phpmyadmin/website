@@ -52,6 +52,7 @@ PROJECT_NAME = 'phpmyadmin'
 # Filtering
 FILES_MARK = 'all-languages.'
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
+MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
 COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
@@ -311,6 +312,7 @@ class SFGenerator:
         outversions = {}
         outbetaversions = {}
 
+        # Split up versions to branches
         for idx in xrange(len(releases)):
             version = releases[idx]
             branch = BRANCH_REGEXP.match(version['version']).group(1)
@@ -328,6 +330,7 @@ class SFGenerator:
                 except KeyError:
                     outversions[branch] = idx
 
+        # Check for old beta versions
         for beta in outbetaversions.keys():
             try:
                 stable_rel = releases[outversions[beta]]['version']
@@ -337,6 +340,17 @@ class SFGenerator:
                     del outbetaversions[beta]
             except KeyError:
                 pass
+
+        # Check for old stable releases
+        for stable in outversions.keys():
+            version = releases[outversions[stable]]['version']
+            major_branch = MAJOR_BRANCH_REGEXP.match(version).group(1)
+            for check in outversions.keys():
+                check_version = releases[outversions[check]]['version']
+                if major_branch == check_version[:len(major_branch)] and version < check_version:
+                    helper.log.dbg('Old release: %s' % version)
+                    del outversions[stable]
+                    continue
 
         featured = max(outversions.keys())
         featured_id = outversions[featured]
