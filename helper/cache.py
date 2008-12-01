@@ -182,7 +182,7 @@ class SimpleSVNCache(Cache):
 
         try:
             base_rev = pysvn.Revision(pysvn.opt_revision_kind.number, base)
-            self.dbg('svn log %s' % fullname)
+            self.dbg('svn log -r %d %s' % (base, fullname))
             svnlog = self._svn.log(fullname, revision_end = base_rev)
             newlog = [{
                 'message': x['message'],
