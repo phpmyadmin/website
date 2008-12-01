@@ -122,6 +122,7 @@ div.tip {
 ul#footer {
     padding: 0;
     margin: 0;
+    max-width: none;
 }
 
 #footer li {
@@ -188,7 +189,7 @@ div.themeimg {
 div.theme {
     float: left;
     width: 70em;
-    max-width: 100%;
+    max-width: none;
     border: 1px solid #7584b3;
     margin: 0.2em;
     padding: 0.2em;
