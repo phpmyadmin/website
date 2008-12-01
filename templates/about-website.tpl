@@ -22,6 +22,14 @@ Site design and logic has been created by <a href="http://cihar.com/">Michal
 <a href="http://sourceforge.net">SourceForge.net</a>.
 </p>
 
+<h2>About phpMyAdmin</h2>
+
+<p>
+There is a dedicated page to <a
+href="${base_url}about.${file_ext}">information about phpMyAdmin and it's
+history</a>.
+</p>
+
 <h2>Syndication</h2>
 
 <p>Following RSS feeds are available for syndication:</p>
