@@ -36,6 +36,7 @@
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}">Sitemap</a></li>
+    <li><a href="${base_url}search.${file_ext}">Search</a></li>
     <li><a href="${base_url}about-website.${file_ext}">About</a></li>
     <li class="last">Valid <a href="http://validator.w3.org/check/referer">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></li>
     <li class="logo"><a href="http://sourceforge.net"><img
