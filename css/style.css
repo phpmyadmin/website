@@ -67,11 +67,11 @@ img {
 	border: 0px;
 }
 
-h2 {
+h2, h2 a {
 	color: #727e0a;
 }
 
-h3 {
+h3, h3 a {
 	color: #727e0a;
 }
 
