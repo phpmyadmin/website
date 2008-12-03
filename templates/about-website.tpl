@@ -35,7 +35,7 @@ href="${base_url}about.${file_ext}">information about phpMyAdmin and it's
 history</a>.
 </p>
 
-<h2>Syndication</h2>
+<h2 id="syndicate">Syndication</h2>
 
 <p>Following RSS feeds are available for syndication:</p>
 

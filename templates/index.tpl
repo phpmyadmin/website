@@ -70,7 +70,7 @@ Utility for SysAdmins&quot;.
 <p>
 phpMyAdmin is more than ten years old project with stable and flexible code
 base base, to find out more about the project and it's history, see <a
-href="${base_url}about.${file_ext}">seprate page</a>.
+href="${base_url}about.${file_ext}">separate page</a>.
 </p>
 
 <div class="floatbox">
