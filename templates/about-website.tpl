@@ -17,7 +17,7 @@ information how to access it).
 </p>
 
 <p>
-Site design and logic has been created by <a href="http://cihar.com/">Michal
+Site design and logic has been created by <a href="${base_url}team.${file_ext}#michal">Michal
 Čihař</a> and it is hosted on 
 <a href="http://sourceforge.net">SourceForge.net</a>.
 </p>
