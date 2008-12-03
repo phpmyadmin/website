@@ -25,7 +25,7 @@ mailing list</a> (<a href="https://lists.sourceforge.net/mailman/listinfo/phpmya
 
 <img class="head photo" src="${server}${base_url}images/heads/marc.png" alt="Photo of Marc Delisle" />
 <p>
-Marc took over the phpMyAdmin project from founder Tobias Ratschiller and
+Marc took over the <span class="org">phpMyAdmin</span> project from founder Tobias Ratschiller and
 started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux
 in 2001. 
 </p>
@@ -39,7 +39,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Québe
 <h3 class="fn">Michal Čihař</h3>
 <img class="head photo" src="${server}${base_url}images/heads/nijel.png" alt="Photo of Michal Čihař" />
 <p>
-Michal made his first contribution to phpMyAdmin in 2001 by updating the Czech
+Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
 and import handling to support plugins.
 </p>
@@ -53,7 +53,7 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 <h3 class="fn">Sebastian Mendel</h3>
 <img class="head photo" src="${server}${base_url}images/heads/sebastian.png" alt="Photo of Sebastian Mendel" />
 <p>
-Sebastian has been a member of the phpMyAdmin development team since 2005. He did major
+Sebastian has been a member of the <span class="org">phpMyAdmin</span> development team since 2005. He did major
 work on improving user interface and introduced the use of classes in the phpMyAdmin
 code.
 </p>
