@@ -8,14 +8,14 @@
 
     <xi:include href="_littleboxes.tpl" />
 
-    <py:for each="item in news">
-        <h2><a id="${item.anchor}"></a>${item.title}</h2>
-        <p class="date">${item.date}</p>
-        <p>${Markup(item.text)}</p>
+<div class="hentry hslice" id="${item.anchor}" py:for="item in news">
+        <h2 class="entry-title"><a rel="bookmark" href="${item.comments_link}">${item.title}</a></h2>
+        <p class="date"><abbr class="published" title="${item.date.w3cdtf()}">${item.date}</abbr></p>
+        <p class="entry-content">${Markup(item.text)}</p>
 <!--!   Removed because it was misused for support questions and spam.
         <p class="comments"><a href="${item.comments_link}">${item.comments_number} comments</a></p>
 -->
-    </py:for>
+</div>
 
     <p>
     Older news are available at <a href="https://sourceforge.net/news/?group_id=23067">news archive at SourceForge</a>.
