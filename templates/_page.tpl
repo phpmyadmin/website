@@ -22,7 +22,7 @@
  </head>
  <body>
   <div id="header">
-   <h1><a href="${base_url}">php<span class="myadmin">MyAdmin</span></a></h1>
+   <h1><a href="${base_url}" rel="home">php<span class="myadmin">MyAdmin</span></a></h1>
     <xi:include href="_menu.tpl" />
   </div>
 
@@ -35,7 +35,7 @@
     <li>Copyright &copy; 2003 - 2008 <span class="vcard"><a class="url org fn">href="${base_url}team.${file_ext}">phpMyAdmin devel team</a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment">Donate</a></li>
-    <li><a href="${base_url}sitemap.${file_ext}">Sitemap</a></li>
+    <li><a href="${base_url}sitemap.${file_ext}" rel="contents">Sitemap</a></li>
     <li><a href="${base_url}search.${file_ext}">Search</a></li>
     <li><a href="${base_url}about-website.${file_ext}">About</a></li>
     <li class="last">Valid <a href="http://validator.w3.org/check/referer">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></li>
