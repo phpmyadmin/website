@@ -14,9 +14,16 @@ it at various conferences. You can find more about the project and it's
 history on <a href="${base_url}about.${file_ext}">seprate page</a>.
 </p>
 
-<div class="floatbox">
-<h3>Marc Delisle</h3>
-<img class="head" src="${base_url}images/heads/marc.png" alt="Marc Delisle" />
+<p>
+You can contact team on <a href="mailto:phpmyadmin-devel@lists.sourceforge.net">development 
+mailing list</a> (<a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">subscription and archives</a>).
+</p>
+
+<div class="floatbox vcard" id="marc">
+
+<h3 class="fn">Marc Delisle</h3>
+
+<img class="head photo" src="${server}${base_url}images/heads/marc.png" alt="Photo of Marc Delisle" />
 <p>
 Marc took over the phpMyAdmin project from founder Tobias Ratschiller and
 started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux
@@ -28,9 +35,9 @@ code to the project. He lives in Québec, Canada.
 </p>
 </div>
 
-<div class="floatbox">
-<h3>Michal Čihař</h3>
-<img class="head" src="${base_url}images/heads/nijel.png" alt="Michal Čihař" />
+<div class="floatbox vcard" id="michal">
+<h3 class="fn">Michal Čihař</h3>
+<img class="head photo" src="${server}${base_url}images/heads/nijel.png" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to phpMyAdmin in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
@@ -42,9 +49,9 @@ services. He lives in Prague, Czech Republic.
 </p>
 </div>
 
-<div class="floatbox">
-<h3>Sebastian Mendel</h3>
-<img class="head" src="${base_url}images/heads/sebastian.png" alt="Sebastian Mendel" />
+<div class="floatbox vcard" id="sebastian">
+<h3 class="fn">Sebastian Mendel</h3>
+<img class="head photo" src="${server}${base_url}images/heads/sebastian.png" alt="Photo of Sebastian Mendel" />
 <p>
 Sebastian has been a member of the phpMyAdmin development team since 2005. He did major
 work on improving user interface and introduced the use of classes in the phpMyAdmin
