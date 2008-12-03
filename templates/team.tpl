@@ -31,7 +31,7 @@ in 2001.
 </p>
 <p>
 He is currently the project administrator and he has contributed the largest amount of
-code to the project. He lives in Québec, Canada.
+code to the project. He lives in <span class="adr"><span class="locality">Québec</span>, <span class="country-name">Canada</span></span>.
 </p>
 </div>
 
@@ -45,7 +45,7 @@ and import handling to support plugins.
 </p>
 <p>
 He currently maintains the project web site, demo server, wiki and other useful
-services. He lives in Prague, Czech Republic.
+services. He lives in <span class="adr"><span class="locality">Prague</span>, <span class="country-name">Czech Republic</span></span>.
 </p>
 </div>
 
@@ -58,7 +58,7 @@ work on improving user interface and introduced the use of classes in the phpMyA
 code.
 </p>
 <p>
-He lives in Leipzig, Germany.
+He lives in <span class="adr"><span class="locality">Leipzig</span>, <span class="country-name">Germany</span></span>.
 </p>
 </div>
 
