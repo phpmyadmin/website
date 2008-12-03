@@ -32,7 +32,7 @@
   </content>
 
   <ul id="footer">
-    <li>Copyright &copy; 2003 - 2008 <span class="vcard"><a class="url org fn">href="${base_url}team.${file_ext}">phpMyAdmin devel team</a></span></li>
+    <li>Copyright &copy; 2003 - 2008 <span class="vcard"><a class="url org fn" href="${server}${base_url}team.${file_ext}">phpMyAdmin devel team</a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}" rel="contents">Sitemap</a></li>
