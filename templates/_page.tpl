@@ -3,7 +3,7 @@
       xmlns:py="http://genshi.edgewall.org/"
       xmlns:xi="http://www.w3.org/2001/XInclude">
 <!--! This is main page template used for all other pages. -->
- <head>
+ <head profile="http://purl.org/uF/2008/03/ http://purl.org/uF/hAtom/0.1/">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
   <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" title="${page_rss_title()}"/></py:if>
@@ -32,7 +32,7 @@
   </content>
 
   <ul id="footer">
-    <li>Copyright &copy; 2003 - 2008 <a href="${base_url}team.${file_ext}">phpMyAdmin devel team</a></li>
+    <li>Copyright &copy; 2003 - 2008 <span class="vcard"><a class="url org fn">href="${base_url}team.${file_ext}">phpMyAdmin devel team</a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}">Sitemap</a></li>
