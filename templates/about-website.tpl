@@ -22,6 +22,11 @@ Site design and logic has been created by <a href="http://cihar.com/">Michal
 <a href="http://sourceforge.net">SourceForge.net</a>.
 </p>
 
+<p>
+Site should be valid XHTML and CSS, where it makes sense, we try to use 
+<a href="http://microformats.org/">Microformats</a>.
+</p>
+
 <h2>About phpMyAdmin</h2>
 
 <p>
