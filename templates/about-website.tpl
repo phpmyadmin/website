@@ -24,7 +24,8 @@ Site design and logic has been created by <a href="${base_url}team.${file_ext}#m
 
 <p>
 Site should be valid XHTML and CSS, where it makes sense, we try to use 
-<a href="http://microformats.org/">Microformats</a>.
+<a href="http://microformats.org/">Microformats</a>. We also try to make
+website <a href="http://www.w3.org/WAI/WCAG1AAA-Conformance">accessible</a>.
 </p>
 
 <h2>About phpMyAdmin</h2>
