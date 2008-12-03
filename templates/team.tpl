@@ -47,6 +47,7 @@ and import handling to support plugins.
 He currently maintains the project web site, demo server, wiki and other useful
 services. He lives in <span class="adr"><span class="locality">Prague</span>, <span class="country-name">Czech Republic</span></span>.
 </p>
+<p>Contact options: <a class="url" href="http://cihar.com">website</a>, <a class="url" href="xmpp:michal@cihar.com">jabber</a>, <a class="email" href="mailto:michal@cihar.com">email</a>.</p>
 </div>
 
 <div class="floatbox vcard" id="sebastian">
