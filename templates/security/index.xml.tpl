@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/css" href="http://blog.cihar.com/styles/feed.css"?>
+<?xml-stylesheet type="text/css" href="http://www.phpmyadmin.net/home_page/css/feed.css"?>
 <rss version="2.0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:admin="http://webns.net/mvcb/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:py="http://genshi.edgewall.org/">
 <channel>
 <atom:link href="${rss_security}" rel="self" type="application/rss+xml" />
