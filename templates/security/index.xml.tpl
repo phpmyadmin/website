@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE rdf:RDF
-[
-<!ENTITY % HTMLlat1 PUBLIC
- "-//W3C//ENTITIES Latin 1 for XHTML//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent">
-]>
-<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:admin="http://webns.net/mvcb/" xmlns:py="http://genshi.edgewall.org/">
-<channel rdf:about="http://www.phpmyadmin.net/security/">
+<?xml-stylesheet type="text/css" href="http://blog.cihar.com/styles/feed.css"?>
+<rss version="2.0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:admin="http://webns.net/mvcb/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:py="http://genshi.edgewall.org/">
+<channel>
+<atom:link href="${rss_security}" rel="self" type="application/rss+xml" />
 <title>phpMyAdmin security announcements</title>
 <link>http://www.phpmyadmin.net/security/</link>
 <description>phpMyAdmin security announcements</description>
@@ -14,14 +10,9 @@
 <dc:creator>phpMyAdmin devel team</dc:creator>
 <dc:date>${generated.w3cdtf()}</dc:date>
 <admin:generatorAgent rdf:resource="${server}" />
-<items>
-<rdf:Seq>
-    <rdf:li py:for="issue in topissues" rdf:resource="${issue.fulllink}" />
-</rdf:Seq>
-</items>
-</channel>
 
-<item  py:for="issue in topissues" rdf:about="${issue.fulllink}">
+<item  py:for="issue in topissues">
+<guid>${issue.fulllink}</guid>
 <link>${issue.fulllink}</link>
 <title>${issue.name}</title>
 <dc:date>${issue.date.w3cdtf()}</dc:date>
@@ -35,5 +26,5 @@
 ]]>
 </description>
 </item>
-
-</rdf:RDF>
+</channel>
+</rss>
