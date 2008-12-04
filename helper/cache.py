@@ -257,5 +257,5 @@ class SVNCache(SimpleSVNCache):
                 self.dbg('svn up %s' % self._url)
                 self._svn.update(self._wc)
             except pysvn.ClientError:
-                traceback.print_last()
+                traceback.print_exc()
             self._updated = True
