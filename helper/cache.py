@@ -78,7 +78,13 @@ class Cache(object):
         filename = self.get_name(name)
         if self.check_timeout(filename):
             self.dbg('Using cache for %s!' % name)
-            return cPickle.load(open(filename, 'r'))
+            try:
+                return cPickle.load(open(filename, 'r'))
+            except TypeError:
+                # Cache can not be unpickled
+                helper.log.warn('Deleting cache for %s!' % name)
+                os.unlink(filename)
+                raise NoCache()
         raise NoCache()
 
     def force_get(self, name):
