@@ -110,27 +110,6 @@ class Cache(object):
         filename = self.get_name(name)
         cPickle.dump(data, open(filename, 'w'))
 
-class FeedCache(Cache):
-    '''
-    Feed caching class.
-    '''
-    def __init__(self, timeout = CACHE_TIME):
-        super(FeedCache, self).__init__(timeout)
-
-    def load(self, name, url):
-        self.dbg('Downloading and parsing %s feed...' % name)
-        self.dbg('URL: %s' % url)
-        cache = 'feed-%s' % name
-        try:
-            result = self.get(cache)
-        except NoCache:
-            result = feedparser.parse(url)
-            if result.bozo == 1:
-                self.warn('Feed %s is invalid: %s' % (url, str(result.bozo_exception)))
-                raise result.bozo_exception
-            self.set(cache, result)
-        return result
-
 class URLCache(Cache):
     '''
     URL caching class.
@@ -146,6 +125,33 @@ class URLCache(Cache):
         except NoCache:
             result = urllib.urlopen(url).read()
             self.set(cache, result)
+        return result
+
+class FeedCache(URLCache):
+    '''
+    Feed caching class.
+    '''
+    def __init__(self, timeout = CACHE_TIME):
+        super(FeedCache, self).__init__(timeout)
+
+    def load(self, name, url):
+        self.dbg('Downloading and parsing %s feed...' % name)
+        self.dbg('URL: %s' % url)
+        cache = 'feed-%s' % name
+        try:
+            result = self.get(cache)
+        except NoCache:
+            data = super(FeedCache, self).load(url)
+            result = feedparser.parse(data.strip())
+            if result.bozo == 1:
+                self.warn('Feed %s is invalid: %s' % (url, str(result.bozo_exception)))
+                try:
+                    result = self.force_get(cache)
+                    self.log('Using old cached version for %s' % cache)
+                except:
+                    raise result.bozo_exception
+            else:
+                self.set(cache, result)
         return result
 
 class SimpleSVNCache(Cache):
