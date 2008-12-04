@@ -71,6 +71,12 @@ class Cache(object):
         '''
         helper.log.dbg(message, 'cache')
 
+    def warn(self, message):
+        '''
+        Shows a warning.
+        '''
+        helper.log.warn(message)
+
     def get(self, name):
         '''
         Loads cache if it is available and valid, raises exception otherwise.
@@ -82,7 +88,7 @@ class Cache(object):
                 return cPickle.load(open(filename, 'r'))
             except TypeError:
                 # Cache can not be unpickled
-                helper.log.warn('Deleting cache for %s!' % name)
+                self.warn('Deleting cache for %s!' % name)
                 os.unlink(filename)
                 raise NoCache()
         raise NoCache()
@@ -119,6 +125,9 @@ class FeedCache(Cache):
             result = self.get(cache)
         except NoCache:
             result = feedparser.parse(url)
+            if result.bozo == 1:
+                self.warn('Feed %s is invalid: %s' % (url, str(result.bozo_exception)))
+                raise result.bozo_exception
             self.set(cache, result)
         return result
 
