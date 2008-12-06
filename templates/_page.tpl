@@ -34,10 +34,10 @@
   <ul id="footer">
     <li>Copyright &copy; 2003 - 2008 <span class="vcard"><a class="url org fn" href="${server}${base_url}team.${file_ext}">phpMyAdmin devel team</a><a href="mailto:phpmyadmin-devel@lists.sourceforge.net" class="email"></a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
-    <li><a href="${base_url}donate.${file_ext}" rel="payment">Donate</a></li>
+    <li><a href="${base_url}donate.${file_ext}" rel="payment" title="Support phpMyAdmin by donating money!">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}" rel="contents">Sitemap</a></li>
-    <li><a href="${base_url}search.${file_ext}">Search</a></li>
-    <li><a href="${base_url}about-website.${file_ext}">About</a></li>
+    <li><a href="${base_url}search.${file_ext}" title="Search for phpMyAdmin related questions">Search</a></li>
+    <li><a href="${base_url}about-website.${file_ext}" title="Information about website">About</a></li>
     <li class="last">Valid <a href="http://validator.w3.org/check/referer">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></li>
     <li class="logo"><a href="http://sourceforge.net"><img
     src="http://sflogo.sourceforge.net/sflogo.php?group_id=23067&amp;type=1"
