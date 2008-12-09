@@ -599,8 +599,8 @@ class SFGenerator:
         '''
         Fills in issues and topissues with security issues information.
         '''
-        issues = glob.glob('templates/security/PMASA*')
-        issues.sort(reverse = True)
+        issues = glob.glob('templates/security/PMASA-*')
+        issues.sort(key = lambda x: int(x[24:29]) * 100 - int(x[30:]))
         for issue in issues:
             data = XML(open(issue, 'r').read())
             name = os.path.basename(issue)
