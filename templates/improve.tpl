@@ -43,7 +43,7 @@ creating or debugging some features.
 For storing our code we use <a href="http://subversion.tigris.org/">Subversion</a>.
 If you don't know it, you can get some basic facts in <a
 href="http://en.wikipedia.org/wiki/Subversion_(software)">Wikipedia</a> or
-reference the comprehensive book <a href="http://svnbook.red-bean.com/">Version Control with
+reference in the comprehensive book <a href="http://svnbook.red-bean.com/">Version Control with
 Subversion</a>.
 </p>
 
@@ -110,9 +110,9 @@ and documented using <a href="http://www.phpdoc.org/">phpDocumentator</a>.
 <h2><a id="translate"></a>Translating</h2>
 
 <p>
-For localization, phpMyAdmin uses own simple localization system - each
-translation has own PHP file with all texts. All these files are encoded in
-UTF-8 (if you see another encoding, you're using old version). To translate,
+For localization, phpMyAdmin uses its own simple localization system - each
+translation has its own PHP file with all texts. All these files are encoded in
+UTF-8 (if you see another encoding, you're using an old version). To translate,
 you have to follow steps described in <a
 href="http://wiki.cihar.com/pma/FAQ_7.2">FAQ 7.2</a>.
 </p>
