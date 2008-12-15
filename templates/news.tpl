@@ -8,7 +8,7 @@
 
     <xi:include href="_littleboxes.tpl" />
 
-<div class="hentry hslice" id="${item.anchor}" py:for="item in news">
+<div class="hentry" id="${item.anchor}" py:for="item in news">
         <h2 class="entry-title"><a rel="bookmark" href="${item.comments_link}">${item.title}</a></h2>
         <p class="date"><abbr class="published" title="${item.date.w3cdtf()}">${item.date}</abbr></p>
         <p class="entry-content">${Markup(item.text)}</p>
