@@ -5,6 +5,9 @@
 <!--! This is main page template used for all other pages. -->
  <head profile="http://purl.org/uF/2008/03/ http://purl.org/uF/hAtom/0.1/">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="phpMyAdmin devel team" />
+  <meta name="copyright" content="Copyright &copy; 2003 - 2008 phpMyAdmin devel team" />
+  <link rel="copyright" href="${base_url}license.${file_ext}" />
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
   <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" title="${page_rss_title()}"/></py:if>
   <link rel="stylesheet" type="text/css" href="${base_url}css/style.css" />
