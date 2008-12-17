@@ -44,7 +44,7 @@
     <py:if test="defined('announcement_references') or defined('announcement_cve')">
     <h3>References</h3>
     <p py:if="defined('announcement_references')">${announcement_references()}</p>
-    <p py:if="defined('announcement_cve')"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=${announcement_cve()}">${announcement_cve()}</a></p>
+    <p py:if="defined('announcement_cve')"><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${announcement_cve()}">${announcement_cve()}</a></p>
     </py:if>
 
     <py:if test="defined('announcement_patches')">

@@ -22,7 +22,7 @@
 <![CDATA[
 <p>${issue.summary}</p>
 
-<p><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=${issue.cve}">${issue.cve}</a></p>
+<p><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${issue.cve}">${issue.cve}</a></p>
 ]]>
 </description>
 </item>
