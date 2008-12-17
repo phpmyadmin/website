@@ -22,7 +22,7 @@
   <script src="${base_url}js/utils.js" type="text/javascript"></script>
   <meta http-equiv="X-Generated" content="${generated}" />
   <meta name="verify-v1" content="3AM2eNj0zQ1Ao/N2eGE02S45V3p5KQxAyMIxdUJhtEQ=" />
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow" />
  </head>
  <body>
   <div id="header">
