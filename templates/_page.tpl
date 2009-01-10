@@ -14,6 +14,8 @@
   <link rel="stylesheet" type="text/css" href="${base_url}css/slimbox.css" media="screen" />
   <link rel="shortcut icon" href="${base_url}favicon.ico" type="image/x-icon" />
   <link rel="icon" href="${base_url}favicon.ico" type="image/x-icon" />
+  <link rel="vcs-svn" href="https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin" title="phpMyAdmin svn repository" />
+  <link rel="vcs-browse" href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/" title="phpMyAdmin svn repository browser" />
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
   <script src="${base_url}js/mootools-more.js" type="text/javascript"></script>
   <script src="${base_url}js/slimbox.js" type="text/javascript"></script>
