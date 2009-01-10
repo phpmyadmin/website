@@ -148,6 +148,12 @@ THEMES = {
         'info' : u'This theme was built for the XAMPP-Project.',
         'author': u'Michael Keck',
     },
+    'clearview3-3.1' : {
+        'name' : 'ClearView',
+        'support' : '3.0',
+        'info' : u'Very light and clear with white color and super Silk icons.',
+        'author': u'beholder',
+    },
 }
 TEMPLATE = {
     '' : {

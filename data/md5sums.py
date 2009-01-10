@@ -90,4 +90,5 @@ md5sum['very_small-2.9b.zip'] = 'bf3574af7f0d2ebfa1f2231958af7805'
 md5sum['xampp-2.11.zip'] = 'e52206eb84bfd9ffe0cfb3f01c6e3d12'
 md5sum['xp_dirty.zip'] = 'cb683263396c0eaf5d68989988c9a8f1'
 md5sum['xp_dirty-2.9a.zip'] = 'de4e070ca0a44ef75178116cdf8940b2'
+md5sum['clearview3-3.1.zip'] = '87c95b3579fa43b9f023bfc647e265b6'
 
