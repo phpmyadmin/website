@@ -26,6 +26,7 @@ import glob
 import shutil
 import csv
 import traceback
+import datetime
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -176,6 +177,7 @@ class SFGenerator:
             'generated': helper.date.fmtdatetime.utcnow(),
             'themecssversions': data.themes.CSSVERSIONS,
             'sfservers': data.sf.SERVERS,
+            'current_year': datetime.datetime.now().year,
             }
         self.loader = TemplateLoader([TEMPLATES])
         self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)

@@ -6,7 +6,7 @@
  <head profile="http://purl.org/uF/2008/03/ http://purl.org/uF/hAtom/0.1/">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="author" content="phpMyAdmin devel team" />
-  <meta name="copyright" content="Copyright &copy; 2003 - 2008 phpMyAdmin devel team" />
+  <meta name="copyright" content="Copyright &copy; 2003 - ${current_year} phpMyAdmin devel team" />
   <link rel="copyright" href="${base_url}license.${file_ext}" />
   <title>phpMyAdmin<py:if test="defined('page_title')"> - ${page_title()}</py:if></title>
   <py:if test="defined('page_rss')"><link rel="alternate" type="application/rss+xml" href="${page_rss()}" title="${page_rss_title()}"/></py:if>
@@ -38,7 +38,7 @@
   </content>
 
   <ul id="footer">
-    <li>Copyright &copy; 2003 - 2008 <span class="vcard"><a class="url org fn" href="${server}${base_url}team.${file_ext}">phpMyAdmin devel team</a><a href="mailto:phpmyadmin-devel@lists.sourceforge.net" class="email"></a></span></li>
+    <li>Copyright &copy; 2003 - ${current_year} <span class="vcard"><a class="url org fn" href="${server}${base_url}team.${file_ext}">phpMyAdmin devel team</a><a href="mailto:phpmyadmin-devel@lists.sourceforge.net" class="email"></a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment" title="Support phpMyAdmin by donating money!">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}" rel="contents">Sitemap</a></li>
