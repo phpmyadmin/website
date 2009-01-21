@@ -84,7 +84,7 @@ PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d
 PROJECT_SUMMARY_RSS = 'https://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_SVN_RSS = 'http://cia.vc/stats/project/phpmyadmin/.rss'
-PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s?download' % PROJECT_NAME
+PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
 TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
 
@@ -277,6 +277,8 @@ class SFGenerator:
             'ext': ext,
             'featured': featured,
             'size': size,
+            'size_k' : int(size) / 1024,
+            'size_m' : int(size) / (1024 * 1024),
             'humansize': fmt_bytes(size),
             'dlcount': dlcount,
             'md5': md5}
@@ -397,6 +399,8 @@ class SFGenerator:
             svn.append({
                 'name' : name,
                 'size' : int(size),
+                'size_k' : int(size) / 1024,
+                'size_m' : int(size) / (1024 * 1024),
                 'humansize' : fmt_bytes(size),
                 'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/trunk/%s' % name,
                 'md5' : md5s[name],

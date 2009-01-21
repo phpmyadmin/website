@@ -49,6 +49,11 @@ history</a>.
 <li><a href="${rss_svn}">phpMyAdmin SVN commits</a></li>
 </ul>
 
+<p>phpMyAdmin software information is available in following machine readable formats:</p>
+
+<ul>
+<li><a href="http://www.asp-shareware.org/pad/">PAD</a>: <a href="http://www.phpmyadmin.net/home_page/phpmyadmin.xml">http://www.phpmyadmin.net/home_page/phpmyadmin.xml</a></li>
+</ul>
 
 </div>
 
