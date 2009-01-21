@@ -12,6 +12,8 @@
   <screenshots rdf:resource="http://www.phpmyadmin.net/home_page/try.php" />
   <old-homepage rdf:resource="http://phpmyadmin.sourceforge.net/" />
   <old-homepage rdf:resource="http://phpmyadmin.sf.net/" />
+  <category rdf:resource="http://freshmeat.net/browse/253/"/>
+  <category rdf:resource="http://freshmeat.net/browse/68/"/>
   <maintainer>
     <foaf:Person>
       <foaf:name>Marc Delisle</foaf:name>
