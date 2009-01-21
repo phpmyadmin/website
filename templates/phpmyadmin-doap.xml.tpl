@@ -44,7 +44,7 @@
       <name>${file.name}</name>
       <created>${release.date}</created>
       <revision>${release.version}</revision>
-      <file-release rdf:resource="${file.url}#!md5!${file.md5}" />
+      <file-release rdf:resource="${file.url}" />
     </Version>
   </release>
   </py:for>
