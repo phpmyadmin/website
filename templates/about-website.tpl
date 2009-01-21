@@ -53,6 +53,7 @@ history</a>.
 
 <ul>
 <li><a href="http://www.asp-shareware.org/pad/">PAD</a>: <a href="http://www.phpmyadmin.net/home_page/phpmyadmin.xml">http://www.phpmyadmin.net/home_page/phpmyadmin.xml</a></li>
+<li><a href="http://trac.usefulinc.com/doap">DOAP</a>: <a href="http://www.phpmyadmin.net/home_page/phpmyadmin-doap.xml">http://www.phpmyadmin.net/home_page/phpmyadmin-doap.xml</a></li>
 </ul>
 
 </div>
