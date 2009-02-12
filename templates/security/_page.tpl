@@ -44,7 +44,16 @@
     <py:if test="defined('announcement_references') or defined('announcement_cve')">
     <h3>References</h3>
     <p py:if="defined('announcement_references')">${announcement_references()}</p>
-    <p py:if="defined('announcement_cve')"><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${announcement_cve()}">${announcement_cve()}</a></p>
+    <py:if test="defined('announcement_cve')">
+    <p>Assigned CVE ids:</p>
+    <ul>
+    <!--! This is a bit ugly expression and there must be better way to do
+    this, but I haven't found it. -->
+    <li py:for="cve in announcement_cve().next()[1].split(' ')">
+    <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${announcement_cve()}">${cve}</a>
+    </li>
+    </ul>
+    </py:if>
     </py:if>
 
     <py:if test="defined('announcement_patches')">
