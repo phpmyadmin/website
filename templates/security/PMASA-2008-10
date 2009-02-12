@@ -15,8 +15,8 @@ SQL injection through XSRF on several pages
 
 <py:def function="announcement_description">
 A logged-in user can be subject of SQL injection through cross site request
-forgery. Several scripts in phpMyAdmin are vulnerable and the attack can be
-made through <tt>table</tt> parameter.
+forgery. Several pages which use affected library in phpMyAdmin are vulnerable
+and the attack can be made through <tt>table</tt> parameter.  
 </py:def>
 
 
