@@ -49,7 +49,7 @@
     <!--! This is a bit ugly expression and there must be better way to do
     this, but I haven't found it. -->
     <py:for each="cve in announcement_cve().next()[1].split(' ')">
-    <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${announcement_cve()}">${cve}</a> 
+    <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${cve}">${cve}</a> 
     </py:for>
     </p>
     </py:if>
