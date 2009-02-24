@@ -68,8 +68,8 @@ Utility for SysAdmins&quot;.
 </p>
 
 <p>
-phpMyAdmin is more than ten years old project with stable and flexible code
-base base, to find out more about the project and it's history, see <a
+phpMyAdmin is a more than ten years old project with stable and flexible code
+base, to find out more about the project and its history see <a
 href="${base_url}about.${file_ext}">separate page</a>.
 </p>
 
