@@ -45,9 +45,7 @@
     <li><a href="${base_url}search.${file_ext}" title="Search for phpMyAdmin related questions">Search</a></li>
     <li><a href="${base_url}about-website.${file_ext}" title="Information about website">About</a></li>
     <li class="last">Valid <a href="http://validator.w3.org/check/referer">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></li>
-    <li class="logo"><a href="http://sourceforge.net"><img
-    src="http://sflogo.sourceforge.net/sflogo.php?group_id=23067&amp;type=1"
-    alt="SourceForge.net Logo" /></a></li>
+    <li class="logo"><a href="http://sourceforge.net/projects/phpmyadmin"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=23067&amp;type=10" width="80" height="15" border="0" alt="Get phpMyAdmin at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a></li>
   </ul>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
