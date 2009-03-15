@@ -20,6 +20,7 @@ etc), while you still have the ability to directly execute any SQL statement.
 
 <div class="bookbanner">
 <a href="${base_url}docs.${file_ext}#books" id="fader">
+<img src="images/books/pma_en_3.1_100x123.png" alt="phpMyAdmin book" />
 <img src="images/books/pma_en_100x123.png" alt="phpMyAdmin book" />
 <img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
 <img src="images/books/pma_de_90x122.jpg" alt="phpMyAdmin book" />

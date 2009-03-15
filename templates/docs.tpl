@@ -57,12 +57,26 @@
 
 <div class="floatbox book">
 
+<h3>Mastering phpMyAdmin 3.1 for Effective MySQL Management</h3>
+
+<a href="http://www.packtpub.com/mastering-phpmyadmin-3-1-fourth-edition/book"><img src="${base_url}images/books/pma_en_3.1_100x123.png" alt="Book cover" width="100" height="123" /></a>
+
+<p>
+I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 3.1. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
+</p>
+
+<p>For more information, please visit <a href="http://www.packtpub.com/mastering-phpmyadmin-3-1-fourth-edition/book">the book's site</a>.</p>
+<p class="signature">Marc Delisle</p>
+</div>
+
+<div class="floatbox book">
+
 <h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
 
 <a href="http://www.packtpub.com/phpmyadmin-3rd-edition/book"><img src="${base_url}images/books/pma_en_100x123.png" alt="Book cover" width="100" height="123" /></a>
 
 <p>
-I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 2.11. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
+This version of the book is up to date with the 2.11.x series. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
 </p>
 
 <p>For more information, please visit <a href="http://www.packtpub.com/phpmyadmin-3rd-edition/book">the book's site</a>.</p>
