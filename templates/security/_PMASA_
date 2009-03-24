@@ -43,7 +43,7 @@ PMASA-2008-?
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin ???? or newer or apply patch listed bellow.
+Upgrade to phpMyAdmin ???? or newer or apply patch listed below.
 </py:def>
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
