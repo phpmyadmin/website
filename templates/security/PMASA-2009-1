@@ -1,0 +1,48 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2009-1
+</py:def>
+
+<py:def function="announcement_date">
+2009-03-24
+</py:def>
+
+<py:def function="announcement_summary">
+HTTP Response Splitting and file inclusion vulnerability.
+</py:def>
+
+
+<py:def function="announcement_description">
+Blob streaming feature allowed attacker to include arbitrary files and inject
+HTTP headers using crafted URL parameters.
+</py:def>
+
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be critical.
+</py:def>
+
+<py:def function="announcement_affected">
+For 2.11.x: not affected as it lacks blob streaming support.<br />
+For 3.x: versions since 3.1.0.0 and before 3.1.3.1.<br />
+</py:def>
+
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.1.3.1 or apply patch listed below.
+</py:def>
+
+<py:def function="announcement_patches">
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=12303">Revision 12303</a> was applied on all branches.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Manuel Lopez Gallego (Luisyana) and Santiago Rodríguez Collazo, who
+have discovered this issue and reported it to us.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2009-XXXX</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
