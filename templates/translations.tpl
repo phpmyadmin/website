@@ -33,7 +33,7 @@ href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
 <tbody>
 <tr py:for="item in translations">
 <td class="name">
-<a href="http://wiki.cihar.com/pma/Language/${item.short}">${item.name}</a>
+<a href="http://wiki.phpmyadmin.net/pma/Language/${item.short}">${item.name}</a>
 </td>
 <td class="size">${item.translated}</td>
 <td class="size">${item.percent}%</td>

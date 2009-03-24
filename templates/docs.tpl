@@ -10,7 +10,7 @@
 <h3>Official Documentation</h3>
 <ul>
     <li><b><a href="http://www.phpmyadmin.net/documentation/">Main documentation</a></b> (from the development version)</li>
-    <li><b><a href="http://wiki.cihar.com/">Official phpMyAdmin wiki</a></b></li>
+    <li><b><a href="http://wiki.phpmyadmin.net/">Official phpMyAdmin wiki</a></b></li>
     <li><a href="http://www.phpmyadmin.net/documentation/#faq">Frequently Asked Questions</a></li>
     <li><a href="http://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
     <li><a href="${base_url}translations.${file_ext}">Translations overview</a></li>

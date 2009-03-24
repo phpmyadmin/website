@@ -31,30 +31,30 @@ development in 2001.
 <h2>Milestone releases</h2>
 
 <ul>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_0.9.0">0.9.0</a> (September 9, 1998): First internal release.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_1.1.0">1.1.0</a> (November 3, 1998): Added first confirmations for DROP commands.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_1.2.0">1.2.0</a> (November 29, 1998): Added possibility to import from text files.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_0.9.0">0.9.0</a> (September 9, 1998): First internal release.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.1.0">1.1.0</a> (November 3, 1998): Added first confirmations for DROP commands.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.2.0">1.2.0</a> (November 29, 1998): Added possibility to import from text files.</li>
 
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_1.3.0">1.3.0</a> (December 16, 1998): Added query by example functionality.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_1.3.1">1.3.1</a> (December 27, 1998): First multi-lingual version.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_1.4.0">1.4.0</a> (January 16, 1999): Added support for renaming and copying tables.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.0.0">2.0.0</a> (April 11, 1999): Major layout changes.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.1.0">2.1.0</a> (June 8, 2000): Last release by the original developer Tobias Ratschiller.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.2.0">2.2.0</a> (August 31, 2001): First stable release made by the phpMyAdmin project.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.3.0">1.3.0</a> (December 16, 1998): Added query by example functionality.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.3.1">1.3.1</a> (December 27, 1998): First multi-lingual version.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.4.0">1.4.0</a> (January 16, 1999): Added support for renaming and copying tables.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.0.0">2.0.0</a> (April 11, 1999): Major layout changes.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.1.0">2.1.0</a> (June 8, 2000): Last release by the original developer Tobias Ratschiller.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.2.0">2.2.0</a> (August 31, 2001): First stable release made by the phpMyAdmin project.</li>
 
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.3.0">2.3.0</a> (November 8, 2001): Database and table views were split into smaller sections.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.5.0">2.5.0</a> (November 5, 2003): Introduction of the MIME-based transformation system.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.6.0">2.6.0</a> (September 27, 2004): Improved character set handling and support for MySQL 4.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.3.0">2.3.0</a> (November 8, 2001): Database and table views were split into smaller sections.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.5.0">2.5.0</a> (November 5, 2003): Introduction of the MIME-based transformation system.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.6.0">2.6.0</a> (September 27, 2004): Improved character set handling and support for MySQL 4.</li>
 
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.7.0">2.7.0</a> (December 4, 2005): Improved importing capabilities, simplified configuration and interface cleanup.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.8.0">2.8.0</a> (March 6, 2006): Compatibility updates, hiding databases, configurable memory limits, web-based setup.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.7.0">2.7.0</a> (December 4, 2005): Improved importing capabilities, simplified configuration and interface cleanup.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.8.0">2.8.0</a> (March 6, 2006): Compatibility updates, hiding databases, configurable memory limits, web-based setup.</li>
 
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.9.0">2.9.0</a> (September 20, 2006): Added export to OpenDocument Text and Spreadsheet.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.10.0">2.10.0</a> (February 27, 2007): GUI for relations, called Database Designer.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_2.11.0">2.11.0</a> (August 22, 2007): Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers handling large number of databases/tables.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.9.0">2.9.0</a> (September 20, 2006): Added export to OpenDocument Text and Spreadsheet.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.10.0">2.10.0</a> (February 27, 2007): GUI for relations, called Database Designer.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.11.0">2.11.0</a> (August 22, 2007): Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers handling large number of databases/tables.</li>
 
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_3.0.0">3.0.0</a> (September 27, 2008): Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</li>
-<li><a href="http://wiki.cihar.com/pma/phpMyAdmin_3.1.0">3.1.0</a> (November 28, 2008): Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.0.0">3.0.0</a> (September 27, 2008): Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</li>
+<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.1.0">3.1.0</a> (November 28, 2008): Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
 </ul>
 
 

@@ -8,7 +8,7 @@
   <download-page rdf:resource="http://www.phpmyadmin.net/home_page/downloads.php" />
   <homepage rdf:resource="http://www.phpmyadmin.net/" />
   <license rdf:resource="http://usefulinc.com/doap/licenses/gpl" />
-  <wiki rdf:resource="http://wiki.cihar.com/" />
+  <wiki rdf:resource="http://wiki.phpmyadmin.net/" />
   <screenshots rdf:resource="http://www.phpmyadmin.net/home_page/try.php" />
   <old-homepage rdf:resource="http://phpmyadmin.sourceforge.net/" />
   <old-homepage rdf:resource="http://phpmyadmin.sf.net/" />

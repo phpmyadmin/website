@@ -31,7 +31,7 @@ etc), while you still have the ability to directly execute any SQL statement.
 <p>
 phpMyAdmin comes with a wide range of <a
 href="${base_url}docs.${file_ext}">documentation</a> and users are welcome to
-update <a href="http://wiki.cihar.com/">our wiki pages</a> to share ideas and
+update <a href="http://wiki.phpmyadmin.net/">our wiki pages</a> to share ideas and
 howtos for various operations. The <a
 href="${base_url}team.${file_ext}">phpMyAdmin team</a> will try to help you if
 you face any problem, you can use <a
