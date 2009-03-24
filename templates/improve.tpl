@@ -84,7 +84,7 @@ svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/tags/STAB
 <h3>Repository Statistics</h3>
 <p>Several analyses of the repository are available:</p>
 <ul>
-<li><a href="http://cihar.com/phpMyAdmin/stats/">mpy-svn-stats</a></li>
+<li><a href="http://www.phpmyadmin.net/svnstats/">mpy-svn-stats</a></li>
 <li><a href="http://cia.vc/stats/project/phpmyadmin/">CIA.vc</a></li>
 <li><a href="http://www.ohloh.net/projects/phpmyadmin">Ohloh</a></li>
 <li><a href="https://sourceforge.net/project/stats/detail.php?group_id=23067&amp;ugn=phpmyadmin&amp;type=svn">SourceForge.net</a></li>
