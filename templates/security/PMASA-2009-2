@@ -9,13 +9,13 @@ PMASA-2009-2
 </py:def>
 
 <py:def function="announcement_summary">
-Cross side scripting on export page using cookies.
+Cross-site scripting on export page using cookies.
 </py:def>
 
 
 <py:def function="announcement_description">
 Export page uses cookies to remember user settings of file name template.
-These cookies could be used for cross side scripting because they were not
+These cookies could be used for cross-site scripting because they were not
 sanitized sufficiently.
 </py:def>
 

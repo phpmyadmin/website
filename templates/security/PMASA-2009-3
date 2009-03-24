@@ -14,7 +14,7 @@ Insufficient output sanitizing when generating configuration file.
 
 
 <py:def function="announcement_description">
-Setup script used to generate configuration can be fooled using crafted POST
+Setup script used to generate configuration can be fooled using a crafted POST
 request to include arbitrary PHP code in generated configuration file.
 </py:def>
 
@@ -25,7 +25,7 @@ We consider this vulnerability to be non critical.
 
 <py:def function="announcement_mitigation">
 Additional steps from administrator are required to actually exploit this
-issue, what lowers risk quite a lot.
+issue, which lowers the risk quite a lot.
 </py:def>
 
 <py:def function="announcement_affected">
