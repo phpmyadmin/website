@@ -89,6 +89,7 @@ href="${base_url}about.${file_ext}">separate page</a>.
                 <abbr title="structured query language">SQL</abbr>-statement, even
                 batch-queries</li>
             <li>manage MySQL users and privileges</li>
+            <li>manage stored procedures and triggers</li>
         </ul>
         </li>
         <li>Import data from 
@@ -104,7 +105,8 @@ href="${base_url}about.${file_ext}">separate page</a>.
             title="International Electrotechnical Commission">IEC</abbr> 26300 -
             OpenDocument Text and Spreadsheet,
             <abbr title="Microsoft Word 2000">Word</abbr>,
-            <abbr title="Microsoft Excel 2000">Excel</abbr> and L<sup>A</sup>T<sub><big>E</big></sub>X formats
+            <abbr title="Microsoft Excel 2000">Excel</abbr>, L<sup>A</sup>T<sub><big>E</big></sub>X 
+            and others
             </li>
         <li>Administering multiple servers</li>
         <li>Creating <abbr title="Portable Document Format">PDF</abbr> graphics of
