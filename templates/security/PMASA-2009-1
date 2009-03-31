@@ -42,7 +42,7 @@ Thanks to Manuel Lopez Gallego (Luisyana) and Santiago Rodríguez Collazo, who
 have discovered this issue and reported it to us.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2009-XXXX</py:def>
+<py:def function="announcement_cve">CVE-2009-1148 CVE-2009-1149</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

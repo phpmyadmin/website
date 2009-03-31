@@ -48,7 +48,7 @@ Upgrade to phpMyAdmin 2.11.9.5 or 3.1.3.1 or apply patch listed below.
 Thanks to Greg Ose (Neohapsis), who has discovered this issue and reported it to us.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2009-XXXX</py:def>
+<py:def function="announcement_cve">CVE-2009-1151</py:def>
 
 <xi:include href="_page.tpl" />
 </html>
