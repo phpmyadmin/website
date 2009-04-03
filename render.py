@@ -35,6 +35,7 @@ from optparse import OptionParser
 import helper.cache
 import helper.log
 import helper.date
+import helper.stringfmt
 
 import data.md5sums
 import data.awards
@@ -474,7 +475,7 @@ class SFGenerator:
             item = {}
             item['link'] = entry.link
             item['date'] = helper.date.fmtdatetime.parse(entry.updated)
-            item['text'] = entry.summary
+            item['text'] = helper.stringfmt.fmt_urls(entry.summary)
             item['title'] = entry.title
             self.data['donations'].append(item)
 
