@@ -120,8 +120,9 @@
     <h3>Turnkey</h3>
     <p>
         <a href="http://www.turnkeylinux.org/appliances/lamp">LAMP
-        Appliance</a> includes all you need to run LAMP (Linux, Apache, MySQL,
-        PHP/Python/Perl) together with phpMyAdmin to manage MySQL.
+        Appliance</a> from TurnKey Linux includes all you need to run LAMP
+        (Linux, Apache, MySQL, PHP/Python/Perl) together with phpMyAdmin to
+        manage MySQL.
     </p>
     <h3>SUSE Studio</h3>
     <p>
