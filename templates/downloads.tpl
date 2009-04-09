@@ -14,7 +14,10 @@
     may not adhere to the official phpMyAdmin documentation. That being said,
     it is usually the quickest way to an updated installation. Please contact your OS
     vendor for more information. Some additional information is also available <a
-    href="#distributions">further down on this page</a>.
+    href="#distributions">further down on this page</a>. If you just want to
+    try phpMyAdmin in virtual machine, you might want to check <a
+    href="#appliances">available software appliances which provide
+    phpMyAdmin</a>.
     </p>
     <p>
     If you do not have a package available or desire to install your own phpMyAdmin,
@@ -104,6 +107,28 @@
         Gentoo ships the phpMyAdmin package, both in a near stock configuration
         as well as in a <code>webapp-config</code> configuration.  <code>emerge
         dev-db/phpmyadmin</code> to install.
+    </p>
+
+    <h2><a id="appliances"></a>Appliances</h2>
+    <p>
+        <a href="http://en.wikipedia.org/wiki/Software_appliance">Software appliances</a>
+        are more and more popular way of distributing software. They are
+        distributed as an image, which can be directly used by system (be it
+        ISO image for bootable CD or virtual disks for some type of
+        virtualization).
+    </p>
+    <h3>Turnkey</h3>
+    <p>
+        <a href="http://www.turnkeylinux.org/appliances/lamp">LAMP
+        Appliance</a> includes all you need to run LAMP (Linux, Apache, MySQL,
+        PHP/Python/Perl) together with phpMyAdmin to manage MySQL.
+    </p>
+    <h3>SUSE Studio</h3>
+    <p>
+        <a href="http://susestudio.com/">SUSE Studio</a> is an online service
+        to build software appliances. Jordi Massaguer has built a <a
+        href="http://jordimassaguerpla.blogspot.com/2009/02/phpmyadmin-appliance.html">phpMyAdmin
+        appliance</a> using this service.
     </p>
 
 </div>
