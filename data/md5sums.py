@@ -62,6 +62,16 @@ md5sum['phpMyAdmin-3.1.3.1-english.tar.bz2'] = '29437fdd6e3d9846d936e255c45bfd3c
 md5sum['phpMyAdmin-3.1.3.1-all-languages.7z'] = 'c970f1cbbd731fd0f4aca7338bf209da'
 md5sum['phpMyAdmin-3.1.3.1-english.7z'] = 'd826506417a23708ec76288ef43b6a8b'
 
+md5sum['phpMyAdmin-3.1.3.2-all-languages.tar.gz'] = 'c474e19fbf3dfd4e14f746a4a6fe1173'
+md5sum['phpMyAdmin-3.1.3.2-english.tar.gz'] = '65c2ab5ca981bf18322b700a29f61c11'
+md5sum['phpMyAdmin-3.1.3.2-all-languages.zip'] = '91edb4620922188ca3b76a6490cdf3a0'
+md5sum['phpMyAdmin-3.1.3.2-english.zip'] = '126e7b69e72872979be25541626c1376'
+md5sum['phpMyAdmin-3.1.3.2-all-languages.tar.bz2'] = '8039f9f97521f8af46293eac37d623a8'
+md5sum['phpMyAdmin-3.1.3.2-english.tar.bz2'] = 'c2ab383a6190a67bb88092906e547f54'
+md5sum['phpMyAdmin-3.1.3.2-all-languages.7z'] = 'a06c9cca21d66856481ebe336ec8e46f'
+md5sum['phpMyAdmin-3.1.3.2-english.7z'] = '1d2c591d03f11b6bb6304d7e4dcae480'
+
+
 md5sum['aqua-2.2a.zip'] = 'cc84a26f4b0e048b2ac9cca15dc4706a'
 md5sum['arctic_ocean-2.11a.zip'] = '45837793bea6e05347e301b7d40946f8'
 md5sum['crimson_gray-2.11b.zip'] = '0ef2222af9a875399c589ef8810ab3f5'
