@@ -38,7 +38,7 @@
     <li><a href="http://www.garvinhicking.de/tops/texte/mimetutorial">Having fun with phpMyAdmin's MIME-transformations &amp; PDF-features</a></li>
     <li><a href="http://www.linuxsoft.cz/article_list.php?id_kategory=215">Seriál o phpMyAdminovi (Česky)</a></li>
     <li><a href="http://www.devshed.com/c/a/PHP/Doing-More-With-phpMyAdmin-Part-1/">Doing More With phpMyAdmin: part 1</a>,
-        <a href="http://www.devshed.com/c/a/PHP/Doing-More-With-phpMyAdmin-Part-2/">part 2</a></li>
+        <a href="http://www.devshed.com/c/a/PHP/Doing-More-with-phpMyAdmin-Part-2/">part 2</a></li>
     <li><a href="http://www.php-editors.com/articles/sql_phpmyadmin.php">Learning SQL Using phpMyAdmin</a></li>
 </ul>
 </div>
