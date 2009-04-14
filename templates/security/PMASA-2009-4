@@ -51,7 +51,7 @@ href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revis
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Brian Adeloye from Tenable Network Security, who has discovered this
+Thanks to Tenable Network Security, who have discovered this
 issue and reported it to us.
 </py:def>
 
