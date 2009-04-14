@@ -459,7 +459,8 @@ class SFGenerator:
             item = {}
             item['link'] = entry.link
             item['date'] = helper.date.fmtdatetime.parse(entry.updated)
-            item['text'] = matches.group(1)
+            # replaces are workaround for broken automatic links from sf.net rss feed
+            item['text'] = matches.group(1).replace('.</a>', '</a>.').replace('.">http', '">http')
             item['comments_link'] = matches.group(2)
             item['comments_number'] = matches.group(3)
             item['title'] = entry.title
