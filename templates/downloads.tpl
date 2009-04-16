@@ -71,7 +71,7 @@
     <h2>Older Releases</h2>
     <p>
     You can find older releases on <a
-    href="https://sourceforge.net/project/showfiles.php?group_id=23067">SourceForge
+    href="https://sourceforge.net/project/showfiles.php?group_id=23067&amp;package_id=16462">SourceForge
     files page</a>. 
     </p>
     <py:for each="release in releases_older">
