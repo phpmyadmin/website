@@ -110,6 +110,16 @@
         as well as in a <code>webapp-config</code> configuration.  <code>emerge
         dev-db/phpmyadmin</code> to install.
     </p>
+    <h3>Mandriva</h3>
+    <p>
+        Mandriva ships the phpMyAdmin package in their <code>contrib</code> branch
+        and can be installed via the usual Control Center. 
+    </p>
+
+    <h3>Amahi Linux Home Server</h3>
+    <p>
+        phpMyAdmin is available as a one-click install on the <a href="http://www.amahi.org/apps">Amahi Home Server</a>. 
+    </p>
 
     <h2><a id="appliances"></a>Appliances</h2>
     <p>
