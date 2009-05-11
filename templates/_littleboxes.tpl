@@ -17,6 +17,11 @@
 <div class="rightbutton">
     <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate to phpMyAdmin</a></span>
 </div>
+
+<div class="rightbutton">
+    <span class="dlname"><a href="https://sourceforge.net/community/cca09/nominate/?project_name=phpMyAdmin&amp;project_url=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fphpmyadmin%2F">Nominate us to CCA09</a></span>
+</div>
+
 </div>
 
 </html>
