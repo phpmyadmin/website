@@ -120,8 +120,8 @@ href="${base_url}about.${file_ext}">separate page</a>.
     </ul>
 </div>
 
-<div class="floatbox">
-    <h2>Latest News</h2>
+<div class="floatbox hslice" id="latest-news">
+    <h2 class="entry-title">Latest News</h2>
     <ul>
     <li py:for="item in news">
         <a href="${base_url}news.${file_ext}#${item.anchor}">${item.title}</a> (${item.date})
