@@ -123,11 +123,21 @@ href="${base_url}about.${file_ext}">separate page</a>.
 <div class="floatbox hslice" id="latest-news">
     <h2 class="entry-title">Latest News</h2>
     <ul>
-    <li py:for="item in news">
+    <li py:for="item in short_news">
         <a href="${base_url}news.${file_ext}#${item.anchor}">${item.title}</a> (${item.date})
     </li>
     </ul>
     <p class="signature"><a href="${base_url}news.${file_ext}">...more news.</a></p>
+</div>
+
+<div class="floatbox hslice" id="latest-blogs">
+    <h2 class="entry-title">Latest Blogs</h2>
+    <ul>
+    <li py:for="item in short_blogs">
+        <a href="${item.link}">${item.title}</a> (${item.date})
+    </li>
+    </ul>
+    <p class="signature"><a href="http://pmaplanet.cihar.com/">...more blogs.</a></p>
 </div>
 
 <div class="clearer"></div>
