@@ -15,6 +15,7 @@ body {
     padding: 0;
     margin: 0;
     margin-right: 1em;
+    color: #fff;
 }
 
 #header h1 a {
@@ -46,6 +47,10 @@ body {
 #header #links li.active a {
 	color: #c17d11;
     font-size: larger;
+}
+
+div.planet#body {
+    margin-right: 20em;
 }
 
 #body {
@@ -94,6 +99,23 @@ div.bannerimg {
     float: right;
     clear: both;
     margin: 0;
+}
+
+/* For planet */
+div.sidebar {
+	position: absolute;
+	top: 4em;
+	right: 0px;
+	width: 20em;
+
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-right: 0px;
+
+	padding-top: 20px;
+	padding-left: 0px;
+
+	font-size: smaller;
 }
 
 div.rightbuttons {
