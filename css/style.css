@@ -82,6 +82,20 @@ body {
 	color: black;
 }
 
+div.banner {
+    width: 80em;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.bannerimg {
+    float: right;
+    clear: both;
+    margin: 0;
+}
+
 div.rightbuttons {
     float: right;
     clear: both;

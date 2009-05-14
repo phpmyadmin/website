@@ -31,6 +31,18 @@
    <h1><a href="${base_url}" rel="home">php<span class="myadmin">MyAdmin</span></a></h1>
     <xi:include href="_menu.tpl" />
   </div>
+<div class="banner">
+<div class="bannerimg">
+<a href="http://sourceforge.net/community/cca09/nominate/?project_name=phpMyAdmin&amp;project_url=http://www.phpmyadmin.net/"><img src="http://sourceforge.net/images/cca/cca_nominate.png" /></a>
+</div>
+<h2>Nominate phpMyAdmin!</h2>
+
+<p>If you enjoy using our software, please spread the word and <a href="http://sourceforge.net/community/cca09/nominate/?project_name=phpMyAdmin&amp;project_url=http://www.phpmyadmin.net/">nominate phpMyAdmin</a> for the Source Forge Community Choice Awards 2009.</p>
+
+<p>Anyone with an email address can nominate and the more nominations we get, the better our chances are to become a finalist and win some new <a href="${base_url}awards.${file_ext}">awards</a>.</p>
+
+</div>
+
 
   <content>
     Placeholder.
@@ -38,7 +50,7 @@
   </content>
 
   <ul id="footer">
-    <li>Copyright &copy; 2003 - ${current_year} <span class="vcard"><a class="url org fn" href="${server}${base_url}team.${file_ext}">phpMyAdmin devel team</a><a href="mailto:phpmyadmin-devel@lists.sourceforge.net" class="email"></a></span></li>
+    <li>Copyright &copy; 2003 - ${current_year} <span class="vcard"><a class="url org fn" href="${base_url}team.${file_ext}">phpMyAdmin devel team</a><a href="mailto:phpmyadmin-devel@lists.sourceforge.net" class="email"></a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment" title="Support phpMyAdmin by donating money!">Donate</a></li>
     <li><a href="${base_url}sitemap.${file_ext}" rel="contents">Sitemap</a></li>
