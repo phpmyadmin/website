@@ -88,6 +88,7 @@ PROJECT_SVN_RSS = 'http://cia.vc/stats/project/phpmyadmin/.rss'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
 TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
+PLANET_RSS = 'http://pmaplanet.cihar.com/rss20.xml'
 
 # Data sources
 SVN_MD5 = 'http://dl.cihar.com/phpMyAdmin/trunk/md5.sums'
@@ -162,6 +163,7 @@ class SFGenerator:
             'releases_beta': [],
             'themes': [],
             'news': [],
+            'blogs': [],
             'issues': [],
             'donations': [],
             'base_url': BASE_URL,
@@ -170,6 +172,7 @@ class SFGenerator:
             'rss_files': PROJECT_FILES_RSS,
             'rss_donations': DONATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
+            'rss_planet': PLANET_RSS,
             'rss_summary': PROJECT_SUMMARY_RSS,
             'rss_security': '%s%ssecurity/index.xml' % (SERVER, BASE_URL),
             'rss_svn': PROJECT_SVN_RSS,
@@ -466,6 +469,23 @@ class SFGenerator:
             item['title'] = entry.title
             item['anchor'] = self.text_to_id(entry.title)
             self.data['news'].append(item)
+
+        self.data['short_news'] = self.data['news'][:5]
+
+    def process_planet(self, feed):
+        '''
+        Fills in planet based on planet feed.
+        '''
+        helper.log.dbg('Processing planet feed...')
+        for entry in feed.entries:
+            item = {}
+            item['link'] = 'http://pmaplanet.cihar.com/#%s' % entry.link
+            item['date'] = helper.date.fmtdatetime.parse(entry.updated.replace('+0000', 'GMT'))
+            item['text'] = entry.summary_detail['value']
+            item['title'] = entry.title
+            self.data['blogs'].append(item)
+
+        self.data['short_blogs'] = self.data['blogs'][:5]
 
     def process_donations(self, feed):
         '''
@@ -812,6 +832,9 @@ class SFGenerator:
 
         rss_news = self.feeds.load('news', PROJECT_NEWS_RSS)
         self.process_news(rss_news)
+
+        rss_planet = self.feeds.load('planet', PLANET_RSS)
+        self.process_planet(rss_planet)
 
         rss_summary = self.feeds.load('summary', PROJECT_SUMMARY_RSS)
         self.process_summary(rss_summary)
