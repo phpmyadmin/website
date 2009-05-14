@@ -37,9 +37,9 @@
 </div>
 <h2>Nominate phpMyAdmin!</h2>
 
-<p>If you enjoy using our software, please spread the word and <a href="http://sourceforge.net/community/cca09/nominate/?project_name=phpMyAdmin&amp;project_url=http://www.phpmyadmin.net/">nominate phpMyAdmin</a> for the Source Forge Community Choice Awards 2009.</p>
+<p>The 2009 SourceForge.net Community Choice Awards program has started and is awaiting your nominations until May 29! All happy phpMyAdmin users should <a href="http://sourceforge.net/community/cca09/nominate/?project_name=phpMyAdmin&amp;project_url=http://www.phpmyadmin.net/">nominate phpMyAdmin</a> in the categories that seem appropriate.</p>
 
-<p>Anyone with an email address can nominate and the more nominations we get, the better our chances are to become a finalist and win some new <a href="${base_url}awards.${file_ext}">awards</a>.</p>
+<p>If phpMyAdmin is picked as a finalist, we'll tell you about the final voting phase. Let's add some new <a href="${base_url}awards.${file_ext}">awards</a>.</p>
 
 </div>
 
