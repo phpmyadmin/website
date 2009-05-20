@@ -121,7 +121,7 @@ href="${base_url}about.${file_ext}">separate page</a>.
 </div>
 
 <div class="floatbox hslice" id="latest-news">
-    <h2 class="entry-title">Latest News</h2>
+    <h2 class="entry-title"><a href="${base_url}news.${file_ext}">Latest News</a></h2>
     <ul>
     <li py:for="item in short_news">
         <a href="${base_url}news.${file_ext}#${item.anchor}">${item.title}</a> (${item.date})
@@ -131,7 +131,7 @@ href="${base_url}about.${file_ext}">separate page</a>.
 </div>
 
 <div class="floatbox hslice" id="latest-blogs">
-    <h2 class="entry-title">Latest Blogs</h2>
+    <h2 class="entry-title"><a href="http://pmaplanet.cihar.com/">Latest Blogs</a></h2>
     <ul>
     <li py:for="item in short_blogs">
         <a href="${item.link}">${item.title}</a> (${item.date})
