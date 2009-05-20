@@ -64,7 +64,7 @@ parts of repository include:
 <dt>trunk/data</dt><dd>Various project related data (such as logos, T-shirt graphics, etc.).</dd>
 <dt>trunk/history</dt><dd>Some historical documents (old changelogs or website).</dd>
 <dt>trunk/planet</dt><dd><a href="http://pmaplanet.cihar.com/">Planet phpMyAdmin</a> configuration.</dd>
-<dt>trunk/pma_localized_docs</dt><dd>Localized documentation.</dd>
+<dt>trunk/localized_docs</dt><dd>Localized documentation.</dd>
 <dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code>)</dd>
 <dt>tags/STABLE</dt><dd>Special moving tag which always contains latest
 released stable version</dd>
