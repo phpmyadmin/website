@@ -20,13 +20,14 @@
 <div class="floatbox">
 <h3>Localized Documentation</h3>
 
-<p>Please note that these translations are not always up to date.</p>
+<p>Please note that these translations are not always complete.</p>
 
 <ul>
-    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/fr">French</a></li>
-    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation-it.html">Italian (partial)</a></li>
-    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation_ja.html">Japanese</a></li>
-    <li><a href="http://www.phpmyadmin.net/pma_localized_docs/Documentation-pl-2.5.2-pl1-1.html">Polish</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/fr">French</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/it">Italian</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/ja">Japanese</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/pl">Polish</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/cs">Czech</a></li>
 </ul>
 </div>
 

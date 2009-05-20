@@ -17,6 +17,10 @@ list</a>.
 If you want to help improving a translation, please follow intructions on <a
 href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
 </p>
+<p>
+Documentation translation is kept separately, you can see it's summary on our
+<a href="https://l10n.cihar.com/projects/pmadoc/">translation server</a>.
+</p>
 
 
 <table class="graph sortable" id="sorttable">

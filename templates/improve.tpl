@@ -121,9 +121,13 @@ href="http://wiki.phpmyadmin.net/pma/FAQ_7.2">FAQ 7.2</a>.
 </p>
 
 <p>
-Documentation is currently translated to very few languages (see <a
-href="${base_url}docs.${file_ext}">documentation</a>). If you want to help,
-just take latest English documentation, translate it and put into our <a
+Documentation is being translated using po4a and gettext (see <a
+href="${base_url}docs.${file_ext}">documentation</a> for existing
+translations). To start, checkout <code>localized_docs</code> from SVN, or
+just go to <a href="https://l10n.cihar.com/projects/pmadoc/">translation
+server</a> and translate it online. If your language is missing, just contact
+<a href="mailto:michal@cihar.com">Michal Čihař</a>, he will add it.  If you
+prefer to translate directly the po files, please put updated ones into our <a
 href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=387645">translation
 tracker</a>.
 </p>
