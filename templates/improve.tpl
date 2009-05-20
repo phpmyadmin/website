@@ -123,7 +123,8 @@ href="http://wiki.phpmyadmin.net/pma/FAQ_7.2">FAQ 7.2</a>.
 <p>
 Documentation is being translated using po4a and gettext (see <a
 href="${base_url}docs.${file_ext}">documentation</a> for existing
-translations). To start, checkout <code>localized_docs</code> from SVN, or
+translations). To start, checkout <code><a
+href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/trunk/localized_docs/po/">localized_docs/po</a></code> from SVN, or
 just go to <a href="https://l10n.cihar.com/projects/pmadoc/">translation
 server</a> and translate it online. If your language is missing, just contact
 <a href="mailto:michal@cihar.com">Michal Čihař</a>, he will add it.  If you
