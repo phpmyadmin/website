@@ -20,7 +20,8 @@
 <div class="floatbox">
 <h3>Localized Documentation</h3>
 
-<p>Please note that these translations are not always complete.</p>
+<p>Please note that these translations are not always complete, but you can <a
+href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 
 <ul>
     <li><a href="http://www.phpmyadmin.net/localized_docs/fr">French</a></li>
