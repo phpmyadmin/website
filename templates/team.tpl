@@ -65,6 +65,16 @@ He lives in <span class="adr"><span class="locality">Leipzig</span>, <span class
 </p>
 </div>
 
+<div class="floatbox vcard" id="herman">
+<h3 class="fn">Herman van Rink</h3>
+<p>
+Herman has been a member of the <span class="org">phpMyAdmin</span> development team since early 2009. He started with the Dutch translation and likes to polish the code base by fixing bugs and annoyances.
+</p>
+<p>
+He lives in <span class="adr"><span class="locality">Groningen</span>, <span class="country-name">The Netherlands</span></span>.
+</p>
+</div>
+
 <div class="clearer"></div>
 
 <h2>Team meetings</h2>
