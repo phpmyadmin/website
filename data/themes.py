@@ -40,12 +40,6 @@ THEMES = {
         'info' : u'Original a clan-theme, but modified for posting here.',
         'author': u'Spockman',
     },
-    'grid-2.11c' : {
-        'name' : 'Grid',
-        'support' : '2.8 - 2.11',
-        'info' : u'Small table margins, fontsize and colors are set to be optimal readable and show maximum amount of data on screen.',
-        'author': u'Jürgen Wind',
-    },
     'grid-2.11d' : {
         'name' : 'Grid',
         'support' : '2.8 - 3.2',
@@ -59,6 +53,12 @@ THEMES = {
         'author': u'Ruben Barkow',
     },
     'paradice-3.0' : {
+        'name' : 'Paradice',
+        'support' : '3.0 - 3.2',
+        'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
+        'author': u'Andy Scherzinger',
+    },
+    'paradice-3.0a' : {
         'name' : 'Paradice',
         'support' : '3.0 - 3.2',
         'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
