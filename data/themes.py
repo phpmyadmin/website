@@ -48,7 +48,7 @@ THEMES = {
     },
     'grid-2.11d' : {
         'name' : 'Grid',
-        'support' : '2.8 - 3.1',
+        'support' : '2.8 - 3.2',
         'info' : u'Small table margins, fontsize and colors are set to be optimal readable and show maximum amount of data on screen.',
         'author': u'Jürgen Wind',
     },
@@ -60,7 +60,7 @@ THEMES = {
     },
     'paradice-3.0' : {
         'name' : 'Paradice',
-        'support' : '3.0 - 3.1',
+        'support' : '3.0 - 3.2',
         'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
         'author': u'Andy Scherzinger',
     },
@@ -112,6 +112,12 @@ THEMES = {
         'info' : u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
     },
+    'crimson_gray-3.1-3.2' : {
+        'name' : 'Crimson Gray',
+        'support' : '3.1 - 3.2',
+        'info' : u'Theme based on Original.',
+        'author': u'Audrius Kovalenko',
+    },
     'pixeline-2.10' : {
         'name' : 'Pixeline',
         'support' : '2.9 - 2.10',
@@ -132,7 +138,7 @@ THEMES = {
     },
     'hillside-3.0' : {
         'name' : 'Hillside',
-        'support' : '3.0 - 3.1',
+        'support' : '3.0 - 3.2',
         'info' : u'Theme based on Silkline.',
         'author': u'Tim Golen',
     },
@@ -150,7 +156,7 @@ THEMES = {
     },
     'clearview3-3.1' : {
         'name' : 'ClearView',
-        'support' : '3.0 - 3.1',
+        'support' : '3.0 - 3.2',
         'info' : u'Very light and clear with white color and super Silk icons.',
         'author': u'beholder',
     },
@@ -169,7 +175,7 @@ CSSMAP = {
     '2.7 - 2.8' : 'pma_2_7 pma_2_8',
     '2.7 - 2.9' : 'pma_2_7 pma_2_8 pma_2_9',
     '2.7 - 2.10' : 'pma_2_7 pma_2_8 pma_2_9 pma_2_10',
-    '2.8 - 3.1' : 'pma_2_8 pma_2_9 pma_2_10 pma_2_11 pma_3_0 pma_3_1',
+    '2.8 - 3.2' : 'pma_2_8 pma_2_9 pma_2_10 pma_2_11 pma_3_0 pma_3_1 pma_3_2',
     '2.8 - 2.11' : 'pma_2_8 pma_2_9 pma_2_10 pma_2_11',
     '2.9 - 2.11' : 'pma_2_9 pma_2_10 pma_2_11',
     '2.9 - 2.10' : 'pma_2_9 pma_2_10',
@@ -177,7 +183,8 @@ CSSMAP = {
     '2.9' : 'pma_2_9',
     '2.10' : 'pma_2_10',
     '2.11' : 'pma_2_11',
-    '3.0 - 3.1' : 'pma_3_0 pma_3_1',
+    '3.0 - 3.2' : 'pma_3_0 pma_3_2',
+    '3.1 - 3.2' : 'pma_3_1 pma_3_2',
 }
 
 CSSVERSIONS = [
@@ -190,4 +197,5 @@ CSSVERSIONS = [
     {'name': '2.11', 'css': 'pma_2_11'},
     {'name': '3.0', 'css': 'pma_3_0'},
     {'name': '3.1', 'css': 'pma_3_1'},
+    {'name': '3.2', 'css': 'pma_3_2'},
 ]
