@@ -131,7 +131,7 @@ href="${base_url}about.${file_ext}">separate page</a>.
 </div>
 
 <div class="floatbox hslice" id="latest-blogs">
-    <h2 class="entry-title"><a href="http://pmaplanet.cihar.com/">Latest Blogs</a></h2>
+    <h2 class="entry-title"><a href="http://pmaplanet.cihar.com/">Latest Posts in Developers Blogs</a></h2>
     <ul>
     <li py:for="item in short_blogs">
         <a href="${item.link}">${item.title}</a> (${item.date})
