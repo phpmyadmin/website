@@ -31,6 +31,7 @@
    <h1><a href="${base_url}" rel="home">php<span class="myadmin">MyAdmin</span></a></h1>
     <xi:include href="_menu.tpl" />
   </div>
+<!--
 <div class="banner">
 <div class="bannerimg">
 <a href="http://sourceforge.net/community/cca09/nominate/?project_name=phpMyAdmin&amp;project_url=http://www.phpmyadmin.net/"><img src="http://sourceforge.net/images/cca/cca_nominate.png" /></a>
@@ -42,6 +43,7 @@
 <p>If phpMyAdmin is picked as a finalist, we'll tell you about the final voting phase. Let's add some new <a href="${base_url}awards.${file_ext}">awards</a>.</p>
 
 </div>
+-->
 
 
   <content>
