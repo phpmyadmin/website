@@ -147,7 +147,7 @@ class FeedCache(URLCache):
                 self.warn('Feed %s is invalid: %s' % (url, str(result.bozo_exception)))
                 try:
                     result = self.force_get(cache)
-                    self.log('Using old cached version for %s' % cache)
+                    self.dbg('Using old cached version for %s' % cache)
                 except:
                     raise result.bozo_exception
             else:
