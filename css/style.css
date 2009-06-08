@@ -252,6 +252,9 @@ ul, dl {
     margin: 1em;
     max-width: 70em;
 }
+div.sidebar ul {
+    margin: 0;
+}
 
 ul ul {
     margin-top: 0;
