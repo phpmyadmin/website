@@ -52,6 +52,9 @@ body {
 div.planet#body {
     margin-right: 20em;
 }
+div.demo#body {
+    margin-right: 20em;
+}
 
 #body {
 	margin: 2em 1em 1em 1em;
