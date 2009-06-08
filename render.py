@@ -89,6 +89,8 @@ PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
 TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
 PLANET_RSS = 'http://pmaplanet.cihar.com/rss20.xml'
+RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
+RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
 SVN_MD5 = 'http://dl.cihar.com/phpMyAdmin/trunk/md5.sums'
@@ -487,6 +489,22 @@ class SFGenerator:
 
         self.data['short_blogs'] = self.data['blogs'][:5]
 
+    def process_feed(self, name, feed, count = 3):
+        '''
+        Fills in feed data based on feeparser feed.
+        '''
+        helper.log.dbg('Processing %s feed...' % name)
+        self.data[name] = []
+        for entry in feed.entries:
+            item = {}
+            item['link'] = entry.link
+            item['date'] = entry.updated_parsed
+            item['text'] = entry.summary_detail['value']
+            item['title'] = entry.title
+            self.data[name].append(item)
+
+        self.data['short_%s' % name ] = self.data[name][:count]
+
     def process_donations(self, feed):
         '''
         Fills in donations based on donations feed.
@@ -835,6 +853,12 @@ class SFGenerator:
 
         rss_planet = self.feeds.load('planet', PLANET_RSS)
         self.process_planet(rss_planet)
+
+        rss_cz = self.feeds.load('cz', RSS_CZ)
+        self.process_feed('news_cz', rss_cz)
+
+        rss_ru = self.feeds.load('ru', RSS_RU)
+        self.process_feed('news_ru', rss_ru)
 
         rss_summary = self.feeds.load('summary', PROJECT_SUMMARY_RSS)
         self.process_summary(rss_summary)

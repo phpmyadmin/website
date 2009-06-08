@@ -48,8 +48,20 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 <div class="floatbox">
 <h3>Sites Dedicated to phpMyAdmin</h3>
 <ul>
-    <li><a href="http://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
-    <li><a href="http://phpmyadmin.cz">phpmyadmin.cz: Czech site dedicated to phpMyAdmin</a></li>
+    <li><a href="http://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a>
+    <ul>
+    <li py:for="item in short_news_ru">
+        <a href="${item.link}" lang="ru" xml:lang="ru">${item.title}</a>
+    </li>
+    </ul>
+    </li>
+    <li><a href="http://phpmyadmin.cz">phpmyadmin.cz: Czech site dedicated to phpMyAdmin</a>
+    <ul>
+    <li py:for="item in short_news_cz">
+        <a href="${item.link}" lang="cs" xml:lang="cs">${item.title}</a>
+    </li>
+    </ul>
+    </li>
 </ul>
 </div>
 
