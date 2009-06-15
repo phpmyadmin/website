@@ -88,7 +88,7 @@ PROJECT_SVN_RSS = 'http://cia.vc/stats/project/phpmyadmin/.rss'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
 TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
-PLANET_RSS = 'http://pmaplanet.cihar.com/rss20.xml'
+PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
 RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 
@@ -481,7 +481,7 @@ class SFGenerator:
         helper.log.dbg('Processing planet feed...')
         for entry in feed.entries:
             item = {}
-            item['link'] = 'http://pmaplanet.cihar.com/#%s' % entry.link
+            item['link'] = 'http://planet.phpmyadmin.net/#%s' % entry.link
             item['date'] = helper.date.fmtdatetime.parse(entry.updated.replace('+0000', 'GMT'))
             item['text'] = entry.summary_detail['value']
             item['title'] = entry.title

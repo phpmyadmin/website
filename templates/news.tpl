@@ -7,7 +7,7 @@
 <div py:match="content" id="body">
 
 <p>Bored of official project news? Then check out developers blogs at 
-<a href="http://pmaplanet.cihar.com/">planet phpMyAdmin</a>.</p>
+<a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.</p>
 
     <xi:include href="_littleboxes.tpl" />
 

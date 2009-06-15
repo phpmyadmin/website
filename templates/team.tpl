@@ -18,7 +18,7 @@ history on <a href="${base_url}about.${file_ext}">separate page</a>.
 You can contact team on <a href="mailto:phpmyadmin-devel@lists.sourceforge.net">development 
 mailing list</a> (<a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">subscription and archives</a>).
 You can follow developers blogs at 
-<a href="http://pmaplanet.cihar.com/">planet phpMyAdmin</a>.
+<a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
 </p>
 
 <div class="floatbox vcard" id="marc">
