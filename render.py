@@ -359,7 +359,11 @@ class SFGenerator:
             version = releases[outversions[stable]]['version']
             major_branch = MAJOR_BRANCH_REGEXP.match(version).group(1)
             for check in outversions.keys():
-                check_version = releases[outversions[check]]['version']
+                try:
+                    check_version = releases[outversions[check]]['version']
+                except KeyError:
+                    # We already marked this one as old
+                    continue
                 if major_branch == check_version[:len(major_branch)] and version < check_version:
                     helper.log.dbg('Old release: %s' % version)
                     del outversions[stable]
