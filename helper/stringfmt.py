@@ -26,8 +26,8 @@ def fmt_urls(text):
     Formats urls in input as HTML hyperlinks.
     '''
     # Guess something what looks like an URL
-    text = re.sub('(([a-z0-9_-]+\.)+[a-z0-9_-]+(/[^ ]*[^,.-;: ])?)', 'http://\\1', text)
+    text = re.sub('(([a-z0-9A-Z_-]+\.)+[a-z0-9A-Z_-]+(/[^ ]*[^,.-;: )>])?)', 'http://\\1', text)
     # Fixup what we might make wrong in previous guess
     text = re.sub('((ht|f)tps?://)http://', '\\1', text)
     # Hyperlinks to html
-    return re.sub('(((ht|f)tps?)://[^ ]*[^,.-;: ])', '<a href="\\1">\\1</a>', text)
+    return re.sub('(((ht|f)tps?)://[^ ]*[^,.-;: )>])', '<a href="\\1" rel="nofollow">\\1</a>', text)
