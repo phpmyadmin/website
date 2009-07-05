@@ -48,7 +48,7 @@ and Spanish.
 
 <p>
 To ease usage to a wide range of people, phpMyAdmin is translated into <a
-href="${base_url}translations.${file_ext}">55 languages</a> and supports both LTR
+href="${base_url}translations.${file_ext}">57 languages</a> and supports both LTR
 and RTL languages.
 </p>
 
