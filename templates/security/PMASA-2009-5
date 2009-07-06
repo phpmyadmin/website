@@ -26,7 +26,9 @@ We consider this vulnerability to be serious.
 
 
 <py:def function="announcement_affected">
-All 3.x releases on which the "bookmarks" feature is active are affected, previous versions are not.<br />
+For 2.11.x: versions are not affected.<br />
+For 3.x: All 3.x releases on which the "bookmarks" feature is active are
+affected.
 </py:def>
 
 <py:def function="announcement_solution">
