@@ -71,6 +71,7 @@ MAP = {
     'turkish' : 'tr',
     'tatarish' : 'tt',
     'ukrainian' : 'uk',
+    'uzbek_cyrillic': 'uz',
     'chinese_traditional' : 'zhtw',
     'chinese_simplified' : 'zh',
 }
