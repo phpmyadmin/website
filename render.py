@@ -37,7 +37,6 @@ import helper.log
 import helper.date
 import helper.stringfmt
 
-import data.md5sums
 import data.awards
 import data.themes
 import data.langnames
@@ -81,6 +80,7 @@ JS_TEMPLATES = []
 
 # Generic sourceforge.net part
 PROJECT_FILES_RSS = 'https://sourceforge.net/export/rss2_projfiles.php?group_id=%d&rss_limit=100' % PROJECT_ID
+PROJECT_FILES_RSS = 'https://sourceforge.net/api/file/index/project-id/%d/rss' % PROJECT_ID
 PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
 PROJECT_SUMMARY_RSS = 'https://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
@@ -190,6 +190,7 @@ class SFGenerator:
         self.staticloader = TemplateLoader([STATIC], default_class = NewTextTemplate)
         self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
         self.feeds = helper.cache.FeedCache()
+        self.xmls = helper.cache.XMLCache()
         self.urls = helper.cache.URLCache()
         self.svn = helper.cache.SVNCache(TRANSLATIONS_SVN)
         self.simplesvn = helper.cache.SimpleSVNCache(PROJECT_SVN)
@@ -261,25 +262,60 @@ class SFGenerator:
 
         return text
 
-    def parse_file_info(self, text):
+    def dom2release(self, item, theme = False):
         '''
-        Parses file information from releases feed.
+        Parses DOM object into release hash.
+
+        Basically it gets XML like this:
+
+      <title><![CDATA[/theme-xampp/2.11/xampp-2.11.zip]]></title>
+        <item>
+          <title><![CDATA[/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz]]></title>
+          <link>http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz/download</link>
+          <guid>http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz/download</guid>
+          <description><![CDATA[/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz]]></description>
+          <pubDate>Sun, 09 Aug 2009 21:27:17 +0000</pubDate>
+          <files:extra-info xmlns:files="http://sourceforge.net/api/files.rdf#">HTML document text</files:extra-info>
+          <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/html" url="http://sourceforge.net/project/phpmyadmin/files/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-notes.html/download" filesize="1539"><media:title></media:title><media:hash algo="md5">b9e4de4108f1d6e5fc4772df888e73ac</media:hash></media:content>
+          <files:download-count xmlns:files="http://sourceforge.net/api/files.rdf#">0</files:download-count>
+        </item>
         '''
-        m = SIZE_REGEXP.match(text)
-        size = m.group(1)
-        dlcount = m.group(2)
-        filename = text.strip().split(' ')[0]
-        url = PROJECT_DL % filename
+        title = item.getElementsByTagName('title')[0].childNodes[0].data
+        titleparts = title[1:].split('/')
+        type = titleparts[0]
+        version = titleparts[1]
+        filename = titleparts[2]
         ext = os.path.splitext(filename)[1]
+        link = item.getElementsByTagName('link')[0].childNodes[0].data
+        pubdate = item.getElementsByTagName('pubDate')[0].childNodes[0].data
         featured = (filename.find(FILES_MARK) != -1)
+        dlcount = item.getElementsByTagName('files:download-count')[0].childNodes[0].data
         try:
-            md5 = data.md5sums.md5sum[filename]
-        except KeyError:
-            helper.log.warn('No MD5 for %s!' % filename)
-            md5 = 'N/A'
-        return {
+            notes = item.getElementsByTagName('files:release-notes-url')[0].childNodes[0].data
+        except:
+            notes = ''
+        media = item.getElementsByTagName('media:content')[0]
+        size = media.getAttribute('filesize')
+        md5 = None
+        for hash in media.getElementsByTagName('media:hash'):
+            if hash.getAttribute('algo') == 'md5':
+                md5 = hash.childNodes[0].data
+
+        release = {
+            'show': False,
+            'version': version,
+            'date': helper.date.fmtdatetime.parse(pubdate[:-6] + ' GMT'),
+            'name': type,
+            'fullname': '%s %s' % (type, version),
+            'notes': notes,
+            'files': []
+        }
+        if not theme:
+            release['info'] = self.get_version_info(version)
+
+        file = {
             'name': filename,
-            'url': url,
+            'url': link,
             'ext': ext,
             'featured': featured,
             'size': size,
@@ -289,34 +325,41 @@ class SFGenerator:
             'dlcount': dlcount,
             'md5': md5}
 
-    def process_releases(self, rss_downloads):
+        return release, file
+
+    def process_releases(self, xml_files):
         '''
         Gets phpMyAdmin releases out of releases feed and fills releases,
         releases_beta and releases_older.
+
+
         '''
         helper.log.dbg('Processing file releases...')
-        releases = []
-        for entry in rss_downloads.entries:
-            titleparts = entry.title.split(' ')
+        releases_dict = {}
+        for entry in xml_files.getElementsByTagName('item'):
+            title = entry.getElementsByTagName('title')[0].childNodes[0].data
+            titleparts = title[1:].split('/')
             type = titleparts[0]
             if type != 'phpMyAdmin':
                 continue
-            version = titleparts[1]
-            release = {}
-            release['show'] = False
-            release['notes'] = entry.link
-            release['version'] = version
-            release['info'] = self.get_version_info(version)
-            release['date'] = helper.date.fmtdatetime.parse(entry.updated)
-            release['name'] = type
-            release['fullname'] = '%s %s' % (type, version)
-            text = entry.summary
-            fileslist = text[text.find('Includes files:') + 15:]
-            fileslist = fileslist[:fileslist.find('<br />')]
-            release['files'] = []
-            for part in fileslist.split('),'):
-                release['files'].append(self.parse_file_info(part))
-            releases.append(release)
+            # This should not be needed, but the XML is currently broken, see
+            # https://sourceforge.net/apps/trac/sourceforge/ticket/3791
+            try:
+                item = self.xmls.load('release-%s' % title, '%s?path=%s' % (PROJECT_FILES_RSS, title))
+                item = item.getElementsByTagName('item')[0]
+            except:
+                item = entry
+            release, file = self.dom2release(item)
+            if release is None:
+                continue
+            if not releases_dict.has_key(release['version']):
+                releases_dict[release['version']] = release
+            if file['ext'] == '.html':
+                releases_dict[release['version']]['notes'] = file['url']
+            else:
+                releases_dict[release['version']]['files'].append(file)
+
+        releases = [releases_dict[rel] for rel in releases_dict.keys()]
 
         helper.log.dbg('Sorting file lists...')
         releases.sort(key = lambda x: x['version'], reverse = True)
@@ -417,23 +460,25 @@ class SFGenerator:
             })
         self.data['release_svn'] = svn
 
-    def process_themes(self, rss_downloads):
+    def process_themes(self, xml_files):
         '''
         Gets theme releases out of releases feed and fills themes.
         '''
         helper.log.dbg('Processing themes releases...')
-        for entry in rss_downloads.entries:
-            titleparts = entry.title.split(' ')
+        for entry in xml_files.getElementsByTagName('item'):
+            title = entry.getElementsByTagName('title')[0].childNodes[0].data
+            titleparts = title[1:].split('/')
             type = titleparts[0]
             if type[:6] != 'theme-':
                 continue
             type = type[6:]
             version = titleparts[1]
-            release = {}
-            release['show'] = False
-            release['notes'] = entry.link
-            release['version'] = version
-            release['date'] = helper.date.fmtdatetime.parse(entry.updated)
+            # This should not be needed, but the XML is currently broken, see
+            # https://sourceforge.net/apps/trac/sourceforge/ticket/3791
+            item = self.xmls.load('release-%s' % title, '%s?path=%s' % (PROJECT_FILES_RSS, title))
+            release, file = self.dom2release(item.getElementsByTagName('item')[0], theme = True)
+            if release is None:
+                continue
             release['shortname'] = type
             release['imgname'] = 'images/themes/%s.png' % type
             try:
@@ -446,13 +491,7 @@ class SFGenerator:
             release['fullname'] = '%s %s' % (release['name'], version)
             release['classes'] = data.themes.CSSMAP[release['support']]
 
-            text = entry.summary
-            fileslist = text[text.find('Includes files:') + 15:]
-            fileslist = fileslist[:fileslist.find('<br />')]
-            files = fileslist.split('),')
-            if len(files) > 1:
-                raise Exception('Too much files in theme %s' % type)
-            release['file'] = self.parse_file_info(files[0])
+            release['file'] = file
             self.data['themes'].append(release)
 
         helper.log.dbg('Sorting file lists...')
@@ -848,9 +887,9 @@ class SFGenerator:
         '''
         self.get_snapshots_info()
 
-        rss_downloads = self.feeds.load('releases', PROJECT_FILES_RSS)
-        self.process_releases(rss_downloads)
-        self.process_themes(rss_downloads)
+        xml_files = self.xmls.load('files', PROJECT_FILES_RSS)
+        self.process_releases(xml_files)
+        self.process_themes(xml_files)
 
         rss_news = self.feeds.load('news', PROJECT_NEWS_RSS)
         self.process_news(rss_news)

@@ -22,6 +22,18 @@
 # List of awards
 AWARDS = [
     {
+        'image': '',
+	'link': 'http://sourceforge.net/community/cca09',
+        'title': '2009 SourceForge.net Community Choice Awards',
+        'text': '''
+<p>For the <a href="http://sourceforge.net/community/cca09">2009 SourceForge.net Community Choice Awards</a>, phpMyAdmin was present in two categories:</p>
+<p class="award">Best Tool or Utility for Developers (finalist)</p>
+<p class="award">Best Tool or Utility for SysAdmins (winner)</p>
+    ''',
+        'photo': '',
+        'phototext': '',
+    },
+    {
         'image': 'infoworld-bossie-2008.jpg',
         'link': 'http://www.infoworld.com/slideshow/2008/08/171-best_of_open_so-5.html',
         'title': 'InfoWorld 2008 Best of Open Source Awards',

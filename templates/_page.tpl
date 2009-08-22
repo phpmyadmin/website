@@ -32,14 +32,6 @@
     <xi:include href="_menu.tpl" />
   </div>
 
-  <div class="banner">
-   <div class="bannerimg">
-    <a href="http://sf.net/community/cca09/vote/?f=481"><img src="http://sf.net/awards/cca/badge_img.php?f=481" width="151" height="137" alt="Vote" /></a>
-   </div>
-   <h2>phpMyAdmin finalist in two categories</h2>
-   <p>The 2009 SourceForge.net Community Choice Awards program has announced that phpMyAdmin is finalist for <i>Best Tool or Utility for SysAdmins</i> and <i>Best Tool or Utility for Developers</i>. This is great news but it's up to all users to <a href="http://sf.net/community/cca09/vote/?f=481">vote</a> for us (you have until July 20 but hey -- now is the perfect time to vote!).</p>
-  </div>
-
   <content>
     Placeholder.
 

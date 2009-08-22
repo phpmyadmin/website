@@ -28,6 +28,8 @@ import glob
 import traceback
 import urllib
 
+from xml.dom import minidom
+
 import helper.log
 import helper.date
 
@@ -124,6 +126,27 @@ class URLCache(Cache):
             result = self.get(cache)
         except NoCache:
             result = urllib.urlopen(url).read()
+            if result == '':
+                result = self.force_get(cache)
+            self.set(cache, result)
+        return result
+
+class XMLCache(URLCache):
+    '''
+    XML caching class.
+    '''
+    def __init__(self, timeout = CACHE_TIME):
+        super(XMLCache, self).__init__(timeout)
+
+    def load(self, name, url):
+        self.dbg('Downloading and parsing %s feed...' % name)
+        self.dbg('URL: %s' % url)
+        cache = 'feed-%s' % name
+        try:
+            result = self.get(cache)
+        except NoCache:
+            data = super(XMLCache, self).load(url)
+            result = minidom.parseString(data.strip())
             self.set(cache, result)
         return result
 
