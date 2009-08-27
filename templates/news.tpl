@@ -9,6 +9,11 @@
 <p>Bored of official project news? Then check out developers blogs at 
 <a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.</p>
 
+<p>You can also follow us on <a
+href="http://identi.ca/phpmyadmin">identi.ca</a> or <a
+href="https://twitter.com/phpmya">twitter</a>.
+</p>
+
     <xi:include href="_littleboxes.tpl" />
 
 <div class="hentry" id="${item.anchor}" py:for="item in news">
