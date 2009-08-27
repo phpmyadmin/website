@@ -36,6 +36,7 @@ import helper.cache
 import helper.log
 import helper.date
 import helper.stringfmt
+import helper.twitter
 
 import data.awards
 import data.themes
@@ -106,6 +107,10 @@ SUMMARY_DOWNLOADS = re.compile('Downloadable files: ([0-9]*) total downloads to 
 SUMMARY_LISTS = re.compile('Mailing lists \(public\): ([0-9]*)')
 SUMMARY_FORUMS = re.compile('Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages')
 SUMMARY_TRACKER = re.compile('Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)')
+
+# Indenti.ca integration
+IDENTICA_USER = 'phpmyadmin'
+IDENTICA_PASSWORD = None
 
 def copytree(src, dst):
     '''
@@ -521,6 +526,30 @@ class SFGenerator:
 
         self.data['short_news'] = self.data['news'][:5]
 
+    def tweet(self):
+        '''
+        Finds out whether we should send update to identi.ca and twitter and do so.
+        '''
+        news = self.data['news'][0]
+        if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
+            return
+        storage = helper.cache.Cache()
+        try:
+            last = storage.get('last-tweet')
+        except helper.cache.NoCache:
+            last = None
+        if last == news['link']:
+            helper.log.dbg('No need to tweet, the last news is still the same...')
+            return
+        tweet = '%s | http://www.phpmyadmin.net/ | #phpmyadmin' % news['title']
+        helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
+        api = helper.twitter.Api(username = IDENTICA_USER,
+                password = IDENTICA_PASSWORD,
+                twitterserver='identi.ca/api')
+        api.SetSource('phpMyAdmin website')
+        api.PostUpdate(tweet)
+        last = storage.set('last-tweet', news['link'])
+
     def process_planet(self, feed):
         '''
         Fills in planet based on planet feed.
@@ -919,6 +948,8 @@ class SFGenerator:
 
         self.generate_sitemap()
 
+        self.tweet()
+
     def render_pages(self):
         '''
         Renders all content pages.
@@ -1006,6 +1037,14 @@ if __name__ == '__main__':
                     action='store', type='string',
                     dest='log',
                     help='Log filename, default is none.')
+    parser.add_option('-p', '--identica-password',
+                    action='store', type='string',
+                    dest='identica_password',
+                    help='Pasword to identi.ca, default is not to post there.')
+    parser.add_option('-u', '--identica-user',
+                    action='store', type='string',
+                    dest='identica_user',
+                    help='Username to identi.ca, defaull is %s.' % IDENTICA_USER)
 
     parser.set_defaults(
         verbose = helper.log.VERBOSE,
@@ -1014,7 +1053,9 @@ if __name__ == '__main__':
         base_url = BASE_URL,
         clean = CLEAN_OUTPUT,
         log = None,
-        extension = EXTENSION
+        extension = EXTENSION,
+        identica_user = IDENTICA_USER,
+        identica_password = IDENTICA_PASSWORD
         )
 
     (options, args) = parser.parse_args()
@@ -1025,6 +1066,8 @@ if __name__ == '__main__':
     BASE_URL = options.base_url
     EXTENSION = options.extension
     CLEAN_OUTPUT = options.clean
+    IDENTICA_USER = options.identica_user
+    IDENTICA_PASSWORD = options.identica_password
     if options.log is not None:
         helper.log.LOG = open(options.log, 'w')
 
