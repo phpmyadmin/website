@@ -534,21 +534,21 @@ class SFGenerator:
         if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
             return
         storage = helper.cache.Cache()
+        tweet = '%s | http://www.phpmyadmin.net/ | #phpmyadmin' % news['title']
         try:
             last = storage.get('last-tweet')
         except helper.cache.NoCache:
             last = None
-        if last == news['link']:
+        if last == tweet:
             helper.log.dbg('No need to tweet, the last news is still the same...')
             return
-        tweet = '%s | http://www.phpmyadmin.net/ | #phpmyadmin' % news['title']
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
         api = helper.twitter.Api(username = IDENTICA_USER,
                 password = IDENTICA_PASSWORD,
                 twitterserver='identi.ca/api')
         api.SetSource('phpMyAdmin website')
         api.PostUpdate(tweet)
-        last = storage.set('last-tweet', news['link'])
+        last = storage.set('last-tweet', tweet)
 
     def process_planet(self, feed):
         '''
@@ -927,6 +927,8 @@ class SFGenerator:
         rss_news = self.feeds.load('news', PROJECT_NEWS_RSS)
         self.process_news(rss_news)
 
+        self.tweet()
+
         rss_planet = self.feeds.load('planet', PLANET_RSS)
         self.process_planet(rss_planet)
 
@@ -947,8 +949,6 @@ class SFGenerator:
         self.list_security_issues()
 
         self.generate_sitemap()
-
-        self.tweet()
 
     def render_pages(self):
         '''
