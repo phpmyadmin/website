@@ -536,7 +536,7 @@ class SFGenerator:
         storage = helper.cache.Cache()
         tweet = '%s | http://www.phpmyadmin.net/ | #phpmyadmin' % news['title']
         try:
-            last = storage.get('last-tweet')
+            last = storage.force_get('last-tweet')
         except helper.cache.NoCache:
             last = None
         if last == tweet:
