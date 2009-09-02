@@ -305,7 +305,8 @@ class SFGenerator:
         try:
             md5 = data.md5sums.md5sum[filename]
         except KeyError:
-            helper.log.warn('No MD5 for %s!' % filename)
+            if ext != '.html':
+                helper.log.warn('No MD5 for %s!' % filename)
             md5 = 'N/A'
             for hash in media.getElementsByTagName('media:hash'):
                 if hash.getAttribute('algo') == 'md5':
