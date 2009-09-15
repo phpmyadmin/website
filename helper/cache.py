@@ -125,10 +125,14 @@ class URLCache(Cache):
         try:
             result = self.get(cache)
         except NoCache:
-            result = urllib.urlopen(url).read()
-            if result == '':
+            try:
+                result = urllib.urlopen(url).read()
+                if result == '':
+                    result = self.force_get(cache)
+                else:
+                    self.set(cache, result)
+            except IOError:
                 result = self.force_get(cache)
-            self.set(cache, result)
         return result
 
 class XMLCache(URLCache):
