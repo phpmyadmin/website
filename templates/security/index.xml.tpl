@@ -26,6 +26,10 @@
 <![CDATA[
 <p>${issue.summary}</p>
 
+<h3>Affected Versions</h3>
+<p>${issue.versions}</p>
+
+<h3>CVE ID</h3>
 ${foo()}
 ]]>
 </description>

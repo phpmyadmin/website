@@ -739,6 +739,7 @@ class SFGenerator:
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
                 'date': helper.date.fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
                 'cves': str(data.select('def[@function="announcement_cve"]/text()')).split(' '),
+                'versions': str(data.select('def[@function="announcement_affected"]/text()')),
             })
         self.data['topissues'] = self.data['issues'][:TOP_ISSUES]
 
