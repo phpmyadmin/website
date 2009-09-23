@@ -554,7 +554,7 @@ class SFGenerator:
                 twitterserver='identi.ca/api')
         api.SetSource('phpMyAdmin website')
         api.PostUpdate(tweet)
-        last = storage.set('last-tweet', tweet)
+        storage.set('last-tweet', tweet)
 
     def tweet_security(self):
         '''
@@ -579,7 +579,7 @@ class SFGenerator:
                 twitterserver='identi.ca/api')
         api.SetSource('phpMyAdmin website')
         api.PostUpdate(tweet)
-        last = storage.set('last-security-tweet', tweet)
+        storage.set('last-security-tweet', tweet)
 
     def process_planet(self, feed):
         '''
