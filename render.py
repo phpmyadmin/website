@@ -556,6 +556,31 @@ class SFGenerator:
         api.PostUpdate(tweet)
         last = storage.set('last-tweet', tweet)
 
+    def tweet_security(self):
+        '''
+        Finds out whether we should send update to identi.ca and twitter about
+        security issue and do so.
+        '''
+        issue = self.data['issues'][0]
+        if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
+            return
+        storage = helper.cache.Cache()
+        tweet = '%s | http://www.phpmyadmin.net/home_page/security/ | #phpmyadmin #pmasa #security' % issue['name']
+        try:
+            last = storage.force_get('last-security-tweet')
+        except helper.cache.NoCache:
+            last = None
+        if last == tweet:
+            helper.log.dbg('No need to tweet, the last news is still the same...')
+            return
+        helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
+        api = helper.twitter.Api(username = IDENTICA_USER,
+                password = IDENTICA_PASSWORD,
+                twitterserver='identi.ca/api')
+        api.SetSource('phpMyAdmin website')
+        api.PostUpdate(tweet)
+        last = storage.set('last-security-tweet', tweet)
+
     def process_planet(self, feed):
         '''
         Fills in planet based on planet feed.
@@ -954,6 +979,8 @@ class SFGenerator:
         self.get_translation_stats()
 
         self.list_security_issues()
+
+        self.tweet_security()
 
         self.generate_sitemap()
 
