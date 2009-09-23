@@ -23,6 +23,10 @@ you should use the standard support ways mentioned on the
 <a href="${base_url}support.${file_ext}">support</a> page.
 </p>
 
+<p>
+To follow latest security releases you can use a <a href="${rss_security}">RSS feed</a>.
+</p>
+
 </div>
 <div class="clearer"></div>
 </div>
