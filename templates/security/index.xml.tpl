@@ -19,10 +19,14 @@
 <dc:creator>phpMyAdmin devel team</dc:creator>
 <dc:subject>phpMyAdmin security</dc:subject>
 <description>
+<!--! Just a way to make py:for work inside CDATA -->
+    <div py:def="foo()">
+        <p py:for="cve in issue.cves"><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${cve}">${cve}</a></p>
+    </div>
 <![CDATA[
 <p>${issue.summary}</p>
 
-<p><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${issue.cve}">${issue.cve}</a></p>
+${foo()}
 ]]>
 </description>
 </item>
