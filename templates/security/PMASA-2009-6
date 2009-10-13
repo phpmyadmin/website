@@ -1,0 +1,51 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2009-6
+</py:def>
+
+<py:def function="announcement_date">
+2009-10-13
+</py:def>
+
+
+<py:def function="announcement_summary">
+XSS and SQL injection vulnerabilities
+</py:def>
+
+
+<py:def function="announcement_description">
+Cross-site scripting (XSS) vulnerability allows remote attackers to inject 
+arbitrary web script or HTML via a crafted MySQL table name.<br />
+SQL injection vulnerability allows remote attackers to inject SQL via various 
+interface parameters of the PDF schema generator feature.<br />
+</py:def>
+
+
+<py:def function="announcement_severity">
+We consider these vulnerabilities to be serious. 
+</py:def>
+
+
+<py:def function="announcement_affected">
+For 2.11.x: versions before 2.11.9.6 are affected.<br />
+For 3.x: versions before 3.2.2.1 are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.2.2.1 or 2.11.9.6.
+</py:def>
+
+<py:def function="announcement_patches">
+<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=13034">Revision 13034</a> was applied to all affected branches.
+</py:def>
+
+<py:def function="announcement_references">
+We wish to thank Quintin Russ for informing us in a responsible manner.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2009-3696 and CVE-2009-3697</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
