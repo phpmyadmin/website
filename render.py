@@ -290,7 +290,10 @@ class SFGenerator:
         titleparts = title[1:].split('/')
         type = titleparts[0]
         version = titleparts[1]
-        filename = titleparts[2]
+        if theme:
+            filename = titleparts[3]
+        else:
+            filename = titleparts[2]
         ext = os.path.splitext(filename)[1]
         link = item.getElementsByTagName('link')[0].childNodes[0].data
         pubdate = item.getElementsByTagName('pubDate')[0].childNodes[0].data
@@ -473,21 +476,21 @@ class SFGenerator:
             title = entry.getElementsByTagName('title')[0].childNodes[0].data
             titleparts = title[1:].split('/')
             type = titleparts[0]
-            if type[:6] != 'theme-':
+            if type != 'themes':
                 continue
-            type = type[6:]
-            version = titleparts[1]
+            name = titleparts[1]
+            version = titleparts[2]
             release, file = self.dom2release(entry, theme = True)
             if release is None:
                 continue
-            release['shortname'] = type
+            release['shortname'] = name
             release['ignore'] = False
-            release['imgname'] = 'images/themes/%s.png' % type
+            release['imgname'] = 'images/themes/%s.png' % name
             try:
-                release.update(data.themes.THEMES['%s-%s' % (type, version)])
+                release.update(data.themes.THEMES['%s-%s' % (name, version)])
             except KeyError:
-                helper.log.warn('No meatadata for theme %s-%s!' % (type, version))
-                release['name'] = type
+                helper.log.warn('No meatadata for theme %s-%s!' % (name, version))
+                release['name'] = name
                 release['support'] = 'N/A'
                 release['info'] = ''
             release['fullname'] = '%s %s' % (release['name'], version)
