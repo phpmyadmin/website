@@ -38,22 +38,9 @@
 <p>
 If you want to receive commercial support for phpMyAdmin, either as help with
 installation or implementing custom features, do not hesitate to contact us on
-<a
-href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">development
-mailing list</a>. There are also third party service providers listed on
-<a
-href="https://sourceforge.net/services/project_services.php?project_id=23067&amp;showListings=true">SourceForge.net
-Marketplace</a>. Please note that these services are not in any connection
-with phpMyAdmin team and we can not guarantee accurate information or quality
-of service for them.
+<a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">development mailing list</a>. 
+Please note that these services are not in any connection with phpMyAdmin team and we can not guarantee accurate information or quality of service for them. 
 </p>
-
-</div>
-
-<div class="floatbox">
-<h2>Security Issues</h2>
-
-<xi:include href="_security_contact.tpl" />
 
 </div>
 
