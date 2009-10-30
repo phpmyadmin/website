@@ -199,11 +199,6 @@ CSSMAP = {
 
 CSSVERSIONS = [
     {'name': 'All', 'css': 'all'},
-    {'name': '2.6', 'css': 'pma_2_6'},
-    {'name': '2.7', 'css': 'pma_2_7'},
-    {'name': '2.8', 'css': 'pma_2_8'},
-    {'name': '2.9', 'css': 'pma_2_9'},
-    {'name': '2.10', 'css': 'pma_2_10'},
     {'name': '2.11', 'css': 'pma_2_11'},
     {'name': '3.0', 'css': 'pma_3_0'},
     {'name': '3.1', 'css': 'pma_3_1'},
