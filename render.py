@@ -353,14 +353,7 @@ class SFGenerator:
             type = titleparts[0]
             if type != 'phpMyAdmin':
                 continue
-            # This should not be needed, but the XML is currently broken, see
-            # https://sourceforge.net/apps/trac/sourceforge/ticket/3791
-            try:
-                item = self.xmls.load('release-%s' % title, '%s?path=%s' % (PROJECT_FILES_RSS, title))
-                item = item.getElementsByTagName('item')[0]
-            except:
-                item = entry
-            release, file = self.dom2release(item)
+            release, file = self.dom2release(entry)
             if release is None:
                 continue
             if not releases_dict.has_key(release['version']):
@@ -484,14 +477,7 @@ class SFGenerator:
                 continue
             type = type[6:]
             version = titleparts[1]
-            # This should not be needed, but the XML is currently broken, see
-            # https://sourceforge.net/apps/trac/sourceforge/ticket/3791
-            try:
-                item = self.xmls.load('release-%s' % title, '%s?path=%s' % (PROJECT_FILES_RSS, title))
-                item = item.getElementsByTagName('item')[0]
-            except:
-                item = entry
-            release, file = self.dom2release(item, theme = True)
+            release, file = self.dom2release(entry, theme = True)
             if release is None:
                 continue
             release['shortname'] = type
