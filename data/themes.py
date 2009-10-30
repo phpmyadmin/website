@@ -27,18 +27,21 @@ THEMES = {
         'support' : '2.7 - 2.8',
         'info' : u'With crystal icons.',
         'author': u'Scummer',
+        'ignore': True,
     },
     'xp_dirty-1.2' : {
         'name' : 'WinXP - Dirty',
         'support' : '2.6',
         'info' : u'Original a clan-theme, but modified for posting here.',
         'author': u'Spockman',
+        'ignore': True,
     },
     'xp_dirty-2.9a' : {
         'name' : 'WinXP - Dirty',
         'support' : '2.6 - 2.9',
         'info' : u'Original a clan-theme, but modified for posting here.',
         'author': u'Spockman',
+        'ignore': True,
     },
     'grid-2.11d' : {
         'name' : 'Grid',
@@ -51,6 +54,7 @@ THEMES = {
         'support' : '2.9',
         'info' : u'Original theme altered to show a maximum amount of data.',
         'author': u'Ruben Barkow',
+        'ignore': True,
     },
     'paradice-3.0' : {
         'name' : 'Paradice',
@@ -75,18 +79,21 @@ THEMES = {
         'support' : '2.7 - 2.9',
         'info' : u'Based on arctic ocean.',
         'author': u'Ruben Barkow; modified by Akos Szots',
+        'ignore': True,
     },
     'very_small-2.10a' : {
         'name' : 'Very small',
         'support' : '2.7 - 2.10',
         'info' : u'Based on arctic ocean.',
         'author': u'Ruben Barkow; modified by Akos Szots',
+        'ignore': True,
     },
     'silk-2.10' : {
         'name' : 'Silk',
         'support' : '2.10',
         'info' : u'"Silk" is a smooth theme designed to be clear and easy for the eyes, based on <a href="http://famfamfam.com/lab/icons/silk/">Silk icons</a> by Mark James which is licensed under the <a href="http://creativecommons.org/licenses/by/2.5/">Cc-by-2.5</a>.',
         'author': u'Matthias Mailander',
+        'ignore': True,
     },
     'arctic_ocean-2.11a' : {
         'name' : 'Arctic Ocean',
@@ -99,12 +106,14 @@ THEMES = {
         'support' : '2.9 - 2.10',
         'info' : u'A theme with black and lime colors.',
         'author': u'GamBit',
+        'ignore': True,
     },
     'crimson_gray-2.10' : {
         'name' : 'Crimson Gray',
         'support' : '2.9 - 2.10',
         'info' : u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
+        'ignore': True,
     },
     'crimson_gray-2.11b' : {
         'name' : 'Crimson Gray',
@@ -123,6 +132,7 @@ THEMES = {
         'support' : '2.9 - 2.10',
         'info' : u'By <a href="http://www.pixeline.be">Pixeline</a>.',
         'author': u'Pixeline',
+        'ignore': True,
     },
     'pixeline-2.11a' : {
         'name' : 'Pixeline',

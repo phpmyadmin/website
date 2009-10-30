@@ -495,6 +495,7 @@ class SFGenerator:
             if release is None:
                 continue
             release['shortname'] = type
+            release['ignore'] = False
             release['imgname'] = 'images/themes/%s.png' % type
             try:
                 release.update(data.themes.THEMES['%s-%s' % (type, version)])
@@ -507,7 +508,8 @@ class SFGenerator:
             release['classes'] = data.themes.CSSMAP[release['support']]
 
             release['file'] = file
-            self.data['themes'].append(release)
+            if not release['ignore']:
+                self.data['themes'].append(release)
 
         helper.log.dbg('Sorting file lists...')
         self.data['themes'].sort(key = lambda x: x['date'], reverse = True)
@@ -953,6 +955,7 @@ class SFGenerator:
         self.get_snapshots_info()
 
         xml_files = self.xmls.load('files', PROJECT_FILES_RSS)
+
         self.process_releases(xml_files)
         self.process_themes(xml_files)
 
