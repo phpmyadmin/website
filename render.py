@@ -38,7 +38,6 @@ import helper.date
 import helper.stringfmt
 import helper.twitter
 
-import data.md5sums
 import data.awards
 import data.themes
 import data.langnames
@@ -305,15 +304,9 @@ class SFGenerator:
             notes = ''
         media = item.getElementsByTagName('media:content')[0]
         size = media.getAttribute('filesize')
-        try:
-            md5 = data.md5sums.md5sum[filename]
-        except KeyError:
-            if ext != '.html':
-                helper.log.warn('No MD5 for %s!' % filename)
-            md5 = 'N/A'
-            for hash in media.getElementsByTagName('media:hash'):
-                if hash.getAttribute('algo') == 'md5':
-                    md5 = hash.childNodes[0].data
+        for hash in media.getElementsByTagName('media:hash'):
+            if hash.getAttribute('algo') == 'md5':
+                md5 = hash.childNodes[0].data
 
         release = {
             'show': False,
