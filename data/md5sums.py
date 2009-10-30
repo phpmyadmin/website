@@ -18,19 +18,6 @@
 
 md5sum = {}
 
-md5sum['phpMyAdmin-2.11.9.5-all-languages.tar.gz'] = 'a60dd853c93443fc1c7c5d532afc9399'
-md5sum['phpMyAdmin-2.11.9.5-all-languages-utf-8-only.tar.gz'] = '326be14ca50f91873f9fdd1080b37138'
-md5sum['phpMyAdmin-2.11.9.5-english.tar.gz'] = '502992f15a0b9407f35f1e27ba7854e5'
-md5sum['phpMyAdmin-2.11.9.5-all-languages-utf-8-only.zip'] = '4de795efe7669fc9b39d252285fa3b16'
-md5sum['phpMyAdmin-2.11.9.5-all-languages.zip'] = '360434378de76ad0483d72cb66b76358'
-md5sum['phpMyAdmin-2.11.9.5-english.zip'] = '29a84f67fc274a1714b48b43ae1dfe23'
-md5sum['phpMyAdmin-2.11.9.5-all-languages.tar.bz2'] = 'cba2d46f02126d8c8119bb310ddc8f68'
-md5sum['phpMyAdmin-2.11.9.5-all-languages-utf-8-only.tar.bz2'] = 'aef1458059f7a4fa8955b634b7bb696e'
-md5sum['phpMyAdmin-2.11.9.5-english.tar.bz2'] = '619f30efdbda7ee8993deff230e1c188'
-md5sum['phpMyAdmin-2.11.9.5-all-languages.7z'] = '47ac8c29a4acdfaa49efa128f4c951c5'
-md5sum['phpMyAdmin-2.11.9.5-all-languages-utf-8-only.7z'] = '76fe6c8370c9cd3307b3f07e02987c53'
-md5sum['phpMyAdmin-2.11.9.5-english.7z'] = 'bd97df56b9318668e63b47d22d766603'
-
 md5sum['phpMyAdmin-2.11.9.6-all-languages.tar.gz'] = '762995d57892665891615ff457eefe8b'
 md5sum['phpMyAdmin-2.11.9.6-all-languages-utf-8-only.tar.gz'] = 'bbaa342c9b9f5a2f2546d616d77f58cd'
 md5sum['phpMyAdmin-2.11.9.6-english.tar.gz'] = '131ab7f9a9e8946a191494645c3f2dbf'
@@ -53,14 +40,14 @@ md5sum['phpMyAdmin-3.2.2.1-english.tar.bz2'] = '66d24d46063c41444912a14190a6693c
 md5sum['phpMyAdmin-3.2.2.1-all-languages.7z'] = '2433403efdb5347d741846f0c9456773'
 md5sum['phpMyAdmin-3.2.2.1-english.7z'] = '5ec16f08892502b616935b55ee031731'
 
-md5sum['phpMyAdmin-3.2.3-rc1-all-languages.tar.gz'] = 'd20e8eac16c3599dfabfe3e5cd73aa5b'
-md5sum['phpMyAdmin-3.2.3-rc1-english.tar.gz'] = '2d3da7d862f412fe37118b8d63266237'
-md5sum['phpMyAdmin-3.2.3-rc1-all-languages.zip'] = '4355321229d1206a8dca33fc88924371'
-md5sum['phpMyAdmin-3.2.3-rc1-english.zip'] = '7fc21258085f021bc1ffb884615e1997'
-md5sum['phpMyAdmin-3.2.3-rc1-all-languages.tar.bz2'] = 'ddc1f6998c47ce7203f5f658fdbaacbc'
-md5sum['phpMyAdmin-3.2.3-rc1-english.tar.bz2'] = '9e95235e139261a24cd7840c90cae400'
-md5sum['phpMyAdmin-3.2.3-rc1-all-languages.7z'] = 'fa5c03e5ec3939fc292e6e50865c04bb'
-md5sum['phpMyAdmin-3.2.3-rc1-english.7z'] = '5ed5585a5e2d2c1247afa8dccf0ebc4a'
+md5sum['phpMyAdmin-3.2.3-all-languages.tar.gz'] = 'f5f9ac337c516292ed1a472a883e8a6d'
+md5sum['phpMyAdmin-3.2.3-english.tar.gz'] = '3781817f671b3b592e21f8b7790fb778'
+md5sum['phpMyAdmin-3.2.3-all-languages.zip'] = 'ed9f8a100d57b2be35f853c4c644d040'
+md5sum['phpMyAdmin-3.2.3-english.zip'] = '5433461d88472b65a4db908c8e333bfb'
+md5sum['phpMyAdmin-3.2.3-all-languages.tar.bz2'] = '69fc1d7118f16ccd7ea6f7b330723684'
+md5sum['phpMyAdmin-3.2.3-english.tar.bz2'] = 'd880af6ca4b47a2c0df778e62a879d2c'
+md5sum['phpMyAdmin-3.2.3-all-languages.7z'] = 'dc00a1557b4f0813dc213ad8d0e68dd2'
+md5sum['phpMyAdmin-3.2.3-english.7z'] = 'dad3308e1119e0f38b226612d7b69cc7'
 
 md5sum['aqua-2.2a.zip'] = 'cc84a26f4b0e048b2ac9cca15dc4706a'
 md5sum['arctic_ocean-2.11a.zip'] = '45837793bea6e05347e301b7d40946f8'
