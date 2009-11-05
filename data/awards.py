@@ -30,8 +30,8 @@ AWARDS = [
 <p class="award">Best Tool or Utility for Developers (finalist)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photo': 'sf_cca_2009_trophy.jpg',
+        'phototext': 'The trophy',
     },
     {
         'image': 'infoworld-bossie-2008.jpg',
