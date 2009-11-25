@@ -286,6 +286,7 @@ class SFGenerator:
         </item>
         '''
         title = item.getElementsByTagName('title')[0].childNodes[0].data
+        helper.log.dbg('Processing release %s' % title)
         titleparts = title[1:].split('/')
         type = titleparts[0]
         version = titleparts[1]
@@ -348,6 +349,9 @@ class SFGenerator:
             titleparts = title[1:].split('/')
             type = titleparts[0]
             if type != 'phpMyAdmin':
+                continue
+            path, ext = os.path.splitext(title)
+            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.zip']:
                 continue
             release, file = self.dom2release(entry)
             if release is None:
@@ -470,6 +474,9 @@ class SFGenerator:
             titleparts = title[1:].split('/')
             type = titleparts[0]
             if type != 'themes':
+                continue
+            path, ext = os.path.splitext(title)
+            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.zip']:
                 continue
             name = titleparts[1]
             version = titleparts[2]
