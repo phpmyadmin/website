@@ -339,6 +339,9 @@ class SFGenerator:
         '''
         Returns true if second version is newer than first one.
         '''
+        # Check for identical versions
+        if first == second:
+            return False
         # Split out possible suffix like beta or rc
         first_parts = first.split('-')
         second_parts = second.split('-')
@@ -413,7 +416,7 @@ class SFGenerator:
                     outbetaversions[branch] = idx
             else:
                 try:
-                    if self.version_compare(releases[outbetaversions[branch]]['version'], version['version']):
+                    if self.version_compare(releases[outversions[branch]]['version'], version['version']):
                         outversions[branch] = idx
                 except KeyError:
                     outversions[branch] = idx
@@ -439,7 +442,7 @@ class SFGenerator:
                 except KeyError:
                     # We already marked this one as old
                     continue
-                if major_branch == check_version[:len(major_branch)] and version < check_version:
+                if major_branch == check_version[:len(major_branch)] and self.version_compare(version, check_version):
                     helper.log.dbg('Old release: %s' % version)
                     del outversions[stable]
                     continue
