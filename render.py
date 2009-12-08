@@ -335,6 +335,34 @@ class SFGenerator:
 
         return release, file
 
+    def version_compare(self, first, second):
+        '''
+        Returns true if second version is newer than first one.
+        '''
+        # Split out possible suffix like beta or rc
+        first_parts = first.split('-')
+        second_parts = second.split('-')
+
+        # Extract numeric versions
+        f = [int(x) for x in first_parts[0].split('.')]
+        s = [int(x) for x in second_parts[0].split('.')]
+
+        # Compare numbers
+        if tuple(f) < tuple(s):
+            return True
+        if tuple(f) == tuple(s):
+            # Second is final
+            if len(second_parts) == 1:
+                return True
+            # First is final
+            if len(first_parts) == 1:
+                return False
+            # Both are betas
+            return (first_parts[1] < second_parts[1])
+
+        return False
+
+
     def process_releases(self, xml_files):
         '''
         Gets phpMyAdmin releases out of releases feed and fills releases,
@@ -379,13 +407,13 @@ class SFGenerator:
             test = TESTING_REGEXP.match(version['version'])
             if test is not None:
                 try:
-                    if releases[outbetaversions[branch]]['version'] < version['version']:
+                    if self.version_compare(releases[outbetaversions[branch]]['version'], version['version']):
                         outbetaversions[branch] = idx
                 except KeyError:
                     outbetaversions[branch] = idx
             else:
                 try:
-                    if releases[outversions[branch]]['version'] < version['version']:
+                    if self.version_compare(releases[outbetaversions[branch]]['version'], version['version']):
                         outversions[branch] = idx
                 except KeyError:
                     outversions[branch] = idx
