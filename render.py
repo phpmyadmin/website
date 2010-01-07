@@ -57,7 +57,6 @@ BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
-COMMENTS_REGEXP = re.compile('^(.*)\(<a href="([^"]*)">([0-9]*) comments</a>\)$')
 LANG_REGEXP ='((translation|lang|%s).*update|update.*(translation|lang|%s)|^updated?$|new lang|better word|fix.*translation)'
 
 # Base URL (including trailing /)
@@ -540,14 +539,13 @@ class SFGenerator:
         '''
         helper.log.dbg('Processing news feed...')
         for entry in feed.entries:
-            matches = COMMENTS_REGEXP.match(entry.summary)
             item = {}
             item['link'] = entry.link
             item['date'] = helper.date.fmtdatetime.parse(entry.updated)
             # replaces are workaround for broken automatic links from sf.net rss feed
-            item['text'] = matches.group(1).replace('.</a>', '</a>.').replace('.">http', '">http')
-            item['comments_link'] = matches.group(2)
-            item['comments_number'] = matches.group(3)
+            item['text'] = entry.summary.replace('.</a>', '</a>.').replace('.">http', '">http')
+            item['comments_link'] = entry.comments
+            item['comments_number'] = 0
             item['title'] = entry.title
             item['anchor'] = self.text_to_id(entry.title)
             self.data['news'].append(item)
