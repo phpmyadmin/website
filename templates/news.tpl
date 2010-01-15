@@ -11,7 +11,7 @@
 
 <p>You can also follow us on <a
 href="http://identi.ca/phpmyadmin">identi.ca</a> or <a
-href="https://twitter.com/phpmya">twitter</a>.
+href="http://twitter.com/phpmya">twitter</a>.
 </p>
 
     <xi:include href="_littleboxes.tpl" />
