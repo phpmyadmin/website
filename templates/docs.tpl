@@ -25,10 +25,8 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 
 <ul>
     <li><a href="http://www.phpmyadmin.net/localized_docs/fr">French</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/it">Italian</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/jp">Japanese</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/pl">Polish</a></li>
     <li><a href="http://www.phpmyadmin.net/localized_docs/cs">Czech</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/pt_BR">Brazilian Portuguese</a></li>
 </ul>
 </div>
 
