@@ -9,6 +9,9 @@ PMASA-2010-3
 2010-01-15
 </py:def>
 
+<py:def function="announcement_updated">
+2010-01-27
+</py:def>
 
 <py:def function="announcement_summary">
 Unsafe usage of unserialize function.
