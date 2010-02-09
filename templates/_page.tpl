@@ -31,11 +31,6 @@
    <h1><a href="${base_url}" rel="home">php<span class="myadmin">MyAdmin</span></a></h1>
     <xi:include href="_menu.tpl" />
   </div>
-	  <div class="banner">
-	    <a href="http://fosdem.org/"><img src="http://fosdem.org/2010/promo/fosdem/static" alt="FOSDEM 2010" /><br />Meet us at FOSDEM 2010!</a>
-	  </div>
-      <div class="clearer"></div>
-
 
   <content>
     Placeholder.
