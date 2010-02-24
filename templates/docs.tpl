@@ -24,9 +24,14 @@
 href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 
 <ul>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/fr">French</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/cs">Czech</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/pt_BR">Brazilian Portuguese</a></li>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/cs">Czech</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/en_GB">English (United Kingdom)</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/fr">French</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/it">Italian</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/jp">Japanese</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/pl">Polish</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/pt_BR">Brazilian Portuguese</a><ul>
+    <li><a href="http://www.phpmyadmin.net/localized_docs/zh_CN">Simplified Chinese</a><ul>
 </ul>
 </div>
 
