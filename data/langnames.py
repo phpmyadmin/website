@@ -32,6 +32,7 @@ MAP = {
     'german' : 'de',
     'greek' : 'el',
     'english' : 'en',
+    'english-gb' : 'engb',
     'spanish' : 'es',
     'estonian' : 'et',
     'basque' : 'eu',
