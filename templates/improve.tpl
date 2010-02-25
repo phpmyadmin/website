@@ -64,7 +64,7 @@ parts of repository include:
 <dt>trunk/data</dt><dd>Various project related data (such as logos, T-shirt graphics, etc.).</dd>
 <dt>trunk/history</dt><dd>Some historical documents (old changelogs or website).</dd>
 <dt>trunk/planet</dt><dd><a href="http://planet.phpmyadmin.net/">Planet phpMyAdmin</a> configuration.</dd>
-<dt>trunk/localized_docs</dt><dd>Localized documentation.</dd>
+<dt>trunk/localized_docs</dt><dd>Not used anymore, see Git section bellow.</dd>
 <dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code>)</dd>
 <dt>tags/STABLE</dt><dd>Special moving tag which always contains latest
 released stable version</dd>
@@ -83,6 +83,28 @@ svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/php
 # Latest stable version:
 svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/tags/STABLE/phpMyAdmin phpMyAdmin-stable
 </pre>
+
+<h3>Git Repository</h3>
+
+<p>
+phpMyAdmin is currently considering to switch development to Git. These 
+repositories do not yet contain current code are used mostly for testing.
+</p>
+
+<p>
+Git repository are located at
+<code>git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/</code> and you
+can browse it online using <a
+href="http://phpmyadmin.git.sourceforge.net/git/gitweb-index.cgi">Gitweb</a>.
+</p>
+
+<p>
+Following repositories are already used for development:
+</p>
+
+<dl class="cvslist">
+<dt>trunk/localized_docs</dt><dd>Localized documentation.</dd>
+</dl>
 
 <h3>Repository Statistics</h3>
 <p>Several analyses of the repository are available:</p>
