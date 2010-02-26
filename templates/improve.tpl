@@ -49,7 +49,7 @@ Subversion</a>.
 
 <p>
 If you are looking for some simple task where you can start, check out
-our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Dev:Junior">junior 
+our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Devel:Junior">junior 
 jobs</a> where you can find some tips where to look.
 </p>
 
