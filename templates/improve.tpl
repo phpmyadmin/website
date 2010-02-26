@@ -47,6 +47,12 @@ reference in the comprehensive book <a href="http://svnbook.red-bean.com/">Versi
 Subversion</a>.
 </p>
 
+<p>
+If you are looking for some simple task where you can start, check out
+our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Dev:Junior">junior 
+jobs</a> where you can find some tips where to look.
+</p>
+
 <h3>Source Code Repository</h3>
 <xi:include href="_svndl.tpl" />
 
