@@ -109,7 +109,7 @@ Following repositories are already used for development:
 </p>
 
 <dl class="cvslist">
-<dt>trunk/localized_docs</dt><dd>Localized documentation.</dd>
+<dt>localized_docs</dt><dd>Localized documentation.</dd>
 </dl>
 
 <h3>Repository Statistics</h3>
