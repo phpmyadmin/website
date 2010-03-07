@@ -101,6 +101,18 @@ THEMES = {
         'info' : u'New theme with new database icons.',
         'author': u'Michael Keck',
     },
+    'arctic_ocean-3.3' : {
+        'name' : 'Arctic Ocean',
+        'support' : '3.3',
+        'info' : u'New theme with new database icons.',
+        'author': u'Michael Keck',
+    },
+    'smooth_yellow-3.3' : {
+        'name' : 'Smooth Yellow',
+        'support' : '3.3',
+        'info' : u'Based on Arctic Ocean.',
+        'author': u'Michael Keck',
+    },
     'dark_lime-2.10' : {
         'name' : 'Dark Lime',
         'support' : '2.9 - 2.10',
@@ -195,6 +207,7 @@ CSSMAP = {
     '2.11' : 'pma_2_11',
     '3.0 - 3.2' : 'pma_3_0 pma_3_2',
     '3.1 - 3.2' : 'pma_3_1 pma_3_2',
+    '3.3' : 'pma_3_3',
 }
 
 CSSVERSIONS = [
@@ -203,4 +216,5 @@ CSSVERSIONS = [
     {'name': '3.0', 'css': 'pma_3_0'},
     {'name': '3.1', 'css': 'pma_3_1'},
     {'name': '3.2', 'css': 'pma_3_2'},
+    {'name': '3.3', 'css': 'pma_3_3'},
 ]
