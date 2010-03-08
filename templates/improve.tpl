@@ -51,7 +51,7 @@ Subversion</a>.
 <p>
 Once you have made some improvement and you are ready to submit it to us,
 please use <a
-href="https://sourceforge.net/tracker/?group_id=23067&atid=377410">patch
+href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch
 tracker</a>, where developers will pick up your contributions or guide you
 through improving the patch.
 </p>
