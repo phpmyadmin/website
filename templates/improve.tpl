@@ -77,7 +77,7 @@ Full list of repositories include:
 <dt>data</dt><dd>Various project related data (such as logos, T-shirt graphics, etc.).</dd>
 <dt>history</dt><dd>Some historical documents (old changelogs or website).</dd>
 <dt>planet</dt><dd><a href="http://planet.phpmyadmin.net/">Planet phpMyAdmin</a> configuration.</dd>
-<dt>localized_docs</dt><dd>Not used anymore, see Git section below.</dd>
+<dt>localized_docs</dt><dd>Localized documentation.</dd>
 </dl>
 
 <p>
