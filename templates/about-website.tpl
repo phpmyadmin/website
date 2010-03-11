@@ -46,7 +46,7 @@ history</a>.
 <li><a href="${rss_files}">phpMyAdmin file releases</a></li>
 <li><a href="${rss_security}">phpMyAdmin security issues</a></li>
 <li><a href="${rss_donations}">phpMyAdmin donations</a></li>
-<li><a href="${rss_svn}">phpMyAdmin SVN commits</a></li>
+<li><a href="${rss_vcs}">phpMyAdmin commits</a></li>
 </ul>
 
 <p>phpMyAdmin software information is available in following machine readable formats:</p>
