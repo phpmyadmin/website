@@ -40,11 +40,10 @@ creating or debugging some features.
 </p>
 
 <p>
-For storing our code we use <a href="http://subversion.tigris.org/">Subversion</a>.
+For storing our code we use <a href="http://git-scm.com/">Git</a>.
 If you don't know it, you can get some basic facts in <a
-href="http://en.wikipedia.org/wiki/Subversion_(software)">Wikipedia</a> or
-reference in the comprehensive book <a href="http://svnbook.red-bean.com/">Version Control with
-Subversion</a>.
+href="http://en.wikipedia.org/wiki/Git_software">Wikipedia</a> or
+reference in the comprehensive book <a href="http://progit.org/">Pro Git</a>.
 </p>
 
 <h3>Contributing code</h3>
