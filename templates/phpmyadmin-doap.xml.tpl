@@ -35,10 +35,10 @@
     </foaf:Person>
   </developer>
 <repository>
-    <SVNRepository>
-      <location rdf:resource="https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin" />
-      <browse rdf:resource="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/" />
-    </SVNRepository>
+    <GitRepository>
+      <location rdf:resource="git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin" />
+      <browse rdf:resource="http://phpmyadmin.git.sourceforge.net/" />
+    </GitRepository>
   </repository>
 <py:for each="release in releases_featured">
 <release py:for="file in release.files">
