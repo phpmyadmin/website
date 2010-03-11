@@ -67,26 +67,18 @@ jobs</a> where you can find some tips where to look.
 <xi:include href="_gitdl.tpl" />
 
 <p>
-To start development you want to start with <code>trunk/phpMyAdmin</code>,
-where the current development version of phpMyAdmin is stored. Other interesting
-parts of repository include:
+To start development you want to start with <code>phpmyadmin</code> repository. 
+Full list of repositories include:
 </p>
 
 <dl class="cvslist">
-<dt>trunk/</dt><dd>Current development version of all code.</dd>
-<dt>trunk/phpMyAdmin</dt><dd>phpMyAdmin code.</dd>
-<dt>trunk/website</dt><dd>Website code.</dd>
-<dt>trunk/themes</dt><dd>Themes.</dd>
-<dt>trunk/data</dt><dd>Various project related data (such as logos, T-shirt graphics, etc.).</dd>
-<dt>trunk/history</dt><dd>Some historical documents (old changelogs or website).</dd>
-<dt>trunk/planet</dt><dd><a href="http://planet.phpmyadmin.net/">Planet phpMyAdmin</a> configuration.</dd>
-<dt>trunk/localized_docs</dt><dd>Not used anymore, see Git section bellow.</dd>
-<dt>tags/</dt><dd>Tags for all released versions (as <code>RELEASE_X_Y_Z</code>)</dd>
-<dt>tags/STABLE</dt><dd>Special moving tag which always contains latest
-released stable version</dd>
-<dt>tags/TESTING</dt><dd>Special moving tag which always contains latest
-released testing version</dd>
-<dt>branches/</dt><dd>Maintenance branches for older versions (as <code>QA_X_Y</code>)</dd>
+<dt>phpmyadmin</dt><dd>phpMyAdmin code.</dd>
+<dt>website</dt><dd>Website code.</dd>
+<dt>themes</dt><dd>Themes.</dd>
+<dt>data</dt><dd>Various project related data (such as logos, T-shirt graphics, etc.).</dd>
+<dt>history</dt><dd>Some historical documents (old changelogs or website).</dd>
+<dt>planet</dt><dd><a href="http://planet.phpmyadmin.net/">Planet phpMyAdmin</a> configuration.</dd>
+<dt>localized_docs</dt><dd>Not used anymore, see Git section bellow.</dd>
 </dl>
 
 <p>
@@ -95,40 +87,15 @@ Examples of how to checkout phpMyAdmin code:
 
 <pre>
 #  Latest development version:
-svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin phpMyAdmin-dev
-# Latest stable version:
-svn checkout https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/tags/STABLE/phpMyAdmin phpMyAdmin-stable
+git clone git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin
 </pre>
-
-<h3>Git Repository</h3>
-
-<p>
-phpMyAdmin is currently considering to switch development to Git. These 
-repositories do not yet contain current code are used mostly for testing.
-</p>
-
-<p>
-Git repository are located at
-<code>git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/</code> and you
-can browse it online using <a
-href="http://phpmyadmin.git.sourceforge.net/git/gitweb-index.cgi">Gitweb</a>.
-</p>
-
-<p>
-Following repositories are already used for development:
-</p>
-
-<dl class="cvslist">
-<dt>localized_docs</dt><dd>Localized documentation.</dd>
-</dl>
 
 <h3>Repository Statistics</h3>
 <p>Several analyses of the repository are available:</p>
 <ul>
-<li><a href="http://www.phpmyadmin.net/svnstats/">mpy-svn-stats</a></li>
 <li><a href="http://cia.vc/stats/project/phpmyadmin/">CIA.vc</a></li>
 <li><a href="http://www.ohloh.net/projects/phpmyadmin">Ohloh</a></li>
-<li><a href="https://sourceforge.net/project/stats/detail.php?group_id=23067&amp;ugn=phpmyadmin&amp;type=svn">SourceForge.net</a></li>
+<li><a href="https://sourceforge.net/project/stats/detail.php?group_id=23067&amp;ugn=phpmyadmin&amp;type=git">SourceForge.net</a></li>
 </ul>
 
 <h3>Coding Standards</h3>
@@ -162,7 +129,7 @@ href="http://wiki.phpmyadmin.net/pma/FAQ_7.2">FAQ 7.2</a>.
 Documentation is being translated using po4a and gettext (see <a
 href="${base_url}docs.${file_ext}">documentation</a> for existing
 translations). To start, checkout <code><a
-href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/trunk/localized_docs/po/">localized_docs/po</a></code> from SVN, or
+href="http://phpmyadmin.git.sourceforge.net/git/gitweb.cgi?p=phpmyadmin/localized_docs;a=tree;f=po">localized_docs/po</a></code> from Git, or
 just go to <a href="https://l10n.cihar.com/projects/pmadoc/">translation
 server</a> and translate it online. If your language is missing, just contact
 <a href="mailto:michal@cihar.com">Michal Čihař</a>, he will add it.  If you
