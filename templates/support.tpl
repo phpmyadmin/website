@@ -27,7 +27,7 @@
     <li>For news/announcements: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-news">phpmyadmin-news@lists.sourceforge.net</a></li>
     <li>For user questions: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-users">phpmyadmin-users@lists.sourceforge.net</a></li>
     <li>For developer questions: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">phpmyadmin-devel@lists.sourceforge.net</a></li>
-    <li>SVN commit notifications: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-svn">phpmyadmin-svn@lists.sourceforge.net</a></li>
+    <li>Git commit notifications: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-git">phpmyadmin-git@lists.sourceforge.net</a></li>
     <li><a href="http://sourceforge.net/mail/?group_id=23067">Mailing lists overview</a></li>
 </ul>
 </div>
