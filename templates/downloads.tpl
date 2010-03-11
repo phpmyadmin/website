@@ -38,7 +38,7 @@
     </py:for>
 
     <h2>Development Versions</h2>
-    <xi:include href="_svndl.tpl" />
+    <xi:include href="_gitdl.tpl" />
 
     <p>
     Below are listed SVN snapshots for trunk branch, more daily snapshots of the

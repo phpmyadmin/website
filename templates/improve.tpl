@@ -64,7 +64,7 @@ jobs</a> where you can find some tips where to look.
 </p>
 
 <h3>Source Code Repository</h3>
-<xi:include href="_svndl.tpl" />
+<xi:include href="_gitdl.tpl" />
 
 <p>
 To start development you want to start with <code>trunk/phpMyAdmin</code>,
