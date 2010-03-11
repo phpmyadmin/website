@@ -55,7 +55,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr py:for="file in release_svn">
+        <tr py:for="file in release_vcs">
             <td><a href="${file.url}#!md5!${file.md5}">${file.name}</a></td>
             <td class="size">${file.humansize}</td>
             <td>${file.md5}</td>

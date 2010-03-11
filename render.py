@@ -468,7 +468,7 @@ class SFGenerator:
 
     def get_snapshots_info(self):
         '''
-        Retrieves SVN snapshots info and fills it in data['releases_svn'].
+        Retrieves vcs snapshots info and fills it in data['release_vcs'].
         '''
         md5_strings = self.urls.load(SNAPSHOT_MD5).split('\n')
         size_strings = self.urls.load(SNAPSHOT_SIZES).split('\n')
@@ -478,12 +478,12 @@ class SFGenerator:
                 continue
             md5, name = line.split('  ')
             md5s[name] = md5
-        svn = []
+        vcs = []
         for line in size_strings:
             if line.strip() == '':
                 continue
             name, size = line.split(' ')
-            svn.append({
+            vcs.append({
                 'name' : name,
                 'size' : int(size),
                 'size_k' : int(size) / 1024,
@@ -492,7 +492,7 @@ class SFGenerator:
                 'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/master/%s' % name,
                 'md5' : md5s[name],
             })
-        self.data['release_svn'] = svn
+        self.data['release_vcs'] = vcs
 
     def process_themes(self, xml_files):
         '''
