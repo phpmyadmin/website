@@ -93,8 +93,8 @@ RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
-SVN_MD5 = 'http://dl.cihar.com/phpMyAdmin/trunk/md5.sums'
-SVN_SIZES = 'http://dl.cihar.com/phpMyAdmin/trunk/files.list'
+SNAPSHOT_MD5 = 'http://dl.cihar.com/phpMyAdmin/master/md5.sums'
+SNAPSHOT_SIZES = 'http://dl.cihar.com/phpMyAdmin/master/files.list'
 
 # Clean output before generating
 CLEAN_OUTPUT = True
@@ -470,8 +470,8 @@ class SFGenerator:
         '''
         Retrieves SVN snapshots info and fills it in data['releases_svn'].
         '''
-        md5_strings = self.urls.load(SVN_MD5).split('\n')
-        size_strings = self.urls.load(SVN_SIZES).split('\n')
+        md5_strings = self.urls.load(SNAPSHOT_MD5).split('\n')
+        size_strings = self.urls.load(SNAPSHOT_SIZES).split('\n')
         md5s = {}
         for line in md5_strings:
             if line.strip() == '':
@@ -489,7 +489,7 @@ class SFGenerator:
                 'size_k' : int(size) / 1024,
                 'size_m' : int(size) / (1024 * 1024),
                 'humansize' : fmt_bytes(size),
-                'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/trunk/%s' % name,
+                'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/master/%s' % name,
                 'md5' : md5s[name],
             })
         self.data['release_svn'] = svn
