@@ -86,8 +86,7 @@ PROJECT_SUMMARY_RSS = 'https://sourceforge.net/export/rss2_projsummary.php?group
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://cia.vc/stats/project/phpmyadmin/.rss'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
-PROJECT_SVN = 'https://phpmyadmin.svn.sourceforge.net/svnroot/phpmyadmin/trunk/phpMyAdmin/'
-TRANSLATIONS_SVN = '%slang/' % PROJECT_SVN
+PROJECT_GIT = 'git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
 RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
@@ -125,7 +124,7 @@ def copytree(src, dst):
     names = os.listdir(src)
     errors = []
     for name in names:
-        if name == '.svn' or name.find('.swp') != -1 or name[0] == '_':
+        if name == '.git' or name == '.svn' or name.find('.swp') != -1 or name[0] == '_':
             continue
         srcname = os.path.join(src, name)
         dstname = os.path.join(dst, name)
@@ -196,8 +195,7 @@ class SFGenerator:
         self.feeds = helper.cache.FeedCache()
         self.xmls = helper.cache.XMLCache()
         self.urls = helper.cache.URLCache()
-        self.svn = helper.cache.SVNCache(TRANSLATIONS_SVN)
-        self.simplesvn = helper.cache.SimpleSVNCache(PROJECT_SVN)
+        self.git = helper.cache.GitCache(PROJECT_GIT)
 
     def get_outname(self, page):
         '''
@@ -867,6 +865,8 @@ class SFGenerator:
         for root, dirs, files in os.walk(TEMPLATES):
             if '.svn' in dirs:
                 dirs.remove('.svn')  # don't visit .svn directories
+            if '.git' in dirs:
+                dirs.remove('.git')  # don't visit .git directories
             files.sort()
             dir = root[len(TEMPLATES):].strip('/')
             if len(dir) > 0:
@@ -911,9 +911,10 @@ class SFGenerator:
         '''
         helper.log.dbg('Processing translation stats...')
         self.data['translations'] = []
-        list = self.svn.ls()
-        translators = XML(self.simplesvn.cat('translators.html'))
-        english = self.svn.cat('english-utf-8.inc.php')
+        list = self.git.langtree.keys()
+        list.sort()
+        translators = XML(self.git.tree['translators.html'].data)
+        english = self.git.langtree['english-utf-8.inc.php'].data
         allmessages = len(re.compile('\n\$str').findall(english))
         for name in list:
             if name[-14:] != '-utf-8.inc.php':
@@ -931,18 +932,18 @@ class SFGenerator:
             translator = self.fmt_translator(translator)
             short = data.langnames.MAP[lang]
             helper.log.dbg(' - %s [%s]' % (lang, short))
-            svnlog = self.svn.log(name)
+            gitlog = self.git.repo.log(path = 'lang/english-utf-8.inc.php')
             langs = '%s|%s|%s' % (lang, short, baselang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
             found = None
             if lang == 'english':
-                found = svnlog[0]
+                found = gitlog[0]
             else:
-                for x in svnlog:
-                    if regexp.findall(x['message']) != []:
+                for x in gitlog:
+                    if regexp.findall(x.message) != []:
                         found = x
                         break
-            content = self.svn.cat(name)
+            content = self.git.langtree[name].data
             missing = len(re.compile('\n\$str.*to translate').findall(content))
             translated = allmessages - missing
             percent = 100.0 * translated / allmessages
@@ -953,7 +954,7 @@ class SFGenerator:
             else:
                 css =''
             try:
-                dt = found['date']
+                dt = datetime.datetime(*found.committed_date[:6])
             except TypeError:
                 dt = ''
             self.data['translations'].append({
