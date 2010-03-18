@@ -80,10 +80,10 @@ He lives in <span class="adr"><span class="locality">Groningen</span>, <span cla
 <h2>Team meetings</h2>
 
 <p>
-We would like to meet other members of the team more often, but so far only a
-single team meeting in real life has happened. It was at big party in Karlsruhe,
-Germany for the 10th anniversary of PHP and MySQL at the 
-<a href="http://www.linuxtag.org/2005">LinuxTag</a>
+We would like to meet other members of the team more often; so far only two
+team meetings in real life have happened. The first one was at a big party 
+in Karlsruhe, Germany for the 10th anniversary of PHP and MySQL at the 
+<a href="http://www.linuxtag.org/2005">LinuxTag</a> 2005
 <a href="http://www.lamparea.org/">LAMP Area</a>, with some special
 guests.
 </p>
@@ -101,6 +101,19 @@ guests.
     rel="lightbox[meeting]" title="phpMyAdmin team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
         <img src="${base_url}images/linuxtag/IMG_4189_tn.JPG"
         alt="phpMyAdmin team with Rasmus (PHP)" />
+    </a>
+</div>
+
+<p>The second meeting took place in Brussels, Belgium during 
+<a href="http://fosdem.org/2010">FOSDEM 2010</a>. Marc Delisle talked
+about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
+</p>
+
+<div class="screenshot">
+    <a href="${base_url}images/fosdem-2010/fosdem-2010-med.jpg"
+    rel="lightbox[meeting]" title="During lunch break - Marc Delisle, Robin H. Johnson, Herman van Rink, Michal Čihař, Alexander M. Turek">
+        <img src="${base_url}images/fosdem-2010/fosdem-2010-tn.jpg"
+        alt="phpMyAdmin team at FOSDEM 2010" />
     </a>
 </div>
 
