@@ -6,22 +6,20 @@
 <h2>Translations</h2>
 
 <p>
-Translations inside phpMyAdmin are in various states. The ones that have less
-than 80% translated strings are shown in dark red, the ones below 50% in more
-intensive red (those are considered orphaned and the phpMyAdmin project would
-appreciate any help in updating them). Translators contacts are available on
-our <a href="http://www.phpmyadmin.net/documentation/translators.html">translators
-list</a>.
-</p>
-<p>
-If you want to help improving a translation, please follow intructions on <a
-href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
-</p>
-<p>
-Documentation translation is kept separately, you can see it's summary on our
-<a href="https://l10n.cihar.com/projects/pmadoc/">translation server</a>.
+Translations of phpMyAdmin are handled using Gettext. It is used for both
+translating phpMyAdmin as well as the documentation (where Po4a is being
+used).
 </p>
 
+<p>
+You are welcome to contribute to any translations, you can follow instructions
+on <a href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
+Or simply go to the <a href="https://l10n.cihar.com/">translation server</a>
+and translate there projects <a
+href="https://l10n.cihar.com/projects/phpmyadmin/">phpMyAdmin</a> or <a
+href="https://l10n.cihar.com/projects/pmadoc/">phpMyAdmin documentation</a>.
+The translation server also provides you overview of translation status.
+</p>
 
 <table class="graph sortable" id="sorttable">
 <thead>
