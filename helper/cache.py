@@ -188,4 +188,4 @@ class GitCache(Cache):
             os.system('cd %s ; git pull -q' % self.dirname)
         self.repo = git.Repo(self.dirname)
         self.tree = self.repo.tree()
-        self.langtree = self.tree['lang']
+        self.langtree = self.tree['po']

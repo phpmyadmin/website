@@ -16,6 +16,8 @@ python-feedparser - http://www.feedparser.org
 (4.1 tested)
 GitPython - http://gitorious.org/projects/git-python/
 (0.1.6 tested)
+polib - http://bitbucket.org/izi/polib/src/
+(0.5.1 tested)
 
 
 Security announcements

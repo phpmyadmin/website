@@ -27,6 +27,7 @@ import shutil
 import csv
 import traceback
 import datetime
+import polib
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -57,7 +58,7 @@ BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
-LANG_REGEXP ='((translation|lang|%s).*update|update.*(translation|lang|%s)|^updated?$|new lang|better word|fix.*translation)'
+LANG_REGEXP ='((translation|lang|%s).*update|update.*(translation|lang|%s)|^updated?$|new lang|better word|fix.*translation|Translation update done using Pootle)'
 
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
@@ -914,26 +915,21 @@ class SFGenerator:
         list = self.git.langtree.keys()
         list.sort()
         translators = XML(self.git.tree['translators.html'].data)
-        english = self.git.langtree['english-utf-8.inc.php'].data
-        allmessages = len(re.compile('\n\$str').findall(english))
         for name in list:
-            if name[-14:] != '-utf-8.inc.php':
+            if name[-3:] != '.po':
                 continue
-            lang = name[:-14]
-            try:
-                baselang, ignore = lang.split('_')
-            except:
-                baselang = lang
-            translator = translators.select('tr[@id="%s"]/td[2]/text()' % lang)
+            lang = name[:-3]
+            longlang = data.langnames.MAP[lang]
+            po = polib.pofile('cache/git___phpmyadmin.git.sourceforge.net_gitroot_phpmyadmin_phpmyadmin/po/%s' % name)
+            translator = translators.select('tr[@id="%s"]/td[2]/text()' % longlang)
             translator = unicode(translator).strip()
             if translator == '':
-                translator = translators.select('tr[@id="%s"]/td[2]/text()' % baselang)
+                translator = translators.select('tr[@id="%s"]/td[2]/text()' % longlang.split('_')[0])
                 translator = unicode(translator).strip()
             translator = self.fmt_translator(translator)
-            short = data.langnames.MAP[lang]
-            helper.log.dbg(' - %s [%s]' % (lang, short))
+            helper.log.dbg(' - %s [%s]' % (lang, longlang))
             gitlog = self.git.repo.log(path = 'lang/english-utf-8.inc.php')
-            langs = '%s|%s|%s' % (lang, short, baselang)
+            langs = '%s|%s' % (lang, longlang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
             found = None
             if lang == 'english':
@@ -943,10 +939,9 @@ class SFGenerator:
                     if regexp.findall(x.message) != []:
                         found = x
                         break
-            content = self.git.langtree[name].data
-            missing = len(re.compile('\n\$str.*to translate').findall(content))
-            translated = allmessages - missing
-            percent = 100.0 * translated / allmessages
+
+            percent = po.percent_translated()
+            translated = len(po.translated_entries())
             if percent < 50:
                 css = ' b50'
             elif percent < 80:
@@ -958,8 +953,8 @@ class SFGenerator:
             except TypeError:
                 dt = ''
             self.data['translations'].append({
-                'name': lang,
-                'short': short,
+                'name': longlang,
+                'short': lang,
                 'translated': translated,
                 'translator': translator,
                 'percent': '%0.1f' % percent,
