@@ -68,6 +68,7 @@ MAP = {
     'sr@latin' : 'serbian_latin',
     'sr' : 'serbian_cyrillic',
     'sv' : 'swedish',
+    'ta' : 'tamil'
     'te' : 'telugu',
     'th' : 'thai',
     'tr' : 'turkish',
