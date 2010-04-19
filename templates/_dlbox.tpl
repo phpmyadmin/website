@@ -6,6 +6,7 @@
 <py:for each="file in release.files"><py:if test="file.featured">
     <li><a href="${file.url}#!md5!${file.md5}" title="Download ${file.ext} compressed release, ${file.humansize}" rel="quick-download" class="piwik_download">${file.ext}</a></li>
 </py:if></py:for>
+    <li><a href="${base_url}downloads.${file_ext}" title="More download options">&hellip;</a></li>
 </ul> 
 
 </html>
