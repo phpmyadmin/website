@@ -388,7 +388,7 @@ class SFGenerator:
             if not releases_dict.has_key(release['version']):
                 releases_dict[release['version']] = release
             if file['ext'] == '.html':
-                releases_dict[release['version']]['notes'] = file['url']
+                releases_dict[release['version']]['notes'] = file['url'].replace('/download', '/view')
             else:
                 releases_dict[release['version']]['files'].append(file)
 
