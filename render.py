@@ -53,7 +53,7 @@ PROJECT_ID = 23067
 PROJECT_NAME = 'phpmyadmin'
 
 # Filtering
-FILES_MARK = 'all-languages.'
+FILES_REGEXP = re.compile(r'.*all-languages\.(zip|tar\.bz2).*')
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
@@ -295,7 +295,9 @@ class SFGenerator:
         ext = os.path.splitext(filename)[1]
         link = item.getElementsByTagName('link')[0].childNodes[0].data
         pubdate = item.getElementsByTagName('pubDate')[0].childNodes[0].data
-        featured = (filename.find(FILES_MARK) != -1)
+        featured = (FILES_REGEXP.match(filename) is not None)
+        if featured:
+            helper.log.dbg('Release is featured!')
         dlcount = item.getElementsByTagName('files:download-count')[0].childNodes[0].data
         try:
             notes = item.getElementsByTagName('files:release-notes-url')[0].childNodes[0].data
