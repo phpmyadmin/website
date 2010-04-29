@@ -103,6 +103,8 @@ Standards should be obeyed in all cases when possible. Generated content
 should be valid XHTML 1.0 and CSS. PHP code should match <a
 href="http://pear.php.net/manual/en/standards.php">PEAR Coding Standards</a>
 and documented using <a href="http://www.phpdoc.org/">phpDocumentator</a>.
+More information about coding is available on <a href="http://wiki.phpmyadmin.net/pma/Devel:Coding_guidelines">
+our wiki</a>.
 </p>
 
 <h3>Developer Documentation</h3>
