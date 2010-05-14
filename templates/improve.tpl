@@ -119,11 +119,12 @@ our wiki</a>.
 <h2><a id="translate"></a>Translating</h2>
 
 <p>
-For localization, phpMyAdmin uses its own simple localization system - each
-translation has its own PHP file with all texts. All these files are encoded in
-UTF-8 (if you see another encoding, you're using an old version). To translate,
-you have to follow steps described in <a
-href="http://wiki.phpmyadmin.net/pma/FAQ_7.2">FAQ 7.2</a>.
+For localization, phpMyAdmin uses Gettext, you can find po files for each
+translation in <code>po</code> directory in phpMyAdmin sources. You can
+translate them using usual tools for handling Gettext translations or use our
+<a href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>.
+More information about translating can be found in
+<a href="http://www.phpmyadmin.net/documentation/#faq7_2">FAQ 7.2</a>.
 </p>
 
 <p>
