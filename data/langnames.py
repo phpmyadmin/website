@@ -28,6 +28,7 @@ MAP = {
     'bs' : 'bosnian',
     'ca' : 'catalan',
     'cs' : 'czech',
+    'cy' : 'welsh',
     'da' : 'danish',
     'de' : 'german',
     'el' : 'greek',
