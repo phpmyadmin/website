@@ -56,6 +56,13 @@ THEMES = {
         'author': u'Ruben Barkow',
         'ignore': True,
     },
+    'paradice-3.0a' : {
+        'name' : 'Paradice',
+        'support' : '3.0 - 3.3',
+        'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
+        'author': u'Andy Scherzinger',
+        'ignore': True,
+    },
     'paradice-3.0b' : {
         'name' : 'Paradice',
         'support' : '3.0 - 3.3',
