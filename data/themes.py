@@ -56,15 +56,9 @@ THEMES = {
         'author': u'Ruben Barkow',
         'ignore': True,
     },
-    'paradice-3.0' : {
+    'paradice-3.0b' : {
         'name' : 'Paradice',
-        'support' : '3.0 - 3.2',
-        'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
-        'author': u'Andy Scherzinger',
-    },
-    'paradice-3.0a' : {
-        'name' : 'Paradice',
-        'support' : '3.0 - 3.2',
+        'support' : '3.0 - 3.3',
         'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
         'author': u'Andy Scherzinger',
     },
@@ -206,6 +200,7 @@ CSSMAP = {
     '2.10' : 'pma_2_10',
     '2.11' : 'pma_2_11',
     '3.0 - 3.2' : 'pma_3_0 pma_3_2',
+    '3.0 - 3.3' : 'pma_3_0 pma_3_1 pma_3_2 pma_3_3',
     '3.1 - 3.2' : 'pma_3_1 pma_3_2',
     '3.3' : 'pma_3_3',
 }
