@@ -74,6 +74,7 @@ MAP = {
     'th' : 'thai',
     'tr' : 'turkish',
     'tt' : 'tatarish',
+    'ug' : 'uyghur',
     'uk' : 'ukrainian',
     'ur' : 'urdu',
     'uz' : 'uzbek_cyrillic',
