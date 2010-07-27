@@ -934,13 +934,10 @@ class SFGenerator:
             langs = '%s|%s' % (lang, longlang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
             found = None
-            if lang == 'english':
-                found = gitlog[0]
-            else:
-                for x in gitlog:
-                    if regexp.findall(x.message) != []:
-                        found = x
-                        break
+            for x in gitlog:
+                if regexp.findall(x.message) != []:
+                    found = x
+                    break
 
             percent = po.percent_translated()
             translated = len(po.translated_entries())
