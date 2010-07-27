@@ -930,7 +930,7 @@ class SFGenerator:
                 translator = unicode(translator).strip()
             translator = self.fmt_translator(translator)
             helper.log.dbg(' - %s [%s]' % (lang, longlang))
-            gitlog = self.git.repo.log(path = 'lang/english-utf-8.inc.php')
+            gitlog = self.git.repo.log(path = 'po/%s' % name)
             langs = '%s|%s' % (lang, longlang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
             found = None
