@@ -952,7 +952,7 @@ class SFGenerator:
                 css =''
             try:
                 dt = datetime.datetime(*found.committed_date[:6])
-            except TypeError:
+            except (TypeError, AttributeError):
                 dt = ''
             self.data['translations'].append({
                 'name': longlang,
