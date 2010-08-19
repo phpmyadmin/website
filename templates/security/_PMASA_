@@ -57,4 +57,5 @@ Upgrade to phpMyAdmin ???? or newer or apply patch listed below.
 <py:def function="announcement_patches">
 </py:def>
 
+<xi:include href="_page.tpl" />
 </html>
