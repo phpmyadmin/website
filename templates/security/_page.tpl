@@ -81,10 +81,12 @@
 
     </py:if>
 
+    <h3>More information</h3>
+
     <p>
     For further information and in case of questions, please contact the
     phpMyAdmin team. Our website is <a href="http://www.phpmyadmin.net/">
-    http://www.phpmyadmin.net</a>.
+    phpmyadmin.net</a>.
     </p>
 
 </div>
