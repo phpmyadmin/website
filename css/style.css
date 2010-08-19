@@ -59,6 +59,7 @@ div.demo#body {
 #body {
 	margin: 2em 1em 1em 1em;
 	padding: 0px;
+    float: left;
 }
 
 a {
@@ -163,6 +164,7 @@ ul#footer {
     padding: 0;
     margin: 0;
     max-width: none;
+    clear: both;
 }
 
 #footer li {
