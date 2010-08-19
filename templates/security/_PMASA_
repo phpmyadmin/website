@@ -57,5 +57,15 @@ Upgrade to phpMyAdmin ???? or newer or apply patch listed below.
 <py:def function="announcement_patches">
 </py:def>
 
+<!--! Optional section with list of commits fixing this, one per line
+<py:def function="announcement_commits">
+</py:def>
+-->
+
+<!--! Optional section with list of commits fixing this for 2.11 branch, one per line
+<py:def function="announcement_commits_2_11">
+</py:def>
+-->
+
 <xi:include href="_page.tpl" />
 </html>
