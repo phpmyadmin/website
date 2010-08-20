@@ -71,7 +71,7 @@
     <h2>Older Releases</h2>
     <p>
     You can find some older releases on <a
-    href="https://sourceforge.net/project/showfiles.php?group_id=23067&amp;package_id=16462">SourceForge
+    href="https://sourceforge.net/projects/phpmyadmin/files/">SourceForge
     files page</a>. Releases which had security issues are removed from this 
     download location, if you want to see them, you need to get them from our 
     Subversion repository (check <a href="${base_url}improve.${file_ext}#devel">developer information</a> for instructions).
