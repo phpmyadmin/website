@@ -58,8 +58,7 @@ div.demo#body {
 
 #body {
 	margin: 2em 1em 1em 1em;
-	padding: 0px;
-    float: left;
+	padding-top:1%;
 }
 
 a {
@@ -194,7 +193,7 @@ ul.dllist li {
 #left {
 	margin: 2em 1em 1em 1em;
     float: left;
-	padding: 0 2em 0 2em;
+	padding: 0pt 2em;
 }
 #left ul {
     margin: 0;
