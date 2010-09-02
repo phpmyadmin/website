@@ -43,7 +43,7 @@ Thanks to Aung Khant from <a href="http://yehg.net">YGN Ethical Hacker Group,
 Myanmar</a> for reporting this issue.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2010-3056</py:def>
+<py:def function="announcement_cve">CVE-2010-2958</py:def>
 
 <py:def function="announcement_commits">
 133a77fac7d31a38703db2099a90c1b49de62e37
