@@ -1,0 +1,46 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2010-7
+</py:def>
+
+<py:def function="announcement_date">
+2010-09-08
+</py:def>
+
+<py:def function="announcement_summary">
+XSS attack on setup script.
+</py:def>
+
+<py:def function="announcement_description">
+It was possible to conduct a XSS attack using spoofed request to setup script.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_affected">
+For 3.x: versions before 3.3.7 are affected.
+</py:def>
+
+<py:def function="announcement_unaffected">
+Branch 2.11.x is not affected by this.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.3.7 or newer or apply patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to <a href="http://tenable.com/">Tenable Network Security</a> for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2010-2958</py:def>
+
+<py:def function="announcement_commits">
+73ce5705bd1e0b62060f75702d62f88247ce09dd
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
