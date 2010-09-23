@@ -72,9 +72,8 @@
     <p>
     You can find some older releases on <a
     href="https://sourceforge.net/projects/phpmyadmin/files/">SourceForge
-    files page</a>. Releases which had security issues are removed from this 
-    download location, if you want to see them, you need to get them from our 
-    Git repository (check <a href="${base_url}improve.${file_ext}#devel">developer information</a> for instructions).
+    files page</a>. If you want to see other releases, you need to get them 
+    from our Git repository (check <a href="${base_url}improve.${file_ext}#devel">developer information</a> for instructions).
     </p>
     <py:for each="release in releases_older">
     <h3>${release.fullname}</h3>
