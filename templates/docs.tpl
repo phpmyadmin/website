@@ -74,15 +74,15 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 
 <div class="floatbox book">
 
-<h3>Mastering phpMyAdmin 3.1 for Effective MySQL Management</h3>
+<h3>Mastering phpMyAdmin 3.3 for Effective MySQL Management</h3>
 
-<a href="http://www.packtpub.com/mastering-phpmyadmin-3-1-fourth-edition/book"><img src="${base_url}images/books/pma_en_3.1_100x123.png" alt="Book cover" width="100" height="123" /></a>
+<a href="http://www.packtpub.com/mastering-phpmyadmin-3-3-x-for-effective-mysql-management/book"><img src="${base_url}images/books/pma_en_3.3_113x149.jpg" alt="Book cover" width="113" height="149" /></a>
 
 <p>
-I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 3.1. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
+I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 3.3. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
 </p>
 
-<p>For more information, please visit <a href="http://www.packtpub.com/mastering-phpmyadmin-3-1-fourth-edition/book">the book's site</a>.</p>
+<p>For more information, please visit <a href="http://www.packtpub.com/mastering-phpmyadmin-3-3-x-for-effective-mysql-management/book">the book's site</a>.</p>
 <p class="signature">Marc Delisle</p>
 </div>
 
