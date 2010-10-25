@@ -8,7 +8,7 @@
 <h2>Donations</h2>
 <p>
 We invite you to <a href="https://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> to our project. Donations will be used for
-the promotion of phpMyAdmin. Thanks.
+the promotion of phpMyAdmin. Thanks. Alternatively you can appreciate our work using <a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>.
 </p>
 
 <h2>Recent donors</h2>
