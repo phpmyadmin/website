@@ -183,6 +183,12 @@ THEMES = {
         'info' : u'Very light and clear with white color and super Silk icons.',
         'author': u'beholder',
     },
+    'pmahomme-1.0' : {
+        'name': 'pmamhomme',
+        'support' : '3.3',
+        'info': u'Clean, modern and easy to use phpMyAdmin theme.',
+        'author': 'Mike Homme',
+    }
 }
 TEMPLATE = {
     '' : {
