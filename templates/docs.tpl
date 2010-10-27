@@ -137,24 +137,6 @@ Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencia
 
 </div>
 
-<div class="floatbox book">
-<h3>phpMyAdmin - MySQL-Datenbanken effizient über das Web verwalten</h3>
-
-<a href="http://www.addison-wesley.de/main/main.asp?page=home/bookdetails&amp;ProductID=106639"><img src="${base_url}images/books/pma_de_90x122.jpg" alt="Book cover" width="90" height="122" /></a>
-
-<p xml:lang="de">
-Dieses Buch gibt Ihnen einen profunden Einstieg in die effiziente Verwaltung von MySQL-Datenbanken mit phpMyAdmin (neue Version 2.6.0) bis hin zur professionellen Administration. Der Autor zeigt, wie Sie mit phpMyAdmin Datenbanken anlegen, editieren, abfragen und pflegen und wie Sie Benutzer anlegen und verwalten.
-</p>
-
-<p xml:lang="de">Sie lernen, wie Sie Abfragen optimieren und automatisieren und was Sie beim Arbeiten mit verschiedenen Zeichensätzen und MIME-Typen beachten müssen u.v.a.m. Ein Troubleshooting-Kapitel hilft bei Problemen.
-</p>
-
-<p xml:lang="de">
-<a href="http://www.addison-wesley.de/main/main.asp?page=home/bookdetails&amp;ProductID=106639">Besuchen Sie auch die Webseite der deutschen Ausgabe</a>
-</p>
-</div>
-
-
 <div class="clearer"></div>
 
 </div>

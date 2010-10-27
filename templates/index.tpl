@@ -23,7 +23,6 @@ etc), while you still have the ability to directly execute any SQL statement.
 <img src="images/books/pma_en_3.3_113x149.jpg" alt="phpMyAdmin book" />
 <img src="images/books/pma_en_100x123.png" alt="phpMyAdmin book" />
 <img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
-<img src="images/books/pma_de_90x122.jpg" alt="phpMyAdmin book" />
 <img src="images/books/pma_es_100x123.png" alt="phpMyAdmin book" />
 </a>
 </div>
