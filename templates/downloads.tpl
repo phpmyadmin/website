@@ -43,7 +43,7 @@
     <p>
     Below are listed Git snapshots for trunk branch, more daily snapshots of the
     code are available on <a
-    href="http://cihar.com/phpMyAdmin/snapshots/">external server</a>.
+    href="http://cihar.com/software/phpmyadmin/">external server</a>.
     </p>
 
     <table class="dllist">
