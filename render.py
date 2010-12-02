@@ -382,7 +382,7 @@ class SFGenerator:
             if type != 'phpMyAdmin':
                 continue
             path, ext = os.path.splitext(title)
-            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.zip']:
+            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.xz', '.zip']:
                 continue
             release, file = self.dom2release(entry)
             if release is None:
@@ -507,7 +507,7 @@ class SFGenerator:
             if type != 'themes':
                 continue
             path, ext = os.path.splitext(title)
-            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.zip']:
+            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.xz', '.zip']:
                 continue
             name = titleparts[1]
             version = titleparts[2]
