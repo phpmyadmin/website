@@ -36,6 +36,9 @@ Thanks to Alexander Opitz for reporting this issue.
 
 <py:def function="announcement_commits">
 4341818d73d454451f024950a4ce0141608ac7f8
+</py:def>
+
+<py:def function="announcement_commits_2_11">
 e1f4901ffc400b6d2df15eac0ba5015fe48a27c4
 </py:def>
 
