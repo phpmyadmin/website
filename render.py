@@ -490,7 +490,7 @@ class SFGenerator:
                 'size_k' : int(size) / 1024,
                 'size_m' : int(size) / (1024 * 1024),
                 'humansize' : fmt_bytes(size),
-                'url' : 'http://dl.cihar.com.nyud.net/phpMyAdmin/master/%s' % name,
+                'url' : 'http://dl2.cihar.com/phpMyAdmin/master/%s' % name,
                 'md5' : md5s[name],
             })
         self.data['release_vcs'] = vcs
