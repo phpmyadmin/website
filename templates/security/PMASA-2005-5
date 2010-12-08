@@ -53,6 +53,7 @@ For (1): <a href="http://www.hardened-php.net/advisory_162005.73.html">http://ww
 For (2): <a href="http://www.trapkit.de/advisories/TKADV2005-10-001.txt">http://www.trapkit.de/advisories/TKADV2005-10-001.txt</a>
 </py:def>
 
+<py:def function="announcement_cwe">661 98 79</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

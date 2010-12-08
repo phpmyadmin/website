@@ -45,6 +45,8 @@ and discovered more issues which are fixed as well.
 
 <py:def function="announcement_cve">CVE-2010-3056</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
+
 <py:def function="announcement_commits">
 48e909660032ddcbc13172830761e363e7a64d72
 be0f47a93141e2950ad400b8d22a2a98512825c2

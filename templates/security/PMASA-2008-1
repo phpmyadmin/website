@@ -60,6 +60,7 @@ href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin/branches/QA_2_11/p
 
 <py:def function="announcement_cve">CVE-2008-1149</py:def>
 
+<py:def function="announcement_cwe">661 89</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

@@ -48,5 +48,7 @@ Upgrade to phpMyAdmin 2.11.9.2 or newer.
 
 <py:def function="announcement_cve">CVE-2008-4326</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
+
 <xi:include href="_page.tpl" />
 </html>

@@ -43,6 +43,7 @@ These advisories are available from the reporter:<br />
 
 <py:def function="announcement_cve">CVE-2008-3457</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

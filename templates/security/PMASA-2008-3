@@ -53,6 +53,7 @@ Upgrade to phpMyAdmin 2.11.5.2 or newer.
 <a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11211">Revision 11211</a><br />
 </py:def>
 
+<py:def function="announcement_cwe">661 522</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

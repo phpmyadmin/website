@@ -63,5 +63,7 @@ http://www.securityfocus.com/archive/1/367486</a>
 
 <py:def function="announcement_cve">CVE-2004-2631</py:def>
 
+<py:def function="announcement_cwe">661 94</py:def>
+
 <xi:include href="_page.tpl" />
 </html>

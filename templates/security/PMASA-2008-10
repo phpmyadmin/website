@@ -45,5 +45,7 @@ Advisory: <a href="http://www.milw0rm.com/exploits/7382">http://www.milw0rm.com/
 
 <py:def function="announcement_cve">CVE-2008-5621 CVE-2008-5622</py:def>
 
+<py:def function="announcement_cwe">661 89</py:def>
+
 <xi:include href="_page.tpl" />
 </html>

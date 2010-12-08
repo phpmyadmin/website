@@ -41,7 +41,7 @@
     <h3>Solution</h3>
     <p>${announcement_solution()}</p>
 
-    <py:if test="defined('announcement_references') or defined('announcement_cve')">
+    <py:if test="defined('announcement_references') or defined('announcement_cve') or defined('announcement_cwe')">
     <h3>References</h3>
     <p py:if="defined('announcement_references')">${announcement_references()}</p>
     <p py:if="defined('announcement_cve')">
@@ -50,6 +50,14 @@
     this, but I haven't found it. -->
     <py:for each="cve in announcement_cve().next()[1].split(' ')">
     <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=${cve}">${cve}</a> 
+    </py:for>
+    </p>
+    <p py:if="defined('announcement_cwe')">
+    CWE ids: 
+    <!--! This is a bit ugly expression and there must be better way to do
+    this, but I haven't found it. -->
+    <py:for each="cwe in announcement_cwe().next()[1].split(' ')">
+    <a href="http://cwe.mitre.org/data/definitions/${cwe}.html">CWE-${cwe}</a> 
     </py:for>
     </p>
     </py:if>

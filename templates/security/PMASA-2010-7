@@ -38,6 +38,8 @@ Thanks to <a href="http://tenable.com/">Tenable Network Security</a> for reporti
 
 <py:def function="announcement_cve">CVE-2010-3263</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
+
 <py:def function="announcement_commits">
 73ce5705bd1e0b62060f75702d62f88247ce09dd
 </py:def>

@@ -55,6 +55,7 @@ Patches are referenced here:
 <a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=10796">http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=10796</a>
 </py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

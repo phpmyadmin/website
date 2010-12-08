@@ -68,6 +68,7 @@ http://www.netvigilance.com/html/advisory0005.htm</a>
 
 <py:def function="announcement_cve">CVE-2004-1055</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

@@ -50,6 +50,7 @@ Patches are available in this tracker:
 <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1810629&amp;group_id=23067&amp;atid=377408">https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1810629&amp;group_id=23067&amp;atid=377408</a>
 </py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

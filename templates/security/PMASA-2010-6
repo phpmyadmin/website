@@ -45,6 +45,8 @@ Myanmar</a> for reporting this issue.
 
 <py:def function="announcement_cve">CVE-2010-2958</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
+
 <py:def function="announcement_commits">
 133a77fac7d31a38703db2099a90c1b49de62e37
 </py:def>

@@ -45,5 +45,7 @@ We wish to thank Sven Vetsch/Disenchant for informing us in a responsible manner
 
 <py:def function="announcement_cve">CVE-2009-2284</py:def>
 
+<py:def function="announcement_cwe">661 79</py:def>
+
 <xi:include href="_page.tpl" />
 </html>

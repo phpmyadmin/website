@@ -53,6 +53,12 @@ Upgrade to phpMyAdmin ???? or newer or apply patch listed below.
 <!--! CVE ID of the report, this is automatically added to references -->
 <py:def function="announcement_cve">CVE-201x-xxxx</py:def>
 
+<!--! CWE IDs of the problem, CWE provides categorisation of the problems,
+661 is "Weaknesses in Software Written in PHP"
+See http://nvd.nist.gov/cwe.cfm for more information
+-->
+<py:def function="announcement_cwe">661</py:def>
+
 <!--! Links to SVN or tracker, do not forget to escape & to &amp; -->
 <py:def function="announcement_patches">
 </py:def>

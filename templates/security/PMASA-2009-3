@@ -50,5 +50,7 @@ Thanks to Greg Ose (Neohapsis), who has discovered this issue and reported it to
 
 <py:def function="announcement_cve">CVE-2009-1151</py:def>
 
+<py:def function="announcement_cwe">661 116</py:def>
+
 <xi:include href="_page.tpl" />
 </html>
