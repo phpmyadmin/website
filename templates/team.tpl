@@ -10,7 +10,7 @@
 The phpMyAdmin development team has been organized on <a
 href="http://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> since
 it's start in 2001. They are responsible for the development of phpMyAdmin and represents
-it at various conferences. You can find more about the project and it's
+it at various conferences. You can find more about the project and its
 history on <a href="${base_url}about.${file_ext}">separate page</a>.
 </p>
 
@@ -50,19 +50,6 @@ He currently maintains the project web site, demo server, wiki and other useful
 services. He lives in <span class="adr"><span class="locality">Prague</span>, <span class="country-name">Czech Republic</span></span>.
 </p>
 <p>Contact options: <a class="url" href="http://cihar.com">website</a>, <a class="url" href="xmpp:michal@cihar.com">jabber</a>, <a class="email" href="mailto:michal@cihar.com">email</a>.</p>
-</div>
-
-<div class="floatbox vcard" id="sebastian">
-<h3 class="fn">Sebastian Mendel</h3>
-<img class="head photo" src="${server}${base_url}images/heads/sebastian.png" alt="Photo of Sebastian Mendel" />
-<p>
-Sebastian has been a member of the <span class="org">phpMyAdmin</span> development team since 2005. He did major
-work on improving user interface and introduced the use of classes in the phpMyAdmin
-code.
-</p>
-<p>
-He lives in <span class="adr"><span class="locality">Leipzig</span>, <span class="country-name">Germany</span></span>.
-</p>
 </div>
 
 <div class="floatbox vcard" id="herman">

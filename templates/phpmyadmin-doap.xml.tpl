@@ -28,12 +28,6 @@
       <foaf:mbox_sha1sum>6dd3e0747f1392564764e15a7dde1e27d4b978d0</foaf:mbox_sha1sum>
     </foaf:Person>
   </developer>
-  <developer>
-    <foaf:Person>
-      <foaf:name>Sebastian Mendel</foaf:name>
-      <foaf:mbox_sha1sum>236f5e6e86a6f7e23dabf2ca0d8027477e2d1df8</foaf:mbox_sha1sum>
-    </foaf:Person>
-  </developer>
 <repository>
     <GitRepository>
       <location rdf:resource="git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin" />
