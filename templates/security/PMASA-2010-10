@@ -1,0 +1,54 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2010-10
+</py:def>
+
+<py:def function="announcement_date">
+2010-12-07
+</py:def>
+
+<py:def function="announcement_summary">
+Possible information disclosure.
+</py:def>
+
+<py:def function="announcement_description">
+Unauthenticated user was able to display phpinfo output if phpMyAdmin was
+enabled to show it.
+</py:def>
+
+<py:def function="announcement_severity">
+The issue is considered minor, because this feature is not enabled in default
+installation.
+</py:def>
+
+<py:def function="announcement_mitigation">
+Default installation is not affected, because $cfg['ShowPhpInfo'] is false by
+default.
+</py:def>
+
+<py:def function="announcement_affected">
+All versions prior to 3.4.0-beta1.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.4.0-beta1 or newer or apply patch listed below.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+This issue was reported by <a href="mailto:joerg@alea.gnuu.de">Jörg
+Sommer</a>.
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2010-4481</py:def>
+
+<py:def function="announcement_cwe">661 200</py:def>
+
+<py:def function="announcement_commits">
+4d9fd005671b05c4d74615d5939ed45e4d019e4c
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
