@@ -25,19 +25,6 @@
   <meta http-equiv="X-Generated" content="${generated}" />
   <meta name="verify-v1" content="3AM2eNj0zQ1Ao/N2eGE02S45V3p5KQxAyMIxdUJhtEQ=" />
   <meta name="robots" content="index, follow" />
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */
-</script>
  </head>
  <body>
   <div id="header">
@@ -59,7 +46,7 @@
     <li><a href="${base_url}about-website.${file_ext}" title="Information about website">About</a></li>
     <li class="last">Valid <a href="http://validator.w3.org/check/referer">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></li>
     <li class="logo"><a href="http://sourceforge.net/projects/phpmyadmin"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=23067&amp;type=10" width="80" height="15" alt="Get phpMyAdmin at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a></li>
-    <li class="logo"><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.phpmyadmin.net"></a></li>
+    <li class="logo"><a href="http://flattr.com/thing/98525/phpMyAdmin" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></li>
   </ul>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
