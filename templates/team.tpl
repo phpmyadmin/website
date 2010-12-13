@@ -25,7 +25,7 @@ You can follow developers blogs at
 
 <h3 class="fn">Marc Delisle</h3>
 
-<img class="head photo" src="${server}${base_url}images/heads/marc.png" alt="Photo of Marc Delisle" />
+<img class="head photo" src="${server}${base_url}images/heads/marc.jpg" alt="Photo of Marc Delisle" />
 <p>
 Marc took over the <span class="org">phpMyAdmin</span> project from founder Tobias Ratschiller and
 started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux
@@ -59,6 +59,19 @@ Herman has been a member of the <span class="org">phpMyAdmin</span> development 
 </p>
 <p>
 He lives in <span class="adr"><span class="locality">Groningen</span>, <span class="country-name">The Netherlands</span></span>.
+</p>
+</div>
+
+<div class="floatbox vcard" id="dieter">
+<h3 class="fn">Dieter Adriaenssens</h3>
+
+<img class="head photo" src="${server}${base_url}images/heads/dieter.jpg" alt="Photo of Dieter Adriaenssens" />
+<p>
+Dieter joined the development team in March 2010, and so far has
+contributed to the project by submitting bug fixes.
+</p>
+<p>
+He currently lives in <span class="adr"><span class="locality">Gent</span>, <span class="country-name">Belgium</span></span>.
 </p>
 </div>
 
