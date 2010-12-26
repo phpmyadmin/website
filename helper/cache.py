@@ -143,14 +143,8 @@ class XMLCache(URLCache):
     def load(self, name, url):
         self.dbg('Downloading and parsing %s feed...' % name)
         self.dbg('URL: %s' % url)
-        cache = 'feed-%s' % name
-        try:
-            result = self.get(cache)
-        except NoCache:
-            data = super(XMLCache, self).load(url)
-            result = minidom.parseString(data.strip())
-            self.set(cache, result)
-        return result
+        data = super(XMLCache, self).load(url)
+        return minidom.parseString(data.strip())
 
 class FeedCache(URLCache):
     '''
