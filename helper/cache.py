@@ -86,7 +86,7 @@ class Cache(object):
             self.dbg('Using cache for %s!' % name)
             try:
                 return cPickle.load(open(filename, 'r'))
-            except TypeError:
+            except (TypeError, EOFError):
                 # Cache can not be unpickled
                 self.warn('Deleting cache for %s!' % name)
                 os.unlink(filename)
