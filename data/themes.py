@@ -188,6 +188,12 @@ THEMES = {
         'support' : '3.3',
         'info': u'Clean, modern and easy to use phpMyAdmin theme.',
         'author': 'Mike Homme',
+    },
+    'pmahomme-1.0b' : {
+        'name': 'pmamhomme',
+        'support' : '3.3',
+        'info': u'Clean, modern and easy to use phpMyAdmin theme.',
+        'author': 'Mike Homme',
     }
 }
 TEMPLATE = {
