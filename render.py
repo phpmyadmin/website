@@ -223,21 +223,6 @@ class SFGenerator:
         '''
         return re.sub('[^a-z0-9A-Z.-]', '_', text)
 
-    def fmt_translator(self, translator):
-        '''
-        Formats translator information.
-        '''
-        lines = [x.strip() for x in translator.split('\n')]
-        output = []
-        for line in lines:
-            try:
-                name, email = line.split('(')
-            except ValueError:
-                name = line
-                email = None
-            output.append(name.strip())
-        return ', '.join(output)
-
     def get_version_info(self, version):
         '''
         Returns description to the phpMyAdmin version.
@@ -916,19 +901,12 @@ class SFGenerator:
         self.data['translations'] = []
         list = self.git.langtree.keys()
         list.sort()
-        translators = XML(self.git.tree['translators.html'].data)
         for name in list:
             if name[-3:] != '.po':
                 continue
             lang = name[:-3]
             longlang = data.langnames.MAP[lang]
             po = polib.pofile('cache/git___phpmyadmin.git.sourceforge.net_gitroot_phpmyadmin_phpmyadmin/po/%s' % name)
-            translator = translators.select('tr[@id="%s"]/td[2]/text()' % longlang)
-            translator = unicode(translator).strip()
-            if translator == '':
-                translator = translators.select('tr[@id="%s"]/td[2]/text()' % longlang.split('_')[0])
-                translator = unicode(translator).strip()
-            translator = self.fmt_translator(translator)
             helper.log.dbg(' - %s [%s]' % (lang, longlang))
             gitlog = self.git.repo.log(path = 'po/%s' % name)
             langs = '%s|%s' % (lang, longlang)
@@ -955,7 +933,6 @@ class SFGenerator:
                 'name': longlang,
                 'short': lang,
                 'translated': translated,
-                'translator': translator,
                 'percent': '%0.1f' % percent,
                 'updated': dt,
                 'css': css,

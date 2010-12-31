@@ -28,7 +28,6 @@ The translation server also provides you overview of translation status.
     <th>Strings</th>
     <th colspan="2">Translated strings percent</th>
     <th>Last modification</th>
-    <th>Translators</th>
 </tr>
 </thead>
 
@@ -43,7 +42,6 @@ The translation server also provides you overview of translation status.
 <div class="bar" style="width: ${round(float(item.percent))}%;"></div>
 </td>
 <td class="date">${item.updated}</td>
-<td>${item.translator}</td>
 </tr>
 </tbody>
 </table>
