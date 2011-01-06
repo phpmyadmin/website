@@ -50,5 +50,13 @@ Sommer</a>.
 4d9fd005671b05c4d74615d5939ed45e4d019e4c
 </py:def>
 
+<py:def function="announcement_commits_3_3">
+8928900532d111e849362b6359571a3b079eb9ea
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+373a6626ade37c0fee1dfc7c757ca55c7652874b
+</py:def>
+
 <xi:include href="_page.tpl" />
 </html>

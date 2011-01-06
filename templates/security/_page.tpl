@@ -62,7 +62,7 @@
     </p>
     </py:if>
 
-    <py:if test="defined('announcement_patches') or defined('announcement_commits') or defined('announcement_commits_2_11')">
+    <py:if test="defined('announcement_patches') or defined('announcement_commits') or defined('announcement_commits_2_11') or defined('announcement_commits_3_3')">
     <h3>Patches</h3>
 
     <py:if test="defined('announcement_patches')">
@@ -73,6 +73,15 @@
     <p>Following commits have been made to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits().next()[1].strip().split('\n')">
+    <li><a href="http://phpmyadmin.git.sourceforge.net/git/gitweb.cgi?p=phpmyadmin/phpmyadmin;a=commitdiff;h=${hash}">${hash}</a></li>
+    </py:for>
+    </ul>
+    </py:if>
+
+    <py:if test="defined('announcement_commits_3_3')">
+    <p>Following commits have been made on 3.3 branch to fix this issue:</p>
+    <ul>
+    <py:for each="hash in announcement_commits_3_3().next()[1].strip().split('\n')">
     <li><a href="http://phpmyadmin.git.sourceforge.net/git/gitweb.cgi?p=phpmyadmin/phpmyadmin;a=commitdiff;h=${hash}">${hash}</a></li>
     </py:for>
     </ul>

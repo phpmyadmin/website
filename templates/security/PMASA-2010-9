@@ -45,5 +45,13 @@ href="http://www.exploit-db.com/exploits/15699/">Tiger Security Team</a>.
 aa6fec0532a9dd48d4e35831c1b1c9785c124dd7
 </py:def>
 
+<py:def function="announcement_commits_3_3">
+9ebd401b0ea4efea8ddc8cd846da559bf420ccaa
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+b01a58118f973f98ab99a4bb28d340af49fa251f
+</py:def>
+
 <xi:include href="_page.tpl" />
 </html>
