@@ -18,6 +18,10 @@
     <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate to phpMyAdmin</a></span>
 </div>
 
+<div class="rightbutton">
+    <span class="dlname"><a href="http://wiki.phpmyadmin.net/pma/Theme_Contest" title="phpMyAdmin is choosing new theme, it can be yours!">Theme contest!</a></span>
+</div>
+
 </div>
 
 </html>
