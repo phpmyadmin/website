@@ -133,7 +133,7 @@ div.rightbutton {
     margin-top: 1em;
     margin-bottom: 1em;
     margin-right: 2em;
-    border: 1px solid #8dea34;
+    border: 1px solid white;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -142,6 +142,16 @@ div.rightbutton {
     font-weight: bolder;
     width: 12em;
     text-align: center;
+    -moz-box-shadow:0px 0px 8px #AAA;
+    -webkit-box-shadow:0px 0px 8px #AAA;
+    box-shadow:0px 0px 8px #AAA;
+    -webkit-transition:-webkit-box-shadow 0.1s ease-out;
+    -moz-transition:-webkit-box-shadow 0.1s ease-out;
+    -o-transition:-webkit-box-shadow 0.1s ease-out;
+    transition:-webkit-box-shadow 0.1s ease-out;
+}
+div.rightbutton:hover {
+    background-color: #8dea34;
 }
 
 div.rightbutton a {
