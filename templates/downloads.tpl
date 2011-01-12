@@ -100,7 +100,7 @@
     <p>
         Ubuntu ships phpMyAdmin package, however if you want to use recent
         version, you can use packages from <a
-        href="https://launchpad.net/~nijel/+archive/">PPA for Michal
+        href="https://launchpad.net/~nijel/+archive/phpmyadmin">PPA for Michal
         Čihař</a>.
     </p>
     <h3>Gentoo</h3>
