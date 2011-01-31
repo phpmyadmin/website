@@ -10,7 +10,7 @@
 We invite you to <a href="https://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> to our project (or just send money using PayPal to donate@phpmyadmin.net).
 </p>
 <p>
-Alternatively you can appreciate our work using <a href="https://flattr.com/thing/98525/phpMyAdmin">Flattr</a>.
+Alternatively you can appreciate our work using <a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>.
 </p>
 <p>
 Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
