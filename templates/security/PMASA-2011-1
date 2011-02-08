@@ -47,6 +47,15 @@ Thanks to MustLive from <a href="http://websecurity.com.ua">Websecurity</a>
 <py:def function="announcement_cwe">661 200</py:def>
 
 <py:def function="announcement_commits">
+035d002db1e1201e73e560d7d98591563b506a83
+</py:def>
+
+<py:def function="announcement_commits_3_3">
+4c8c7080a76b837ae55cdc5e010c793b389a671a
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+f0e8849034132e2114f1d77d9d37185bc5b49886
 </py:def>
 
 <xi:include href="_page.tpl" />
