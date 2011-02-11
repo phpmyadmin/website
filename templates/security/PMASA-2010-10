@@ -23,7 +23,7 @@ installation.
 </py:def>
 
 <py:def function="announcement_mitigation">
-Default installation is not affected, because $cfg['ShowPhpInfo'] is false by
+Default installation is not affected, because $$cfg['ShowPhpInfo'] is false by
 default.
 </py:def>
 
