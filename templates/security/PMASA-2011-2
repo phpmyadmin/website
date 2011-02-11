@@ -42,7 +42,7 @@ This issue was found by <a href="http://cihar.com/">Michal Čihař</a>.
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-201x-xxxx</py:def>
+<py:def function="announcement_cve">CVE-2011-0987</py:def>
 
 <py:def function="announcement_cwe">661 89</py:def>
 
