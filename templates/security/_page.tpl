@@ -25,9 +25,9 @@
     <h3>Severity</h3>
     <p>${announcement_severity()}</p>
 
-    <py:if test="defined('announcement_mitigiation')">
+    <py:if test="defined('announcement_mitigation')">
     <h3>Mitigation factor</h3>
-    <p>${announcement_mitigiation()}</p>
+    <p>${announcement_mitigation()}</p>
     </py:if>
 
     <h3>Affected Versions</h3>
