@@ -1,0 +1,58 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2011-2
+</py:def>
+
+<py:def function="announcement_date">
+2011-02-11
+</py:def>
+
+<py:def function="announcement_summary">
+SQL query could be executed under another user.
+</py:def>
+
+<py:def function="announcement_description">
+It was possible to create a bookmark which would be executed unintentionally by other users.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+To use this vulnerability, phpMyAdmin configuration storage needs to be
+set up and enabled and bookmarks function needs to be enabled.
+</py:def>
+
+<py:def function="announcement_affected">
+The 2.11.x and 3.3.x versions are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.3.9.2 or newer (2.11.11.3 or newer for the older
+family) or apply the related patch listed below.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+This issue was found by <a href="http://cihar.com/">Michal Čihař</a>.
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-201x-xxxx</py:def>
+
+<py:def function="announcement_cwe">661 89</py:def>
+
+<py:def function="announcement_commits">
+a5464b4daff0059cdf8c9e5f4d54a80e2dd2a5b0
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+2fa4c8d97a92ae0d4e2051d5d18a18688c31f84f
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
