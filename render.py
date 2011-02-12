@@ -235,6 +235,10 @@ class SFGenerator:
             text += ' First beta version.'
         elif version.find('beta2') != -1:
             text += ' Second beta version.'
+        elif version.find('beta3') != -1:
+            text += ' Third beta version.'
+        elif version.find('beta4') != -1:
+            text += ' Fourth beta version.'
         elif version.find('beta') != -1:
             helper.log.warn('Generic beta: %s' % version)
             text += ' Beta version.'
