@@ -8,6 +8,10 @@ PMASA-2010-10
 2010-12-07
 </py:def>
 
+<py:def function="announcement_updated">
+2010-02-16
+</py:def>
+
 <py:def function="announcement_summary">
 Possible information disclosure.
 </py:def>
@@ -32,7 +36,9 @@ All versions prior to 3.4.0-beta1.
 </py:def>
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 3.4.0-beta1 or newer or apply patch listed below.
+Upgrade to phpMyAdmin 3.4.0-beta1 or newer or apply patch listed below. Due
+to its minor impact, a fix will be included in the next regular release
+which is 3.3.10.
 </py:def>
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
