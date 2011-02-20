@@ -53,6 +53,7 @@ MAP = {
     'lt' : 'lithuanian',
     'lv' : 'latvian',
     'mk' : 'macedonian_cyrillic',
+    'ml' : 'malayalam',
     'mn' : 'mongolian',
     'ms' : 'malay',
     'nl' : 'dutch',
