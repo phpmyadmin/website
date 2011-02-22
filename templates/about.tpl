@@ -68,10 +68,7 @@ database it manages and administration as the activity it handles. Even thought
 the name seems to be quite simple, many people mix it up and they refer to
 phpMyAdmin under different names, such as myphpadmin, phpadmin, phpmysqladmin
 (these are three most frequent Google searches going to this website besides
-correctly spelled variant). Just to avoid confusion <a
-href="http://phpminadmin.sourceforge.net/">phpMinAdmin</a> is a completely
-different project, which has been started in 2007 as a minimalistic
-alternative to <a href="http://www.phpmyadmin.net/">phpMyAdmin</a>.
+correctly spelled variant).
 </p>
 
 <h2>Factoids</h2>
