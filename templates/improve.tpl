@@ -124,7 +124,8 @@ translation in <code>po</code> directory in phpMyAdmin sources. You can
 translate them using usual tools for handling Gettext translations or use our
 <a href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>.
 More information about translating can be found in
-<a href="http://www.phpmyadmin.net/documentation/#faq7_2">FAQ 7.2</a>.
+<a href="http://www.phpmyadmin.net/documentation/#faq7_2">FAQ 7.2</a>. The more
+detailed documentation can be found on our <a href="http://wiki.phpmyadmin.net/pma/Translating">wiki</a>.
 </p>
 
 <p>
