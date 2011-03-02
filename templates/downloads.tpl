@@ -70,15 +70,11 @@
 
     <h2>Older Releases</h2>
     <p>
-    You can find some older releases on <a
+    You can find older releases on <a
     href="https://sourceforge.net/projects/phpmyadmin/files/">SourceForge
-    files page</a>. If you want to see other releases, you need to get them 
+    files page</a>. You can also get them 
     from our Git repository (check <a href="${base_url}improve.${file_ext}#devel">developer information</a> for instructions).
     </p>
-    <py:for each="release in releases_older">
-    <h3>${release.fullname}</h3>
-    <xi:include href="_release.tpl" />
-    </py:for>
 
     <h2><a id="distributions"></a>Distributions</h2>
     <h3>Debian</h3>
