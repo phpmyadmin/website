@@ -227,7 +227,9 @@ class SFGenerator:
         '''
         Returns description to the phpMyAdmin version.
         '''
-        if version[:2] == '2.':
+        if version[:2] == '1.':
+            text ='Historical release.'
+        elif version[:2] == '2.':
             text ='Version compatible with PHP 4+ and MySQL 3+.'
         elif version[:2] == '3.':
             text = 'Version compatible with PHP 5 and MySQL 5.'
@@ -425,6 +427,9 @@ class SFGenerator:
         for stable in outversions.keys():
             version = releases[outversions[stable]]['version']
             major_branch = MAJOR_BRANCH_REGEXP.match(version).group(1)
+            if major_branch == '1':
+                del outversions[stable]
+                continue
             for check in outversions.keys():
                 try:
                     check_version = releases[outversions[check]]['version']
