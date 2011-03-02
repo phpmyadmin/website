@@ -188,7 +188,25 @@ THEMES = {
         'support' : '3.3',
         'info': u'Clean, modern and easy to use phpMyAdmin theme.',
         'author': 'Mike Homme',
-    }
+    },
+    'toba-0.1' : {
+        'name' : 'Toba',
+        'support' : '3.4',
+        'info' : u'Light blue theme',
+        'author': u'Azhari Harahap',
+    },
+    'graphite-0.9' : {
+        'name' : 'Graphite',
+        'support' : '3.4',
+        'info' : u'Light grey theme using Tango icons',
+        'author': u'Michal Čihař',
+    },
+    'darkblue_orange-2.9' : {
+        'name' : 'Darkblue/orange',
+        'support' : '3.4',
+        'info' : u'Theme included in phpMyAdmin up to 3.3',
+        'author': u'Various contributors',
+    },
 }
 TEMPLATE = {
     '' : {
