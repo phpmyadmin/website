@@ -46,6 +46,11 @@ href="http://en.wikipedia.org/wiki/Git_software">Wikipedia</a> or
 reference in the comprehensive book <a href="http://progit.org/">Pro Git</a>.
 </p>
 
+<p>
+You can find more information for developers on our 
+<a href="http://wiki.phpmyadmin.net/pma/Development">wiki</a>.
+</p>
+
 <h3>Contributing code</h3>
 <p>
 Once you have coded an improvement and you are ready to submit it to us,
