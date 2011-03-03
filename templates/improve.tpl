@@ -58,7 +58,7 @@ through improving the patch.
 <h3>Simple tasks to start</h3>
 <p>
 If you are looking for some simple task where you can start, check out
-our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Devel:Junior">junior 
+our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Tasks_for_junior_developers">junior
 jobs</a> where you can find some tips where to look.
 </p>
 
