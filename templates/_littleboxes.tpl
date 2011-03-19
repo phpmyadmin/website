@@ -19,7 +19,7 @@
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="http://wiki.phpmyadmin.net/pma/Theme_Contest" title="phpMyAdmin is choosing new theme, it can be yours!">Theme contest!</a></span>
+    <span class="dlname"><a href="http://wiki.phpmyadmin.net/pma/GSoC_2011_Applicant_Guide" title="Google Summer of Code 2011">GSoC 2011</a></span>
 </div>
 
 </div>
