@@ -252,6 +252,7 @@ div.filedetails {
 
 p.date {
     font-size: smaller;
+    clear: both;
 }
 
 p.comments {
