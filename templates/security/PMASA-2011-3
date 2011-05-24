@@ -42,7 +42,7 @@ This issue was found by a person who wishes to be known as "dave b".
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-2011-XXXX</py:def>
+<py:def function="announcement_cve">CVE-2011-1940</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
