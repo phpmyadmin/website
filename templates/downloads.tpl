@@ -79,11 +79,11 @@
     <h2><a id="distributions"></a>Distributions</h2>
     <h3>Debian</h3>
     <p>
-        Debian's package repositories include a phpMyAdmin package, but be aware
-        that the configuration file is maintained in /etc/phpmyadmin and may
-        differ in some ways from the official phpMyAdmin documentation. The
-	package maintainer often visits the official IRC channel (#phpmyadmin on
-	irc.freenode.net).
+        Debian's package repositories include a phpMyAdmin package, but be
+        aware that the configuration file is maintained in
+        <code>/etc/phpmyadmin</code> and may differ in some ways from the
+        official phpMyAdmin documentation. The package maintainer often visits
+        the official IRC channel (#phpmyadmin on irc.freenode.net).
     </p>
     <h3>OpenSUSE</h3>
     <p>
