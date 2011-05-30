@@ -111,6 +111,25 @@
         and can be installed via the usual Control Center. 
     </p>
 
+    <h3>Fedora</h3>
+    <p>
+        Fedora ships the phpMyAdmin package, but be aware that the
+        configuration file is maintained in <code>/etc/phpMyAdmin/</code> and
+        may differ in some ways from the official phpMyAdmin documentation.
+    </p>
+
+    <h3>Red Hat Enterprise Linux</h3>
+    <p>
+        Red Hat Enterprise Linux itself and thus derivates like CentOS don't
+        ship phpMyAdmin, but the Fedora-driven repository <a
+        href="http://fedoraproject.org/wiki/EPEL">Extra Packages for Enterprise
+        Linux</a> (EPEL) is doing so, if it's <a
+        href="http://fedoraproject.org/wiki/EPEL/FAQ#howtouse">enabled</a>.
+        But be aware that the configuration file is maintained in
+        <code>/etc/phpMyAdmin/</code> and may differ in some ways from the
+        official phpMyAdmin documentation.
+    </p>
+
     <h3>Amahi Linux Home Server</h3>
     <p>
         phpMyAdmin is available as a one-click install on the <a href="http://www.amahi.org/apps">Amahi Home Server</a>. 
