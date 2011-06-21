@@ -57,6 +57,7 @@ development in 2001.
 <li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.1.0">3.1.0</a> (November 28, 2008): Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
 <li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.2">3.2.0</a> (June 9, 2009): Added many small features.</li>
 <li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.3">3.3.0</a> (March 7, 2010): Added new import and export modules, changes tracking, synchronization and support for replication configuration.</li>
+<li>3.4.0 (May 11, 2011): AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
 </ul>
 
 
