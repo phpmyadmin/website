@@ -25,6 +25,7 @@ MAP = {
     'be' : 'belarusian_cyrillic',
     'be@latin' : 'belarusian_latin',
     'bg' : 'bulgarian',
+    'br' : 'breton',
     'bs' : 'bosnian',
     'ca' : 'catalan',
     'cs' : 'czech',
