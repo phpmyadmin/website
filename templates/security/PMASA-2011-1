@@ -9,7 +9,7 @@ PMASA-2011-1
 </py:def>
 
 <py:def function="announcement_summary">
-Path disclosure when some files have been removed
+Path disclosure when some files have been removed.
 </py:def>
 
 <py:def function="announcement_description">

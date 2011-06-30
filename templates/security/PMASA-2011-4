@@ -11,7 +11,7 @@ PMASA-2011-4
 </py:def>
 
 <py:def function="announcement_summary">
-URL redirection to untrusted site
+URL redirection to untrusted site.
 </py:def>
 
 <py:def function="announcement_description">
