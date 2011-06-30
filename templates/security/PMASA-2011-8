@@ -15,7 +15,7 @@ Possible directory traversal.
 </py:def>
 
 <py:def function="announcement_description">
-Fixed filtering of a file path in the mime-type transformation code, which allowed for directory traversal.
+Fixed filtering of a file path in the MIME-type transformation code, which allowed for directory traversal.
 </py:def>
 
 <py:def function="announcement_severity">
