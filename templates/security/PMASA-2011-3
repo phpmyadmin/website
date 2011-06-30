@@ -11,7 +11,7 @@ PMASA-2011-3
 </py:def>
 
 <py:def function="announcement_summary">
-XSS vulnerability on Tracking page
+XSS vulnerability on Tracking page.
 </py:def>
 
 <py:def function="announcement_description">
