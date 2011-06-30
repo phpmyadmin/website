@@ -3,7 +3,7 @@
 
 
 <py:def function="announcement_id">
-PMASA-2011-5
+PMASA-2011-7
 </py:def>
 
 <py:def function="announcement_date">
@@ -11,16 +11,19 @@ PMASA-2011-5
 </py:def>
 
 <py:def function="announcement_summary">
-Possible session manipulation in swekey authentication
+Regular expression quoting issue in Synchronize code
 </py:def>
 
 <py:def function="announcement_description">
-It was possible to manipulate the PHP session array using some of the swekey authentication code.
-This could open a path for other attacks.
+Through a possible bug in PHP running on Windows systems a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute it's second argument as PHP code.
 </py:def>
 
 <py:def function="announcement_severity">
 We consider this vulnerability to be serious.
+</py:def>
+
+<py:def function="announcement_mitigation">
+Only PHP running on Windows has been found to be vulnerable, Linux and OpenBSD are not affected.
 </py:def>
 
 <py:def function="announcement_affected">
@@ -41,13 +44,13 @@ This issue was found by .....
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-2011-2505</py:def>
+<py:def function="announcement_cve">CVE-2011-2507</py:def>
 
 <py:def function="announcement_cwe">661</py:def>
 
 <py:def function="announcement_commits">
-6e6e129f26295c83d67b74e202628a4b8bc49e54
-7ebd958b2bf59f96fecd5b3322bdbd0b244a7967
+ca74f480f119a53ef07ca40d2ab28f063cc89ec9
+69fb0f8e7dc38075427aceaf09bcac697d0590ff
 </py:def>
 
 <xi:include href="_page.tpl" />

@@ -3,7 +3,7 @@
 
 
 <py:def function="announcement_id">
-PMASA-2011-5
+PMASA-2011-6
 </py:def>
 
 <py:def function="announcement_date">
@@ -11,12 +11,13 @@ PMASA-2011-5
 </py:def>
 
 <py:def function="announcement_summary">
-Possible session manipulation in swekey authentication
+Possible code injection in setup script incase session variables are compromised
 </py:def>
 
 <py:def function="announcement_description">
-It was possible to manipulate the PHP session array using some of the swekey authentication code.
-This could open a path for other attacks.
+A unsanitized key from the Servers array is written in a comment of the generated config.
+An attacker can modify this key by modifying the $_SESSION array.
+This allows the attacker to close the comment and inject code.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -41,13 +42,13 @@ This issue was found by .....
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-2011-2505</py:def>
+<py:def function="announcement_cve">CVE-2011-2506</py:def>
 
 <py:def function="announcement_cwe">661</py:def>
 
 <py:def function="announcement_commits">
-6e6e129f26295c83d67b74e202628a4b8bc49e54
-7ebd958b2bf59f96fecd5b3322bdbd0b244a7967
+2e01647949df937040e73a94ce0bac0daecbdcf4
+0fbedaf5fd7a771d0885c6b7385d934fc90d0d7f
 </py:def>
 
 <xi:include href="_page.tpl" />
