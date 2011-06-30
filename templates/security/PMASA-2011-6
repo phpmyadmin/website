@@ -11,7 +11,7 @@ PMASA-2011-6
 </py:def>
 
 <py:def function="announcement_summary">
-Possible code injection in setup script in case session variables are compromised
+Possible code injection in setup script in case session variables are compromised.
 </py:def>
 
 <py:def function="announcement_description">

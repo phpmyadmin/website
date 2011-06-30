@@ -11,7 +11,7 @@ PMASA-2011-5
 </py:def>
 
 <py:def function="announcement_summary">
-Possible session manipulation in Swekey authentication
+Possible session manipulation in Swekey authentication.
 </py:def>
 
 <py:def function="announcement_description">
