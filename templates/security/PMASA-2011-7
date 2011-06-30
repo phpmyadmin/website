@@ -15,7 +15,7 @@ Regular expression quoting issue in Synchronize code
 </py:def>
 
 <py:def function="announcement_description">
-Through a possible bug in PHP running on Windows systems a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute it's second argument as PHP code.
+Through a possible bug in PHP running on Windows systems a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute its second argument as PHP code.
 </py:def>
 
 <py:def function="announcement_severity">

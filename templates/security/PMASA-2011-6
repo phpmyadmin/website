@@ -11,11 +11,11 @@ PMASA-2011-6
 </py:def>
 
 <py:def function="announcement_summary">
-Possible code injection in setup script incase session variables are compromised
+Possible code injection in setup script in case session variables are compromised
 </py:def>
 
 <py:def function="announcement_description">
-A unsanitized key from the Servers array is written in a comment of the generated config.
+An unsanitized key from the Servers array is written in a comment of the generated config.
 An attacker can modify this key by modifying the $_SESSION array.
 This allows the attacker to close the comment and inject code.
 </py:def>

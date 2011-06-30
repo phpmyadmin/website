@@ -11,11 +11,11 @@ PMASA-2011-5
 </py:def>
 
 <py:def function="announcement_summary">
-Possible session manipulation in swekey authentication
+Possible session manipulation in Swekey authentication
 </py:def>
 
 <py:def function="announcement_description">
-It was possible to manipulate the PHP session array using some of the swekey authentication code.
+It was possible to manipulate the PHP session superglobal using some of the Swekey authentication code.
 This could open a path for other attacks.
 </py:def>
 
