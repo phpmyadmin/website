@@ -49,8 +49,11 @@ This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB<
 <py:def function="announcement_cwe">661</py:def>
 
 <py:def function="announcement_commits">
-ca74f480f119a53ef07ca40d2ab28f063cc89ec9
 69fb0f8e7dc38075427aceaf09bcac697d0590ff
+</py:def>
+
+<py:def function="announcement_commits_3_3">
+ca74f480f119a53ef07ca40d2ab28f063cc89ec9
 </py:def>
 
 <xi:include href="_page.tpl" />
