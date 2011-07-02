@@ -38,7 +38,7 @@ This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB<
 <!--! CVE ID of the report, this is automatically added to references -->
 <py:def function="announcement_cve">CVE-2011-2508</py:def>
 
-<py:def function="announcement_cwe">661</py:def>
+<py:def function="announcement_cwe">661 98</py:def>
 
 <py:def function="announcement_commits">
 b434320eff8ca9c2fc1b043c1804f868341af9a7
