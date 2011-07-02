@@ -21,7 +21,7 @@ This allows the attacker to close the comment and inject code.
 </py:def>
 
 <py:def function="announcement_severity">
-We consider this vulnerability to be serious.
+We consider this vulnerability to be non critical.
 </py:def>
 
 <py:def function="announcement_affected">
