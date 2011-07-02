@@ -37,7 +37,7 @@ Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed belo
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
-This issue was found by ..... 
+This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
