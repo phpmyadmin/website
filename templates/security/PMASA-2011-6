@@ -1,0 +1,58 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2011-6
+</py:def>
+
+<py:def function="announcement_date">
+2011-07-xx
+</py:def>
+
+<py:def function="announcement_summary">
+Possible code injection in setup script in case session variables are compromised.
+</py:def>
+
+<py:def function="announcement_description">
+An unsanitized key from the Servers array is written in a comment of the generated config.
+An attacker can modify this key by modifying the $_SESSION array.
+This allows the attacker to close the comment and inject code.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_affected">
+The 3.4.3 and earlier versions are affected.
+</py:def>
+
+<py:def function="announcement_unaffected">
+Branch 2.11.x is not affected by this.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2011-2506</py:def>
+
+<py:def function="announcement_cwe">661 116</py:def>
+
+<py:def function="announcement_commits">
+0fbedaf5fd7a771d0885c6b7385d934fc90d0d7f
+</py:def>
+
+<py:def function="announcement_commits_3_3">
+2e01647949df937040e73a94ce0bac0daecbdcf4
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>

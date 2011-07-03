@@ -1,0 +1,60 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2011-7
+</py:def>
+
+<py:def function="announcement_date">
+2011-07-xx
+</py:def>
+
+<py:def function="announcement_summary">
+Regular expression quoting issue in Synchronize code.
+</py:def>
+
+<py:def function="announcement_description">
+Through a possible bug in PHP running on Windows systems a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute its second argument as PHP code.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be serious.
+</py:def>
+
+<py:def function="announcement_mitigation">
+Only PHP running on Windows has been found to be vulnerable, Linux and OpenBSD are not affected.
+</py:def>
+
+<py:def function="announcement_affected">
+The 3.4.3 and earlier versions are affected.
+</py:def>
+
+<py:def function="announcement_unaffected">
+Branch 2.11.x is not affected by this.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2011-2507</py:def>
+
+<py:def function="announcement_cwe">661</py:def>
+
+<py:def function="announcement_commits">
+69fb0f8e7dc38075427aceaf09bcac697d0590ff
+</py:def>
+
+<py:def function="announcement_commits_3_3">
+ca74f480f119a53ef07ca40d2ab28f063cc89ec9
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
