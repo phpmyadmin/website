@@ -10,12 +10,16 @@ PMASA-2011-7
 2011-07-02
 </py:def>
 
+<py:def function="announcement_updated">
+2011-07-03
+</py:def>
+
 <py:def function="announcement_summary">
 Regular expression quoting issue in Synchronize code.
 </py:def>
 
 <py:def function="announcement_description">
-Through a possible bug in PHP running on Windows systems a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute its second argument as PHP code.
+Through a possible bug in PHP, a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute its second argument as PHP code.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -23,7 +27,9 @@ We consider this vulnerability to be serious.
 </py:def>
 
 <py:def function="announcement_mitigation">
-Only PHP running on Windows has been found to be vulnerable, Linux and OpenBSD are not affected.
+All PHP versions that were current at the time of the advisory (5.3.6,
+5.2.17) on all OS are vulnerable, unless the Suhosin patch has been
+installed.
 </py:def>
 
 <py:def function="announcement_affected">
