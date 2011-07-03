@@ -16,7 +16,7 @@ Possible code injection in setup script in case session variables are compromise
 
 <py:def function="announcement_description">
 An unsanitized key from the Servers array is written in a comment of the generated config.
-An attacker can modify this key by modifying the $_SESSION array.
+An attacker can modify this key by modifying the SESSION superglobal array.
 This allows the attacker to close the comment and inject code.
 </py:def>
 
