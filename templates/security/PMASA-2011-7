@@ -11,7 +11,7 @@ PMASA-2011-7
 </py:def>
 
 <py:def function="announcement_updated">
-2011-07-03
+2011-07-04
 </py:def>
 
 <py:def function="announcement_summary">
@@ -30,6 +30,8 @@ We consider this vulnerability to be serious.
 All PHP versions that were current at the time of the advisory (5.3.6,
 5.2.17) on all OS are vulnerable, unless the Suhosin patch has been
 installed.
+
+An attacker must be logged in via phpMyAdmin to exploit this problem.
 </py:def>
 
 <py:def function="announcement_affected">
