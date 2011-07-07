@@ -109,6 +109,14 @@ And finally rsync it to sourceforge:
 
 rsync -az --delete output/ user,phpmyadmin@web.sourceforge.net:htdocs/home_page/
 
+Automatic build
+---------------
+
+There is configured automatic build of website, which runs every hour.
+In case website is not updated, you might want to check the build log
+for any possible failures:
+
+http://www.phpmyadmin.net/home_page/render.log
 
 License
 -------
