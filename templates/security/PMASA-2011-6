@@ -38,7 +38,8 @@ Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed belo
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
-This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>
+This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>.
+<a href="http://www.xxor.se/advisories/phpMyAdmin_3.x_Multiple_Remote_Code_Executions.txt">His advisory.</a>
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
