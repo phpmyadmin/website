@@ -26,6 +26,10 @@ We consider this vulnerability to be serious.
 The 3.4.3 and earlier versions are affected.
 </py:def>
 
+<py:def function="announcement_unaffected">
+Branch 2.11.x is not affected by this.
+</py:def>
+
 <py:def function="announcement_solution">
 Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.
 </py:def>
