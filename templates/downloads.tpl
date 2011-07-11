@@ -22,9 +22,8 @@
     <p>
     If you do not have a package available or desire to install your own phpMyAdmin,
     you can download one of following
-    source packages. Please note that 3.x versions require at least PHP 5.2
-    and MySQL 5 to use them. If you are using older versions, please choose
-    the 2.x branch, which is still supported for security fixes.
+    source packages. Please note that phpMyAdmin requires at least PHP 5.2
+    and MySQL 5.
     </p>
 
     <py:for each="release in releases">
