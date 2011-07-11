@@ -427,7 +427,7 @@ class SFGenerator:
         for stable in outversions.keys():
             version = releases[outversions[stable]]['version']
             major_branch = MAJOR_BRANCH_REGEXP.match(version).group(1)
-            if major_branch == '1':
+            if major_branch in ['1', '2']:
                 del outversions[stable]
                 continue
             for check in outversions.keys():
