@@ -50,6 +50,12 @@ This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB<
 
 <py:def function="announcement_commits">
 e7bb42c002885c2aca7aba4d431b8c63ae4de9b7
+571cdc6ff4bf375871b594f4e06f8ad3159d1754
+</py:def>
+
+<py:def function="announcement_commits_3_3">
+f6f6ee3f1171addb166fa18e75a0b56599bf374c
+630b8260be45eb9b211f5d7628dbb9e5c1b05bc6
 </py:def>
 
 <xi:include href="_page.tpl" />
