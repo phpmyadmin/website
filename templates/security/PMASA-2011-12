@@ -1,0 +1,56 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2011-12
+</py:def>
+
+<py:def function="announcement_date">
+2011-07-XX
+</py:def>
+
+<py:def function="announcement_summary">
+Possible session manipulation in swekey authentication.
+<p/y:def>
+
+<py:def function="announcement_description">
+It was possible to manipulate the PHP session superglobal using some of the Swekey authentication code.
+This is very similar to PMASA-2011-5. 
+</py:def>
+
+<py:def function="announcement_severity">SA-2011-5
+We consider this vulnerability to be critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+</py:def>
+
+<py:def function="announcement_affected">
+The 3.4.3.1 and earlier versions are affected.
+</py:def>
+
+<py:def function="announcement_unaffected">
+Branch 2.11.x is not affected by this.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2011-XXXX</py:def>
+
+<py:def function="announcement_cwe">661 473</py:def>
+
+<py:def function="announcement_commits">
+e7bb42c002885c2aca7aba4d431b8c63ae4de9b7
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
