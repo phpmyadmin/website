@@ -15,7 +15,7 @@ Fixed local file inclusion vulnerability and code execution.
 </py:def>
 
 <py:def function="announcement_description">
-In the 'relational schema' code a parameter was not satitised before being used to concatenate a class name.
+In the 'relational schema' code a parameter was not sanitized before being used to concatenate a class name.
 </py:def>
 
 <py:def function="announcement_severity">
