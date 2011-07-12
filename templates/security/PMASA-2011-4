@@ -23,6 +23,10 @@ a possible phishing attack.
 We consider this vulnerability to be serious.
 </py:def>
 
+<py:def function="announcement_unaffected">
+Older releases than 3.4.0 are not affected.
+</py:def>
+
 <py:def function="announcement_affected">
 The 3.4.0 version is affected.
 </py:def>

@@ -32,6 +32,10 @@ relates to the crafted table.
 The 3.3.x and 3.4.0 versions are affected.
 </py:def>
 
+<py:def function="announcement_unaffected">
+Older releases than 3.3.0 are not affected.
+</py:def>
+
 <py:def function="announcement_solution">
 Upgrade to phpMyAdmin 3.3.10.1 or 3.4.1 or apply the related patch listed below.
 </py:def>
