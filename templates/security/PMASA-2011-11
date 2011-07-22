@@ -11,7 +11,7 @@ PMASA-2011-11
 </py:def>
 
 <py:def function="announcement_summary">
-Fixed local file inclusion vulnerability and code execution.
+Local file inclusion vulnerability and code execution.
 </py:def>
 
 <py:def function="announcement_description">
