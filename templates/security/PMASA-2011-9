@@ -31,7 +31,7 @@ The 3.4.3.1 and earlier versions are affected.
 </py:def>
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 3.4.3.2 or apply the related patch listed below.
+Upgrade to phpMyAdmin 3.3.10.3 or 3.4.3.2 or apply the related patch listed below.
 </py:def>
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
