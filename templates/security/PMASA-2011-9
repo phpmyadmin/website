@@ -47,7 +47,10 @@ This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/"
 <py:def function="announcement_commits">
 a0823be05aa5835f207c0838b9cca67d2d9a050a
 4bd27166c314faa37cada91533b86377f4d4d214
+</py:def>
 
+<py:def function="announcement_commits_3_3">
+8ac8328229ae7493d6060b6272578d85879c698d
 </py:def>
 
 <xi:include href="_page.tpl" />
