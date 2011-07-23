@@ -12,7 +12,7 @@ PMASA-2011-12
 
 <py:def function="announcement_summary">
 Possible session manipulation in swekey authentication.
-<p/y:def>
+</py:def>
 
 <py:def function="announcement_description">
 It was possible to manipulate the PHP session superglobal using some of the Swekey authentication code.
