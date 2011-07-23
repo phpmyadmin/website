@@ -40,7 +40,7 @@ Upgrade to phpMyAdmin 3.3.10.3 or 3.4.3.2 or apply the related patch listed belo
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
-This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>
+This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB</a>.<a href="http://www.xxor.se/advisories/phpMyAdmin_3.x_Conditional_Session_Manipulation.txt">His first advisory.</a><a href="http://www.xxor.se/advisories/phpMyAdmin_3.x_Authenticated_Local_File_Inclusion.txt">His second advisory.</a>
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
