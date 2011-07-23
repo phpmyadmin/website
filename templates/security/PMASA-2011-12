@@ -7,7 +7,7 @@ PMASA-2011-12
 </py:def>
 
 <py:def function="announcement_date">
-2011-07-XX
+2011-07-23
 </py:def>
 
 <py:def function="announcement_summary">
@@ -19,7 +19,7 @@ It was possible to manipulate the PHP session superglobal using some of the Swek
 This is very similar to PMASA-2011-5. 
 </py:def>
 
-<py:def function="announcement_severity">SA-2011-5
+<py:def function="announcement_severity">
 We consider this vulnerability to be critical.
 </py:def>
 
@@ -35,7 +35,7 @@ Branch 2.11.x is not affected by this.
 </py:def>
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.
+Upgrade to phpMyAdmin 3.3.10.3 or 3.4.3.2 or apply the related patch listed below.
 </py:def>
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
@@ -44,7 +44,6 @@ This issue was found by Frans Pehrson from <a href="http://www.xxor.se">Xxor AB<
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-2011-XXXX</py:def>
 
 <py:def function="announcement_cwe">661 473</py:def>
 

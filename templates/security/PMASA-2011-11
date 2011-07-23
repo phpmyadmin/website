@@ -7,7 +7,7 @@ PMASA-2011-11
 </py:def>
 
 <py:def function="announcement_date">
-2011-07-XX
+2011-07-23
 </py:def>
 
 <py:def function="announcement_summary">
@@ -40,7 +40,6 @@ This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/"
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-2011-XXXX</py:def>
 
 <py:def function="announcement_cwe">661 98</py:def>
 
