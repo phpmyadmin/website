@@ -11,7 +11,7 @@ PMASA-2011-13
 </py:def>
 
 <py:def function="announcement_summary">
-Multiple XSS in the Tracking feature.
+Multiple XSS in the Tracking feature and Data Dictionary.
 </py:def>
 
 <py:def function="announcement_description">
@@ -36,7 +36,7 @@ Upgrade to phpMyAdmin 3.3.10.4 or 3.4.4 or apply the related patch listed below.
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
-This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/">The-Wildcat.de</a>
+This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/">The-Wildcat.de</a> and Nils Juenemann
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
@@ -44,6 +44,7 @@ This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/"
 <py:def function="announcement_cwe">661 98</py:def>
 
 <py:def function="announcement_commits">
+c45f4208d734de08a7c8e99cf0679e8a888e0ab4
 f00c57bdf3669d7471b30e6750f6762d2e01947b
 4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d
 c547703b1089bff62b238a908d8559ca3ad845f1
@@ -56,6 +57,7 @@ ec848d825ffe896b96b6c3e4b8c7d4c12aadd310
 </py:def>
 
 <py:def function="announcement_commits_3_3">
+c79375598d46552fc1717f798a6560f9a1cdc102
 a5716cb3892f1714a97d8808cde9229ccc8752c8
 4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d
 ae20845e36e0e019715842c71eed9e4a9ff99223
