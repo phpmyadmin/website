@@ -40,6 +40,7 @@ This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/"
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2011-3181</py:def>
 
 <py:def function="announcement_cwe">661 98</py:def>
 
