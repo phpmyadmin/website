@@ -1,0 +1,70 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2011-13
+</py:def>
+
+<py:def function="announcement_date">
+2011-08-24
+</py:def>
+
+<py:def function="announcement_summary">
+Multiple XSS in the Tracking feature.
+</py:def>
+
+<py:def function="announcement_description">
+Missing sanitization on the table, column and index names leads to XSS vulnerabilities.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be serious.
+</py:def>
+
+<py:def function="announcement_mitigation">
+An attacker must be logged in via phpMyAdmin to exploit this problem.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.3.0 to 3.4.3.2 are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.3.10.4 or 3.4.4 or apply the related patch listed below.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+This issue was found by Norman Hippert from <a href="http://www.the-wildcat.de/">The-Wildcat.de</a>.
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2011-3181</py:def>
+
+<py:def function="announcement_cwe">661 98</py:def>
+
+<py:def function="announcement_commits">
+f00c57bdf3669d7471b30e6750f6762d2e01947b
+4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d
+c547703b1089bff62b238a908d8559ca3ad845f1
+b659fbeb128b3235738d6fd787cab096ddc3a591
+0f5f2d960184db7333ecf7d52da406cae306412b
+39edf6e1fbe4a39f6fec0919d60eca5dfc2708ff
+3d8fddceb0f084d4b77c58c48a98e002db6baa6a
+2b0d12b2deb1b6b5c4073ecaa7971cb0bbb83389
+ec848d825ffe896b96b6c3e4b8c7d4c12aadd310
+</py:def>
+
+<py:def function="announcement_commits_3_3">
+a5716cb3892f1714a97d8808cde9229ccc8752c8
+4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d
+ae20845e36e0e019715842c71eed9e4a9ff99223
+e11e55cb0689b4a6de5f0d996166668a47f96da9
+9d54e57fc8946db9b04666a93541871c80867fe7
+c78da1582799f35c8f12ca930062ea987a350282
+a6c8a8fe8ac03f4f36e5aaa7f7fb3bf0e11654f8
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
