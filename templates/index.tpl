@@ -60,12 +60,11 @@ at least PHP 5.2 and MySQL 5.
 <p>
 phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
 Among others, it was chosen as the best PHP application in various awards and
-every year wins the SourceForge.net Community Choice Awards as &quot;Best Tool or
-Utility for SysAdmins&quot;.
+has won every year the SourceForge.net Community Choice Awards as &quot;Best Tool or Utility for SysAdmins&quot;.
 </p>
 
 <p>
-phpMyAdmin is a more than ten years old project with stable and flexible code
+phpMyAdmin is a thirteen-year-old project with a stable and flexible code
 base, to find out more about the project and its history see <a
 href="${base_url}about.${file_ext}">separate page</a>.
 </p>
