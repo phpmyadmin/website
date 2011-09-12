@@ -92,14 +92,14 @@ I am pleased to announce an update of my book. It is now up to date with phpMyAd
 <h3>phpMyAdmin Starter</h3>
 
 <a href="#" title="In the eBook..." onclick="window.open('https://www.packtpub.com/sites/default/files/pmastarter/pmastarterpreview.html','help','scrollbars=yes,resizable=yes,width=680,height=720,left=180,top=20'); return false;">
-    <img width="135" height="170" border="0" src="${base_url}images/packt/pmastarter_cover.png" />
+    <img width="135" height="170" style="border: 0px;" src="${base_url}images/packt/pmastarter_cover.png" />
 </a>
 <p>
 Get started with this quick introduction to phpMyAdmin, its features, and the community. A percentage of each sale goes direct to the phpMyAdmin project.
 </p>
 
 <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=984362&amp;cl=174893&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);">
-	<img src="${base_url}images/packt/addtocart.gif" border="0" alt="Add to Cart"/></a>
+	<img src="${base_url}images/packt/addtocart.gif" style="border: 0px;" alt="Add to Cart"/></a>
 <p class="signature">Marc Delisle</p>
 </div>
 
