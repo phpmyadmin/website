@@ -41,8 +41,7 @@ help.
 <p>
 phpMyAdmin is also very deeply documented in a book written by one of developers
 &ndash; <a href="${base_url}docs.${file_ext}#books">Mastering phpMyAdmin for
-Effective MySQL Management</a>, which is available in English, Czech, German
-and Spanish.
+Effective MySQL Management</a>, which is available in English, Czech and Spanish.
 </p>
 
 <p>
