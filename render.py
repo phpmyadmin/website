@@ -289,7 +289,10 @@ class SFGenerator:
         featured = (FILES_REGEXP.match(filename) is not None)
         if featured:
             helper.log.dbg('Release is featured!')
-        dlcount = item.getElementsByTagName('files:download-count')[0].childNodes[0].data
+        try:
+            dlcount = item.getElementsByTagName('files:download-count')[0].childNodes[0].data
+        except:
+            dlcount = None
         try:
             notes = item.getElementsByTagName('files:release-notes-url')[0].childNodes[0].data
         except:

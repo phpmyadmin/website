@@ -10,7 +10,6 @@
         <th>File</th>
         <th>Size</th>
         <th>MD5 checksum</th>
-        <th>Downloads</th>
     </tr>
 </thead>
 <tbody>
@@ -18,7 +17,6 @@
         <td><a href="${file.url}#!md5!${file.md5}" class="piwik_download">${file.name}</a></td>
         <td class="size">${file.humansize}</td>
         <td>${file.md5}</td>
-        <td class="count">${file.dlcount}</td>
     </tr>
 </tbody>
 </table> 

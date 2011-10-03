@@ -48,6 +48,7 @@ THEMES = {
         'support' : '2.8 - 3.2',
         'info' : u'Small table margins, fontsize and colors are set to be optimal readable and show maximum amount of data on screen.',
         'author': u'Jürgen Wind',
+        'ignore': True,
     },
     'original_small-2.9' : {
         'name' : 'Original small',
@@ -74,6 +75,7 @@ THEMES = {
         'support' : '2.11',
         'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
         'author': u'Andy Scherzinger',
+        'ignore': True,
     },
     'very_small-2.9b' : {
         'name' : 'Very small',
@@ -101,6 +103,7 @@ THEMES = {
         'support' : '2.9 - 2.11',
         'info' : u'New theme with new database icons.',
         'author': u'Michael Keck',
+        'ignore': True,
     },
     'arctic_ocean-3.3' : {
         'name' : 'Arctic Ocean',
@@ -133,12 +136,14 @@ THEMES = {
         'support' : '2.11',
         'info' : u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
+        'ignore': True,
     },
     'crimson_gray-3.1-3.2' : {
         'name' : 'Crimson Gray',
         'support' : '3.1 - 3.2',
         'info' : u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
+        'ignore': True,
     },
     'pixeline-2.10' : {
         'name' : 'Pixeline',
@@ -152,36 +157,42 @@ THEMES = {
         'support' : '2.11',
         'info' : u'By <a href="http://www.pixeline.be">Pixeline</a>.',
         'author': u'Pixeline',
+        'ignore': True,
     },
     'hillside-2.11' : {
         'name' : 'Hillside',
         'support' : '2.11',
         'info' : u'Theme based on Silkline.',
         'author': u'Tim Golen',
+        'ignore': True,
     },
     'hillside-3.0' : {
         'name' : 'Hillside',
         'support' : '3.0 - 3.2',
         'info' : u'Theme based on Silkline.',
         'author': u'Tim Golen',
+        'ignore': True,
     },
     'silkline-2.11' : {
         'name' : 'Silkline',
         'support' : '2.11',
         'info' : u'Theme based on themes Silk and Pixeline.',
         'author': u'Douwe Ikkuh',
+        'ignore': True,
     },
     'xampp-2.11' : {
         'name' : 'XAMPP (Apachefriends.org)',
         'support' : '2.11',
         'info' : u'This theme was built for the XAMPP-Project.',
         'author': u'Michael Keck',
+        'ignore': True,
     },
     'clearview3-3.1' : {
         'name' : 'ClearView',
         'support' : '3.0 - 3.2',
         'info' : u'Very light and clear with white color and super Silk icons.',
         'author': u'beholder',
+        'ignore': True,
     },
     'pmahomme-1.0b' : {
         'name': 'pmamhomme',
@@ -260,7 +271,6 @@ CSSMAP = {
 
 CSSVERSIONS = [
     {'name': 'All', 'css': 'all'},
-    {'name': '2.11', 'css': 'pma_2_11'},
     {'name': '3.0', 'css': 'pma_3_0'},
     {'name': '3.1', 'css': 'pma_3_1'},
     {'name': '3.2', 'css': 'pma_3_2'},

@@ -41,8 +41,7 @@ help.
 <p>
 phpMyAdmin is also very deeply documented in a book written by one of developers
 &ndash; <a href="${base_url}docs.${file_ext}#books">Mastering phpMyAdmin for
-Effective MySQL Management</a>, which is available in English, Czech, German
-and Spanish.
+Effective MySQL Management</a>, which is available in English, Czech and Spanish.
 </p>
 
 <p>
@@ -61,12 +60,11 @@ at least PHP 5.2 and MySQL 5.
 <p>
 phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
 Among others, it was chosen as the best PHP application in various awards and
-every year wins the SourceForge.net Community Choice Awards as &quot;Best Tool or
-Utility for SysAdmins&quot;.
+has won every year the SourceForge.net Community Choice Awards as &quot;Best Tool or Utility for SysAdmins&quot;.
 </p>
 
 <p>
-phpMyAdmin is a more than ten years old project with stable and flexible code
+phpMyAdmin is a thirteen-year-old project with a stable and flexible code
 base, to find out more about the project and its history see <a
 href="${base_url}about.${file_ext}">separate page</a>.
 </p>
@@ -102,7 +100,7 @@ href="${base_url}about.${file_ext}">separate page</a>.
             title="International Electrotechnical Commission">IEC</abbr> 26300 -
             OpenDocument Text and Spreadsheet,
             <abbr title="Microsoft Word 2000">Word</abbr>,
-            <abbr title="Microsoft Excel 2000">Excel</abbr>, L<sup>A</sup>T<sub><big>E</big></sub>X 
+            L<sup>A</sup>T<sub><big>E</big></sub>X
             and others
             </li>
         <li>Administering multiple servers</li>
