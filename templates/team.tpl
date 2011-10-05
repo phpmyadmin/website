@@ -68,7 +68,7 @@ He currently lives in <span class="adr"><span class="locality">Gent</span>, <spa
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
 </p>
 <p>
-He lives in <span class="adr"><span class="locality">Columbo</span>, <span class="country-name">Sri Lanka</span></span>.
+He lives in <span class="adr"><span class="locality">Colombo</span>, <span class="country-name">Sri Lanka</span></span>.
 </p>
 </div>
 
