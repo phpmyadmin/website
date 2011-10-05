@@ -37,7 +37,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Québe
 
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
-<img class="head photo" src="${server}${base_url}images/heads/nijel.png" alt="Photo of Michal Čihař" />
+<img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
@@ -63,7 +63,7 @@ He currently lives in <span class="adr"><span class="locality">Gent</span>, <spa
 </div>
 <div class="floatbox vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
-<img class="head photo" src="${server}${base_url}images/heads/madhura.png" alt="Photo of Madhura Jayaratne" width="64" height="83" />
+<img class="head photo" src="${server}${base_url}images/heads/madhura.jpg" alt="Photo of Madhura Jayaratne" width="64" height="83" />
 <p>
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
 </p>
@@ -75,7 +75,7 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 <div class="floatbox vcard" id="dieter">
 <h3 class="fn">Rouslan Placella</h3>
 
-<img class="head photo" src="${server}${base_url}images/heads/rouslan.png" alt="Photo of Rouslan Placella" />
+<img class="head photo" src="${server}${base_url}images/heads/rouslan.jpg" alt="Photo of Rouslan Placella" />
 <p>
 Rouslan has joined the team in June 2011 after being selected to take part in the Google Summer of Code program where he developed an improved interface for the management of routines, triggers and events.
 </p>
