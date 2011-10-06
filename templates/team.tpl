@@ -72,7 +72,7 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 </p>
 </div>
 
-<div class="floatbox vcard" id="dieter">
+<div class="floatbox vcard" id="rouslan">
 <h3 class="fn">Rouslan Placella</h3>
 
 <img class="head photo" src="${server}${base_url}images/heads/rouslan.jpg" alt="Photo of Rouslan Placella" />
