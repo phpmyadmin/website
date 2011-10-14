@@ -1,0 +1,51 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2011-16
+</py:def>
+
+<py:def function="announcement_date">
+2011-10-xx
+</py:def>
+
+<py:def function="announcement_summary">
+XSS in setup
+</py:def>
+
+<py:def function="announcement_description">
+Crafted values entered in the setup interface can produce XSS; also, if the
+config directory exists and is writeable, the XSS payload can be saved
+to this directory.
+</py:def>
+
+<py:def function="announcement_mitigation">
+The documentation warns against leaving this directory writeable; also
+a warning appears on the home page. Also, this XSS would target only the
+users who visit /setup.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.4.x are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.4.6 or newer or apply the related patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Jakub Gałczyk for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cwe">661 79</py:def>
+
+<py:def function="announcement_commits_3_4">
+ca597dc423f3eebcca95ff33b088a03e39109115
+1af420e22367ae72ff4091adb1620e59ddad5ba6
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
