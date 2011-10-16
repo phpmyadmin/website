@@ -9,15 +9,15 @@
 <p>
 The phpMyAdmin development team has been organized on <a
 href="http://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> since
-it's start in 2001. They are responsible for the development of phpMyAdmin and represents
+its start in 2001. They are responsible for the development of phpMyAdmin and represents
 it at various conferences. You can find more about the project and its
 history on <a href="${base_url}about.${file_ext}">separate page</a>.
 </p>
 
 <p>
-You can contact team on <a href="mailto:phpmyadmin-devel@lists.sourceforge.net">development 
+You can contact the team on <a href="mailto:phpmyadmin-devel@lists.sourceforge.net">development 
 mailing list</a> (<a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">subscription and archives</a>).
-You can follow developers blogs at 
+You can follow the developers blogs at 
 <a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
 </p>
 
@@ -27,9 +27,7 @@ You can follow developers blogs at
 
 <img class="head photo" src="${server}${base_url}images/heads/marc.jpg" alt="Photo of Marc Delisle" />
 <p>
-Marc took over the <span class="org">phpMyAdmin</span> project from founder Tobias Ratschiller and
-started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux
-in 2001. 
+Marc started contributing to <span class="org">phpMyAdmin</span> in 1998. He then took over the project from founder Tobias Ratschiller and started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux in 2001. 
 </p>
 <p>
 He is currently the project administrator and he has contributed the largest amount of
@@ -39,7 +37,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Québe
 
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
-<img class="head photo" src="${server}${base_url}images/heads/nijel.png" alt="Photo of Michal Čihař" />
+<img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
@@ -52,19 +50,8 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 <p>Contact options: <a class="url" href="http://cihar.com">website</a>, <a class="url" href="xmpp:michal@cihar.com">jabber</a>, <a class="email" href="mailto:michal@cihar.com">email</a>.</p>
 </div>
 
-<div class="floatbox vcard" id="herman">
-<h3 class="fn">Herman van Rink</h3>
-<p>
-Herman has been a member of the <span class="org">phpMyAdmin</span> development team since early 2009. He started with the Dutch translation and likes to polish the code base by fixing bugs and annoyances.
-</p>
-<p>
-He lives in <span class="adr"><span class="locality">Groningen</span>, <span class="country-name">The Netherlands</span></span>.
-</p>
-</div>
-
 <div class="floatbox vcard" id="dieter">
 <h3 class="fn">Dieter Adriaenssens</h3>
-
 <img class="head photo" src="${server}${base_url}images/heads/dieter.jpg" alt="Photo of Dieter Adriaenssens" />
 <p>
 Dieter joined the development team in March 2010, and so far has
@@ -72,6 +59,28 @@ contributed to the project by submitting bug fixes.
 </p>
 <p>
 He currently lives in <span class="adr"><span class="locality">Gent</span>, <span class="country-name">Belgium</span></span>.
+</p>
+</div>
+<div class="floatbox vcard" id="madhura">
+<h3 class="fn">Madhura Jayaratne</h3>
+<img class="head photo" src="${server}${base_url}images/heads/madhura.jpg" alt="Photo of Madhura Jayaratne" />
+<p>
+Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
+</p>
+<p>
+He lives in <span class="adr"><span class="locality">Colombo</span>, <span class="country-name">Sri Lanka</span></span>.
+</p>
+</div>
+
+<div class="floatbox vcard" id="rouslan">
+<h3 class="fn">Rouslan Placella</h3>
+
+<img class="head photo" src="${server}${base_url}images/heads/rouslan.jpg" alt="Photo of Rouslan Placella" />
+<p>
+Rouslan has joined the team in June 2011 after being selected to take part in the Google Summer of Code program where he developed an improved interface for the management of routines, triggers and events.
+</p>
+<p>
+He lives in <span class="adr"><span class="locality">Cork</span>, <span class="country-name">Ireland</span></span>.
 </p>
 </div>
 

@@ -656,10 +656,6 @@ class SFGenerator:
                 m = SUMMARY_DEVS.match(entry.title)
                 data['developers'] = m.group(1)
                 links['developers'] = entry.link
-            elif entry.title[:19] == 'Activity percentile':
-                m = SUMMARY_ACTIVITY.match(entry.title)
-                data['activity'] = m.group(1)
-                links['activity'] = entry.link
             elif entry.title[:19] == 'Downloadable files:':
                 m = SUMMARY_DOWNLOADS.match(entry.title)
                 data['downloads'] = m.group(1)
