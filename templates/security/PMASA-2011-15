@@ -5,7 +5,7 @@ PMASA-2011-15
 </py:def>
 
 <py:def function="announcement_date">
-2011-09-xx
+2011-10-16
 </py:def>
 
 <py:def function="announcement_summary">
@@ -37,7 +37,7 @@ Upgrade to phpMyAdmin 3.4.6 or newer or apply the related patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to <a href"http://securitate.md/">Mihail Ursu</a> for reporting this issue.
+Thanks to <a href="http://securitate.md/">Mihail Ursu</a> for reporting this issue.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2011-3646</py:def>
