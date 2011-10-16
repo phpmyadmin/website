@@ -77,8 +77,7 @@ correctly spelled variant).
 <p>
 phpMyAdmin project currently has <a
 href="${links.developers}">${info.developers} developers</a>. Over the life of
-project on SourceForge.net, users have downloaded ${info.downloads} copies of
-phpMyAdmin, wrote ${info.forumposts} posts into <a
+project on SourceForge.net, users have wrote ${info.forumposts} posts into <a
 href="${links.forums}">${info.forums} forums</a> and discussed various topics
 in <a href="${links.mailinglists}">${info.mailinglists} mailing lists</a>.
 </p>
