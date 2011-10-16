@@ -40,6 +40,8 @@ Upgrade to phpMyAdmin 3.4.6 or newer or apply the related patch listed below.
 Thanks to Jakub Gałczyk for reporting this issue.
 </py:def>
 
+<py:def function="announcement_cve">CVE-2011-4064</py:def>
+
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits_3_4">
