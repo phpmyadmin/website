@@ -9,7 +9,7 @@ PMASA-2011-16
 </py:def>
 
 <py:def function="announcement_summary">
-XSS in setup
+XSS in setup.
 </py:def>
 
 <py:def function="announcement_description">
