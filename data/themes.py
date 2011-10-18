@@ -70,6 +70,12 @@ THEMES = {
         'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
         'author': u'Andy Scherzinger',
     },
+    'paradice-3.4' : {
+        'name' : 'Paradice',
+        'support' : '3.4',
+        'info' : u'Based on the original theme and the nuvola iconset (by David Vignoni).',
+        'author': u'Andy Scherzinger',
+    },
     'paradice-2.11e' : {
         'name' : 'Paradice',
         'support' : '2.11',
