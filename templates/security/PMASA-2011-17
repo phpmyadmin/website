@@ -43,7 +43,7 @@ the phpMyAdmin project that public disclosure of this problem has occurred.
 
 <py:def function="announcement_cwe">661</py:def>
 
-<py:def function="announcement_commits_3_4">
+<py:def function="announcement_commits">
 05f96b921a7e7dacd02be5ca61b2e7bdd014ee55
 34d99de000de9d15cfdf5e9cc8b7682d51110bbd
 a5e206fbd2ca814042cfc1bb7dd3b40c28ce3fb5
