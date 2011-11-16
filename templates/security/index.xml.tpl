@@ -21,7 +21,7 @@
 <description>
 <!--! Just a way to make py:for work inside CDATA -->
     <div py:def="foo()">
-        <p py:for="cve in issue.cves"><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=${cve}">${cve}</a></p>
+        <p py:for="cve in issue.cves"><a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=${cve}">${cve}</a></p>
     </div>
 <![CDATA[
 <p>${issue.summary}</p>
