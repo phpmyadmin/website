@@ -1,0 +1,57 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2011-18
+</py:def>
+
+<py:def function="announcement_date">
+2011-12-01
+</py:def>
+
+<py:def function="announcement_summary">
+Multiple XSS.
+</py:def>
+
+<py:def function="announcement_description">
+Using crafted database names, it was possible to produce XSS in the Database Synchronize and Database rename panels.
+Using an invalid and crafted SQL query, it was possible to produce XSS when editing a query on a table overview panel or when using the view creation dialog.
+Using a crafted column type, it was possible to produce XSS in the table search and create index dialogs.
+</py:def>
+
+<py:def function="announcement_mitigation">
+These attacks are unlikely to succeed on a victim.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider these vulnerabilities to be non critical.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.4.x are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.4.8 or newer or apply the related patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to <a href="http://www.majorsecurity.net">David Vieira-Kurz</a> for reporting the Database Synchronize and rename issues.
+Thanks to Maxim Rupp for reporting the invalid SQL query issue.
+Thanks to <a href="http://www.defcontn.com">R.Harikrishnan</a> for reporting the database rename and view creation issues.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2011-4634</py:def>
+
+<py:def function="announcement_cwe">661 79</py:def>
+
+<py:def function="announcement_commits">
+1490533d91e9d3820e78ca4eac7981886eaea2cb
+b289fe082441dc739939b0ba15dae0d9dc6cee92
+dac8d6ce256333ff45b5f46270304b8657452740
+077c10020e349e8c1beb46309098992fde616913
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
+
+
