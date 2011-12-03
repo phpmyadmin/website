@@ -8,6 +8,10 @@ PMASA-2011-18
 2011-12-01
 </py:def>
 
+<py:def function="announcement_updated">
+2011-12-03
+</py:def>
+
 <py:def function="announcement_summary">
 Multiple XSS.
 </py:def>
@@ -19,7 +23,7 @@ Using a crafted column type, it was possible to produce XSS in the table search 
 </py:def>
 
 <py:def function="announcement_mitigation">
-These attacks are unlikely to succeed on a victim.
+These attacks are unlikely to succeed on a victim. Moreover, all these attacks require that the user be already logged in and that a valid token be part of the request.
 </py:def>
 
 <py:def function="announcement_severity">
