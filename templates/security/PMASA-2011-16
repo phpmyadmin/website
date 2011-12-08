@@ -44,7 +44,7 @@ Thanks to Jakub Gałczyk (<a href="http://hauntit.blogspot.com">http://hauntit.b
 
 <py:def function="announcement_cwe">661 79</py:def>
 
-<py:def function="announcement_commits_3_4">
+<py:def function="announcement_commits">
 ca597dc423f3eebcca95ff33b088a03e39109115
 1af420e22367ae72ff4091adb1620e59ddad5ba6
 </py:def>
