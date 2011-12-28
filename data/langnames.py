@@ -74,6 +74,7 @@ MAP = {
     'ta' : 'tamil',
     'te' : 'telugu',
     'th' : 'thai',
+    'tk' : 'turkmen',
     'tr' : 'turkish',
     'tt' : 'tatarish',
     'ug' : 'uyghur',
