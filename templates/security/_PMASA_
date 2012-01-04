@@ -3,16 +3,16 @@
 
 
 <py:def function="announcement_id">
-PMASA-2011-?
+PMASA-2012-?
 </py:def>
 
 <py:def function="announcement_date">
-2011-??-??
+2012-??-??
 </py:def>
 
 <!--! Optional section, use only if something has been changed
 <py:def function="announcement_updated">
-2011-??-??
+2012-??-??
 </py:def>
 -->
 
