@@ -18,7 +18,9 @@ PayPal is one of most used online payments methods, it also accepts all major
 credit cards.
 </p>
 <p>
-Alternatively you can appreciate our work using <a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>.
+Alternatively you can appreciate our work using 
+<a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>. Flattr is a
+microdonation system allowing users to easily appreciate others.
 </p>
 <p>
 Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
