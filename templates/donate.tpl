@@ -7,6 +7,11 @@
 <div py:match="content" id="body">
 <h2>Donations</h2>
 <p>
+As an free software project, phpMyAdmin has almost no revenues itself. On the
+other side, we have some expenses. Currently most of project funds are used
+for travel costs for team members to allow them attend various conferences.
+</p>
+<p>
 We invite you to <a href="https://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> to our project (or just send money using PayPal to donate@phpmyadmin.net).
 </p>
 <p>
