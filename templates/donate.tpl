@@ -12,7 +12,10 @@ other side, we have some expenses. Currently most of project funds are used
 for travel costs for team members to allow them attend various conferences.
 </p>
 <p>
-We invite you to <a href="https://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> to our project (or just send money using PayPal to donate@phpmyadmin.net).
+We invite you to <a href="https://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> 
+to our project (or just send money using PayPal to donate@phpmyadmin.net).
+PayPal is one of most used online payments methods, it also accepts all major
+credit cards.
 </p>
 <p>
 Alternatively you can appreciate our work using <a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>.
