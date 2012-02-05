@@ -1,10 +1,10 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
-<py:def function="page_title">Improve</py:def>
+<py:def function="page_title">Contribute</py:def>
 
 <div py:match="content" id="body">
 
-<h2>Improve phpMyAdmin</h2>
+<h2>Contribute to phpMyAdmin</h2>
 
 <p>
 As a free software project, phpMyAdmin is very open to your contributions. You don't
