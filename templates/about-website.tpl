@@ -12,7 +12,7 @@ This website is implemented in <a href="http://python.org/">Python</a>, uses
 <a href="http://pysvn.tigris.org/">PySVN</a> to grab external data and 
 <a href="http://genshi.edgewall.org/">Genshi</a> to generate web pages. Source
 code of it is available in phpMyAdmin SVN under <code>trunk/website</code>
-(see <a href="${base_url}improve.${file_ext}#devel">developer information</a> for
+(see <a href="${base_url}devel.${file_ext}">developer information</a> for
 information how to access it).
 </p>
 

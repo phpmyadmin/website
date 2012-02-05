@@ -64,7 +64,7 @@
 
     <p>
     More information about using Git is available on <a
-    href="${base_url}improve.${file_ext}#devel">development page</a>.
+    href="${base_url}devel.${file_ext}">development page</a>.
     </p>
 
     <h2>Older Releases</h2>
@@ -72,7 +72,7 @@
     You can find older releases on <a
     href="https://sourceforge.net/projects/phpmyadmin/files/">SourceForge
     files page</a>. You can also get them 
-    from our Git repository (check <a href="${base_url}improve.${file_ext}#devel">developer information</a> for instructions).
+    from our Git repository (check <a href="${base_url}devel.${file_ext}">developer information</a> for instructions).
     </p>
 
     <h2><a id="distributions"></a>Distributions</h2>
