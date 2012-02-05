@@ -5,6 +5,16 @@
 <div py:match="content" id="body">
 
 <div class="floatbox">
+<h2>Getting support</h2>
+
+<p>
+The easiest way to get support is to use <a href="http://sourceforge.net/forum/forum.php?forum_id=72909">help forum</a>
+but we're ready to help on IRC or mailing list as well. Check bellow for more options.
+</p>
+</div>
+
+
+<div class="floatbox">
 <h2>Forum / IRC</h2>
 <ul>
    <li><strong><a href="http://sourceforge.net/forum/forum.php?forum_id=72909">Help Forum</a></strong></li>
@@ -16,6 +26,11 @@
 
 <div class="floatbox">
 <h2>Trackers</h2>
+
+<p>
+Trackers on SourceForge.net are used to track bug reports, requests for new features or proposed patches.
+</p>
+
 <ul>
     <li py:for="tracker in trackers"><a href="${tracker.link}">${tracker.name}</a> - ${tracker.description}</li>
 </ul>
