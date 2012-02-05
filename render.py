@@ -833,7 +833,7 @@ class SFGenerator:
         elif page in ['index', 'news']:
             priority = '1.0'
             changefreq = 'daily'
-        elif page in ['improve', 'team', 'docs']:
+        elif page in ['improve', 'team', 'docs', 'devel', 'translate']:
             priority = '1.0'
             changefreq = 'weekly'
         elif page in ['downloads', 'donate', 'themes', 'translations']:
