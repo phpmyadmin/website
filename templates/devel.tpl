@@ -46,7 +46,11 @@ jobs</a> where you can find some tips where to look.
 <xi:include href="_gitdl.tpl" />
 
 <p>
-You want to start with the <code>phpmyadmin</code> repository. 
+You are most likely interested in the <code>phpmyadmin</code> repository, which
+contains phpMyAdmin itself.
+</p>
+
+<p>
 Full list of repositories include:
 </p>
 
