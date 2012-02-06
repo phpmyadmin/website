@@ -30,8 +30,8 @@
   </developer>
 <repository>
     <GitRepository>
-      <location rdf:resource="git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin" />
-      <browse rdf:resource="http://phpmyadmin.git.sourceforge.net/" />
+      <location rdf:resource="git://github.com/phpmyadmin/phpmyadmin.git" />
+      <browse rdf:resource="http://github.com/phpmyadmin/" />
     </GitRepository>
   </repository>
 <py:for each="release in releases_featured">
