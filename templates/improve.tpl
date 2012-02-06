@@ -45,7 +45,7 @@ you face with them.
 Do you 
 feel our documentation misses some points? We welcome additions, just 
 let us know how you think the documentation can be improved. You can 
-open a <a href="http://sourceforge.net/tracker/?group_id=23067&atid=377410">patch tracker</a> item with your suggestions. Should 
+open a <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> item with your suggestions. Should 
 you know git, you can directly submit patches, but this is not necessary.
 </p>
 
