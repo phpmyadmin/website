@@ -85,7 +85,7 @@ PROJECT_FILES_RSS = 'https://sourceforge.net/api/file/index/project-id/%d/rss' %
 PROJECT_NEWS_RSS = 'https://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
 PROJECT_SUMMARY_RSS = 'https://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
-PROJECT_VCS_RSS = 'http://phpmyadmin.git.sourceforge.net/git/gitweb.cgi?p=phpmyadmin/phpmyadmin;a=rss'
+PROJECT_VCS_RSS = 'https://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PROJECT_GIT = 'git://github.com/phpmyadmin/phpmyadmin.git'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
