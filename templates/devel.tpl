@@ -66,7 +66,7 @@ Examples of how to checkout phpMyAdmin code:
 
 <pre>
 #  Latest development version:
-git clone git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin
+git clone git://github.com/phpmyadmin/phpmyadmin.git
 </pre>
 
 <h3>Repository Statistics</h3>
