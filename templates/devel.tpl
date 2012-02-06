@@ -74,7 +74,7 @@ git clone git://github.com/phpmyadmin/phpmyadmin.git
 <ul>
 <li><a href="http://cia.vc/stats/project/phpmyadmin/">CIA.vc</a></li>
 <li><a href="http://www.ohloh.net/projects/phpmyadmin">Ohloh</a></li>
-<li><a href="https://sourceforge.net/project/stats/detail.php?group_id=23067&amp;ugn=phpmyadmin&amp;type=git">SourceForge.net</a></li>
+<li><a href="https://github.com/phpmyadmin/">github</a></li>
 </ul>
 
 <h3>Coding Standards</h3>
