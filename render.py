@@ -87,7 +87,7 @@ PROJECT_SUMMARY_RSS = 'https://sourceforge.net/export/rss2_projsummary.php?group
 DONATIONS_RSS = 'https://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://phpmyadmin.git.sourceforge.net/git/gitweb.cgi?p=phpmyadmin/phpmyadmin;a=rss'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
-PROJECT_GIT = 'git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin'
+PROJECT_GIT = 'git://github.com/phpmyadmin/phpmyadmin.git'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
 RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
