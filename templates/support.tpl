@@ -9,7 +9,7 @@
 
 <p>
 The easiest way to get support is to use <a href="http://sourceforge.net/forum/forum.php?forum_id=72909">help forum</a>
-but we're ready to help on IRC or mailing list as well. Check bellow for more options.
+but we're ready to help on IRC or mailing list as well. Check below for more options.
 </p>
 </div>
 

@@ -16,8 +16,8 @@ in a project (code is welcome too, of course!).
 
 <p>
 Interested in helping other users to use phpMyAdmin? You can join any of
-<a href="${base_url}support.${file_ext}">support</a> we provide and help users -
-there IRC, mailing lists and web forums, where you can share your experience.
+<a href="${base_url}support.${file_ext}">support</a> we provide and help users 
+there &emdash; IRC, mailing lists and web forums, where you can share your experience.
 </p>
 
 <h3 id="translate">Localization</h3>
@@ -26,7 +26,7 @@ there IRC, mailing lists and web forums, where you can share your experience.
 phpMyAdmin is being translated to many languages, but maybe your language is not 
 really up to date? You can easily contribute on our
 <a href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>.
-You can find out more on <a href="${base_url}translate.${file_ext}">separate
+You can find out more on <a href="${base_url}translate.${file_ext}">translation
 page</a>.
 </p>
 
@@ -42,15 +42,17 @@ you face with them.
 <h3>Documentation writer</h3>
 
 <p>
-Do you feel our documentation misses some points? We welcome additions here
-just let us know your changes. Should you know git, you can directly send patches or 
-merge requests, but this is not strictly necessary.
+Do you 
+feel our documentation misses some points? We welcome additions, just 
+let us know how you think the documentation can be improved. You can 
+open a <a href="http://sourceforge.net/tracker/?group_id=23067&atid=377410">patch tracker</a> item with your suggestions. Should 
+you know git, you can directly submit patches, but this is not necessary.
 </p>
 
 <h3 id="devel">Developing</h3>
 
 <p>
-Coding contriubtions are very welcome, the easiest way is to for our code on github 
+Coding contributions are very welcome, the easiest way is to for our code on github 
 and submit a merge request. We really welcome bug fixes or new features. 
 You can find out more on <a href="${base_url}devel.${file_ext}">separate
 page</a>.
