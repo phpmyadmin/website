@@ -17,7 +17,7 @@ in a project (code is welcome too, of course!).
 <p>
 Interested in helping other users to use phpMyAdmin? You can join any of
 <a href="${base_url}support.${file_ext}">support</a> we provide and help users 
-there &emdash; IRC, mailing lists and web forums, where you can share your experience.
+there - IRC, mailing lists and web forums, where you can share your experience.
 </p>
 
 <h3 id="translate">Localization</h3>
