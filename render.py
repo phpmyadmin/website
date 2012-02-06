@@ -906,6 +906,7 @@ class SFGenerator:
         Receives translation stats from external server and parses it.
         '''
         helper.log.dbg('Processing translation stats...')
+        storage = helper.cache.Cache()
         self.data['translations'] = []
         list = self.git.langtree.keys()
         list.sort()
@@ -913,6 +914,12 @@ class SFGenerator:
             if name[-3:] != '.po':
                 continue
             lang = name[:-3]
+            cache_key = 'trans-%s' % lang
+            try:
+                self.data['translations'].append(storage.get(cache_key))
+                continue
+            except:
+                pass
             longlang = data.langnames.MAP[lang]
             po = polib.pofile('cache/git___phpmyadmin.git.sourceforge.net_gitroot_phpmyadmin_phpmyadmin/po/%s' % name)
             helper.log.dbg(' - %s [%s]' % (lang, longlang))
@@ -937,14 +944,16 @@ class SFGenerator:
                 dt = datetime.datetime(*found.committed_date[:6])
             except (TypeError, AttributeError):
                 dt = ''
-            self.data['translations'].append({
+            translation = {
                 'name': longlang,
                 'short': lang,
                 'translated': translated,
                 'percent': '%0.1f' % percent,
                 'updated': dt,
                 'css': css,
-            })
+            }
+            storage.set(cache_key, translation)
+            self.data['translations'].append(translation)
 
     def fetch_data(self):
         '''
