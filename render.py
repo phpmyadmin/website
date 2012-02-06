@@ -921,7 +921,7 @@ class SFGenerator:
             except:
                 pass
             longlang = data.langnames.MAP[lang]
-            po = polib.pofile('cache/git___phpmyadmin.git.sourceforge.net_gitroot_phpmyadmin_phpmyadmin/po/%s' % name)
+            po = polib.pofile(os.path.join(self.git.dirname, 'po', name))
             helper.log.dbg(' - %s [%s]' % (lang, longlang))
             gitlog = self.git.repo.log(path = 'po/%s' % name)
             langs = '%s|%s' % (lang, longlang)
