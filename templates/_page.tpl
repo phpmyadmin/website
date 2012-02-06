@@ -14,8 +14,8 @@
   <link rel="stylesheet" type="text/css" href="${base_url}css/slimbox.css" media="screen" />
   <link rel="shortcut icon" href="${base_url}favicon.ico" type="image/x-icon" />
   <link rel="icon" href="${base_url}favicon.ico" type="image/x-icon" />
-  <link rel="vcs-git" href="git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin" title="phpMyAdmin Git repository" />
-  <link rel="vcs-browse" href="http://phpmyadmin.git.sourceforge.net/" title="phpMyAdmin Git repository browser" />
+  <link rel="vcs-git" href="git://github.com/phpmyadmin/phpmyadmin.git" title="phpMyAdmin Git repository" />
+  <link rel="vcs-browse" href="http://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />
   <link href="https://plus.google.com/112870346549275765217/" rel="publisher" />
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
   <script src="${base_url}js/mootools-more.js" type="text/javascript"></script>
