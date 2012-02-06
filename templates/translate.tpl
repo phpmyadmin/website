@@ -20,7 +20,7 @@ detailed documentation can be found on our <a href="http://wiki.phpmyadmin.net/p
 Documentation is being translated using po4a and gettext (see <a
 href="${base_url}docs.${file_ext}">documentation</a> for existing
 translations). To start, checkout <code><a
-href="http://phpmyadmin.git.sourceforge.net/git/gitweb.cgi?p=phpmyadmin/localized_docs;a=tree;f=po">localized_docs/po</a></code> from Git, or
+href="http://github.com/phpmyadmin/localized_docs/tree/master/po">localized_docs/po</a></code> from Git, or
 just go to <a href="https://l10n.cihar.com/projects/pmadoc/">translation
 server</a> and translate it online. If your language is missing, just contact
 <a href="mailto:michal@cihar.com">Michal Čihař</a>, he will add it.  If you
