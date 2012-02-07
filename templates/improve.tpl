@@ -54,7 +54,7 @@ you know git, you can directly submit patches, but this is not necessary.
 <p>
 Coding contributions are very welcome, the easiest way is to for our code on github 
 and submit a merge request. We really welcome bug fixes or new features. 
-You can find out more on <a href="${base_url}devel.${file_ext}">separate
+You can find out more on <a href="${base_url}devel.${file_ext}">developers
 page</a>.
 </p>
 
