@@ -47,11 +47,20 @@ git clone git://github.com/phpmyadmin/phpmyadmin.git
 
 <h3>Contributing code</h3>
 <p>
-Once you have coded an improvement and you are ready to submit it to us,
-please use our <a
-href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch
-tracker</a>, where developers will pick up your contributions or guide you
-through improving the patch.
+The easiest way to contribute is to <a href="https://github.com/phpmyadmin">fork our code on github</a>
+and ask for pull request once you are done with some feature/bugfix.
+</p>
+<p>
+Of course you are not forced to using github, you can submit improvements
+to our <a href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a>, 
+these can be either patches directly or pull requests for git repositories.
+</p>
+<p>
+Our developers will then merge your code or will guide you through 
+improving the patch. The patch will be of course commited under your 
+name and mail, so that you receive appropriate credits. Generally after 
+merging several good patches you will be offered write access to out 
+repository.
 </p>
 
 <h3>Simple tasks to start</h3>
