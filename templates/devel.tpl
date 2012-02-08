@@ -14,23 +14,6 @@ which make our user interface. You don't have to be expert in all these areas
 creating or debugging some features.
 </p>
 
-
-<h3>Contributing code</h3>
-<p>
-Once you have coded an improvement and you are ready to submit it to us,
-please use our <a
-href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch
-tracker</a>, where developers will pick up your contributions or guide you
-through improving the patch.
-</p>
-
-<h3>Simple tasks to start</h3>
-<p>
-If you are looking for some simple task where you can start, check out
-our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Tasks_for_junior_developers">junior
-jobs</a> where you can find some tips where to look.
-</p>
-
 <h3>Source Code Repository</h3>
 <xi:include href="_gitdl.tpl" />
 
@@ -61,6 +44,22 @@ Examples of how to checkout phpMyAdmin code:
 #  Latest development version:
 git clone git://github.com/phpmyadmin/phpmyadmin.git
 </pre>
+
+<h3>Contributing code</h3>
+<p>
+Once you have coded an improvement and you are ready to submit it to us,
+please use our <a
+href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch
+tracker</a>, where developers will pick up your contributions or guide you
+through improving the patch.
+</p>
+
+<h3>Simple tasks to start</h3>
+<p>
+If you are looking for some simple task where you can start, check out
+our wiki page with <a href="http://wiki.phpmyadmin.net/pma/Tasks_for_junior_developers">junior
+jobs</a> where you can find some tips where to look.
+</p>
 
 <h3>Repository Statistics</h3>
 <p>Several statistics about the repository are available:</p>
