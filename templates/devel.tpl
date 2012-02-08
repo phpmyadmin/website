@@ -14,17 +14,6 @@ which make our user interface. You don't have to be expert in all these areas
 creating or debugging some features.
 </p>
 
-<p>
-For storing our code we use <a href="http://git-scm.com/">Git</a>.
-If you don't know it, you can get some basic facts in <a
-href="http://en.wikipedia.org/wiki/Git_software">Wikipedia</a> or
-reference in the comprehensive book <a href="http://progit.org/">Pro Git</a>.
-</p>
-
-<p>
-You can find more information for developers on our 
-<a href="http://wiki.phpmyadmin.net/pma/Development">wiki</a>.
-</p>
 
 <h3>Contributing code</h3>
 <p>
@@ -91,9 +80,16 @@ More information about coding is available on <a href="http://wiki.phpmyadmin.ne
 our wiki</a>.
 </p>
 
-<h3>Developer Documentation</h3>
+<h3>Documentation</h3>
 
-<p>More documentation can be found in the following places:</p>
+<p>
+If you don't know much about <a href="http://git-scm.com/">Git</a>, 
+you can get some basic facts in 
+<a href="http://en.wikipedia.org/wiki/Git_software">Wikipedia</a> or
+reference in the comprehensive book <a href="http://progit.org/">Pro Git</a>.
+</p>
+
+<p>More documentation for developers can be found in the following places:</p>
 <ul>
 <li><a href="http://wiki.phpmyadmin.net/pma/Development">Developers wiki</a></li>
 <li><a href="http://www.phpmyadmin.net/phpdoc/">phpMyAdmin's internals
