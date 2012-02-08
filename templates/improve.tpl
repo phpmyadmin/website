@@ -72,7 +72,7 @@ check whether they would be still useful.
 
 <p>
 We need money to allow our presence on conferences, buy new hardware or provide various 
-useful services to our users and developpers. By <a href="${base_url}donate.${file_ext}">donating</a>
+useful services to our users and developers. By <a href="${base_url}donate.${file_ext}">donating</a>
 you help us in this area and possibly increase our presence on conferences.
 </p>
 
