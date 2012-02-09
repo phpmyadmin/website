@@ -59,6 +59,7 @@ div.demo#body {
 #body {
 	margin: 2em 1em 1em 1em;
 	padding-top:1%;
+    overflow: auto;
 }
 
 a {
