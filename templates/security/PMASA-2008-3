@@ -48,9 +48,8 @@ Upgrade to phpMyAdmin 2.11.5.2 or newer.
 
 <py:def function="announcement_cve">CVE-2008-1924</py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11205">Revision 11205</a><br />
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11211">Revision 11211</a><br />
+<py:def function="announcement_commits">
+79fe2890d28076d9406f7032198109ecd22866a6
 </py:def>
 
 <py:def function="announcement_cwe">661 522</py:def>

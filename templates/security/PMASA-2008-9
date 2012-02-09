@@ -33,6 +33,14 @@ For 3.0.x: versions before 3.0.1.1.<br />
 Upgrade to phpMyAdmin 2.11.9.3 or 3.0.1.1.
 </py:def>
 
+<py:def function="announcement_commits">
+600a2ca21bc8b40742fd0a919a6b06a477548647
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+625e9f2e93671f9e4a9086b8d6c8111f70ffcc3d
+</py:def>
+
 <py:def function="announcement_references">
 <a href="http://www.securityfocus.com/bid/31928/info">Advisory: http://www.securityfocus.com/bid/31928/info</a> 
 </py:def>

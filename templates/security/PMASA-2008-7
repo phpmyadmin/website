@@ -37,6 +37,14 @@ Versions before 2.11.9.1.
 Upgrade to phpMyAdmin 2.11.9.1 or newer.
 </py:def>
 
+<py:def function="announcement_commits">
+64623fe9dbccff3f1ad9a54f844f91cefd07569c
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+f8d65ec564ada5c839be8f3f07f483cd82ce6a11
+</py:def>
+
 <py:def function="announcement_references">
 <a href="http://fd.the-wildcat.de/pma_e36a091q11.php">http://fd.the-wildcat.de/pma_e36a091q11.php</a>
 </py:def>

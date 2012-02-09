@@ -33,6 +33,10 @@ Probably all versions to 2.9.1.1.
 Upgrade to phpMyAdmin 2.9.2 or newer.
 </py:def>
 
+<py:def function="announcement_commits">
+6215e201eb98226837954059f6c99c9aa1c55a9a
+</py:def>
+
 <py:def function="announcement_cve">CVE-2007-1395</py:def>
 
 <py:def function="announcement_cwe">661 79 200</py:def>

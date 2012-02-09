@@ -28,6 +28,9 @@ We consider this vulnerability to be serious.
 2.6.4 to 2.9.0.2.
 </py:def>
 
+<py:def function="announcement_commits">
+39893dd0c956de6505d5a4d4590ad3e1f64bdffa
+</py:def>
 
 <py:def function="announcement_solution">
 Upgrade to phpMyAdmin 2.9.0.3 or newer.

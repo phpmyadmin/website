@@ -40,10 +40,13 @@ Versions before 2.11.7.1.
 Upgrade to phpMyAdmin 2.11.7.1 or newer.
 </py:def>
 
-<py:def function="announcement_patches">
-Revisions 11389 and 11391 were applied on the MAINT_2_11_7 branch:<br />
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11389">Revision 11389</a><br />
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11391">Revision 11391</a><br />
+<py:def function="announcement_commits">
+0bfb27fb0538f43e9c49b6a183b767c2bed1524d
+</py:def>
+
+<py:def function="announcement_commits">
+13fbcf4107476dc2d53a8dde707667172f807641
+084fd3ed16290339ee98a14d067932f638974044
 </py:def>
 
 <py:def function="announcement_references">

@@ -29,6 +29,11 @@ We consider these vulnerabilities to be serious.
 We did not make an extensive verification on this. Probably all previous versions are affected.
 </py:def>
 
+<py:def function="announcement_commits">
+053d90b6019959c3a503d6b12b9cd23dc31df2be
+2e5c10aa2fc10fb1004aac7db78ebdaac21b9220
+0191fc3c33feb809cf668f018ad53dc35061fe4c
+</py:def>
 
 <py:def function="announcement_solution">
 Upgrade to phpMyAdmin 2.6.4-pl4.

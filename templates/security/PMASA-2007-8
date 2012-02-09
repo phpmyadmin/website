@@ -38,13 +38,9 @@ Upgrade to phpMyAdmin 2.11.2.2 or newer.
 <a href="http://www.nth-dimension.org.uk/downloads.php?id=38">http://www.nth-dimension.org.uk/downloads.php?id=38</a>
 </py:def>
 
-
-<py:def function="announcement_patches">
-The patch is attached to:
-<a
-href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1835123&amp;group_id=23067&amp;atid=377408">http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1835123&amp;group_id=23067&amp;atid=377408</a>
+<py:def function="announcement_commits">
+960064b55f68cd74969e8f0eee56da045f6ea57a
 </py:def>
-
 
 <py:def function="announcement_cve">CVE-2007-6100</py:def>
 

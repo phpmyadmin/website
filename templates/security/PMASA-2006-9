@@ -30,6 +30,9 @@ We consider this vulnerability to be serious.
 Probably all versions to 2.9.1.
 </py:def>
 
+<py:def function="announcement_commits">
+663eb2b85ed30c1226c5d617bb06c5afe1d3caf5
+</py:def>
 
 <py:def function="announcement_solution">
 Upgrade to phpMyAdmin 2.9.1.1 or newer.

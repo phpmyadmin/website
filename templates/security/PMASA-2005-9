@@ -35,6 +35,10 @@ Only the unpatched 2.7.0 version.
 Upgrade to phpMyAdmin 2.7.0-pl1 or newer.
 </py:def>
 
+<py:def function="announcement_commits">
+5f3b086ed22b8ca49472d27a014df3908b0388ac
+</py:def>
+
 
 <py:def function="announcement_references">
 <a href="http://www.hardened-php.net/advisory_252005.110.html">http://www.hardened-php.net/advisory_252005.110.html</a>

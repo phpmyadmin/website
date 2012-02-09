@@ -33,8 +33,8 @@ For 3.x: versions since 3.1.0.0 and before 3.1.3.1.<br />
 Upgrade to phpMyAdmin 3.1.3.1 or apply patch listed below.
 </py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=12303">Revision 12303</a> was applied on all branches.
+<py:def function="announcement_commits">
+69bfbf11c7e9487dfa96293aaa797ff14bb513f0
 </py:def>
 
 <py:def function="announcement_references">

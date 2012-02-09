@@ -35,8 +35,12 @@ For 3.x: versions before 3.1.1.0.<br />
 Upgrade to phpMyAdmin 2.11.9.4 or 3.1.1.0 or apply patch listed below.
 </py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=12100">Revision 12100</a> was applied on all branches.
+<py:def function="announcement_commits">
+01685c90aaba943511de0496e7ecb7fe49fa765b
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+0d4adbfc1996c7d715b0ac9fa39a2ac14d8b28ad
 </py:def>
 
 <py:def function="announcement_references">

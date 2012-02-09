@@ -45,9 +45,9 @@ For the first issue:
 <a href="http://www.digitrustgroup.com/advisories/tdg-advisory071108a.html">http://www.digitrustgroup.com/advisories/tdg-advisory071108a.html</a>
 </py:def>
 
-<py:def function="announcement_patches">
-The patch is attached to:
-<a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1829884&amp;group_id=23067&amp;atid=377408">https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1829884&amp;group_id=23067&amp;atid=377408</a>
+<py:def function="announcement_commits">
+83adea5d6f79640648d3d5384c910820f1d085c3
+6225d4533abb0ffee0c985354326295a746cc79e
 </py:def>
 
 <py:def function="announcement_cve">CVE-2007-5977</py:def>

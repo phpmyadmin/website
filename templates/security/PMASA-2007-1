@@ -34,6 +34,9 @@ Probably all versions to 2.9.1.1.
 Upgrade to phpMyAdmin 2.9.2 or newer.
 </py:def>
 
+<py:def function="announcement_commits">
+c9d93f63940fe960d3b6341d8bfb7b707c87e744
+</py:def>
 
 <py:def function="announcement_references">
 <a href="http://www.securityfocus.com/archive/1/453432">http://www.securityfocus.com/archive/1/453432</a>

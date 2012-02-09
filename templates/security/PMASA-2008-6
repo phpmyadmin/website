@@ -35,6 +35,14 @@ Versions before 2.11.8.
 Upgrade to phpMyAdmin 2.11.8 or newer.
 </py:def>
 
+<py:def function="announcement_commits">
+0bfb27fb0538f43e9c49b6a183b767c2bed1524d
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+6a5e53c31bcbcadcb5d16cffaa3b9af181b26296
+</py:def>
+
 <py:def function="announcement_references">
 These advisories are available from the reporter:<br />
 <a href="http://yehg.net/lab/pr0js/advisories/Cross-Site_Framing_inphpMyAdmin2.11.7.pdf">http://yehg.net/lab/pr0js/advisories/Cross-Site_Framing_inphpMyAdmin2.11.7.pdf</a>

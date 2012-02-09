@@ -29,6 +29,10 @@ We did not make an extensive verification on this. Probably all previous version
 </py:def>
 
 
+<py:def function="announcement_commits">
+05c719aba3b99820daa3187e055c6ef4540b53cc
+</py:def>
+
 <py:def function="announcement_cve">CVE-2005-3665</py:def>
 
 <py:def function="announcement_solution">

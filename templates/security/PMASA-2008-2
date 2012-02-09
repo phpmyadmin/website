@@ -33,8 +33,8 @@ Versions before 2.11.5.1.
 Upgrade to phpMyAdmin 2.11.5.1 or newer.
 </py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11175">Revision 11175</a>
+<py:def function="announcement_commits">
+533bb88e32aafc17e754e5ea5e26e9b02b306993
 </py:def>
 
 <py:def function="announcement_cve">CVE-2008-1567</py:def>

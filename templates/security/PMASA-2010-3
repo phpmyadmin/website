@@ -42,8 +42,8 @@ For 2.11.x: versions before 2.11.10 are affected.
 Upgrade to phpMyAdmin 3.0.0 or 2.11.10.
 </py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=13149">Revision 13149</a> was applied to all affected branches.
+<py:def function="announcement_commits_2_11">
+719e0dce659f4a452d06a26e9432d888531a6e7b
 </py:def>
 
 <py:def function="announcement_references">

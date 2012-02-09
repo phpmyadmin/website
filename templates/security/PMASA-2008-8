@@ -38,8 +38,12 @@ Versions before 2.11.9.2.
 Upgrade to phpMyAdmin 2.11.9.2 or newer.
 </py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=11603">Revision 11603</a> was applied on all branches.
+<py:def function="announcement_commits">
+0d219abdcd55c11f7f629a58a2279f0839bd2acc    
+</py:def>
+
+<py:def function="announcement_commits_2_11">
+44f9f2f8b7475c2d48c529d9bfd0ff473cd328b1
 </py:def>
 
 <py:def function="announcement_references">

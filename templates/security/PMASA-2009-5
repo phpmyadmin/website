@@ -35,8 +35,8 @@ affected.
 Upgrade to phpMyAdmin 3.2.0.1.
 </py:def>
 
-<py:def function="announcement_patches">
-<a href="http://phpmyadmin.svn.sourceforge.net/viewvc/phpmyadmin?view=rev&amp;revision=12608">Revision 12608</a> was applied to all affected branches.
+<py:def function="announcement_commits">
+2a893aba929bf30e8ebb08678a97fa3a9d3c72f0
 </py:def>
 
 <py:def function="announcement_references">
