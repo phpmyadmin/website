@@ -91,7 +91,7 @@
     <p>Following commits have been made on 2.11 branch to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits_2_11().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/{hash}">${hash}</a></li>
+    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
     </py:for>
     </ul>
     </py:if>
