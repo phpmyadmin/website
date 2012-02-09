@@ -41,8 +41,11 @@ Examples of how to checkout phpMyAdmin code:
 </p>
 
 <pre>
-#  Latest development version:
+#  Using git protocol:
 git clone git://github.com/phpmyadmin/phpmyadmin.git
+
+# In case your firewall blocks git, you can use https:
+git clone https://github.com/phpmyadmin/phpmyadmin.git
 </pre>
 
 <h3>Contributing code</h3>
