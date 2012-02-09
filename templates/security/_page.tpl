@@ -62,12 +62,8 @@
     </p>
     </py:if>
 
-    <py:if test="defined('announcement_patches') or defined('announcement_commits') or defined('announcement_commits_2_11') or defined('announcement_commits_3_3')">
+    <py:if test="defined('announcement_commits') or defined('announcement_commits_2_11') or defined('announcement_commits_3_3')">
     <h3>Patches</h3>
-
-    <py:if test="defined('announcement_patches')">
-    <p>${announcement_patches()}</p>
-    </py:if>
 
     <py:if test="defined('announcement_commits')">
     <p>Following commits have been made to fix this issue:</p>
