@@ -18,26 +18,7 @@ creating or debugging some features.
 <xi:include href="_gitdl.tpl" />
 
 <p>
-You are most likely interested in the <code>phpmyadmin</code> repository, which
-contains phpMyAdmin itself.
-</p>
-
-<p>
-Full list of repositories include:
-</p>
-
-<dl class="cvslist">
-<dt>phpmyadmin</dt><dd>phpMyAdmin code.</dd>
-<dt>website</dt><dd>Website code.</dd>
-<dt>themes</dt><dd>Custom themes.</dd>
-<dt>data</dt><dd>Various project related data (such as logos, T-shirt graphics, etc.).</dd>
-<dt>history</dt><dd>Some historical documents (old changelogs or website).</dd>
-<dt>planet</dt><dd><a href="http://planet.phpmyadmin.net/">Planet phpMyAdmin</a> configuration.</dd>
-<dt>localized_docs</dt><dd>Localized documentation.</dd>
-</dl>
-
-<p>
-Examples of how to checkout phpMyAdmin code:
+To checkout the code you can use one of followinf examples:
 </p>
 
 <pre>
