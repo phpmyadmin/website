@@ -18,7 +18,7 @@ creating or debugging some features.
 <xi:include href="_gitdl.tpl" />
 
 <p>
-To checkout the code you can use one of followinf examples:
+To checkout the code you can use one of following examples:
 </p>
 
 <pre>
@@ -41,7 +41,7 @@ these can be either patches directly or pull requests for git repositories.
 </p>
 <p>
 Our developers will then merge your code or will guide you through 
-improving the patch. The patch will be of course commited under your 
+improving the patch. The patch will be of course committed under your 
 name and mail, so that you receive appropriate credits. Generally after 
 merging several good patches you will be offered write access to out 
 repository.
