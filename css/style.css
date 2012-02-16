@@ -315,15 +315,11 @@ div.screenshot img {
     overflow: hidden;
 }
 
-div.bookbanner img {
-    //border: 1px solid black;
-}
-
-div.bookbanner {
+div.frontpage_mastering_book {
     float: left;
     margin: 1em;
-    width: 113px;
-    height: 149px;
+    width: 150px;
+    height: 185px;
     overflow: hidden;
 }
 

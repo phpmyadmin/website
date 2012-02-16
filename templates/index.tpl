@@ -18,12 +18,9 @@ MySQL. The most frequently used operations are supported by the user interface
 etc), while you still have the ability to directly execute any SQL statement.  
 </p>
 
-<div class="bookbanner">
-<a href="${base_url}docs.${file_ext}#books" id="fader">
-<img src="images/books/pma_en_3.4_125x151.png" alt="phpMyAdmin book" />
-<img src="images/books/pma_en_100x123.png" alt="phpMyAdmin book" />
-<img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
-<img src="images/books/pma_es_100x123.png" alt="phpMyAdmin book" />
+<div class="frontpage_mastering_book">
+<a href="http://link.packtpub.com/XJdqZr">
+<img src="images/books/pma_en_3.4_150x185.png" alt="phpMyAdmin book" />
 </a>
 </div>
 
@@ -40,8 +37,8 @@ help.
 
 <p>
 phpMyAdmin is also very deeply documented in a book written by one of developers
-&ndash; <a href="${base_url}docs.${file_ext}#books">Mastering phpMyAdmin for
-Effective MySQL Management</a>, which is available in English, Czech and Spanish.
+&ndash; <a href="http://link.packtpub.com/XJdqZr">Mastering phpMyAdmin for
+Effective MySQL Management</a>, which is available in English, <a href="${base_url}docs.${file_ext}#books">Czech and Spanish</a>.
 </p>
 
 <p>

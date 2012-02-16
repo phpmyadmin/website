@@ -77,13 +77,13 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 
 <h3>Mastering phpMyAdmin 3.4 for Effective MySQL Management</h3>
 
-<a href="http://www.packtpub.com/mastering-phpmyadmin-3-4-for-effective-mysql-management/book"><img src="${base_url}images/books/pma_en_3.4_125x151.png" alt="Book cover" width="125" height="151" style="border: 0px;" /></a>
+<a href="http://link.packtpub.com/XJdqZr"><img src="${base_url}images/books/pma_en_3.4_150x185.png" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
 
 <p>
 I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 3.4. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
 </p>
 
-<p>For more information, please visit <a href="http://www.packtpub.com/mastering-phpmyadmin-3-4-for-effective-mysql-management/book">the book's site</a>.</p>
+<p>For more information, please visit <a href="http://link.packtpub.com/XJdqZr">the book's site</a>.</p>
 <p class="signature">Marc Delisle</p>
 </div>
 
