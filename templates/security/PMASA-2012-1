@@ -52,7 +52,7 @@ Upgrade to phpMyAdmin 3.4.10.1 or newer or apply patch listed below.
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
-Thanks to Jakub Galczyk for discovering this issue and contacting us.
+Thanks to Jakub Gałczyk (<a href="http://hauntit.blogspot.com">http://hauntit.blogspot.com</a>) for reporting this issue.
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
