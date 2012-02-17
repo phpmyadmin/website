@@ -56,7 +56,7 @@ Thanks to Jakub Gałczyk (<a href="http://hauntit.blogspot.com">http://hauntit.b
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-201x-xxxx</py:def>
+<py:def function="announcement_cve">CVE-2012-1190</py:def>
 
 <!--! CWE IDs of the problem, CWE provides categorisation of the problems,
 661 is "Weaknesses in Software Written in PHP"
