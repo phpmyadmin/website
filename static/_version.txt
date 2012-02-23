@@ -1,6 +1,7 @@
 {% for release in releases_featured %}\
 ${release.version}
 ${release.date.datestring()}
+https://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/${release.version}/phpMyAdmin-${release.version}-all-languages.tar.gz
 {% for server in sfservers %}\
 http://${server}.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-${release.version}-all-languages.tar.gz
 {% end %}
