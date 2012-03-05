@@ -14,7 +14,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li>Winners will get the choice of printed or e-book based on the timestamp of their patch tracker submission</li>
  <li>The winner's name for each feature request will appear on this page</li>
  <li>Members of the phpMyAdmin team are not eligible to the contest</li>
- <li>The contest runs from March 7 to April 15, 2012 at 23:59 UTC</li>
+ <li>The contest runs from March 5 to April 15, 2012 at 23:59 UTC</li>
 </ul>
 
 <h3>Acceptable small feature requests</h3>
