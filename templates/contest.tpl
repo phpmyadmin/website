@@ -33,6 +33,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li>Prepare your patch against the master branch</li>
  <li>Submit it to our <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> with a title such as "Contest-X", where X is the number from the above features list</li>
  <li>On the tracker, use the "Visibility: private" checkbox</li>
+ <li>On your SourceForge.net profile, ensure that you have configured your email address so that we can communicate with you</li>
 </ul>
 
 <h3>Discount codes</h3>
