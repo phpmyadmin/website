@@ -25,7 +25,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3305569&amp;group_id=23067&amp;atid=377411">Option "Truncate table" before "Insert into"</a></li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2046140&amp;group_id=23067&amp;atid=377411">No correct inserting / editing of large VARCHAR fields</a></li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3442006&amp;group_id=23067&amp;atid=377411">Create with same name AND grant on user\_%</a> (winner: Jo Michael)</li>
- <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3490114&amp;group_id=23067&amp;atid=377411">Export all privileges</a></li>
+ <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3490114&amp;group_id=23067&amp;atid=377411">Export all privileges</a> (winner: Alex Marin)</li>
 </ol>
 
 <h3>How to submit your patch</h3>
