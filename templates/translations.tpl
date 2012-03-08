@@ -13,7 +13,7 @@ used).
 
 <p>
 You are welcome to contribute to any translations, you can follow instructions
-on <a href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
+on <a href="${base_url}translate.${file_ext}">translators page</a>.
 Or simply go to the <a href="https://l10n.cihar.com/">translation server</a>
 and translate there in project <a
 href="https://l10n.cihar.com/projects/phpmyadmin/">phpMyAdmin</a>.
