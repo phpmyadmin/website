@@ -63,7 +63,8 @@ which can merge your changed po file back to existing sources.
 <h3>More information</h3>
 
 <p>
-You can find more information on <a href="http://wiki.phpmyadmin.net/pma/Gettext_for_translators">our wiki</a>.
+You can find more information on <a
+href="http://wiki.phpmyadmin.net/pma/Translating">our wiki</a>.
 </p>
 
 </div>
