@@ -15,9 +15,8 @@ used).
 You are welcome to contribute to any translations, you can follow instructions
 on <a href="${base_url}improve.${file_ext}#translate">how to improve page</a>.
 Or simply go to the <a href="https://l10n.cihar.com/">translation server</a>
-and translate there projects <a
-href="https://l10n.cihar.com/projects/phpmyadmin/">phpMyAdmin</a> or <a
-href="https://l10n.cihar.com/projects/pmadoc/">phpMyAdmin documentation</a>.
+and translate there in project <a
+href="https://l10n.cihar.com/projects/phpmyadmin/">phpMyAdmin</a>.
 The translation server also provides you overview of translation status.
 </p>
 
