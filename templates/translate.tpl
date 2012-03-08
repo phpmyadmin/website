@@ -31,7 +31,8 @@ mailing list, because this is where we ask for translations of new messages.
 <p>
 Translation server includes various subprojects, you should always focus on
 latest stable branch. Once this is complete you might want to continue
-translating <code>master</code> and documentation. The changes are
+translating <code>master</code> (what stands for current development branch)
+or documentation. The changes are
 automatically propagated, so you don't have to affraid you will have
 to translate same strings several times.
 </p>
