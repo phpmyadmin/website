@@ -7,16 +7,16 @@
 <h2>Translating phpMyAdmin</h2>
 
 <p>
-For localization, phpMyAdmin uses Gettext, you can find po files for each
-translation in <code>po</code> directory in phpMyAdmin sources. You can
-translate them using usual tools for handling Gettext translations or use our
+For localization, phpMyAdmin uses Gettext; you can find po files for each
+translation in the <code>po</code> directory in phpMyAdmin sources. You can
+translate them using the usual tools for handling Gettext translations or use our
 <a href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>.
 </p>
 
 <p>
 The phpMyAdmin's documentation is being translated using po4a and gettext (see
 <a href="${base_url}docs.${file_ext}">documentation</a> for existing
-translations) and the process here is pretty much same as translating
+translations) and the process here is pretty much the same as translating
 phpMyAdmin itself.
 </p>
 
@@ -29,12 +29,11 @@ mailing list, because this is where we ask for translations of new messages.
 <h3>Using translation server</h3>
 
 <p>
-Translation server includes various subprojects, you should always focus on
-latest stable branch. Once this is complete you might want to continue
-translating <code>master</code> (what stands for current development branch)
-or documentation. The changes are
-automatically propagated, so you don't have to affraid you will have
-to translate same strings several times.
+The translation server includes various subprojects, you should always focus on
+the latest stable branch. Once this one is complete you might want to continue
+translating <code>master</code> (which stands for the current development branch)
+or documentation. The changes are automatically propagated, so you don't have 
+to fear having to translate a message more than once.
 </p>
 
 <h3>Offline translating</h3>
@@ -48,17 +47,17 @@ offline translating.
 <p>
 You can download po files either directly from Git (see 
 <a href="${base_url}devel.${file_ext}">developer instructions for more
-details</a>) or use <a
+details</a>) or use the <a
 href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>,
-which allows you to directly download latest po file for desired version.
+which allows you to directly download the latest po file of the desired version.
 </p>
 
 <p>
-To submit changes, you can either use <a
+To submit your changes, you can either use the <a
 href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=387645">translation
-tracker on SourceForge.net</a> or <a
+tracker on SourceForge.net</a> or the <a
 href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>,
-which can merge your changed po file back to existing sources.
+which can merge back your changed po file to the existing sources.
 </p>
 
 <h3>More information</h3>
