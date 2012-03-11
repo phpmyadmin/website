@@ -50,7 +50,7 @@ class Cache(object):
         '''
         Returns cache filename for given name.
         '''
-        name = name.replace(':', '_').replace('/', '_').strip('_')
+        name = name.replace('?', '_').replace('&', '_').replace(':', '_').replace('/', '_').strip('_')
         return os.path.join('.', 'cache', fnmask % name)
 
     def check_timeout(self, filename):
