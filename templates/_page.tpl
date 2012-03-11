@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       xmlns:py="http://genshi.edgewall.org/"
       xmlns:xi="http://www.w3.org/2001/XInclude">
 <!--! This is main page template used for all other pages. -->
  <head profile="http://purl.org/uF/2008/03/ http://purl.org/uF/hAtom/0.1/">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
   <meta name="author" content="phpMyAdmin devel team" />
   <meta name="copyright" content="Copyright &copy; 2003 - ${current_year} phpMyAdmin devel team" />
   <link rel="copyright" href="${base_url}license.${file_ext}" />
@@ -63,12 +63,14 @@
     <li class="logo"><a href="https://plus.google.com/112870346549275765217/?prsrc=3" style="text-decoration: none;"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" width="16" height="16" style="border: 0;"/></a></li>
   </ul>
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-2718724-14");
-pageTracker._trackPageview();
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2718724-14']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 </script>
 <!-- Piwik -->
 <script type="text/javascript">
