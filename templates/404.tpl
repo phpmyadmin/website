@@ -12,9 +12,9 @@
 
 <p>
 The requested URL was not found on this server. This might have several
-causes, but if you found this link on some page, you should notify it's author
+causes, but if you found this link on some page, you should notify its author
 that it no longer works. Please follow to our <a href="${base_url}">main
-page</a> to find information you were looking for or use navigation bar above.
+page</a> to find information you were looking for or use the navigation bar above.
 </p>
 
 <script type="text/javascript">

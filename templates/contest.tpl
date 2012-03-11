@@ -9,7 +9,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
 </p>
 <h3>Rules</h3>
 <ul>
- <li>For each item in the list of acceptable small feature requests below, the first person to submit a correct patch implementing this feature to our patch tracker (refer to "how to submit your patch" below) wins a book</li>
+ <li>For each item in the list of acceptable small feature requests below, the first person to submit a correct patch implementing this feature to our patch tracker (refer to &ldquo;how to submit your patch&rdquo; below) wins a book</li>
  <li>The patch must be accepted by the phpMyAdmin team</li>
  <li>Winners will get the choice of printed or e-book based on the timestamp of their patch tracker submission</li>
  <li>The winner's name for each feature request will appear on this page</li>
@@ -32,8 +32,8 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
 <ul>
  <li>Be familiar with our <a href="${base_url}devel.${file_ext}">developers page</a></li>
  <li>Prepare your patch against the master branch</li>
- <li>Submit it to our <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> with a title such as "Contest-X", where X is the number from the above features list</li>
- <li>On the tracker, use the "Visibility: private" checkbox</li>
+ <li>Submit it to our <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> with a title such as &ldquo;Contest-X&rdquo;, where X is the number from the above features list</li>
+ <li>On the tracker, use the &ldquo;Visibility: private&rdquo; checkbox</li>
  <li>On your SourceForge.net profile, ensure that you have configured your email address so that we can communicate with you</li>
 </ul>
 
