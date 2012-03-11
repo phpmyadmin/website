@@ -9,9 +9,9 @@
 <p>
 This website is implemented in <a href="http://python.org/">Python</a>, uses
 <a href="http://code.google.com/p/feedparser/">FeedParser</a> and 
-<a href="http://pysvn.tigris.org/">PySVN</a> to grab external data and 
-<a href="http://genshi.edgewall.org/">Genshi</a> to generate web pages. Source
-code of it is available in the Github repository 
+<a href="http://gitorious.org/projects/git-python/">GitPython</a> to grab 
+external data and <a href="http://genshi.edgewall.org/">Genshi</a> to generate 
+web pages. Source code of it is available in the Github repository 
 <code><a href="https://github.com/phpmyadmin/website">phpmyadmin/website</a></code> 
  (see <a href="${base_url}devel.${file_ext}">developer information</a> 
 for information how to access it).
