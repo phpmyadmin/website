@@ -179,7 +179,10 @@ class GitCache(Cache):
         if not os.path.exists(self.dirname):
             os.system('git clone %s %s' % (url, self.dirname))
         else:
-            os.system('cd %s ; git pull -q' % self.dirname)
+            if not os.name == 'nt':
+                os.system('cd %s ; git pull -q' % self.dirname)
+            else:
+                os.system('cd %s & git pull -q' % self.dirname)
         self.repo = git.Repo(self.dirname)
         self.tree = self.repo.tree()
         self.langtree = self.tree['po']
