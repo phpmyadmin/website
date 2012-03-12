@@ -99,7 +99,7 @@ Get started with this quick introduction to phpMyAdmin, its features, and the co
 </p>
 
 <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=984362&amp;cl=174893&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onclick="javascript:return EJEJC_lc(this);">
-	<img src="${base_url}images/packt/addtocart.gif" style="border: 0px;" alt="Add to Cart"/></a>
+	<img src="${base_url}images/packt/addtocart.gif" style="border: 0px;" width="132" height="60" alt="Add to Cart"/></a>
 <p class="signature">Marc Delisle</p>
 </div>
 
