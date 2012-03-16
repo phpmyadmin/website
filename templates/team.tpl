@@ -100,6 +100,10 @@ guests.
 <a href="http://fosdem.org/2010">FOSDEM 2010</a>. Marc Delisle talked
 about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
 </p>
+<p>The third meeting took place in Brussels, Belgium during 
+<a href="http://fosdem.org/2012">FOSDEM 2012</a>. The team talked about
+future directions for the project.
+</p>
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4187.JPG"
@@ -122,6 +126,14 @@ about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
     rel="lightbox[meeting]" title="2010 team - Marc Delisle, Robin H. Johnson, Herman van Rink, Michal Čihař, Alexander M. Turek">
         <img src="${base_url}images/fosdem-2010/fosdem-2010-tn.jpg"
         alt="phpMyAdmin team at FOSDEM 2010" />
+    </a>
+</div>
+
+<div class="screenshot">
+    <a href="${base_url}images/fosdem-2012/fosdem-2012-med.jpg"
+    rel="lightbox[meeting]" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (missing: Michal Čihař)">
+        <img src="${base_url}images/fosdem-2012/fosdem-2012-tn.jpg"
+        alt="phpMyAdmin team at FOSDEM 2012" />
     </a>
 </div>
 
