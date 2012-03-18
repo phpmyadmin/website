@@ -22,7 +22,7 @@
 # List of screenshots
 SCREENSHOTS = [
     {'name': 'main-page', 'title': 'Main page screenshot'},
-    {'name': 'main-page-rtl', 'title': 'RTL language with Darkblue/orange theme'},
+    {'name': 'main-page-rtl', 'title': 'Main page with an RTL language'},
     {'name': 'designer', 'title': 'Database designer'},
     {'name': 'sql-export', 'title': 'SQL export options'},
     {'name': 'privileges', 'title': 'Setting per column privileges for table'},
