@@ -131,7 +131,7 @@ future directions for the project.
 
 <div class="screenshot">
     <a href="${base_url}images/fosdem-2012/fosdem-2012-med.jpg"
-    rel="lightbox[meeting]" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (missing: Michal Čihař)">
+    rel="lightbox[meeting]" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (behind the camera: Michal Čihař)">
         <img src="${base_url}images/fosdem-2012/fosdem-2012-tn.jpg"
         alt="phpMyAdmin team at FOSDEM 2012" />
     </a>
