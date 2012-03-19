@@ -55,7 +55,8 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 <img class="head photo" src="${server}${base_url}images/heads/dieter.jpg" alt="Photo of Dieter Adriaenssens" />
 <p>
 Dieter joined the development team in March 2010, and so far has
-contributed to the project by submitting bug fixes.
+contributed to the project by submitting bug fixes and translating phpMyAdmin to Dutch.<br />
+In 2011, he was a Google Summer of Code mentor for the first time.
 </p>
 <p>
 He currently lives in <span class="adr"><span class="locality">Gent</span>, <span class="country-name">Belgium</span></span>.
