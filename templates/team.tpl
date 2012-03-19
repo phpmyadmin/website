@@ -89,7 +89,7 @@ He lives in <span class="adr"><span class="locality">Cork</span>, <span class="c
 <h2>Team meetings</h2>
 
 <p>
-We would like to meet other members of the team more often; so far only two
+We would like to meet other members of the team more often; so far only a few
 team meetings in real life have happened. The first one was at a big party 
 in Karlsruhe, Germany for the 10th anniversary of PHP and MySQL at the 
 <a href="http://www.linuxtag.org/2005">LinuxTag</a> 2005
