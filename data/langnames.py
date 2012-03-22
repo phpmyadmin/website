@@ -46,6 +46,7 @@ MAP = {
     'hi' : 'hindi',
     'hr' : 'croatian',
     'hu' : 'hungarian',
+    'hy' : 'armenian',
     'id' : 'indonesian',
     'it' : 'italian',
     'ja' : 'japanese',
