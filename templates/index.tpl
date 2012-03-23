@@ -10,7 +10,7 @@
 <h2>About</h2>
 
 <p>
-phpMyAdmin is a free software tool written in <a href="http://php.net">PHP</a>
+phpMyAdmin is a free software tool written in <a href="http://php.net">PHP</a>,
 intended to handle the administration of <a href="http://mysql.com">MySQL</a>
 over the World Wide Web. phpMyAdmin supports a wide range of operations with 
 MySQL. The most frequently used operations are supported by the user interface
@@ -30,13 +30,13 @@ href="${base_url}docs.${file_ext}">documentation</a> and users are welcome to
 update <a href="http://wiki.phpmyadmin.net/">our wiki pages</a> to share ideas and
 howtos for various operations. The <a
 href="${base_url}team.${file_ext}">phpMyAdmin team</a> will try to help you if
-you face any problem, you can use <a
+you face any problem; you can use a <a
 href="${base_url}support.${file_ext}">variety of support channels</a> to get
 help.
 </p>
 
 <p>
-phpMyAdmin is also very deeply documented in a book written by one of developers
+phpMyAdmin is also very deeply documented in a book written by one of the developers
 &ndash; <a href="http://link.packtpub.com/XJdqZr">Mastering phpMyAdmin for
 Effective MySQL Management</a>, which is available in English, <a href="${base_url}docs.${file_ext}#books">Czech and Spanish</a>.
 </p>
@@ -61,7 +61,7 @@ has won every year the SourceForge.net Community Choice Awards as &quot;Best Too
 
 <p>
 phpMyAdmin is a thirteen-year-old project with a stable and flexible code
-base, to find out more about the project and its history see <a
+base, to find out more about the project and its history see this <a
 href="${base_url}about.${file_ext}">separate page</a>.
 </p>
 
