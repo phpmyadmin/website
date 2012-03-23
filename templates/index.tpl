@@ -48,8 +48,7 @@ and RTL languages.
 </p>
 
 <p>
-Since version 3.0.0, phpMyAdmin joined the <a
-href="${base_url}gophp5.${file_ext}">GoPHP5 initiative</a> and dropped
+Since version 3.0.0, phpMyAdmin joined the GoPHP5 initiative and dropped
 compatibility code for older PHP and MySQL versions; version 3 and later requires
 at least PHP 5.2 and MySQL 5.
 </p>
