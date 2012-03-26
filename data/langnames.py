@@ -52,6 +52,7 @@ MAP = {
     'ja' : 'japanese',
     'ko' : 'korean',
     'ka' : 'georgian',
+    'kk' : 'kazakh',
     'lt' : 'lithuanian',
     'lv' : 'latvian',
     'mk' : 'macedonian_cyrillic',
