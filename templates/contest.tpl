@@ -20,7 +20,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
 
 <h3>Acceptable small feature requests</h3>
 <ol>
- <li><a href="https://sourceforge.net/tracker/?func=detail&amp;aid=3068559&amp;group_id=23067&amp;atid=377411">Add option for ignoring foreign keys when dropping tables</a></li>
+ <li><a href="https://sourceforge.net/tracker/?func=detail&amp;aid=3068559&amp;group_id=23067&amp;atid=377411">Add option for ignoring foreign keys when dropping tables</a>(winner: Atul Pratap Singh, e-book)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=779136&amp;group_id=23067&amp;atid=377411">Show index information in the data dictionary</a>(winner: Muhammad Adnan, e-book)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3305569&amp;group_id=23067&amp;atid=377411">Option "Truncate table" before "Insert into"</a>(winner: Rao hai, print copy )</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2046140&amp;group_id=23067&amp;atid=377411">No correct inserting / editing of large VARCHAR fields</a></li>
