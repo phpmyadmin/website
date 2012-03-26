@@ -58,7 +58,7 @@ BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
-LANG_REGEXP ='((translation|lang|%s)\W.*update|update.*\W(translation|lang|%s)($|\W)|^updated?$|new lang|better word|fix.*translation($|\W)|Translation update done using Pootle)'
+LANG_REGEXP ='((translation|lang|%s)\W.*update|update.*\W(translation|lang|%s)($|\W)|^updated?$|new lang|better word|fix.*translation($|\W)|Translation update done using (Pootle|Weblate))'
 
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
