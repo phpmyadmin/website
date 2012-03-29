@@ -129,7 +129,8 @@ class URLCache(Cache):
                     result = self.force_get(cache)
                 else:
                     self.set(cache, result)
-            except IOError:
+            except IOError, e:
+                self.dbg('Failed download: %s' % e)
                 result = self.force_get(cache)
         return result
 
