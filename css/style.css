@@ -438,3 +438,8 @@ td.size {
 td.count {
     text-align: right;
 }
+
+em.big {
+    font-style: normal;
+    font-size: 1.2em;
+}
