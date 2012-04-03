@@ -5,6 +5,9 @@
 <div py:match="content" id="body">
 <h2>Contest: win books!</h2>
 <p>
+<em>The contest is now over, congratulations to all the winners! Everyone else can use the discount codes below (until April 15) to order a book.</em>
+</p>
+<p>
 Packt Publishing sponsors this programming contest, offering six copies of the <a href="http://link.packtpub.com/4GvmBV">Mastering phpMyAdmin 3.4</a> book (two print copies and four e-books).
 </p>
 <h3>Rules</h3>
@@ -23,7 +26,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3068559&amp;group_id=23067&amp;atid=377411">Add option for ignoring foreign keys when dropping tables</a> (winner: Atul Pratap Singh, e-book)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=779136&amp;group_id=23067&amp;atid=377411">Show index information in the data dictionary</a> (winner: Muhammad Adnan, e-book)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3305569&amp;group_id=23067&amp;atid=377411">Option "Truncate table" before "Insert into"</a> (winner: Rao hai, print copy )</li>
- <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2046140&amp;group_id=23067&amp;atid=377411">No correct inserting / editing of large VARCHAR fields</a></li>
+ <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2046140&amp;group_id=23067&amp;atid=377411">No correct inserting / editing of large VARCHAR fields</a> (winner: Thilina Abeyrathna, e-book)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3442006&amp;group_id=23067&amp;atid=377411">Create with same name AND grant on user\_%</a> (winner: Jo Michael, e-book)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3490114&amp;group_id=23067&amp;atid=377411">Export all privileges</a> (winner: Alex Marin, print copy)</li>
 </ol>

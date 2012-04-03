@@ -11,7 +11,7 @@
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="${base_url}contest.${file_ext}" >Contest: win books!</a></span>
+    <span class="dlname"><a href="${base_url}contest.${file_ext}" >Contest: winners</a></span>
 </div>
 
 <div class="rightbutton">
