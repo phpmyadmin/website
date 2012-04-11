@@ -908,7 +908,7 @@ class SFGenerator:
         helper.log.dbg('Processing translation stats...')
         storage = helper.cache.Cache()
         self.data['translations'] = []
-        list = self.git.langtree.keys()
+        list = [b.name for b in self.git.langtree.blobs]
         list.sort()
         for name in list:
             if name[-3:] != '.po':
@@ -923,11 +923,10 @@ class SFGenerator:
             longlang = data.langnames.MAP[lang]
             po = polib.pofile(os.path.join(self.git.dirname, 'po', name))
             helper.log.dbg(' - %s [%s]' % (lang, longlang))
-            gitlog = self.git.repo.log(path = 'po/%s' % name)
             langs = '%s|%s' % (lang, longlang)
             regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
             found = None
-            for x in gitlog:
+            for x in self.git.repo.iter_commits(paths = ['po/%s' % name]):
                 if regexp.findall(x.message) != []:
                     found = x
                     break
