@@ -80,11 +80,21 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 <a href="http://link.packtpub.com/XJdqZr"><img src="${base_url}images/books/pma_en_3.4_150x185.png" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
 
 <p>
-I am pleased to announce an update of my book. It is now up to date with phpMyAdmin 3.4. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
+A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
 </p>
 
-<p>For more information, please visit <a href="http://link.packtpub.com/XJdqZr">the book's site</a>.</p>
-<p class="signature">Marc Delisle</p>
+</div>
+
+<div class="floatbox book">
+
+<h3>phpMyAdmin Starter</h3>
+
+<a href="http://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1"><img src="${base_url}images/books/pma_starter_150x184.jpg" alt="Book cover" width="150" height="184" style="border: 0px;" /></a>
+
+<p>
+A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
+</p>
+
 </div>
 
 <div class="floatbox book">
@@ -94,13 +104,10 @@ I am pleased to announce an update of my book. It is now up to date with phpMyAd
 <a href="http://www.packtpub.com/phpmyadmin-3rd-edition/book"><img src="${base_url}images/books/pma_en_100x123.png" alt="Book cover" width="100" height="123" /></a>
 
 <p>
-This version of the book is up to date with the 2.11.x series. A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
+A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
 </p>
 
-<p>For more information, please visit <a href="http://www.packtpub.com/phpmyadmin-3rd-edition/book">the book's site</a>.</p>
-<p class="signature">Marc Delisle</p>
 </div>
-
 
 <div class="floatbox book">
 
@@ -116,11 +123,6 @@ V edici encyklopedie webdesignera vychází tentokrát ryze praktická kniha –
 phpMyAdmin nabízí uživatelům ucelený systém pro komplexní manipulaci s databázemi a tabulkami MySQL. Systémovým administrátorům poskytuje nástroje pro správu uživatelů a jejich oprávnění. Kniha pokrývá oba úhly pohledu, obsahuje navíc i poznámky o používání SQL v rámci MySQL, předvádí některé nedokumentované možnosti a vlastnosti.
 </p>
 
-<p xml:lang="cs">
-Pro více informací navštivte stránku věnovanou
-<a href="http://www.zonerpress.cz/kniha-phpmyadmin-efektivni-sprava-mysql.html">českému vydání knihy</a>.
-</p>
-
 </div>
                 
 <div class="floatbox book">
@@ -130,10 +132,6 @@ Pro více informací navštivte stránku věnovanou
 
 <p xml:lang="es">
 Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencial de phpMyAdmin. Ya sea un programador experimentado, un administrador de sistemas, un dise&ntilde;ador Web o nuevo a las tecnolog&iacute;as de MySQL y phpMyAdmin, este libro le mostrar&aacute; como aumentar su productividad y control cuando trabaje con MySQL. Por ello se ha traducido, de modo que esta gu&iacute;a completa sea m&aacute;s accesible al lector espa&ntilde;ol.
-</p>
-
-<p>
-<a href="http://www.packtpub.com/dominary-phpMyAdmin-es">Packt Publishing</a>
 </p>
 
 </div>

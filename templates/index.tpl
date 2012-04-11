@@ -18,9 +18,11 @@ MySQL. The most frequently used operations are supported by the user interface
 etc), while you still have the ability to directly execute any SQL statement.  
 </p>
 
-<div class="frontpage_mastering_book">
-<a href="http://link.packtpub.com/XJdqZr">
+<div class="bookbanner">
+<a href="${base_url}docs.${file_ext}#books" id="fader">
 <img src="images/books/pma_en_3.4_150x185.png" alt="phpMyAdmin book" />
+<img src="images/books/pma_starter_150x184.jpg" alt="phpMyAdmin Starter" />
+<img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
 </a>
 </div>
 

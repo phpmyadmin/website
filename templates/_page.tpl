@@ -20,6 +20,7 @@
   <script src="${base_url}js/mootools.js" type="text/javascript"></script>
   <script src="${base_url}js/mootools-more.js" type="text/javascript"></script>
   <script src="${base_url}js/slimbox.js" type="text/javascript"></script>
+  <script src="${base_url}js/fader.js" type="text/javascript"></script>
   <script src="${base_url}js/master_sorting_table.js" type="text/javascript"></script>
   <script src="${base_url}js/utils.js" type="text/javascript"></script>
   <meta http-equiv="X-Generated" content="${generated}" />

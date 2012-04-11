@@ -31,6 +31,15 @@ function theme_load() {
 
 window.addEvent("domready", theme_load);
 
+function fader_autoload() {
+    if ($("fader") == null) return;
+
+    var f = new Fader('fader');
+    f.start();
+}
+
+window.addEvent('domready', fader_autoload);
+
 /*
 function dl_hint() {
     if ($$("div.downloadbutton").length == 0) return;
