@@ -14,10 +14,6 @@ Genshi -  http://genshi.edgewall.org/
 (0.6.0 tested)
 python-feedparser - http://code.google.com/p/feedparser/
 (5.1 tested)
-GitPython - http://gitorious.org/projects/git-python/
-(0.3.2 tested)
-polib - http://bitbucket.org/izi/polib/src/
-(0.7.0 tested)
 simplejson - http://simplejson.readthedocs.org/
 (2.4.0 tested)
 
