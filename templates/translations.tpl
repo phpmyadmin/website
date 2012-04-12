@@ -33,7 +33,7 @@ The translation server also provides you overview of translation status.
 <tbody>
 <tr py:for="item in translations">
 <td class="name">
-<a href="http://wiki.phpmyadmin.net/pma/Language/${item.short}">${item.name}</a>
+<a href="${item.url}">${item.name}</a>
 </td>
 <td class="size">${item.translated}</td>
 <td class="size">${item.percent}%</td>
