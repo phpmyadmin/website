@@ -26,7 +26,6 @@ import time
 import glob
 import traceback
 import urllib
-import git
 
 from xml.dom import minidom
 
@@ -173,17 +172,3 @@ class FeedCache(URLCache):
             else:
                 self.set(cache, result)
         return result
-
-class GitCache(Cache):
-    def __init__(self, url):
-        self.dirname = self.get_name(url, '%s')
-        if not os.path.exists(self.dirname):
-            os.system('git clone %s %s' % (url, self.dirname))
-        else:
-            if not os.name == 'nt':
-                os.system('cd %s ; git pull -q' % self.dirname)
-            else:
-                os.system('cd %s & git pull -q' % self.dirname)
-        self.repo = git.Repo(self.dirname)
-        self.tree = self.repo.tree()
-        self.langtree = self.tree['po']

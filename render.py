@@ -88,7 +88,6 @@ PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_
 DONATIONS_RSS = 'http://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
-PROJECT_GIT = 'git://github.com/phpmyadmin/phpmyadmin.git'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
 RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
@@ -198,7 +197,6 @@ class SFGenerator:
         self.feeds = helper.cache.FeedCache()
         self.xmls = helper.cache.XMLCache()
         self.urls = helper.cache.URLCache()
-        self.git = helper.cache.GitCache(PROJECT_GIT)
 
     def get_outname(self, page):
         '''
