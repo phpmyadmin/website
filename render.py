@@ -28,6 +28,7 @@ import csv
 import traceback
 import datetime
 import polib
+import json
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -95,6 +96,7 @@ RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 # Data sources
 SNAPSHOT_MD5 = 'http://dl.cihar.com/phpMyAdmin/master/md5.sums'
 SNAPSHOT_SIZES = 'http://dl.cihar.com/phpMyAdmin/master/files.list'
+TRANSLATION_STATS = 'http://l10n.cihar.com/exports/stats/phpmyadmin/master/'
 
 # Clean output before generating
 CLEAN_OUTPUT = True
@@ -906,52 +908,27 @@ class SFGenerator:
         Receives translation stats from external server and parses it.
         '''
         helper.log.dbg('Processing translation stats...')
-        storage = helper.cache.Cache()
         self.data['translations'] = []
-        list = [b.name for b in self.git.langtree.blobs]
-        list.sort()
-        for name in list:
-            if name[-3:] != '.po':
-                continue
-            lang = name[:-3]
-            cache_key = 'trans-%s' % lang
-            try:
-                self.data['translations'].append(storage.get(cache_key))
-                continue
-            except:
-                pass
-            longlang = data.langnames.MAP[lang]
-            po = polib.pofile(os.path.join(self.git.dirname, 'po', name))
-            helper.log.dbg(' - %s [%s]' % (lang, longlang))
-            langs = '%s|%s' % (lang, longlang)
-            regexp = re.compile(LANG_REGEXP % (langs, langs), re.IGNORECASE)
-            found = None
-            for x in self.git.repo.iter_commits(paths = ['po/%s' % name]):
-                if regexp.findall(x.message) != []:
-                    found = x
-                    break
+        data = self.urls.load(TRANSLATION_STATS)
+        stats = json.loads(data)
 
-            percent = po.percent_translated()
-            translated = len(po.translated_entries())
-            if percent < 50:
+        for lang in stats:
+            if lang['translated_percent'] < 50:
                 css = ' b50'
-            elif percent < 80:
+            elif lang['translated_percent'] < 80:
                 css = ' b80'
             else:
                 css =''
-            try:
-                dt = datetime.datetime(*found.committed_date[:6])
-            except (TypeError, AttributeError):
-                dt = ''
+            dt = ''
             translation = {
-                'name': longlang,
-                'short': lang,
-                'translated': translated,
-                'percent': '%0.1f' % percent,
+                'name': lang['name'],
+                'short': lang['code'],
+                'url': lang['url'],
+                'translated': lang['translated'],
+                'percent': lang['translated_percent'],
                 'updated': dt,
                 'css': css,
             }
-            storage.set(cache_key, translation)
             self.data['translations'].append(translation)
 
     def fetch_data(self):
