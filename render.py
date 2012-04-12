@@ -917,7 +917,10 @@ class SFGenerator:
                 css = ' b80'
             else:
                 css =''
-            dt = ''
+            if lang['last_change'] is None:
+                dt = ''
+            else:
+                dt = datetime.datetime.strptime(lang['last_change'], "%Y-%m-%dT%H:%M:%S")
             translation = {
                 'name': lang['name'],
                 'short': lang['code'],
