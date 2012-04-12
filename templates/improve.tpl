@@ -39,7 +39,7 @@ us here to provide feedback on releases and especially by testing pre-releases
 you face with them.
 </p>
 
-<h3>Documentation writer</h3>
+<h3>Documentation writer/tutorial creator</h3>
 
 <p>
 Do you 
@@ -47,6 +47,11 @@ feel our documentation misses some points? We welcome additions, just
 let us know how you think the documentation can be improved. You can 
 open a <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> item with your suggestions. Should 
 you know git, you can directly submit patches, but this is not necessary.
+</p>
+
+<p>
+Also documentation does not have to be text only, we would welcome to have some
+video tutorials giving users hints how to do specific tasks inside phpMyAdmin.
 </p>
 
 <h3 id="devel">Developing</h3>
