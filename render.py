@@ -33,6 +33,7 @@ from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
 from optparse import OptionParser
+from dateutil.parser import parse
 
 import helper.cache
 import helper.log
@@ -920,7 +921,7 @@ class SFGenerator:
             if lang['last_change'] is None:
                 dt = ''
             else:
-                dt = datetime.datetime.strptime(lang['last_change'], "%Y-%m-%dT%H:%M:%S")
+                dt = parse(lang['last_change'])
             translation = {
                 'name': lang['name'],
                 'short': lang['code'],
