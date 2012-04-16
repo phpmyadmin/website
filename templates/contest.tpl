@@ -5,7 +5,7 @@
 <div py:match="content" id="body">
 <h2>Contest: win books!</h2>
 <p>
-<em>The contest is now over, congratulations to all the winners! Everyone else can use the discount codes below (until April 15) to order a book.</em>
+<em>The contest is now over, congratulations to all the winners!</em>
 </p>
 <p>
 Packt Publishing sponsors this programming contest, offering six copies of the <a href="http://link.packtpub.com/4GvmBV">Mastering phpMyAdmin 3.4</a> book (two print copies and four e-books).
@@ -30,22 +30,6 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3442006&amp;group_id=23067&amp;atid=377411">Create with same name AND grant on user\_%</a> (winner: Jo Michael)</li>
  <li><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=3490114&amp;group_id=23067&amp;atid=377411">Export all privileges</a> (winner: Alex Marin)</li>
 </ol>
-
-<h3>How to submit your patch</h3>
-<ul>
- <li>Be familiar with our <a href="${base_url}devel.${file_ext}">developers page</a></li>
- <li>Prepare your patch against the master branch</li>
- <li>Submit it to our <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> with a title such as &ldquo;Contest-X&rdquo;, where X is the number from the above features list</li>
- <li>On the tracker, use the &ldquo;Visibility: private&rdquo; checkbox</li>
- <li>On your SourceForge.net profile, ensure that you have configured your email address so that we can communicate with you</li>
-</ul>
-
-<h3>Discount codes</h3>
-<p>Anyone seeing this page can use one of the following discount codes (valid until April 15, 2012) to obtain a 20% discount when ordering a <a href="http://link.packtpub.com/4GvmBV">Mastering phpMyAdmin 3.4</a> book copy.</p>
-<ul>
- <li>Print : <strong>PHP20</strong></li>
- <li>E-book: <strong>PHP20eb</strong></li>
-</ul>
 
 </div>
 
