@@ -83,6 +83,8 @@ href="${links.forums}">${info.forums} forums</a> and discussed various topics
 in <a href="${links.mailinglists}">${info.mailinglists} mailing lists</a>.
 </p>
 
+<script type="text/javascript" src="http://www.ohloh.net/p/3344/widgets/project_factoids_stats.js"></script>
+
 <h2>Tracker Statistics</h2>
 
 <table class="graph sortable" id="sorttable">
