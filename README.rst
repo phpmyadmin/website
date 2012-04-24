@@ -9,11 +9,11 @@ Requirements
 ------------
 
 Python - http://www.python.org/
-(2.7 tested, other should work also)
+    (2.7 tested, other should work also)
 Genshi -  http://genshi.edgewall.org/
-(0.6.0 tested)
+    (0.6.0 tested)
 python-feedparser - http://code.google.com/p/feedparser/
-(5.1 tested)
+    (5.1 tested)
 
 
 Security announcements
@@ -87,23 +87,23 @@ Generating website
 ------------------
 
 The website itself is rendered using render.py, here are options which
-are currently used for http://www.phpmyadmin.net/home_page/:
+are currently used for http://www.phpmyadmin.net/home_page/::
 
-./render.py \
-    --quiet \
-    --server http://www.phpmyadmin.net \
-    --base-url /home_page/ \
-    --quiet-cache \
-    --log render.log \
-    --extension php
+    ./render.py \
+        --quiet \
+        --server http://www.phpmyadmin.net \
+        --base-url /home_page/ \
+        --quiet-cache \
+        --log render.log \
+        --extension php
 
-If you want to make log visible on website, copy it to output folder:
+If you want to make log visible on website, copy it to output folder::
 
-cp render.log output/
+    cp render.log output/
 
-And finally rsync it to sourceforge:
+And finally rsync it to sourceforge::
 
-rsync -az --delete output/ user,phpmyadmin@web.sourceforge.net:htdocs/home_page/
+    rsync -az --delete output/ user,phpmyadmin@web.sourceforge.net:htdocs/home_page/
 
 Automatic build
 ---------------
@@ -126,5 +126,3 @@ licensed under terms of MIT license.
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
-
-# vim: et ts=4 sw=4 sts=4 tw=72 spell spelllang=en_us
