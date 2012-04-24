@@ -9,13 +9,13 @@
 <p>
 The phpMyAdmin development team has been organized on <a
 href="http://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> since
-its start in 2001. They are responsible for the development of phpMyAdmin and represents
+its start in 2001. They are responsible for the development of phpMyAdmin and represent
 it at various conferences. You can find more about the project and its
-history on <a href="${base_url}about.${file_ext}">separate page</a>.
+history on this <a href="${base_url}about.${file_ext}">separate page</a>.
 </p>
 
 <p>
-You can contact the team on <a href="mailto:phpmyadmin-devel@lists.sourceforge.net">development 
+You can contact the team on the <a href="mailto:phpmyadmin-devel@lists.sourceforge.net">development 
 mailing list</a> (<a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">subscription and archives</a>).
 You can follow the developers blogs at 
 <a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
