@@ -43,7 +43,7 @@ these can be either patches directly or pull requests for git repositories.
 Our developers will then merge your code or will guide you through 
 improving the patch. The patch will be of course committed under your 
 name and mail, so that you receive appropriate credits. Generally after 
-merging several good patches you will be offered write access to out 
+merging several good patches you will be offered write access to our 
 repository.
 </p>
 
