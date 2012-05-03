@@ -31,7 +31,7 @@ Marc started contributing to <span class="org">phpMyAdmin</span> in 1998. He the
 </p>
 <p>
 He is currently the project administrator and he has contributed the largest amount of
-code to the project. He lives in <span class="adr"><span class="locality">Québec</span>, <span class="country-name">Canada</span></span>.
+code to the project. He lives in <span class="adr"><span class="locality">Sherbrooke</span>, a city in the Québec province of <span class="country-name">Canada</span></span>.
 </p>
 </div>
 
