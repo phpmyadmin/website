@@ -86,6 +86,21 @@ He lives in <span class="adr"><span class="locality">Cork</span>, <span class="c
 </p>
 </div>
 
+<div class="floatbox vcard" id="jm">
+<h3 class="fn">J.M.</h3>
+<p>
+J.M. is a wheelchair-brain, always on the run to learn and program new
+things, without spending much money because the best things are what you
+get without money (pma). Since his brain is big and fast enough, he can
+learn everything on his own. He likes being creative, finding,
+eliminating and patching bugs. For the case his idea doesn't live yet,
+he'll invent it.
+</p>
+<p>
+He lives in <span class="adr"><span class="country-name">Germany</span></span>.
+</p>
+</div>
+
 <div class="clearer"></div>
 
 <h2>Team meetings</h2>
