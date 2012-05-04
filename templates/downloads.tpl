@@ -150,6 +150,12 @@
         (Linux, Apache, MySQL, PHP/Python/Perl) together with phpMyAdmin to
         manage MySQL.
     </p>
+    <h3>BitNami</h3>
+    <p>
+        <a href="http://bitnami.org/stack/lampstack">BitNami LAMPStack</a>
+        includes ready-to-run versions of Apache, MySQL, PHP and phpMyAdmin 
+        and required dependencies.
+    </p>
 
 </div>
 
