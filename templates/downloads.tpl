@@ -149,13 +149,6 @@
         (Linux, Apache, MySQL, PHP/Python/Perl) together with phpMyAdmin to
         manage MySQL.
     </p>
-    <h3>SUSE Studio</h3>
-    <p>
-        <a href="http://susestudio.com/">SUSE Studio</a> is an online service
-        to build software appliances. Jordi Massaguer has built a <a
-        href="http://jordimassaguerpla.blogspot.com/2009/02/phpmyadmin-appliance.html">phpMyAdmin
-        appliance</a> using this service.
-    </p>
 
 </div>
 
