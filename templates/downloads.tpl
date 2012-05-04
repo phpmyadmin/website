@@ -131,7 +131,8 @@
 
     <h3>Amahi Linux Home Server</h3>
     <p>
-        phpMyAdmin is available as a one-click install on the <a href="http://www.amahi.org/apps">Amahi Home Server</a>. 
+        phpMyAdmin is available as a one-click install on the 
+        <a href="https://www.amahi.org/apps/phpmyadmin">Amahi Home Server</a>. 
     </p>
 
     <h2><a id="appliances"></a>Appliances</h2>
