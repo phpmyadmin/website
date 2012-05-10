@@ -153,8 +153,11 @@
     <h3>BitNami</h3>
     <p>
         <a href="http://bitnami.org/stack/lampstack">BitNami LAMPStack</a>
-        includes ready-to-run versions of Apache, MySQL, PHP and phpMyAdmin 
-        and required dependencies.
+        includes ready-to-run versions of Apache, MySQL, PHP and phpMyAdmin
+        and required dependencies. Also available as all-in-one installer for
+        <a href="http://bitnami.org/stack/wampstack">Windows</a> and
+        <a href="http://bitnami.org/stack/mampstack">Mac OS X</a> and
+        Cloud Amazon Images.
     </p>
 
 </div>
