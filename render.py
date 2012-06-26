@@ -90,7 +90,6 @@ DONATIONS_RSS = 'http://sourceforge.net/export/rss2_projdonors.php?group_id=%d&l
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
-RSS_CZ = 'http://phpmyadmin.cz/rss.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
@@ -951,9 +950,6 @@ class SFGenerator:
 
         rss_planet = self.feeds.load('planet', PLANET_RSS)
         self.process_planet(rss_planet)
-
-        rss_cz = self.feeds.load('cz', RSS_CZ)
-        self.process_feed('news_cz', rss_cz)
 
         rss_ru = self.feeds.load('ru', RSS_RU)
         self.process_feed('news_ru', rss_ru)

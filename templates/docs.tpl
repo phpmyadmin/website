@@ -59,13 +59,6 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
     </li>
     </ul>
     </li>
-    <li><a href="http://phpmyadmin.cz">phpmyadmin.cz: Czech site dedicated to phpMyAdmin</a>
-    <ul>
-    <li py:for="item in short_news_cz">
-        <a href="${item.link}" lang="cs" xml:lang="cs">${item.title}</a>
-    </li>
-    </ul>
-    </li>
 </ul>
 </div>
 
