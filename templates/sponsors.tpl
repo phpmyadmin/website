@@ -49,6 +49,10 @@ Thank you for your support!
 	<option value="Bronze">Bronze: $250.00 USD - monthly</option>
 	<option value="Gold">Gold: $500.00 USD - monthly</option>
 	<option value="Platinum">Platinum: $1,000.00 USD - monthly</option>
+	<option value="Silver (year)">Silver (year): $1,000.00 USD - yearly</option>
+	<option value="Bronze (year)">Bronze (year): $2,500.00 USD - yearly</option>
+	<option value="Gold (year)">Gold (year): $5,000.00 USD - yearly</option>
+	<option value="Platinum (year)">Platinum (year): $10,000.00 USD - yearly</option>
 </select>
 </p>
 <p>
