@@ -45,14 +45,14 @@ Thank you for your support!
 <p><input type="hidden" name="on0" value="Sponsorship level" />Sponsorship options</p>
 <p>
 <select name="os0">
-	<option value="Silver">Silver: $100.00 USD - monthly</option>
-	<option value="Bronze">Bronze: $250.00 USD - monthly</option>
-	<option value="Gold">Gold: $500.00 USD - monthly</option>
-	<option value="Platinum">Platinum: $1,000.00 USD - monthly</option>
-	<option value="Silver (year)">Silver (year): $1,000.00 USD - yearly</option>
-	<option value="Bronze (year)">Bronze (year): $2,500.00 USD - yearly</option>
-	<option value="Gold (year)">Gold (year): $5,000.00 USD - yearly</option>
-	<option value="Platinum (year)">Platinum (year): $10,000.00 USD - yearly</option>
+	<option value="Silver">Silver: $100 USD - monthly</option>
+	<option value="Bronze">Bronze: $250 USD - monthly</option>
+	<option value="Gold">Gold: $500 USD - monthly</option>
+	<option value="Platinum">Platinum: $1,000 USD - monthly</option>
+	<option value="Silver (year)">Silver (year): $1,000 USD - yearly</option>
+	<option value="Bronze (year)">Bronze (year): $2,500 USD - yearly</option>
+	<option value="Gold (year)">Gold (year): $5,000 USD - yearly</option>
+	<option value="Platinum (year)">Platinum (year): $10,000 USD - yearly</option>
 </select>
 </p>
 <p>
