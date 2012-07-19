@@ -21,10 +21,10 @@ The phpMyAdmin project extents a special thanks to the companies who wish to sup
 <h3>New sponsors</h3>
 
 <p>
-If you use phpMyAdmin, please consider sponsoring the project with a monthly
-donation. The money will be used to improve phpMyAdmin, bring phpMyAdmin
-developers to conferences and to cover costs for services required to run the
-project.
+If you use phpMyAdmin or offer it to your customers, please consider 
+sponsoring the project with a monthly donation. The money will be used to 
+improve phpMyAdmin, bring phpMyAdmin developers to conferences and to cover 
+costs for services required to run the project.
 </p>
 
 <p>
