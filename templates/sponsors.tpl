@@ -10,12 +10,12 @@
 The phpMyAdmin project extents a special thanks to the companies who wish to support us in a recurring way.
 </p>
 
-<h3>Sponsorship conditions</h3>
+<h3>Sponsorship conditions and advantages</h3>
 
 <ul>
  <li>A sponsor has to commit to a 100 USD minimum monthly amount (or 1000 USD yearly amount as a discount for paying in advance)</li>
- <li>The donation is made via Paypal to donate@phpmyadmin.net</li>
- <li>Sponsors are mentioned on this page, with the two highest sponsors listed on our home page as well</li>
+ <li>The donation is made via Paypal (see the Subscribe form below)</li>
+ <li>Sponsors are mentioned on this page, with the two highest sponsors listed on our <a href="http://phpmyadmin.net">home page</a> as well</li>
 </ul>
 
 <h3>New sponsors</h3>
