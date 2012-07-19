@@ -30,7 +30,7 @@ project.
 <p>
 To get listed on this page, please contact us at team@phpmyadmin.net after
 subscribing here. Please note that we might refuse to link to some sites which
-we consider unethical on inappropriate like gambling or porn sites.
+we consider unethical or inappropriate.
 </p>
 
 <p>
