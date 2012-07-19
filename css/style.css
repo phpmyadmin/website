@@ -443,3 +443,6 @@ em.big {
     font-style: normal;
     font-size: 1.2em;
 }
+div.subscribe {
+    text-align: center;
+}

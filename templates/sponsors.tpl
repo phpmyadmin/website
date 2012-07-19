@@ -18,6 +18,49 @@ The phpMyAdmin project extents a special thanks to the companies who wish to sup
  <li>Sponsors are mentioned on this page, with the two highest sponsors listed on our home page as well</li>
 </ul>
 
+<h3>New sponsors</h3>
+
+<p>
+If you use phpMyAdmin, please consider sponsoring the project with a monthly
+donation. The money will be used to improve phpMyAdmin, bring phpMyAdmin
+developers to conferences and to cover costs for services required to run the
+project.
+</p>
+
+<p>
+To get listed on this page, please contact us at team@phpmyadmin.net after
+subscribing here. Please note that we might refuse to link to some sites which
+we consider unethical on inappropriate like gambling or porn sites.
+</p>
+
+<p>
+Thank you for your support!
+</p>
+
+<div class="subscribe">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="QXKQ4SM8MDTL4" />
+<p><input type="hidden" name="on0" value="Sponsorship level" />Sponsorship options</p>
+<p>
+<select name="os0">
+	<option value="Silver">Silver: $100.00 USD - monthly</option>
+	<option value="Bronze">Bronze: $250.00 USD - monthly</option>
+	<option value="Gold">Gold: $500.00 USD - monthly</option>
+	<option value="Platinum">Platinum: $1,000.00 USD - monthly</option>
+</select>
+</p>
+<p>
+<input type="hidden" name="currency_code" value="USD" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</p>
+</form>
+
+</div>
+
+
 <h2>Technology partners</h2>
 
 <p>
