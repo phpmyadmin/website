@@ -28,7 +28,8 @@ project.
 </p>
 
 <p>
-To get listed on this page, please contact us at team@phpmyadmin.net after
+To get listed on this page, please contact us at 
+<a href="mailto:donate@phpmyadmin.net?subject=Sponsorship">donate@phpmyadmin.net</a> after
 subscribing here. Please note that we might refuse to link to some sites which
 we consider unethical or inappropriate.
 </p>
