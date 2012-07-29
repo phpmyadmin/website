@@ -57,7 +57,7 @@ video tutorials giving users hints how to do specific tasks inside phpMyAdmin.
 <h3 id="devel">Developing</h3>
 
 <p>
-Coding contributions are very welcome, the easiest way is to for our code on github 
+Coding contributions are very welcome, the easiest way is to fork our code on github 
 and submit a merge request. We really welcome bug fixes or new features. 
 You can find out more on <a href="${base_url}devel.${file_ext}">developers
 page</a>.
