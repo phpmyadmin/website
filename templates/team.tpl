@@ -111,7 +111,7 @@ team meetings in real life have happened.
 </p>
 <p>The first one was at a big party in Karlsruhe, Germany for the 10th anniversary
 of PHP and MySQL at the <a href="http://www.linuxtag.org/2005">LinuxTag</a> 2005
-<a href="http://www.lamparea.org/">LAMP Area</a>, with some special guests.
+LAMP Area, with some special guests.
 </p>
 <p>The second meeting took place in Brussels, Belgium during 
 <a href="http://fosdem.org/2010">FOSDEM 2010</a>. Marc Delisle talked
