@@ -14,7 +14,6 @@ full control on MySQL. The default login is root with empty password.
 <ul>
     <li><a href="http://demo.phpmyadmin.net/">Demos overview</a></li>
     <li><a href="http://demo.phpmyadmin.net/trunk">Latest development version</a></li>
-    <li><a href="http://demo.phpmyadmin.net/TESTING">Latest released testing version</a></li>
     <li><a href="http://demo.phpmyadmin.net/STABLE">Latest released stable version</a></li>
 </ul>
 
