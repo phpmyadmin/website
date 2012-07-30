@@ -132,7 +132,6 @@ div.rightbuttons {
 div.rightbutton {
     padding: 0.5em;
     margin-top: 1em;
-    margin-bottom: 1em;
     margin-right: 2em;
     border: 1px solid white;
     border-radius: 5px;
@@ -158,6 +157,17 @@ div.rightbutton:hover {
 div.rightbutton a {
     color: white;
 }
+
+div.rightsponsors {
+    padding: 0.5em;
+    margin-top: -1em;
+    margin-right: 2em;
+    float: right;
+    clear: both;
+    width: 12em;
+    text-align: center;
+}
+
 
 div.tip {
     border: 1px solid black;

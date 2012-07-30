@@ -10,6 +10,11 @@
 The phpMyAdmin project extents a special thanks to the companies who wish to support us in a recurring way.
 </p>
 
+<h3>Bronze sponsors</h3>
+<ul>
+ <li><a href="http://www.aoemedia.de">AOE media GmbH</a></li>
+</ul>
+
 <h3>Sponsorship conditions and advantages</h3>
 
 <ul>
