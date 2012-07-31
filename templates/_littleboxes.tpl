@@ -22,7 +22,7 @@
 
 <div class="rightsponsors">
 <p><strong>Top <a href="${base_url}sponsors.${file_ext}">sponsors</a></strong></p>
-<a href="http://www.aoemedia.de"><img src="${server}${base_url}images/aoemedia_200x65.jpg" alt="AOE media GmbH" /></a>
+<a href="http://www.aoemedia.de"><img src="${server}${base_url}images/aoemedia_200x68.jpg" alt="AOE media GmbH" /></a>
 </div>
 
 </html>
