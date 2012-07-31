@@ -7,7 +7,7 @@
 <h2>Sponsors</h2>
 
 <p>
-The phpMyAdmin project extents a special thanks to the companies who wish to support us in a recurring way.
+The phpMyAdmin project extends a special thanks to the companies who wish to support us in a recurring way.
 </p>
 
 <h3>Bronze sponsors</h3>
