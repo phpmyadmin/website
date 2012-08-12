@@ -20,13 +20,14 @@ GIS data pages.
 </py:def>
 
 <py:def function="announcement_description">
-Using a crafted table or column name, it was possible to produce a XSS :
+Using a crafted table name, it was possible to produce a XSS :
 1) On the Database Structure page, creating a new table with a crafted name
 2) On the Database Structure page, using the Empty and Drop links of the crafted table name
 3) On the Table Operations page of a crafted table, using the 'Empty the table (TRUNCATE)' and 'Delete the table (DROP)' links
 4) On the Triggers page of a database containing tables with a crafted name, when opening the 'Add Trigger' popup
 5) When creating a trigger for a table with a crafted name, with an invalid definition.
-6) When visualizing GIS data, having a crafted column name.
+Having crafted data in a database table, it was possible to produce a XSS :
+6) When visualizing GIS data, having a crafted label name.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -34,7 +35,7 @@ We consider these vulnerabilities to be non critical.
 </py:def>
 
 <py:def function="announcement_mitigation">
-These XSS can only be triggered when a table or column with a crafted name is already present.
+These XSS can only be triggered when a table with a crafted name is already present, or if crafted data is already stored in a database table.
 </py:def>
 
 <py:def function="announcement_affected">
