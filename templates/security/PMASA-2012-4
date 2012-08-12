@@ -68,5 +68,10 @@ dca22c5046aa16899042592b40a0af7b5c4f1fc7
 d56335691cf1c1d8be3453904a885038da0a8c93
 </py:def>
 
+<py:def function="announcement_commits_3_4">
+d84b98d34012cc5986fe84f1871b0396990391ef
+e094f34bed5ef3fd9a4a3cd08e01ff59a260c730
+</py:def>
+
 <xi:include href="_page.tpl" />
 </html>
