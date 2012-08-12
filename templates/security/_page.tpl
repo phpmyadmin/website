@@ -66,7 +66,7 @@
     <h3>Patches</h3>
 
     <py:if test="defined('announcement_commits')">
-    <p>Following commits have been made to fix this issue:</p>
+    <p>The following commits have been made to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits().next()[1].strip().split('\n')">
     <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
@@ -75,7 +75,7 @@
     </py:if>
 
     <py:if test="defined('announcement_commits_3_5')">
-    <p>Following commits have been made on 3.5 branch to fix this issue:</p>
+    <p>The following commits have been made on the 3.5 branch to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits_3_5().next()[1].strip().split('\n')">
     <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
@@ -84,7 +84,7 @@
     </py:if>
 
     <py:if test="defined('announcement_commits_3_4')">
-    <p>Following commits have been made on 3.4 branch to fix this issue:</p>
+    <p>The following commits have been made on the 3.4 branch to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits_3_4().next()[1].strip().split('\n')">
     <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
@@ -93,7 +93,7 @@
     </py:if>
 
     <py:if test="defined('announcement_commits_3_3')">
-    <p>Following commits have been made on 3.3 branch to fix this issue:</p>
+    <p>The following commits have been made on the 3.3 branch to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits_3_3().next()[1].strip().split('\n')">
     <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
@@ -102,7 +102,7 @@
     </py:if>
 
     <py:if test="defined('announcement_commits_2_11')">
-    <p>Following commits have been made on 2.11 branch to fix this issue:</p>
+    <p>The following commits have been made on the 2.11 branch to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits_2_11().next()[1].strip().split('\n')">
     <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
