@@ -26,7 +26,7 @@ Using a crafted table or column name, it was possible to produce a XSS :
 3) On the Table Operations page of a crafted table, using the 'Empty the table (TRUNCATE)' and 'Delete the table (DROP)' links
 4) On the Triggers page of a database containing tables with a crafted name, when opening the 'Add Trigger' popup
 5) When creating a trigger for a table with a crafted name, with an invalid definition.
-6) When creating having a crafted column name, when visualizing GIS data.
+6) When visualizing GIS data, having a crafted column name.
 </py:def>
 
 <py:def function="announcement_severity">
