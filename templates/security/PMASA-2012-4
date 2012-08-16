@@ -57,7 +57,7 @@ listed below.
 Thanks to Emanuel Bronshtein for reporting issues #2, #3 and #4.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2012-xxxx</py:def>
+<py:def function="announcement_cve">CVE-2012-4345</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
