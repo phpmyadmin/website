@@ -15,7 +15,7 @@ PMASA-2012-4
 -->
 
 <py:def function="announcement_summary">
-Multiple XSS in Table operations, Database structure, Trigger and Visualize 
+Multiple XSS in Table operations, Database structure, Trigger and Visualize
 GIS data pages.
 </py:def>
 
@@ -49,7 +49,7 @@ Versions 3.5.x are affected, for all issues.
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 3.4.11.1 or 3.5.2.2 or newer or apply the patches 
+Upgrade to phpMyAdmin 3.4.11.1 or 3.5.2.2 or newer or apply the patches
 listed below.
 </py:def>
 
