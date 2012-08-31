@@ -997,6 +997,7 @@ class SFGenerator:
         self.render_static('_version.php', 'version.php')
         self.render_static('_version.txt', 'version.txt')
         self.render_static('_version.js', 'version.js')
+        self.render_static('_version.json', 'version.json')
         self.render_static('_security.php', 'security.php')
         self.render_static('_robots.txt', 'robots.txt')
         for redir in data.redirects.REDIRECTS:
