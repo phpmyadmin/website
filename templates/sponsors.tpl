@@ -13,6 +13,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <h3>Bronze sponsors</h3>
 <ul>
  <li><a href="http://www.aoemedia.de">AOE media GmbH</a></li>
+ <li><a href="http://www.cyberday-gmbh.de/">Cyberday GmbH</a></li>
 </ul>
 
 <h3>Sponsorship conditions and advantages</h3>
