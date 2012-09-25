@@ -64,11 +64,13 @@ Center</a> for letting us know about this issue.
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-2012-5159</py:def>
 
 <!--! CWE IDs of the problem, CWE provides categorisation of the problems,
 661 is "Weaknesses in Software Written in PHP"
 See http://nvd.nist.gov/cwe.cfm for more information
 -->
+<py:def function="announcement_cwe">661 95</py:def>
 
 <!--! Optional section with list of commits fixing this, one per line
 <py:def function="announcement_commits">
