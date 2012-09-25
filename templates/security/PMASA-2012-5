@@ -53,8 +53,8 @@ affected, check if your download contains file named
 -->
 
 <py:def function="announcement_solution">
-Check your phpMyAdmin distribution and remove file
-<code>server_sync.php</code>.
+Check your phpMyAdmin distribution and download it again from trusted mirror
+in your copy contains file <code>server_sync.php</code>.
 </py:def>
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
