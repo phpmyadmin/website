@@ -17,8 +17,8 @@ PMASA-2012-5
 -->
 
 <py:def function="announcement_summary">
-One server from SourceForge.net mirror system distributes phpMyAdmin kit
-with backdoor.
+One server from the SourceForge.net mirror system was distributing a phpMyAdmin kit
+containing a backdoor.
 </py:def>
 
 
@@ -26,9 +26,10 @@ with backdoor.
 <py:def function="announcement_description_fmt">
 -->
 <py:def function="announcement_description">
-One of SourceForge.net mirrors, namely <code>cdnetworks-kr-1</code>, is being used to
+One of the SourceForge.net mirrors, namely <code>cdnetworks-kr-1</code>, was being used to
 distribute a modified archive of phpMyAdmin, which includes a backdoor. This
-backdoor is located in file <code>server_sync.php</code> and allows an attacker to remotely execute PHP code.
+backdoor is located in file <code>server_sync.php</code> and allows an attacker to remotely execute PHP code. Another file, <code>js/cross_framing_protection.js</code>,
+has also been modified.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -63,13 +64,11 @@ Center</a> for letting us know about this issue.
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
-<py:def function="announcement_cve">CVE-201x-xxxx</py:def>
 
 <!--! CWE IDs of the problem, CWE provides categorisation of the problems,
 661 is "Weaknesses in Software Written in PHP"
 See http://nvd.nist.gov/cwe.cfm for more information
 -->
-<py:def function="announcement_cwe">661 95</py:def>
 
 <!--! Optional section with list of commits fixing this, one per line
 <py:def function="announcement_commits">
