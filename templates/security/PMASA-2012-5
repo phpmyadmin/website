@@ -70,7 +70,7 @@ Center</a> for letting us know about this issue.
 661 is "Weaknesses in Software Written in PHP"
 See http://nvd.nist.gov/cwe.cfm for more information
 -->
-<py:def function="announcement_cwe">661</py:def>
+<py:def function="announcement_cwe">661 95</py:def>
 
 <!--! Optional section with list of commits fixing this, one per line
 <py:def function="announcement_commits">
