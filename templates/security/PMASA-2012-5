@@ -27,9 +27,8 @@ with backdoor.
 -->
 <py:def function="announcement_description">
 One of SourceForge.net mirrors, namely <code>cdnetworks-kr-1</code>, is being used to
-distribute modified archive with phpMyAdmin, which includes backdoor. This
-backdoor is located in file <code>server_sync.php</code> and allows attacker to remotely 
-execute PHP code.
+distribute a modified archive of phpMyAdmin, which includes a backdoor. This
+backdoor is located in file <code>server_sync.php</code> and allows an attacker to remotely execute PHP code.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -43,7 +42,7 @@ We consider this vulnerability to be critical.
 
 <py:def function="announcement_affected">
 We currently know only about <code>phpMyAdmin-3.5.2.2-all-languages.zip</code> being
-affected, check if your download contains file named
+affected, check if your download contains a file named
 <code>server_sync.php</code>.
 </py:def>
 
@@ -53,8 +52,8 @@ affected, check if your download contains file named
 -->
 
 <py:def function="announcement_solution">
-Check your phpMyAdmin distribution and download it again from trusted mirror
-in your copy contains file <code>server_sync.php</code>.
+Check your phpMyAdmin distribution and download it again from a trusted mirror
+if your copy contains a file named <code>server_sync.php</code>.
 </py:def>
 
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
