@@ -1,0 +1,86 @@
+<!--! Template for security announcement -->
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2012-5
+</py:def>
+
+<py:def function="announcement_date">
+2012-09-25
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2012-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+One server from SourceForge.net mirror system distributed phpMyAdmin kit
+with backdoor.
+</py:def>
+
+
+<!--! If you need to avoid toplevel <p></p>, use this:
+<py:def function="announcement_description_fmt">
+-->
+<py:def function="announcement_description">
+One of SourceForge.net mirrors, namely <code>cdnetworks-kr-1</code>, is being used to
+distribute modified archive with phpMyAdmin, which includes backdoor. This
+backdoor is located in file <code>server_sync.php</code> and allows attacker to remotely 
+execute PHP code.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be critical.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_mitigation">
+</py:def>
+-->
+
+<py:def function="announcement_affected">
+We currently know only about <code>phpMyAdmin-3.5.2.2-all-languages.zip</code> being
+affected, check if your download contains file named
+<code>server_sync.php</code>.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Check your phpMyAdmin distribution and remove file
+<code>server_sync.php</code>.
+</py:def>
+
+<!--! Links to reporter etc, do not forget to escape & to &amp; -->
+<py:def function="announcement_references">
+Thanks to <a href="http://security.tencent.com">Tencent Security Response
+Center</a> for letting us know about this issue.
+</py:def>
+
+<!--! CVE ID of the report, this is automatically added to references -->
+<py:def function="announcement_cve">CVE-201x-xxxx</py:def>
+
+<!--! CWE IDs of the problem, CWE provides categorisation of the problems,
+661 is "Weaknesses in Software Written in PHP"
+See http://nvd.nist.gov/cwe.cfm for more information
+-->
+<py:def function="announcement_cwe">661</py:def>
+
+<!--! Optional section with list of commits fixing this, one per line
+<py:def function="announcement_commits">
+</py:def>
+-->
+
+<!--! Optional section with list of commits fixing this for 2.11 branch, one per line
+<py:def function="announcement_commits_2_11">
+</py:def>
+-->
+
+<xi:include href="_page.tpl" />
+</html>
