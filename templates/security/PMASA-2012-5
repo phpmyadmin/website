@@ -10,11 +10,9 @@ PMASA-2012-5
 2012-09-25
 </py:def>
 
-<!--! Optional section, use only if something has been changed
 <py:def function="announcement_updated">
-2012-??-??
+2012-09-26
 </py:def>
--->
 
 <py:def function="announcement_summary">
 One server from the SourceForge.net mirror system was distributing a phpMyAdmin kit
@@ -60,7 +58,9 @@ if your copy contains a file named <code>server_sync.php</code>.
 <!--! Links to reporter etc, do not forget to escape & to &amp; -->
 <py:def function="announcement_references">
 Thanks to <a href="http://security.tencent.com">Tencent Security Response
-Center</a> for letting us know about this issue.
+Center</a> for letting us know about this issue. You can also find additional
+details in <a
+href="http://sourceforge.net/blog/phpmyadmin-back-door/">SourceForge blog</a>.
 </py:def>
 
 <!--! CVE ID of the report, this is automatically added to references -->
