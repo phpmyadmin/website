@@ -75,9 +75,6 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 <p>
 A percentage of the book's sales is <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
 </p>
-<p>
-Congratulations to <a href="http://www.packtpub.com">Packt Publishing</a> who will soon publish its 1000<sup>th</sup> title. For a surprise gift, read the <a href="http://www.packtpub.com/news/packt-publishing-reaches-1000-it-titles-and-celebrates-open-invitation">press release</a>.
-</p>
 
 </div>
 
