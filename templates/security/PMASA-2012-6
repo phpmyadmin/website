@@ -1,0 +1,60 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2012-6
+</py:def>
+
+<py:def function="announcement_date">
+2012-10-xx
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2012-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+Multiple XSS due to unescaped HTML output in Trigger, Procedure and Event pages.
+</py:def>
+
+<py:def function="announcement_description">
+When creating/modifying a trigger, event or procedure with a crafted name, it is possible to trigger an XSS.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider these vulnerabilities to be non critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+These XSS can only be triggered when a crafted value is entered by the user.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.5.x are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.5.3 or newer or apply the patches listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Maxim Rupp for reporting an issue when creating an event.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2012-xxxx</py:def>
+
+<py:def function="announcement_cwe">661 79</py:def>
+
+<py:def function="announcement_commits">
+cfd688d2512df9827a8ecc0412fc264fc5bcb186
+6ea8fad3f999bfdf79eb6fe31309592bca54d611
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
