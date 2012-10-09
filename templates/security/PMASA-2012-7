@@ -1,0 +1,58 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2012-7
+</py:def>
+
+<py:def function="announcement_date">
+2012-10-xx
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2012-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+Fetching the version information from a non-SSL site is vulnerable to a MITM attack.
+</py:def>
+
+<py:def function="announcement_description">
+To display information about the current phpMyAdmin version on the main page, a piece of JavaScript is fetched from the phpmyadmin.net website in non-SSL mode. A man-in-the-middle could modify this script on the wire to cause mischief.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.5.x before 3.5.3 are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.5.3 or newer or apply the patches listed below. The fix involves fetching a JSON file rather than a JavaScript file.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Mike Cardwell for reporting this issue and suggesting workarounds. 
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_cve">CVE-2012-XXXX</py:def>
+-->
+
+<py:def function="announcement_cwe">661 300</py:def>
+
+<py:def function="announcement_commits">
+50edafc0884aa15d0a1aa178089ac6a1ad2eb18a
+a547f3d3e2cf36c6a904fa3e053fd8bddd3fbbb0
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
