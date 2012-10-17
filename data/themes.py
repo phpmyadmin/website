@@ -244,6 +244,13 @@ THEMES = {
         'support' : '3.4',
         'info' : u'Theme included in phpMyAdmin up to 3.3',
         'author': u'Various contributors',
+        'ignore': True,
+    },
+    'darkblue_orange-2.11' : {
+        'name' : 'Darkblue/orange',
+        'support' : '3.4',
+        'info' : u'Theme included in phpMyAdmin up to 3.3',
+        'author': u'Various contributors',
     },
 }
 TEMPLATE = {
