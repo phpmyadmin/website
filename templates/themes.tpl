@@ -49,7 +49,7 @@ your theme for downloading here.
                 </a>
             </div>
             </div>
-            <p>Released ${theme.date}, see <a href="${theme.notes}">release notes</a> for details.</p>
+            <p>Released on ${theme.date}</p>
             <p>Compatible with phpMyAdmin <strong>${theme.support}</strong>.</p>
             <p py:if="theme.author">Author: ${theme.author}</p>
             <p>${Markup(theme.info)}</p>
