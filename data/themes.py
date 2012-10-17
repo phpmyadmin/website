@@ -255,8 +255,8 @@ THEMES = {
     'blueorange-1.0b' : {
         'name' : 'blueorange',
         'support' : '3.5',
-        'info' : u'Theme with lots of border radii and box shadows'
-        'author': u'Teted'
+        'info' : u'Theme with lots of border radii and box shadows',
+        'author': u'Teted',
     },
 }
 TEMPLATE = {
