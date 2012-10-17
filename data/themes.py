@@ -252,6 +252,12 @@ THEMES = {
         'info' : u'Theme included in phpMyAdmin up to 3.3',
         'author': u'Various contributors',
     },
+    'blueorange-1.0b' : {
+        'name' : 'blueorange',
+        'support' : '3.5',
+        'info' : u'Theme with lots of border radii and box shadows'
+        'author': u'Teted'
+    },
 }
 TEMPLATE = {
     '' : {
