@@ -75,7 +75,7 @@
     from our Git repository (check <a href="${base_url}devel.${file_ext}">developer information</a> for instructions).
     </p>
 
-    <h2><a id="distributions"></a>Distributions</h2>
+    <h2><a id="distributions"></a>Installing phpMyAdmin in Linux distributions</h2>
     <h3>Debian</h3>
     <p>
         Debian's package repositories include a phpMyAdmin package, but be
@@ -86,8 +86,8 @@
     </p>
     <h3>OpenSUSE</h3>
     <p>
-        OpenSUSE already comes with phpMyAdmin package, however if you want to
-        use recent version, you can use packages from <a
+        OpenSUSE already comes with phpMyAdmin package, just install packages from
+        the <a
         href="http://software.opensuse.org/package/phpMyAdmin">openSUSE Build
         Service</a>.
     </p>
