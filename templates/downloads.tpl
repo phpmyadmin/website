@@ -88,7 +88,7 @@
     <p>
         OpenSUSE already comes with phpMyAdmin package, however if you want to
         use recent version, you can use packages from <a
-        href="http://software.opensuse.org/search?q=phpmyadmin">openSUSE Build
+        href="http://software.opensuse.org/package/phpMyAdmin">openSUSE Build
         Service</a>.
     </p>
     <h3>Ubuntu</h3>
