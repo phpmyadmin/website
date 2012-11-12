@@ -162,7 +162,7 @@ future directions for the project.
 We'd like to thank all the former developers and contributors,
 whom over the years have contributed to the success of phpMyAdmin.
 A full list is maintained in the <a
-href="http://www.phpmyadmin.net/documentation/#credits">documentation</a>.
+href="https://phpmyadmin.readthedocs.org/en/latest/credits.html">documentation</a>.
 </p>
     
 </div>
