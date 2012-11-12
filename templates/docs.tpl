@@ -10,6 +10,7 @@
 <h3>Official Documentation</h3>
 <ul>
     <li><b><a href="https://phpmyadmin.readthedocs.org/en/latest/">Main documentation</a></b> (from the development version)</li>
+    <li><b><a href="https://readthedocs.org/projects/phpmyadmin/downloads/">Downloadable documentation</a></b> (from the development version)</li>
     <li><b><a href="http://wiki.phpmyadmin.net/">Official phpMyAdmin wiki</a></b></li>
     <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html">Frequently Asked Questions</a></li>
     <li><a href="http://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
