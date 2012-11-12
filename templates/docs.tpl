@@ -25,16 +25,13 @@
 href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 
 <ul>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/cs">Czech</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/en_GB">English (United Kingdom)</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/es">Spanish</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/fr">French</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/it">Italian</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/ja">Japanese</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/pl">Polish</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/pt_BR">Brazilian Portuguese</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/tr">Turkish</a></li>
-    <li><a href="http://www.phpmyadmin.net/localized_docs/zh_CN">Simplified Chinese</a></li>
+    <li><a href="https://phpmyadmin-english-united-kingdom.readthedocs.org/en/latest/">English (United Kingdom)</a></li>
+    <li><a href="https://phpmyadmin-spanish.readthedocs.org/en/latest/">Spanish</a></li>
+    <li><a href="https://phpmyadmin-french.readthedocs.org/en/latest/">French</a></li>
+    <li><a href="https://phpmyadmin-greek.readthedocs.org/en/latest/">Greek</a></li>
+    <li><a href="https://phpmyadmin-japanese.readthedocs.org/en/latest/">Japanese</a></li>
+    <li><a href="https://phpmyadmin-turkish.readthedocs.org/en/latest/">Turkish</a></li>
+    <li><a href="https://phpmyadmin-chinese-china.readthedocs.org/en/latest/">Simplified Chinese</a></li>
 </ul>
 </div>
 
