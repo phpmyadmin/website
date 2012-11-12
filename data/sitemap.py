@@ -20,12 +20,5 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 ENTRIES = [
-    '/documentation/license.php',
-    '/documentation/readme.php',
-    '/documentation/Documentation.html',
     '/documentation/changelog.php',
-    '/pma_localized_docs/Documentation_ja.html',
-    '/pma_localized_docs/Documentation-it.html',
-    '/pma_localized_docs/Documentation-pl-2.5.2-pl1-1.html',
-    '/pma_localized_docs/fr/Documentation.fr.html',
     ]

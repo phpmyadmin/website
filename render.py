@@ -824,9 +824,6 @@ class SFGenerator:
         if page[:15] == 'security/PMASA-':
             priority = '0.5'
             changefreq = 'monthly'
-        elif page[:15] == '/documentation/':
-            priority = '0.7'
-            changefreq = 'weekly'
         elif page[:20] == '/pma_localized_docs/':
             priority = '0.6'
             changefreq = 'monthly'
