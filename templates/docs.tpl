@@ -9,7 +9,7 @@
 <div class="floatbox">
 <h3>Official Documentation</h3>
 <ul>
-    <li><b><a href="https://phpmyadmin.readthedocs.org/en/latest/">Main documentation</a></b> (from the development version)</li>
+    <li><b><a href="https://docs.phpmyadmin.net/">Main documentation</a></b> (from the development version)</li>
     <li><b><a href="https://readthedocs.org/projects/phpmyadmin/downloads/">Downloadable documentation</a></b> (from the development version)</li>
     <li><b><a href="http://wiki.phpmyadmin.net/">Official phpMyAdmin wiki</a></b></li>
     <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html">Frequently Asked Questions</a></li>
@@ -29,6 +29,7 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
     <li><a href="https://phpmyadmin-spanish.readthedocs.org/en/latest/">Spanish</a></li>
     <li><a href="https://phpmyadmin-french.readthedocs.org/en/latest/">French</a></li>
     <li><a href="https://phpmyadmin-greek.readthedocs.org/en/latest/">Greek</a></li>
+    <li><a href="https://phpmyadmin-czech.readthedocs.org/en/latest/">Czech</a></li>
     <li><a href="https://phpmyadmin-japanese.readthedocs.org/en/latest/">Japanese</a></li>
     <li><a href="https://phpmyadmin-turkish.readthedocs.org/en/latest/">Turkish</a></li>
     <li><a href="https://phpmyadmin-chinese-china.readthedocs.org/en/latest/">Simplified Chinese</a></li>
