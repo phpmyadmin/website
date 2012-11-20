@@ -45,7 +45,7 @@ Effective MySQL Management</a>, which is available in English, <a href="${base_u
 
 <p>
 To ease usage to a wide range of people, phpMyAdmin is being translated into <a
-href="${base_url}translations.${file_ext}">68 languages</a> and supports both LTR
+href="${base_url}translations.${file_ext}">69 languages</a> and supports both LTR
 and RTL languages.
 </p>
 
