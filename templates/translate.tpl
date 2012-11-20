@@ -10,7 +10,7 @@
 For localization, phpMyAdmin uses Gettext; you can find po files for each
 translation in the <code>po</code> directory in phpMyAdmin sources. You can
 translate them using the usual tools for handling Gettext translations or use our
-<a href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>.
+<a href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>.
 </p>
 
 <p>
@@ -48,7 +48,7 @@ offline translating.
 You can download po files either directly from Git (see 
 <a href="${base_url}devel.${file_ext}">developer instructions for more
 details</a>) or use the <a
-href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>,
+href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>,
 which allows you to directly download the latest po file of the desired version.
 </p>
 
@@ -56,7 +56,7 @@ which allows you to directly download the latest po file of the desired version.
 To submit your changes, you can either use the <a
 href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=387645">translation
 tracker on SourceForge.net</a> or the <a
-href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>,
+href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>,
 which can merge back your changed po file to the existing sources.
 </p>
 
