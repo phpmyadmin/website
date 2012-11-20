@@ -25,7 +25,7 @@ there - IRC, mailing lists and web forums, where you can share your experience.
 <p>
 phpMyAdmin is being translated to many languages, but maybe your language is not 
 really up to date? You can easily contribute on our
-<a href="https://l10n.cihar.com/projects/phpmyadmin/">translation server</a>.
+<a href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>.
 You can find out more on <a href="${base_url}translate.${file_ext}">translation
 page</a>.
 </p>
