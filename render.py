@@ -3,7 +3,7 @@
 #
 # phpMyAdmin web site generator
 #
-# Copyright (C) 2008 Michal Cihar <michal@cihar.com>
+# Copyright (C) 2008 - 2012 Michal Cihar <michal@cihar.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -59,8 +59,6 @@ FILES_REGEXP = re.compile(r'.*all-languages\.(zip|tar\.gz).*')
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
-SIZE_REGEXP = re.compile('.*\(([0-9]+) bytes, ([0-9]+) downloads to date')
-LANG_REGEXP ='((translation|lang|%s)\W.*update|update.*\W(translation|lang|%s)($|\W)|^updated?$|new lang|better word|fix.*translation($|\W)|Translation update done using (Pootle|Weblate))'
 
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
@@ -88,7 +86,6 @@ PROJECT_NEWS_RSS = 'http://sourceforge.net/export/rss2_projnews.php?group_id=%d&
 PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
 DONATIONS_RSS = 'http://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
-PROJECT_DL = 'http://prdownloads.sourceforge.net/%s/%%s' % PROJECT_NAME
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 
