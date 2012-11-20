@@ -7,7 +7,7 @@
 
 <p>
 Translations of phpMyAdmin are handled using Gettext. It is used for both
-translating phpMyAdmin as well as the documentation (where Po4a is being
+translating phpMyAdmin as well as the documentation (where Sphinx is being
 used).
 </p>
 

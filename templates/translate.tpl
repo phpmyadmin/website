@@ -14,7 +14,7 @@ translate them using the usual tools for handling Gettext translations or use ou
 </p>
 
 <p>
-The phpMyAdmin's documentation is being translated using po4a and gettext (see
+The phpMyAdmin's documentation is being translated using Sphinx and gettext (see
 <a href="${base_url}docs.${file_ext}">documentation</a> for existing
 translations) and the process here is pretty much the same as translating
 phpMyAdmin itself.
