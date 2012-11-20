@@ -86,6 +86,7 @@ PROJECT_NEWS_RSS = 'http://sourceforge.net/export/rss2_projnews.php?group_id=%d&
 PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
 DONATIONS_RSS = 'http://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
+TRANSLATIONS_RSS = 'https://l10n.cihar.com/exports/rss/phpmyadmin/'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
 RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
 
@@ -175,6 +176,7 @@ class SFGenerator:
             'file_ext': EXTENSION,
             'rss_files': PROJECT_FILES_RSS,
             'rss_donations': DONATIONS_RSS,
+            'rss_translations': TRANSLATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
             'rss_planet': PLANET_RSS,
             'rss_summary': PROJECT_SUMMARY_RSS,

@@ -1,6 +1,8 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
 <py:def function="page_title">Translations</py:def>
+<py:def function="page_rss">${rss_translations}</py:def>
+<py:def function="page_rss_title">phpMyAdmin translation changes</py:def>
 
 <div py:match="content" id="body">
 <h2>Translations</h2>
