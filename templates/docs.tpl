@@ -58,6 +58,7 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
     </li>
     </ul>
     </li>
+    <li><a href="http://science.webhostinggeeks.com/phpmyadmin">Serbo-Croatian page about phpMyAdmin</a></li>
 </ul>
 </div>
 
