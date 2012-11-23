@@ -12,6 +12,11 @@ need developer skills to help, there are several non-coding ways to get involved
 in a project (code is welcome too, of course!).
 </p>
 
+<h3>An invitation to students</h3>
+<p>
+To gain practical experience in open-source development, you are welcome to contribute to phpMyAdmin. Usually, this is volunteer work, but since 2008, our project has been part of <a href="http://code.google.com/soc">Google Summer of Code</a>. This program "offers post-secondary student developers ages 18 and older stipends to write code for various open source software projects". So, <a href="http://wiki.phpmyadmin.net/pma/Category:Google_Summer_of_Code">join us</a> soon and get ready for the next GSoC!
+</p>
+
 <h3>Helping users</h3>
 
 <p>
