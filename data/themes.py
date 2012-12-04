@@ -258,6 +258,12 @@ THEMES = {
         'info' : u'Theme with lots of border radiuses and box shadows',
         'author': u'Teted',
     },
+    'cleanstrap-1.0' : {
+        'name' : 'Cleanstrap',
+        'support' : '3.5',
+        'info' : u'Clean phpmyadmin theme with subdued colors.',
+        'author': u'Various contributors',
+    },
 }
 TEMPLATE = {
     '' : {
