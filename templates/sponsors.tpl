@@ -10,6 +10,11 @@
 The phpMyAdmin project extends a special thanks to the companies who wish to support us in a recurring way.
 </p>
 
+<h3>Silver sponsors</h3>
+<ul>
+ <li><a href="http://www.navicat.com/">Navicat</a></li>
+</ul>
+
 <h3>Bronze sponsors</h3>
 <ul>
  <li><a href="http://www.aoemedia.de">AOE media GmbH</a></li>
