@@ -13,6 +13,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <h3>Silver sponsors</h3>
 <ul>
  <li><a href="http://www.navicat.com/">Navicat</a></li>
+ <li><a href="http://www.scriptcase.net/">ScriptCase</a></li>
 </ul>
 
 <h3>Bronze sponsors</h3>
