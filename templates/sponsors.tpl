@@ -11,16 +11,14 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 </p>
 
 <h3>Silver sponsors</h3>
-<ul>
- <li><a href="http://www.navicat.com/">Navicat</a></li>
- <li><a href="http://www.scriptcase.net/">ScriptCase</a></li>
-</ul>
+<a href="http://www.navicat.com"><img src="${server}${base_url}images/navicat_200x68.jpg" alt="Navicat" /></a>
+&nbsp;
+<a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
 
 <h3>Bronze sponsors</h3>
-<ul>
- <li><a href="http://www.aoemedia.de">AOE media GmbH</a></li>
- <li><a href="http://www.cyberday-gmbh.de/">Cyberday GmbH</a></li>
-</ul>
+<a href="http://www.aoemedia.de"><img src="${server}${base_url}images/aoemedia_200x68.jpg" alt="AOE media" /></a>
+&nbsp;
+<a href="http://www.cyberday-gmbh.de"><img src="${server}${base_url}images/cyberday_200x40.png" alt="AOE media" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
