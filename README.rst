@@ -26,7 +26,7 @@ templates/security/PMASA-YYYY-N and edit its contents.
 Page generating
 ---------------
 
-All page has its own template. For most things it means inclusion of
+Each page has its own template. For most things it means inclusion of
 other templates to generate full page. These partial includes should be
 named with underscore as first character (eg. _page.tpl).
 
