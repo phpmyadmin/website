@@ -19,6 +19,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <a href="http://www.aoemedia.de"><img src="${server}${base_url}images/aoemedia_200x68.jpg" alt="AOE media" /></a>
 &nbsp;
 <a href="http://www.cyberday-gmbh.de"><img src="${server}${base_url}images/cyberday_200x40.png" alt="AOE media" /></a>
+<a href="http://phplinkdirectory.com"><img src="${server}${base_url}images/phplinkdirectory_267x48.png" alt="PHP Link Directory" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
