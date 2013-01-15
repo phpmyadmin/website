@@ -264,6 +264,12 @@ THEMES = {
         'info' : u'Clean phpmyadmin theme with subdued colors.',
         'author': u'Various contributors',
     },
+    'metro-1.0' : {
+        'name' : 'Metro',
+        'support' : '3.5',
+        'info' : u'Windows 8 Boot (Metro) theme for phpMyAdmin',
+        'author': u'hplhu',
+    },
 }
 TEMPLATE = {
     '' : {
