@@ -183,7 +183,7 @@ class SFGenerator:
             'rss_vcs': PROJECT_VCS_RSS,
             'screenshots': data.screenshots.SCREENSHOTS,
             'awards': data.awards.AWARDS,
-            'generated': helper.date.fmtdatetime.utcnow(),
+            'generated': helper.date.DateTime.utcnow(),
             'themecssversions': data.themes.CSSVERSIONS,
             'sfservers': data.sf.SERVERS,
             'current_year': datetime.datetime.now().year,
@@ -304,7 +304,7 @@ class SFGenerator:
         release = {
             'show': False,
             'version': version,
-            'date': helper.date.fmtdatetime.parse(pubdate[:-6] + ' GMT'),
+            'date': helper.date.DateTime.parse(pubdate[:-6] + ' GMT'),
             'name': type,
             'fullname': '%s %s' % (type, version),
             'notes': notes,
@@ -537,7 +537,7 @@ class SFGenerator:
         for entry in feed.entries:
             item = {}
             item['link'] = entry.link
-            item['date'] = helper.date.fmtdatetime.parse(entry.updated)
+            item['date'] = helper.date.DateTime.parse(entry.updated)
             # replaces are workaround for broken automatic links from sf.net rss feed
             item['text'] = entry.summary.replace('.</a>', '</a>.').replace('.">http', '">http')
             item['comments_link'] = entry.comments
@@ -605,7 +605,7 @@ class SFGenerator:
         for entry in feed.entries:
             item = {}
             item['link'] = 'http://planet.phpmyadmin.net/#%s' % entry.link
-            item['date'] = helper.date.fmtdatetime.parse(entry.updated.replace('+0000', 'GMT'))
+            item['date'] = helper.date.DateTime.parse(entry.updated.replace('+0000', 'GMT'))
             item['text'] = entry.summary_detail['value']
             item['title'] = entry.title
             self.data['blogs'].append(item)
@@ -636,7 +636,7 @@ class SFGenerator:
         for entry in feed.entries:
             item = {}
             item['link'] = entry.link
-            item['date'] = helper.date.fmtdatetime.parse(entry.updated)
+            item['date'] = helper.date.DateTime.parse(entry.updated)
             item['text'] = helper.stringfmt.fmt_urls(entry.summary)
             item['title'] = entry.title
             self.data['donations'].append(item)
@@ -774,7 +774,7 @@ class SFGenerator:
                 'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
                 'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
-                'date': helper.date.fmtdate.parse(str(data.select('def[@function="announcement_date"]/text()'))),
+                'date': helper.date.DateTime.parse(str(data.select('def[@function="announcement_date"]/text()'))),
                 'cves': str(data.select('def[@function="announcement_cve"]/text()')).split(' '),
                 'versions': str(data.select('def[@function="announcement_affected"]/text()')),
             })
@@ -841,7 +841,7 @@ class SFGenerator:
             priority = '0.2'
             changefreq = 'weekly'
         return {
-            'lastmod' : helper.date.fmtdate.utcnow(),
+            'lastmod' : helper.date.DateTime.utcnow(),
             'changefreq' : changefreq,
             'priority' : priority,
         }

@@ -20,8 +20,9 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 import datetime
+import dateutil.parser
 
-class basedatetime(datetime.datetime):
+class DateTime(datetime.datetime):
     def w3cdtf(self):
         return self.strftime('%Y-%m-%dT%H:%M:%S+00:00')
 
@@ -31,19 +32,6 @@ class basedatetime(datetime.datetime):
     def datetimestring(self):
         return self.strftime('%a, %d %b %Y %H:%M:%S GMT')
 
-class fmtdate(basedatetime):
-    def __str__(self):
-        return self.datestring()
-
+    @staticmethod
     def parse(text):
-        return fmtdate.strptime(text.strip(), '%Y-%m-%d')
-    parse = staticmethod(parse)
-
-class fmtdatetime(basedatetime):
-    def __str__(self):
-        return self.datetimestring()
-
-    def parse(text):
-        return fmtdatetime.strptime(text, '%a, %d %b %Y %H:%M:%S %Z')
-    parse = staticmethod(parse)
-
+        return dateutil.parser.parse(text)
