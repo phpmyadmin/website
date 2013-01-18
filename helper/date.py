@@ -38,3 +38,6 @@ class DateTime(datetime.datetime):
             hour=0, minute=0, second=0, microsecond=0
         )
         return dateutil.parser.parse(text, default=default)
+
+    def __str__(self):
+        return self.datetimestring()
