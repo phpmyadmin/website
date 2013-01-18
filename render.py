@@ -80,9 +80,8 @@ STATIC = './static'
 JS_TEMPLATES = []
 
 # Generic sourceforge.net part
-PROJECT_FILES_RSS = 'http://sourceforge.net/export/rss2_projfiles.php?group_id=%d&rss_limit=100' % PROJECT_ID
 PROJECT_FILES_RSS = 'http://sourceforge.net/api/file/index/project-id/%d/rss' % PROJECT_ID
-PROJECT_NEWS_RSS = 'http://sourceforge.net/export/rss2_projnews.php?group_id=%d&rss_fulltext=1&limit=10' % PROJECT_ID
+PROJECT_NEWS_RSS = 'https://sourceforge.net/p/phpmyadmin/news/feed'
 PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
 DONATIONS_RSS = 'http://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
