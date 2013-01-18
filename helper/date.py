@@ -34,4 +34,7 @@ class DateTime(datetime.datetime):
 
     @staticmethod
     def parse(text):
-        return dateutil.parser.parse(text)
+        default = DateTime.now().replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+        return dateutil.parser.parse(text, default=default)
