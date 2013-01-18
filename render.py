@@ -540,8 +540,6 @@ class SFGenerator:
             item['date'] = helper.date.DateTime.parse(entry.updated)
             # replaces are workaround for broken automatic links from sf.net rss feed
             item['text'] = entry.summary.replace('.</a>', '</a>.').replace('.">http', '">http')
-            item['comments_link'] = entry.comments
-            item['comments_number'] = 0
             item['title'] = entry.title
             item['anchor'] = self.text_to_id(entry.title)
             self.data['news'].append(item)

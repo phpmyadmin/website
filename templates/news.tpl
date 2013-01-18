@@ -17,12 +17,9 @@ href="http://twitter.com/phpmya">twitter</a>.
     <xi:include href="_littleboxes.tpl" />
 
 <div class="hentry" id="${item.anchor}" py:for="item in news">
-        <h2 class="entry-title"><a rel="bookmark" href="${item.comments_link}">${item.title}</a></h2>
+        <h2 class="entry-title"><a rel="bookmark" href="${item.link}">${item.title}</a></h2>
         <p class="date"><abbr class="published" title="${item.date.w3cdtf()}">${item.date}</abbr></p>
         <p class="entry-content">${Markup(item.text)}</p>
-<!--!   Removed because it was misused for support questions and spam.
-        <p class="comments"><a href="${item.comments_link}">${item.comments_number} comments</a></p>
--->
 </div>
 
     <p>
