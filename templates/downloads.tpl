@@ -40,7 +40,7 @@
     <xi:include href="_gitdl.tpl" />
 
     <p>
-    Below are listed Git snapshots for trunk branch, more daily snapshots of the
+    Below are listed Git snapshots for master branch, more daily snapshots of the
     code are available on <a
     href="http://cihar.com/software/phpmyadmin/">external server</a>.
     </p>
