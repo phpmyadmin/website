@@ -156,8 +156,13 @@
         includes ready-to-run versions of Apache, MySQL, PHP and phpMyAdmin
         and required dependencies. Also available as all-in-one installer for
         <a href="http://bitnami.org/stack/wampstack">Windows</a> and
-        <a href="http://bitnami.org/stack/mampstack">Mac OS X</a> and
-        Cloud Amazon Images.
+        <a href="http://bitnami.org/stack/mampstack">Mac OS X</a> 
+        (also available from <a href="https://itunes.apple.com/app/mamp-stack/id571310406?l=en">Mac App Store</a>).
+        Apart from the native installers there also available 
+        <a href="http://bitnami.org/stack/lamp#virtualMachine">virtual
+        appliances</a> and Cloud <a href="http://bitnami.org/stack/lamp#cloud">
+        Images</a>, the latest for both Windows
+        Azure and Amazon cloud platforms.
     </p>
 
 </div>
