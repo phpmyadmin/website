@@ -17,9 +17,9 @@ but we're ready to help on IRC or mailing list as well. Check below for more opt
 <div class="floatbox">
 <h2>Forum / IRC</h2>
 <ul>
-   <li><strong><a href="https://sourceforge.net/p/phpmyadmin/discussion/72909/">Help Forum</a></strong></li>
-   <li><a href="https://sourceforge.net/p/phpmyadmin/discussion/296543/">Forum d'aide (en français)</a></li>
-   <li><a href="https://sourceforge.net/p/phpmyadmin/discussion/297172/">Anwenderforum (auf Deutsch)</a></li>
+   <li><strong><a href="https://sourceforge.net/p/phpmyadmin/discussion/Help/">Help Forum</a></strong></li>
+   <li><a href="https://sourceforge.net/p/phpmyadmin/discussion/Aide/">Forum d'aide (en français)</a></li>
+   <li><a href="https://sourceforge.net/p/phpmyadmin/discussion/Hilfe/">Anwenderforum (auf Deutsch)</a></li>
    <li>IRC: #phpmyadmin on <a href="http://freenode.net/">irc.freenode.net</a></li>
 </ul>
 </div>
