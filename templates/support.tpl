@@ -8,7 +8,7 @@
 <h2>Getting support</h2>
 
 <p>
-The easiest way to get support is to use the <a href="https://sourceforge.net/projects/phpmyadmin/forums/forum/72909">help forum</a>
+The easiest way to get support is to use the <a href="https://sourceforge.net/p/phpmyadmin/discussion/Help/">help forum</a>
 but we're ready to help on IRC or mailing list as well. Check below for more options.
 </p>
 </div>
