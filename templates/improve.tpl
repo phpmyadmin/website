@@ -72,7 +72,7 @@ page</a>.
 
 <p>
 Our trackers, especially
-<a href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377411&amp;status=1">feature tracker</a>
+<a href="http://sourceforge.net/p/phpmyadmin/feature-requests/">feature tracker</a>
 contain dozens of entries which might already implemented or don't make much sense after years.
 You can go through reported issues, verify if they still apply to latest version and 
 check whether they would be still useful. Also checking incoming reports for all required
