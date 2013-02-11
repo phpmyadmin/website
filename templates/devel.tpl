@@ -32,12 +32,7 @@ git clone https://github.com/phpmyadmin/phpmyadmin.git
 <h3>Contributing code</h3>
 <p>
 The easiest way to contribute is to <a href="https://github.com/phpmyadmin">fork our code on github</a>
-and ask for pull request once you are done with some feature/bugfix.
-</p>
-<p>
-Of course you are not forced to using github, you can submit improvements
-to our <a href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a>, 
-these can be either patches directly or pull requests for git repositories.
+and ask for pull request once you are done with some feature/bugfix. Please keep your changes as small as possible; do not include unrelated changes like formatting, whitespace and new line characters.
 </p>
 <p>
 Our developers will then merge your code or will guide you through 
