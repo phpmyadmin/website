@@ -8,8 +8,8 @@
 
 <p>
 phpMyAdmin is (as the name says) written in PHP and uses MySQL. Besides this,
-we also need people skilled in HTML, JavaScript and CSS, as these are parts
-which make our user interface. You don't have to be expert in all these areas
+we also need people skilled in HTML, JavaScript and CSS, as these are all parts
+that make our user interface. You don't have to be an expert in all these areas
 - even knowing only one of them, you can still provide substantial help in
 creating or debugging some features.
 </p>
