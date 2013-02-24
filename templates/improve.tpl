@@ -49,9 +49,12 @@ you face with them.
 <p>
 Do you 
 feel our documentation misses some points? We welcome additions, just 
-let us know how you think the documentation can be improved. You can 
-open a <a href="http://sourceforge.net/tracker/?group_id=23067&amp;atid=377410">patch tracker</a> item with your suggestions. Should 
-you know git, you can directly submit patches, but this is not necessary.
+let us know how you think the documentation can be improved. 
+The best way is to <a href="http://wiki.phpmyadmin.net/pma/Pull_request">submit a pull request</a>
+against our <a href="https://github.com/phpmyadmin/">GitHub repository</a>.
+If you don't know how to make these changes, we still want to hear your input.
+You can submit a <a href="https://sourceforge.net/p/phpmyadmin/feature-requests/">feature request</a>
+explaining your suggested improvements.
 </p>
 
 <p>
@@ -63,7 +66,7 @@ video tutorials giving users hints how to do specific tasks inside phpMyAdmin.
 
 <p>
 Coding contributions are very welcome, the easiest way is to fork our code on github 
-and submit a merge request. We really welcome bug fixes or new features. 
+and submit a pull request. We really welcome bug fixes or new features. 
 You can find out more on <a href="${base_url}devel.${file_ext}">developers
 page</a>.
 </p>

@@ -8,8 +8,8 @@
 
 <p>
 phpMyAdmin is (as the name says) written in PHP and uses MySQL. Besides this,
-we also need people skilled in HTML, JavaScript and CSS, as these are parts
-which make our user interface. You don't have to be expert in all these areas
+we also need people skilled in HTML, JavaScript and CSS, as these are all parts
+that make our user interface. You don't have to be an expert in all these areas
 - even knowing only one of them, you can still provide substantial help in
 creating or debugging some features.
 </p>
@@ -32,7 +32,8 @@ git clone https://github.com/phpmyadmin/phpmyadmin.git
 <h3>Contributing code</h3>
 <p>
 The easiest way to contribute is to <a href="https://github.com/phpmyadmin">fork our code on github</a>
-and ask for pull request once you are done with some feature/bugfix. Please keep your changes as small as possible; do not include unrelated changes like formatting, whitespace and new line characters.
+and initiate a <a href="https://help.github.com/articles/using-pull-requests">pull request</a>
+once you are done with some feature/bugfix. Please keep your changes as small as possible; do not include unrelated changes like formatting, whitespace and new line characters.
 </p>
 <p>
 Our developers will then merge your code or will guide you through 
