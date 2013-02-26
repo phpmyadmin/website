@@ -21,7 +21,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
 <h3>Acceptable tickets</h3>
 <ol>
  <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/3813/">Grid editing UTF8 SET/ENUM value</a></li>
- <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/3818/">After "Rename table ... to ..." left menu doesn't reflect changes</a></li>
+ <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/3818/">After "Rename table ... to ..." left menu doesn't reflect changes</a> (winner: Ayush Chaudhary)</li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/879/">Reserved word warning </a></li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1319/">Automatically create index when creating foreign key</a></li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1333/">Name foreign key constraints</a></li>
