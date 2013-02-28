@@ -24,7 +24,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/3818/">After "Rename table ... to ..." left menu doesn't reflect changes</a> (winner: Ayush Chaudhary, ebook)</li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/879/">Reserved word warning </a></li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1319/">Automatically create index when creating foreign key</a></li>
- <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1333/">Name foreign key constraints</a></li>
+ <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1333/">Name foreign key constraints</a> (winner: Manuj Jain)</li>
  <li><a href="http://sourceforge.net/p/phpmyadmin/feature-requests/1399/">No hard-coded icons in css files</a></li>
 </ol>
 
