@@ -24,5 +24,10 @@ microdonation system allowing users to easily appreciate others.
 Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
 </p>
 
+<h2>Sponsors</h2>
+
+<p>If you want to sponsor phpMyAdmin in a recurring way, please check our 
+<a href="${base_url}sponsors.${file_ext}">sponsorship page</a>.</p>
+
 <xi:include href="_page.tpl" />
 </html>
