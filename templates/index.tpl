@@ -7,6 +7,8 @@
 
 <xi:include href="_littleboxes.tpl" />
 
+<xi:include href="_sponsors.tpl" />
+
 <h2>About</h2>
 
 <p>
