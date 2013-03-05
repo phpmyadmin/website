@@ -45,7 +45,6 @@ history</a>.
 <li><a href="${rss_summary}">phpMyAdmin project summary</a></li>
 <li><a href="${rss_files}">phpMyAdmin file releases</a></li>
 <li><a href="${rss_security}">phpMyAdmin security issues</a></li>
-<li><a href="${rss_donations}">phpMyAdmin donations</a></li>
 <li><a href="${rss_vcs}">phpMyAdmin commits</a></li>
 </ul>
 

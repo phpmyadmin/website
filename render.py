@@ -83,7 +83,6 @@ JS_TEMPLATES = []
 PROJECT_FILES_RSS = 'http://sourceforge.net/api/file/index/project-id/%d/rss' % PROJECT_ID
 PROJECT_NEWS_RSS = 'https://sourceforge.net/p/phpmyadmin/news/feed'
 PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
-DONATIONS_RSS = 'http://sourceforge.net/export/rss2_projdonors.php?group_id=%d&limit=20' % PROJECT_ID
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 TRANSLATIONS_RSS = 'https://l10n.cihar.com/exports/rss/phpmyadmin/'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
@@ -169,12 +168,10 @@ class SFGenerator:
             'news': [],
             'blogs': [],
             'issues': [],
-            'donations': [],
             'base_url': BASE_URL,
             'server': SERVER,
             'file_ext': EXTENSION,
             'rss_files': PROJECT_FILES_RSS,
-            'rss_donations': DONATIONS_RSS,
             'rss_translations': TRANSLATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
             'rss_planet': PLANET_RSS,
@@ -628,19 +625,6 @@ class SFGenerator:
 
         self.data['short_%s' % name ] = self.data[name][:count]
 
-    def process_donations(self, feed):
-        '''
-        Fills in donations based on donations feed.
-        '''
-        helper.log.dbg('Processing donations feed...')
-        for entry in feed.entries:
-            item = {}
-            item['link'] = entry.link
-            item['date'] = helper.date.DateTime.parse(entry.updated)
-            item['text'] = helper.stringfmt.fmt_urls(entry.summary)
-            item['title'] = entry.title
-            self.data['donations'].append(item)
-
     def process_summary(self, feed):
         '''
         Reads summary feed and fills some useful information into data.
@@ -951,9 +935,6 @@ class SFGenerator:
 
         rss_summary = self.feeds.load('summary', PROJECT_SUMMARY_RSS)
         self.process_summary(rss_summary)
-
-        rss_donations = self.feeds.load('donations', DONATIONS_RSS)
-        self.process_donations(rss_donations)
 
         self.get_translation_stats()
 
