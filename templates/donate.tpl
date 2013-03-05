@@ -28,6 +28,7 @@ Donations will be used for the promotion of phpMyAdmin, mostly by allowing team 
 
 <p>If you want to sponsor phpMyAdmin in a recurring way, please check our 
 <a href="${base_url}sponsors.${file_ext}">sponsorship page</a>.</p>
+</div>
 
 <xi:include href="_page.tpl" />
 </html>
