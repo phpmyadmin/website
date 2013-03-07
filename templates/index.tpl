@@ -26,7 +26,6 @@ etc), while you still have the ability to directly execute any SQL statement.
 <a href="${base_url}docs.${file_ext}#books" id="fader">
 <img src="images/books/pma_en_3.4_150x185.png" alt="phpMyAdmin book" />
 <img src="images/books/pma_starter_150x184.jpg" alt="phpMyAdmin Starter" />
-<img src="images/books/pma_cz_90x122.jpg" alt="phpMyAdmin book" />
 </a>
 </div>
 
