@@ -1,7 +1,6 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 <!--! Little boxes with downloads and other quick links -->
 
-<div class="rightbuttons">
 <div class="rightbutton downloadbutton" py:for="release in releases_featured">
     <xi:include href="_dlbox.tpl" />
 </div>
@@ -20,8 +19,6 @@
 
 <div class="rightbutton">
     <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate to phpMyAdmin</a></span>
-</div>
-
 </div>
 
 </html>

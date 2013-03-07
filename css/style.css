@@ -125,14 +125,15 @@ div.sidebar {
 
 div.rightbuttons {
     float: right;
-    clear: both;
-    margin: 0 0 1em 1em;
+    margin: 1em;
+    text-align: center;
+    width: 12em;
+    min-width: 250px;
 }
 
 div.rightbutton {
     padding: 0.5em;
     margin-top: 1em;
-    margin-right: 2em;
     border: 1px solid white;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -140,9 +141,6 @@ div.rightbutton {
     background-color: #62a324;
     color: white;
     font-weight: bolder;
-    width: 12em;
-    min-width: 250px;
-    text-align: center;
     -moz-box-shadow:0px 0px 8px #AAA;
     -webkit-box-shadow:0px 0px 8px #AAA;
     box-shadow:0px 0px 8px #AAA;
@@ -158,18 +156,6 @@ div.rightbutton:hover {
 div.rightbutton a {
     color: white;
 }
-
-div.rightsponsors {
-    padding: 0.5em;
-    margin-top: -1em;
-    margin-right: 2em;
-    float: right;
-    clear: both;
-    width: 12em;
-    min-width: 250px;
-    text-align: center;
-}
-
 
 div.tip {
     border: 1px solid black;
