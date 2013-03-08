@@ -1,6 +1,6 @@
 
 /**
- * Shows only subset of divs with class "theme" which have class passed 
+ * Shows only subset of divs with class "theme" which have class passed
  * as a parameter.
  */
 function show_theme(version) {
@@ -126,15 +126,15 @@ function onclick_callback(e) {
 /**
  * Iinitalizes tracking for external links.
  */
-window.addEvent('domready',function(){  
-    $$('a').each(function(anchor){  
+window.addEvent('domready',function(){
+    $$('a').each(function(anchor){
         var href = anchor.get('href');
-        // if it matches my site or is an absolute path it's outgoing  
-        if(href 
-            && href.indexOf('http://www.phpmyadmin.net') == -1 
-            && href.indexOf('http://phpmyadmin.net') == -1 
-            && (href.indexOf('http://') != -1 || href.indexOf('https://') != -1)) {  
+        // if it matches my site or is an absolute path it's outgoing
+        if(href
+            && href.indexOf('http://www.phpmyadmin.net') == -1
+            && href.indexOf('http://phpmyadmin.net') == -1
+            && (href.indexOf('http://') != -1 || href.indexOf('https://') != -1)) {
                 anchor.addEvent('click', onclick_callback);
-        }  
-    });  
-});  
+        }
+    });
+});
