@@ -53,10 +53,10 @@ var Fader = new Class({
         },
         show: function() {
                 if (!this.options.loop && this.next==this.imgs.length-1) this.stop();
+                var prev = this.next;
                 this.next = (this.next==this.imgs.length-1)?0:this.next+1;
-                var prev = (this.next==0)?this.imgs.length-1:this.next-1;
 
                 this.imgs[this.next].fade('in');
                 this.imgs[prev].fade('out');
         }
-}); 
+});
