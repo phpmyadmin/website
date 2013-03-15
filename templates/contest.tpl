@@ -25,7 +25,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/879/">Reserved word warning </a> (winner: Supun Nakandala, print book)</li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1319/">Automatically create index when creating foreign key</a></li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1333/">Name foreign key constraints</a> (winner: Manuj Jain, ebook)</li>
- <li><a href="http://sourceforge.net/p/phpmyadmin/feature-requests/1399/">No hard-coded icons in css files</a></li>
+ <li><a href="http://sourceforge.net/p/phpmyadmin/feature-requests/1399/">No hard-coded icons in css files</a> (winner: Samith Dassanayake, ebook)</li>
 </ol>
 
 <h3>How to submit your patch</h3>
