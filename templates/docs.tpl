@@ -103,22 +103,6 @@ A percentage of the book's sales is <a href="http://www.packtpub.com/article/ope
 </div>
 
 <div class="floatbox book">
-
-<h3>phpMyAdmin - efektivní správa MySQL</h3>
-
-<a href="http://www.zonerpress.cz/kniha-phpmyadmin-efektivni-sprava-mysql.html"><img src="${base_url}images/books/pma_cz_90x122.jpg" alt="Book cover" width="90" height="122" /></a>
-
-<p xml:lang="cs">
-V edici encyklopedie webdesignera vychází tentokrát ryze praktická kniha – kompletní a podrobná příručka pro uživatele phpMyAdmin, grafického rozhraní pro efektivní správu serveru a databází MySQL. Kniha popisuje v době vydání aktuální českou verzi phpMyAdmin 2.6.0, která obsahuje celou řadu novinek, rozšíření a vylepšení oproti verzi předchozí.
-</p>
-
-<p xml:lang="cs">
-phpMyAdmin nabízí uživatelům ucelený systém pro komplexní manipulaci s databázemi a tabulkami MySQL. Systémovým administrátorům poskytuje nástroje pro správu uživatelů a jejich oprávnění. Kniha pokrývá oba úhly pohledu, obsahuje navíc i poznámky o používání SQL v rámci MySQL, předvádí některé nedokumentované možnosti a vlastnosti.
-</p>
-
-</div>
-                
-<div class="floatbox book">
 <h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
 
 <a href="http://www.packtpub.com/dominary-phpMyAdmin-es"><img src="${base_url}images/books/pma_es_100x123.png" alt="Book cover" width="100" height="123" /></a>
