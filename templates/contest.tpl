@@ -23,7 +23,7 @@ Packt Publishing sponsors this programming contest, offering six copies of the <
  <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/3813/">Grid editing UTF8 SET/ENUM value</a> (winner: Shamika Dharmasiri, print book)</li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/3818/">After "Rename table ... to ..." left menu doesn't reflect changes</a> (winner: Ayush Chaudhary, ebook)</li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/879/">Reserved word warning </a> (winner: Supun Nakandala, print book)</li>
- <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1319/">Automatically create index when creating foreign key</a></li>
+ <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1319/">Automatically create index when creating foreign key</a> (winner: Mohamed Ashraf, ebook)</li>
  <li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/1333/">Name foreign key constraints</a> (winner: Manuj Jain, ebook)</li>
  <li><a href="http://sourceforge.net/p/phpmyadmin/feature-requests/1399/">No hard-coded icons in css files</a> (winner: Samith Dassanayake, ebook)</li>
 </ol>
