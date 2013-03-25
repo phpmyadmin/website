@@ -150,7 +150,7 @@ div.sponsors {
 
 .hitbuttons div {
     padding: 0;
-    margin: 1em;
+    margin: 0 0 0 1em;
     border: 1px solid white;
     border-radius: 5px;
     -moz-border-radius: 5px;
