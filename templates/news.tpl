@@ -6,6 +6,10 @@
 
 <div py:match="content" id="body">
 
+<div class="hitbuttons">
+    <xi:include href="_littleboxes.tpl" />
+</div>
+
 <p>Bored of official project news? Then check out developers blogs at 
 <a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.</p>
 
@@ -13,10 +17,6 @@
 href="http://identi.ca/phpmyadmin">identi.ca</a> or <a
 href="http://twitter.com/phpmya">twitter</a>.
 </p>
-
-<div class="hitbuttons">
-    <xi:include href="_littleboxes.tpl" />
-</div>
 
 <div class="hentry" id="${item.anchor}" py:for="item in news">
         <h2 class="entry-title"><a rel="bookmark" href="${item.link}">${item.title}</a></h2>
