@@ -21,7 +21,7 @@
 
 # Main menu
 MENU = [
-    ('', 'About'),
+    ('', 'Home'),
     ('news', 'News'),
     ('security/', 'Security'),
     ('support', 'Support'),
