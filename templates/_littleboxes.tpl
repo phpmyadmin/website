@@ -10,11 +10,11 @@
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="http://demo.phpmyadmin.net/trunk-config/" title="Go to demo server">Try phpMyAdmin</a></span>
+    <span class="dlname"><a href="http://demo.phpmyadmin.net/trunk-config/" title="Go to demo server">Try demo</a></span>
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate to phpMyAdmin</a></span>
+    <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate</a></span>
 </div>
 
 </html>
