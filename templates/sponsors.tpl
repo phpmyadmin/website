@@ -29,9 +29,11 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <ul>
  <li>A sponsor has to commit to a 100 USD minimum monthly amount (or 1000 USD yearly amount as a discount for paying in advance)</li>
+ <li>We reserve right to change sponsorship levels in future</li>
  <li>The donation is made via Paypal (see the Subscribe form below)</li>
- <li>Sponsors are mentioned on this page, with the two highest sponsors (or 
-the two sponsors who were there first, in case of a tie) listed on our <a href="http://phpmyadmin.net">home page</a> as well</li>
+ <li>Sponsors logo with link is placed on this page</li>
+ <li>Silver and higher sponsors are on our <a href="http://phpmyadmin.net">home page</a> as well in order of levels</li>
+ <li>Logo size is limited depending on sponsorship level: 200x68 for bronze and silver, 200x128 for gold and 200x200 for platinum</li>
 </ul>
 
 <h3>New sponsors</h3>
