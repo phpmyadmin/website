@@ -149,7 +149,7 @@ div.sponsors {
 }
 
 .hitbuttons div {
-    padding: 0.5em 2em;
+    padding: 0;
     margin: 1em;
     border: 1px solid white;
     border-radius: 5px;
@@ -173,6 +173,8 @@ div.sponsors {
 
 .hitbuttons div a {
     color: white;
+    display: block;
+    padding: 0.5em 2em;
 }
 
 div.tip {
