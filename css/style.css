@@ -2,7 +2,7 @@ body {
     background: url('${base_url}images/logo.png') no-repeat fixed bottom right;
 }
 
-#header {
+header {
     margin: 0px;
     padding: 1em 2em 1.5em 2em;
 	background: #036;
@@ -10,7 +10,7 @@ body {
     border-bottom: 1px solid black;
 }
 
-#header h1 {
+header h1 {
     float: left;
     padding: 0;
     margin: 0;
@@ -18,33 +18,33 @@ body {
     color: #fff;
 }
 
-#header h1 a {
+header h1 a {
 	color: #7584b3;
 }
 
-#header h1 a .myadmin {
+header h1 a .myadmin {
 	color: #ffad17;
 }
 
-#header ul#links {
+ul#links {
     display: inline;
     margin: 0;
     padding: 0;
 }
 
-#header #links li {
+#links li {
     list-style: none;
     display: inline; 
 	font-weight: bold;
 	padding: 0.5em;
 }
 
-#header #links li a {
+#links li a {
 	color: #ffffff;
     font-size: larger;
 }
 
-#header #links li.active a {
+#links li.active a {
 	color: #c17d11;
     font-size: larger;
 }

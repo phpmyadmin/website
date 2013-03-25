@@ -41,10 +41,10 @@
 </script>
  </head>
  <body>
-  <div id="header">
+  <header>
    <h1><a href="${base_url}" rel="home">php<span class="myadmin">MyAdmin</span></a></h1>
     <xi:include href="_menu.tpl" />
-  </div>
+  </header>
 
   <content>
     Placeholder.
