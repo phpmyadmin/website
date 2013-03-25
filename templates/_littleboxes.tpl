@@ -10,10 +10,6 @@
 </div>
 
 <div class="rightbutton">
-    <span class="dlname"><a href="${base_url}contest.${file_ext}" >Contest results</a></span>
-</div>
-
-<div class="rightbutton">
     <span class="dlname"><a href="http://demo.phpmyadmin.net/trunk-config/" title="Go to demo server">Try phpMyAdmin</a></span>
 </div>
 
