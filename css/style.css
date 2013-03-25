@@ -155,7 +155,7 @@ div.sponsors {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    background-color: #62a324;
+	background-color: #666699;
     color: white;
     font-weight: bolder;
     -moz-box-shadow:0px 0px 8px #AAA;
@@ -168,13 +168,14 @@ div.sponsors {
     display: inline-block;
 }
 .hitbuttons div:hover {
-    background-color: #8dea34;
+	background-color: #8888cc;
 }
 
 .hitbuttons div a {
     color: white;
     display: block;
     padding: 0.5em 2em;
+    text-decoration: none;
 }
 
 div.tip {
