@@ -14,7 +14,7 @@ href="http://identi.ca/phpmyadmin">identi.ca</a> or <a
 href="http://twitter.com/phpmya">twitter</a>.
 </p>
 
-<div class="rightbuttons">
+<div class="hitbuttons">
     <xi:include href="_littleboxes.tpl" />
 </div>
 

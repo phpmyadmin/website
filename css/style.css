@@ -140,7 +140,7 @@ div.sidebar {
 	font-size: smaller;
 }
 
-div.rightbuttons {
+div.sponsors {
     float: right;
     margin: 1em;
     text-align: center;
@@ -148,9 +148,9 @@ div.rightbuttons {
     min-width: 250px;
 }
 
-div.rightbutton {
+.hitbuttons div {
     padding: 0.5em;
-    margin-top: 1em;
+    margin: 1em;
     border: 1px solid white;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -165,12 +165,13 @@ div.rightbutton {
     -moz-transition:-webkit-box-shadow 0.1s ease-out;
     -o-transition:-webkit-box-shadow 0.1s ease-out;
     transition:-webkit-box-shadow 0.1s ease-out;
+    display: inline-block;
 }
-div.rightbutton:hover {
+.hitbuttons div:hover {
     background-color: #8dea34;
 }
 
-div.rightbutton a {
+.hitbuttons div a {
     color: white;
 }
 
