@@ -27,13 +27,13 @@ nav ul {
 }
 
 nav li {
-	font-weight: bold;
+    font-weight: bold;
     float: left;
-	padding: 0.5em;
+    padding: 0.5em;
     margin: -3px 0 0 0;
     border-right: 1px solid #ccc;
     border-top: 3px solid #666699;
-	color: #ff9900;
+    color: #ff9900;
 }
 
 nav li:first-child {
@@ -44,7 +44,7 @@ li.active {
     background-color: #ff9900;
 }
 li.active a {
-	color: #fff;
+    color: #fff;
 }
 
 ul#links {
@@ -56,17 +56,17 @@ ul#links {
 #links li {
     list-style: none;
     display: inline; 
-	font-weight: bold;
-	padding: 0.5em;
+    font-weight: bold;
+    padding: 0.5em;
 }
 
 #links li a {
-	color: #ffffff;
+    color: #ffffff;
     font-size: larger;
 }
 
 #links li.active a {
-	color: #ff9900;
+    color: #ff9900;
     font-size: larger;
 }
 
@@ -78,34 +78,34 @@ div.demo#body {
 }
 
 #body {
-	margin: 0 1em 1em 1em;
-	padding-top:1%;
+    margin: 0 1em 1em 1em;
+    padding-top:1%;
     overflow: auto;
 }
 
 a {
-	color: #ff9900;
-	text-decoration: none;
+    color: #ff9900;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
-	color: #8f5902;
+    text-decoration: underline;
+    color: #8f5902;
 }
 
 img {
-	border: 0px;
+    border: 0px;
 }
 
 h1, h2, h2 a, h3, h3 a {
-	color: #666699;
+    color: #666699;
 }
 
 body {
-	margin: 0px;
-	background-color: white;
-	font-family: sans-serif;
-	color: black;
+    margin: 0px;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
 }
 
 div.banner {
@@ -125,19 +125,19 @@ div.bannerimg {
 
 /* For planet */
 div.sidebar {
-	position: absolute;
-	top: 4em;
-	right: 0px;
-	width: 20em;
+    position: absolute;
+    top: 4em;
+    right: 0px;
+    width: 20em;
 
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
 
-	padding-top: 20px;
-	padding-left: 0px;
+    padding-top: 20px;
+    padding-left: 0px;
 
-	font-size: smaller;
+    font-size: smaller;
 }
 
 div.sponsors {
@@ -155,7 +155,7 @@ div.sponsors {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-	background-color: #666699;
+    background-color: #666699;
     color: white;
     font-weight: bolder;
     -moz-box-shadow:0px 0px 8px #AAA;
@@ -168,7 +168,7 @@ div.sponsors {
     display: inline-block;
 }
 .hitbuttons div:hover {
-	background-color: #8888cc;
+    background-color: #8888cc;
 }
 
 .hitbuttons div a {
@@ -200,17 +200,17 @@ ul#footer {
     font-size: smaller;
     list-style: none;
     float: left;
-	padding: 1em;
+    padding: 1em;
     color: gray;
     border: none;
 }
 
 #footer a {
-	color: #c19e66;
+    color: #c19e66;
 }
 
 ul.dllist {
-	padding: 0.5em;
+    padding: 0.5em;
     margin: 0;
 }
 
@@ -221,9 +221,9 @@ ul.dllist li {
 }
 
 #left {
-	margin: 2em 1em 1em 1em;
+    margin: 2em 1em 1em 1em;
     float: left;
-	padding: 0pt 2em;
+    padding: 0pt 2em;
 }
 #left ul {
     margin: 0;
@@ -297,7 +297,7 @@ ul ul {
 }
 
 ul.security li.active a {
-	color: black;
+    color: black;
 }
 
 p.signature {
@@ -443,7 +443,7 @@ ul.select li {
 
 ul.select li a {
     display: block;
-	padding: 0.2em;
+    padding: 0.2em;
 }
 
 table.dllist td { 
