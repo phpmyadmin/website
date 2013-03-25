@@ -1,29 +1,50 @@
-body {
-    background: url('${base_url}images/logo.png') no-repeat fixed bottom right;
+#logo {
+    padding: 0;
+    margin: 0 20px;
+    background: url('${base_url}images/logo.png') no-repeat;
+    width: 172px; 
+    height: 100px;
+    font-size: 1px;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-header {
-    margin: 0px;
-    padding: 1em 2em 1.5em 2em;
-	background: #036;
-	border: 0px;
-    border-bottom: 1px solid black;
-}
-
-header h1 {
-    float: left;
+nav {
+    width: 100%;
+    -moz-box-shadow: 0px 6px 3px -3px #ccc;
+    -webkit-box-shadow: 0px 6px 3px -3px #ccc;
+    box-shadow: 0px 6px 3px -3px #ccc; 
+    border-top: 3px solid #ccc;
     padding: 0;
     margin: 0;
-    margin-right: 1em;
-    color: #fff;
+}
+nav ul {
+    text-align: center;
+    list-style: none outside none;
+    padding: 0;
+    margin: 0 auto;
 }
 
-header h1 a {
-	color: #7584b3;
+nav li {
+	font-weight: bold;
+    float: left;
+	padding: 0.5em;
+    margin: -3px 0 0 0;
+    border-right: 1px solid #ccc;
+    border-top: 3px solid #666699;
+	color: #ff9900;
 }
 
-header h1 a .myadmin {
-	color: #ffad17;
+nav li:first-child {
+    border-left: 1px solid #ccc;
+}
+
+li.active {
+    background-color: #ff9900;
+}
+li.active a {
+	color: #fff;
 }
 
 ul#links {
@@ -45,7 +66,7 @@ ul#links {
 }
 
 #links li.active a {
-	color: #c17d11;
+	color: #ff9900;
     font-size: larger;
 }
 
@@ -63,7 +84,7 @@ div.demo#body {
 }
 
 a {
-	color: #c17d11;
+	color: #ff9900;
 	text-decoration: none;
 }
 
@@ -76,12 +97,8 @@ img {
 	border: 0px;
 }
 
-h2, h2 a {
-	color: #727e0a;
-}
-
-h3, h3 a {
-	color: #727e0a;
+h1, h2, h2 a, h3, h3 a {
+	color: #666699;
 }
 
 body {
