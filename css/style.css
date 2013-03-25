@@ -78,7 +78,7 @@ div.demo#body {
 }
 
 #body {
-	margin: 2em 1em 1em 1em;
+	margin: 0 1em 1em 1em;
 	padding-top:1%;
     overflow: auto;
 }
