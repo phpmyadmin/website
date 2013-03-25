@@ -140,12 +140,16 @@ div.sidebar {
     font-size: smaller;
 }
 
-div.sponsors {
+.sponsors {
     float: right;
     margin: 1em;
     text-align: center;
     width: 12em;
     min-width: 250px;
+}
+
+.sponsors div {
+    padding: 0.5em 0 0.5em 0;
 }
 
 .hitbuttons div {

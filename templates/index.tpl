@@ -9,9 +9,7 @@
 <xi:include href="_littleboxes.tpl" />
 </div>
 
-<div class="sponsors">
 <xi:include href="_sponsors.tpl" />
-</div>
 
 <h2>About</h2>
 
