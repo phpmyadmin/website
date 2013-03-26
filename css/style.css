@@ -155,6 +155,11 @@ div.sidebar {
     padding: 0.5em 0 0.5em 0;
 }
 
+.sponsors p a {
+    font-size: smaller;
+    color: #666699;
+}
+
 .hitbuttons div {
     padding: 0;
     margin: 0 0 0 1em;
