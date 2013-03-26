@@ -19,31 +19,34 @@ nav {
     padding: 0;
     margin: 0;
 }
-nav ul {
+nav div.menu {
     text-align: center;
-    list-style: none outside none;
+    display: block;
     padding: 0;
     margin: 0 auto;
 }
 
-nav li {
+nav a {
     font-weight: bold;
-    float: left;
     padding: 0.5em;
     margin: -3px 0 0 0;
     border-right: 1px solid #ccc;
     border-top: 3px solid #666699;
     color: #ff9900;
+    display: inline-block;
 }
 
-nav li:first-child {
+nav a:first-child {
     border-left: 1px solid #ccc;
 }
-
-li.active {
+nav a:hover {
     background-color: #ff9900;
+    text-decoration: none;
+    color: #fff;
 }
-li.active a {
+
+a.active {
+    background-color: #666699;
     color: #fff;
 }
 

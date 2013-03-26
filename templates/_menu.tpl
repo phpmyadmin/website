@@ -2,11 +2,9 @@
 
 <!--! Main menu bar -->
    <nav>
-   <ul>
-   <py:for each="item in menu">
-     <li py:attrs="item['class']"><a href="${item.link}">${item.title}</a></li>
-   </py:for>
-   </ul>
+   <div class="menu">
+   <py:for each="item in menu"><a href="${item.link}" py:attrs="item['class']">${item.title}</a></py:for>
+   </div>
    <div class="clearer"></div>
    </nav>
 </html>
