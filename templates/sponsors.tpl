@@ -33,6 +33,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
  <li>Sponsors logo with link is placed on this page</li>
  <li>Silver and higher sponsors are on our <a href="http://phpmyadmin.net">home page</a> as well in order of levels</li>
  <li>Logo size is limited depending on sponsorship level</li>
+ <li>Number of sponsors for levels higher than brozne is limited</li>
  <li>We reserve right to change sponsorship levels in future</li>
 </ul>
 
@@ -40,13 +41,13 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <table class="nice">
 <thead>
-<tr><th>Level</th><th>Monthly amount</th><th>Yearly amount</th><th>Additional logo placement</th><th>Logo size</th></tr>
+<tr><th>Level</th><th>Possible sponsors</th><th>Monthly amount</th><th>Yearly amount</th><th>Additional logo placement</th><th>Logo size</th></tr>
 </thead>
 <tbody>
-<tr><td class="name">Platinum</td><td class="size">$1,000</td><td class="size">$10,000</td><td>Top section on home page</td><td>250x250</td></tr>
-<tr><td class="name">Gold</td><td class="size">$500</td><td class="size">$5,000</td><td>Second section on home page</td><td>250x130</td></tr>
-<tr><td class="name">Silver</td><td class="size">$250</td><td class="size">$2,500</td><td>Third section on home page</td><td>250x70</td></tr>
-<tr><td class="name">Bronze</td><td class="size">$100</td><td class="size">$1,000</td><td>None</td><td>250x70</td></tr>
+<tr><td class="name">Platinum</td><td class="size">1</td><td class="size">$1,000</td><td class="size">$10,000</td><td>Top section on home page</td><td>250x250</td></tr>
+<tr><td class="name">Gold</td><td class="size">2</td><td class="size">$500</td><td class="size">$5,000</td><td>Second section on home page</td><td>250x130</td></tr>
+<tr><td class="name">Silver</td><td class="size">4</td><td class="size">$250</td><td class="size">$2,500</td><td>Third section on home page</td><td>250x70</td></tr>
+<tr><td class="name">Bronze</td><td class="size">unlimited</td><td class="size">$100</td><td class="size">$1,000</td><td>None</td><td>250x70</td></tr>
 </tbody>
 </table>
 
