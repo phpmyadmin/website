@@ -472,3 +472,9 @@ em.big {
 div.subscribe {
     text-align: center;
 }
+table.nice td, table.nice th {
+    padding: 0.2em;
+}
+table.nice {
+    margin: 0 1em 1em 1em;
+}
