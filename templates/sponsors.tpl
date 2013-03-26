@@ -30,11 +30,11 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <ul>
  <li>A sponsor has to commit to a monthly or yearly amount depending on sponsorship level</li>
  <li>The donation is made via Paypal (see the Subscribe form below)</li>
- <li>Sponsors logo with link is placed on this page</li>
- <li>Silver and higher sponsors are on our <a href="http://phpmyadmin.net">home page</a> as well in order of levels</li>
+ <li>Sponsor's logo with link is placed on this page</li>
+ <li>Logos of Silver and higher sponsors appear on our <a href="http://phpmyadmin.net">home page</a> as well, sorted by level</li>
  <li>Logo size is limited depending on sponsorship level</li>
- <li>Number of sponsors for levels higher than brozne is limited</li>
- <li>We reserve right to change sponsorship levels in future</li>
+ <li>The number of sponsors for levels higher than Bronze is limited</li>
+ <li>We reserve the right to change sponsorship levels in the future</li>
 </ul>
 
 <p>Sponsorship levels in overview:</p>
