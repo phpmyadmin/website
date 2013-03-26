@@ -102,7 +102,14 @@ Thank you for your support!
 <h2>Technology partners</h2>
 
 <p>
-The phpMyAdmin project is grateful to <a href="http://sourceforge.net/projects/phpmyadmin">SourceForge</a> and <a href="https://github.com/phpmyadmin">GitHub</a> for their services.</p>
+The phpMyAdmin project is grateful to our technology partners for their services.</p>
+
+<p>
+<a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a>
+</p>
+<p>
+<a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a>
+</p>
 
 </div>
 
