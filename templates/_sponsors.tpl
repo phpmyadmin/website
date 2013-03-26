@@ -2,7 +2,8 @@
 <!--! Little boxes with sponsors links -->
 
 <div class="sponsors">
-<h3><a href="${base_url}sponsors.${file_ext}">Our sponsors</a></h3>
+<h3><a href="${base_url}sponsors.${file_ext}">Sponsors</a></h3>
+
 <h4>Gold sponsors</h4>
 
 <div><a href="https://www.certs4less.com"><img src="${server}${base_url}images/certs4less_240x65.jpg" alt="Certs4Less" /></a></div>
