@@ -28,11 +28,11 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <h3>Sponsorship conditions and advantages</h3>
 
 <ul>
- <li>A sponsor has to commit to a monthly or yearly amount depending on sponsorship level</li>
+ <li>A sponsor has to commit to a monthly or yearly amount depending on the sponsorship level</li>
  <li>The donation is made via Paypal (see the Subscribe form below)</li>
- <li>Sponsor's logo with link is placed on this page</li>
- <li>Logos of Silver and higher sponsors appear on our <a href="http://phpmyadmin.net">home page</a> as well, sorted by level</li>
- <li>Logo size is limited depending on sponsorship level</li>
+ <li>The sponsor's logo with link is placed on this page</li>
+ <li>The logos of Silver level (and higher) sponsors appear on our <a href="http://phpmyadmin.net">home page</a> as well, sorted by level</li>
+ <li>The logo size is limited depending on the sponsorship level</li>
  <li>The number of sponsors for levels higher than Bronze is limited</li>
  <li>We reserve the right to change sponsorship levels in the future</li>
 </ul>
@@ -41,7 +41,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <table class="nice">
 <thead>
-<tr><th>Level</th><th>Possible sponsors</th><th>Monthly amount</th><th>Yearly amount</th><th>Additional logo placement</th><th>Logo size</th></tr>
+<tr><th>Level</th><th>Max number of sponsors</th><th>Monthly amount</th><th>Yearly amount</th><th>Additional logo placement</th><th>Logo size</th></tr>
 </thead>
 <tbody>
 <tr><td class="name">Platinum</td><td class="size">1</td><td class="size">$1,000</td><td class="size">$10,000</td><td>Top section on home page</td><td>250x250</td></tr>
