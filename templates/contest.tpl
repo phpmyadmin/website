@@ -18,12 +18,6 @@ Packt Publishing sponsored this programming contest, offering six copies of the 
  <li><a href="http://sourceforge.net/p/phpmyadmin/feature-requests/1399/">No hard-coded icons in css files</a> (winner: Samith Dassanayake, ebook)</li>
 </ol>
 
-<h3>Discount codes</h3>
-<p>Anyone seeing this page can use one of the following discount codes (valid until March 24, 2013) to obtain a 20% discount when ordering a <a href="http://www.packtpub.com/mastering-phpmyadmin-3-4-for-effective-mysql-management/book">Mastering phpMyAdmin 3.4</a> book copy.</p>
-<ul>
- <li>Print : <strong>MREPHB</strong></li>
- <li>E-book: <strong>MREPHE</strong></li>
-</ul>
 <a href="http://link.packtpub.com/XJdqZr"><img src="${base_url}images/books/pma_en_3.4_150x185.png" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
 </div>
 
