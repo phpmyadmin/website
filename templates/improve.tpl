@@ -40,7 +40,7 @@ page</a>.
 <p>
 One of important things is to avoid problems in user interface. You can really help
 us here to provide feedback on releases and especially by testing pre-releases 
-(alpha/beta/rc) we provide for testing. Just download them and <a href="http://sourceforge.net/tracker/?atid=377408&amp;group_id=23067">report any issues</a>
+(alpha/beta/rc) we provide for testing. Just download them and <a href="https://sourceforge.net/p/phpmyadmin/bugs/">report any issues</a>
 you face with them.
 </p>
 
