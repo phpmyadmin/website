@@ -28,5 +28,6 @@ SCREENSHOTS = [
     {'name': 'structure', 'title': 'Table structure'},
     {'name': 'transformations', 'title': 'Display transformations'},
     {'name': 'rtl', 'title': 'Main page with an RTL language'},
+    {'name': 'advisor', 'title': 'Server configuration advisor'},
 ]
 
