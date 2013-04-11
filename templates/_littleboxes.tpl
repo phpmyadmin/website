@@ -17,4 +17,8 @@
     <a href="${base_url}donate.${file_ext}" rel="payment">Donate</a>
 </div>
 
+<div>
+    <a href="http://wiki.phpmyadmin.net/pma/GSoC_2013_Applicant_Guide" title="Google Summer of Code 2013">GSoC 2013</a>
+</div>
+
 </html>
