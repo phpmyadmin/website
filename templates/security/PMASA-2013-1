@@ -1,0 +1,59 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2013-1
+</py:def>
+
+<py:def function="announcement_date">
+2013-04-xx
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2012-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+XSS due to unescaped HTML output in GIS visualisation page.
+</py:def>
+
+<py:def function="announcement_description">
+When modifying a url parameter with a crafted value it is possible to trigger an XSS.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+These XSS can only be triggered when a valid database is known and when a valid cookie token is used.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.5.x are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.5.8 or newer or apply the patches listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Janek Vind for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2013-yyyy</py:def>
+
+<py:def function="announcement_cwe">661 79</py:def>
+
+<py:def function="announcement_commits">
+9e8d2410259fa4fb05a7d1d2869bd7aa2fe0e593
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
