@@ -13,6 +13,8 @@
 <p>
 We take seriously any security issues found in our code. On the left
 side, you can see past security issues which were discovered and fixed.
+For critical issues, we publish a security release (whose number contains
+a fourth digit like 3.3.10.5).
 </p>
 
 <xi:include href="../_security_contact.tpl" />
