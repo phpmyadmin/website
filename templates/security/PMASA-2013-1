@@ -19,7 +19,7 @@ XSS due to unescaped HTML output in GIS visualisation page.
 </py:def>
 
 <py:def function="announcement_description">
-When modifying a url parameter with a crafted value it is possible to trigger an XSS.
+When modifying a URL parameter with a crafted value it is possible to trigger an XSS.
 </py:def>
 
 <py:def function="announcement_severity">
