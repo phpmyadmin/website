@@ -44,7 +44,7 @@ Trackers on SourceForge.net are used to track bug reports, requests for new feat
     <li>For developers: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">phpmyadmin-devel@lists.sourceforge.net</a></li>
     <li>For translators: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-translators">phpmyadmin-translators@lists.sourceforge.net</a></li>
     <li>Git commit notifications: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-git">phpmyadmin-git@lists.sourceforge.net</a></li>
-    <li><a href="http://sourceforge.net/mail/?group_id=23067">Mailing lists overview</a></li>
+    <li><a href="http://sourceforge.net/p/phpmyadmin/mailman/">Mailing lists overview</a></li>
 </ul>
 </div>
 
