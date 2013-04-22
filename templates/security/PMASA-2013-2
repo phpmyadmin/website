@@ -1,0 +1,62 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2013-2
+</py:def>
+
+<py:def function="announcement_date">
+2013-04-XX
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2012-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+Remote code execution via preg_replace().
+</py:def>
+
+<py:def function="announcement_description">
+In some PHP versions, the preg_replace() function can be tricked into executing arbitrary PHP code on the server. This is done by passing a crafted argument as the regular expression, containing a null byte.
+
+phpMyAdmin does not correctly sanitize an argument passed to preg_replace() when using the "Replace table prefix" feature, opening the way to this vulnerability.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be serious.
+</py:def>
+
+<py:def function="announcement_mitigation">
+This vulnerability can be triggered only by someone who logged in to the MySQL server via phpMyAdmin, as the usual token protection prevents non-logged-in users to post the required form.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.5.x and 4.0.0 (before -rc3) are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+For 3.5.x, upgrade to phpMyAdmin 3.5.8 or newer; for 4.0.x, upgrade to 4.0.0-rc3 or newer. You can also apply the patches listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Janek Vind for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2013-XXXX</py:def>
+
+<py:def function="announcement_cwe">661 94</py:def>
+
+<py:def function="announcement_commits">
+d75838c43127098b126d718eedebb60d7cf79f85
+b06c8ad0a84df475e52f1d59a96976f52a25cc53
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
