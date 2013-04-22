@@ -28,11 +28,28 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <h3>Sponsorship conditions and advantages</h3>
 
 <ul>
- <li>A sponsor has to commit to a 100 USD minimum monthly amount (or 1000 USD yearly amount as a discount for paying in advance)</li>
+ <li>A sponsor has to commit to a monthly or yearly amount depending on the sponsorship level</li>
  <li>The donation is made via Paypal (see the Subscribe form below)</li>
- <li>Sponsors are mentioned on this page, with the two highest sponsors (or 
-the two sponsors who were there first, in case of a tie) listed on our <a href="http://phpmyadmin.net">home page</a> as well</li>
+ <li>The sponsor's logo with link is placed on this page</li>
+ <li>The logos of Silver level (and higher) sponsors appear on our <a href="http://phpmyadmin.net">home page</a> as well, sorted by level</li>
+ <li>The logo size is limited depending on the sponsorship level</li>
+ <li>The number of sponsors for levels higher than Bronze is limited</li>
+ <li>We reserve the right to change sponsorship levels in the future</li>
 </ul>
+
+<p>Sponsorship levels in overview:</p>
+
+<table class="nice">
+<thead>
+<tr><th>Level</th><th>Max number of sponsors</th><th>Monthly amount</th><th>Yearly amount</th><th>Additional logo placement</th><th>Logo size</th></tr>
+</thead>
+<tbody>
+<tr><td class="name">Platinum</td><td class="size">1</td><td class="size">$1,000</td><td class="size">$10,000</td><td>Top section on home page</td><td>250x250</td></tr>
+<tr><td class="name">Gold</td><td class="size">2</td><td class="size">$500</td><td class="size">$5,000</td><td>Second section on home page</td><td>250x130</td></tr>
+<tr><td class="name">Silver</td><td class="size">4</td><td class="size">$250</td><td class="size">$2,500</td><td>Third section on home page</td><td>250x70</td></tr>
+<tr><td class="name">Bronze</td><td class="size">unlimited</td><td class="size">$100</td><td class="size">$1,000</td><td>None</td><td>250x70</td></tr>
+</tbody>
+</table>
 
 <h3>New sponsors</h3>
 
@@ -85,7 +102,14 @@ Thank you for your support!
 <h2>Technology partners</h2>
 
 <p>
-The phpMyAdmin project is grateful to <a href="http://sourceforge.net/projects/phpmyadmin">SourceForge</a> and <a href="https://github.com/phpmyadmin">GitHub</a> for their services.</p>
+The phpMyAdmin project is grateful to our technology partners for their services.</p>
+
+<p>
+<a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a>
+</p>
+<p>
+<a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a>
+</p>
 
 </div>
 

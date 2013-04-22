@@ -41,10 +41,10 @@
 </script>
  </head>
  <body>
-  <div id="header">
-   <h1><a href="${base_url}" rel="home">php<span class="myadmin">MyAdmin</span></a></h1>
+  <header>
     <xi:include href="_menu.tpl" />
-  </div>
+    <h1><a href="${base_url}" rel="home"><span id="logo">phpMyAdmin</span></a> Bringing MySQL to the web</h1>
+  </header>
 
   <content>
     Placeholder.

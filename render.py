@@ -55,7 +55,7 @@ PROJECT_ID = 23067
 PROJECT_NAME = 'phpmyadmin'
 
 # Filtering
-FILES_REGEXP = re.compile(r'.*all-languages\.(zip|tar\.gz).*')
+FILES_REGEXP = re.compile(r'.*all-languages\.(zip).*')
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')

@@ -5,11 +5,11 @@
 
 <div py:match="content" id="body">
 
-<div class="rightbuttons">
+<div class="hitbuttons">
 <xi:include href="_littleboxes.tpl" />
+</div>
 
 <xi:include href="_sponsors.tpl" />
-</div>
 
 <h2>About</h2>
 

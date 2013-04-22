@@ -29,8 +29,7 @@ href="${base_url}try.${file_ext}">demo server</a>.
 <h2>Submit Theme</h2>
 <p>
 You've made a new theme and you want to share it?  Please use our 
-<a
-href="http://sourceforge.net/tracker/?atid=689412&amp;group_id=23067&amp;func=browse">theme
+<a href="https://sourceforge.net/p/phpmyadmin/themes/">theme
 tracker on sourceforge.net</a> to post your theme. The team will check and prepare
 your theme for downloading here.
 </p>

@@ -56,7 +56,7 @@ which allows you to directly download the latest po file of the desired version.
 
 <p>
 To submit your changes, you can either use the <a
-href="https://sourceforge.net/tracker/?group_id=23067&amp;atid=387645">translation
+href="https://sourceforge.net/p/phpmyadmin/translations/">translation
 tracker on SourceForge.net</a> or the <a
 href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>,
 which can merge back your changed po file to the existing sources.

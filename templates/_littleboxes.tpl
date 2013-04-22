@@ -1,24 +1,24 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 <!--! Little boxes with downloads and other quick links -->
 
-<div class="rightbutton downloadbutton" py:for="release in releases_featured">
+<div class="downloadbutton" py:for="release in releases_featured">
     <xi:include href="_dlbox.tpl" />
 </div>
 
-<div class="rightbutton downloadbutton" py:for="release in releases_beta">
+<div class="downloadbutton" py:for="release in releases_beta">
     <xi:include href="_dlbox.tpl" />
 </div>
 
-<div class="rightbutton">
-    <span class="dlname"><a href="${base_url}contest.${file_ext}" >Contest results</a></span>
+<div>
+    <a href="http://demo.phpmyadmin.net/trunk-config/" title="Go to demo server">Try demo</a>
 </div>
 
-<div class="rightbutton">
-    <span class="dlname"><a href="http://demo.phpmyadmin.net/trunk-config/" title="Go to demo server">Try phpMyAdmin</a></span>
+<div>
+    <a href="${base_url}donate.${file_ext}" rel="payment">Donate</a>
 </div>
 
-<div class="rightbutton">
-    <span class="dlname"><a href="${base_url}donate.${file_ext}" rel="payment">Donate to phpMyAdmin</a></span>
+<div>
+    <a href="http://wiki.phpmyadmin.net/pma/GSoC_2013_Applicant_Guide" title="Google Summer of Code 2013">GSoC 2013</a>
 </div>
 
 </html>

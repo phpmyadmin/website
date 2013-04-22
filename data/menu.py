@@ -21,13 +21,14 @@
 
 # Main menu
 MENU = [
-    ('', 'About'),
+    ('', 'Home'),
     ('news', 'News'),
     ('security/', 'Security'),
     ('support', 'Support'),
     ('docs', 'Docs'),
     ('try', 'Try'),
     ('improve', 'Contribute'),
+    ('contest', 'Contest'),
     ('sponsors', 'Sponsors'),
     ('themes', 'Themes'),
     ('downloads', 'Download'),

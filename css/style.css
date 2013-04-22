@@ -1,51 +1,75 @@
-body {
-    background: url('${base_url}images/logo.png') no-repeat fixed bottom right;
+#logo {
+    padding: 0;
+    margin: 0 20px;
+    background: url('${base_url}images/logo.png') no-repeat;
+    width: 172px; 
+    height: 100px;
+    font-size: 1px;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-#header {
-    margin: 0px;
-    padding: 1em 2em 1.5em 2em;
-	background: #036;
-	border: 0px;
-    border-bottom: 1px solid black;
-}
-
-#header h1 {
-    float: left;
+nav {
+    width: 100%;
+    -moz-box-shadow: 0px 6px 3px -3px #ccc;
+    -webkit-box-shadow: 0px 6px 3px -3px #ccc;
+    box-shadow: 0px 6px 3px -3px #ccc; 
+    border-top: 3px solid #ccc;
     padding: 0;
     margin: 0;
-    margin-right: 1em;
+}
+nav div.menu {
+    text-align: center;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav a {
+    font-weight: bold;
+    padding: 0.5em;
+    margin: -3px 0 0 0;
+    border-right: 1px solid #ccc;
+    border-top: 3px solid #666699;
+    color: #ff9900;
+    display: inline-block;
+}
+
+nav a:first-child {
+    border-left: 1px solid #ccc;
+}
+nav a:hover {
+    background-color: #ff9900;
+    text-decoration: none;
     color: #fff;
 }
 
-#header h1 a {
-	color: #7584b3;
+a.active {
+    background-color: #666699;
+    color: #fff;
 }
 
-#header h1 a .myadmin {
-	color: #ffad17;
-}
-
-#header ul#links {
+ul#links {
     display: inline;
     margin: 0;
     padding: 0;
 }
 
-#header #links li {
+#links li {
     list-style: none;
     display: inline; 
-	font-weight: bold;
-	padding: 0.5em;
+    font-weight: bold;
+    padding: 0.5em;
 }
 
-#header #links li a {
-	color: #ffffff;
+#links li a {
+    color: #ffffff;
     font-size: larger;
 }
 
-#header #links li.active a {
-	color: #c17d11;
+#links li.active a {
+    color: #ff9900;
     font-size: larger;
 }
 
@@ -57,38 +81,34 @@ div.demo#body {
 }
 
 #body {
-	margin: 2em 1em 1em 1em;
-	padding-top:1%;
+    margin: 0 1em 1em 1em;
+    padding-top:1%;
     overflow: auto;
 }
 
 a {
-	color: #c17d11;
-	text-decoration: none;
+    color: #ff9900;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
-	color: #8f5902;
+    text-decoration: underline;
+    color: #8f5902;
 }
 
 img {
-	border: 0px;
+    border: 0px;
 }
 
-h2, h2 a {
-	color: #727e0a;
-}
-
-h3, h3 a {
-	color: #727e0a;
+h1, h2, h2 a, h3, h3 a {
+    color: #666699;
 }
 
 body {
-	margin: 0px;
-	background-color: white;
-	font-family: sans-serif;
-	color: black;
+    margin: 0px;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
 }
 
 div.banner {
@@ -108,22 +128,22 @@ div.bannerimg {
 
 /* For planet */
 div.sidebar {
-	position: absolute;
-	top: 4em;
-	right: 0px;
-	width: 20em;
+    position: absolute;
+    top: 4em;
+    right: 0px;
+    width: 20em;
 
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
 
-	padding-top: 20px;
-	padding-left: 0px;
+    padding-top: 20px;
+    padding-left: 0px;
 
-	font-size: smaller;
+    font-size: smaller;
 }
 
-div.rightbuttons {
+.sponsors {
     float: right;
     margin: 1em;
     text-align: center;
@@ -131,14 +151,23 @@ div.rightbuttons {
     min-width: 250px;
 }
 
-div.rightbutton {
-    padding: 0.5em;
-    margin-top: 1em;
+.sponsors div {
+    padding: 0.5em 0 0.5em 0;
+}
+
+.sponsors p a {
+    font-size: smaller;
+    color: #666699;
+}
+
+.hitbuttons div {
+    padding: 0;
+    margin: 0 0 0 1em;
     border: 1px solid white;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    background-color: #62a324;
+    background-color: #666699;
     color: white;
     font-weight: bolder;
     -moz-box-shadow:0px 0px 8px #AAA;
@@ -148,13 +177,17 @@ div.rightbutton {
     -moz-transition:-webkit-box-shadow 0.1s ease-out;
     -o-transition:-webkit-box-shadow 0.1s ease-out;
     transition:-webkit-box-shadow 0.1s ease-out;
+    display: inline-block;
 }
-div.rightbutton:hover {
-    background-color: #8dea34;
+.hitbuttons div:hover {
+    background-color: #8888cc;
 }
 
-div.rightbutton a {
+.hitbuttons div a {
     color: white;
+    display: block;
+    padding: 0.5em 2em;
+    text-decoration: none;
 }
 
 div.tip {
@@ -179,17 +212,17 @@ ul#footer {
     font-size: smaller;
     list-style: none;
     float: left;
-	padding: 1em;
+    padding: 1em;
     color: gray;
     border: none;
 }
 
 #footer a {
-	color: #c19e66;
+    color: #c19e66;
 }
 
 ul.dllist {
-	padding: 0.5em;
+    padding: 0.5em;
     margin: 0;
 }
 
@@ -200,9 +233,9 @@ ul.dllist li {
 }
 
 #left {
-	margin: 2em 1em 1em 1em;
+    margin: 2em 1em 1em 1em;
     float: left;
-	padding: 0pt 2em;
+    padding: 0pt 2em;
 }
 #left ul {
     margin: 0;
@@ -276,7 +309,7 @@ ul ul {
 }
 
 ul.security li.active a {
-	color: black;
+    color: black;
 }
 
 p.signature {
@@ -422,7 +455,7 @@ ul.select li {
 
 ul.select li a {
     display: block;
-	padding: 0.2em;
+    padding: 0.2em;
 }
 
 table.dllist td { 
@@ -443,4 +476,10 @@ em.big {
 }
 div.subscribe {
     text-align: center;
+}
+table.nice td, table.nice th {
+    padding: 0.2em;
+}
+table.nice {
+    margin: 0 1em 1em 1em;
 }

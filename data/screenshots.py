@@ -21,10 +21,13 @@
 
 # List of screenshots
 SCREENSHOTS = [
-    {'name': 'main-page', 'title': 'Main page screenshot'},
-    {'name': 'main-page-rtl', 'title': 'Main page with an RTL language'},
-    {'name': 'designer', 'title': 'Database designer'},
-    {'name': 'sql-export', 'title': 'SQL export options'},
-    {'name': 'privileges', 'title': 'Setting per column privileges for table'},
-    ]
+    {'name': 'monitor', 'title': 'Server monitor'},
+    {'name': 'designer', 'title': 'Relation designer'},
+    {'name': 'users', 'title': 'User management'},
+    {'name': 'gis', 'title': 'GIS data visualization'},
+    {'name': 'structure', 'title': 'Table structure'},
+    {'name': 'transformations', 'title': 'Display transformations'},
+    {'name': 'rtl', 'title': 'Main page with an RTL language'},
+    {'name': 'advisor', 'title': 'Server configuration advisor'},
+]
 
