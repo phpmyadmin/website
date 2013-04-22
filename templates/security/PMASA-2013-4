@@ -1,0 +1,54 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+
+<py:def function="announcement_id">
+PMASA-2013-4
+</py:def>
+
+<py:def function="announcement_date">
+2013-04-XX
+</py:def>
+
+
+<py:def function="announcement_summary">
+Local file inclusion vulnerability.
+</py:def>
+
+
+<py:def function="announcement_description">
+In the Export feature, a parameter specifying the export type was not correctly validated, opening the door to a local file inclusion attack.
+</py:def>
+
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be serious.
+</py:def>
+
+<py:def function="announcement_mitigation">
+This vulnerability can be triggered only by someone who logged in to the MySQL server via phpMyAdmin, as the usual token protection prevents non-logged-in users to post the required form.
+</py:def>
+
+
+<py:def function="announcement_affected">
+phpMyAdmin versions 4.x (prior to 4.0.0-rc3).
+</py:def>
+
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.0-rc3 or newer. 
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Janek Vind for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2013-XXXX</py:def>
+
+<py:def function="announcement_cwe">661 98</py:def>
+
+<py:def function="announcement_commits">
+ae67d35cdc00eee733c278c91ab547db5d47a217
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
