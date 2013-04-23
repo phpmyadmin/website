@@ -47,7 +47,7 @@ For 3.5.x, upgrade to phpMyAdmin 3.5.8 or newer; for 4.0.x, upgrade to 4.0.0-rc3
 Thanks to Janek Vind for reporting this issue.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2013-XXXX</py:def>
+<py:def function="announcement_cve">CVE-2013-3239</py:def>
 
 <py:def function="announcement_cwe">661 94</py:def>
 
