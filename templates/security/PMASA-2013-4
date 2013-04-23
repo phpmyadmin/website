@@ -25,7 +25,7 @@ We consider this vulnerability to be serious.
 </py:def>
 
 <py:def function="announcement_mitigation">
-This vulnerability can be triggered only by someone who logged in to the MySQL server via phpMyAdmin, as the usual token protection prevents non-logged-in users to post the required form.
+This vulnerability can be triggered only by someone who logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users to access the required form.
 </py:def>
 
 
