@@ -16,7 +16,7 @@ Global variables overwrite in "export.php".
 
 
 <py:def function="announcement_description">
-The export script generates global variables from those present in the post it receives. This may lead to other exploits in the export script.
+The export script generates global variables from those present in the super global $$_POST. This may lead to other exploits in the export script.
 </py:def>
 
 
