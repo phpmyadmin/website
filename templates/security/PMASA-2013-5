@@ -16,7 +16,7 @@ Global variables overwrite in "export.php".
 
 
 <py:def function="announcement_description">
-The export script generates global variables from those present in the super global $$_POST. This may lead to other exploits in the export script.
+The export script generates global variables from those present in the $$_POST superglobal. This may lead to other exploits in the export script.
 </py:def>
 
 
@@ -44,11 +44,7 @@ Thanks to Janek Vind for reporting this issue.
 
 <py:def function="announcement_cve">CVE-2013-3241</py:def>
 
-<py:def function="announcement_cwe">661/py:def>
-
-<py:def function="announcement_commits">
-a564d981e9ef5022d69b2720d6a6126c73c74637
-</py:def>
+<py:def function="announcement_cwe">661</py:def>
 
 <xi:include href="_page.tpl" />
 </html>
