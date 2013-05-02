@@ -247,6 +247,8 @@ class SFGenerator:
             text += ' Second release candidate.'
         elif version.find('rc3') != -1:
             text += ' Third release candidate.'
+        elif version.find('rc4') != -1:
+            text += ' Fourth release candidate.'
         elif version.find('rc') != -1:
             text += ' Release candidate.'
             helper.log.warn('Generic RC: %s' % version)
