@@ -10,9 +10,6 @@
 The phpMyAdmin project extends a special thanks to the companies who wish to support us in a recurring way.
 </p>
 
-<h3>Gold sponsor</h3>
-<a href="https://www.certs4less.com"><img src="${server}${base_url}images/certs4less_240x65.jpg" alt="Certs4Less" /></a>
-
 <h3>Silver sponsors</h3>
 <a href="http://www.navicat.com"><img src="${server}${base_url}images/navicat_200x68.jpg" alt="Navicat" /></a>
 &nbsp;

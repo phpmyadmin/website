@@ -3,10 +3,6 @@
 
 <div class="sponsors">
 
-<h3>Gold sponsors</h3>
-
-<div><a href="https://www.certs4less.com"><img src="${server}${base_url}images/certs4less_240x65.jpg" alt="Certs4Less" /></a></div>
-
 <h3>Silver sponsors</h3>
 
 <div><a href="http://www.navicat.com"><img src="${server}${base_url}images/navicat_200x68.jpg" alt="Navicat" /></a></div>
