@@ -16,7 +16,7 @@
 <p>
 phpMyAdmin is a free software tool written in <a href="http://php.net">PHP</a>,
 intended to handle the administration of <a href="http://mysql.com">MySQL</a>
-over the World Wide Web. phpMyAdmin supports a wide range of operations with 
+over the Web. phpMyAdmin supports a wide range of operations with 
 MySQL. The most frequently used operations are supported by the user interface
  (managing databases, tables, fields, relations, indexes, users, permissions, 
 etc), while you still have the ability to directly execute any SQL statement.  
