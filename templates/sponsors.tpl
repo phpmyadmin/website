@@ -10,6 +10,10 @@
 The phpMyAdmin project extends a special thanks to the companies who wish to support us in a recurring way.
 </p>
 
+<h3>Gold sponsors</h3>
+
+<a href="https://www.webyog.com/product/sqlyog?utm_source=phpmyadmin&amp;utm_medium=ad&amp;utm_campaign=sqlyog1"><img src="${server}${base_url}images/sqlyog1_250x130.png" alt="SQLyog" /></a>
+
 <h3>Silver sponsors</h3>
 <a href="http://www.navicat.com"><img src="${server}${base_url}images/navicat_200x68.jpg" alt="Navicat" /></a>
 &nbsp;
