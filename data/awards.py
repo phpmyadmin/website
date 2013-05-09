@@ -23,6 +23,17 @@
 AWARDS = [
     {
         'image': '',
+	'link': 'http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
+        'title': '2013 MySQL Community Awards',
+        'text': '''
+<p>Our project has won</p>
+<p class="award">MySQL Application of the year 2013</p>
+    ''',
+        'photo': '2013-community-awards-1.jpg',
+        'phototext': 'The trophy',
+    },
+    {
+        'image': '',
 	'link': 'http://sourceforge.net/community/cca09',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
