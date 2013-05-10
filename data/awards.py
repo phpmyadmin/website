@@ -22,7 +22,7 @@
 # List of awards
 AWARDS = [
     {
-        'image': '',
+        'image': 'percona-live-logo.png',
 	'link': 'http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
         'text': '''
