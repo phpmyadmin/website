@@ -33,7 +33,7 @@ AWARDS = [
         'phototext': 'The trophy',
     },
     {
-        'image': '',
+        'image': 'sf_cca_2009_logo.png',
 	'link': 'http://sourceforge.net/community/cca09',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
