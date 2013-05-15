@@ -5,7 +5,7 @@
 
 <h3>Platinum sponsor</h3>
 
-<div><a href="http://www.navicat.com"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a></div>
+<div><a href="http://www.navicat.com/download/navicat-for-mysql"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a></div>
 
 <h3>Gold sponsors</h3>
 

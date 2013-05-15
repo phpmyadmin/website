@@ -11,7 +11,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 </p>
 
 <h3>Platinum sponsor</h3>
-<a href="http://www.navicat.com"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a>
+<a href="http://www.navicat.com/download/navicat-for-mysql"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a>
 
 <h3>Gold sponsors</h3>
 
