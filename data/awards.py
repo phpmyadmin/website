@@ -29,8 +29,10 @@ AWARDS = [
 <p>On <a href="http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are">2013 MySQL CommnityAwards</a> our project has won</p>
 <p class="award">MySQL Application of the year 2013</p>
     ''',
-        'photo': '2013-community-awards-1.jpg',
-        'phototext': 'The trophy',
+        'photos': [
+            ('2013-community-awards-1.jpg', 'The trophy', 'The trophy'),
+            ('2013-community-awards-2.jpg', 'The trophy detail', 'The trophy detail'),
+        ],
     },
     {
         'image': 'sf_cca_2009_logo.png',
@@ -41,8 +43,7 @@ AWARDS = [
 <p class="award">Best Tool or Utility for Developers (finalist)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
-        'photo': 'sf_cca_2009_trophy.jpg',
-        'phototext': 'The trophy',
+        'photos': [('sf_cca_2009_trophy.jpg', 'The trophy', 'The trophy')],
     },
     {
         'image': 'infoworld-bossie-2008.jpg',
@@ -52,8 +53,7 @@ AWARDS = [
 <p>Our project has won this <a href="http://www.infoworld.com/slideshow/2008/08/171-best_of_open_so-5.html">Infoworld 2008 award:</a></p>
 <p class="award">Best of open source platforms and middleware (MySQL administration)</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photos': [],
     },
     {
         'image': 'sf_cca_2008_winner.png',
@@ -65,8 +65,7 @@ AWARDS = [
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
 <p class="award">Most Likely to Be the Next $1B Acquisition (winner)</p>
     ''',
-        'photo': 'sf_cca_2008_trophies.jpg',
-        'phototext': 'The two trophies',
+        'photos': [('sf_cca_2008_trophies.jpg', 'The two trophies', 'The two trophies')],
     },
     {
         'image': 'sf_cca_2007_sysadmin.gif',
@@ -77,8 +76,7 @@ AWARDS = [
 <p class="award">Best Tool or Utility for Developers (nominated)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
-        'photo': 'sf_cca_2007_trophy.jpg',
-        'phototext': 'The trophy',
+        'photos': [('sf_cca_2007_trophy.jpg', 'The trophy', 'The trophy')],
     },
     {
         'image': '2006-trophees-logo.png',
@@ -88,8 +86,8 @@ AWARDS = [
 <p>phpMyAdmin has won a Silver Trophy at the Third <a href="http://www.tropheesdulibre.org">Trophees du Libre</a> (Free Software Awards) in the category</p>
 <p class="award">PHP</p>
     ''',
-        'photo': '2006-trophees-marc.jpg',
-        'phototext': 'Marc Delisle (right) receiving the award in the name of the phpMyAdmin development team.'},
+        'photos': [('2006-trophees-marc.jpg', 'Receiving the award', 'Marc Delisle (right) receiving the award in the name of the phpMyAdmin development team.')],
+    },
     {
         'image': '2005-os2world.png',
         'link': 'http://www.os2world.com/cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
@@ -98,8 +96,7 @@ AWARDS = [
 <p>For the <a href="http://www.os2world.com/cgi-bin/news/viewnews.cgi?category=29&amp;id=1145794857">5th Annual OS/2 World Awards</a>, phpMyAdmin won in the category</p>
 <p class="award">Best PHP Application</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photos': [],
     },
     {
         'image': 'sf_cca_2006_winner.png',
@@ -110,8 +107,7 @@ AWARDS = [
 <p class="award">Databases</p>
 <p class="award">Sysadmin</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photos': [],
     },
     {
         'image': '2006-phpmag-ger.png',
@@ -122,8 +118,7 @@ AWARDS = [
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
 <p>by the readers of the <a href="http://www.phpmagazin.de/itr/service/psecom,id,304,nodeid,64.html">German PHP Magazin</a>.</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photos': [],
     },
     {
         'image': '2005-phpmag-ger.gif',
@@ -134,8 +129,7 @@ AWARDS = [
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
 <p>by the readers of the <a href="http://www.phpmagazin.de/umfrage2005">German PHP Magazin</a>.</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photos': [],
     },
     {
         'image': '2003-phpmag-ger.gif',
@@ -146,8 +140,7 @@ AWARDS = [
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
 <p>by the readers of the <a href="http://www.php-mag.de/itr/service/show.php3?id=109&amp;nodeid=64">German PHP Magazin</a>.</p>
     ''',
-        'photo': '2003-php-conf.jpg',
-        'phototext': 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.',
+        'photos': [('2003-php-conf.jpg', 'Receiving the award', 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.')],
     },
     {
         'image': '2003-phpmag-int.gif',
@@ -158,8 +151,7 @@ AWARDS = [
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
 <p>by the readers of the <a href="http://www.php-mag.de/itr/service/show.php3?id=109&amp;nodeid=64">International PHP Magazine</a>.</p>
     ''',
-        'photo': '2003-php-conf.jpg',
-        'phototext': 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.',
+        'photos': [('2003-php-conf.jpg', 'Receiving the award', 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.')],
     },
     {
         'image': '2002-12-sfnet-potm.png',
@@ -170,8 +162,7 @@ AWARDS = [
 <p class="award"><a href="http://sourceforge.net/potm/potm-2002-12.php">Project of the month</a></p>
 <p>in December 2002. Have a look at that <a href="http://sourceforge.net/potm/potm-2002-12.php">article</a>, if you want to learn about the early years of phpMyAdmin.</p>
     ''',
-        'photo': '',
-        'phototext': '',
+        'photos': [],
     },
 
 ]

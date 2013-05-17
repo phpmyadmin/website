@@ -6,10 +6,11 @@
     <div class="award" py:for="award in awards">
         <a href="${award.link}" class="awardlink"><img src="${base_url}images/awards/${award.image}" alt="${award.title}" /></a>
         ${Markup(award.text)}
-        <p py:if="award.photo">Here is a 
-            <a href="${base_url}images/awards/${award.photo}"
-            rel="lightbox[awards]" title="${award.phototext}">
-            photo</a> from the Awards ceremony.</p>
+        <p py:if="award.photos">Photos:
+        <span py:for="photo in award.photos">
+        <a href="${base_url}images/awards/${photo[0]}" rel="lightbox[awards]" title="${photo[2]}">${photo[1]}</a>
+        </span>
+        </p>
         <div class="clearer"></div>
     </div>
     <div class="clearer"></div>
