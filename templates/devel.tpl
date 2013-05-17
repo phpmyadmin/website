@@ -79,7 +79,6 @@ reference in the comprehensive book <a href="http://progit.org/">Pro Git</a>.
 
 <p>Several statistics about the repository are available:</p>
 <ul>
-<li><a href="http://cia.vc/stats/project/phpmyadmin/">CIA.vc</a></li>
 <li><a href="http://www.ohloh.net/projects/phpmyadmin">Ohloh</a></li>
 <li><a href="https://github.com/phpmyadmin/">github</a></li>
 </ul>
