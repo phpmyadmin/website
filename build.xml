@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="phpMyAdmin-webite" default="build" basedir=".">
+ <property name="source" value="."/>
+ <property name="source_comma_sep" value="."/>
+
+ <target name="clean" description="Clean up and create artifact directories">
+  <delete dir="${basedir}/output"/>
+
+  <mkdir dir="${basedir}/output"/>
+ </target>
+
+ <target name="render" description="Renders website">
+  <exec executable="./render.py">
+      <arg line="-s http://ci.phpmyadmin.net -b /job/phpMyAdmin-website/Generated_website/ -e html"/>
+  </exec>
+ </target>
+
+ <target name="jshint" description="Javascript checks">
+  <exec executable="jshint" output="${basedir}/build/logs/jslint.xml">
+   <arg line="--jslint-reporter js/utils.js" />
+  </exec>
+ </target>
+
+ <target name="csslint" description="CSS checks">
+  <exec executable="csslint" output="${basedir}/build/logs/csslint.xml">
+   <arg line="--format=lint-xml css/style.css css/feed.css" />
+  </exec>
+ </target>
+
+ <target name="build" depends="clean,render,jshint,csslint"/>
+</project>
