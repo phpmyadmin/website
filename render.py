@@ -107,6 +107,7 @@ SUMMARY_TRACKER = re.compile('Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)')
 IDENTICA_USER = 'phpmyadmin'
 IDENTICA_PASSWORD = None
 
+
 def copytree(src, dst):
     '''
     Trimmed down version of shutil.copytree. Recursively copies a directory
@@ -138,7 +139,8 @@ def copytree(src, dst):
         except OSError, err:
             errors.extend(err.args[0])
     if errors:
-        raise OSError, errors
+        raise OSError(errors)
+
 
 def fmt_bytes(number):
     '''
@@ -146,15 +148,16 @@ def fmt_bytes(number):
     '''
     number = int(number)
     if number > 10 * 1024 * 1024:
-        return '%d MiB' % (number / ( 1024 * 1024 ))
+        return '%d MiB' % (number / (1024 * 1024))
     elif number > 1024 * 1024:
-        return '%.1f MiB' % (number / ( 1024.0 * 1024 ))
+        return '%.1f MiB' % (number / (1024.0 * 1024))
     if number > 10 * 1024:
-        return '%d KiB' % (number / 1024 )
+        return '%d KiB' % (number / 1024)
     elif number > 1024:
-        return '%.1f KiB' % (number / 1024.0 )
+        return '%.1f KiB' % (number / 1024.0)
     else:
         return '%d bytes' % number
+
 
 class SFGenerator:
     def __init__(self):
@@ -183,11 +186,20 @@ class SFGenerator:
             'themecssversions': data.themes.CSSVERSIONS,
             'sfservers': data.sf.SERVERS,
             'current_year': datetime.datetime.now().year,
-            }
+        }
         self.loader = TemplateLoader([TEMPLATES])
-        self.cssloader = TemplateLoader([CSS], default_class = NewTextTemplate)
-        self.staticloader = TemplateLoader([STATIC], default_class = NewTextTemplate)
-        self.jsloader = TemplateLoader([JS], default_class = NewTextTemplate)
+        self.cssloader = TemplateLoader(
+            [CSS],
+            default_class=NewTextTemplate
+        )
+        self.staticloader = TemplateLoader(
+            [STATIC],
+            default_class=NewTextTemplate
+        )
+        self.jsloader = TemplateLoader(
+            [JS],
+            default_class=NewTextTemplate
+        )
         self.feeds = helper.cache.FeedCache()
         self.xmls = helper.cache.XMLCache()
         self.urls = helper.cache.URLCache()
@@ -212,8 +224,8 @@ class SFGenerator:
 
     def text_to_id(self, text):
         '''
-        Converts text to something what can be used as a anchor or id (no spaces
-        or other special chars).
+        Converts text to something what can be used as a anchor or id (no
+        spaces or other special chars).
         '''
         return re.sub('[^a-z0-9A-Z.-]', '_', text)
 
@@ -254,7 +266,7 @@ class SFGenerator:
 
         return text
 
-    def dom2release(self, item, theme = False):
+    def dom2release(self, item, theme=False):
         '''
         Parses DOM object into release hash.
 
@@ -319,8 +331,8 @@ class SFGenerator:
             'ext': ext,
             'featured': featured,
             'size': size,
-            'size_k' : int(size) / 1024,
-            'size_m' : int(size) / (1024 * 1024),
+            'size_k': int(size) / 1024,
+            'size_m': int(size) / (1024 * 1024),
             'humansize': fmt_bytes(size),
             'dlcount': dlcount,
             'md5': md5}
@@ -480,13 +492,13 @@ class SFGenerator:
                 continue
             name, size = line.split(' ')
             vcs.append({
-                'name' : name,
-                'size' : int(size),
-                'size_k' : int(size) / 1024,
-                'size_m' : int(size) / (1024 * 1024),
-                'humansize' : fmt_bytes(size),
-                'url' : 'http://dl.cihar.com/phpMyAdmin/master/%s' % name,
-                'md5' : md5s[name],
+                'name': name,
+                'size': int(size),
+                'size_k': int(size) / 1024,
+                'size_m': int(size) / (1024 * 1024),
+                'humansize': fmt_bytes(size),
+                'url': 'http://dl.cihar.com/phpMyAdmin/master/%s' % name,
+                'md5': md5s[name],
             })
         self.data['release_vcs'] = vcs
 
@@ -675,8 +687,8 @@ class SFGenerator:
             title = item[1]
             name = item[0]
             field = {
-                'title' : title,
-                'class' : {},
+                'title': title,
+                'class': {},
             }
             if name == active or '%sindex' % name == active:
                 field['class'] = { 'class': 'active' }
@@ -755,7 +767,7 @@ class SFGenerator:
             data = XML(open(issue, 'r').read())
             name = os.path.basename(issue)
             self.data['issues'].append({
-                'name' : name,
+                'name': name,
                 'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
                 'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
                 'summary': str(data.select('def[@function="announcement_summary"]/text()')),
@@ -826,9 +838,9 @@ class SFGenerator:
             priority = '0.2'
             changefreq = 'weekly'
         return {
-            'lastmod' : helper.date.DateTime.utcnow(),
-            'changefreq' : changefreq,
-            'priority' : priority,
+            'lastmod': helper.date.DateTime.utcnow(),
+            'changefreq': changefreq,
+            'priority': priority,
         }
 
     def generate_sitemap(self):
@@ -982,7 +994,6 @@ class SFGenerator:
                 '%s.php' % redir,
                 {'location': self.get_outname(data.redirects.REDIRECTS[redir])})
 
-
     def main(self):
         '''
         Main program which does everything.
@@ -991,6 +1002,7 @@ class SFGenerator:
         self.fetch_data()
         self.render_pages()
         helper.log.dbg('Done!')
+
 
 if __name__ == '__main__':
     parser = OptionParser()
