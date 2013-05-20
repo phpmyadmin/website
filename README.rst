@@ -14,6 +14,8 @@ Genshi -  http://genshi.edgewall.org/
     (0.6.0 tested)
 python-feedparser - http://code.google.com/p/feedparser/
     (5.1 tested)
+python-dateutil - http://labix.org/python-dateutil
+    (1.5 tested)
 
 
 Security announcements
