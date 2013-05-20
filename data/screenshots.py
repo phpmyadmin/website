@@ -30,4 +30,3 @@ SCREENSHOTS = [
     {'name': 'rtl', 'title': 'Main page with an RTL language'},
     {'name': 'advisor', 'title': 'Server configuration advisor'},
 ]
-

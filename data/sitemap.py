@@ -21,4 +21,4 @@
 
 ENTRIES = [
     '/documentation/changelog.php',
-    ]
+]

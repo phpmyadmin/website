@@ -33,4 +33,3 @@ MENU = [
     ('themes', 'Themes'),
     ('downloads', 'Download'),
 ]
-
