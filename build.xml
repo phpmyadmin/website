@@ -34,5 +34,11 @@
   </exec>
  </target>
 
- <target name="build" depends="clean,render,jshint,csslint"/>
+ <target name="pep8" description="PEP8">
+  <exec executable="pep8" output="${basedir}/build/pep8.report">
+   <arg line="${source}" />
+  </exec>
+ </target>
+
+ <target name="build" depends="clean,render,jshint,csslint,pep8"/>
 </project>
