@@ -24,7 +24,7 @@
 
  <target name="jshint" description="Javascript checks">
   <exec executable="jshint" output="${basedir}/build/jslint.xml">
-   <arg line="--jslint-reporter ${js-list}" />
+   <arg line="--config ./.jshintrc --jslint-reporter ${js-list}" />
   </exec>
  </target>
 
