@@ -5,9 +5,9 @@
  <property name="source_comma_sep" value="."/>
 
  <target name="clean" description="Clean up and create artifact directories">
-  <delete dir="${basedir}/output"/>
+  <delete dir="${basedir}/build"/>
 
-  <mkdir dir="${basedir}/output"/>
+  <mkdir dir="${basedir}/build"/>
  </target>
 
  <target name="render" description="Renders website">
@@ -17,13 +17,13 @@
  </target>
 
  <target name="jshint" description="Javascript checks">
-  <exec executable="jshint" output="${basedir}/build/logs/jslint.xml">
+  <exec executable="jshint" output="${basedir}/build/jslint.xml">
    <arg line="--jslint-reporter js/utils.js" />
   </exec>
  </target>
 
  <target name="csslint" description="CSS checks">
-  <exec executable="csslint" output="${basedir}/build/logs/csslint.xml">
+  <exec executable="csslint" output="${basedir}/build/csslint.xml">
    <arg line="--format=lint-xml css/style.css css/feed.css" />
   </exec>
  </target>
