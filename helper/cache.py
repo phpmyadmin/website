@@ -1,8 +1,5 @@
 # -*- coding: UTF-8 -*-
 #
-# phpMyAdmin web site generator
-#  - caching module
-#
 # Copyright (C) 2008 Michal Cihar <michal@cihar.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -18,13 +15,14 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+'''
+phpMyAdmin web site generator - caching module.
+'''
 
 import cPickle
 import feedparser
 import os
 import time
-import glob
-import traceback
 import urllib
 
 from xml.dom import minidom
@@ -35,14 +33,16 @@ import helper.date
 # How long is cache valid (in seconds)
 CACHE_TIME = 60 * 60
 
+
 class NoCache(Exception):
     pass
+
 
 class Cache(object):
     '''
     Generic caching class.
     '''
-    def __init__(self, timeout = CACHE_TIME):
+    def __init__(self, timeout=CACHE_TIME):
         self._timeout = timeout
 
     def get_name(self, name, fnmask = '%s.dump'):
@@ -112,11 +112,12 @@ class Cache(object):
             os.mkdir(dirname)
         cPickle.dump(data, open(filename, 'w'))
 
+
 class URLCache(Cache):
     '''
     URL caching class.
     '''
-    def __init__(self, timeout = CACHE_TIME):
+    def __init__(self, timeout=CACHE_TIME):
         super(URLCache, self).__init__(timeout)
 
     def load(self, url):
@@ -136,11 +137,12 @@ class URLCache(Cache):
                 result = self.force_get(cache)
         return result
 
+
 class XMLCache(URLCache):
     '''
     XML caching class.
     '''
-    def __init__(self, timeout = CACHE_TIME):
+    def __init__(self, timeout=CACHE_TIME):
         super(XMLCache, self).__init__(timeout)
 
     def load(self, name, url):
@@ -149,11 +151,12 @@ class XMLCache(URLCache):
         data = super(XMLCache, self).load(url)
         return minidom.parseString(data.strip())
 
+
 class FeedCache(URLCache):
     '''
     Feed caching class.
     '''
-    def __init__(self, timeout = CACHE_TIME):
+    def __init__(self, timeout=CACHE_TIME):
         super(FeedCache, self).__init__(timeout)
 
     def load(self, name, url):

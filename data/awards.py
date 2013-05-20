@@ -23,7 +23,7 @@
 AWARDS = [
     {
         'image': 'percona-live-logo.png',
-	'link': 'http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
+        'link': 'http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
         'text': '''
 <p>At the <a href="http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are">2013 MySQL Community Awards</a> ceremony, our project has won</p>
@@ -36,7 +36,7 @@ AWARDS = [
     },
     {
         'image': 'sf_cca_2009_logo.png',
-	'link': 'http://sourceforge.net/community/cca09',
+        'link': 'http://sourceforge.net/community/cca09',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="http://sourceforge.net/community/cca09">2009 SourceForge.net Community Choice Awards</a>, phpMyAdmin was present in two categories:</p>

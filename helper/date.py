@@ -1,8 +1,5 @@
 # -*- coding: UTF-8 -*-
 #
-# phpMyAdmin web site generator
-#  - date formatting and parsing
-#
 # Copyright (C) 2008 Michal Cihar <michal@cihar.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -18,9 +15,13 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+'''
+phpMyAdmin web site generator - date formatting and parsing.
+'''
 
 import datetime
 import dateutil.parser
+
 
 class DateTime(datetime.datetime):
     def w3cdtf(self):
