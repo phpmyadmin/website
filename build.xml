@@ -40,5 +40,11 @@
   </exec>
  </target>
 
- <target name="build" depends="clean,render,jshint,csslint,pep8"/>
+ <target name="pylint" description="pylint">
+  <exec executable="pylint" output="${basedir}/build/pylint.report">
+   <arg line="-f parseable render data helper utils" />
+  </exec>
+ </target>
+
+ <target name="build" depends="clean,render,jshint,csslint,pep8,pylint"/>
 </project>
