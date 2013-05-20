@@ -16,14 +16,20 @@ function show_theme(version) {
 
 function theme_load() {
     /* Is this document with themes? */
-    if ($$("div.theme").length === 0) return;
+    if ($$("div.theme").length === 0) {
+        return;
+    }
 
     /* Do we have some parameter? */
-    if (self.document.location.hash.length < 1) return;
+    if (self.document.location.hash.length < 1) {
+        return;
+    }
 
     /* Is the parameter existing class for theme? */
     var hash = self.document.location.hash.substring(1);
-    if ($$("div.theme." + hash).length === 0) return;
+    if ($$("div.theme." + hash).length === 0) {
+        return;
+    }
 
     /* Finally show chosen schema */
     show_theme(hash);
@@ -32,7 +38,9 @@ function theme_load() {
 window.addEvent("domready", theme_load);
 
 function fader_autoload() {
-    if ($("fader") === null) return;
+    if ($("fader") === null) {
+        return;
+    }
 
     var f = new Fader('fader');
 }
@@ -110,7 +118,7 @@ function get_track_string(href, rel) {
     if (href.indexOf('http://cve.mitre.org/cgi-bin/cvename.cgi?name=') != -1) {
         return '/external/cve/' + href.substr(46);
     }
-    return '/external/' + href.replace('http://','').replace('https://','');
+    return '/external/' + href.replace('http://', '').replace('https://', '');
 }
 
 /**
@@ -126,14 +134,15 @@ function onclick_callback(e) {
 /**
  * Iinitalizes tracking for external links.
  */
-window.addEvent('domready',function(){
-    $$('a').each(function(anchor){
+window.addEvent('domready', function () {
+    $$('a').each(function (anchor) {
         var href = anchor.get('href');
         // if it matches my site or is an absolute path it's outgoing
-        if(href
-            && href.indexOf('http://www.phpmyadmin.net') == -1
-            && href.indexOf('http://phpmyadmin.net') == -1
-            && (href.indexOf('http://') != -1 || href.indexOf('https://') != -1)) {
+        if (href &&
+            href.indexOf('http://www.phpmyadmin.net') == -1 &&
+            href.indexOf('http://phpmyadmin.net') == -1 &&
+            (href.indexOf('http://') != -1 || href.indexOf('https://') != -1)
+            ) {
                 anchor.addEvent('click', onclick_callback);
         }
     });
