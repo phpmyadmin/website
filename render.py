@@ -27,7 +27,6 @@ import shutil
 import csv
 import traceback
 import datetime
-import polib
 import json
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
