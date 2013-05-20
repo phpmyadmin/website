@@ -36,7 +36,7 @@
 
  <target name="pep8" description="PEP8">
   <exec executable="pep8" output="${basedir}/build/pep8.report">
-   <arg line="${source}" />
+   <arg line="render.py data/*.py helper/*.py utils/*.py" />
   </exec>
  </target>
 
