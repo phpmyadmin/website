@@ -107,6 +107,9 @@ class Cache(object):
         Saves cache.
         '''
         filename = self.get_name(name)
+        dirname = os.path.dirname(filename)
+        if not os.path.exists(dirname):
+            os.mkdir(dirname)
         cPickle.dump(data, open(filename, 'w'))
 
 class URLCache(Cache):
