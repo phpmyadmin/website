@@ -990,12 +990,12 @@ class SFGenerator:
             self.render_security(issue['name'])
 
         helper.log.dbg('Generating CSS:')
-        for css in [os.path.basename(x) for x in glob.glob('css/*.css')]:
-            self.render_css(css)
+        for cssfile in glob.glob('css/*.css'):
+            self.render_css(os.path.basename(cssfile))
 
         helper.log.dbg('Generating JavaScript:')
-        for js in [os.path.basename(x) for x in glob.glob('js/*.js')]:
-            self.render_js(js)
+        for jsfile in glob.glob('js/*.js'):
+            self.render_js(os.path.basename(jsfile))
 
         helper.log.dbg('Generating static pages:')
         self.render_static('_version.php', 'version.php')
