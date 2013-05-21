@@ -274,18 +274,22 @@ class SFGenerator:
         if featured:
             helper.log.dbg('Release is featured!')
         try:
-            dlcount = item.getElementsByTagName('files:download-count')[0].childNodes[0].data
+            dlcount = item.getElementsByTagName(
+                'files:download-count'
+            )[0].childNodes[0].data
         except:
             dlcount = None
         try:
-            notes = item.getElementsByTagName('files:release-notes-url')[0].childNodes[0].data
+            notes = item.getElementsByTagName(
+                'files:release-notes-url'
+            )[0].childNodes[0].data
         except:
             notes = ''
         media = item.getElementsByTagName('media:content')[0]
         size = media.getAttribute('filesize')
-        for hash in media.getElementsByTagName('media:hash'):
-            if hash.getAttribute('algo') == 'md5':
-                md5 = hash.childNodes[0].data
+        for media_hash in media.getElementsByTagName('media:hash'):
+            if media_hash.getAttribute('algo') == 'md5':
+                md5 = media_hash.childNodes[0].data
 
         release = {
             'show': False,
@@ -299,7 +303,7 @@ class SFGenerator:
         if not theme:
             release['info'] = self.get_version_info(version)
 
-        file = {
+        file_info = {
             'name': filename,
             'url': link,
             'ext': ext,
@@ -312,7 +316,7 @@ class SFGenerator:
             'md5': md5
         }
 
-        return release, file
+        return release, file_info
 
     def version_compare(self, first, second):
         '''
@@ -326,13 +330,13 @@ class SFGenerator:
         second_parts = second.split('-')
 
         # Extract numeric versions
-        f = [int(x) for x in first_parts[0].split('.')]
-        s = [int(x) for x in second_parts[0].split('.')]
+        first = [int(x) for x in first_parts[0].split('.')]
+        second = [int(x) for x in second_parts[0].split('.')]
 
         # Compare numbers
-        if tuple(f) < tuple(s):
+        if tuple(first) < tuple(second):
             return True
-        if tuple(f) == tuple(s):
+        if tuple(first) == tuple(second):
             # Second is final
             if len(second_parts) == 1:
                 return True
@@ -361,21 +365,21 @@ class SFGenerator:
             dummy, ext = os.path.splitext(title)
             if ext not in DOWNLOAD_EXTS:
                 continue
-            release, file = self.dom2release(entry)
+            release, file_info = self.dom2release(entry)
             if release is None:
                 continue
             if not releases_dict.has_key(release['version']):
                 releases_dict[release['version']] = release
-            if file['ext'] == '.html':
+            if file_info['ext'] == '.html':
                 releases_dict[release['version']]['notes'] = \
-                    file['url'].replace('/download', '/view')
+                    file_info['url'].replace('/download', '/view')
             else:
-                releases_dict[release['version']]['files'].append(file)
+                releases_dict[release['version']]['files'].append(file_info)
 
         releases = [releases_dict[rel] for rel in releases_dict.keys()]
 
         helper.log.dbg('Sorting file lists...')
-        releases.sort(key = lambda x: x['version'], reverse = True)
+        releases.sort(key=lambda x: x['version'], reverse=True)
 
         helper.log.dbg('Detecting versions...')
         outversions = {}
@@ -388,13 +392,17 @@ class SFGenerator:
             test = TESTING_REGEXP.match(version['version'])
             if test is not None:
                 try:
-                    if self.version_compare(releases[outbetaversions[branch]]['version'], version['version']):
+                    if self.version_compare(
+                            releases[outbetaversions[branch]]['version'],
+                            version['version']):
                         outbetaversions[branch] = idx
                 except KeyError:
                     outbetaversions[branch] = idx
             else:
                 try:
-                    if self.version_compare(releases[outversions[branch]]['version'], version['version']):
+                    if self.version_compare(
+                            releases[outversions[branch]]['version'],
+                            version['version']):
                         outversions[branch] = idx
                 except KeyError:
                     outversions[branch] = idx
@@ -405,7 +413,10 @@ class SFGenerator:
                 stable_rel = releases[outversions[beta]]['version']
                 beta_rel = releases[outbetaversions[beta]]['version'].split('-')[0]
                 if stable_rel > beta_rel or stable_rel == beta_rel:
-                    helper.log.dbg('Old beta: %s' % releases[outbetaversions[beta]]['version'])
+                    helper.log.dbg(
+                        'Old beta: %s' %
+                        releases[outbetaversions[beta]]['version']
+                    )
                     del outbetaversions[beta]
             except KeyError:
                 pass
