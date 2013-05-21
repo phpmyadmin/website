@@ -507,7 +507,7 @@ class SFGenerator:
                 continue
             name = titleparts[1]
             version = titleparts[2]
-            release, file = self.dom2release(entry, theme = True)
+            release, file_info = self.dom2release(entry, theme=True)
             if release is None:
                 continue
             release['shortname'] = name
@@ -525,12 +525,12 @@ class SFGenerator:
             release['fullname'] = '%s %s' % (release['name'], version)
             release['classes'] = data.themes.CSSMAP[release['support']]
 
-            release['file'] = file
+            release['file'] = file_info
             if not release['ignore']:
                 self.data['themes'].append(release)
 
         helper.log.dbg('Sorting file lists...')
-        self.data['themes'].sort(key = lambda x: x['date'], reverse = True)
+        self.data['themes'].sort(key=lambda x: x['date'], reverse=True)
 
     def process_news(self, feed):
         '''
@@ -575,8 +575,8 @@ class SFGenerator:
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
         api = external.twitter.Api(
-            username = IDENTICA_USER,
-            password = IDENTICA_PASSWORD,
+            username=IDENTICA_USER,
+            password=IDENTICA_PASSWORD,
             twitterserver='identi.ca/api'
         )
         api.SetSource('phpMyAdmin website')
@@ -606,8 +606,8 @@ class SFGenerator:
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
         api = external.twitter.Api(
-            username = IDENTICA_USER,
-            password = IDENTICA_PASSWORD,
+            username=IDENTICA_USER,
+            password=IDENTICA_PASSWORD,
             twitterserver='identi.ca/api'
         )
         api.SetSource('phpMyAdmin website')
@@ -645,42 +645,42 @@ class SFGenerator:
             item['title'] = entry.title
             self.data[name].append(item)
 
-        self.data['short_%s' % name ] = self.data[name][:count]
+        self.data['short_%s' % name] = self.data[name][:count]
 
     def process_summary(self, feed):
         '''
         Reads summary feed and fills some useful information into data.
         '''
         helper.log.dbg('Processing summary feed...')
-        data = {}
+        info = {}
         links = {}
         trackers = []
         for entry in feed.entries:
             if entry.title[:22] == 'Developers on project:':
-                m = SUMMARY_DEVS.match(entry.title)
-                data['developers'] = m.group(1)
+                match = SUMMARY_DEVS.match(entry.title)
+                info['developers'] = match.group(1)
                 links['developers'] = entry.link
             elif entry.title[:13] == 'Mailing lists':
-                m = SUMMARY_LISTS.match(entry.title)
-                data['mailinglists'] = m.group(1)
+                match = SUMMARY_LISTS.match(entry.title)
+                info['mailinglists'] = match.group(1)
                 links['mailinglists'] = entry.link
             elif entry.title[:17] == 'Discussion forums':
-                m = SUMMARY_FORUMS.match(entry.title)
-                data['forums'] = m.group(1)
-                data['forumposts'] = m.group(2)
+                match = SUMMARY_FORUMS.match(entry.title)
+                info['forums'] = match.group(1)
+                info['forumposts'] = match.group(2)
                 links['forums'] = entry.link
             elif entry.title[:8] == 'Tracker:':
-                m = SUMMARY_TRACKER.match(entry.title)
+                match = SUMMARY_TRACKER.match(entry.title)
                 trackers.append({
-                    'name': m.group(1),
-                    'open': m.group(2),
-                    'total': m.group(3),
+                    'name': match.group(1),
+                    'open': match.group(2),
+                    'total': match.group(3),
                     'description': entry.summary[21:],
                     'link': entry.link,
                 })
-        self.data['info'] = data
+        self.data['info'] = info
         self.data['links'] = links
-        trackers.sort(key = lambda x: x['name'])
+        trackers.sort(key=lambda x: x['name'])
         self.data['trackers'] = trackers
 
     def get_menu(self, active):
@@ -751,7 +751,7 @@ class SFGenerator:
         menu = self.get_menu(page)
         out = open(os.path.join(OUTPUT, self.get_outname(page)), 'w')
         out.write(
-            template.generate(menu = menu, **self.data).render(
+            template.generate(menu=menu, **self.data).render(
                 self.get_renderer(page)
             )
         )
@@ -768,7 +768,7 @@ class SFGenerator:
             os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w'
         )
         out.write(
-            template.generate(menu = menu, issue = issue, **self.data).render(
+            template.generate(menu=menu, issue=issue, **self.data).render(
                 'xhtml'
             )
         )
@@ -780,18 +780,18 @@ class SFGenerator:
         Fills in issues and topissues with security issues information.
         '''
         issues = glob.glob('templates/security/PMASA-*')
-        issues.sort(key = lambda x: int(x[24:29]) * 100 - int(x[30:]))
+        issues.sort(key=lambda x: int(x[24:29]) * 100 - int(x[30:]))
         for issue in issues:
-            data = XML(open(issue, 'r').read())
+            xmldata = XML(open(issue, 'r').read())
             name = os.path.basename(issue)
             self.data['issues'].append({
                 'name': name,
                 'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
                 'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
-                'summary': str(data.select('def[@function="announcement_summary"]/text()')),
-                'date': helper.date.DateTime.parse(str(data.select('def[@function="announcement_date"]/text()'))),
-                'cves': str(data.select('def[@function="announcement_cve"]/text()')).split(' '),
-                'versions': str(data.select('def[@function="announcement_affected"]/text()')),
+                'summary': str(xmldata.select('def[@function="announcement_summary"]/text()')),
+                'date': helper.date.DateTime.parse(str(xmldata.select('def[@function="announcement_date"]/text()'))),
+                'cves': str(xmldata.select('def[@function="announcement_cve"]/text()')).split(' '),
+                'versions': str(xmldata.select('def[@function="announcement_affected"]/text()')),
             })
         self.data['topissues'] = self.data['issues'][:TOP_ISSUES]
 
@@ -910,8 +910,7 @@ class SFGenerator:
         '''
         helper.log.dbg('Processing translation stats...')
         self.data['translations'] = []
-        data = self.urls.load('translations', TRANSLATION_STATS)
-        stats = json.loads(data)
+        stats = json.loads(self.urls.load('translations', TRANSLATION_STATS))
 
         for lang in stats:
             if lang['translated_percent'] < 50:
