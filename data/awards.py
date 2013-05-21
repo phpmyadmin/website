@@ -30,8 +30,16 @@ project has won</p>
 <p class="award">MySQL Application of the year 2013</p>
     ''',
         'photos': [
-            ('2013-community-awards-1.jpg', 'The trophy', 'The trophy'),
-            ('2013-community-awards-2.jpg', 'The trophy detail', 'The trophy detail'),
+            (
+                '2013-community-awards-1.jpg',
+                'The trophy',
+                'The trophy'
+            ),
+            (
+                '2013-community-awards-2.jpg',
+                'The trophy detail',
+                'The trophy detail'
+            ),
         ],
     },
     {
@@ -68,7 +76,13 @@ phpMyAdmin was present in three categories:</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
 <p class="award">Most Likely to Be the Next $1B Acquisition (winner)</p>
     ''',
-        'photos': [('sf_cca_2008_trophies.jpg', 'The two trophies', 'The two trophies')],
+        'photos': [
+            (
+                'sf_cca_2008_trophies.jpg',
+                'The two trophies',
+                'The two trophies'
+            )
+        ],
     },
     {
         'image': 'sf_cca_2007_sysadmin.gif',
@@ -92,14 +106,22 @@ phpMyAdmin was present in two categories:</p>
 in the category</p>
 <p class="award">PHP</p>
     ''',
-        'photos': [('2006-trophees-marc.jpg', 'Receiving the award', 'Marc Delisle (right) receiving the award in the name of the phpMyAdmin development team.')],
+        'photos': [
+            (
+                '2006-trophees-marc.jpg',
+                'Receiving the award',
+                'Marc Delisle (right) receiving the award in the name of '
+                'the phpMyAdmin development team.'
+            )
+        ],
     },
     {
         'image': '2005-os2world.png',
         'link': 'http://www.os2world.com/cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
         'title': '2005 OS2World.com Awards',
         'text': '''
-<p>For the <a href="%(link)s">5th Annual OS/2 World Awards</a>, phpMyAdmin won in the category</p>
+<p>For the <a href="%(link)s">5th Annual OS/2 World Awards</a>,
+phpMyAdmin won in the category</p>
 <p class="award">Best PHP Application</p>
     ''',
         'photos': [],
@@ -147,7 +169,15 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
 <p>by the readers of the <a href="%(link)s">German PHP Magazin</a>.</p>
     ''',
-        'photos': [('2003-php-conf.jpg', 'Receiving the award', 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.')],
+        'photos': [
+            (
+                '2003-php-conf.jpg',
+                'Receiving the award',
+                'Alexander Turek and Garvin Hicking receiving the award '
+                'in the name of the phpMyAdmin development team at '
+                '2003 PHP International Conference.'
+            )
+        ],
     },
     {
         'image': '2003-phpmag-int.gif',
@@ -158,7 +188,15 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
 <p>by the readers of the <a href="%(link)s">International PHP Magazine</a>.</p>
     ''',
-        'photos': [('2003-php-conf.jpg', 'Receiving the award', 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.')],
+        'photos': [
+            (
+                '2003-php-conf.jpg',
+                'Receiving the award',
+                'Alexander Turek and Garvin Hicking receiving the award '
+                'in the name of the phpMyAdmin development team at '
+                '2003 PHP International Conference.'
+            )
+        ],
     },
     {
         'image': '2002-12-sfnet-potm.png',
