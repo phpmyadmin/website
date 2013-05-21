@@ -45,18 +45,18 @@ def warn(text):
     logwrite('WARNING: %s' % text)
 
 
-def dbg(text, type = None):
+def dbg(text, dbgtype=None):
     '''
     Prints debug information to stderr.
     '''
-    if type is not None:
-        if type == 'cache':
+    if dbgtype is not None:
+        if dbgtype == 'cache':
             if DBG_CACHE:
                 sys.stderr.write('%s\n' % text)
         else:
             if VERBOSE:
                 sys.stderr.write('%s\n' % text)
-        logwrite('%s: %s' % (type, text))
+        logwrite('%s: %s' % (dbgtype, text))
     else:
         if VERBOSE:
             sys.stderr.write('%s\n' % text)
