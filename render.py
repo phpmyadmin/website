@@ -696,7 +696,9 @@ class SFGenerator:
                 'class': {},
             }
             if name == active or '%sindex' % name == active:
-                field['class'] = { 'class': 'active' }
+                field['class'] = {
+                    'class': 'active',
+                }
             if len(name) > 0 and name[-1] != '/':
                 name = self.get_outname(name)
             field['link'] = '%s%s' % (BASE_URL, name)
