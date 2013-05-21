@@ -39,7 +39,6 @@ import external.twitter
 
 import data.awards
 import data.themes
-import data.langnames
 import data.menu
 import data.screenshots
 import data.redirects
