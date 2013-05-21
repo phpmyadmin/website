@@ -1085,14 +1085,14 @@ if __name__ == '__main__':
     )
 
     parser.set_defaults(
-        verbose = helper.log.VERBOSE,
-        verbose_cache = helper.log.DBG_CACHE,
-        server = SERVER,
-        base_url = BASE_URL,
-        log = None,
-        extension = EXTENSION,
-        identica_user = IDENTICA_USER,
-        identica_password = IDENTICA_PASSWORD
+        verbose=helper.log.VERBOSE,
+        verbose_cache=helper.log.DBG_CACHE,
+        server=SERVER,
+        base_url=BASE_URL,
+        log=None,
+        extension=EXTENSION,
+        identica_user=IDENTICA_USER,
+        identica_password=IDENTICA_PASSWORD
     )
 
     (options, args) = parser.parse_args()
