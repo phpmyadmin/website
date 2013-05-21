@@ -148,7 +148,7 @@ class XMLCache(URLCache):
     def load(self, name, url):
         self.dbg('Downloading and parsing %s feed...' % name)
         self.dbg('URL: %s' % url)
-        data = super(XMLCache, self).load(url)
+        data = super(XMLCache, self).load(name, url)
         return minidom.parseString(data.strip())
 
 
@@ -166,7 +166,7 @@ class FeedCache(URLCache):
         try:
             result = self.get(cache)
         except NoCache:
-            data = super(FeedCache, self).load(url)
+            data = super(FeedCache, self).load(name, url)
             result = feedparser.parse(data.strip())
             if result.bozo == 1:
                 self.warn('Feed %s is invalid: %s' % (url, str(result.bozo_exception)))
