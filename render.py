@@ -70,9 +70,6 @@ IMAGES = './images'
 OUTPUT = './output'
 STATIC = './static'
 
-# Which JS files are not templates
-JS_TEMPLATES = []
-
 # Generic sourceforge.net part
 PROJECT_FILES_RSS = 'http://sourceforge.net/api/file/index/project-id/23067/rss'
 PROJECT_NEWS_RSS = 'https://sourceforge.net/p/phpmyadmin/news/feed'
@@ -732,13 +729,7 @@ class SFGenerator:
         '''
         helper.log.dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
-        if filename not in JS_TEMPLATES:
-            shutil.copy2(os.path.join(JS, filename), outpath)
-            return
-        template = self.jsloader.load(filename)
-        out = open(outpath, 'w')
-        out.write(template.generate(**self.data).render())
-        out.close()
+        shutil.copy2(os.path.join(JS, filename), outpath)
 
     def render(self, page):
         '''
