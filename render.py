@@ -368,7 +368,7 @@ class SFGenerator:
             release, file_info = self.dom2release(entry)
             if release is None:
                 continue
-            if not releases_dict.has_key(release['version']):
+            if release['version'] not in releases_dict:
                 releases_dict[release['version']] = release
             if file_info['ext'] == '.html':
                 releases_dict[release['version']]['notes'] = \
