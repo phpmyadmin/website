@@ -49,7 +49,15 @@ class Cache(object):
         '''
         Returns cache filename for given name.
         '''
-        name = name.replace('?', '_').replace('&', '_').replace(':', '_').replace('/', '_').strip('_')
+        name = name.replace(
+            '?', '_'
+        ).replace(
+            '&', '_'
+        ).replace(
+            ':', '_'
+        ).replace(
+            '/', '_'
+        ).strip('_')
         return os.path.join('.', 'cache', fnmask % name)
 
     def check_timeout(self, filename):
@@ -169,7 +177,10 @@ class FeedCache(URLCache):
             data = super(FeedCache, self).load(name, url)
             result = feedparser.parse(data.strip())
             if result.bozo == 1:
-                self.warn('Feed %s is invalid: %s' % (url, str(result.bozo_exception)))
+                self.warn(
+                    'Feed %s is invalid: %s' %
+                    (url, str(result.bozo_exception))
+                )
                 try:
                     result = self.force_get(cache)
                     self.dbg('Using old cached version for %s' % cache)

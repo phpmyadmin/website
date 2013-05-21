@@ -55,6 +55,9 @@ BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
 TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
 
+# List of extensions allowed in downloads
+DOWNLOAD_EXTS = ('.html', '.txt', '.7z', '.gz', '.bz2', '.xz', '.zip')
+
 # Base URL (including trailing /)
 SERVER = 'http://www.phpmyadmin.net'
 BASE_URL = '/home_page/'
@@ -246,7 +249,7 @@ class SFGenerator:
         title = item.getElementsByTagName('title')[0].childNodes[0].data
         helper.log.dbg('Processing release %s' % title)
         titleparts = title[1:].split('/')
-        type = titleparts[0]
+        dltype = titleparts[0]
         version = titleparts[1]
         if theme:
             filename = titleparts[3]
@@ -276,8 +279,8 @@ class SFGenerator:
             'show': False,
             'version': version,
             'date': helper.date.DateTime.parse(pubdate[:-6] + ' GMT'),
-            'name': type,
-            'fullname': '%s %s' % (type, version),
+            'name': dltype,
+            'fullname': '%s %s' % (dltype, version),
             'notes': notes,
             'files': []
         }
@@ -294,7 +297,8 @@ class SFGenerator:
             'size_m': int(size) / (1024 * 1024),
             'humansize': fmt_bytes(size),
             'dlcount': dlcount,
-            'md5': md5}
+            'md5': md5
+        }
 
         return release, file
 
@@ -340,11 +344,10 @@ class SFGenerator:
         for entry in xml_files.getElementsByTagName('item'):
             title = entry.getElementsByTagName('title')[0].childNodes[0].data
             titleparts = title[1:].split('/')
-            type = titleparts[0]
-            if type != 'phpMyAdmin':
+            if titleparts[0] != 'phpMyAdmin':
                 continue
-            path, ext = os.path.splitext(title)
-            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.xz', '.zip']:
+            dummy, ext = os.path.splitext(title)
+            if ext not in DOWNLOAD_EXTS:
                 continue
             release, file = self.dom2release(entry)
             if release is None:
@@ -352,7 +355,8 @@ class SFGenerator:
             if not releases_dict.has_key(release['version']):
                 releases_dict[release['version']] = release
             if file['ext'] == '.html':
-                releases_dict[release['version']]['notes'] = file['url'].replace('/download', '/view')
+                releases_dict[release['version']]['notes'] = \
+                    file['url'].replace('/download', '/view')
             else:
                 releases_dict[release['version']]['files'].append(file)
 
@@ -407,7 +411,8 @@ class SFGenerator:
                 except KeyError:
                     # We already marked this one as old
                     continue
-                if major_branch == check_version[:len(major_branch)] and self.version_compare(version, check_version):
+                if (major_branch == check_version[:len(major_branch)]
+                        and self.version_compare(version, check_version)):
                     helper.log.dbg('Old release: %s' % version)
                     del outversions[stable]
                     continue
@@ -436,8 +441,12 @@ class SFGenerator:
         '''
         Retrieves vcs snapshots info and fills it in data['release_vcs'].
         '''
-        md5_strings = self.urls.load('snapshot MD5', SNAPSHOT_MD5).split('\n')
-        size_strings = self.urls.load('snapshot sizes', SNAPSHOT_SIZES).split('\n')
+        md5_strings = self.urls.load(
+            'snapshot MD5', SNAPSHOT_MD5
+        ).split('\n')
+        size_strings = self.urls.load(
+            'snapshot sizes', SNAPSHOT_SIZES
+        ).split('\n')
         md5s = {}
         for line in md5_strings:
             if line.strip() == '':
@@ -468,11 +477,10 @@ class SFGenerator:
         for entry in xml_files.getElementsByTagName('item'):
             title = entry.getElementsByTagName('title')[0].childNodes[0].data
             titleparts = title[1:].split('/')
-            type = titleparts[0]
-            if type != 'themes':
+            if titleparts[0] != 'themes':
                 continue
-            path, ext = os.path.splitext(title)
-            if ext not in ['.html', '.txt', '.7z', '.gz', '.bz2', '.xz', '.zip']:
+            dummy, ext = os.path.splitext(title)
+            if ext not in DOWNLOAD_EXTS:
                 continue
             name = titleparts[1]
             version = titleparts[2]
@@ -670,10 +678,12 @@ class SFGenerator:
         out.write(template.generate(**self.data).render())
         out.close()
 
-    def render_static(self, templatename, outfile, extradata={}):
+    def render_static(self, templatename, outfile, extradata=None):
         '''
         Renders "static" file from template.
         '''
+        if extradata is None:
+            extradata = {}
         helper.log.dbg('  %s' % outfile)
         template = self.staticloader.load(templatename)
         out = open(os.path.join(OUTPUT, outfile), 'w')
