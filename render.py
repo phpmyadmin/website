@@ -45,10 +45,6 @@ import data.redirects
 import data.sf
 import data.sitemap
 
-# Project part
-PROJECT_ID = 23067
-PROJECT_NAME = 'phpmyadmin'
-
 # Filtering
 FILES_REGEXP = re.compile(r'.*all-languages\.(zip).*')
 BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
@@ -78,9 +74,9 @@ STATIC = './static'
 JS_TEMPLATES = []
 
 # Generic sourceforge.net part
-PROJECT_FILES_RSS = 'http://sourceforge.net/api/file/index/project-id/%d/rss' % PROJECT_ID
+PROJECT_FILES_RSS = 'http://sourceforge.net/api/file/index/project-id/23067/rss'
 PROJECT_NEWS_RSS = 'https://sourceforge.net/p/phpmyadmin/news/feed'
-PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=%d' % PROJECT_ID
+PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=23067'
 PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 TRANSLATIONS_RSS = 'https://l10n.cihar.com/exports/rss/phpmyadmin/'
 PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
