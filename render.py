@@ -776,7 +776,6 @@ class SFGenerator:
         )
         out.close()
 
-
     def list_security_issues(self):
         '''
         Fills in issues and topissues with security issues information.
