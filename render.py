@@ -35,7 +35,7 @@ import helper.cache
 import helper.log
 import helper.date
 import helper.stringfmt
-import ext.twitter
+import external.twitter
 
 import data.awards
 import data.themes
@@ -535,7 +535,7 @@ class SFGenerator:
             helper.log.dbg('No need to tweet, the last news is still the same...')
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
-        api = ext.twitter.Api(username = IDENTICA_USER,
+        api = external.twitter.Api(username = IDENTICA_USER,
                 password = IDENTICA_PASSWORD,
                 twitterserver='identi.ca/api')
         api.SetSource('phpMyAdmin website')
@@ -560,7 +560,7 @@ class SFGenerator:
             helper.log.dbg('No need to tweet, the last news is still the same...')
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
-        api = ext.twitter.Api(username = IDENTICA_USER,
+        api = external.twitter.Api(username = IDENTICA_USER,
                 password = IDENTICA_PASSWORD,
                 twitterserver='identi.ca/api')
         api.SetSource('phpMyAdmin website')
