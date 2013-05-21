@@ -868,9 +868,9 @@ class SFGenerator:
             if '.git' in dirs:
                 dirs.remove('.git')  # don't visit .git directories
             files.sort()
-            dir = root[len(TEMPLATES):].strip('/')
-            if len(dir) > 0:
-                dir += '/'
+            root_dir = root[len(TEMPLATES):].strip('/')
+            if len(root_dir) > 0:
+                root_dir += '/'
             for filename in files:
                 name, ext = os.path.splitext(filename)
                 if ext != '.tpl' and name[:6] != 'PMASA-':
@@ -888,7 +888,7 @@ class SFGenerator:
                     title = title.strip()
                 if len(title) == 0:
                     title = 'Index'
-                link = dir + self.get_outname(name)
+                link = root_dir + self.get_outname(name)
                 sitemap = {
                     'link': link,
                     'loc': '%s%s%s' % (SERVER, BASE_URL, link),
@@ -896,7 +896,7 @@ class SFGenerator:
                 }
                 if name[:6] != 'PMASA-':
                     self.data['sitemap'].append(sitemap)
-                sitemap.update(self.get_sitemap_data(dir + name))
+                sitemap.update(self.get_sitemap_data(root_dir + name))
                 self.data['sitemapxml'].append(sitemap)
         for link in data.sitemap.ENTRIES:
             sitemap = {
