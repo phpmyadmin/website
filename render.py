@@ -436,8 +436,8 @@ class SFGenerator:
         '''
         Retrieves vcs snapshots info and fills it in data['release_vcs'].
         '''
-        md5_strings = self.urls.load(SNAPSHOT_MD5).split('\n')
-        size_strings = self.urls.load(SNAPSHOT_SIZES).split('\n')
+        md5_strings = self.urls.load('snapshot MD5', SNAPSHOT_MD5).split('\n')
+        size_strings = self.urls.load('snapshot sizes', SNAPSHOT_SIZES).split('\n')
         md5s = {}
         for line in md5_strings:
             if line.strip() == '':
@@ -854,7 +854,7 @@ class SFGenerator:
         '''
         helper.log.dbg('Processing translation stats...')
         self.data['translations'] = []
-        data = self.urls.load(TRANSLATION_STATS)
+        data = self.urls.load('translations', TRANSLATION_STATS)
         stats = json.loads(data)
 
         for lang in stats:

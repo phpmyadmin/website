@@ -120,8 +120,8 @@ class URLCache(Cache):
     def __init__(self, timeout=CACHE_TIME):
         super(URLCache, self).__init__(timeout)
 
-    def load(self, url):
-        self.dbg('Downloading %s...' % url)
+    def load(self, name, url):
+        self.dbg('Downloading %s...' % name)
         cache = 'url-%s' % url
         try:
             result = self.get(cache)
