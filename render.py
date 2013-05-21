@@ -920,16 +920,16 @@ class SFGenerator:
             else:
                 css = ''
             if lang['last_change'] is None:
-                dt = ''
+                updated = ''
             else:
-                dt = parse(lang['last_change'])
+                updated = parse(lang['last_change'])
             translation = {
                 'name': lang['name'],
                 'short': lang['code'],
                 'url': lang['url'],
                 'translated': lang['translated'],
                 'percent': lang['translated_percent'],
-                'updated': dt,
+                'updated': updated,
                 'css': css,
             }
             self.data['translations'].append(translation)
