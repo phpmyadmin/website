@@ -17,7 +17,7 @@
  </target>
 
  <target name="render" description="Renders website">
-  <exec executable="./render.py">
+  <exec executable="./render.py" failonerror="true">
       <arg line="-s http://ci.phpmyadmin.net -b /job/phpMyAdmin-website/Generated_website/ -e html"/>
   </exec>
  </target>
