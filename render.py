@@ -3,7 +3,7 @@
 #
 # phpMyAdmin web site generator
 #
-# Copyright (C) 2008 - 2012 Michal Cihar <michal@cihar.com>
+# Copyright (C) 2008 - 2013 Michal Cihar <michal@cihar.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -106,40 +106,6 @@ SUMMARY_TRACKER = re.compile('Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)')
 # Indenti.ca integration
 IDENTICA_USER = 'phpmyadmin'
 IDENTICA_PASSWORD = None
-
-
-def copytree(src, dst):
-    '''
-    Trimmed down version of shutil.copytree. Recursively copies a directory
-    tree using shutil.copy2().
-
-    The destination directory must not already exist.
-    If exception(s) occur, an Error is raised with a list of reasons.
-
-    It handles only files and dirs and ignores .svn and *.swp* files and
-    files starting with underscore (_).
-    '''
-    names = os.listdir(src)
-    errors = []
-    for name in names:
-        if name == '.git' or name == '.svn' or name.find('.swp') != -1 or name[0] == '_':
-            continue
-        srcname = os.path.join(src, name)
-        dstname = os.path.join(dst, name)
-        try:
-            if os.path.isdir(srcname):
-                os.makedirs(dstname)
-                copytree(srcname, dstname)
-            else:
-                shutil.copy2(srcname, dstname)
-        except (IOError, os.error), why:
-            errors.append((srcname, dstname, str(why)))
-        # catch the Error from the recursive copytree so that we can
-        # continue with other files
-        except OSError, err:
-            errors.extend(err.args[0])
-    if errors:
-        raise OSError(errors)
 
 
 def fmt_bytes(number):
@@ -782,21 +748,14 @@ class SFGenerator:
         Copies static content to output and creates required directories.
         '''
         helper.log.dbg('Copying static content to output...')
-        if CLEAN_OUTPUT:
-            try:
-                shutil.rmtree(OUTPUT)
-                os.mkdir(OUTPUT)
-            except OSError:
-                pass
-        else:
-            try:
-                shutil.rmtree(os.path.join(OUTPUT, 'images'))
-            except OSError:
-                pass
+        try:
+            shutil.rmtree(OUTPUT)
+        except OSError:
+            pass
+        copyignore = shutil.ignore_patterns('.git', '.svn', '*.swp', '_*')
+        shutil.copytree(STATIC, OUTPUT, ignore=copyignore)
         imgdst = os.path.join(OUTPUT, 'images')
-        os.makedirs(imgdst)
-        copytree(IMAGES, imgdst)
-        copytree(STATIC, OUTPUT)
+        shutil.copytree(IMAGES, imgdst, ignore=copyignore)
         try:
             os.mkdir(os.path.join(OUTPUT, 'security'))
         except OSError:
