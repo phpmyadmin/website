@@ -18,7 +18,6 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-
 # List of awards
 AWARDS = [
     {
@@ -26,7 +25,8 @@ AWARDS = [
         'link': 'http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
         'text': '''
-<p>At the <a href="http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are">2013 MySQL Community Awards</a> ceremony, our project has won</p>
+<p>At the <a href="%(link)s">2013 MySQL Community Awards</a> ceremony, our
+project has won</p>
 <p class="award">MySQL Application of the year 2013</p>
     ''',
         'photos': [
@@ -39,7 +39,8 @@ AWARDS = [
         'link': 'http://sourceforge.net/community/cca09',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the <a href="http://sourceforge.net/community/cca09">2009 SourceForge.net Community Choice Awards</a>, phpMyAdmin was present in two categories:</p>
+<p>For the <a href="%(link)s">2009 SourceForge.net Community Choice Awards</a>,
+phpMyAdmin was present in two categories:</p>
 <p class="award">Best Tool or Utility for Developers (finalist)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
@@ -50,8 +51,9 @@ AWARDS = [
         'link': 'http://www.infoworld.com/slideshow/2008/08/171-best_of_open_so-5.html',
         'title': 'InfoWorld 2008 Best of Open Source Awards',
         'text': '''
-<p>Our project has won this <a href="http://www.infoworld.com/slideshow/2008/08/171-best_of_open_so-5.html">Infoworld 2008 award:</a></p>
-<p class="award">Best of open source platforms and middleware (MySQL administration)</p>
+<p>Our project has won this <a href="%(link)s">Infoworld 2008 award:</a></p>
+<p class="award">Best of open source platforms and middleware
+(MySQL administration)</p>
     ''',
         'photos': [],
     },
@@ -60,7 +62,8 @@ AWARDS = [
         'link': 'http://sourceforge.net/community/index.php/landing-pages/cca08',
         'title': '2008 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the <a href="http://sourceforge.net/community/index.php/landing-pages/cca08">2008 SourceForge.net Community Choice Awards</a>, phpMyAdmin was present in three categories:</p>
+<p>For the <a href="%(link)s">2008 SourceForge.net Community Choice Awards</a>,
+phpMyAdmin was present in three categories:</p>
 <p class="award">Best Tool or Utility for Developers (finalist)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
 <p class="award">Most Likely to Be the Next $1B Acquisition (winner)</p>
@@ -72,7 +75,8 @@ AWARDS = [
         'link': 'http://sourceforge.net/community/index.php/landing-pages/cca07',
         'title': '2007 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the <a href="http://sourceforge.net/community/index.php/landing-pages/cca07">2007 SourceForge.net Community Choice Awards</a>, phpMyAdmin was present in two categories:</p>
+<p>For the <a href="%(link)s">2007 SourceForge.net Community Choice Awards</a>,
+phpMyAdmin was present in two categories:</p>
 <p class="award">Best Tool or Utility for Developers (nominated)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
@@ -80,10 +84,12 @@ AWARDS = [
     },
     {
         'image': '2006-trophees-logo.png',
-        'link': 'http://www.tropheesdulibre.org',
+        'link': 'http://www.tropheesdulibre.org/',
         'title': '2006 Trophees du Libre',
         'text': '''
-<p>phpMyAdmin has won a Silver Trophy at the Third <a href="http://www.tropheesdulibre.org">Trophees du Libre</a> (Free Software Awards) in the category</p>
+<p>phpMyAdmin has won a Silver Trophy at the Third
+<a href="%(link)s">Trophees du Libre</a> (Free Software Awards)
+in the category</p>
 <p class="award">PHP</p>
     ''',
         'photos': [('2006-trophees-marc.jpg', 'Receiving the award', 'Marc Delisle (right) receiving the award in the name of the phpMyAdmin development team.')],
@@ -93,7 +99,7 @@ AWARDS = [
         'link': 'http://www.os2world.com/cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
         'title': '2005 OS2World.com Awards',
         'text': '''
-<p>For the <a href="http://www.os2world.com/cgi-bin/news/viewnews.cgi?category=29&amp;id=1145794857">5th Annual OS/2 World Awards</a>, phpMyAdmin won in the category</p>
+<p>For the <a href="%(link)s">5th Annual OS/2 World Awards</a>, phpMyAdmin won in the category</p>
 <p class="award">Best PHP Application</p>
     ''',
         'photos': [],
@@ -103,7 +109,8 @@ AWARDS = [
         'link': 'http://sourceforge.net/community/index.php/cca06',
         'title': '2006 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the first annual SourceForge.net <a href="http://sourceforge.net/community/index.php/cca06">Community Choice Awards</a>, phpMyAdmin won the first place in two categories:</p>
+<p>For the first annual SourceForge.net <a href="%(link)s">Community Choice
+Awards</a>, phpMyAdmin won the first place in two categories:</p>
 <p class="award">Databases</p>
 <p class="award">Sysadmin</p>
     ''',
@@ -116,7 +123,7 @@ AWARDS = [
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2006 in the category</p>
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
-<p>by the readers of the <a href="http://www.phpmagazin.de/itr/service/psecom,id,304,nodeid,64.html">German PHP Magazin</a>.</p>
+<p>by the readers of the <a href="%(link)s">German PHP Magazin</a>.</p>
     ''',
         'photos': [],
     },
@@ -127,7 +134,7 @@ AWARDS = [
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2005 in the category</p>
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
-<p>by the readers of the <a href="http://www.phpmagazin.de/umfrage2005">German PHP Magazin</a>.</p>
+<p>by the readers of the <a href="%(link)s">German PHP Magazin</a>.</p>
     ''',
         'photos': [],
     },
@@ -138,7 +145,7 @@ AWARDS = [
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2003 in the category</p>
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
-<p>by the readers of the <a href="http://www.php-mag.de/itr/service/show.php3?id=109&amp;nodeid=64">German PHP Magazin</a>.</p>
+<p>by the readers of the <a href="%(link)s">German PHP Magazin</a>.</p>
     ''',
         'photos': [('2003-php-conf.jpg', 'Receiving the award', 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.')],
     },
@@ -149,7 +156,7 @@ AWARDS = [
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2003 in the category</p>
 <p class="award">Best PHP-Tool / Best PHP-Application</p>
-<p>by the readers of the <a href="http://www.php-mag.de/itr/service/show.php3?id=109&amp;nodeid=64">International PHP Magazine</a>.</p>
+<p>by the readers of the <a href="%(link)s">International PHP Magazine</a>.</p>
     ''',
         'photos': [('2003-php-conf.jpg', 'Receiving the award', 'Alexander Turek and Garvin Hicking receiving the award in the name of the phpMyAdmin development team at 2003 PHP International Conference.')],
     },
@@ -158,10 +165,19 @@ AWARDS = [
         'link': 'http://sourceforge.net/potm/potm-2002-12.php',
         'title': 'Sourceforge.net project of the month',
         'text': '''
-<p>phpMyAdmin was awarded <a href="http://sourceforge.net">Sourceforge.net</a>'s</p>
-<p class="award"><a href="http://sourceforge.net/potm/potm-2002-12.php">Project of the month</a></p>
-<p>in December 2002. Have a look at that <a href="http://sourceforge.net/potm/potm-2002-12.php">article</a>, if you want to learn about the early years of phpMyAdmin.</p>
+<p>phpMyAdmin was awarded
+<a href="http://sourceforge.net">Sourceforge.net</a>'s</p>
+<p class="award"><a href="%(link)s">Project of the month</a></p>
+<p>in December 2002. Have a look at that <a href="%(link)s">article</a>, if you
+want to learn about the early years of phpMyAdmin.</p>
     ''',
         'photos': [],
     },
 ]
+
+# Allow award text to use other things as format string
+from cgi import escape
+for award in AWARDS:
+    award['text'] = award['text'] % {
+        'link': escape(award['link'])
+    }
