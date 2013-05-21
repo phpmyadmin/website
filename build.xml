@@ -36,13 +36,13 @@
 
  <target name="pep8" description="PEP8">
   <exec executable="pep8" output="${basedir}/build/pep8.report">
-   <arg line="render.py data helper utils" />
+   <arg line="render.py data helper" />
   </exec>
  </target>
 
  <target name="pylint" description="pylint">
   <exec executable="pylint" output="${basedir}/build/pylint.report">
-   <arg line="--rcfile=./pylint.rc render data helper utils" />
+   <arg line="--rcfile=./pylint.rc render data helper" />
   </exec>
  </target>
 
