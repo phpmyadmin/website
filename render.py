@@ -870,16 +870,16 @@ class SFGenerator:
             dir = root[len(TEMPLATES):].strip('/')
             if len(dir) > 0:
                 dir += '/'
-            for file in files:
-                name, ext = os.path.splitext(file)
+            for filename in files:
+                name, ext = os.path.splitext(filename)
                 if ext != '.tpl' and name[:6] != 'PMASA-':
                     continue
                 if name[0] in ['_', '.']:
                     continue
-                if file in ['index.xml.tpl', 'sitemap.xml.tpl', '404.tpl']:
+                if filename in ['index.xml.tpl', 'sitemap.xml.tpl', '404.tpl']:
                     continue
-                helper.log.dbg('- %s' % file)
-                xmldata = XML(open(os.path.join(root, file), 'r').read())
+                helper.log.dbg('- %s' % filename)
+                xmldata = XML(open(os.path.join(root, filename), 'r').read())
                 title = str(xmldata.select('def[@function="page_title"]/text()'))
                 title = title.strip()
                 if len(title) == 0:
