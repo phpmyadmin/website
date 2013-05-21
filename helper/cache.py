@@ -45,7 +45,7 @@ class Cache(object):
     def __init__(self, timeout=CACHE_TIME):
         self._timeout = timeout
 
-    def get_name(self, name, fnmask = '%s.dump'):
+    def get_name(self, name, fnmask='%s.dump'):
         '''
         Returns cache filename for given name.
         '''
