@@ -194,9 +194,9 @@ class SFGenerator:
         Returns description to the phpMyAdmin version.
         '''
         if version[:2] == '1.':
-            text ='Historical release.'
+            text = 'Historical release.'
         elif version[:2] == '2.':
-            text ='Version compatible with PHP 4+ and MySQL 3+.'
+            text = 'Version compatible with PHP 4+ and MySQL 3+.'
         elif version[:2] == '3.':
             text = 'Version compatible with PHP 5.2 and MySQL 5.'
         elif version[:2] == '4.':
@@ -328,7 +328,6 @@ class SFGenerator:
             return (first_parts[1] < second_parts[1])
 
         return False
-
 
     def process_releases(self, xml_files):
         '''
@@ -535,9 +534,11 @@ class SFGenerator:
             helper.log.dbg('No need to tweet, the last news is still the same...')
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
-        api = external.twitter.Api(username = IDENTICA_USER,
-                password = IDENTICA_PASSWORD,
-                twitterserver='identi.ca/api')
+        api = external.twitter.Api(
+            username = IDENTICA_USER,
+            password = IDENTICA_PASSWORD,
+            twitterserver='identi.ca/api'
+        )
         api.SetSource('phpMyAdmin website')
         api.PostUpdate(tweet)
         storage.set('last-tweet', tweet)
@@ -560,9 +561,11 @@ class SFGenerator:
             helper.log.dbg('No need to tweet, the last news is still the same...')
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
-        api = external.twitter.Api(username = IDENTICA_USER,
-                password = IDENTICA_PASSWORD,
-                twitterserver='identi.ca/api')
+        api = external.twitter.Api(
+            username = IDENTICA_USER,
+            password = IDENTICA_PASSWORD,
+            twitterserver='identi.ca/api'
+        )
         api.SetSource('phpMyAdmin website')
         api.PostUpdate(tweet)
         storage.set('last-security-tweet', tweet)
@@ -582,7 +585,7 @@ class SFGenerator:
 
         self.data['short_blogs'] = self.data['blogs'][:5]
 
-    def process_feed(self, name, feed, count = 3):
+    def process_feed(self, name, feed, count=3):
         '''
         Fills in feed data based on feeparser feed.
         '''
@@ -668,7 +671,7 @@ class SFGenerator:
         out.write(template.generate(**self.data).render())
         out.close()
 
-    def render_static(self, templatename, outfile, extradata = {}):
+    def render_static(self, templatename, outfile, extradata={}):
         '''
         Renders "static" file from template.
         '''
@@ -831,18 +834,18 @@ class SFGenerator:
                     title = 'Index'
                 link = dir + self.get_outname(name)
                 sitemap = {
-                        'link': link,
-                        'loc': '%s%s%s' % (SERVER, BASE_URL, link),
-                        'title': title
-                        }
+                    'link': link,
+                    'loc': '%s%s%s' % (SERVER, BASE_URL, link),
+                    'title': title
+                }
                 if name[:6] != 'PMASA-':
                     self.data['sitemap'].append(sitemap)
                 sitemap.update(self.get_sitemap_data(dir + name))
                 self.data['sitemapxml'].append(sitemap)
         for link in data.sitemap.ENTRIES:
             sitemap = {
-                    'loc': SERVER + link,
-                    }
+                'loc': SERVER + link,
+            }
             sitemap.update(self.get_sitemap_data(link))
             self.data['sitemapxml'].append(sitemap)
 
@@ -861,7 +864,7 @@ class SFGenerator:
             elif lang['translated_percent'] < 80:
                 css = ' b80'
             else:
-                css =''
+                css = ''
             if lang['last_change'] is None:
                 dt = ''
             else:
@@ -943,9 +946,11 @@ class SFGenerator:
         self.render_static('_security.php', 'security.php')
         self.render_static('_robots.txt', 'robots.txt')
         for redir in data.redirects.REDIRECTS:
-            self.render_static('_redirect.tpl',
+            self.render_static(
+                '_redirect.tpl',
                 '%s.php' % redir,
-                {'location': self.get_outname(data.redirects.REDIRECTS[redir])})
+                {'location': self.get_outname(data.redirects.REDIRECTS[redir])}
+            )
 
     def main(self):
         '''
@@ -959,46 +964,66 @@ class SFGenerator:
 
 if __name__ == '__main__':
     parser = OptionParser()
-    parser.add_option('-v', '--verbose',
-                    action='store_true',
-                    dest='verbose',
-                    help='Output verbose information.')
-    parser.add_option('-q', '--quiet',
-                    action='store_false',
-                    dest='verbose',
-                    help='Only show errors and warnings.')
-    parser.add_option('-V', '--verbose-cache',
-                    action='store_true',
-                    dest='verbose_cache',
-                    help='Output verbose caching information.')
-    parser.add_option('-Q', '--quiet-cache',
-                    action='store_false',
-                    dest='verbose_cache',
-                    help='No information from caching in output.')
-    parser.add_option('-s', '--server',
-                    action='store', type='string',
-                    dest='server',
-                    help='Name of server where data will be published, eg.: %s.' % SERVER)
-    parser.add_option('-b', '--base-url',
-                    action='store', type='string',
-                    dest='base_url',
-                    help='Base URL of document, eg.: %s.' % BASE_URL)
-    parser.add_option('-e', '--extension',
-                    action='store', type='string',
-                    dest='extension',
-                    help='Extension of generated files, default is %s.' % EXTENSION)
-    parser.add_option('-l', '--log',
-                    action='store', type='string',
-                    dest='log',
-                    help='Log filename, default is none.')
-    parser.add_option('-p', '--identica-password',
-                    action='store', type='string',
-                    dest='identica_password',
-                    help='Pasword to identi.ca, default is not to post there.')
-    parser.add_option('-u', '--identica-user',
-                    action='store', type='string',
-                    dest='identica_user',
-                    help='Username to identi.ca, defaull is %s.' % IDENTICA_USER)
+    parser.add_option(
+        '-v', '--verbose',
+        action='store_true',
+        dest='verbose',
+        help='Output verbose information.'
+    )
+    parser.add_option(
+        '-q', '--quiet',
+        action='store_false',
+        dest='verbose',
+        help='Only show errors and warnings.'
+    )
+    parser.add_option(
+        '-V', '--verbose-cache',
+        action='store_true',
+        dest='verbose_cache',
+        help='Output verbose caching information.'
+    )
+    parser.add_option(
+        '-Q', '--quiet-cache',
+        action='store_false',
+        dest='verbose_cache',
+        help='No information from caching in output.'
+    )
+    parser.add_option(
+        '-s', '--server',
+        action='store', type='string',
+        dest='server',
+        help='Name of server where data will be published, eg.: %s.' % SERVER
+    )
+    parser.add_option(
+        '-b', '--base-url',
+        action='store', type='string',
+        dest='base_url',
+        help='Base URL of document, eg.: %s.' % BASE_URL
+    )
+    parser.add_option(
+        '-e', '--extension',
+        action='store', type='string',
+        dest='extension',
+        help='Extension of generated files, default is %s.' % EXTENSION
+    )
+    parser.add_option(
+        '-l', '--log',
+        action='store', type='string',
+        dest='log',
+        help='Log filename, default is none.'
+    )
+    parser.add_option(
+        '-p', '--identica-password',
+        action='store', type='string',
+        dest='identica_password',
+        help='Pasword to identi.ca, default is not to post there.'
+    )
+    parser.add_option(
+        '-u', '--identica-user',
+        action='store', type='string',
+        dest='identica_user',
+        help='Username to identi.ca, defaull is %s.' % IDENTICA_USER
+    )
 
     parser.set_defaults(
         verbose = helper.log.VERBOSE,
@@ -1009,7 +1034,7 @@ if __name__ == '__main__':
         extension = EXTENSION,
         identica_user = IDENTICA_USER,
         identica_password = IDENTICA_PASSWORD
-        )
+    )
 
     (options, args) = parser.parse_args()
 
