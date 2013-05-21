@@ -97,7 +97,6 @@ SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
 # RSS parsing
 SUMMARY_DEVS = re.compile('Developers on project: ([0-9]*)')
 SUMMARY_ACTIVITY = re.compile('Activity percentile \(last week\): ([0-9.]*%)')
-SUMMARY_DOWNLOADS = re.compile('Downloadable files: ([0-9]*) total downloads to date')
 SUMMARY_LISTS = re.compile('Mailing lists \(public\): ([0-9]*)')
 SUMMARY_FORUMS = re.compile('Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages')
 SUMMARY_TRACKER = re.compile('Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)')
@@ -640,10 +639,6 @@ class SFGenerator:
                 m = SUMMARY_DEVS.match(entry.title)
                 data['developers'] = m.group(1)
                 links['developers'] = entry.link
-            elif entry.title[:19] == 'Downloadable files:':
-                m = SUMMARY_DOWNLOADS.match(entry.title)
-                data['downloads'] = m.group(1)
-                links['downloads'] = entry.link
             elif entry.title[:13] == 'Mailing lists':
                 m = SUMMARY_LISTS.match(entry.title)
                 data['mailinglists'] = m.group(1)
