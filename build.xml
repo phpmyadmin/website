@@ -42,7 +42,7 @@
 
  <target name="pylint" description="pylint">
   <exec executable="pylint" output="${basedir}/build/pylint.report">
-   <arg line="-f parseable render data helper utils" />
+   <arg line=" -i y -e W,E,C -f parseable render data helper utils" />
   </exec>
  </target>
 
