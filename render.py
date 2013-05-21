@@ -236,20 +236,6 @@ class SFGenerator:
     def dom2release(self, item, theme=False):
         '''
         Parses DOM object into release hash.
-
-        Basically it gets XML like this:
-
-      <title><![CDATA[/theme-xampp/2.11/xampp-2.11.zip]]></title>
-        <item>
-          <title><![CDATA[/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz]]></title>
-          <link>http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz/download</link>
-          <guid>http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz/download</guid>
-          <description><![CDATA[/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-all-languages.tar.gz]]></description>
-          <pubDate>Sun, 09 Aug 2009 21:27:17 +0000</pubDate>
-          <files:extra-info xmlns:files="http://sourceforge.net/api/files.rdf#">HTML document text</files:extra-info>
-          <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/html" url="http://sourceforge.net/project/phpmyadmin/files/phpMyAdmin/3.2.1/phpMyAdmin-3.2.1-notes.html/download" filesize="1539"><media:title></media:title><media:hash algo="md5">b9e4de4108f1d6e5fc4772df888e73ac</media:hash></media:content>
-          <files:download-count xmlns:files="http://sourceforge.net/api/files.rdf#">0</files:download-count>
-        </item>
         '''
         title = item.getElementsByTagName('title')[0].childNodes[0].data
         helper.log.dbg('Processing release %s' % title)
