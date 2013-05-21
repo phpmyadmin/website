@@ -46,7 +46,8 @@ THEMES = {
     'grid-2.11d': {
         'name': 'Grid',
         'support': '2.8 - 3.2',
-        'info': u'Small table margins, fontsize and colors are set to be optimal readable and show maximum amount of data on screen.',
+        'info': u'Small table margins, fontsize and colors are set to be '
+            'optimal readable and show maximum amount of data on screen.',
         'author': u'Jürgen Wind',
         'ignore': True,
     },
@@ -100,7 +101,12 @@ THEMES = {
     'silk-2.10': {
         'name': 'Silk',
         'support': '2.10',
-        'info': u'"Silk" is a smooth theme designed to be clear and easy for the eyes, based on <a href="http://famfamfam.com/lab/icons/silk/">Silk icons</a> by Mark James which is licensed under the <a href="http://creativecommons.org/licenses/by/2.5/">Cc-by-2.5</a>.',
+        'info': u'"Silk" is a smooth theme designed to be clear and easy '
+            'for the eyes, based on '
+            '<a href="http://famfamfam.com/lab/icons/silk/">Silk icons</a> '
+            'by Mark James which is licensed under the '
+            '<a href="http://creativecommons.org/licenses/by/2.5/">Cc-by-2.5'
+            '</a>.',
         'author': u'Matthias Mailander',
         'ignore': True,
     },
