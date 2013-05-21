@@ -164,17 +164,4 @@ AWARDS = [
     ''',
         'photos': [],
     },
-
 ]
-
-template = \
-    {
-        'image': '',
-        'link': '',
-        'title': '',
-        'text': '''
-    ''',
-        'photo': '',
-        'phototext': '',
-    },
-
