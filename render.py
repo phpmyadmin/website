@@ -95,11 +95,21 @@ TRANSLATION_STATS = 'http://l10n.cihar.com/exports/stats/phpmyadmin/master/'
 SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
 
 # RSS parsing
-SUMMARY_DEVS = re.compile('Developers on project: ([0-9]*)')
-SUMMARY_ACTIVITY = re.compile('Activity percentile \(last week\): ([0-9.]*%)')
-SUMMARY_LISTS = re.compile('Mailing lists \(public\): ([0-9]*)')
-SUMMARY_FORUMS = re.compile('Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages')
-SUMMARY_TRACKER = re.compile('Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)')
+SUMMARY_DEVS = re.compile(
+    'Developers on project: ([0-9]*)'
+)
+SUMMARY_ACTIVITY = re.compile(
+    'Activity percentile \(last week\): ([0-9.]*%)'
+)
+SUMMARY_LISTS = re.compile(
+    'Mailing lists \(public\): ([0-9]*)'
+)
+SUMMARY_FORUMS = re.compile(
+    'Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages'
+)
+SUMMARY_TRACKER = re.compile(
+    'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
+)
 
 # Indenti.ca integration
 IDENTICA_USER = 'phpmyadmin'
