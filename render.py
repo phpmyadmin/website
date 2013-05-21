@@ -91,6 +91,9 @@ SNAPSHOT_MD5 = 'http://dl.cihar.com/phpMyAdmin/master/md5.sums'
 SNAPSHOT_SIZES = 'http://dl.cihar.com/phpMyAdmin/master/files.list'
 TRANSLATION_STATS = 'http://l10n.cihar.com/exports/stats/phpmyadmin/master/'
 
+# URLS
+SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
+
 # RSS parsing
 SUMMARY_DEVS = re.compile('Developers on project: ([0-9]*)')
 SUMMARY_ACTIVITY = re.compile('Activity percentile \(last week\): ([0-9.]*%)')
@@ -493,7 +496,9 @@ class SFGenerator:
             try:
                 release.update(data.themes.THEMES['%s-%s' % (name, version)])
             except KeyError:
-                helper.log.warn('No meatadata for theme %s-%s!' % (name, version))
+                helper.log.warn(
+                    'No meatadata for theme %s-%s!' % (name, version)
+                )
                 release['name'] = name
                 release['support'] = 'N/A'
                 release['info'] = ''
@@ -516,8 +521,13 @@ class SFGenerator:
             item = {}
             item['link'] = entry.link
             item['date'] = helper.date.DateTime.parse(entry.updated)
-            # replaces are workaround for broken automatic links from sf.net rss feed
-            item['text'] = entry.summary.replace('.</a>', '</a>.').replace('.">http', '">http')
+            # replaces are workaround for broken automatic links from sf.net
+            # rss feed
+            item['text'] = entry.summary.replace(
+                '.</a>', '</a>.'
+            ).replace(
+                '.">http', '">http'
+            )
             item['title'] = entry.title
             item['anchor'] = self.text_to_id(entry.title)
             self.data['news'].append(item)
@@ -526,7 +536,8 @@ class SFGenerator:
 
     def tweet(self):
         '''
-        Finds out whether we should send update to identi.ca and twitter and do so.
+        Finds out whether we should send update to identi.ca and twitter and
+        do so.
         '''
         news = self.data['news'][0]
         if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
@@ -538,7 +549,9 @@ class SFGenerator:
         except helper.cache.NoCache:
             last = None
         if last == tweet:
-            helper.log.dbg('No need to tweet, the last news is still the same...')
+            helper.log.dbg(
+                'No need to tweet, the last news is still the same...'
+            )
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
         api = external.twitter.Api(
@@ -559,13 +572,17 @@ class SFGenerator:
         if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
             return
         storage = helper.cache.Cache()
-        tweet = '%s | http://www.phpmyadmin.net/home_page/security/ | #phpmyadmin #pmasa #security' % issue['name']
+        tweet = '%s | %s | #phpmyadmin #pmasa #security' % (
+            issue['name'], SECURITY_URL
+        )
         try:
             last = storage.force_get('last-security-tweet')
         except helper.cache.NoCache:
             last = None
         if last == tweet:
-            helper.log.dbg('No need to tweet, the last news is still the same...')
+            helper.log.dbg(
+                'No need to tweet, the last news is still the same...'
+            )
             return
         helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
         api = external.twitter.Api(
@@ -585,7 +602,9 @@ class SFGenerator:
         for entry in feed.entries:
             item = {}
             item['link'] = 'http://planet.phpmyadmin.net/#%s' % entry.link
-            item['date'] = helper.date.DateTime.parse(entry.updated.replace('+0000', 'GMT'))
+            item['date'] = helper.date.DateTime.parse(
+                entry.updated.replace('+0000', 'GMT')
+            )
             item['text'] = entry.summary_detail['value']
             item['title'] = entry.title
             self.data['blogs'].append(item)
@@ -693,8 +712,9 @@ class SFGenerator:
 
     def render_js(self, filename):
         '''
-        Renders JavaScript file from template. Some defined files are not processed
-        through template engine as they were taken from other projects.
+        Renders JavaScript file from template. Some defined files are not
+        processed through template engine as they were taken from other
+        projects.
         '''
         helper.log.dbg('  %s' % filename)
         outpath = os.path.join(OUTPUT, 'js', filename)
@@ -714,7 +734,11 @@ class SFGenerator:
         template = self.loader.load('%s.tpl' % page)
         menu = self.get_menu(page)
         out = open(os.path.join(OUTPUT, self.get_outname(page)), 'w')
-        out.write(template.generate(menu = menu, **self.data).render(self.get_renderer(page)))
+        out.write(
+            template.generate(menu = menu, **self.data).render(
+                self.get_renderer(page)
+            )
+        )
         out.close()
 
     def render_security(self, issue):
@@ -724,8 +748,14 @@ class SFGenerator:
         helper.log.dbg('  %s' % issue)
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
-        out = open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w')
-        out.write(template.generate(menu = menu, issue = issue, **self.data).render('xhtml'))
+        out = open(
+            os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w'
+        )
+        out.write(
+            template.generate(menu = menu, issue = issue, **self.data).render(
+                'xhtml'
+            )
+        )
         out.close()
 
 
@@ -928,7 +958,12 @@ class SFGenerator:
         '''
         helper.log.dbg('Rendering pages:')
         templates = [os.path.basename(x) for x in glob.glob('templates/*.tpl')]
-        templates.extend([os.path.join('security', os.path.basename(x)) for x in glob.glob('templates/security/*.tpl')])
+        templates.extend(
+            [
+                os.path.join('security', os.path.basename(x))
+                for x in glob.glob('templates/security/*.tpl')
+            ]
+        )
         for template in templates:
             name = os.path.splitext(template)[0]
             if os.path.basename(name)[0] == '_':
