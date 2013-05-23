@@ -73,10 +73,10 @@ ul#links {
     font-size: larger;
 }
 
-div.planet#body {
+.planet-body {
     margin-right: 20em;
 }
-div.demo#body {
+.demo-body {
     margin-right: 20em;
 }
 
@@ -111,7 +111,7 @@ body {
     color: black;
 }
 
-div.banner {
+.banner {
     width: 80em;
     max-width: 100%;
     text-align: center;
@@ -120,14 +120,14 @@ div.banner {
     padding: 0.2em;
 }
 
-div.bannerimg {
+.bannerimg {
     float: right;
     clear: both;
     margin: 0;
 }
 
 /* For planet */
-div.sidebar {
+.sidebar {
     position: absolute;
     top: 4em;
     right: 0;
@@ -221,17 +221,6 @@ ul#footer {
     color: #c19e66;
 }
 
-ul.dllist {
-    padding: 0.5em;
-    margin: 0;
-}
-
-ul.dllist li {
-    margin: 0;
-    list-style: none;
-    display: inline;
-}
-
 #left {
     margin: 2em 1em 1em 1em;
     float: left;
@@ -246,26 +235,26 @@ ul.dllist li {
     padding: 0;
 }
 
-div.clearer {
+.clearer {
     clear: both;
     padding: 0;
     margin: 0;
 }
 
-div.themeimgborder {
+.themeimgborder {
     float: right;
     border: 1px solid #7584b3;
     margin: 0.2em;
     padding: 0.2em;
 }
 
-div.themeimg {
+.themeimg {
     overflow: hidden;
     height: 8em;
     max-width: 30em;
 }
 
-div.theme {
+.theme {
     float: left;
     width: 70em;
     max-width: none;
@@ -274,19 +263,11 @@ div.theme {
     padding: 0.2em;
 }
 
-a.themelink {
+.themelink {
     padding-left: 0.5em;
 }
 
-div.filedetails {
-    font-size: smaller;
-}
-
 p.date {
-    font-size: smaller;
-}
-
-p.comments {
     font-size: smaller;
 }
 
@@ -299,7 +280,7 @@ ul, dl {
     margin: 1em;
     max-width: 70em;
 }
-div.sidebar ul {
+.sidebar ul {
     margin: 0;
 }
 
@@ -317,52 +298,37 @@ p.signature {
     font-style: italic;
 }
 
-div.floatbox {
+.floatbox {
     float: left;
     width: 50em;
     margin: 0.2em;
     padding: 0.2em;
 }
 
-div.book img {
+.book img {
     margin: 1em;
     float: left;
     border: 1px solid black;
 }
 
-dl.cvslist dt {
-    font-family: monospace;
-}
-
-div.screenshot {
+.screenshot {
     float: left;
     border: 1px solid #7584b3;
     margin: 0.2em;
     padding: 0.2em;
 }
 
-div.screenshot img {
+.screenshot img {
     max-height: 150px;
     overflow: hidden;
 }
 
-div.bookbanner {
+.bookbanner {
     float: left;
     margin: 1em;
     width: 150px;
     height: 185px;
     overflow: hidden;
-}
-
-div.themeimgborder {
-    border: 1px solid #7584b3;
-    margin: 0.2em;
-    padding: 0.2em;
-}
-
-div.themeimg {
-    overflow: hidden;
-    height: 8em;
 }
 
 div.award p {
@@ -379,7 +345,7 @@ div.award {
     margin: 4em 1em 4em 1em;
 }
 
-a.awardlink {
+.awardlink {
     float: left;
     height: 100%;
     display: block;
@@ -387,7 +353,7 @@ a.awardlink {
     width: 300px;
 }
 
-img.head {
+.head {
     float: left;
     border: none;
     margin: 0.2em;
