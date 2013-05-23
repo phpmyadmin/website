@@ -51,7 +51,8 @@
 
   </content>
 
-  <ul id="footer">
+  <footer>
+  <ul>
     <li>Copyright &copy; 2003 - ${current_year} <span class="vcard"><a class="url org fn" href="${base_url}team.${file_ext}">phpMyAdmin devel team</a><a href="mailto:phpmyadmin-devel@lists.sourceforge.net" class="email"></a></span></li>
     <li><a href="${base_url}license.${file_ext}" rel="license">License</a></li>
     <li><a href="${base_url}donate.${file_ext}" rel="payment" title="Support phpMyAdmin by donating money!">Donate</a></li>
@@ -63,6 +64,7 @@
     <li class="logo"><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.phpmyadmin.net/"></a></li>
     <li class="logo"><a href="http://google.com/+phpmyadmin" style="text-decoration: none;"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" width="16" height="16" style="border: 0;" alt="Google+"/></a></li>
   </ul>
+  </footer>
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-2718724-14']);

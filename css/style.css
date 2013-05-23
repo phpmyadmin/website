@@ -19,7 +19,7 @@ nav {
     padding: 0;
     margin: 0;
 }
-nav div.menu {
+.menu {
     text-align: center;
     display: block;
     padding: 0;
@@ -48,29 +48,6 @@ nav a:hover {
 a.active {
     background-color: #666699;
     color: #fff;
-}
-
-ul#links {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-
-#links li {
-    list-style: none;
-    display: inline; 
-    font-weight: bold;
-    padding: 0.5em;
-}
-
-#links li a {
-    color: #ffffff;
-    font-size: larger;
-}
-
-#links li.active a {
-    color: #ff9900;
-    font-size: larger;
 }
 
 .planet-body {
@@ -201,14 +178,14 @@ div.tip {
     width: 15em;
 }
 
-ul#footer {
+footer ul {
     padding: 0;
     margin: 0;
     max-width: none;
     clear: both;
 }
 
-#footer li {
+footer li {
     font-size: smaller;
     list-style: none;
     float: left;
@@ -217,7 +194,7 @@ ul#footer {
     border: none;
 }
 
-#footer a {
+footer a {
     color: #c19e66;
 }
 
