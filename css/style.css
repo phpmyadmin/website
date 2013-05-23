@@ -164,9 +164,9 @@ div.sidebar {
     padding: 0;
     margin: 0 0 0 1em;
     border: 1px solid white;
-    border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    border-radius: 5px;
     background-color: #666699;
     color: white;
     font-weight: bolder;
@@ -192,9 +192,9 @@ div.sidebar {
 
 div.tip {
     border: 1px solid black;
-    border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    border-radius: 5px;
     background-color: #ffff87;
     font-size: smaller;
     padding: 0.2em;
