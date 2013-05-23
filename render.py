@@ -71,13 +71,20 @@ OUTPUT = './output'
 STATIC = './static'
 
 # Generic sourceforge.net part
-PROJECT_FILES_RSS = 'http://sourceforge.net/api/file/index/project-id/23067/rss'
-PROJECT_NEWS_RSS = 'https://sourceforge.net/p/phpmyadmin/news/feed'
-PROJECT_SUMMARY_RSS = 'http://sourceforge.net/export/rss2_projsummary.php?group_id=23067'
-PROJECT_VCS_RSS = 'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
-TRANSLATIONS_RSS = 'https://l10n.cihar.com/exports/rss/phpmyadmin/'
-PLANET_RSS = 'http://planet.phpmyadmin.net/rss20.xml'
-RSS_RU = 'http://php-myadmin.ru/rss/news.xml'
+PROJECT_FILES_RSS = \
+    'http://sourceforge.net/api/file/index/project-id/23067/rss'
+PROJECT_NEWS_RSS = \
+    'https://sourceforge.net/p/phpmyadmin/news/feed'
+PROJECT_SUMMARY_RSS = \
+    'http://sourceforge.net/export/rss2_projsummary.php?group_id=23067'
+PROJECT_VCS_RSS = \
+    'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
+TRANSLATIONS_RSS = \
+    'https://l10n.cihar.com/exports/rss/phpmyadmin/'
+PLANET_RSS = \
+    'http://planet.phpmyadmin.net/rss20.xml'
+RSS_RU = \
+    'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
 SNAPSHOT_MD5 = 'http://dl.cihar.com/phpMyAdmin/master/md5.sums'
@@ -331,8 +338,6 @@ class SFGenerator:
         '''
         Gets phpMyAdmin releases out of releases feed and fills releases,
         releases_beta and releases_older.
-
-
         '''
         helper.log.dbg('Processing file releases...')
         releases_dict = {}
@@ -761,11 +766,21 @@ class SFGenerator:
             self.data['issues'].append({
                 'name': name,
                 'link': '%ssecurity/%s' % (BASE_URL, self.get_outname(name)),
-                'fulllink': '%s%ssecurity/%s' % (SERVER, BASE_URL, self.get_outname(name)),
-                'summary': str(xmldata.select('def[@function="announcement_summary"]/text()')),
-                'date': helper.date.DateTime.parse(str(xmldata.select('def[@function="announcement_date"]/text()'))),
-                'cves': str(xmldata.select('def[@function="announcement_cve"]/text()')).split(' '),
-                'versions': str(xmldata.select('def[@function="announcement_affected"]/text()')),
+                'fulllink': '%s%ssecurity/%s' % (
+                    SERVER, BASE_URL, self.get_outname(name)
+                ),
+                'summary': str(xmldata.select(
+                    'def[@function="announcement_summary"]/text()'
+                )),
+                'date': helper.date.DateTime.parse(str(xmldata.select(
+                    'def[@function="announcement_date"]/text()'
+                ))),
+                'cves': str(xmldata.select(
+                    'def[@function="announcement_cve"]/text()'
+                )).split(' '),
+                'versions': str(xmldata.select(
+                    'def[@function="announcement_affected"]/text()'
+                )),
             })
         self.data['topissues'] = self.data['issues'][:TOP_ISSUES]
 
@@ -854,10 +869,14 @@ class SFGenerator:
                     continue
                 helper.log.dbg('- %s' % filename)
                 xmldata = XML(open(os.path.join(root, filename), 'r').read())
-                title = str(xmldata.select('def[@function="page_title"]/text()'))
+                title = str(xmldata.select(
+                    'def[@function="page_title"]/text()'
+                ))
                 title = title.strip()
                 if len(title) == 0:
-                    title = str(xmldata.select('def[@function="announcement_id"]/text()'))
+                    title = str(xmldata.select(
+                        'def[@function="announcement_id"]/text()'
+                    ))
                     title = title.strip()
                 if len(title) == 0:
                     title = 'Index'
