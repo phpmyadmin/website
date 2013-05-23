@@ -212,9 +212,9 @@ class SFGenerator:
         elif version[:2] == '2.':
             text = 'Version compatible with PHP 4+ and MySQL 3+.'
         elif version[:2] == '3.':
-            text = 'Version compatible with PHP 5.2 and MySQL 5.'
+            text = 'Frames version not requiring Javascript.'
         elif version[:2] == '4.':
-            text = 'Version compatible with PHP 5.2 and MySQL 5. Requires a Javascript-enabled browser.'
+            text = 'Current version compatible with PHP 5.2 and MySQL 5.'
         if version.find('beta1') != -1:
             text += ' First beta version.'
         elif version.find('beta2') != -1:
