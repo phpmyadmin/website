@@ -345,11 +345,11 @@ pre {
     padding: 0.5em;
 }
 
-table.graph td.bar {
+.graph td.bar {
     width: 400px;
 }
 
-table.graph td.bar div {
+.graph td.bar div {
     border-top: solid 2px #0077DD;
     background-color: #004080;
     border-bottom: solid 2px #002266;
@@ -360,32 +360,32 @@ table.graph td.bar div {
     height: 1em;
 }
 
-table.graph td.b80 div {
+.graph td.b80 div {
     border-top: solid 2px #dd7700;
     background-color: #804000;
     border-bottom: solid 2px #662200;
 }
 
-table.graph td.b50 div {
+.graph td.b50 div {
     border-top: solid 2px #ff7700;
     background-color: #d04000;
     border-bottom: solid 2px #882200;
 }
 
-table.sortable thead th {
+.sortable thead th {
     background: url(${base_url}images/icon-table-sort.png) no-repeat 2px 8px;
     padding: 4px 4px 4px 14px;
 }
 
-table.sortable thead th.forward_sort {
+.sortable thead th.forward_sort {
     background: url(${base_url}images/icon-table-sort-asc.png) no-repeat 2px 4px;
 }
 
-table.sortable thead th.reverse_sort {
+.sortable thead th.reverse_sort {
     background: url(${base_url}images/icon-table-sort-desc.png) no-repeat 2px 10px;
 }
 
-table.dllist td { 
+.dllist td { 
     padding: 2px;
 }
 
