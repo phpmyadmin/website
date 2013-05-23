@@ -198,16 +198,16 @@ footer a {
     color: #c19e66;
 }
 
-#left {
+.left-list {
     margin: 2em 1em 1em 1em;
     float: left;
     padding: 0pt 2em;
 }
-#left ul {
+.left-list ul {
     margin: 0;
     padding: 0;
 }
-#left li {
+.left-list li {
     margin: 0;
     padding: 0;
 }
