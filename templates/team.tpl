@@ -105,7 +105,7 @@ He lives in <span class="adr"><span class="country-name">Germany</span></span>.
 <h3 class="fn">Atul Pratap Singh</h3>
 <img class="head photo" src="${server}${base_url}images/heads/atul.jpg" alt="Photo of Atul Pratap Singh" />
 <p>
-Atul joined the team in August 2012, after he took part in Google Summer of Code 2012 for phpMyAdmin. He contributed by refactoring as part of the project and helped in phpMyAdmin's migration to 'jqplot'.
+Atul joined the team in August 2012, after he took part in Google Summer of Code 2012 for phpMyAdmin. He contributed by refactoring a part of the project and helped in phpMyAdmin's migration to 'jqplot'.
 </p>
 <p>
 He lives in <span class="adr"><span class="locality">New Delhi</span>, <span class="country-name">India</span></span>.
