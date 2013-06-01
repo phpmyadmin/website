@@ -31,14 +31,19 @@ project has won</p>
     ''',
         'photos': [
             (
+                '2013-community-awards-3.jpg',
+                'Accepting the award',
+                'Marc Delisle representing the team'
+            ),
+            (
                 '2013-community-awards-1.jpg',
                 'The trophy',
                 'The trophy'
             ),
             (
                 '2013-community-awards-2.jpg',
-                'The trophy detail',
-                'The trophy detail'
+                'The trophy\'s inscription',
+                'The trophy\'s inscription'
             ),
         ],
     },
