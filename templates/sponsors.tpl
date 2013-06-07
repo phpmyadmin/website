@@ -13,10 +13,6 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <h3>Platinum sponsor</h3>
 <a href="http://www.navicat.com/download/navicat-for-mysql"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a>
 
-<h3>Gold sponsors</h3>
-
-<a href="https://www.webyog.com/product/sqlyog?utm_source=phpmyadmin&amp;utm_medium=ad&amp;utm_campaign=sqlyog1"><img src="${server}${base_url}images/sqlyog1_250x130.png" alt="SQLyog" /></a>
-
 <h3>Silver sponsors</h3>
 <a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
 &nbsp;
