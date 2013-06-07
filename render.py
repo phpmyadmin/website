@@ -609,7 +609,10 @@ class SFGenerator:
             item['date'] = helper.date.DateTime.parse(
                 entry.updated.replace('+0000', 'GMT')
             )
-            item['text'] = entry.summary_detail['value']
+            if hasattr(entry, 'summary_detail'):
+                item['text'] = entry.summary_detail['value']
+            else:
+                item['text'] = ''
             item['title'] = entry.title
             self.data['blogs'].append(item)
 
