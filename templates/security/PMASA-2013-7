@@ -52,6 +52,7 @@ Thanks to Markus Wulftange of <a href="http://www.daimler-tss.de/">Daimler TSS</
 <py:def function="announcement_cwe">621 661</py:def>
 
 <py:def function="announcement_commits">
+012464268420e53a9cd81cbb4a43988d70393c36
 </py:def>
 
 <xi:include href="_page.tpl" />
