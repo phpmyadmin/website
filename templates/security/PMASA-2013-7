@@ -1,0 +1,58 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2013-7
+</py:def>
+
+<py:def function="announcement_date">
+2013-06-30
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2013-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+Global variable scope injection.
+</py:def>
+
+<py:def function="announcement_description">
+The import.php script was vulnerable to GLOBALS variable injection. Therefore, an attacker could manipulate any configuration parameter.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be serious.
+</py:def>
+
+<py:def function="announcement_mitigation">
+This vulnerability can be triggered only by someone who logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required form. 
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 4.0.x up to 4.0.4 are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.4.1 or newer, or apply the patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Markus Wulftange of <a href="http://www.daimler-tss.de/">Daimler TSS</a> for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2013-4729</py:def>
+
+<py:def function="announcement_cwe">621 661</py:def>
+
+<py:def function="announcement_commits">
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
