@@ -116,7 +116,7 @@ He lives in <span class="adr"><span class="locality">New Delhi</span>, <span cla
 <h3 class="fn">Chanaka Dharmarathna</h3>
 <img class="head photo" src="${server}${base_url}images/heads/chanaka.jpg" alt="Photo of Chanaka Dharmarathna" />
 <p>
-Chanaka joined the <span class="org">phpMyAdmin</span> team in September 2012, with the continueous contribution, after taking a part of the Google Summer of Code 2012 program. He contributed by refactoring a part of the code base and implementing support for displaying multiple query results.
+Chanaka joined the <span class="org">phpMyAdmin</span> team in September 2012, with the continuous contribution, after taking a part of the Google Summer of Code 2012 program. He contributed by refactoring a part of the code base and implementing support for displaying multiple query results.
 </p>
 <p>
 He currently lives in <span class="adr"><span class="locality">Polonnaruwa</span>, <span class="country-name">Sri Lanka</span></span>.
