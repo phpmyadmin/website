@@ -11,13 +11,13 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 </p>
 
 <h3>Platinum sponsor</h3>
-<a href="http://www.navicat.com/download/navicat-for-mysql"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a>
+<a href="http://www.navicat.com/download/navicat-for-mysql"><img src="${server}${base_url}images/navicat_250x250.png" alt="Navicat" /></a>
 
-<h3>Silver sponsors</h3>
+<h3>Gold sponsor</h3>
+<a href="http://www.navicat.com/shopping_cart.html?c=VUZKUFRVOWZjR2h3YlhsaFpHMXBiZz09"><img src="${server}${base_url}images/navicat_250x130.png" alt="Navicat" /></a>
+
+<h3>Silver sponsor</h3>
 <a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
-&nbsp;
-&nbsp;
-<a href="http://www.navicat.com/shopping_cart.html?c=VUZKUFRVOWZjR2h3YlhsaFpHMXBiZz09"><img src="${server}${base_url}images/navicat_200x68.png" alt="Navicat" /></a>
 
 <h3>Bronze sponsors</h3>
 <a href="http://www.aoemedia.de"><img src="${server}${base_url}images/aoemedia_200x68.jpg" alt="AOE media" /></a>
