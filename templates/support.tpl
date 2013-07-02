@@ -13,6 +13,14 @@ but we're ready to help on IRC or mailing list as well. Check below for more opt
 </p>
 </div>
 
+<div class="floatbox">
+<h2>Version 3.5.x being phased out</h2>
+
+<p>
+This older version is only supported for security fixes, until Jan 1, 2014.
+</p>
+</div>
+
 
 <div class="floatbox">
 <h2>Forum / IRC</h2>
