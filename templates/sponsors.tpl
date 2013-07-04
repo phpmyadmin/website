@@ -20,7 +20,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.sqlmaestro.com/products/mysql/ "><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a>
+<a href="http://www.sqlmaestro.com/products/mysql/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a>
 
 
 <h3>Bronze sponsors</h3>

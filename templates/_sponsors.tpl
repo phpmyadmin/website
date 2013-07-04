@@ -15,7 +15,7 @@
 
 <div><a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a></div>
 
-<div><a href="http://www.sqlmaestro.com/products/mysql/ "><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a></div>
+<div><a href="http://www.sqlmaestro.com/products/mysql/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a></div>
 
 
 <h3><a href="${base_url}sponsors.${file_ext}">Sponsorship</a></h3>
