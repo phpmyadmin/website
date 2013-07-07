@@ -54,6 +54,7 @@ Thanks to Michał Bentkowski for reporting this issue.
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
+56e9ede5223219cef2187ced385924ef2e0ae21d
 </py:def>
 
 <py:def function="announcement_commits_3_5">
