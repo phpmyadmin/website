@@ -59,6 +59,7 @@ development in 2001.
 <li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.3">3.3.0</a> (March 7, 2010): Added new import and export modules, changes tracking, synchronization and support for replication configuration.</li>
 <li>3.4.0 (May 11, 2011): AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
 <li>3.5.0 (April 7, 2012): Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle support.</li>
+<li>4.0.0 (May 3, 2013): Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</li>
 </ul>
 
 
