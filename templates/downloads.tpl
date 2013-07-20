@@ -15,7 +15,7 @@
     it is usually the quickest way to an updated installation. Please contact your OS
     vendor for more information. Some additional information is also available <a
     href="#distributions">further down on this page</a>. If you just want to
-    try phpMyAdmin in virtual machine, you might want to check <a
+    try phpMyAdmin in virtual machine, you might want to check the <a
     href="#appliances">available software appliances which provide
     phpMyAdmin</a>.
     </p>
@@ -138,7 +138,7 @@
     <h2><a id="appliances"></a>Appliances</h2>
     <p>
         <a href="http://en.wikipedia.org/wiki/Software_appliance">Software appliances</a>
-        are more and more popular way of distributing software. They are
+        are becoming a popular way of distributing software. They are
         distributed as an image, which can be directly used by system (be it
         ISO image for bootable CD or virtual disks for some type of
         virtualization).
