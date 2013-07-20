@@ -66,11 +66,11 @@ development in 2001.
 <h2>Name</h2>
 
 <p>
-phpMyAdmin name is obviously mixture of PHP as a language it uses, MySQL as a
-database it manages and administration as the activity it handles. Even thought
+The phpMyAdmin name is obviously a mixture of PHP as the language it uses, MySQL as the
+database it manages and administration as the activity it handles. Even though
 the name seems to be quite simple, many people mix it up and they refer to
 phpMyAdmin under different names, such as myphpadmin, phpadmin, phpmysqladmin
-(these are three most frequent Google searches going to this website besides
+(these are the three most frequent Google searches going to this website aside from the
 correctly spelled variant).
 </p>
 
@@ -78,7 +78,7 @@ correctly spelled variant).
 
 <p>
 phpMyAdmin project currently has <a
-href="${links.developers}">${info.developers} developers</a>. Over the life of
+href="${links.developers}">${info.developers} developers</a>. Over the life of the
 project on SourceForge.net, users have wrote ${info.forumposts} posts into <a
 href="${links.forums}">${info.forums} forums</a> and discussed various topics
 in <a href="${links.mailinglists}">${info.mailinglists} mailing lists</a>.
