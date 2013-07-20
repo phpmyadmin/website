@@ -10,7 +10,7 @@
 </div>
 
 <div>
-    <a href="http://demo.phpmyadmin.net/trunk-config/" title="Go to demo server">Try demo</a>
+    <a href="http://demo.phpmyadmin.net/master-config/" title="Go to demo server">Try demo</a>
 </div>
 
 <div>
