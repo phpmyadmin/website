@@ -20,8 +20,8 @@ To gain practical experience in open-source development, you are welcome to cont
 <h3>Helping users</h3>
 
 <p>
-Interested in helping other users to use phpMyAdmin? You can join any of
-<a href="${base_url}support.${file_ext}">support</a> we provide and help users 
+Interested in helping other users to use phpMyAdmin? You can join any of the
+<a href="${base_url}support.${file_ext}">support</a> options we provide and help users
 there - IRC, mailing lists and web forums, where you can share your experience.
 </p>
 
@@ -31,15 +31,15 @@ there - IRC, mailing lists and web forums, where you can share your experience.
 phpMyAdmin is being translated to many languages, but maybe your language is not 
 really up to date? You can easily contribute on our
 <a href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>.
-You can find out more on <a href="${base_url}translate.${file_ext}">translation
+You can find out more on the <a href="${base_url}translate.${file_ext}">translation
 page</a>.
 </p>
 
 <h3>Testing and quality assurance</h3>
 
 <p>
-One of important things is to avoid problems in user interface. You can really help
-us here to provide feedback on releases and especially by testing pre-releases 
+One important thing for us is to avoid problems in the user interface. You can really help
+us here by providing feedback on releases and especially by testing the pre-releases
 (alpha/beta/rc) we provide for testing. Just download them and <a href="https://sourceforge.net/p/phpmyadmin/bugs/">report any issues</a>
 you face with them.
 </p>
@@ -48,7 +48,7 @@ you face with them.
 
 <p>
 Do you 
-feel our documentation misses some points? We welcome additions, just 
+feel our documentation misses some points? We welcome additions; just
 let us know how you think the documentation can be improved. 
 The best way is to <a href="http://wiki.phpmyadmin.net/pma/Pull_request">submit a pull request</a>
 against our <a href="https://github.com/phpmyadmin/">GitHub repository</a>.
@@ -67,27 +67,27 @@ video tutorials giving users hints how to do specific tasks inside phpMyAdmin.
 <p>
 Coding contributions are very welcome, the easiest way is to fork our code on github 
 and submit a pull request. We really welcome bug fixes or new features. 
-You can find out more on <a href="${base_url}devel.${file_ext}">developers
+You can find out more on the <a href="${base_url}devel.${file_ext}">developers
 page</a>.
 </p>
 
 <h3>Bug/features screening/squashing</h3>
 
 <p>
-Our trackers, especially
-<a href="http://sourceforge.net/p/phpmyadmin/feature-requests/">feature tracker</a>
-contain dozens of entries which might already implemented or don't make much sense after years.
+Our trackers, especially the
+<a href="http://sourceforge.net/p/phpmyadmin/feature-requests/">feature tracker</a>,
+contain dozens of entries which might already be implemented or don't make much sense after years.
 You can go through reported issues, verify if they still apply to latest version and 
 check whether they would be still useful. Also checking incoming reports for all required
-information or whether they were already not reported is welcome help.
+information or whether they were already reported is welcome help.
 </p>
 
 <h3>Fund our project</h3>
 
 <p>
-We need money to allow our presence on conferences, buy new hardware or provide various 
+We need money to allow our presence at conferences, buy new hardware or provide various
 useful services to our users and developers. By <a href="${base_url}donate.${file_ext}">donating</a>
-you help us in this area and possibly increase our presence on conferences.
+you help us in this area and possibly increase our presence at conferences.
 </p>
 
 </div>

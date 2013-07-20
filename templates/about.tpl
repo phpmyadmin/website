@@ -59,17 +59,18 @@ development in 2001.
 <li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.3">3.3.0</a> (March 7, 2010): Added new import and export modules, changes tracking, synchronization and support for replication configuration.</li>
 <li>3.4.0 (May 11, 2011): AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
 <li>3.5.0 (April 7, 2012): Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle support.</li>
+<li>4.0.0 (May 3, 2013): Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</li>
 </ul>
 
 
 <h2>Name</h2>
 
 <p>
-phpMyAdmin name is obviously mixture of PHP as a language it uses, MySQL as a
-database it manages and administration as the activity it handles. Even thought
+The phpMyAdmin name is obviously a mixture of PHP as the language it uses, MySQL as the
+database it manages and administration as the activity it handles. Even though
 the name seems to be quite simple, many people mix it up and they refer to
 phpMyAdmin under different names, such as myphpadmin, phpadmin, phpmysqladmin
-(these are three most frequent Google searches going to this website besides
+(these are the three most frequent Google searches going to this website aside from the
 correctly spelled variant).
 </p>
 
@@ -77,7 +78,7 @@ correctly spelled variant).
 
 <p>
 phpMyAdmin project currently has <a
-href="${links.developers}">${info.developers} developers</a>. Over the life of
+href="${links.developers}">${info.developers} developers</a>. Over the life of the
 project on SourceForge.net, users have wrote ${info.forumposts} posts into <a
 href="${links.forums}">${info.forums} forums</a> and discussed various topics
 in <a href="${links.mailinglists}">${info.mailinglists} mailing lists</a>.
