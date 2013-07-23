@@ -1,0 +1,57 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2013-15
+</py:def>
+
+<py:def function="announcement_date">
+2013-07-xx
+</py:def>
+
+<py:def function="announcement_summary">
+SQL injection vulnerabilities, producing a privilege escalation (control user).
+</py:def>
+
+<py:def function="announcement_description">
+Due to a missing validation of parameters passed to <code>schema_export.php</code> and <code>pmd_pdf.php</code>, it was possible to inject SQL statements that would run with the privileges of the control user. This gives read and write access to the tables of the configuration storage database, and if the control user has the necessary privileges, read access to some tables of the <code>mysql</code> database.
+</py:def>
+
+
+<py:def function="announcement_severity">
+We consider these vulnerabilities to be serious. 
+</py:def>
+
+<py:def function="announcement_mitigation">
+These vulnerabilities can be triggered only by someone who logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required form. Moreover, a control user must have been created and configured as part of the phpMyAdmin configuration storage installation.
+</py:def>
+
+
+<py:def function="announcement_affected">
+For 3.5.x: versions before 3.5.8.2 are affected.
+For 4.0.x: versions before 4.0.4.2 are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or apply the patches below. 
+</py:def>
+
+<py:def function="announcement_commits">
+974d0dedeea7c79ac4533e614d9c0c3abd97e8f9
+8ef025ef3d05c164654fee7001517626cf604bb1
+</py:def>
+
+<py:def function="announcement_commits_3_5">
+4cbeef599cda87c6d2b1d7ef5542fe1ff316f706
+20f71e767bcd037178cb5455543071323bc7ffd9
+</py:def>
+
+<py:def function="announcement_references">
+We wish to thank Noam Rathaus for informing us in a responsible manner.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+
+<py:def function="announcement_cwe">661 89 269</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
