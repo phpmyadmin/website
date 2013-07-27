@@ -8,13 +8,13 @@
 <h2>Themes</h2>
 <p>
 phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
-with all phpMyAdmin versions; you should select below which version are you
+with all phpMyAdmin versions; you should select below which version you are
 using.
 </p>
 <p>
 Please note that themes contain PHP code and you should download them only
 from trusted servers. All themes available on this page have been checked by
-one of phpMyAdmin team members.
+phpMyAdmin team members.
 </p>
 <p>
 To install a theme, unzip your downloaded theme into the directory /themes/ of
