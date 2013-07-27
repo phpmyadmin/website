@@ -15,13 +15,13 @@ PMASA-2013-11
 -->
 
 <py:def function="announcement_summary">
-With a man in the middle (MITM) attack, an XSS could be introduced.
+If a crafted version.json would be presented, an XSS could be introduced.
 </py:def>
 
 <py:def function="announcement_description">
-Using a Man in the Middle (MITM) attack, the version.json file,
+Due to not properly validating the version.json file,
 which is fetched from the phpMyAdmin.net website,
-could be altered, possibly introducing an XSS attack, due to unvalidated data.
+could lead to an XSS attack, if a crafted version.json file would be presented.
 </py:def>
 
 <py:def function="announcement_severity">
