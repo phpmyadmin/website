@@ -20,7 +20,7 @@ With a man in the middle (MITM) attack, an XSS could be introduced.
 
 <py:def function="announcement_description">
 Using a Man in the Middle (MITM) attack, the version.json file,
-which is fetched from the phpMyAdmin website,
+which is fetched from the phpMyAdmin.net website,
 could be altered, possibly introducing an XSS attack, due to unvalidated data.
 </py:def>
 
@@ -33,7 +33,7 @@ This vulnerability can only be exploited with a combination of complicated techn
 </py:def>
 
 <py:def function="announcement_affected">
-Versios 3.5.x is affected.
+Versions 3.5.x is affected.
 </py:def>
 
 <!--! Optional section
