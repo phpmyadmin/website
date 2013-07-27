@@ -33,7 +33,7 @@ This vulnerability can only be exploited with a combination of complicated techn
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 3.5.x is affected.
+Versions 3.5.x and 4.0.x are affected.
 </py:def>
 
 <!--! Optional section
@@ -42,7 +42,7 @@ Versions 3.5.x is affected.
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 3.5.8.2 or newer or apply the patches
+Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer or apply the patches
 listed below.
 </py:def>
 
@@ -55,6 +55,10 @@ Thanks to Emanuel Bronshtein for reporting these issues.
 <py:def function="announcement_cwe">300 79</py:def>
 
 <py:def function="announcement_commits">
+b9c814ed6d59733c54965e01e90ffd5d3348fd2c
+</py:def>
+
+<py:def function="announcement_commits_3_5">
 333d82d3271b2a1b445134bb6bbb15ae8c9ba8a6
 </py:def>
 
