@@ -1,0 +1,64 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2013-13
+</py:def>
+
+<py:def function="announcement_date">
+2013-07-xx
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2013-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+XSS vulnerability when a text to link transformation is used.
+</py:def>
+
+<py:def function="announcement_description">
+When the TextLinkTransformationPlugin is used to create a link to an object
+when displaying the contents of a table,
+the object name is not properly escaped, which could lead to an XSS,
+if the object name has a crafted value.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+The stored XSS vulnerabilities can be triggered only by someone who logged in to phpMyAdmin,
+as the usual token protection prevents non-logged-in users from accessing the required forms.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 4.0.x are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.4.2 or newer or apply the patches
+listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Dieter Adriaenssens for reporting this issue.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+
+<py:def function="announcement_cwe">661 79 80</py:def>
+
+<py:def function="announcement_commits">
+e0c8704f725c56c87b644676ded94dba695de39f
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
