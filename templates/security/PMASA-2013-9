@@ -5,7 +5,7 @@ PMASA-2013-9
 </py:def>
 
 <py:def function="announcement_date">
-2013-07-xx
+2013-07-28
 </py:def>
 
 <!--! Optional section, use only if something has been changed
@@ -76,7 +76,9 @@ listed below.
 Thanks to Emanuel Bronshtein for reporting these issues.
 </py:def>
 
+<!--! update later 
 <py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+-->
 
 <py:def function="announcement_cwe">661 79 80</py:def>
 
