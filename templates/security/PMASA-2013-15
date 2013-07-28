@@ -27,8 +27,7 @@ These vulnerabilities can be triggered only by someone who logged in to phpMyAdm
 
 
 <py:def function="announcement_affected">
-For 3.5.x: versions before 3.5.8.2 are affected.
-For 4.0.x: versions before 4.0.4.2 are affected.
+Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.
 </py:def>
 
 <py:def function="announcement_solution">

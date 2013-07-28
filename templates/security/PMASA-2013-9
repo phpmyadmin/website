@@ -59,7 +59,7 @@ The setup vulnerabilities can only be triggered when a crafted value is entered 
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 3.5.x and 4.0.x are affected.
+Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.
 </py:def>
 
 <!--! Optional section
