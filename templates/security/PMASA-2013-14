@@ -8,11 +8,9 @@ PMASA-2013-14
 2013-07-28
 </py:def>
 
-<!--! Optional section, use only if something has been changed
 <py:def function="announcement_updated">
-2013-??-??
+2013-07-29
 </py:def>
--->
 
 <py:def function="announcement_summary">
 Self-XSS due to unescaped HTML output in schema export. 
@@ -44,7 +42,7 @@ Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer, or apply the patch listed bel
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Noam Rathaus for reporting this issue.
+Thanks to 0x721427D8 working with Beyond Security's <a href="http://www.beyondsecurity.com/ssd.html">SecuriTeam Secure Disclosure</a> program for reporting these vulnerabilities.
 </py:def>
 
 <!--! update later 
