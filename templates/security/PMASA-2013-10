@@ -1,0 +1,66 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2013-10
+</py:def>
+
+<py:def function="announcement_date">
+2013-07-31
+</py:def>
+
+<!--! Optional section, use only if something has been changed
+<py:def function="announcement_updated">
+2013-??-??
+</py:def>
+-->
+
+<py:def function="announcement_summary">
+ClickJacking protection can be bypassed.
+</py:def>
+
+<py:def function="announcement_description">
+phpMyAdmin has a number of mechanisms to avoid a clickjacking attack, however
+these mechanisms either work only in modern browser versions, or can be
+bypassed.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability serious.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 3.5.x and 4.0.x (prior to 4.0.5) are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.5 or newer or apply the patches listed below. We 
+have no solution for 3.5.x, due to the proposed solution requiring JavaScript.
+We don't want to introduce a dependancy to JavaScript in the 3.5.x family.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Emanuel Bronshtein for reporting this issue. For more details, 
+please refer to <a href="https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet">this report</a>.
+
+</py:def>
+
+<!--! later 
+<py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+-->
+
+<py:def function="announcement_cwe">661 693</py:def>
+
+<py:def function="announcement_commits">
+240b8332db53dedc27baeec5306dabad3bdece3b
+24d0eb55203b029f250c77d63f2900ffbe099e8b
+66fe475d4f51b1761719cb0cab360748800373f7
+da4042fb6c4365dc8187765c3bf525043687c66f
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
