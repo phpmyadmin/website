@@ -60,7 +60,7 @@ Thanks to Michał Bentkowski for reporting this issue.
 </py:def>
 
 <py:def function="announcement_commits_3_5">
-51f343b91908d1b1bacaebe6db87c3d7aa522581
+01d35b3558e47fba947719857bd71f6fd9e5dce8
 </py:def>
 
 <xi:include href="_page.tpl" />
