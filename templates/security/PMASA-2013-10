@@ -40,7 +40,7 @@ Versions 3.5.x and 4.0.x (prior to 4.0.5) are affected.
 <py:def function="announcement_solution">
 Upgrade to phpMyAdmin 4.0.5 or newer or apply the patches listed below. We 
 have no solution for 3.5.x, due to the proposed solution requiring JavaScript.
-We don't want to introduce a dependancy to JavaScript in the 3.5.x family.
+We don't want to introduce a dependency to JavaScript in the 3.5.x family.
 </py:def>
 
 <py:def function="announcement_references">
