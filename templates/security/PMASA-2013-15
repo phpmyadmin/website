@@ -5,7 +5,11 @@ PMASA-2013-15
 </py:def>
 
 <py:def function="announcement_date">
-2013-07-xx
+2013-07-28
+</py:def>
+
+<py:def function="announcement_updated">
+2013-07-30
 </py:def>
 
 <py:def function="announcement_summary">
@@ -27,8 +31,7 @@ These vulnerabilities can be triggered only by someone who logged in to phpMyAdm
 
 
 <py:def function="announcement_affected">
-For 3.5.x: versions before 3.5.8.2 are affected.
-For 4.0.x: versions before 4.0.4.2 are affected.
+Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.
 </py:def>
 
 <py:def function="announcement_solution">
@@ -46,10 +49,12 @@ Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or apply the patches below.
 </py:def>
 
 <py:def function="announcement_references">
-We wish to thank Noam Rathaus for informing us in a responsible manner.
+Thanks to 0x721427D8 working with Beyond Security's <a href="http://www.beyondsecurity.com/ssd.html">SecuriTeam Secure Disclosure</a> program for reporting these vulnerabilities.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+<!--! update later
+<py:def function="announcement_cve">CVE-2013-5003</py:def>
+-->
 
 <py:def function="announcement_cwe">661 89 269</py:def>
 

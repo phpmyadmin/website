@@ -43,6 +43,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
  <li>The number of sponsors for levels higher than Bronze is limited</li>
  <li>We reserve the right to change sponsorship levels in the future</li>
  <li>The logo needs to be a static image, PNG is preferred</li>
+ <li>The link needs to point to the sponsor's homepage</li>
 </ul>
 
 <p>Sponsorship levels in overview:</p>

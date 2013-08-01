@@ -5,14 +5,12 @@ PMASA-2013-9
 </py:def>
 
 <py:def function="announcement_date">
-2013-07-xx
+2013-07-28
 </py:def>
 
-<!--! Optional section, use only if something has been changed
 <py:def function="announcement_updated">
-2013-??-??
+2013-07-30
 </py:def>
--->
 
 <py:def function="announcement_summary">
 5 XSS vulnerabilities in setup, chart display, process list, and logo link.
@@ -59,7 +57,7 @@ The setup vulnerabilities can only be triggered when a crafted value is entered 
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 3.5.x and 4.0.x are affected.
+Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.
 </py:def>
 
 <!--! Optional section
@@ -76,7 +74,7 @@ listed below.
 Thanks to Emanuel Bronshtein for reporting these issues.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+<py:def function="announcement_cve">CVE-2013-4996 CVE-2013-4997</py:def>
 
 <py:def function="announcement_cwe">661 79 80</py:def>
 

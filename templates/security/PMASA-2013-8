@@ -5,14 +5,12 @@ PMASA-2013-8
 </py:def>
 
 <py:def function="announcement_date">
-2013-07-xx
+2013-07-28
 </py:def>
 
-<!--! Optional section, use only if something has been changed
 <py:def function="announcement_updated">
-2013-??-??
+2013-07-30
 </py:def>
--->
 
 <py:def function="announcement_summary">
 XSS due to unescaped HTML Output when executing a SQL query.
@@ -32,7 +30,7 @@ as the usual token protection prevents non-logged-in users from accessing the re
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 3.5.x and 4.0.x are affected.
+Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.
 </py:def>
 
 <!--! Optional section
@@ -49,7 +47,7 @@ listed below.
 Thanks to Michał Bentkowski for reporting this issue.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2013-xxxx</py:def>
+<py:def function="announcement_cve">CVE-2013-4995</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
@@ -58,7 +56,7 @@ Thanks to Michał Bentkowski for reporting this issue.
 </py:def>
 
 <py:def function="announcement_commits_3_5">
-51f343b91908d1b1bacaebe6db87c3d7aa522581
+01d35b3558e47fba947719857bd71f6fd9e5dce8
 </py:def>
 
 <xi:include href="_page.tpl" />

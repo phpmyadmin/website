@@ -143,28 +143,12 @@
         ISO image for bootable CD or virtual disks for some type of
         virtualization).
     </p>
-    <h3>Turnkey</h3>
     <p>
-        <a href="http://www.turnkeylinux.org/appliances/lamp">LAMP
-        Appliance</a> from TurnKey Linux includes all you need to run LAMP
-        (Linux, Apache, MySQL, PHP/Python/Perl) together with phpMyAdmin to
-        manage MySQL.
+        There are quite many appliances which provide phpMyAdmin as a
+        management tool for MySQL. It usually comes as part of LAMP stack
+        but there might be other offerings as well. Please check your 
+        favorite appliance provider, ISV or app store for it.
     </p>
-    <h3>BitNami</h3>
-    <p>
-        <a href="http://bitnami.org/stack/lampstack">BitNami LAMPStack</a>
-        includes ready-to-run versions of Apache, MySQL, PHP and phpMyAdmin
-        and required dependencies. Also available as all-in-one installer for
-        <a href="http://bitnami.org/stack/wampstack">Windows</a> and
-        <a href="http://bitnami.org/stack/mampstack">Mac OS X</a> 
-        (also available from <a href="https://itunes.apple.com/app/mamp-stack/id571310406?l=en">Mac App Store</a>).
-        Apart from the native installers there also available 
-        <a href="http://bitnami.org/stack/lamp#virtualMachine">virtual
-        appliances</a> and Cloud <a href="http://bitnami.org/stack/lamp#cloud">
-        Images</a>, the latest for both Windows
-        Azure and Amazon cloud platforms.
-    </p>
-
 </div>
 
 <xi:include href="_page.tpl" />

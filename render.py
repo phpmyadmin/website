@@ -212,7 +212,10 @@ class SFGenerator:
         elif version[:2] == '2.':
             text = 'Version compatible with PHP 4+ and MySQL 3+.'
         elif version[:2] == '3.':
-            text = 'Frames version not requiring Javascript. Supported for security fixes only, until Jan 1, 2014.'
+            text = (
+                'Frames version not requiring Javascript. ' +
+                'Supported for security fixes only, until Jan 1, 2014.'
+            )
         elif version[:2] == '4.':
             text = 'Current version compatible with PHP 5.2 and MySQL 5.'
         if version.find('beta1') != -1:
@@ -395,7 +398,9 @@ class SFGenerator:
         for beta in outbetaversions.keys():
             try:
                 stable_rel = releases[outversions[beta]]['version']
-                beta_rel = releases[outbetaversions[beta]]['version'].split('-')[0]
+                beta_rel = releases[outbetaversions[beta]]['version'].split(
+                    '-'
+                )[0]
                 if stable_rel > beta_rel or stable_rel == beta_rel:
                     helper.log.dbg(
                         'Old beta: %s' %
