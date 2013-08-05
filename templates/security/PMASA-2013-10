@@ -8,11 +8,9 @@ PMASA-2013-10
 2013-08-04
 </py:def>
 
-<!--! Optional section, use only if something has been changed
 <py:def function="announcement_updated">
-2013-??-??
+2013-08-05
 </py:def>
--->
 
 <py:def function="announcement_summary">
 ClickJacking protection can be bypassed.
@@ -49,9 +47,7 @@ please refer to <a href="https://www.owasp.org/index.php/Clickjacking_Defense_Ch
 
 </py:def>
 
-<!--! later 
 <py:def function="announcement_cve">CVE-2013-5029</py:def>
--->
 
 <py:def function="announcement_cwe">661 693</py:def>
 
