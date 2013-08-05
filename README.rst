@@ -116,6 +116,21 @@ for any possible failures:
 
 http://www.phpmyadmin.net/home_page/render.log
 
+Twitter integration
+-------------------
+
+The script can post new security issues and news to Twitter. You need to have
+tweepy module for that and configure Twitter credentials in `~/.pmaweb`::
+
+    [twitter]
+    consumer_key = <consumer key>
+    consumer_secret = <consumer secret>
+    token_key = <access token key>
+    token_secret = <access token secret>
+
+Information about obtaining these OAuth tokens is available at 
+http://pythonhosted.org/tweepy/html/auth_tutorial.html.
+
 License
 -------
 
