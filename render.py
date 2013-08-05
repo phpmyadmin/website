@@ -599,8 +599,10 @@ class SFGenerator:
             return
         issue = self.data['issues'][0]
         storage = helper.cache.Cache()
-        tweet = '%s | %s | #phpmyadmin #pmasa #security' % (
-            issue['name'], SECURITY_URL
+        tweet = '%s: %s - %s #phpMyAdmin #security' % (
+            issue['name'],
+            issue['summary'],
+            issue['fulllink'],
         )
         try:
             last = storage.force_get('last-security-tweet')
