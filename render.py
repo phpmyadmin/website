@@ -571,7 +571,12 @@ class SFGenerator:
         news = self.data['news'][0]
 
         storage = helper.cache.Cache()
-        tweet = '%s | http://www.phpmyadmin.net/ | #phpmyadmin' % news['title']
+        title = news['title']
+        if 'phpMyAdmin' in news['title']:
+            title = title.replace('phpMyAdmin', '#phpMyAdmin')
+        else:
+            title = '%s #phpMyAdmin' % title
+        tweet = '%s, see http://www.phpmyadmin.net/' % title
         try:
             last = storage.force_get('last-tweet')
         except helper.cache.NoCache:
