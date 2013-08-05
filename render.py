@@ -601,7 +601,7 @@ class SFGenerator:
         storage = helper.cache.Cache()
         tweet = '%s: %s - %s #phpMyAdmin #security' % (
             issue['name'],
-            issue['summary'],
+            issue['summary'].strip(),
             issue['fulllink'],
         )
         try:
