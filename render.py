@@ -25,17 +25,22 @@ import glob
 import shutil
 import datetime
 import json
+import ConfigParser
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
 from optparse import OptionParser
 from dateutil.parser import parse
+try:
+    import tweepy
+    TWITTER = True
+except ImportError:
+    TWITTER = False
 
 import helper.cache
 import helper.log
 import helper.date
 import helper.stringfmt
-import external.twitter
 
 import data.awards
 import data.themes
@@ -111,10 +116,6 @@ SUMMARY_TRACKER = re.compile(
     'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
 )
 
-# Indenti.ca integration
-IDENTICA_USER = 'phpmyadmin'
-IDENTICA_PASSWORD = None
-
 
 def fmt_bytes(number):
     '''
@@ -177,6 +178,24 @@ class SFGenerator:
         self.feeds = helper.cache.FeedCache()
         self.xmls = helper.cache.XMLCache()
         self.urls = helper.cache.URLCache()
+
+        # Load Twitter settings
+        self.twitter = None
+        if TWITTER:
+            config = ConfigParser.RawConfigParser()
+            config.read(os.path.expanduser('~/.pmaweb'))
+            try:
+                consumer_key = config.get('twitter', 'consumer_key')
+                consumer_secret = config.get('twitter', 'consumer_secret')
+                token_key = config.get('twitter', 'token_key')
+                token_secret = config.get('twitter', 'token_secret')
+
+                auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+                auth.set_access_token(token_key, token_secret)
+
+                self.twitter = tweepy.API(auth)
+            except (ConfigParser.NoOptionError, ConfigParser.NoSectionError):
+                pass
 
     def get_outname(self, page):
         '''
@@ -545,12 +564,12 @@ class SFGenerator:
 
     def tweet(self):
         '''
-        Finds out whether we should send update to identi.ca and twitter and
-        do so.
+        Finds out whether we should send update to twitter and do so.
         '''
-        news = self.data['news'][0]
-        if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
+        if self.twitter is None:
             return
+        news = self.data['news'][0]
+
         storage = helper.cache.Cache()
         tweet = '%s | http://www.phpmyadmin.net/ | #phpmyadmin' % news['title']
         try:
@@ -562,24 +581,18 @@ class SFGenerator:
                 'No need to tweet, the last news is still the same...'
             )
             return
-        helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
-        api = external.twitter.Api(
-            username=IDENTICA_USER,
-            password=IDENTICA_PASSWORD,
-            twitterserver='identi.ca/api'
-        )
-        api.SetSource('phpMyAdmin website')
-        api.PostUpdate(tweet)
+        helper.log.dbg('Tweeting: %s' % tweet)
+        self.twitter.update_status(tweet)
         storage.set('last-tweet', tweet)
 
     def tweet_security(self):
         '''
-        Finds out whether we should send update to identi.ca and twitter about
+        Finds out whether we should send update to twitter about
         security issue and do so.
         '''
-        issue = self.data['issues'][0]
-        if IDENTICA_USER is None or IDENTICA_PASSWORD is None:
+        if self.twitter is None:
             return
+        issue = self.data['issues'][0]
         storage = helper.cache.Cache()
         tweet = '%s | %s | #phpmyadmin #pmasa #security' % (
             issue['name'], SECURITY_URL
@@ -593,14 +606,8 @@ class SFGenerator:
                 'No need to tweet, the last news is still the same...'
             )
             return
-        helper.log.dbg('Tweeting to identi.ca: %s' % tweet)
-        api = external.twitter.Api(
-            username=IDENTICA_USER,
-            password=IDENTICA_PASSWORD,
-            twitterserver='identi.ca/api'
-        )
-        api.SetSource('phpMyAdmin website')
-        api.PostUpdate(tweet)
+        helper.log.dbg('Tweeting: %s' % tweet)
+        self.twitter.update_status(tweet)
         storage.set('last-security-tweet', tweet)
 
     def process_planet(self, feed):
@@ -1072,18 +1079,6 @@ if __name__ == '__main__':
         dest='log',
         help='Log filename, default is none.'
     )
-    parser.add_option(
-        '-p', '--identica-password',
-        action='store', type='string',
-        dest='identica_password',
-        help='Pasword to identi.ca, default is not to post there.'
-    )
-    parser.add_option(
-        '-u', '--identica-user',
-        action='store', type='string',
-        dest='identica_user',
-        help='Username to identi.ca, defaull is %s.' % IDENTICA_USER
-    )
 
     parser.set_defaults(
         verbose=helper.log.VERBOSE,
@@ -1092,8 +1087,6 @@ if __name__ == '__main__':
         base_url=BASE_URL,
         log=None,
         extension=EXTENSION,
-        identica_user=IDENTICA_USER,
-        identica_password=IDENTICA_PASSWORD
     )
 
     (options, args) = parser.parse_args()
@@ -1103,8 +1096,6 @@ if __name__ == '__main__':
     SERVER = options.server
     BASE_URL = options.base_url
     EXTENSION = options.extension
-    IDENTICA_USER = options.identica_user
-    IDENTICA_PASSWORD = options.identica_password
     if options.log is not None:
         helper.log.LOG = open(options.log, 'w')
 
