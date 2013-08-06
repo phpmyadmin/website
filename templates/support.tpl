@@ -61,9 +61,9 @@ Trackers on SourceForge.net are used to track bug reports, requests for new feat
 
 <p>
 If you want to receive commercial support for phpMyAdmin, either as help with
-installation or implementing custom features, do not hesitate to contact us on
+installation or implementing custom features, do not hesitate to contact the 
 <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">development mailing list</a>. 
-Please note that these services are not in any connection with phpMyAdmin team and we can not guarantee accurate information or quality of service for them. 
+Please note that these services are not in any way connected with the phpMyAdmin team and we can not guarantee accurate information or quality of service for them. 
 </p>
 
 </div>
