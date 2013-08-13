@@ -143,6 +143,10 @@ about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
 <a href="http://fosdem.org/2012">FOSDEM 2012</a>. The team talked about
 future directions for the project.
 </p>
+<p>The forth meeting took place in Vaumarcus, Switzerland during
+<a href="http://debconf13.debconf.org/">Debconf13</a>. The team presented
+a tutorial showing basic and more advanced features of phpMyAdmin.
+</p>
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4187.JPG"
