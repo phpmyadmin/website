@@ -7,9 +7,11 @@
 <div class="floatbox">
 <h2>Getting support</h2>
 
+
+
 <p>
-The easiest way to get support is to use the <a href="https://sourceforge.net/p/phpmyadmin/discussion/Help/">help forum</a>
-but we're ready to help on IRC or mailing list as well. Check below for more options.
+The easiest way to get support is to <a href="http://stackoverflow.com/tags/phpmyadmin/info">ask on Stack Overflow</a>
+but we're ready to help on forums, IRC or mailing list as well. Check below for more options.
 </p>
 </div>
 
