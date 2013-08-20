@@ -10,8 +10,12 @@
 
 
 <p>
-The easiest way to get support is to <a href="http://stackoverflow.com/tags/phpmyadmin/info">ask on Stack Overflow</a>
-but we're ready to help on forums, IRC or mailing list as well. Check below for more options.
+In an effort to consolidate the support options into just one, the
+phpMyAdmin team announces that, effective September 1st, 2013, support is moving to <a href="http://stackoverflow.com/tags/phpmyadmin/info">stackoverflow</a>.
+All prior support mechanisms (the phpmyadmin-users mailing list, the help forums, IRC channel, support-request tracker) will be deprecated.
+<br />
+<br />
+The way of reporting (security) bugs and adding feature requests will be unaffected.
 </p>
 </div>
 
