@@ -123,6 +123,20 @@ He currently lives in <span class="adr"><span class="locality">Polonnaruwa</span
 </p>
 </div>
 
+<div class="floatbox vcard" id="isaac">
+<h3 class="fn">Isaac Bennetch</h3>
+<img class="head photo" src="${server}${base_url}images/heads/isaac.jpg" alt="Photo of Isaac Bennetch" />
+<p>
+Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
+support and improving the documentation. He officially joined the development team in April, 2013. 
+Isaac enjoys being able to give back to the Open Source community and is thrilled to be a part of
+the <span class="org">phpMyAdmin</span> community.
+</p>
+<p>
+He lives in the<span class="adr"><span class="country">United States</span></span>.
+</p>
+</div>
+
 <div class="clearer"></div>
 
 <h2>Team meetings</h2>
