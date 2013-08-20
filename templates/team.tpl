@@ -24,6 +24,7 @@ You can follow the developers blogs at
 <div class="floatbox vcard" id="marc">
 
 <h3 class="fn">Marc Delisle</h3>
+<h4>Release coordinator</h4>
 
 <img class="head photo" src="${server}${base_url}images/heads/marc.jpg" alt="Photo of Marc Delisle" />
 <p>
@@ -37,6 +38,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Sherbr
 
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
+<h4>Infrastructure coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
@@ -52,6 +54,7 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 
 <div class="floatbox vcard" id="dieter">
 <h3 class="fn">Dieter Adriaenssens</h3>
+<h4>Security coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/dieter.jpg" alt="Photo of Dieter Adriaenssens" />
 <p>
 Dieter joined the development team in March 2010, and so far has
@@ -65,6 +68,7 @@ He currently lives in <span class="adr"><span class="locality">Gent</span>, <spa
 </div>
 <div class="floatbox vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
+<h4>Bugs fixing coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/madhura.jpg" alt="Photo of Madhura Jayaratne" />
 <p>
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
@@ -76,6 +80,7 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 
 <div class="floatbox vcard" id="rouslan">
 <h3 class="fn">Rouslan Placella</h3>
+<h4>Juniors coaching (backup coordinator)</h4>
 
 <img class="head photo" src="${server}${base_url}images/heads/rouslan.jpg" alt="Photo of Rouslan Placella" />
 <p>
@@ -114,6 +119,7 @@ He lives in <span class="adr"><span class="locality">New Delhi</span>, <span cla
 
 <div class="floatbox vcard" id="chanaka">
 <h3 class="fn">Chanaka Dharmarathna</h3>
+<h4>New features coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/chanaka.jpg" alt="Photo of Chanaka Dharmarathna" />
 <p>
 Chanaka joined the <span class="org">phpMyAdmin</span> team in September 2012, with the continuous contribution, after taking a part of the Google Summer of Code 2012 program. He contributed by refactoring a part of the code base and implementing support for displaying multiple query results.
@@ -125,6 +131,7 @@ He currently lives in <span class="adr"><span class="locality">Polonnaruwa</span
 
 <div class="floatbox vcard" id="isaac">
 <h3 class="fn">Isaac Bennetch</h3>
+<h4>Support and documentation coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/isaac.jpg" alt="Photo of Isaac Bennetch" />
 <p>
 Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
