@@ -133,7 +133,7 @@ Isaac enjoys being able to give back to the Open Source community and is thrille
 the <span class="org">phpMyAdmin</span> community.
 </p>
 <p>
-He lives in the<span class="adr"><span class="country">United States</span></span>.
+He lives in the <span class="adr"><span class="country">United States</span></span>.
 </p>
 </div>
 
