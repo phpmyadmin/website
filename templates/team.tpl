@@ -68,7 +68,7 @@ He currently lives in <span class="adr"><span class="locality">Gent</span>, <spa
 </div>
 <div class="floatbox vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
-<h4>Bugs fixing coordinator</h4>
+<h4>Bug fixing coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/madhura.jpg" alt="Photo of Madhura Jayaratne" />
 <p>
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
