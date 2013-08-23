@@ -166,7 +166,8 @@ future directions for the project.
 </p>
 <p>The fourth meeting took place in Vaumarcus, Switzerland during
 <a href="http://debconf13.debconf.org/">Debconf13</a>. The team did
-a tutorial showing basic and more advanced features of phpMyAdmin.
+a <a href="http://www.irill.org/videos/debconf13/phpMyAdmin_tutorial.webm">tutorial</a>
+showing basic and more advanced features of phpMyAdmin.
 </p>
 
 <div class="screenshot">
