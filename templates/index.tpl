@@ -53,12 +53,6 @@ and RTL languages.
 </p>
 
 <p>
-Since version 3.0.0, phpMyAdmin joined the GoPHP5 initiative and dropped
-compatibility code for older PHP and MySQL versions; version 3 and later requires
-at least PHP 5.2 and MySQL 5.
-</p>
-
-<p>
 phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
 Among others, it was chosen as the best PHP application in various awards and
 has won every year the SourceForge.net Community Choice Awards as &quot;Best Tool or Utility for SysAdmins&quot;.
