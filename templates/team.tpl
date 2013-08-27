@@ -10,8 +10,7 @@
 The phpMyAdmin development team has been organized on <a
 href="http://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> since
 its start in 2001. They are responsible for the development of phpMyAdmin and represent
-it at various conferences. You can find more about the project and its
-history on this <a href="${base_url}about.${file_ext}">separate page</a>.
+it at various conferences. You can find more about the <a href="${base_url}about.${file_ext}">project and its history</a>.
 </p>
 
 <p>
