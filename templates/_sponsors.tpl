@@ -13,7 +13,7 @@
 
 <h3>Silver sponsors</h3>
 
-<div><a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a></div>
+<div><a href="http://www.scriptcase.net/"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a></div>
 
 <div><a href="http://www.sqlmaestro.com/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a></div>
 

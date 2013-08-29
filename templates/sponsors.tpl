@@ -17,20 +17,20 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <a href="http://www.navicat.com/"><img src="${server}${base_url}images/navicat_250x130.jpg" alt="Navicat" /></a>
 
 <h3>Silver sponsors</h3>
-<a href="http://www.scriptcase.net"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
+<a href="http://www.scriptcase.net/"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
 &nbsp;
 &nbsp;
 <a href="http://www.sqlmaestro.com/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a>
 
 
 <h3>Bronze sponsors</h3>
-<a href="http://www.aoemedia.de"><img src="${server}${base_url}images/aoemedia_200x68.jpg" alt="AOE media" /></a>
+<a href="http://www.aoemedia.de/"><img src="${server}${base_url}images/aoemedia_200x68.jpg" alt="AOE media" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.cyberday-gmbh.de"><img src="${server}${base_url}images/cyberday_200x40.png" alt="AOE media" /></a>
+<a href="http://www.cyberday-gmbh.de/"><img src="${server}${base_url}images/cyberday_200x40.png" alt="AOE media" /></a>
 &nbsp;
 &nbsp;
-<a href="http://vds64.com"><img src="${server}${base_url}images/vds64_200x68.png" alt="VDS64" /></a>
+<a href="http://vds64.com/"><img src="${server}${base_url}images/vds64_200x68.png" alt="VDS64" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
