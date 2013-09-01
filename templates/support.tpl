@@ -7,12 +7,10 @@
 <div class="floatbox">
 <h2>Getting support</h2>
 
-
-
 <p>
 In an effort to consolidate the support options into just one, the
-phpMyAdmin team announces that, effective September 1st, 2013, support is moving to <a href="http://stackoverflow.com/tags/phpmyadmin/info">stackoverflow</a>.
-All prior support mechanisms (the phpmyadmin-users mailing list, the help forums, IRC channel, support-request tracker) will be deprecated.
+phpMyAdmin team announces that, effective September 1st, 2013, support has moved to <a href="http://stackoverflow.com/tags/phpmyadmin/info">stackoverflow</a>.
+All prior support mechanisms (the phpmyadmin-users mailing list, the help forums, IRC channel, support-request tracker) have been deprecated.
 <br />
 <br />
 The way of reporting (security) bugs and adding feature requests will be unaffected.
@@ -25,17 +23,6 @@ The way of reporting (security) bugs and adding feature requests will be unaffec
 <p>
 This older version is only supported for security fixes, until Jan 1, 2014.
 </p>
-</div>
-
-
-<div class="floatbox">
-<h2>Forum / IRC</h2>
-<ul>
-   <li><strong><a href="https://sourceforge.net/p/phpmyadmin/discussion/Help/">Help Forum</a></strong></li>
-   <li><a href="https://sourceforge.net/p/phpmyadmin/discussion/Aide/">Forum d'aide (en français)</a></li>
-   <li><a href="https://sourceforge.net/p/phpmyadmin/discussion/Hilfe/">Anwenderforum (auf Deutsch)</a></li>
-   <li>IRC: #phpmyadmin on <a href="http://freenode.net/">irc.freenode.net</a></li>
-</ul>
 </div>
 
 <div class="floatbox">
@@ -54,7 +41,6 @@ Trackers on SourceForge.net are used to track bug reports, requests for new feat
 <h2>Mailing Lists</h2>
 <ul>
     <li>For news/announcements: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-news">phpmyadmin-news@lists.sourceforge.net</a></li>
-    <li>For users: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-users">phpmyadmin-users@lists.sourceforge.net</a></li>
     <li>For developers: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-devel">phpmyadmin-devel@lists.sourceforge.net</a></li>
     <li>For translators: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-translators">phpmyadmin-translators@lists.sourceforge.net</a></li>
     <li>Git commit notifications: <a href="https://lists.sourceforge.net/mailman/listinfo/phpmyadmin-git">phpmyadmin-git@lists.sourceforge.net</a></li>
