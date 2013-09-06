@@ -113,12 +113,11 @@ Thank you for your support!
 <p>
 The phpMyAdmin project is grateful to our technology partners for their services.</p>
 
-<p>
 <a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a>
-</p>
-<p>
+&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a>
-</p>
+&nbsp;&nbsp;&nbsp;
+<a href="http://browserstack.com"><img src="${server}${base_url}images/BrowserStackLogo.png" alt="BrowserStack" /></a>
 
 </div>
 
