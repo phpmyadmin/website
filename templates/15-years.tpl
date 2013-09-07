@@ -48,7 +48,7 @@ By the numbers<sup><a href="#ohloh">1</a></sup>:
 <li>Members of development team: 9</li>
 <li><a href="http://www.ohloh.net/p/phpmyadmin/estimated_cost">Estimated effort</a>: 136 person-years</li>
 <li><a href="http://www.ohloh.net/p/phpmyadmin/estimated_cost">Estimated cost:</a>: $7,485,316</li>
-<li>Number of translations: 69</li>
+<li>Number of translations: 72</li>
 </ul>
 </p>
 
