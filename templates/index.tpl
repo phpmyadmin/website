@@ -11,6 +11,9 @@
 
 <xi:include href="_sponsors.tpl" />
 
+<h2>phpMyAdmin turns 15!</h2>
+Read our <a href="${base_url}15-years.${file_ext}">celebration page</a>.
+
 <h2>About</h2>
 
 <p>
