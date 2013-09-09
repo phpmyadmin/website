@@ -36,7 +36,7 @@ or by:
 <ul>
 <li>Tweeting <code>@phpmya</code> and/or using the <code>#pma15</code> hashtag</li>
 <li>Writing on our <a href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486">Facebook wall</a></li>
-<li>Writing us <a href="https://plus.google.com/+phpmyadmin">on Google+</a></li>
+<li>Writing us on <a href="https://plus.google.com/+phpmyadmin">Google+</a></li>
 </ul>
 </p>
 
