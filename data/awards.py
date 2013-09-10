@@ -22,7 +22,8 @@
 AWARDS = [
     {
         'image': 'percona-live-logo.png',
-        'link': 'http://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
+        'link': 'http://openlife.cc/'
+        'blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
         'text': '''
 <p>At the <a href="%(link)s">2013 MySQL Community Awards</a> ceremony, our
@@ -61,7 +62,8 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'infoworld-bossie-2008.jpg',
-        'link': 'http://www.infoworld.com/slideshow/2008/08/171-best_of_open_so-5.html',
+        'link': 'http://www.infoworld.com/'
+        'slideshow/2008/08/171-best_of_open_so-5.html',
         'title': 'InfoWorld 2008 Best of Open Source Awards',
         'text': '''
 <p>Our project has won this <a href="%(link)s">Infoworld 2008 award:</a></p>
@@ -72,7 +74,8 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'sf_cca_2008_winner.png',
-        'link': 'http://sourceforge.net/community/index.php/landing-pages/cca08',
+        'link': 'http://sourceforge.net/'
+        'community/index.php/landing-pages/cca08',
         'title': '2008 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="%(link)s">2008 SourceForge.net Community Choice Awards</a>,
@@ -91,7 +94,8 @@ phpMyAdmin was present in three categories:</p>
     },
     {
         'image': 'sf_cca_2007_sysadmin.gif',
-        'link': 'http://sourceforge.net/community/index.php/landing-pages/cca07',
+        'link': 'http://sourceforge.net/'
+        'community/index.php/landing-pages/cca07',
         'title': '2007 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="%(link)s">2007 SourceForge.net Community Choice Awards</a>,
@@ -122,7 +126,8 @@ in the category</p>
     },
     {
         'image': '2005-os2world.png',
-        'link': 'http://www.os2world.com/cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
+        'link': 'http://www.os2world.com/'
+        'cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
         'title': '2005 OS2World.com Awards',
         'text': '''
 <p>For the <a href="%(link)s">5th Annual OS/2 World Awards</a>,
@@ -145,7 +150,8 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     },
     {
         'image': '2006-phpmag-ger.png',
-        'link': 'http://www.phpmagazin.de/itr/service/psecom,id,304,nodeid,64.html',
+        'link': 'http://www.phpmagazin.de/'
+        'itr/service/psecom,id,304,nodeid,64.html',
         'title': 'PHP Magazin Reader\'s Choice Award 2006',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2006 in the category</p>
