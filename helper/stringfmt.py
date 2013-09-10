@@ -36,7 +36,7 @@ def fmt_urls(text):
     )
     # Guess something what looks like an URL
     text = re.sub(
-        '(([a-z0-9A-Z_-]+\.)+[a-z0-9A-Z_-]+(/[^ ]*[^,.-;: )>])?)',
+        r'(([a-z0-9A-Z_-]+\.)+[a-z0-9A-Z_-]+(/[^ ]*[^,.-;: )>])?)',
         'http://\\1',
         text
     )
