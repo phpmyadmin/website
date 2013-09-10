@@ -52,9 +52,9 @@ import data.sitemap
 
 # Filtering
 FILES_REGEXP = re.compile(r'.*all-languages\.(zip).*')
-BRANCH_REGEXP = re.compile('^([0-9]+\.[0-9]+)\.')
-MAJOR_BRANCH_REGEXP = re.compile('^([0-9]+)\.')
-TESTING_REGEXP = re.compile('.*(beta|alpha|rc).*')
+BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
+MAJOR_BRANCH_REGEXP = re.compile(r'^([0-9]+)\.')
+TESTING_REGEXP = re.compile(r'.*(beta|alpha|rc).*')
 
 # List of extensions allowed in downloads
 DOWNLOAD_EXTS = ('.html', '.txt', '.7z', '.gz', '.bz2', '.xz', '.zip')
@@ -101,19 +101,19 @@ SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
 
 # RSS parsing
 SUMMARY_DEVS = re.compile(
-    'Developers on project: ([0-9]*)'
+    r'Developers on project: ([0-9]*)'
 )
 SUMMARY_ACTIVITY = re.compile(
-    'Activity percentile \(last week\): ([0-9.]*%)'
+    r'Activity percentile \(last week\): ([0-9.]*%)'
 )
 SUMMARY_LISTS = re.compile(
-    'Mailing lists \(public\): ([0-9]*)'
+    r'Mailing lists \(public\): ([0-9]*)'
 )
 SUMMARY_FORUMS = re.compile(
-    'Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages'
+    r'Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages'
 )
 SUMMARY_TRACKER = re.compile(
-    'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
+    r'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
 )
 
 
