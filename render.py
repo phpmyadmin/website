@@ -233,7 +233,7 @@ class SFGenerator:
         elif version[:2] == '3.':
             text = (
                 'Frames version not requiring Javascript. ' +
-		'Requires PHP 5.2 and MySQL 5. ' +
+                'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
             )
         elif version[:2] == '4.':
