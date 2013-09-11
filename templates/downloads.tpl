@@ -129,12 +129,6 @@
         official phpMyAdmin documentation.
     </p>
 
-    <h3>Amahi Linux Home Server</h3>
-    <p>
-        phpMyAdmin is available as a one-click install on the 
-        <a href="https://www.amahi.org/apps/phpmyadmin">Amahi Home Server</a>. 
-    </p>
-
     <h2><a id="appliances"></a>Appliances</h2>
     <p>
         <a href="http://en.wikipedia.org/wiki/Software_appliance">Software appliances</a>
