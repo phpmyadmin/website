@@ -4,11 +4,14 @@
 
 <div py:match="content" id="body">
 <h2>Donations</h2>
+
 <p>
 As an free software project, phpMyAdmin has almost no revenues itself. On the
 other side, we have some expenses. Currently most of project funds are used
 for travel costs for team members to allow them attend various conferences.
 </p>
+
+<h3>PayPal</h3>
 
 <div class="subscribe">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -25,6 +28,30 @@ PayPal is one of most used online payments methods, it also accepts all major
 credit cards.
 </p>
 
+<h3>Check or Wire</h3>
+
+<p>
+We can also accept donations drawn in USD from banks in the USA (donations from
+banks outside of the US or not in USD should be handled by wire). Make checks
+payable to "Software Freedom Conservancy, Inc." and place "Directed donation:
+phpMyAdmin" in the memo field. Checks should be mailed to:
+</p>
+
+<p>
+  Software Freedom Conservancy, Inc.<br />
+  137 Montague ST STE 380<br />
+  BROOKLYN, NY 11201 USA<br />
+</p>
+  
+<p>
+Conservancy can accept wire donations, but the instructions vary depending on
+the country of origin. Please contact 
+<a href="mailto:accounting@sfconservancy.org">accounting@sfconservancy.org</a> 
+for instructions. 
+</p>
+
+<h3>Flattr</h3>
+
 <p>
 Alternatively you can appreciate our work using 
 <a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>. Flattr is a
@@ -34,7 +61,7 @@ microdonation system allowing users to easily appreciate others.
 Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
 </p>
 
-<h2>Sponsors</h2>
+<h2>Sponsorship</h2>
 
 <p>If you want to sponsor phpMyAdmin in a recurring way, please check our 
 <a href="${base_url}sponsors.${file_ext}">sponsorship page</a>.</p>
