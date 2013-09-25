@@ -97,7 +97,7 @@
         management tool for MySQL. It usually comes as part of LAMP stack
         but there might be other offerings as well. Please check your 
         favorite appliance provider, ISV or app store for it. Some of the
-        appliaces are <a href="https://wiki.phpmyadmin.net/pma/Third_party_installers">
+        appliances are <a href="https://wiki.phpmyadmin.net/pma/Third_party_installers">
         listed on our wiki</a>.
     </p>
 </div>
