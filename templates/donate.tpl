@@ -9,12 +9,20 @@ As an free software project, phpMyAdmin has almost no revenues itself. On the
 other side, we have some expenses. Currently most of project funds are used
 for travel costs for team members to allow them attend various conferences.
 </p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="UUZWPJLQ9D4E8" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
 <p>
-We invite you to <a href="https://sourceforge.net/donate/index.php?group_id=23067" rel="payment">contribute money</a> 
-to our project (or just send money using PayPal to donate@phpmyadmin.net).
+We invite you to contribute moneyto our project using PayPal button above.
 PayPal is one of most used online payments methods, it also accepts all major
 credit cards.
 </p>
+
 <p>
 Alternatively you can appreciate our work using 
 <a href="https://flattr.com/thing/56976/phpMyAdmin">Flattr</a>. Flattr is a
