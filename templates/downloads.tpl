@@ -14,7 +14,7 @@
     may not adhere to the official phpMyAdmin documentation. That being said,
     it is usually the quickest way to an updated installation. Please contact your OS
     vendor for more information. Some additional information is also available <a
-    href="#distributions">further down on this page</a>. If you just want to
+    href="http://docs.phpmyadmin.net/en/latest/setup.html">in our documentation</a>. If you just want to
     try phpMyAdmin in virtual machine, you might want to check the <a
     href="#appliances">available software appliances which provide
     phpMyAdmin</a>.
@@ -75,58 +75,13 @@
     from our Git repository (check <a href="${base_url}devel.${file_ext}">developer information</a> for instructions).
     </p>
 
-    <h2><a id="distributions"></a>Installing phpMyAdmin in Linux distributions</h2>
-    <h3>Debian</h3>
-    <p>
-        Debian's package repositories include a phpMyAdmin package, but be
-        aware that the configuration file is maintained in
-        <code>/etc/phpmyadmin</code> and may differ in some ways from the
-        official phpMyAdmin documentation. The package maintainer often visits
-        the official IRC channel (#phpmyadmin on irc.freenode.net).
-    </p>
-    <h3>OpenSUSE</h3>
-    <p>
-        OpenSUSE already comes with phpMyAdmin package, just install packages from
-        the <a
-        href="http://software.opensuse.org/package/phpMyAdmin">openSUSE Build
-        Service</a>.
-    </p>
-    <h3>Ubuntu</h3>
-    <p>
-        Ubuntu ships phpMyAdmin package, however if you want to use recent
-        version, you can use packages from <a
-        href="https://launchpad.net/~nijel/+archive/phpmyadmin">PPA for Michal
-        Čihař</a>.
-    </p>
-    <h3>Gentoo</h3>
-    <p>
-        Gentoo ships the phpMyAdmin package, both in a near stock configuration
-        as well as in a <code>webapp-config</code> configuration.  <code>emerge
-        dev-db/phpmyadmin</code> to install.
-    </p>
-    <h3>Mandriva</h3>
-    <p>
-        Mandriva ships the phpMyAdmin package in their <code>contrib</code> branch
-        and can be installed via the usual Control Center. 
-    </p>
+    <h2><a id="distributions"></a>Installing phpMyAdmin</h2>
 
-    <h3>Fedora</h3>
     <p>
-        Fedora ships the phpMyAdmin package, but be aware that the
-        configuration file is maintained in <code>/etc/phpMyAdmin/</code> and
-        may differ in some ways from the official phpMyAdmin documentation.
-    </p>
-
-    <h3>Red Hat Enterprise Linux</h3>
-    <p>
-        Red Hat Enterprise Linux itself and thus derivates like CentOS don't
-        ship phpMyAdmin, but the Fedora-driven repository <a
-        href="http://fedoraproject.org/wiki/EPEL">Extra Packages for Enterprise
-        Linux</a> (EPEL) is doing so, if it's <a
-        href="http://fedoraproject.org/wiki/EPEL/FAQ#howtouse">enabled</a>.
-        But be aware that the configuration file is maintained in
-        <code>/etc/phpMyAdmin/</code> and may differ in some ways from the
-        official phpMyAdmin documentation.
+        The full process of installing phpMyAdmin is described in our <a
+        href="http://docs.phpmyadmin.net/en/latest/setup.html">manual</a>.  You
+        can find there also information how to install phpMyAdmin on your Linux
+        distribution.
     </p>
 
     <h2><a id="appliances"></a>Appliances</h2>
@@ -141,7 +96,9 @@
         There are quite many appliances which provide phpMyAdmin as a
         management tool for MySQL. It usually comes as part of LAMP stack
         but there might be other offerings as well. Please check your 
-        favorite appliance provider, ISV or app store for it.
+        favorite appliance provider, ISV or app store for it. Some of the
+        appliances are <a href="https://en.wikipedia.org/wiki/List_of_AMP_packages">
+        listed on Wikipedia</a>.
     </p>
 </div>
 
