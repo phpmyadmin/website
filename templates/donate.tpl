@@ -20,7 +20,7 @@ for travel costs for team members to allow them attend various conferences.
 </div>
 
 <p>
-We invite you to contribute moneyto our project using PayPal button above.
+We invite you to contribute money to our project using PayPal button above.
 PayPal is one of most used online payments methods, it also accepts all major
 credit cards.
 </p>
