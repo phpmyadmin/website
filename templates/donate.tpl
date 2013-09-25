@@ -6,6 +6,12 @@
 <h2>Donations</h2>
 
 <p>
+phpMyAdmin is a member project of Software Freedom Conservancy. Conservancy is
+a not-for-profit organization that provides financial and administrative
+assistance to open source projects. 
+</p>
+
+<p>
 As an free software project, phpMyAdmin has almost no revenues itself. On the
 other side, we have some expenses. Currently most of project funds are used
 for travel costs for team members to allow them attend various conferences.
