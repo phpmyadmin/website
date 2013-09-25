@@ -79,25 +79,27 @@ Thank you for your support!
 
 <div class="subscribe">
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
-<input type="hidden" name="hosted_button_id" value="QXKQ4SM8MDTL4" />
-<p><input type="hidden" name="on0" value="Sponsorship level" />Sponsorship options</p>
+<input type="hidden" name="hosted_button_id" value="N9E2LCFJ3RJLQ" />
+
+<p><input type="hidden" name="on0" value="phpMyAdmin Sponsorship Options" />phpMyAdmin Sponsorship Options</p>
+
 <p>
 <select name="os0">
-	<option value="Bronze">Bronze: $100 USD - monthly</option>
-	<option value="Silver">Silver: $250 USD - monthly</option>
-	<option value="Gold">Gold: $500 USD - monthly</option>
-	<option value="Platinum">Platinum: $1,000 USD - monthly</option>
-	<option value="Bronze (year)">Bronze (year): $1,000 USD - yearly</option>
-	<option value="Silver (year)">Silver (year): $2,500 USD - yearly</option>
-	<option value="Gold (year)">Gold (year): $5,000 USD - yearly</option>
-	<option value="Platinum (year)">Platinum (year): $10,000 USD - yearly</option>
+	<option value="Platinum">Platinum : $10,000.00 USD - yearly</option>
+	<option value="Gold">Gold : $5,000.00 USD - yearly</option>
+	<option value="Silver">Silver : $2,500.00 USD - yearly</option>
+	<option value="Bronze">Bronze : $1,000.00 USD - yearly</option>
+	<option value="Platinum (monthly installments)">Platinum (monthly installments) : $1,000.00 USD - monthly</option>
+	<option value="Gold (monthly installments)">Gold (monthly installments) : $500.00 USD - monthly</option>
+	<option value="Silver (monthly installments)">Silver (monthly installments) : $250.00 USD - monthly</option>
+	<option value="Bronze (monthly installments)">Bronze (monthly installments) : $100.00 USD - monthly</option>
 </select>
 </p>
 <p>
 <input type="hidden" name="currency_code" value="USD" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 </p>
 </form>
