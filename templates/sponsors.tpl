@@ -59,6 +59,8 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <h3>New sponsors</h3>
 
+<xi:include href="_conservancy.tpl" />
+
 <p>
 If you use phpMyAdmin or offer it to your customers, please consider 
 sponsoring the project with a monthly donation. The money will be used to 
