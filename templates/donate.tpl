@@ -6,7 +6,8 @@
 <h2>Donations</h2>
 
 <p>
-phpMyAdmin is a member project of Software Freedom Conservancy. Conservancy is
+phpMyAdmin is a member project of <a href="https://sfconservancy.org/">Software 
+Freedom Conservancy</a>. Conservancy is
 a not-for-profit organization that provides financial and administrative
 assistance to open source projects. 
 </p>
