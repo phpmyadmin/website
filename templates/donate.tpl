@@ -8,9 +8,9 @@
 <xi:include href="_conservancy.tpl" />
 
 <p>
-As an free software project, phpMyAdmin has almost no revenues itself. On the
-other side, we have some expenses. Currently most of project funds are used
-for travel costs for team members to allow them attend various conferences.
+As a free software project, phpMyAdmin has almost no revenues itself. On the
+other side, we have some expenses. Currently most of the project's funds are 
+used for travel costs to allow team members to attend various conferences.
 </p>
 
 <h3>PayPal</h3>
@@ -25,9 +25,9 @@ for travel costs for team members to allow them attend various conferences.
 </div>
 
 <p>
-We invite you to contribute money to our project using PayPal button above.
-PayPal is one of most used online payments methods, it also accepts all major
-credit cards.
+We invite you to contribute money to our project using the above PayPal button.
+PayPal is one of the most used online payments methods, it also accepts all 
+major credit cards.
 </p>
 
 <h3>Check or Wire</h3>
