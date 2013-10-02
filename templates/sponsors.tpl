@@ -41,6 +41,10 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
  <li>We reserve the right to change sponsorship levels in the future</li>
  <li>The logo needs to be a static image, PNG is preferred</li>
  <li>The link needs to point to the sponsor's homepage</li>
+ <li>The logo will be placed on our website on the first day of the month
+ following the subscription date. In case of cancellation, the logo will
+ stay in place until the end of the month following the end of the
+ subscription period.</li>
 </ul>
 
 <p>Sponsorship levels in overview:</p>
