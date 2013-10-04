@@ -17,6 +17,8 @@
 
 <div><a href="http://www.sqlmaestro.com/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a></div>
 
+<div><a href="http://www.codghosts.net/"><img src="${server}${base_url}images/codghostsnet_250x70.png" alt="Call of Duty: Ghosts" /></a></div>
+
 
 <h3><a href="${base_url}sponsors.${file_ext}">Sponsorship</a></h3>
 
