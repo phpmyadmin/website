@@ -8,9 +8,10 @@
 <h2>Getting support</h2>
 
 <p>
-In an effort to consolidate the support options into just one, the
-phpMyAdmin team announces that, effective September 1st, 2013, support has moved to <a href="http://stackoverflow.com/tags/phpmyadmin/info">stackoverflow</a>.
-All prior support mechanisms (the phpmyadmin-users mailing list, the help forums, IRC channel, support-request tracker) have been deprecated.
+Effective September 1st, 2013, support for questions directly related to phpMyAdmin has moved to <a href="http://stackoverflow.com/tags/phpmyadmin/info">stackoverflow</a>. All prior support mechanisms have been phased out.
+<br />
+<br />
+Questions about server issues (web server configuration, "404 - Not Found" error, etc), should be asked on <a href="http://serverfault.com">serverfault.com</a>.
 <br />
 <br />
 The way of reporting (security) bugs and adding feature requests will be unaffected.
@@ -18,7 +19,7 @@ The way of reporting (security) bugs and adding feature requests will be unaffec
 </div>
 
 <div class="floatbox">
-<h2>Version 3.5.x being phased out</h2>
+<h3>Version 3.5.x being phased out</h3>
 
 <p>
 This older version is only supported for security fixes, until Jan 1, 2014.
