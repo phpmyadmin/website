@@ -236,6 +236,8 @@ class SFGenerator:
                 'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
             )
+        elif version[:3] == '4.1':
+            text = 'Development version compatible with PHP 5.3 and MySQL 5.'
         elif version[:2] == '4.':
             text = 'Current version compatible with PHP 5.2 and MySQL 5.'
         if version.find('beta1') != -1:
