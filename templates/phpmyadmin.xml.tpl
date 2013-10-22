@@ -8,7 +8,7 @@
         <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
 	</MASTER_PAD_VERSION_INFO>
 	<Company_Info>
-		<Company_Name>phpMyAdmin devel team</Company_Name>
+		<Company_Name>phpMyAdmin contributors</Company_Name>
 		<Address_1></Address_1>
 		<Address_2 />
 		<City_Town>Praha</City_Town>
@@ -18,10 +18,10 @@
 		<Company_WebSite_URL>http://www.phpmyadmin.net/</Company_WebSite_URL>
 		<Contact_Info>
 			<Author_First_Name>phpMyAdmin</Author_First_Name>
-			<Author_Last_Name>devel team</Author_Last_Name>
+			<Author_Last_Name>contributors</Author_Last_Name>
 			<Author_Email>phpmyadmin-devel@lists.sourceforge.net</Author_Email>
 			<Contact_First_Name>phpMyAdmin</Contact_First_Name>
-			<Contact_Last_Name>devel team</Contact_Last_Name>
+			<Contact_Last_Name>contributors</Contact_Last_Name>
 			<Contact_Email>phpmyadmin-devel@lists.sourceforge.net</Contact_Email>
 		</Contact_Info>
 		<Support_Info>

@@ -7,7 +7,7 @@
 <link>http://www.phpmyadmin.net/security/</link>
 <description>phpMyAdmin security announcements</description>
 <dc:language>en-us</dc:language>
-<dc:creator>phpMyAdmin devel team</dc:creator>
+<dc:creator>phpMyAdmin contributors</dc:creator>
 <dc:date>${generated.w3cdtf()}</dc:date>
 <admin:generatorAgent rdf:resource="${server}" />
 
@@ -16,7 +16,7 @@
 <link>${issue.fulllink}</link>
 <title>${issue.name}</title>
 <dc:date>${issue.date.w3cdtf()}</dc:date>
-<dc:creator>phpMyAdmin devel team</dc:creator>
+<dc:creator>phpMyAdmin contributors</dc:creator>
 <dc:subject>phpMyAdmin security</dc:subject>
 <description>
 <!--! Just a way to make py:for work inside CDATA -->
