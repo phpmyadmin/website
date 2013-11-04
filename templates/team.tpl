@@ -215,8 +215,8 @@ showing basic and more advanced features of phpMyAdmin.
 <h2>Contributors</h2>
 
 <p>
-We'd like to thank all the former developers and contributors,
-whom over the years have contributed to the success of phpMyAdmin.
+We'd like to thank all the developers and contributors,
+who have contributed to the success of phpMyAdmin over the years.
 A full list is maintained in the <a
 href="https://phpmyadmin.readthedocs.org/en/latest/credits.html">documentation</a>.
 </p>
