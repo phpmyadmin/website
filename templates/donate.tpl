@@ -52,6 +52,15 @@ the country of origin. Please contact
 for instructions. 
 </p>
 
+<h3>Stock donations</h3>
+
+<p>
+Conservancy also accepts stock donations on behalf of the phpMyAdmin project.
+If you would like to donate stock, please contact
+<a href="mailto:accounting@sfconservancy.org">accounting@sfconservancy.org</a> 
+for instructions on how to initiate the transfer.
+</p>
+
 <h3>Flattr</h3>
 
 <p>
