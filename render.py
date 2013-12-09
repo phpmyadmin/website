@@ -92,8 +92,6 @@ RSS_RU = \
     'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
-SNAPSHOT_MD5 = 'http://dl.cihar.com/phpMyAdmin/master/md5.sums'
-SNAPSHOT_SIZES = 'http://dl.cihar.com/phpMyAdmin/master/files.list'
 TRANSLATION_STATS = 'http://l10n.cihar.com/exports/stats/phpmyadmin/master/'
 
 # URLS
@@ -470,38 +468,6 @@ class SFGenerator:
             else:
                 self.data['releases_older'].append(releases[idx])
                 helper.log.dbg(' %s (old)' % releases[idx]['version'])
-
-    def get_snapshots_info(self):
-        '''
-        Retrieves vcs snapshots info and fills it in data['release_vcs'].
-        '''
-        md5_strings = self.urls.load(
-            'snapshot MD5', SNAPSHOT_MD5
-        ).split('\n')
-        size_strings = self.urls.load(
-            'snapshot sizes', SNAPSHOT_SIZES
-        ).split('\n')
-        md5s = {}
-        for line in md5_strings:
-            if line.strip() == '':
-                continue
-            md5, name = line.split('  ')
-            md5s[name] = md5
-        vcs = []
-        for line in size_strings:
-            if line.strip() == '':
-                continue
-            name, size = line.split(' ')
-            vcs.append({
-                'name': name,
-                'size': int(size),
-                'size_k': int(size) / 1024,
-                'size_m': int(size) / (1024 * 1024),
-                'humansize': fmt_bytes(size),
-                'url': 'http://dl.cihar.com/phpMyAdmin/master/%s' % name,
-                'md5': md5s[name],
-            })
-        self.data['release_vcs'] = vcs
 
     def process_themes(self, xml_files):
         '''
@@ -956,8 +922,6 @@ class SFGenerator:
         '''
         Fetches data from remote or local sources and prepares template data.
         '''
-        self.get_snapshots_info()
-
         xml_files = self.xmls.load('files', PROJECT_FILES_RSS)
 
         self.process_releases(xml_files)

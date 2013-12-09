@@ -40,27 +40,10 @@
     <xi:include href="_gitdl.tpl" />
 
     <p>
-    Below are listed Git snapshots for master branch, more daily snapshots of the
-    code are available on <a
-    href="http://cihar.com/software/phpmyadmin/">external server</a>.
+    You can also download current snapshots from 
+    <a href="https://github.com/phpmyadmin/phpmyadmin/">GitHub</a> 
+    (Download ZIP button in right column).
     </p>
-
-    <table class="dllist">
-    <thead>
-        <tr>
-            <th>File</th>
-            <th>Size</th>
-            <th>MD5 checksum</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr py:for="file in release_vcs">
-            <td><a href="${file.url}#!md5!${file.md5}">${file.name}</a></td>
-            <td class="size">${file.humansize}</td>
-            <td>${file.md5}</td>
-        </tr>
-    </tbody>
-    </table> 
 
     <p>
     More information about using Git is available on <a
