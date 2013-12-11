@@ -26,7 +26,7 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 <a href="http://directliquidation.com/"><img src="${server}${base_url}images/directliquidation.png" alt="Direct Liquidation" /></a>
 
 <h3>Bronze sponsors</h3>
-<a href="http://www.aoe.com/"><img src="${server}${base_url}images/aoe.png" alt="AOE" /></a>
+<a href="http://www.aoe.com/"><img src="${server}${base_url}images/aoe.jpg" alt="AOE" /></a>
 &nbsp;
 &nbsp;
 <a href="http://vds64.com/"><img src="${server}${base_url}images/vds64_200x68.png" alt="VDS64" /></a>
