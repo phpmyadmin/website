@@ -500,7 +500,7 @@ class SFGenerator:
                 release.update(data.themes.THEMES['%s-%s' % (name, version)])
             except KeyError:
                 helper.log.warn(
-                    'No meatadata for theme %s-%s!' % (name, version)
+                    'No metadata for theme %s-%s!' % (name, version)
                 )
                 release['name'] = name
                 release['support'] = 'N/A'
