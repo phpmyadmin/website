@@ -53,7 +53,8 @@ import data.sitemap
 # Filtering
 FILES_REGEXP = re.compile(r'.*all-languages\.(zip).*')
 BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
-MAJOR_BRANCH_REGEXP = re.compile(r'^([0-9]+)\.')
+MAJOR_BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
+LISTED_BRANCHES = set(('3.5', '4.0', '4.1'))
 TESTING_REGEXP = re.compile(r'.*(beta|alpha|rc).*')
 
 # List of extensions allowed in downloads
@@ -434,7 +435,7 @@ class SFGenerator:
         for stable in outversions.keys():
             version = releases[outversions[stable]]['version']
             major_branch = MAJOR_BRANCH_REGEXP.match(version).group(1)
-            if major_branch in ['1', '2']:
+            if major_branch not in LISTED_BRANCHES:
                 del outversions[stable]
                 continue
             for check in outversions.keys():
