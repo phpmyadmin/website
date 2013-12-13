@@ -144,6 +144,17 @@ He lives in the <span class="adr"><span class="country">United States</span></sp
 </p>
 </div>
 
+<div class="floatbox vcard" id="hugues">
+<h3 class="fn">Hugues Peccatte</h3>
+<img class="head photo" src="${server}${base_url}images/heads/hugues.jpg" alt="Photo of Hugues Peccatte" width="70" height="70" />
+<p>
+Hugues has joined the <span class="org">phpMyAdmin</span> team in November 2013 after fixing somes bugs and completing PHPDoc. He tries to keep the source code sound and clear and to complete unit tests.  
+</p>
+<p>
+He currently lives in <span class="adr">Etampes, <span class="country">France</span></span>.
+</p>
+</div>
+
 <div class="clearer"></div>
 
 <h2>Team meetings</h2>
