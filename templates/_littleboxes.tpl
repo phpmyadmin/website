@@ -18,7 +18,7 @@
 </div>
 
 <div>
-    <a href="http://wiki.phpmyadmin.net/pma/GSoC_2013_Projects" title="Google Summer of Code 2013 projects">GSoC 2013</a>
+    <a href="http://wiki.phpmyadmin.net/pma/Category:Google_Summer_of_Code_2014" title="Google Summer of Code 2014">GSoC 2014</a>
 </div>
 
 </html>
