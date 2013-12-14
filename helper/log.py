@@ -56,6 +56,6 @@ def dbg(text, dbgtype=None):
         elif VERBOSE:
                 sys.stderr.write('%s\n' % text)
         logwrite('%s: %s' % (dbgtype, text))
-    elif: VERBOSE:
+    elif VERBOSE:
             sys.stderr.write('%s\n' % text)
         logwrite(text)
