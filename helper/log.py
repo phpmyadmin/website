@@ -53,9 +53,11 @@ def dbg(text, dbgtype=None):
         if dbgtype == 'cache':
             if DBG_CACHE:
                 sys.stderr.write('%s\n' % text)
-        elif VERBOSE:
+        else:
+            if VERBOSE:
                 sys.stderr.write('%s\n' % text)
         logwrite('%s: %s' % (dbgtype, text))
-    elif: VERBOSE:
+    else:
+        if VERBOSE:
             sys.stderr.write('%s\n' % text)
         logwrite(text)
