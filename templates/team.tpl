@@ -77,19 +77,6 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 </p>
 </div>
 
-<div class="floatbox vcard" id="rouslan">
-<h3 class="fn">Rouslan Placella</h3>
-<h4>Juniors coaching (backup coordinator)</h4>
-
-<img class="head photo" src="${server}${base_url}images/heads/rouslan.jpg" alt="Photo of Rouslan Placella" />
-<p>
-Rouslan has joined the team in June 2011 after being selected to take part in the Google Summer of Code program where he developed an improved interface for the management of routines, triggers and events.
-</p>
-<p>
-He lives in <span class="adr"><span class="locality">Cork</span>, <span class="country-name">Ireland</span></span>.
-</p>
-</div>
-
 <div class="floatbox vcard" id="jm">
 <h3 class="fn">J.M.</h3>
 <p>
