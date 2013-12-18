@@ -241,9 +241,9 @@ class SFGenerator:
             text = 'Current version compatible with PHP 5.3 and MySQL 5.5.'
         elif version[:3] == '4.0':
             text = (
-		'Older version compatible with PHP 5.2 and MySQL 5. ' +
-		'Supported for security fixes only, until Jul 1, 2014.'
-		)
+                'Older version compatible with PHP 5.2 and MySQL 5. ' +
+                'Supported for security fixes only, until Jul 1, 2014.'
+            )
         if version.find('beta1') != -1:
             text += ' First beta version.'
         elif version.find('beta2') != -1:
