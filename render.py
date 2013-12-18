@@ -221,6 +221,34 @@ class SFGenerator:
         '''
         return re.sub('[^a-z0-9A-Z.-]', '_', text)
 
+    def get_version_suffix(self, version):
+        '''
+        Returns suffix for a version.
+        '''
+        if version.find('beta1') != -1:
+            return ' First beta version.'
+        elif version.find('beta2') != -1:
+            return ' Second beta version.'
+        elif version.find('beta3') != -1:
+            return ' Third beta version.'
+        elif version.find('beta4') != -1:
+            return ' Fourth beta version.'
+        elif version.find('beta') != -1:
+            helper.log.warn('Generic beta: %s' % version)
+            return ' Beta version.'
+        elif version.find('rc1') != -1:
+            return ' First release candidate.'
+        elif version.find('rc2') != -1:
+            return ' Second release candidate.'
+        elif version.find('rc3') != -1:
+            return ' Third release candidate.'
+        elif version.find('rc4') != -1:
+            return ' Fourth release candidate.'
+        elif version.find('rc') != -1:
+            helper.log.warn('Generic RC: %s' % version)
+            return ' Release candidate.'
+        return ''
+
     def get_version_info(self, version):
         '''
         Returns description to the phpMyAdmin version.
@@ -244,28 +272,7 @@ class SFGenerator:
                 'Older version compatible with PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jul 1, 2014.'
             )
-        if version.find('beta1') != -1:
-            text += ' First beta version.'
-        elif version.find('beta2') != -1:
-            text += ' Second beta version.'
-        elif version.find('beta3') != -1:
-            text += ' Third beta version.'
-        elif version.find('beta4') != -1:
-            text += ' Fourth beta version.'
-        elif version.find('beta') != -1:
-            helper.log.warn('Generic beta: %s' % version)
-            text += ' Beta version.'
-        elif version.find('rc1') != -1:
-            text += ' First release candidate.'
-        elif version.find('rc2') != -1:
-            text += ' Second release candidate.'
-        elif version.find('rc3') != -1:
-            text += ' Third release candidate.'
-        elif version.find('rc4') != -1:
-            text += ' Fourth release candidate.'
-        elif version.find('rc') != -1:
-            text += ' Release candidate.'
-            helper.log.warn('Generic RC: %s' % version)
+        text += self.get_version_suffix(version)
 
         return text
 
