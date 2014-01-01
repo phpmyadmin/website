@@ -19,14 +19,6 @@ The way of reporting (security) bugs and adding feature requests will be unaffec
 </div>
 
 <div class="floatbox">
-<h3>Version 3.5.x being phased out</h3>
-
-<p>
-This older version is only supported for security fixes, until Jan 1, 2014.
-</p>
-</div>
-
-<div class="floatbox">
 <h2>Trackers</h2>
 
 <p>
