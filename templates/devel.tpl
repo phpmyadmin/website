@@ -18,7 +18,7 @@ creating or debugging some features.
 <xi:include href="_gitdl.tpl" />
 
 <p>
-To checkout the code you can use one of following examples:
+To checkout the code you can use one of the following examples:
 </p>
 
 <pre>

@@ -15,14 +15,14 @@
     it is usually the quickest way to an updated installation. Please contact your OS
     vendor for more information. Some additional information is also available <a
     href="http://docs.phpmyadmin.net/en/latest/setup.html">in our documentation</a>. If you just want to
-    try phpMyAdmin in virtual machine, you might want to check the <a
+    try phpMyAdmin in a virtual machine, you might want to check the <a
     href="#appliances">available software appliances which provide
     phpMyAdmin</a>.
     </p>
     <p>
-    If you do not have a package available or desire to install your own phpMyAdmin,
-    you can download one of following
-    source packages. Please note that phpMyAdmin requires at least PHP 5.2
+    If you do not find a suitable package or wish to install your own phpMyAdmin,
+    you can download one of the following
+    kits. Please note that phpMyAdmin requires at least PHP 5.2
     and MySQL 5.
     </p>
 
@@ -55,7 +55,7 @@
     You can find older releases on <a
     href="https://sourceforge.net/projects/phpmyadmin/files/">SourceForge
     files page</a>. You can also get them 
-    from our Git repository (check <a href="${base_url}devel.${file_ext}">developer information</a> for instructions).
+    from our Git repository (check <a href="${base_url}devel.${file_ext}">developer information</a> for instructions). Older releases are unsupported.
     </p>
 
     <h2><a id="distributions"></a>Installing phpMyAdmin</h2>
