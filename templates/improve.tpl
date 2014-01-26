@@ -20,9 +20,7 @@ To gain practical experience in open-source development, you are welcome to cont
 <h3>Helping users</h3>
 
 <p>
-Interested in helping other users to use phpMyAdmin? You can join any of the
-<a href="${base_url}support.${file_ext}">support</a> options we provide and help users
-there - IRC, mailing lists and web forums, where you can share your experience.
+Interested in helping other users with phpMyAdmin? Visit our <a href="${base_url}support.${file_ext}">support</a> page and share your experience.
 </p>
 
 <h3 id="translate">Localization</h3>
