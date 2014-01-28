@@ -1,9 +1,7 @@
 Website generator for phpMyAdmin
 ================================
 
-This is currently in alpha state, but later it will hopefully replace
-phpMyAdmin homepage.
-
+Python code to generate phpMyAdmin's website using Genshi templates.
 
 Requirements
 ------------
