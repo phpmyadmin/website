@@ -60,6 +60,7 @@ development in 2001.
 <li>3.4.0 (May 11, 2011): AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
 <li>3.5.0 (April 7, 2012): Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle support.</li>
 <li>4.0.0 (May 3, 2013): Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</li>
+<li>4.1.0 (December 12, 2013): Requires PHP 5.3 and MySQL 5.5. Added ReCAPTCHA support, configurable menus, and an error reporting component.</li>
 </ul>
 
 
