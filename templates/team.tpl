@@ -51,20 +51,6 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 <p>Contact options: <a class="url" href="http://cihar.com">website</a>, <a class="url" href="xmpp:michal@cihar.com">jabber</a>, <a class="email" href="mailto:michal@cihar.com">email</a>.</p>
 </div>
 
-<div class="floatbox vcard" id="dieter">
-<h3 class="fn">Dieter Adriaenssens</h3>
-<h4>Security coordinator</h4>
-<img class="head photo" src="${server}${base_url}images/heads/dieter.jpg" alt="Photo of Dieter Adriaenssens" />
-<p>
-Dieter joined the development team in March 2010, and so far has
-contributed to the project by submitting (security) bug fixes
-and by keeping the Dutch translation of phpMyAdmin up to date.<br />
-In 2011, he was a Google Summer of Code mentor for the first time.
-</p>
-<p>
-He currently lives in <span class="adr"><span class="locality">Ghent</span>, <span class="country-name">Belgium</span></span>.
-</p>
-</div>
 <div class="floatbox vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
 <h4>Bug fixing coordinator</h4>
