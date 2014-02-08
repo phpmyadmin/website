@@ -21,4 +21,8 @@
     <a href="http://wiki.phpmyadmin.net/pma/Category:Google_Summer_of_Code_2014" title="Google Summer of Code 2014">GSoC 2014</a>
 </div>
 
+<div>
+    <a href="${base_url}contest.${file_ext}" rel="contest">Programming contest</a>
+</div>
+
 </html>
