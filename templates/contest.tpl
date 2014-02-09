@@ -22,7 +22,7 @@ Packt Publishing (publisher of <a href="http://www.packtpub.com/mastering-phpmya
 <ol>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4053">List of procedures is not displayed after executing with Enter</a></li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4081">Setup page content shifted to the right edge of its tabs</a></li>
-<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4271">Query by example and the second criteria line</a></li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4271">Query by example and the second criteria line</a> (winner: A V Minhaz)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4272">Incorrect tabindex</a> (winner: Viduranga Wijesooriya)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4276">Login loop on session expiry</a></li>
 </ol>
