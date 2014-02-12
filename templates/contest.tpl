@@ -24,7 +24,7 @@ Packt Publishing (publisher of <a href="http://www.packtpub.com/mastering-phpmya
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4081">Setup page content shifted to the right edge of its tabs</a> (winner: Vasu Bhardwaj)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4271">Query by example and the second criteria line</a> (winner: A V Minhaz)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4272">Incorrect tabindex</a> (winner: Viduranga Wijesooriya)</li>
-<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4276">Login loop on session expiry</a> (winner: Dhananjay Nakrani)</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4276">Login loop on session expiry</a> (winner: Dhananjay Nakrani, who also wins the special prize)</li>
 </ol>
 
 <h3>How to submit your patch</h3>
