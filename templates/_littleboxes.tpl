@@ -22,7 +22,7 @@
 </div>
 
 <div>
-    <a href="${base_url}contest.${file_ext}" rel="contest">Programming contest</a>
+    <a href="${base_url}contest.${file_ext}" rel="contest">Contest results</a>
 </div>
 
 </html>
