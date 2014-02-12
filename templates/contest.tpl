@@ -21,7 +21,7 @@ Packt Publishing (publisher of <a href="http://www.packtpub.com/mastering-phpmya
 <h3>Acceptable tickets</h3>
 <ol>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4053">List of procedures is not displayed after executing with Enter</a> (winner: Umair Khan)</li>
-<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4081">Setup page content shifted to the right edge of its tabs</a></li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4081">Setup page content shifted to the right edge of its tabs</a> (winner: Vasu Bhardwaj)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4271">Query by example and the second criteria line</a> (winner: A V Minhaz)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4272">Incorrect tabindex</a> (winner: Viduranga Wijesooriya)</li>
 <li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4276">Login loop on session expiry</a> (winner: Dhananjay Nakrani)</li>
