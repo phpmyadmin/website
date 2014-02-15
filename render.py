@@ -701,7 +701,7 @@ class SFGenerator:
         helper.log.dbg('  %s' % filename)
         template = self.cssloader.load(filename)
         with open(os.path.join(OUTPUT, 'css', filename), 'w') as out:
-            out.write(template.generate(**self.data).render().encode('utf-8'))
+            out.write(template.generate(**self.data).render(encoding='utf-8'))
 
     def render_static(self, templatename, outfile, extradata=None):
         '''
@@ -713,7 +713,7 @@ class SFGenerator:
         template = self.staticloader.load(templatename)
         with open(os.path.join(OUTPUT, outfile), 'w') as out:
             extradata.update(self.data)
-            out.write(template.generate(**extradata).render().encode('utf-8'))
+            out.write(template.generate(**extradata).render(encoding='utf-8'))
 
     def render_js(self, filename):
         '''
@@ -735,8 +735,9 @@ class SFGenerator:
         with open(os.path.join(OUTPUT, self.get_outname(page)), 'w') as out:
             out.write(
                 template.generate(menu=menu, **self.data).render(
-                    self.get_renderer(page)
-                ).encode('utf-8')
+                    self.get_renderer(page),
+                    encoding='utf-8'
+                )
             )
 
     def render_security(self, issue):
@@ -749,8 +750,9 @@ class SFGenerator:
         with open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w') as out:
             out.write(
                 template.generate(menu=menu, issue=issue, **self.data).render(
-                    'xhtml'
-                ).encode('utf-8')
+                    'xhtml',
+                    encoding='utf-8'
+                )
             )
 
     def list_security_issues(self):
