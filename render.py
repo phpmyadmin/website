@@ -700,9 +700,8 @@ class SFGenerator:
         '''
         helper.log.dbg('  %s' % filename)
         template = self.cssloader.load(filename)
-        out = open(os.path.join(OUTPUT, 'css', filename), 'w')
-        out.write(template.generate(**self.data).render())
-        out.close()
+        with open(os.path.join(OUTPUT, 'css', filename), 'w') as out:
+            out.write(template.generate(**self.data).render())
 
     def render_static(self, templatename, outfile, extradata=None):
         '''
@@ -712,10 +711,9 @@ class SFGenerator:
             extradata = {}
         helper.log.dbg('  %s' % outfile)
         template = self.staticloader.load(templatename)
-        out = open(os.path.join(OUTPUT, outfile), 'w')
-        extradata.update(self.data)
-        out.write(template.generate(**extradata).render())
-        out.close()
+        with open(os.path.join(OUTPUT, outfile), 'w') as out:
+            extradata.update(self.data)
+            out.write(template.generate(**extradata).render())
 
     def render_js(self, filename):
         '''
@@ -734,13 +732,12 @@ class SFGenerator:
         helper.log.dbg('  %s' % page)
         template = self.loader.load('%s.tpl' % page)
         menu = self.get_menu(page)
-        out = open(os.path.join(OUTPUT, self.get_outname(page)), 'w')
-        out.write(
-            template.generate(menu=menu, **self.data).render(
-                self.get_renderer(page)
+        with open(os.path.join(OUTPUT, self.get_outname(page)), 'w') as out:
+            out.write(
+                template.generate(menu=menu, **self.data).render(
+                    self.get_renderer(page)
+                )
             )
-        )
-        out.close()
 
     def render_security(self, issue):
         '''
@@ -749,15 +746,12 @@ class SFGenerator:
         helper.log.dbg('  %s' % issue)
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
-        out = open(
-            os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w'
-        )
-        out.write(
-            template.generate(menu=menu, issue=issue, **self.data).render(
-                'xhtml'
+        with open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w') as out:
+            out.write(
+                template.generate(menu=menu, issue=issue, **self.data).render(
+                    'xhtml'
+                )
             )
-        )
-        out.close()
 
     def list_security_issues(self):
         '''
