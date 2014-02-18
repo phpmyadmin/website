@@ -38,7 +38,8 @@ Upgrade to phpMyAdmin 4.1.7 or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Lane Thames for reporting these vulnerabilities.
+Thanks to Lane Thames with Tripwire's Vulnerability and Exposure Research Team
+(VERT) for reporting these vulnerabilities.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-1879</py:def>
