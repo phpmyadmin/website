@@ -298,16 +298,10 @@ class SFGenerator(object):
         if featured:
             helper.log.dbg('Release is featured!')
         try:
-            dlcount = item.getElementsByTagName(
-                'files:download-count'
-            )[0].childNodes[0].data
-        except DOMException:
-            dlcount = None
-        try:
             notes = item.getElementsByTagName(
                 'files:release-notes-url'
             )[0].childNodes[0].data
-        except DOMException:
+        except (DOMException, IndexError):
             notes = ''
         media = item.getElementsByTagName('media:content')[0]
         size = media.getAttribute('filesize')
@@ -336,7 +330,6 @@ class SFGenerator(object):
             'size_k': int(size) / 1024,
             'size_m': int(size) / (1024 * 1024),
             'humansize': fmt_bytes(size),
-            'dlcount': dlcount,
             'md5': md5
         }
 
