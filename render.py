@@ -27,6 +27,7 @@ import shutil
 import datetime
 import json
 import ConfigParser
+from xml.dom import DOMException
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -300,13 +301,13 @@ class SFGenerator:
             dlcount = item.getElementsByTagName(
                 'files:download-count'
             )[0].childNodes[0].data
-        except:
+        except DOMException:
             dlcount = None
         try:
             notes = item.getElementsByTagName(
                 'files:release-notes-url'
             )[0].childNodes[0].data
-        except:
+        except DOMException:
             notes = ''
         media = item.getElementsByTagName('media:content')[0]
         size = media.getAttribute('filesize')
