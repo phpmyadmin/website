@@ -135,7 +135,7 @@ def fmt_bytes(number):
         return '%d bytes' % number
 
 
-class SFGenerator:
+class SFGenerator(object):
     def __init__(self):
         self.data = {
             'releases': [],
