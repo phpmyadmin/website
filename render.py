@@ -117,6 +117,7 @@ SUMMARY_TRACKER = re.compile(
     r'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
 )
 
+# Naming of versions
 VERSION_INFO = (
     ('beta1', ' First beta version.'),
     ('beta2', ' Second beta version.'),
@@ -129,6 +130,7 @@ VERSION_INFO = (
     ('rc4', ' Fourth release candidate.'),
     ('rc', ' Release candidate.'),
 )
+
 
 def fmt_bytes(number):
     '''
