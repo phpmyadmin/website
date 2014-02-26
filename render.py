@@ -117,6 +117,18 @@ SUMMARY_TRACKER = re.compile(
     r'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
 )
 
+VERSION_INFO = (
+    ('beta1', ' First beta version.'),
+    ('beta2', ' Second beta version.'),
+    ('beta3', ' Third beta version.'),
+    ('beta4', ' Fourth beta version.'),
+    ('beta', ' Beta version.'),
+    ('rc1', ' First release candidate.'),
+    ('rc2', ' Second release candidate.'),
+    ('rc3', ' Third release candidate.'),
+    ('rc4', ' Fourth release candidate.'),
+    ('rc', ' Release candidate.'),
+)
 
 def fmt_bytes(number):
     '''
@@ -227,28 +239,9 @@ class SFGenerator(object):
         '''
         Returns suffix for a version.
         '''
-        if version.find('beta1') != -1:
-            return ' First beta version.'
-        elif version.find('beta2') != -1:
-            return ' Second beta version.'
-        elif version.find('beta3') != -1:
-            return ' Third beta version.'
-        elif version.find('beta4') != -1:
-            return ' Fourth beta version.'
-        elif version.find('beta') != -1:
-            helper.log.warn('Generic beta: %s' % version)
-            return ' Beta version.'
-        elif version.find('rc1') != -1:
-            return ' First release candidate.'
-        elif version.find('rc2') != -1:
-            return ' Second release candidate.'
-        elif version.find('rc3') != -1:
-            return ' Third release candidate.'
-        elif version.find('rc4') != -1:
-            return ' Fourth release candidate.'
-        elif version.find('rc') != -1:
-            helper.log.warn('Generic RC: %s' % version)
-            return ' Release candidate.'
+        for match, result in VERSION_INFO:
+            if version.find(match) != -1:
+                return result
         return ''
 
     def get_version_info(self, version):
