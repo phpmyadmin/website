@@ -748,7 +748,12 @@ class SFGenerator:
         helper.log.dbg('  %s' % issue)
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
-        with open(os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w') as out:
+        filename = os.path.join(
+            OUTPUT,
+            'security',
+            self.get_outname(issue)
+        )
+        with open(filename, 'w') as out:
             out.write(
                 template.generate(menu=menu, issue=issue, **self.data).render(
                     'xhtml',
