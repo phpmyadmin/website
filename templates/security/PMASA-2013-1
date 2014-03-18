@@ -52,7 +52,8 @@ Thanks to Janek Vind for reporting this issue.
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-9e8d2410259fa4fb05a7d1d2869bd7aa2fe0e593
+79089c9bc02c82c15419fd9d6496b8781ae08a5a
+7e9ac67cbb58b40fbe0c18401b8e7d033c9dfe28
 </py:def>
 
 <xi:include href="_page.tpl" />
