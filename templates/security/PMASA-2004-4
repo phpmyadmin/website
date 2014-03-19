@@ -66,5 +66,10 @@ http://www.exaprobe.com/labs/advisories/esa-2004-1213.html</a>
 
 <py:def function="announcement_cwe">661 94</py:def>
 
+<py:def function="announcement_commits">
+1d170eefbf3b07c6bd968d9905a419aaf3aeedf0
+f1f39b8ed115c5cfbd18d3dca5fad1707beb00f2
+</py:def>
+
 <xi:include href="_page.tpl" />
 </html>
