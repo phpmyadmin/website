@@ -1,25 +1,19 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
 <py:def function="announcement_id">
-PMASA-2013-1
+PMASA-2014-1
 </py:def>
 
 <py:def function="announcement_date">
-2013-04-18
+2014-02-15
 </py:def>
-
-<!--! Optional section, use only if something has been changed
-<py:def function="announcement_updated">
-2012-??-??
-</py:def>
--->
 
 <py:def function="announcement_summary">
-XSS due to unescaped HTML output in GIS visualisation page.
+Self-XSS due to unescaped HTML output in import.
 </py:def>
 
 <py:def function="announcement_description">
-When modifying a URL parameter with a crafted value it is possible to trigger an XSS.
+When importing a file with crafted filename, it is possible to trigger an XSS.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -27,11 +21,11 @@ We consider this vulnerability to be non critical.
 </py:def>
 
 <py:def function="announcement_mitigation">
-These XSS can only be triggered when a valid database is known and when a valid cookie token is used.
+This vulnerability can be triggered only by someone who logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required form. 
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 3.5.x are affected.
+All versions since 3.3.1 and prior to 4.1.7 are affected.
 </py:def>
 
 <!--! Optional section
@@ -40,20 +34,20 @@ Versions 3.5.x are affected.
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 3.5.8 or newer or apply the patches listed below.
+Upgrade to phpMyAdmin 4.1.7 or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Janek Vind for reporting this issue.
+Thanks to Lane Thames with Tripwire's Vulnerability and Exposure Research Team
+(VERT) for reporting these vulnerabilities.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2013-1937</py:def>
+<py:def function="announcement_cve">CVE-2014-1879</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-79089c9bc02c82c15419fd9d6496b8781ae08a5a
-7e9ac67cbb58b40fbe0c18401b8e7d033c9dfe28
+968d5d5f486820bfa30af046f063b9f23304e14a
 </py:def>
 
 <xi:include href="_page.tpl" />

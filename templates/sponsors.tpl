@@ -30,9 +30,6 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <h3>Bronze sponsors</h3>
 <a href="http://www.aoe.com/"><img src="${server}${base_url}images/aoe.jpg" alt="AOE" /></a>
-&nbsp;
-&nbsp;
-<a href="http://vds64.com/"><img src="${server}${base_url}images/vds64_200x68.png" alt="VDS64" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
@@ -94,13 +91,21 @@ Thank you for your support!
 
 <p>
 <select name="os0">
+<!--
 	<option value="Platinum">Platinum : $10,000.00 USD - yearly</option>
+-->
 	<option value="Gold">Gold : $5,000.00 USD - yearly</option>
+<!--
 	<option value="Silver">Silver : $2,500.00 USD - yearly</option>
+-->
 	<option value="Bronze">Bronze : $1,000.00 USD - yearly</option>
+<!--
 	<option value="Platinum (monthly installments)">Platinum (monthly installments) : $1,000.00 USD - monthly</option>
+-->
 	<option value="Gold (monthly installments)">Gold (monthly installments) : $500.00 USD - monthly</option>
+<!--
 	<option value="Silver (monthly installments)">Silver (monthly installments) : $250.00 USD - monthly</option>
+-->
 	<option value="Bronze (monthly installments)">Bronze (monthly installments) : $100.00 USD - monthly</option>
 </select>
 </p>

@@ -27,6 +27,7 @@ import shutil
 import datetime
 import json
 import ConfigParser
+from xml.dom import DOMException
 from genshi.template import TemplateLoader
 from genshi.template import NewTextTemplate
 from genshi.input import XML
@@ -116,6 +117,20 @@ SUMMARY_TRACKER = re.compile(
     r'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
 )
 
+# Naming of versions
+VERSION_INFO = (
+    ('beta1', ' First beta version.'),
+    ('beta2', ' Second beta version.'),
+    ('beta3', ' Third beta version.'),
+    ('beta4', ' Fourth beta version.'),
+    ('beta', ' Beta version.'),
+    ('rc1', ' First release candidate.'),
+    ('rc2', ' Second release candidate.'),
+    ('rc3', ' Third release candidate.'),
+    ('rc4', ' Fourth release candidate.'),
+    ('rc', ' Release candidate.'),
+)
+
 
 def fmt_bytes(number):
     '''
@@ -134,7 +149,7 @@ def fmt_bytes(number):
         return '%d bytes' % number
 
 
-class SFGenerator:
+class SFGenerator(object):
     def __init__(self):
         self.data = {
             'releases': [],
@@ -226,28 +241,9 @@ class SFGenerator:
         '''
         Returns suffix for a version.
         '''
-        if version.find('beta1') != -1:
-            return ' First beta version.'
-        elif version.find('beta2') != -1:
-            return ' Second beta version.'
-        elif version.find('beta3') != -1:
-            return ' Third beta version.'
-        elif version.find('beta4') != -1:
-            return ' Fourth beta version.'
-        elif version.find('beta') != -1:
-            helper.log.warn('Generic beta: %s' % version)
-            return ' Beta version.'
-        elif version.find('rc1') != -1:
-            return ' First release candidate.'
-        elif version.find('rc2') != -1:
-            return ' Second release candidate.'
-        elif version.find('rc3') != -1:
-            return ' Third release candidate.'
-        elif version.find('rc4') != -1:
-            return ' Fourth release candidate.'
-        elif version.find('rc') != -1:
-            helper.log.warn('Generic RC: %s' % version)
-            return ' Release candidate.'
+        for match, result in VERSION_INFO:
+            if version.find(match) != -1:
+                return result
         return ''
 
     def get_version_info(self, version):
@@ -297,16 +293,10 @@ class SFGenerator:
         if featured:
             helper.log.dbg('Release is featured!')
         try:
-            dlcount = item.getElementsByTagName(
-                'files:download-count'
-            )[0].childNodes[0].data
-        except:
-            dlcount = None
-        try:
             notes = item.getElementsByTagName(
                 'files:release-notes-url'
             )[0].childNodes[0].data
-        except:
+        except (DOMException, IndexError):
             notes = ''
         media = item.getElementsByTagName('media:content')[0]
         size = media.getAttribute('filesize')
@@ -335,7 +325,6 @@ class SFGenerator:
             'size_k': int(size) / 1024,
             'size_m': int(size) / (1024 * 1024),
             'humansize': fmt_bytes(size),
-            'dlcount': dlcount,
             'md5': md5
         }
 
@@ -700,9 +689,8 @@ class SFGenerator:
         '''
         helper.log.dbg('  %s' % filename)
         template = self.cssloader.load(filename)
-        out = open(os.path.join(OUTPUT, 'css', filename), 'w')
-        out.write(template.generate(**self.data).render())
-        out.close()
+        with open(os.path.join(OUTPUT, 'css', filename), 'w') as out:
+            out.write(template.generate(**self.data).render(encoding='utf-8'))
 
     def render_static(self, templatename, outfile, extradata=None):
         '''
@@ -712,10 +700,9 @@ class SFGenerator:
             extradata = {}
         helper.log.dbg('  %s' % outfile)
         template = self.staticloader.load(templatename)
-        out = open(os.path.join(OUTPUT, outfile), 'w')
-        extradata.update(self.data)
-        out.write(template.generate(**extradata).render())
-        out.close()
+        with open(os.path.join(OUTPUT, outfile), 'w') as out:
+            extradata.update(self.data)
+            out.write(template.generate(**extradata).render(encoding='utf-8'))
 
     def render_js(self, filename):
         '''
@@ -734,13 +721,13 @@ class SFGenerator:
         helper.log.dbg('  %s' % page)
         template = self.loader.load('%s.tpl' % page)
         menu = self.get_menu(page)
-        out = open(os.path.join(OUTPUT, self.get_outname(page)), 'w')
-        out.write(
-            template.generate(menu=menu, **self.data).render(
-                self.get_renderer(page)
+        with open(os.path.join(OUTPUT, self.get_outname(page)), 'w') as out:
+            out.write(
+                template.generate(menu=menu, **self.data).render(
+                    self.get_renderer(page),
+                    encoding='utf-8'
+                )
             )
-        )
-        out.close()
 
     def render_security(self, issue):
         '''
@@ -749,15 +736,18 @@ class SFGenerator:
         helper.log.dbg('  %s' % issue)
         template = self.loader.load('security/%s' % issue)
         menu = self.get_menu('security/')
-        out = open(
-            os.path.join(OUTPUT, 'security', self.get_outname(issue)), 'w'
+        filename = os.path.join(
+            OUTPUT,
+            'security',
+            self.get_outname(issue)
         )
-        out.write(
-            template.generate(menu=menu, issue=issue, **self.data).render(
-                'xhtml'
+        with open(filename, 'w') as out:
+            out.write(
+                template.generate(menu=menu, issue=issue, **self.data).render(
+                    'xhtml',
+                    encoding='utf-8'
+                )
             )
-        )
-        out.close()
 
     def list_security_issues(self):
         '''
