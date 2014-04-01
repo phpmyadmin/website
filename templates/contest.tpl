@@ -1,0 +1,30 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="page_title">Contest</py:def>
+
+<div py:match="content" id="body">
+<h2>Contest results</h2>
+<p>
+Packt Publishing (publisher of <a href="http://www.packtpub.com/mastering-phpmyadmin-3-4-for-effective-mysql-management/book">Mastering phpMyAdmin 3.4</a>) sponsored this programming contest, offering five e-books of your choice from their entire collection, plus a special prize of a yearly subscription to <a href="http://packtlib.packtpub.com">PacktLib</a>.
+</p>
+
+<h3>Winners</h3>
+<ol>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4053">List of procedures is not displayed after executing with Enter</a> (winner: Umair Khan)</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4081">Setup page content shifted to the right edge of its tabs</a> (winner: Vasu Bhardwaj)</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4271">Query by example and the second criteria line</a> (winner: A V Minhaz)</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4272">Incorrect tabindex</a> (winner: Viduranga Wijesooriya)</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/4276">Login loop on session expiry</a> (winner: Dhananjay Nakrani, who also wins the special prize)</li>
+</ol>
+
+<h3>Discount codes</h3>
+<p>Anyone seeing this page can use one of the following discount codes (expire on March 31, 2014) to obtain a 25% discount for the entire Packt collection. Packt <a href="http://www.packtpub.com/article/open_source_receives_royalties_boost"> donates</a> a percentage from the sales of the phpMyAdmin-related books to the phpMyAdmin project.</p>
+<ul>
+ <li>Book : <strong>mRvKXazB</strong></li>
+ <li>E-book: <strong>eB3Nu2yG</strong></li>
+</ul>
+<a href="http://link.packtpub.com/XJdqZr"><img src="${base_url}images/books/pma_en_3.4_150x185.png" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
+</div>
+
+<xi:include href="_page.tpl" />
+</html>
