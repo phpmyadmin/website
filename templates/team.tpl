@@ -37,7 +37,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Sherbr
 
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
-<h4>Infrastructure coordinator</h4>
+<h4>Infrastructure and security coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
