@@ -75,7 +75,7 @@ eliminating and patching bugs. For the case his idea doesn't live yet,
 he'll just invent it&hellip;
 </p>
 <p>
-&hellip;and he is bug fixer, part 1.<br>
+&hellip;and he is bug fixer, part 1.<br />
 Ann &mdash; J.M.&rsquo;s life assistant &mdash; bug fixer part 2.
 </p>
 <p>
