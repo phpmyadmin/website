@@ -37,7 +37,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Sherbr
 
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
-<h4>Infrastructure coordinator</h4>
+<h4>Security and infrastructure coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
@@ -65,16 +65,21 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 
 <div class="floatbox vcard" id="jm">
 <h3 class="fn">J.M.</h3>
+<h4>Quality manager</h4>
 <p>
 J.M. is a wheelchair-brain, always on the run to learn and program new
 things, without spending much money because the best things are what you
 get without money (pma). Since his brain is big and fast enough, he can
 learn everything on his own. He likes being creative, finding,
 eliminating and patching bugs. For the case his idea doesn't live yet,
-he'll invent it.
+he'll just invent it&hellip;
 </p>
 <p>
-He lives in <span class="adr"><span class="country-name">Germany</span></span>.
+&hellip;and he is bug fixer, part 1.<br />
+Ann &mdash; J.M.&rsquo;s life assistant &mdash; bug fixer part 2.
+</p>
+<p>
+They live in <span class="adr"><span class="country-name">Germany</span></span>.
 </p>
 </div>
 
