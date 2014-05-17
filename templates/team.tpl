@@ -174,7 +174,7 @@ showing basic and more advanced features of phpMyAdmin.
     <a href="${base_url}images/linuxtag/IMG_4189.JPG"
     rel="lightbox[meeting]" title="2005 team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
         <img src="${base_url}images/linuxtag/IMG_4189_tn.JPG"
-        alt="phpMyAdmin team with Rasmus (PHP)" />
+        alt="phpMyAdmin team with Monty (MySQL)" />
     </a>
 </div>
 
