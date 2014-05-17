@@ -159,6 +159,8 @@ future directions for the project.
 a <a href="http://www.irill.org/videos/debconf13/phpMyAdmin_tutorial.webm">tutorial</a>
 showing basic and more advanced features of phpMyAdmin.
 </p>
+<p>During <a href="http://linuxtag.org/2014/en">LinuxTag 2014</a> in Berlin, Germany, our project was an exhibitor and we held our fifth team meeting.
+</p>
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4187.JPG"
