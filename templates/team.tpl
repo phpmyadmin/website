@@ -194,12 +194,19 @@ showing basic and more advanced features of phpMyAdmin.
     </a>
 </div>
 
-
 <div class="screenshot">
     <a href="${base_url}images/debconf-2013/debconf-2013-med.jpg"
     rel="lightbox[meeting]" title="2013 team - Rouslan Placella, Dieter Adriaenssens, Chanaka Dharmarathna, Isaac Bennetch, Madhura Jayaratne, Marc Delisle, Michal Čihař">
         <img src="${base_url}images/debconf-2013/debconf-2013-tn.jpg"
         alt="phpMyAdmin team at DebConf 2013" />
+    </a>
+</div>
+
+<div class="screenshot">
+    <a href="${base_url}images/linuxtag/2014/linuxtag-2014-team-photo.jpg"
+    rel="lightbox[meeting]" title="2014 team - Chanaka Dharmarathna, J.M., Madhura Jayaratne, Michal Čihař, Marc Delisle, Atul Pratap Singh, Isaac Bennetch">
+        <img src="${base_url}images/linuxtag/2014/linuxtag-2014-team-photo_tn.jpg"
+        alt="phpMyAdmin team at LinuxTag 2014 in Berlin" />
     </a>
 </div>
 
