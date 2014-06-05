@@ -59,6 +59,8 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 </tbody>
 </table>
 
+<p>For a combined Platinum + Gold sponsorship, a 10% discount is offered.</p>
+
 <h3>New sponsors</h3>
 
 <xi:include href="_conservancy.tpl" />
