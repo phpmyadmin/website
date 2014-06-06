@@ -1,6 +1,6 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
-<py:def function="page_rss">${rss_summary}</py:def>
+<py:def function="page_rss">${rss_news}</py:def>
 <py:def function="page_rss_title">phpMyAdmin project summary</py:def>
 
 <py:def function="page_title">About</py:def>
