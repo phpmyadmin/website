@@ -109,6 +109,8 @@ Thank you for your support!
 	<option value="Silver (monthly installments)">Silver (monthly installments) : $250.00 USD - monthly</option>
 -->
 	<option value="Bronze (monthly installments)">Bronze (monthly installments) : $100.00 USD - monthly</option>
+	<option value="Platinum + Gold">Platinum + Gold : $13,500.00 USD - yearly</option>
+	<option value="Platinum + Gold (monthly installments)">Platinum + Gold (monthly installments) : $1,350.00 USD - monthly</option>
 </select>
 </p>
 <p>
