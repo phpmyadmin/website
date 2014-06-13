@@ -26,7 +26,11 @@ Trackers on SourceForge.net are used to track bug reports, requests for new feat
 </p>
 
 <ul>
-    <li py:for="tracker in trackers"><a href="${tracker.link}">${tracker.name}</a> - ${tracker.description}</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/bugs/">Bugs</a> - Bug Tracking System</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/feature-requests/">Feature Requests</a> - Feature Request Tracking System</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/patches/">Patches</a> - Patch Tracking System</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/support-requests/">Support Requests</a> - Tech Support Tracking System</li>
+<li><a href="https://sourceforge.net/p/phpmyadmin/themes/">Themes</a> - Downloadable themes for phpMyAdmin</li>
 </ul>
 </div>
 

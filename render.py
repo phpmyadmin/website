@@ -83,8 +83,6 @@ PROJECT_FILES_RSS = \
     'http://sourceforge.net/api/file/index/project-id/23067/rss'
 PROJECT_NEWS_RSS = \
     'https://sourceforge.net/p/phpmyadmin/news/feed'
-PROJECT_SUMMARY_RSS = \
-    'http://sourceforge.net/export/rss2_projsummary.php?group_id=23067'
 PROJECT_VCS_RSS = \
     'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 TRANSLATIONS_RSS = \
@@ -99,23 +97,6 @@ TRANSLATION_STATS = 'http://l10n.cihar.com/exports/stats/phpmyadmin/master/'
 
 # URLS
 SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
-
-# RSS parsing
-SUMMARY_DEVS = re.compile(
-    r'Developers on project: ([0-9]*)'
-)
-SUMMARY_ACTIVITY = re.compile(
-    r'Activity percentile \(last week\): ([0-9.]*%)'
-)
-SUMMARY_LISTS = re.compile(
-    r'Mailing lists \(public\): ([0-9]*)'
-)
-SUMMARY_FORUMS = re.compile(
-    r'Discussion forums \(public\): ([0-9]*), containing ([0-9]*) messages'
-)
-SUMMARY_TRACKER = re.compile(
-    r'Tracker: (.*) \(([0-9]*) open/([0-9]*) total\)'
-)
 
 # Naming of versions
 VERSION_INFO = (
@@ -167,7 +148,6 @@ class SFGenerator(object):
             'rss_translations': TRANSLATIONS_RSS,
             'rss_news': PROJECT_NEWS_RSS,
             'rss_planet': PLANET_RSS,
-            'rss_summary': PROJECT_SUMMARY_RSS,
             'rss_security': '%s%ssecurity/index.xml' % (SERVER, BASE_URL),
             'rss_vcs': PROJECT_VCS_RSS,
             'screenshots': data.screenshots.SCREENSHOTS,
@@ -630,42 +610,6 @@ class SFGenerator(object):
 
         self.data['short_%s' % name] = self.data[name][:count]
 
-    def process_summary(self, feed):
-        '''
-        Reads summary feed and fills some useful information into data.
-        '''
-        helper.log.dbg('Processing summary feed...')
-        info = {}
-        links = {}
-        trackers = []
-        for entry in feed.entries:
-            if entry.title[:22] == 'Developers on project:':
-                match = SUMMARY_DEVS.match(entry.title)
-                info['developers'] = match.group(1)
-                links['developers'] = entry.link
-            elif entry.title[:13] == 'Mailing lists':
-                match = SUMMARY_LISTS.match(entry.title)
-                info['mailinglists'] = match.group(1)
-                links['mailinglists'] = entry.link
-            elif entry.title[:17] == 'Discussion forums':
-                match = SUMMARY_FORUMS.match(entry.title)
-                info['forums'] = match.group(1)
-                info['forumposts'] = match.group(2)
-                links['forums'] = entry.link
-            elif entry.title[:8] == 'Tracker:':
-                match = SUMMARY_TRACKER.match(entry.title)
-                trackers.append({
-                    'name': match.group(1),
-                    'open': match.group(2),
-                    'total': match.group(3),
-                    'description': entry.summary[21:],
-                    'link': entry.link,
-                })
-        self.data['info'] = info
-        self.data['links'] = links
-        trackers.sort(key=lambda x: x['name'])
-        self.data['trackers'] = trackers
-
     def get_menu(self, active):
         '''
         Returns list of menu entries with marked active one.
@@ -946,9 +890,6 @@ class SFGenerator(object):
 
         rss_ru = self.feeds.load('ru', RSS_RU)
         self.process_feed('news_ru', rss_ru)
-
-        rss_summary = self.feeds.load('summary', PROJECT_SUMMARY_RSS)
-        self.process_summary(rss_summary)
 
         self.get_translation_stats()
 

@@ -93,21 +93,13 @@ Thank you for your support!
 
 <p>
 <select name="os0">
-<!--
 	<option value="Platinum">Platinum : $10,000.00 USD - yearly</option>
--->
 	<option value="Gold">Gold : $5,000.00 USD - yearly</option>
-<!--
 	<option value="Silver">Silver : $2,500.00 USD - yearly</option>
--->
 	<option value="Bronze">Bronze : $1,000.00 USD - yearly</option>
-<!--
 	<option value="Platinum (monthly installments)">Platinum (monthly installments) : $1,000.00 USD - monthly</option>
--->
 	<option value="Gold (monthly installments)">Gold (monthly installments) : $500.00 USD - monthly</option>
-<!--
 	<option value="Silver (monthly installments)">Silver (monthly installments) : $250.00 USD - monthly</option>
--->
 	<option value="Bronze (monthly installments)">Bronze (monthly installments) : $100.00 USD - monthly</option>
 	<option value="Platinum + Gold">Platinum + Gold : $13,500.00 USD - yearly</option>
 	<option value="Platinum + Gold (monthly installments)">Platinum + Gold (monthly installments) : $1,350.00 USD - monthly</option>
@@ -133,6 +125,8 @@ The phpMyAdmin project is grateful to our technology partners for their services
 <a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a>
 &nbsp;&nbsp;&nbsp;
 <a href="http://browserstack.com"><img src="${server}${base_url}images/BrowserStackLogo.png" alt="BrowserStack" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="${server}${base_url}images/scrutinizer.png" alt="Scrutinizer" /></a>
 
 </div>
 

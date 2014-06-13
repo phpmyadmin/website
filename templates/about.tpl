@@ -1,6 +1,6 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
-<py:def function="page_rss">${rss_summary}</py:def>
+<py:def function="page_rss">${rss_news}</py:def>
 <py:def function="page_rss_title">phpMyAdmin project summary</py:def>
 
 <py:def function="page_title">About</py:def>
@@ -77,37 +77,7 @@ correctly spelled variant).
 
 <h2>Factoids</h2>
 
-<p>
-phpMyAdmin project currently has <a
-href="${links.developers}">${info.developers} developers</a>. Over the life of the
-project on SourceForge.net, users have wrote ${info.forumposts} posts into <a
-href="${links.forums}">${info.forums} forums</a> and discussed various topics
-in <a href="${links.mailinglists}">${info.mailinglists} mailing lists</a>.
-</p>
-
 <script type="text/javascript" src="http://www.ohloh.net/p/3344/widgets/project_factoids_stats.js"></script>
-
-<h2>Tracker Statistics</h2>
-
-<table class="graph sortable" id="sorttable">
-<thead>
-<tr>
-    <th class="forward_sort">Tracker</th>
-    <th>Description</th>
-    <th>Open issues</th>
-    <th>Total issues</th>
-</tr>
-</thead>
-
-<tbody>
-<tr py:for="tracker in trackers">
-<td class="name"><a href="${tracker.link}">${tracker.name}</a></td>
-<td class="name">${tracker.description}</td>
-<td class="size">${tracker.open}</td>
-<td class="size">${tracker.total}</td>
-</tr>
-</tbody>
-</table>
 
 </div>
 
