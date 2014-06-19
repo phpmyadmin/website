@@ -45,30 +45,39 @@
     <h3>References</h3>
     <p py:if="defined('announcement_references')">${announcement_references()}</p>
     <p py:if="defined('announcement_cve')">
-    Assigned CVE ids: 
+    Assigned CVE ids:
     <!--! This is a bit ugly expression and there must be better way to do
     this, but I haven't found it. -->
     <py:for each="cve in announcement_cve().next()[1].split(' ')">
-    <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=${cve}">${cve}</a> 
+    <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=${cve}">${cve}</a>
     </py:for>
     </p>
     <p py:if="defined('announcement_cwe')">
-    CWE ids: 
+    CWE ids:
     <!--! This is a bit ugly expression and there must be better way to do
     this, but I haven't found it. -->
     <py:for each="cwe in announcement_cwe().next()[1].split(' ')">
-    <a href="http://cwe.mitre.org/data/definitions/${cwe}.html">CWE-${cwe}</a> 
+    <a href="http://cwe.mitre.org/data/definitions/${cwe}.html">CWE-${cwe}</a>
     </py:for>
     </p>
     </py:if>
 
-    <py:if test="defined('announcement_commits') or defined('announcement_commits_2_11') or defined('announcement_commits_3_3') or defined('announcement_commits_3_4') or defined('announcement_commits_3_5')">
+    <py:if test="defined('announcement_commits') or defined('announcement_commits_2_11') or defined('announcement_commits_3_3') or defined('announcement_commits_3_4') or defined('announcement_commits_3_5') or defined('announcement_commits_4_1')">
     <h3>Patches</h3>
 
     <py:if test="defined('announcement_commits')">
     <p>The following commits have been made to fix this issue:</p>
     <ul>
     <py:for each="hash in announcement_commits().next()[1].strip().split('\n')">
+    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
+    </py:for>
+    </ul>
+    </py:if>
+
+    <py:if test="defined('announcement_commits_4_1')">
+    <p>The following commits have been made on the 4.1 branch to fix this issue:</p>
+    <ul>
+    <py:for each="hash in announcement_commits_4_1().next()[1].strip().split('\n')">
     <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
     </py:for>
     </ul>
