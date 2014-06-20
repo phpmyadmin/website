@@ -41,7 +41,7 @@ Upgrade to phpMyAdmin 4.1.15 or newer, or 4.2.4 or newer, or apply the patch lis
 Thanks to Chirayu Chiripal for reporting this vulnerability.
 </py:def>
 
-<py:def function="announcement_cve"></py:def>
+<py:def function="announcement_cve">CVE-2014-4349</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
