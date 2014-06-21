@@ -50,7 +50,7 @@ d4f754c937f9e2c0beadff5b2e38215dde1d6a79
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-504ef477281a95009187f97c356814ae921bdca4
+daa98d0c7ed24b529dc5df0d5905873acd0b00be
 </py:def>
 
 <xi:include href="_page.tpl" />
