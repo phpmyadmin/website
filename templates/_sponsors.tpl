@@ -3,6 +3,14 @@
 
 <div class="sponsors">
 
+<h3>Platinum sponsor</h3>
+
+<div><a href="http://www.navicat.com/"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a></div>
+
+<h3>Gold sponsor</h3>
+
+<div><a href="http://www.navicat.com/"><img src="${server}${base_url}images/navicat_250x130.jpg" alt="Navicat" /></a></div>
+
 <h3>Silver sponsors</h3>
 
 <div><a href="http://www.scriptcase.net/"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a></div>
