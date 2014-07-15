@@ -37,7 +37,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Sherbr
 
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
-<h4>Infrastructure and security coordinator</h4>
+<h4>Infrastructure coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
@@ -53,7 +53,7 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 
 <div class="floatbox vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
-<h4>Bug fixing coordinator</h4>
+<h4>Bug fixing and security coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/madhura.jpg" alt="Photo of Madhura Jayaratne" />
 <p>
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
