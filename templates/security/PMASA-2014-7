@@ -22,6 +22,7 @@ We consider this vulnerability to be non critical.
 
 <py:def function="announcement_mitigation">
 This vulnerability can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required pages.
+Moreover, the configuration storage must be set up for the user groups feature.
 </py:def>
 
 <py:def function="announcement_affected">
