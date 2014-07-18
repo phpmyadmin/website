@@ -38,7 +38,7 @@ Upgrade to phpMyAdmin 4.0.10.1 or newer, or 4.1.14.2 or newer, or 4.2.6 or newer
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Frans Rosén of <a href="https://detectify.com">detectify</a> for reporting this vulnerability.
+Thanks to Frans Ros&eacute;n of <a href="https://detectify.com">detectify</a> for reporting this vulnerability.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-4955</py:def>
