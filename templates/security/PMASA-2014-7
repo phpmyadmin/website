@@ -5,7 +5,7 @@ PMASA-2014-7
 </py:def>
 
 <py:def function="announcement_date">
-2014-07-?
+2014-07-17
 </py:def>
 
 <py:def function="announcement_summary">
@@ -46,15 +46,11 @@ Upgrade to phpMyAdmin 4.1.14.2 or newer, or 4.2.6 or newer, or apply the patch l
 <py:def function="announcement_cwe">661</py:def>
 
 <py:def function="announcement_commits">
-?
+395265e9937beb21134626c01a21f44b28e712e5
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-?
-</py:def>
-
-<py:def function="announcement_commits_4_0">
-?
+45550b8cff06ad128129020762f9b53d125a6934
 </py:def>
 
 <xi:include href="_page.tpl" />

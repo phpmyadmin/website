@@ -5,7 +5,7 @@ PMASA-2014-5
 </py:def>
 
 <py:def function="announcement_date">
-2014-07-?
+2014-07-17
 </py:def>
 
 <py:def function="announcement_summary">
@@ -50,11 +50,11 @@ Thanks to Frans Rosén of <a href="https://detectify.com">detectify</a> for repor
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-?
+511c596b175889b8e6b9c423e352ca64fa20af2b
 </py:def>
 
 <py:def function="announcement_commits_4_0">
-?
+1b5592435617fa1b9dd68e2dc263de64c69fdc8a
 </py:def>
 
 <xi:include href="_page.tpl" />
