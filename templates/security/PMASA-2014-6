@@ -1,0 +1,61 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2014-6
+</py:def>
+
+<py:def function="announcement_date">
+2014-07-17
+</py:def>
+
+<py:def function="announcement_summary">
+Multiple XSS in AJAX confirmation messages.
+</py:def>
+
+<py:def function="announcement_description">
+With a crafted column name it is possible to trigger an XSS when dropping the column in table structure page.
+With a crafted table name it is possible to trigger an XSS when dropping or truncating the table in table operations page.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+This vulnerability can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required pages.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 4.0.x (prior to 4.0.10.1), 4.1.x (prior to 4.1.14.2) and 4.2.x (prior to 4.2.6) are affected.
+</py:def>
+
+<!--! Optional section
+<py:def function="announcement_unaffected">
+</py:def>
+-->
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.10.1 or newer, or 4.1.14.2 or newer, or 4.2.6 or newer, or apply the patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+</py:def>
+
+<py:def function="announcement_cve">CVE-2014-4986</py:def>
+
+<py:def function="announcement_cwe">661 79</py:def>
+
+<py:def function="announcement_commits">
+29a1f56495a7d1d98da31a614f23c0819a606a4d
+</py:def>
+
+<py:def function="announcement_commits_4_1">
+cd5697027a2ee7e1f7d7000b23be6051cdb0516c
+</py:def>
+
+<py:def function="announcement_commits_4_0">
+a92753bd65e1f8b72c46ed3dda6c362628e0daf7
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>

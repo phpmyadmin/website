@@ -1,19 +1,19 @@
 <html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
 
 <py:def function="announcement_id">
-PMASA-2014-2
+PMASA-2014-4
 </py:def>
 
 <py:def function="announcement_date">
-2014-06-20
+2014-07-17
 </py:def>
 
 <py:def function="announcement_summary">
-Self-XSS due to unescaped HTML output in recent/favorite tables navigation.
+Self-XSS due to unescaped HTML output in database structure page.
 </py:def>
 
 <py:def function="announcement_description">
-When marking a crafted database or table name as favorite or having it in recent tables, it is possible to trigger an XSS.
+With a crafted table comment, it is possible to trigger an XSS in database structure page.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -21,11 +21,11 @@ We consider this vulnerability to be non critical.
 </py:def>
 
 <py:def function="announcement_mitigation">
-This vulnerability can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required form.
+This vulnerability can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required page.
 </py:def>
 
 <py:def function="announcement_affected">
-All versions since 4.2.0 and prior to 4.2.4 are affected.
+Versions 4.2.x (prior to 4.2.6) are affected.
 </py:def>
 
 <!--! Optional section
@@ -34,20 +34,19 @@ All versions since 4.2.0 and prior to 4.2.4 are affected.
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 4.2.4 or newer, or apply the patch listed below.
+Upgrade to phpMyAdmin 4.2.6 or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Madhura Jayaratne and Chirayu Chiripal for reporting this vulnerability.
+Thanks to Frans Ros&eacute;n of <a href="https://detectify.com">detectify</a> for reporting this vulnerability.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2014-4348</py:def>
+<py:def function="announcement_cve">CVE-2014-4954</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-cb7c703c03f656debcea2a16468bd53660fc888e
-d18a2dd9faad7e0e96df799b59e16ef587afb838
+57475371a5b515c83bfc1bb2efcdf3ddb14787ed
 </py:def>
 
 <xi:include href="_page.tpl" />
