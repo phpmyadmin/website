@@ -39,6 +39,7 @@ Upgrade to phpMyAdmin 4.1.14.2 or newer, or 4.2.6 or newer, or apply the patch l
 </py:def>
 
 <py:def function="announcement_references">
+Thanks to Chirayu Chiripal for reporting this vulnerability.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-4987</py:def>
