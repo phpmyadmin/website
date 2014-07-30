@@ -77,7 +77,7 @@ correctly spelled variant).
 
 <h2>Factoids</h2>
 
-<script type="text/javascript" src="http://www.ohloh.net/p/3344/widgets/project_factoids_stats.js"></script>
+<script type="text/javascript" src="http://www.openhub.net/p/3344/widgets/project_factoids_stats.js"></script>
 
 </div>
 

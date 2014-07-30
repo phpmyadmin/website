@@ -27,7 +27,7 @@ being translated into
 <a href="http://www.phpmyadmin.net/home_page/translations.php">72 languages</a>
 by the community.
 By lines of code, the project has grown from 13,496 to 508,761
-lines<sup><a href="#ohloh">1</a></sup>.
+lines<sup><a href="#openhub">1</a></sup>.
 </p>
  
 <p>Please join us in celebrating fifteen years of phpMyAdmin! Please send us your
@@ -41,13 +41,13 @@ or by:
 </p>
 
 <p>
-By the numbers<sup><a href="#ohloh">1</a></sup>:
+By the numbers<sup><a href="#openhub">1</a></sup>:
 <ul>
 <li>Codebase size: 508,761 lines</li>
 <li>Number of overall contributors: 669</li>
 <li>Members of development team: 9</li>
-<li><a href="http://www.ohloh.net/p/phpmyadmin/estimated_cost">Estimated effort</a>: 136 person-years</li>
-<li><a href="http://www.ohloh.net/p/phpmyadmin/estimated_cost">Estimated cost:</a>: $7,485,316</li>
+<li><a href="http://www.openhub.net/p/phpmyadmin/estimated_cost">Estimated effort</a>: 136 person-years</li>
+<li><a href="http://www.openhub.net/p/phpmyadmin/estimated_cost">Estimated cost:</a>: $7,485,316</li>
 <li>Number of translations: 72</li>
 </ul>
 </p>
@@ -62,8 +62,8 @@ this <a href="https://sourceforge.net/potm/potm-2002-12.php">SourceForge Project
 from 2002.
 </p>
 
-<p name="ohloh">
-<sup>1</sup> &#8211; These analyses provided by <a href="http://www.ohloh.net/p/phpmyadmin">Ohloh</a> by Black Duck.
+<p name="openhub">
+<sup>1</sup> &#8211; These analyses provided by <a href="http://www.openhub.net/p/phpmyadmin">Open HUB</a> by Black Duck.
 </p>
  
 </div>
