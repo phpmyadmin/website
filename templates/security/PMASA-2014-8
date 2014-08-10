@@ -9,12 +9,12 @@ PMASA-2014-8
 </py:def>
 
 <py:def function="announcement_summary">
-Multiple XSS vulnerabilities in browse table, enum editor, monitor and query charts pages
+Multiple XSS vulnerabilities in browse table, ENUM editor, monitor and query charts pages
 </py:def>
 
 <py:def function="announcement_description">
 With a crafted database, table or a primary/unique key column name it is possible to trigger an XSS when dropping a row from the table.
-With a crafted column name it is possible to trigger an XSS in the enum editor dialog.
+With a crafted column name it is possible to trigger an XSS in the ENUM editor dialog.
 With a crafted variable name or a crafted value for unit field it is possible to trigger a self-XSS when adding a new chart in the monitor page.
 With a crafted value for x-axis label it is possible to trigger a self-XSS in the query chart page.
 </py:def>
@@ -28,7 +28,7 @@ These vulnerabilities can be triggered only by someone who is logged in to phpMy
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 4.0.x (prior to 4.0.10.2), 4.1.x (prior to 4.1.14.3) and 4.2.x (prior to 4.2.8) are affected.
+Versions 4.0.x (prior to 4.0.10.2), 4.1.x (prior to 4.1.14.3) and 4.2.x (prior to 4.2.7.1) are affected.
 </py:def>
 
 <!--! Optional section
@@ -37,7 +37,7 @@ Versions 4.0.x (prior to 4.0.10.2), 4.1.x (prior to 4.1.14.3) and 4.2.x (prior t
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 4.0.10.2 or newer, or 4.1.14.3 or newer, or 4.2.8 or newer, or apply the patches listed below.
+Upgrade to phpMyAdmin 4.0.10.2 or newer, or 4.1.14.3 or newer, or 4.2.7.1 or newer, or apply the patches listed below.
 </py:def>
 
 <py:def function="announcement_references">
