@@ -252,7 +252,7 @@ class SFGenerator(object):
         elif version[:3] == '4.0':
             text = (
                 'Older version compatible with PHP 5.2 and MySQL 5. ' +
-                'Supported for security fixes only, until Jan 1, 2015.'
+                'Supported for security fixes only, until Jan 1, 2017.'
             )
         text += self.get_version_suffix(version)
 
