@@ -9,7 +9,7 @@ PMASA-2014-8
 </py:def>
 
 <py:def function="announcement_summary">
-Multiple XSS vulnerabilities in browse table, ENUM editor, monitor and query charts pages
+Multiple XSS vulnerabilities in browse table, ENUM editor, monitor, query charts and table relations pages
 </py:def>
 
 <py:def function="announcement_description">
@@ -17,6 +17,7 @@ With a crafted database, table or a primary/unique key column name it is possibl
 With a crafted column name it is possible to trigger an XSS in the ENUM editor dialog.
 With a crafted variable name or a crafted value for unit field it is possible to trigger a self-XSS when adding a new chart in the monitor page.
 With a crafted value for x-axis label it is possible to trigger a self-XSS in the query chart page.
+With a crafted relation name it is possible to trigger an XSS in table relations page.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -41,6 +42,7 @@ Upgrade to phpMyAdmin 4.0.10.2 or newer, or 4.1.14.3 or newer, or 4.2.7.1 or new
 </py:def>
 
 <py:def function="announcement_references">
+Thanks to Ashutosh Dhundhara for reporting the vulnerability in table relations page.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-?</py:def>
@@ -66,6 +68,7 @@ Upgrade to phpMyAdmin 4.0.10.2 or newer, or 4.1.14.3 or newer, or 4.2.7.1 or new
 0433d463b6c05ea7b1080995414268fe0a449b00
 3668255202062dd7d60bff70236302084e73fc11
 03b92aa6e923f2b4a54b298cc0042548ff7ba89b
+098caf93b63d4928e4df53310222c8727d0be9fe
 </py:def>
 
 <xi:include href="_page.tpl" />
