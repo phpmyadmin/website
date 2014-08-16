@@ -45,7 +45,7 @@ Upgrade to phpMyAdmin 4.0.10.2 or newer, or 4.1.14.3 or newer, or 4.2.7.1 or new
 Thanks to Ashutosh Dhundhara for reporting the vulnerability in table relations page.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2014-?</py:def>
+<py:def function="announcement_cve">CVE-2014-5273</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
