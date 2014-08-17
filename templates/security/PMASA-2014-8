@@ -5,7 +5,7 @@ PMASA-2014-8
 </py:def>
 
 <py:def function="announcement_date">
-2014-08-?
+2014-08-17
 </py:def>
 
 <py:def function="announcement_summary">
@@ -50,17 +50,19 @@ Thanks to Ashutosh Dhundhara for reporting the vulnerability in table relations 
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-?
-?
-?
-?
+647c9d12e33a6b64e1c3ff7487f72696bdf2dccb
+2c45d7caa614afd71dbe3d0f7270f51ce5569614
+cd9f302bf7f91a160fe7080f9a612019ef847f1c
+90ddeecf60fc029608b972e490b735f3a65ed0cb
+3ffc967fb60cf2910cc2f571017e977558c67821
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-?
-?
-?
-?
+2d394521197f81dce0d9529b2d86ed24760b5b2a
+1956420ddab0595016ba2b3af89f7f82d39f5afa
+69f746b7dc09f7b1a18b09de0b5cd71f0bcd0a3d
+bbd20b54864a389c7a0cd2c4d4715f00b81a03e9
+5519905a2519d9a102b172432448c7e91d5601a6
 </py:def>
 
 <py:def function="announcement_commits_4_0">
