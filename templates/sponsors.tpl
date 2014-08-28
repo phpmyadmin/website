@@ -30,6 +30,9 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <h3>Bronze sponsors</h3>
 <a href="http://www.aoe.com/"><img src="${server}${base_url}images/aoe.jpg" alt="AOE" /></a>
+&nbsp;
+&nbsp;
+<a href="http:/Certs4Less.com/"><img src="${server}${base_url}images/certs4less_250x68.jpg" alt="Certs4Less" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
