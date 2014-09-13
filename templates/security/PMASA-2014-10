@@ -1,0 +1,52 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2014-10
+</py:def>
+
+<py:def function="announcement_date">
+2014-09-?
+</py:def>
+
+<py:def function="announcement_summary">
+XSRF/CSRF due to DOM based XSS in the micro history feature
+</py:def>
+
+<py:def function="announcement_description">
+By deceiving a logged in user to click on a crafted URL, it is possible to perform remote code execution and in some cases, create a root account due to a DOM based XSS vulnerability in micro history feature.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be critical.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 4.0.x (prior to 4.0.10.3), 4.1.x (prior to 4.1.14.3) and 4.2.x (prior to 4.2.8.1) are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.10.3 or newer, or 4.1.14.4 or newer, or 4.2.8.1 or newer, or apply the patches listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Olivier Beg (<a href="http://www.olivierbeg.nl">http://www.olivierbeg.nl</a>) for reporting the vulnerability.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2014-6300</py:def>
+
+<py:def function="announcement_cwe">661 352</py:def>
+
+<py:def function="announcement_commits">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_1">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_0">
+?
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
