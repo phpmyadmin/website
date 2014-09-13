@@ -13,7 +13,7 @@ XSRF/CSRF due to DOM based XSS in the micro history feature
 </py:def>
 
 <py:def function="announcement_description">
-By deceiving a logged in user to click on a crafted URL, it is possible to perform remote code execution and in some cases, create a root account due to a DOM based XSS vulnerability in micro history feature.
+By deceiving a logged-in user to click on a crafted URL, it is possible to perform remote code execution and in some cases, create a root account due to a DOM based XSS vulnerability in the micro history feature.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -21,7 +21,7 @@ We consider this vulnerability to be critical.
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 4.0.x (prior to 4.0.10.3), 4.1.x (prior to 4.1.14.3) and 4.2.x (prior to 4.2.8.1) are affected.
+Versions 4.0.x (prior to 4.0.10.3), 4.1.x (prior to 4.1.14.4) and 4.2.x (prior to 4.2.8.1) are affected.
 </py:def>
 
 <py:def function="announcement_solution">
