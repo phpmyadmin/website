@@ -147,6 +147,18 @@ He lives in <span class="country">India</span>.
 </p>
 </div>
 
+<div class="floatbox vcard" id="smita">
+<h3 class="fn">Smita Kumari</h3>
+<h4>Developer</h4>
+<img class="head photo" src="${server}${base_url}images/heads/smita.jpg" alt="Photo of Smita Kumari" width="101" height="84" />
+<p>
+Smita started her open source journey with <span class="org">phpMyAdmin</span> from December, 2013 and took part in Google Summer of Code 2014. Most of her contributions are in bug fixes and a few feature implementations. She worked on automated normalization and the central list of columns as part of GSoC project.  As part of phpMyAdmin team, she would like to focus mostly on server-side bug fixing and developments. 
+</p>
+<p>
+She lives in <span class="country">India</span>.
+</p>
+</div>
+
 <div class="clearer"></div>
 
 <h2>Team meetings</h2>
