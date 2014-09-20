@@ -59,7 +59,7 @@ has won every year the SourceForge.net Community Choice Awards as &quot;Best Too
 </p>
 
 <p>
-phpMyAdmin is a fifteen-year-old project with a stable and flexible code
+phpMyAdmin is a sixteen-year-old project with a stable and flexible code
 base; you can find out more about the <a href="${base_url}about.${file_ext}">project and its history</a>. When the project turned 15, we published a <a href="${base_url}15-years.${file_ext}">celebration page</a>.
 
 </p>
