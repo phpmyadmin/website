@@ -5,7 +5,7 @@ PMASA-2014-11
 </py:def>
 
 <py:def function="announcement_date">
-2014-09-?
+2014-10-?
 </py:def>
 
 <py:def function="announcement_summary">
@@ -13,7 +13,7 @@ XSS vulnerabilities in table search and table structure pages.
 </py:def>
 
 <py:def function="announcement_description">
-With a crafted enum value it is possible to trigger an XSS in table search and table structure pages.
+With a crafted ENUM value it is possible to trigger an XSS in table search and table structure pages.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -41,7 +41,7 @@ Upgrade to phpMyAdmin 4.0.10.4 or newer, or 4.1.14.5 or newer, or 4.2.9.1 or new
 Thanks to Ashutosh Dhundhara for reporting this vulnerability.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2014-?</py:def>
+<py:def function="announcement_cve">CVE-2014-7217</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
