@@ -5,7 +5,7 @@ PMASA-2014-11
 </py:def>
 
 <py:def function="announcement_date">
-2014-10-?
+2014-10-01
 </py:def>
 
 <py:def function="announcement_summary">
@@ -46,11 +46,12 @@ Thanks to Ashutosh Dhundhara for reporting this vulnerability.
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-?
+c1a3f85fbd1a9569646e7cf1b791325ae82c7961
+304fb2b645b36a39e03b954fdbd567173ebe6448
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-?
+71ccbbc423bcfd14ba40174b3adcd9a0fafaa511
 </py:def>
 
 <py:def function="announcement_commits_4_0">
