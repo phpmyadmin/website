@@ -86,14 +86,14 @@ PROJECT_NEWS_RSS = \
 PROJECT_VCS_RSS = \
     'http://github.com/phpmyadmin/phpmyadmin/commits/master.atom'
 TRANSLATIONS_RSS = \
-    'https://l10n.cihar.com/exports/rss/phpmyadmin/'
+    'https://hosted.weblate.org/exports/rss/phpmyadmin/'
 PLANET_RSS = \
     'http://planet.phpmyadmin.net/rss20.xml'
 RSS_RU = \
     'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
-TRANSLATION_STATS = 'http://l10n.cihar.com/exports/stats/phpmyadmin/master/'
+TRANSLATION_STATS = 'http://hosted.weblate.org/exports/stats/phpmyadmin/master/'
 
 # URLS
 SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
