@@ -5,7 +5,7 @@ PMASA-2014-12
 </py:def>
 
 <py:def function="announcement_date">
-2014-10-2?
+2014-10-21
 </py:def>
 
 <py:def function="announcement_summary">
@@ -13,7 +13,7 @@ XSS vulnerabilities in SQL debug output and server monitor page.
 </py:def>
 
 <py:def function="announcement_description">
-With a crafted database or table name it is possible to trigger and XSS in SQL debug output when enabled and in server monitor page when viewing and analysing executed queries.
+With a crafted database or table name it is possible to trigger an XSS in SQL debug output when enabled and in server monitor page when viewing and analysing executed queries.
 </py:def>
 
 <py:def function="announcement_severity">
@@ -43,11 +43,13 @@ Upgrade to phpMyAdmin 4.0.10.5 or newer, or 4.1.14.6 or newer, or 4.2.10.1 or ne
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-?
+bd68c54d1beeef79d237e8bfda44690834012a76
+7b8962dede7631298c81e2c1cd267b81f1e08a8c
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-?
+f989e2a94cb75158d33330e0e29f9b54ce3d7c07
+0092f608d37d0ce7acea30ec9e7e995ef1a6e06c
 </py:def>
 
 <py:def function="announcement_commits_4_0">
