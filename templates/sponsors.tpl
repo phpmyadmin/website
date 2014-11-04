@@ -36,6 +36,9 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 &nbsp;
 &nbsp;
 <a href="http://www.shimply.com/"><img src="${server}${base_url}images/shimply250x70.png" alt="Shimply" /></a>
+&nbsp;
+&nbsp;
+<a href="http://www.hostoople.com/"><img src="${server}${base_url}images/hostoople_250x70.png" alt="Hostoople" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
