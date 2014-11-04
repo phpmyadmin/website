@@ -16,9 +16,9 @@ used).
 <p>
 You are welcome to contribute to any translations, you can follow instructions
 on <a href="${base_url}translate.${file_ext}">translators page</a>.
-Or simply go to the <a href="https://l10n.cihar.com/engage/phpmyadmin/">translation server</a>
+Or simply go to the <a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>
 and translate there in project <a
-href="https://l10n.cihar.com/engage/phpmyadmin/">phpMyAdmin</a>.
+href="https://hosted.weblate.org/engage/phpmyadmin/">phpMyAdmin</a>.
 The translation server also provides you overview of translation status.
 </p>
 
