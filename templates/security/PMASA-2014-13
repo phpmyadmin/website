@@ -13,7 +13,7 @@ XSS vulnerabilities in table print view and zoom search page.
 </py:def>
 
 <py:def function="announcement_description">
-With a crafted enum value it is possible to trigger XSS attacks in table print view and zoom search page.
+With a crafted ENUM value it is possible to trigger XSS attacks in table print view and zoom search page.
 </py:def>
 
 <py:def function="announcement_severity">
