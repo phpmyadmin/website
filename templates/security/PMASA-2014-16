@@ -1,0 +1,57 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2014-16
+</py:def>
+
+<py:def function="announcement_date">
+2014-11-?
+</py:def>
+
+
+<py:def function="announcement_summary">
+Leakage of line count of an arbitrary file.
+</py:def>
+
+
+<py:def function="announcement_description">
+In the error reporting feature, a parameter specifying the file was not correcly validated, allowing the attacker to derive the line count of an arbitrary file.
+</py:def>
+
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+This vulnerability can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required page.
+</py:def>
+
+
+<py:def function="announcement_affected">
+Versions 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.?) are affected.
+</py:def>
+
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.1.14.7 or newer, or 4.2.? or newer, or apply the patch listed below. 
+</py:def>
+
+<py:def function="announcement_references">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_1">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_0">
+da44dd4fd7432b915203e3e723a4534a01c12cd9
+</py:def>
+
+<py:def function="announcement_cve">CVE-2014-?</py:def>
+
+<py:def function="announcement_cwe">661 23</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
