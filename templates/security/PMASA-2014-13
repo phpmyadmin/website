@@ -9,23 +9,24 @@ PMASA-2014-13
 </py:def>
 
 <py:def function="announcement_summary">
-XSS vulnerabilities in table print view and zoom search page.
+Multiple XSS vulnerabilities.
 </py:def>
 
 <py:def function="announcement_description">
-With a crafted ENUM value it is possible to trigger XSS attacks in table print view and zoom search page.
+With a crafted database, table or column name it is possible to trigger an XSS attack in table browse page.
+With a crafted ENUM value it is possible to trigger XSS attacks in table print view and zoom search pages.
 </py:def>
 
 <py:def function="announcement_severity">
-We consider this vulnerability to be non critical.
+We consider this vulnerabilities to be non critical.
 </py:def>
 
 <py:def function="announcement_mitigation">
-This vulnerability can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required pages.
+These vulnerabilities can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required pages.
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 4.0.x (prior to 4.0.10.6), 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.12) are affected.
+Versions 4.0.x (prior to 4.0.10.6), 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.?) are affected.
 </py:def>
 
 <!--! Optional section
@@ -34,7 +35,7 @@ Versions 4.0.x (prior to 4.0.10.6), 4.1.x (prior to 4.1.14.7) and 4.2.x (prior t
 -->
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.12 or newer, or apply the patch listed below.
+Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.? or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-?</py:def>
@@ -50,6 +51,7 @@ Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.12 or newe
 </py:def>
 
 <py:def function="announcement_commits_4_0">
+c5783321cd387d0b65b32cf399766f08a9acad68
 42b64e12b5f596366f94ef72365fd69a019ba820
 58cdd91fc83703a1ab645764fb3708e8e0b7c4a2
 </py:def>
