@@ -13,8 +13,17 @@ Multiple XSS vulnerabilities.
 </py:def>
 
 <py:def function="announcement_description">
-With a crafted database, table or column name it is possible to trigger an XSS attack in table browse page.
-With a crafted ENUM value it is possible to trigger XSS attacks in table print view and zoom search pages.
+<ul>
+    <li>
+        With a crafted database, table or column name it is possible to trigger an XSS attack in table browse page.
+    </li>
+    <li>
+        With a crafted ENUM value it is possible to trigger XSS attacks in table print view and zoom search pages.
+    </li>
+    <li>
+        With a crafted value for font size it is possible to trigger an XSS attack in the home page.
+    </li>
+</ul>
 </py:def>
 
 <py:def function="announcement_severity">
@@ -23,6 +32,7 @@ We consider this vulnerabilities to be non critical.
 
 <py:def function="announcement_mitigation">
 These vulnerabilities can be triggered only by someone who is logged in to phpMyAdmin, as the usual token protection prevents non-logged-in users from accessing the required pages.
+Moreover, exploitation of the XSS vulnerability related to the font size requires forgery of pma_fontsize cookie.
 </py:def>
 
 <py:def function="announcement_affected">
@@ -54,6 +64,7 @@ Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.? or newer
 c5783321cd387d0b65b32cf399766f08a9acad68
 42b64e12b5f596366f94ef72365fd69a019ba820
 58cdd91fc83703a1ab645764fb3708e8e0b7c4a2
+c7685e5acd3f8e722f4f374c6fa821590865b68d
 </py:def>
 
 <xi:include href="_page.tpl" />
