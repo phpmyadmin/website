@@ -38,20 +38,20 @@ Upgrade to phpMyAdmin 4.1.14.7 or newer, or 4.2.? or newer, or apply the patch l
 </py:def>
 
 <py:def function="announcement_references">
-?
-</py:def>
-
-<py:def function="announcement_commits_4_1">
-?
-</py:def>
-
-<py:def function="announcement_commits_4_0">
-da44dd4fd7432b915203e3e723a4534a01c12cd9
+Thanks to Johannes Dahse (<a href="https://twitter.com/FluxReiners">https://twitter.com/FluxReiners</a>) for reporting this vulnerability.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-?</py:def>
 
 <py:def function="announcement_cwe">661 23</py:def>
+
+<py:def function="announcement_commits">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_1">
+da44dd4fd7432b915203e3e723a4534a01c12cd9
+</py:def>
 
 <xi:include href="_page.tpl" />
 </html>

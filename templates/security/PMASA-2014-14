@@ -38,6 +38,14 @@ Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.? or newer
 </py:def>
 
 <py:def function="announcement_references">
+Thanks to Johannes Dahse (<a href="https://twitter.com/FluxReiners">https://twitter.com/FluxReiners</a>) for reporting this vulnerability.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2014-?</py:def>
+
+<py:def function="announcement_cwe">661 98</py:def>
+
+<py:def function="announcement_commits">
 ?
 </py:def>
 
@@ -48,10 +56,6 @@ Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.? or newer
 <py:def function="announcement_commits_4_0">
 2e3f0b9457b3c8f78beb864120bd9d55617a11b5
 </py:def>
-
-<py:def function="announcement_cve">CVE-2014-?</py:def>
-
-<py:def function="announcement_cwe">661 98</py:def>
 
 <xi:include href="_page.tpl" />
 </html>
