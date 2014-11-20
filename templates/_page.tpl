@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="${base_url}css/slimbox.css" media="screen" />
   <link rel="shortcut icon" href="${base_url}favicon.ico" type="image/x-icon" />
   <link rel="icon" href="${base_url}favicon.ico" type="image/x-icon" />
+  <meta property="og:image" content="${base_url}images/logo.png" />
   <link rel="vcs-git" href="git://github.com/phpmyadmin/phpmyadmin.git" title="phpMyAdmin Git repository" />
   <link rel="vcs-browse" href="http://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />
   <link href="https://plus.google.com/112870346549275765217/" rel="publisher" />
