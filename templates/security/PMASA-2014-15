@@ -13,7 +13,7 @@ XSS vulnerability in error reporting functionality.
 </py:def>
 
 <py:def function="announcement_description">
-With a crefted file name it is possible to trigger an XSS in the error reporting page.
+With a crafted file name it is possible to trigger an XSS in the error reporting page.
 </py:def>
 
 <py:def function="announcement_severity">
