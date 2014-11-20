@@ -15,7 +15,7 @@ Leakage of line count of an arbitrary file.
 
 
 <py:def function="announcement_description">
-In the error reporting feature, a parameter specifying the file was not correcly validated, allowing the attacker to derive the line count of an arbitrary file.
+In the error reporting feature, a parameter specifying the file was not correctly validated, allowing the attacker to derive the line count of an arbitrary file.
 </py:def>
 
 
