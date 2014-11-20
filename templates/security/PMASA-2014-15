@@ -5,7 +5,7 @@ PMASA-2014-15
 </py:def>
 
 <py:def function="announcement_date">
-2014-11-?
+2014-11-20
 </py:def>
 
 <py:def function="announcement_summary">
@@ -37,12 +37,12 @@ Upgrade to 4.1.14.7 or newer, or 4.2.12 or newer, or apply the patch listed belo
 Thanks to Johannes Dahse (<a href="https://twitter.com/FluxReiners">https://twitter.com/FluxReiners</a>) for reporting this vulnerability.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2014-?</py:def>
+<py:def function="announcement_cve">CVE-2014-8960</py:def>
 
 <py:def function="announcement_cwe">661 79</py:def>
 
 <py:def function="announcement_commits">
-?
+9364e2eee5681681caf7205c0933bc18af11e233
 </py:def>
 
 <py:def function="announcement_commits_4_1">
