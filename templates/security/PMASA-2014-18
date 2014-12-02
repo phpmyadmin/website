@@ -23,11 +23,6 @@ With a crafted URL it was possible to trigger an XSS in the redirection mechanis
 We consider this vulnerability to be non critical.
 </py:def>
 
-<py:def function="announcement_mitigation">
-?
-</py:def>
-
-
 <py:def function="announcement_affected">
 Versions 4.2.x (prior to 4.2.13.1) are affected.
 </py:def>
