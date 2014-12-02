@@ -17,11 +17,11 @@ With very long passwords it was possible to initiate a denial of service attack 
 </py:def>
 
 <py:def function="announcement_severity">
-We consider this vulnerability to be ?.
+We consider this vulnerability to be serious.
 </py:def>
 
 <py:def function="announcement_mitigation">
-?
+This vulnerability can be mitigated by configuring throttling in the webserver.
 </py:def>
 
 <py:def function="announcement_affected">
