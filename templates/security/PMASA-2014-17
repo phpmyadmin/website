@@ -1,0 +1,57 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2014-17
+</py:def>
+
+<py:def function="announcement_date">
+2014-12-?
+</py:def>
+
+<py:def function="announcement_summary">
+DoS vulnerability with long passwords.
+</py:def>
+
+<py:def function="announcement_description">
+With very long passwords it was possible to initiate a denial of service attack on phpMyAdmin.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be ?.
+</py:def>
+
+<py:def function="announcement_mitigation">
+?
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 4.0.x (prior to 4.0.10.7), 4.1.x (prior to 4.1.14.8) and 4.2.x (prior to 4.2.13.1) are affected.
+</py:def>
+
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.10.7 or newer, or 4.1.14.8 or newer, or 4.2.13.1 or newer, or apply the patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+?
+</py:def>
+
+<py:def function="announcement_cve">CVE-2014-?</py:def>
+
+<py:def function="announcement_cwe">661 400</py:def>
+
+<py:def function="announcement_commits">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_1">
+?
+</py:def>
+
+<py:def function="announcement_commits_4_0">
+095729d81205f15f40d216d25917017da4c2fff8
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
