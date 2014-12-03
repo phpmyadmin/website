@@ -37,16 +37,16 @@ Upgrade to phpMyAdmin 4.0.10.7 or newer, or 4.1.14.8 or newer, or 4.2.13.1 or ne
 ?
 </py:def>
 
-<py:def function="announcement_cve">CVE-2014-?</py:def>
+<py:def function="announcement_cve">CVE-2014-9218</py:def>
 
 <py:def function="announcement_cwe">661 400</py:def>
 
 <py:def function="announcement_commits">
-?
+1ac863c7573d12012374d5d41e5c7dc5505ea6e1
 </py:def>
 
 <py:def function="announcement_commits_4_1">
-?
+62b2c918d26cc78d1763945e3d44d1a63294a819
 </py:def>
 
 <py:def function="announcement_commits_4_0">
