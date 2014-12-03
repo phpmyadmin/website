@@ -5,7 +5,7 @@ PMASA-2014-18
 </py:def>
 
 <py:def function="announcement_date">
-2014-12-?
+2014-12-03
 </py:def>
 
 
@@ -33,7 +33,7 @@ Upgrade to phpMyAdmin 4.2.13.1 or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
-Thanks to Manuel Fernández of <a href="https://www.elevenpaths.com/">ElevenPaths</a> for reporting this vulnerability.
+Thanks to Manuel Fernandez of <a href="https://www.elevenpaths.com/">ElevenPaths</a> for reporting this vulnerability.
 </py:def>
 
 <py:def function="announcement_cve">CVE-2014-9219</py:def>
