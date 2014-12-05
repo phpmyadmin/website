@@ -56,7 +56,7 @@ import data.sitemap
 FILES_REGEXP = re.compile(r'.*all-languages\.(zip).*')
 BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
-LISTED_BRANCHES = set(('4.0', '4.1', '4.2'))
+LISTED_BRANCHES = set(('4.0', '4.1', '4.2', '4.3'))
 TESTING_REGEXP = re.compile(r'.*(beta|alpha|rc).*')
 
 # List of extensions allowed in downloads
@@ -240,10 +240,12 @@ class SFGenerator(object):
                 'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
             )
-        elif version[:3] == '4.3':
+        elif version[:3] == '4.4':
             text = 'Development version compatible with PHP 5.3 and MySQL 5.5.'
-        elif version[:3] == '4.2':
+        elif version[:3] == '4.3':
             text = 'Current version compatible with PHP 5.3 and MySQL 5.5.'
+        elif version[:3] == '4.2':
+            text = 'Older version compatible with PHP 5.3 and MySQL 5.5.'
         elif version[:3] == '4.1':
             text = (
                 'Older version compatible with PHP 5.3 and MySQL 5.5.' +
