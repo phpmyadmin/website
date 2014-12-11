@@ -80,7 +80,7 @@ STATIC = './static'
 
 # Generic sourceforge.net part
 PROJECT_FILES_RSS = \
-    'http://sourceforge.net/api/file/index/project-id/23067/rss'
+    'https://sourceforge.net/projects/phpmyadmin/rss?path=/'
 PROJECT_NEWS_RSS = \
     'https://sourceforge.net/p/phpmyadmin/news/feed'
 PROJECT_VCS_RSS = \
