@@ -21,8 +21,8 @@
   <meta property="og:title" content="phpMyAdmin" />
 </py:if>
   <meta property="og:site_name" content="phpMyAdmin" />
-  <meta property="og:image" content="${server}${base_url}images/logo.png" />
-  <link rel="image_src" href="${base_url}images/logo.png" />
+  <meta property="og:image" content="${server}${base_url}images/logo-og.png" />
+  <link rel="image_src" href="${server}${base_url}images/logo-og.png" />
   <link rel="vcs-git" href="git://github.com/phpmyadmin/phpmyadmin.git" title="phpMyAdmin Git repository" />
   <link rel="vcs-browse" href="http://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />
   <link href="https://plus.google.com/112870346549275765217/" rel="publisher" />
