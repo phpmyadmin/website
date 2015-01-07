@@ -171,21 +171,18 @@ class FeedCache(URLCache):
         self.dbg('Downloading and parsing %s feed...' % name)
         self.dbg('URL: %s' % url)
         cache = 'feed-%s' % name
-        try:
-            result = self.get(cache)
-        except NoCache:
-            data = super(FeedCache, self).load(name, url)
-            result = feedparser.parse(data.strip())
-            if result.bozo == 1:
-                self.warn(
-                    'Feed %s is invalid: %s' %
-                    (url, str(result.bozo_exception))
-                )
-                try:
-                    result = self.force_get(cache)
-                    self.dbg('Using old cached version for %s' % cache)
-                except:
-                    raise result.bozo_exception
-            else:
-                self.set(cache, result)
+        data = super(FeedCache, self).load(name, url)
+        result = feedparser.parse(data.strip())
+        if result.bozo == 1:
+            self.warn(
+                'Feed %s is invalid: %s' %
+                (url, str(result.bozo_exception))
+            )
+            try:
+                result = self.force_get(cache)
+                self.dbg('Using old cached version for %s' % cache)
+            except:
+                raise result.bozo_exception
+        else:
+            self.set(cache, result)
         return result
