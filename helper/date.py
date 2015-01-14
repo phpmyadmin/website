@@ -38,4 +38,4 @@ class DateTime(datetime.datetime):
         return dateutil.parser.parse(text, default=default)
 
     def __str__(self):
-        return self.strftime('%a, %d %b %Y')
+        return self.datestring()
