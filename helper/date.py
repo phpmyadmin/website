@@ -30,9 +30,6 @@ class DateTime(datetime.datetime):
     def datestring(self):
         return self.strftime('%Y-%m-%d')
 
-    def datetimestring(self):
-        return self.strftime('%a, %d %b %Y %H:%M:%S GMT')
-
     @staticmethod
     def parse(text):
         default = DateTime.now().replace(
@@ -41,4 +38,4 @@ class DateTime(datetime.datetime):
         return dateutil.parser.parse(text, default=default)
 
     def __str__(self):
-        return self.datetimestring()
+        return self.strftime('%a, %d %b %Y')
