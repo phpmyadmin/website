@@ -114,7 +114,7 @@ base; you can find out more about the <a href="${base_url}about.${file_ext}">pro
     <h2 class="entry-title"><a href="${base_url}news.${file_ext}">Latest News</a></h2>
     <ul>
     <li py:for="item in short_news">
-        <a href="${base_url}news.${file_ext}#${item.anchor}">${item.title}</a> (${item.date})
+        <a href="${base_url}news.${file_ext}#${item.anchor}">${item.date}: ${item.title}</a>
     </li>
     </ul>
     <p class="signature"><a href="${base_url}news.${file_ext}">...more news.</a></p>
@@ -124,7 +124,7 @@ base; you can find out more about the <a href="${base_url}about.${file_ext}">pro
     <h2 class="entry-title"><a href="http://planet.phpmyadmin.net/">Latest Posts in Developers Blogs</a></h2>
     <ul>
     <li py:for="item in short_blogs">
-        <a href="${item.link}">${item.title}</a> (${item.date})
+        <a href="${item.link}">${item.date}: ${item.title}</a>
     </li>
     </ul>
     <p class="signature"><a href="http://planet.phpmyadmin.net/">...more blogs.</a></p>
