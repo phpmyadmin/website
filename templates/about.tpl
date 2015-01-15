@@ -31,37 +31,32 @@ development in 2001.
 <h2>Milestone releases</h2>
 
 <ul>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_0.9.0">0.9.0</a> (September 9, 1998): First internal release.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.1.0">1.1.0</a> (November 3, 1998): Added first confirmations for DROP commands.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.2.0">1.2.0</a> (November 29, 1998): Added possibility to import from text files.</li>
-
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.3.0">1.3.0</a> (December 16, 1998): Added query by example functionality.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.3.1">1.3.1</a> (December 27, 1998): First multi-lingual version.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.4.0">1.4.0</a> (January 16, 1999): Added support for renaming and copying tables.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.0.0">2.0.0</a> (April 11, 1999): Major layout changes.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.1.0">2.1.0</a> (June 8, 2000): Last release by the original developer Tobias Ratschiller.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.2.0">2.2.0</a> (August 31, 2001): First stable release made by the phpMyAdmin project.</li>
-
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.3.0">2.3.0</a> (November 8, 2001): Database and table views were split into smaller sections.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.5.0">2.5.0</a> (November 5, 2003): Introduction of the MIME-based transformation system.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.6.0">2.6.0</a> (September 27, 2004): Improved character set handling and support for MySQL 4.</li>
-
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.7.0">2.7.0</a> (December 4, 2005): Improved importing capabilities, simplified configuration and interface cleanup.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.8.0">2.8.0</a> (March 6, 2006): Compatibility updates, hiding databases, configurable memory limits, web-based setup.</li>
-
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.9.0">2.9.0</a> (September 20, 2006): Added export to OpenDocument Text and Spreadsheet.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.10.0">2.10.0</a> (February 27, 2007): GUI for relations, called Database Designer.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.11.0">2.11.0</a> (August 22, 2007): Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers handling large number of databases/tables.</li>
-
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.0.0">3.0.0</a> (September 27, 2008): Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.1.0">3.1.0</a> (November 28, 2008): Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.2">3.2.0</a> (June 9, 2009): Added many small features.</li>
-<li><a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.3">3.3.0</a> (March 7, 2010): Added new import and export modules, changes tracking, synchronization and support for replication configuration.</li>
-<li>3.4.0 (May 11, 2011): AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
-<li>3.5.0 (April 7, 2012): Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle support.</li>
-<li>4.0.0 (May 3, 2013): Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</li>
-<li>4.1.0 (December 12, 2013): Requires PHP 5.3 and MySQL 5.5. Added ReCAPTCHA support, configurable menus, and an error reporting component.</li>
-<li>4.2.0 (May 8, 2014): Added fixed navigation tabs, favorites table and a quick filter for displayed rows.</li>
+<li>1998-09-09 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_0.9.0">0.9.0</a>: First internal release.</li>
+<li>1998-11-03 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.1.0">1.1.0</a>: Added first confirmations for DROP commands.</li>
+<li>1998-11-29 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.2.0">1.2.0</a>: Added possibility to import from text files.</li>
+<li>1998-12-16 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.3.0">1.3.0</a>: Added query by example functionality.</li>
+<li>1998-12-27 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.3.1">1.3.1</a>: First multi-lingual version.</li>
+<li>1999-01-16 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_1.4.0">1.4.0</a>: Added support for renaming and copying tables.</li>
+<li>1999-04-11 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.0.0">2.0.0</a>: Major layout changes.</li>
+<li>2000-06-08 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.1.0">2.1.0</a>: Last release by the original developer Tobias Ratschiller.</li>
+<li>2001-08-31 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.2.0">2.2.0</a>: First stable release made by the phpMyAdmin project.</li>
+<li>2001-11-08 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.3.0">2.3.0</a>: Database and table views were split into smaller sections.</li>
+<li>2003-11-05 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.5.0">2.5.0</a>: Introduction of the MIME-based transformation system.</li>
+<li>2004-09-27 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.6.0">2.6.0</a>: Improved character set handling and support for MySQL 4.</li>
+<li>2005-12-04 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.7.0">2.7.0</a>: Improved importing capabilities, simplified configuration and interface cleanup.</li>
+<li>2006-03-06 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.8.0">2.8.0</a>: Compatibility updates, hiding databases, configurable memory limits, web-based setup.</li>
+<li>2006-09-20 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.9.0">2.9.0</a>: Added export to OpenDocument Text and Spreadsheet.</li>
+<li>2007-02-27 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.10.0">2.10.0</a>: GUI for relations, called Database Designer.</li>
+<li>2007-08-22 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_2.11.0">2.11.0</a>: Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers handling large number of databases/tables.</li>
+<li>2008-09-27 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.0.0">3.0.0</a>: Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</li>
+<li>2008-11-28 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.1.0">3.1.0</a>: Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
+<li>2009-06-09 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.2">3.2.0</a>: Added many small features.</li>
+<li>2010-03-07 <a href="http://wiki.phpmyadmin.net/pma/phpMyAdmin_3.3">3.3.0</a>: Added new import and export modules, changes tracking, synchronization and support for replication configuration.</li>
+<li>2001-05-11 3.4.0: AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
+<li>2012-04-07 3.5.0: Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle support.</li>
+<li>2013-05-03 4.0.0: Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</li>
+<li>2013-12-12 4.1.0: Requires PHP 5.3 and MySQL 5.5. Added ReCAPTCHA support, configurable menus, and an error reporting component.</li>
+<li>2014-05-08 4.2.0: Added fixed navigation tabs, favorites table and a quick filter for displayed rows.</li>
 </ul>
 
 
