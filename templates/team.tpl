@@ -124,7 +124,7 @@ He currently lives in <span class="adr">Etampes, <span class="country">France</s
 
 <div class="floatbox vcard" id="chirayu">
 <h3 class="fn">Chirayu Chiripal</h3>
-<h4>Developer</h4>
+<h4>Developer / HHVN Coordinator</h4>
 <img class="head photo" src="${server}${base_url}images/heads/chirayu.jpg" alt="Photo of Chirayu Chiripal" width="65" height="84" />
 <p>
 Chirayu joined the <span class="org">phpMyAdmin</span> team in September 2014 after successfully completing Google Summer of Code 2014 program. Chirayu is a passionate programmer looking for opportunities to enhance his knowledge and also
