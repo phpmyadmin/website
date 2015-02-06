@@ -174,6 +174,7 @@ showing basic and more advanced features of phpMyAdmin.
 </p>
 <p>During <a href="http://linuxtag.org/2014/en">LinuxTag 2014</a> in Berlin, Germany, our project was an exhibitor and we held our fifth team meeting.
 </p>
+<p>The sixth team meeting was held during <a href="http://fosdem.org/2015">FOSDEM 2015</a>.</p>
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4187.JPG"
@@ -220,6 +221,14 @@ showing basic and more advanced features of phpMyAdmin.
     rel="lightbox[meeting]" title="2014 team - Chanaka Dharmarathna, J.M., Madhura Jayaratne, Michal Čihař, Marc Delisle, Atul Pratap Singh, Isaac Bennetch">
         <img src="${base_url}images/linuxtag/2014/linuxtag-2014-team-photo_tn.jpg"
         alt="phpMyAdmin team at LinuxTag 2014 in Berlin" />
+    </a>
+</div>
+
+<div class="screenshot">
+    <a href="${base_url}images/fosdem-2015/fosdem-2015-med.jpg"
+    rel="lightbox[meeting]" title="2015 team meeting - Chirayu Chiripal, Smita Kumari, Marc Delisle, Hugues Peccatte, Atul Pratap Singh">
+        <img src="${base_url}images/fosdem-2015/fosdem-2015-tn.jpg"
+        alt="phpMyAdmin team at FOSDEM 2015 in Brussels" />
     </a>
 </div>
 
