@@ -174,7 +174,7 @@ showing basic and more advanced features of phpMyAdmin.
 </p>
 <p>During <a href="http://linuxtag.org/2014/en">LinuxTag 2014</a> in Berlin, Germany, our project was an exhibitor and we held our fifth team meeting.
 </p>
-<p>The sixth team meeting was held during <a href="http://fosdem.org/2015">FOSDEM 2015</a>.</p>
+<p>The sixth team meeting was held during <a href="http://fosdem.org/2015">FOSDEM 2015</a>. We also attended a community dinner for the 20th anniversary of MySQL.</p>
 
 <div class="screenshot">
     <a href="${base_url}images/linuxtag/IMG_4187.JPG"
