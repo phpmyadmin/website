@@ -852,29 +852,29 @@ class SFGenerator(object):
         '''
         helper.log.dbg('Processing translation stats...')
         self.data['translations'] = []
-        #stats = json.loads(self.urls.load('translations', TRANSLATION_STATS))
+        stats = json.loads(self.urls.load('translations', TRANSLATION_STATS))
 
-        #for lang in stats:
-        #    if lang['translated_percent'] < 50:
-        #        css = ' b50'
-        #    elif lang['translated_percent'] < 80:
-        #        css = ' b80'
-        #    else:
-        #        css = ''
-        #    if lang['last_change'] is None:
-        #        updated = ''
-        #    else:
-        #        updated = parse(lang['last_change'])
-        #    translation = {
-        #        'name': lang['name'],
-        #        'short': lang['code'],
-        #        'url': lang['url'],
-        #        'translated': lang['translated'],
-        #        'percent': lang['translated_percent'],
-        #        'updated': updated,
-        #        'css': css,
-        #    }
-        #    self.data['translations'].append(translation)
+        for lang in stats:
+            if lang['translated_percent'] < 50:
+                css = ' b50'
+            elif lang['translated_percent'] < 80:
+                css = ' b80'
+            else:
+                css = ''
+            if lang['last_change'] is None:
+                updated = ''
+            else:
+                updated = parse(lang['last_change'])
+            translation = {
+                'name': lang['name'],
+                'short': lang['code'],
+                'url': lang['url'],
+                'translated': lang['translated'],
+                'percent': lang['translated_percent'],
+                'updated': updated,
+                'css': css,
+            }
+            self.data['translations'].append(translation)
 
     def fetch_data(self):
         '''
