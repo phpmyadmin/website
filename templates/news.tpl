@@ -14,8 +14,8 @@
 <a href="http://planet.phpmyadmin.net/">planet phpMyAdmin</a>.</p>
 
 <p>You can also follow us on <a
-href="http://identi.ca/phpmyadmin">identi.ca</a> or <a
-href="http://twitter.com/phpmya">twitter</a>.
+href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486">Facebook</a> or <a
+href="http://twitter.com/phpmya">Twitter</a>.
 </p>
 
 <div class="hentry" id="${item.anchor}" py:for="item in news">
