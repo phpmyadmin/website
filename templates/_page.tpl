@@ -72,6 +72,8 @@
     <li class="logo"><a href="http://sourceforge.net/projects/phpmyadmin"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=23067&amp;type=10" width="80" height="15" alt="Get phpMyAdmin at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a></li>
     <li class="logo"><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.phpmyadmin.net/"></a></li>
     <li class="logo"><a href="http://google.com/+phpmyadmin" style="text-decoration: none;"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" width="16" height="16" style="border: 0;" alt="Google+"/></a></li>
+    <li class="logo"><a href="http://twitter.com/phpmya" style="text-decoration: none;"><img src="${server}${base_url}images/Twitter_logo_blue_20x16.png" width="20" height="16" style="border: 0;" alt="Twitter"/></a></li>
+    <li class="logo"><a href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486" style="text-decoration: none;"><img src="${server}${base_url}images/Facebook_logo_blue_16x16.png" width="16" height="16" style="border: 0;" alt="Facebook"/></a></li>
   </ul>
   </footer>
 <script>
