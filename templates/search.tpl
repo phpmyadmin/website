@@ -1,4 +1,4 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:gcse="uri:google-did-not-provide-a-real-ns" py:strip="">
 
 <py:def function="page_rss">${rss_news}</py:def>
 <py:def function="page_rss_title">phpMyAdmin project summary</py:def>
