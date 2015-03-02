@@ -18,7 +18,7 @@ on Google</a>.
 
 <script>
   (function() {
-    var cx = '008688692096734274889:2un4bs4yxjm';
+    var cx = 'partner-pub-9981925389745105:6118076488';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
