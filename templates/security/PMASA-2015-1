@@ -5,7 +5,7 @@ PMASA-2015-1
 </py:def>
 
 <py:def function="announcement_date">
-2015-03-?
+2015-03-04
 </py:def>
 
 <py:def function="announcement_summary">
@@ -42,15 +42,15 @@ Thanks to Jian Jiang (<a href="https://www.linkedin.com/pub/jian-jiang/3a/660/77
 <py:def function="announcement_cwe">661 352</py:def>
 
 <py:def function="announcement_commits">
-?
+b2f1e895038a5700bf8e81fb9a5da36cbdea0eeb
 </py:def>
 
 <py:def function="announcement_commits_4_2">
-?
+d0f109dfe3b345094d7ceb49df0dbb68efc032ed
 </py:def>
 
 <py:def function="announcement_commits_4_0">
-?
+e1a68ad02c5b1a516b3787ce114ef6a6be004630
 </py:def>
 
 <xi:include href="_page.tpl" />
