@@ -15,6 +15,9 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 
 <h3>Gold sponsor</h3>
 <a href="http://www.navicat.com/"><img src="${server}${base_url}images/navicat_250x130.jpg" alt="Navicat" /></a>
+&nbsp;
+&nbsp;
+<a href="http://www.webhostingsecretrevealed.net/"><img src="${server}${base_url}images/webhostingsecretrevealed.jpg" alt="Web Hosting Secret Revealed" /></a>
 
 <h3>Silver sponsors</h3>
 <a href="http://www.scriptcase.net/"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
