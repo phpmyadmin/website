@@ -133,6 +133,8 @@ The phpMyAdmin project is grateful to our technology partners for their services
 <a href="http://browserstack.com"><img src="${server}${base_url}images/BrowserStackLogo.png" alt="BrowserStack" /></a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="${server}${base_url}images/scrutinizer.png" alt="Scrutinizer" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="http://weblate.org/"><img src="${server}${base_url}images/weblate-button.png" alt="Weblate" /></a>
 
 </div>
 
