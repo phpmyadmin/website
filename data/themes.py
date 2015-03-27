@@ -293,6 +293,12 @@ THEMES = {
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
     },
+    'metro-2.2': {
+        'name': 'Metro',
+        'support': '4.4',
+        'info': u'Windows 8 / Metro Theme for phpMyAdmin',
+        'author': u'hplhu',
+    },
 }
 TEMPLATE = {
     '': {
@@ -322,6 +328,7 @@ CSSMAP = {
     '3.3': 'pma_3_3',
     '3.4': 'pma_3_4',
     '3.5': 'pma_3_5',
+    '4.4': 'pma_4_4',
 }
 
 CSSVERSIONS = [
@@ -332,4 +339,5 @@ CSSVERSIONS = [
     {'name': '3.3', 'css': 'pma_3_3'},
     {'name': '3.4', 'css': 'pma_3_4'},
     {'name': '3.5', 'css': 'pma_3_5'},
+    {'name': '4.4', 'css': 'pma_4_4'},
 ]
