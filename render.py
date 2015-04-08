@@ -243,7 +243,10 @@ class SFGenerator(object):
         elif version[:3] == '4.4':
             text = 'Current version compatible with PHP 5.3 and MySQL 5.5.'
         elif version[:3] == '4.3':
-            text = 'Older version compatible with PHP 5.3 and MySQL 5.5.'
+            text = (
+                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Supported for security fixes only, until Oct 1, 2015.'
+            )
         elif version[:3] == '4.2':
             text = (
                 'Older version compatible with PHP 5.3 and MySQL 5.5.' +
