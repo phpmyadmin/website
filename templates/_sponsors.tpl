@@ -19,8 +19,6 @@
 
 <div><a href="http://www.sqlmaestro.com/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a></div>
 
-<div><a href="http://directliquidation.com/"><img src="${server}${base_url}images/directliquidation.png" alt="Direct Liquidation" /></a></div>
-
 <div><a href="http://www.buy-hosting.net"><img src="${server}${base_url}images/buy-hosting-250x70.png" alt="Buy Hosting" /></a></div>
 
 <h3><a href="${base_url}sponsors.${file_ext}">Sponsorship</a></h3>
