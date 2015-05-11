@@ -349,7 +349,7 @@ class SFGenerator(object):
             if len(first_parts) == 1:
                 return False
             # Both are betas
-            return (first_parts[1] < second_parts[1])
+            return first_parts[1] < second_parts[1]
 
         return False
 
