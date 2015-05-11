@@ -93,7 +93,8 @@ RSS_RU = \
     'http://php-myadmin.ru/rss/news.xml'
 
 # Data sources
-TRANSLATION_STATS = 'http://hosted.weblate.org/exports/stats/phpmyadmin/master/'
+TRANSLATION_STATS = \
+    'http://hosted.weblate.org/exports/stats/phpmyadmin/master/'
 
 # URLS
 SECURITY_URL = 'http://www.phpmyadmin.net/home_page/security/'
