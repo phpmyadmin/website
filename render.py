@@ -440,8 +440,8 @@ class SFGenerator(object):
                 except KeyError:
                     # We already marked this one as old
                     continue
-                if (major_branch == check_version[:len(major_branch)]
-                        and self.version_compare(version, check_version)):
+                if (major_branch == check_version[:len(major_branch)] and
+                        self.version_compare(version, check_version)):
                     helper.log.dbg('Old release: %s' % version)
                     del outversions[stable]
                     continue
