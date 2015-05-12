@@ -1,0 +1,63 @@
+<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<py:def function="announcement_id">
+PMASA-2015-2
+</py:def>
+
+<py:def function="announcement_date">
+2015-05-?
+</py:def>
+
+<py:def function="announcement_summary">
+XSRF/CSRF vulnerability in phpMyAdmin setup.
+</py:def>
+
+<py:def function="announcement_description">
+By deceiving a user to click on a crafted URL, it is possible to alter the configuration file
+being generated with phpMyAdmin setup.
+</py:def>
+
+<py:def function="announcement_severity">
+We consider this vulnerability to be non critical.
+</py:def>
+
+<py:def function="announcement_mitigation">
+This vulnerability only affects the configuration file generation process and does not affect 
+the effective configuration file. Moreover, the configuration file being generated is at risk 
+only during the period when it's writable.
+</py:def>
+
+<py:def function="announcement_affected">
+Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3) and 4.3.x (prior to 4.3.11.2) are affected.
+</py:def>
+
+<py:def function="announcement_solution">
+Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.11.2 or newer, or apply the patch listed below.
+</py:def>
+
+<py:def function="announcement_references">
+Thanks to Inti De Ceukelaire for reporting this vulnerability.
+</py:def>
+
+<py:def function="announcement_cve">CVE-2015-?</py:def>
+
+<py:def function="announcement_cwe">661 352</py:def>
+
+<py:def function="announcement_commits">
+ee92eb9bab8e2d546756c1d4aec81ec7c8e44b83
+</py:def>
+
+<py:def function="announcement_commits_4_3">
+371964d6facdddccc2d9aeb66f774143ff17c573
+</py:def>
+
+<py:def function="announcement_commits_4_2">
+c903ecf6751684b6af2d079c78b1f0d09ea2bd47
+</py:def>
+
+<py:def function="announcement_commits_4_0">
+fea1d39fef540afa4105c6fbcc849f7e516f3da8
+</py:def>
+
+<xi:include href="_page.tpl" />
+</html>
