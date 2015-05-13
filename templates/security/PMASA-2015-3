@@ -37,19 +37,19 @@ Thanks to Maksymilian Arciemowicz of <a href="http://cxsecurity.com">http://cxse
 <py:def function="announcement_cwe">661 295</py:def>
 
 <py:def function="announcement_commits">
-?
+5ebc4daf131dd3bd646326267f3e765d0249bbb4
 </py:def>
 
 <py:def function="announcement_commits_4_3">
-?
+3739c95118cdf46dd42eb876761654aaafb95cd8
 </py:def>
 
 <py:def function="announcement_commits_4_2">
-?
+0e18931d9e4b23053285b6fddf3493ca426ff684
 </py:def>
 
 <py:def function="announcement_commits_4_0">
-?
+e97e7fb0ea2dedfaa95c7dbe872027fb4bd4204c
 </py:def>
 
 <xi:include href="_page.tpl" />
