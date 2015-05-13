@@ -13,26 +13,26 @@ Vulnerability allowing man-in-the-middle attack on API call to GitHub.
 </py:def>
 
 <py:def function="announcement_description">
-A vunerability in the API call to GitHub can be exploited to perform a man-in-the-middle attack.
+A vulnerability in the API call to GitHub can be exploited to perform a man-in-the-middle attack.
 </py:def>
 
 <py:def function="announcement_severity">
-We consider this vulnerability to be ? critical.
+We consider this vulnerability to be serious.
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3) and 4.3.x (prior to 4.3.11.2) are affected.
+Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3), 4.3.x (prior to 4.3.11.2) and 4.4.x (prior to 4.4.6.1) are affected.
 </py:def>
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.11.2 or newer, or apply the patch listed below.
+Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.11.2 or newer, or 4.4.6.1 or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
 Thanks to Maksymilian Arciemowicz of <a href="http://cxsecurity.com">http://cxsecurity.com</a> for reporting this vulnerability.
 </py:def>
 
-<py:def function="announcement_cve">CVE-2015-?</py:def>
+<py:def function="announcement_cve">CVE-2015-3903</py:def>
 
 <py:def function="announcement_cwe">661 295</py:def>
 
