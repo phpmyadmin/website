@@ -5,7 +5,7 @@ PMASA-2015-3
 </py:def>
 
 <py:def function="announcement_date">
-2015-05-?
+2015-05-13
 </py:def>
 
 <py:def function="announcement_summary">
@@ -21,11 +21,11 @@ We consider this vulnerability to be serious.
 </py:def>
 
 <py:def function="announcement_affected">
-Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3), 4.3.x (prior to 4.3.11.2) and 4.4.x (prior to 4.4.6.1) are affected.
+Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3), 4.3.x (prior to 4.3.13.1) and 4.4.x (prior to 4.4.6.1) are affected.
 </py:def>
 
 <py:def function="announcement_solution">
-Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.11.2 or newer, or 4.4.6.1 or newer, or apply the patch listed below.
+Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.13.1 or newer, or 4.4.6.1 or newer, or apply the patch listed below.
 </py:def>
 
 <py:def function="announcement_references">
@@ -41,7 +41,7 @@ Thanks to Maksymilian Arciemowicz of <a href="http://cxsecurity.com">http://cxse
 </py:def>
 
 <py:def function="announcement_commits_4_3">
-3739c95118cdf46dd42eb876761654aaafb95cd8
+75499e790429c491840a0ad31d4de84aca215d23
 </py:def>
 
 <py:def function="announcement_commits_4_2">
