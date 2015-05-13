@@ -74,6 +74,15 @@
     </ul>
     </py:if>
 
+    <py:if test="defined('announcement_commits_4_3')">
+    <p>The following commits have been made on the 4.3 branch to fix this issue:</p>
+    <ul>
+    <py:for each="hash in announcement_commits_4_3().next()[1].strip().split('\n')">
+    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
+    </py:for>
+    </ul>
+    </py:if>
+
     <py:if test="defined('announcement_commits_4_2')">
     <p>The following commits have been made on the 4.2 branch to fix this issue:</p>
     <ul>
