@@ -21,6 +21,8 @@
 
 <div><a href="http://www.buy-hosting.net"><img src="${server}${base_url}images/buy-hosting-250x70.png" alt="Buy Hosting" /></a></div>
 
+<div><a href="https://www.certs4less.com"><img src="${server}${base_url}images/certs4less_240x65.jpg" alt="Certs4Less" /></a></div>
+
 <h3><a href="${base_url}sponsors.${file_ext}">Sponsorship</a></h3>
 
 <p><a href="${base_url}sponsors.${file_ext}">See other sponsors and information for new sponsors.</a></p>

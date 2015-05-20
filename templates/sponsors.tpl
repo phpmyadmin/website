@@ -27,6 +27,9 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 &nbsp;
 &nbsp;
 <a href="http://www.buy-hosting.net"><img src="${server}${base_url}images/buy-hosting-250x70.png" alt="Buy Hosting" /></a>
+&nbsp;
+&nbsp;
+<a href="https://www.certs4less.com"><img src="${server}${base_url}images/certs4less_240x65.jpg" alt="Certs4Less" /></a>
 
 <h3>Bronze sponsors</h3>
 <a href="http://www.aoe.com/"><img src="${server}${base_url}images/aoe.jpg" alt="AOE" /></a>
