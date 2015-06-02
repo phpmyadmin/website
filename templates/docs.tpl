@@ -39,7 +39,7 @@ href="${base_url}improve.${file_ext}#translate">help</a>.</p>
 <div class="floatbox">
 <h3>Third Party Tutorials and Articles</h3>
 <ul>
-    <li><a href="http://dev.mysql.com/tech-resources/articles/mysql_intro.html">Getting Started with MySQL</a></li>
+    <li><a href="https://cloud.google.com/sql/docs/phpmyadmin-on-app-engine">Using phpMyAdmin with Google Cloud SQL on Google App Engine</a></li>
     <li><a href="http://www.garvinhicking.de/tops/texte/mimetutorial">Having fun with phpMyAdmin's MIME-transformations &amp; PDF-features</a></li>
     <li><a href="http://www.linuxsoft.cz/article_list.php?id_kategory=215">Seriál o phpMyAdminovi (Česky)</a></li>
     <li><a href="http://www.devshed.com/c/a/PHP/Doing-More-With-phpMyAdmin-Part-1/">Doing More With phpMyAdmin: part 1</a>,
