@@ -42,6 +42,9 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 &nbsp;
 &nbsp;
 <a href="http://www.greengeeks.com/"><img src="${server}${base_url}images/greengeeks_250x70.png" alt="GreenGeeks" /></a>
+&nbsp;
+&nbsp;
+<a href="https://www.2mhost.com/"><img src="${server}${base_url}images/2mhost_250x70.jpg" alt="2MHost" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
