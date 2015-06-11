@@ -312,6 +312,10 @@ class SFGenerator(object):
 
         file_info = {
             'name': filename,
+            'cdn_url': link.replace(
+                'http://sourceforge.net/projects/phpmyadmin/files/',
+                'https://phpmyadmin-downloads-532693.c.cdn77.org/'
+            )[:-9],
             'url': link,
             'ext': ext,
             'featured': featured,
