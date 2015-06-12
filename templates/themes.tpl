@@ -51,7 +51,7 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
             <p py:if="theme.author">Author: ${theme.author}</p>
             <p>${Markup(theme.info)}</p>
             <ul class="dl">
-                <li><a href="${theme.file.url}#!md5!${theme.file.md5}">${theme.file.name}</a> (${theme.file.humansize}, MD5: ${theme.file.md5})</li>
+                <li><a href="${theme.file.cdn_url}#!md5!${theme.file.md5}">${theme.file.name}</a> (${theme.file.humansize}, MD5: ${theme.file.md5})</li>
             </ul> 
     </div>
     <div class="clearer"></div>
