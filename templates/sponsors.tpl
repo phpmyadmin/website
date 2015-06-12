@@ -135,6 +135,8 @@ Thank you for your support!
 <p>
 The phpMyAdmin project is grateful to our technology partners for their services.</p>
 
+<a href="http://www.cdn77.com/"><img src="${server}${base_url}images/cdn77_logo.png" alt="CDN77.com" /></a>
+&nbsp;&nbsp;&nbsp;
 <a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a>
