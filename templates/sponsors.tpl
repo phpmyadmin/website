@@ -135,17 +135,27 @@ Thank you for your support!
 <p>
 The phpMyAdmin project is grateful to our technology partners for their services.</p>
 
-<a href="http://www.cdn77.com/"><img src="${server}${base_url}images/cdn77_logo.png" alt="CDN77.com" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="http://browserstack.com"><img src="${server}${base_url}images/BrowserStackLogo.png" alt="BrowserStack" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="${server}${base_url}images/scrutinizer.png" alt="Scrutinizer" /></a>
-&nbsp;&nbsp;&nbsp;
-<a href="http://weblate.org/"><img src="${server}${base_url}images/weblate-button.png" alt="Weblate" /></a>
+<h3><a href="http://www.cdn77.com/"><img src="${server}${base_url}images/cdn77_logo.png" alt="CDN77.com" /></a></h3>
+
+<p>Our downloads are accelerated by <a href="http://www.cdn77.com/">content delivery network</a>.</p>
+
+<h3><a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a></h3>
+
+<p>GitHub provides hosting for our source code and issue tracker.</p>
+
+<h3><a href="http://browserstack.com"><img src="${server}${base_url}images/BrowserStackLogo.png" alt="BrowserStack" /></a></h3>
+
+<p>BrowserStack is running our Selenium tests in real browsers.</p>
+
+<h3><a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="${server}${base_url}images/scrutinizer.png" alt="Scrutinizer" /></a></h3>
+
+<p>Scrutinizer helps us improve code quality.</p>
+
+<h3><a href="http://weblate.org/"><img src="${server}${base_url}images/weblate-button.png" alt="Weblate" /></a></h3>
+
+<p>Our translations are being done on <a href="https://hosted.weblate.org/">Hosted Weblate</a>.</p>
+
+<h3><a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a></h3>
 
 </div>
 
