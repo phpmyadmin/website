@@ -21,9 +21,7 @@ class Release(models.Model):
     version = models.CharField(max_length=50, unique=True)
     version_num = models.IntegerField(default=0, unique=True)
     release_notes = models.TextField()
-    featured = models.BooleanField(default=False)
-    visible = models.BooleanField(default=False)
-    stable = models.BooleanField(default=False)
+    stable = models.BooleanField(default=False, db_index=True)
 
     class Meta(object):
         ordering = ['-version_num']
