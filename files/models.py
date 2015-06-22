@@ -141,7 +141,7 @@ class Download(models.Model):
         )
 
     def get_absolute_url(self):
-        return 'https://files.phpmyadmin.net/{0}'.format(
+        return 'https://files.phpmyadmin.net{0}'.format(
             self.__unicode__()
         )
 
