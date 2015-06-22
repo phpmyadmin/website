@@ -54,11 +54,13 @@ class Download(models.Model):
 
 class Theme(models.Model):
     name = models.CharField(max_length=50)
+    display_name = models.CharField(max_length=50)
     version = models.CharField(max_length=50)
     filename = models.CharField(max_length=200, unique=True)
     supported_versions = models.CharField(max_length=50)
     description = models.TextField()
     author = models.CharField(max_length=200)
+    size = models.IntegerField(default=0)
 
     class Meta(object):
         ordering = ['name', 'version']
