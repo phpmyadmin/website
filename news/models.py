@@ -11,4 +11,7 @@ class Post(models.Model):
     author = models.ForeignKey(User)
 
     class Meta(object):
-        ordering = ['date']
+        ordering = ['-date']
+
+    def __unicode__(self):
+        return self.title
