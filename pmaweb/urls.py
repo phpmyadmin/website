@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import RedirectView
+from django.views.generic import TemplateView
 
 
 urlpatterns = patterns('',
@@ -15,6 +16,14 @@ urlpatterns = patterns('',
             url='http://store.swekey.com/index.php?promo=pma'
         )
     ),
+
+    # Test backend
+    url(
+        r'test/data$',
+        TemplateView.as_view(
+            template_name='test-data',
+            content_type='text/plain'
+        )
 
     # Compatibility redirects
     url(
