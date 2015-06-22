@@ -52,13 +52,14 @@ class Command(BaseCommand):
                 )
                 if os.path.exists(notes):
                     with open(notes, 'r') as handle:
-                        release.release_notes = BeautifulSoup(handle.read()).get_text()
+                        release.release_notes = BeautifulSoup(
+                            handle.read()
+                        ).get_text()
                         release.save()
             self.process_files(
                 os.path.join(path, version),
                 release
             )
-
 
     def handle(self, *args, **options):
         self.process_releases(os.path.join(settings.FILES_PATH, 'phpMyAdmin'))
