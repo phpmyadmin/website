@@ -4,25 +4,15 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 import datetime
 
-
-MENU = [
-    ('', 'Home'),
-    ('news', 'News'),
-    ('security', 'Security'),
-    ('support', 'Support'),
-    ('docs', 'Docs'),
-    ('try', 'Try'),
-    ('improve', 'Contribute'),
-    ('sponsors', 'Sponsors'),
-    ('themes', 'Themes'),
-    ('downloads', 'Download'),
-]
+from data.menu import MENU
+from data.screenshots import SCREENSHOTS
 
 
 def basic(request):
     return {
         'current_year': datetime.datetime.now().year,
         'short_news': Post.objects.all()[:5],
+        'screenshots': SCREENSHOTS,
     }
 
 
@@ -31,7 +21,7 @@ def menu(request):
 
     for name, title in MENU:
         if name:
-            urlname = name
+            urlname = name.rstrip('/')
         else:
             urlname = 'home'
 

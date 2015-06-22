@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Try</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Demo Server</h2>
 
@@ -20,17 +21,17 @@ full control on MySQL. The default login is root with empty password.
 
 <h2>Screenshots</h2>
 
-<div class="screenshot" py:for="screen in screenshots">
-    <a href="${base_url}images/screenshots/${screen.name}.png"
-    rel="lightbox[screenshots]" title="${screen.title}">
-        <img src="${base_url}images/screenshots/${screen.name}-small.png"
-        alt="${screen.title}" /><br />
-    ${screen.title}
+{% for screen in screenshots %}
+<div class="screenshot">
+    <a href="{% static '' %}images/screenshots/{{screen.name}}.png"
+    rel="lightbox[screenshots]" title="{{screen.title}}">
+        <img src="{% static '' %}images/screenshots/{{ screen.name }}-small.png"
+        alt="{{ screen.title }}" /><br />
+    {{ screen.title }}
     </a>
 </div>
+{% endfor %}
 
 <div class="clearer"></div>
-</div>
 
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
