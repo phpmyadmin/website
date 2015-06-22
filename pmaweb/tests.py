@@ -10,3 +10,7 @@ class ViewTest(TestCase):
         self.assertContains(response, 'phpMyAdmin')
         response = self.client.get('/')
         self.assertContains(response, 'phpMyAdmin')
+
+    def test_themes(self):
+        response = self.client.get(reverse('themes'))
+        self.assertContains(response, 'Metro')
