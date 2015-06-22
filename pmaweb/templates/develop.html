@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Developing phpMyAdmin</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Developing phpMyAdmin</h2>
 
@@ -83,9 +84,4 @@ reference in the comprehensive book <a href="http://progit.org/">Pro Git</a>.
 <li><a href="https://github.com/phpmyadmin/">github</a></li>
 </ul>
 
-
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
-
+{% endblock %}

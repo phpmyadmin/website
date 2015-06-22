@@ -1,10 +1,11 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Translating phpMyAdmin</py:def>
 <py:def function="page_rss">${rss_translations}</py:def>
 <py:def function="page_rss_title">phpMyAdmin translation changes</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Translating phpMyAdmin</h2>
 
@@ -17,7 +18,7 @@ translate them using the usual tools for handling Gettext translations or use ou
 
 <p>
 The phpMyAdmin's documentation is being translated using Sphinx and gettext (see
-<a href="${base_url}docs.${file_ext}">documentation</a> for existing
+<a href="{% url 'docs' %}">documentation</a> for existing
 translations) and the process here is pretty much the same as translating
 phpMyAdmin itself.
 </p>
@@ -48,7 +49,7 @@ offline translating.
 
 <p>
 You can download po files either directly from Git (see 
-<a href="${base_url}devel.${file_ext}">developer instructions for more
+<a href="{% url 'develop' %}">developer instructions for more
 details</a>) or use the <a
 href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>,
 which allows you to directly download the latest po file of the desired version.
@@ -69,9 +70,4 @@ You can find more information on <a
 href="http://wiki.phpmyadmin.net/pma/Translating">our wiki</a>.
 </p>
 
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
-
-
+{% endblock %}
