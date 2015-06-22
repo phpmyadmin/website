@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Sponsors</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Sponsors</h2>
 
@@ -11,40 +12,40 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 </p>
 
 <h3>Platinum sponsor</h3>
-<a href="http://www.navicat.com/"><img src="${server}${base_url}images/navicat_250x250.jpg" alt="Navicat" /></a>
+<a href="http://www.navicat.com/"><img src="{% static 'images/navicat_250x250.jpg' %}" alt="Navicat" /></a>
 
 <h3>Gold sponsors</h3>
-<a href="http://www.navicat.com/"><img src="${server}${base_url}images/navicat_250x130.jpg" alt="Navicat" /></a>
+<a href="http://www.navicat.com/"><img src="{% static 'images/navicat_250x130.jpg' %}" alt="Navicat" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.webhostingsecretrevealed.net/"><img src="${server}${base_url}images/webhostingsecretrevealed.jpg" alt="Web Hosting Secret Revealed" /></a>
+<a href="http://www.webhostingsecretrevealed.net/"><img src="{% static 'images/webhostingsecretrevealed.jpg' %}" alt="Web Hosting Secret Revealed" /></a>
 
 <h3>Silver sponsors</h3>
-<a href="http://www.scriptcase.net/"><img src="${server}${base_url}images/scriptcase_200x68.png" alt="ScriptCase" /></a>
+<a href="http://www.scriptcase.net/"><img src="{% static 'images/scriptcase_200x68.png' %}" alt="ScriptCase" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.sqlmaestro.com/"><img src="${server}${base_url}images/sqlmaestro_250x70.png" alt="SQLMaestro" /></a>
+<a href="http://www.sqlmaestro.com/"><img src="{% static 'images/sqlmaestro_250x70.png' %}" alt="SQLMaestro" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.buy-hosting.net"><img src="${server}${base_url}images/buy-hosting-250x70.png" alt="Buy Hosting" /></a>
+<a href="http://www.buy-hosting.net"><img src="{% static 'images/buy-hosting-250x70.png' %}" alt="Buy Hosting" /></a>
 &nbsp;
 &nbsp;
-<a href="https://www.certs4less.com"><img src="${server}${base_url}images/certs4less_240x65.jpg" alt="Certs4Less" /></a>
+<a href="https://www.certs4less.com"><img src="{% static 'images/certs4less_240x65.jpg' %}" alt="Certs4Less" /></a>
 
 <h3>Bronze sponsors</h3>
-<a href="http://www.aoe.com/"><img src="${server}${base_url}images/aoe.jpg" alt="AOE" /></a>
+<a href="http://www.aoe.com/"><img src="{% static 'images/aoe.jpg' %}" alt="AOE" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.shimply.com/"><img src="${server}${base_url}images/shimply250x70.png" alt="Shimply" /></a>
+<a href="http://www.shimply.com/"><img src="{% static 'images/shimply250x70.png' %}" alt="Shimply" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.hostoople.com/"><img src="${server}${base_url}images/hostoople_250x70.png" alt="Hostoople" /></a>
+<a href="http://www.hostoople.com/"><img src="{% static 'images/hostoople_250x70.png' %}" alt="Hostoople" /></a>
 &nbsp;
 &nbsp;
-<a href="http://www.greengeeks.com/"><img src="${server}${base_url}images/greengeeks_250x70.png" alt="GreenGeeks" /></a>
+<a href="http://www.greengeeks.com/"><img src="{% static 'images/greengeeks_250x70.png' %}" alt="GreenGeeks" /></a>
 &nbsp;
 &nbsp;
-<a href="https://www.2mhost.com/"><img src="${server}${base_url}images/2mhost_250x70.jpg" alt="2MHost" /></a>
+<a href="https://www.2mhost.com/"><img src="{% static 'images/2mhost_250x70.jpg' %}" alt="2MHost" /></a>
 
 <h3>Sponsorship conditions and advantages</h3>
 
@@ -135,29 +136,26 @@ Thank you for your support!
 <p>
 The phpMyAdmin project is grateful to our technology partners for their services.</p>
 
-<h3><a href="http://www.cdn77.com/"><img src="${server}${base_url}images/cdn77_logo.png" alt="CDN77.com" /></a></h3>
+<h3><a href="http://www.cdn77.com/"><img src="{% static 'images/cdn77_logo.png' %}" alt="CDN77.com" /></a></h3>
 
 <p>Our downloads are accelerated by <a href="http://www.cdn77.com/">content delivery network</a>.</p>
 
-<h3><a href="https://github.com/phpmyadmin"><img src="${server}${base_url}images/github.png" alt="GitHub" /></a></h3>
+<h3><a href="https://github.com/phpmyadmin"><img src="{% static 'images/github.png' %}" alt="GitHub" /></a></h3>
 
 <p>GitHub provides hosting for our source code and issue tracker.</p>
 
-<h3><a href="http://browserstack.com"><img src="${server}${base_url}images/BrowserStackLogo.png" alt="BrowserStack" /></a></h3>
+<h3><a href="http://browserstack.com"><img src="{% static 'images/BrowserStackLogo.png' %}" alt="BrowserStack" /></a></h3>
 
 <p>BrowserStack is running our Selenium tests in real browsers.</p>
 
-<h3><a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="${server}${base_url}images/scrutinizer.png" alt="Scrutinizer" /></a></h3>
+<h3><a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="{% static 'images/scrutinizer.png' %}" alt="Scrutinizer" /></a></h3>
 
 <p>Scrutinizer helps us improve code quality.</p>
 
-<h3><a href="http://weblate.org/"><img src="${server}${base_url}images/weblate-button.png" alt="Weblate" /></a></h3>
+<h3><a href="http://weblate.org/"><img src="{% static 'images/weblate-button.png' %}" alt="Weblate" /></a></h3>
 
 <p>Our translations are being done on <a href="https://hosted.weblate.org/">Hosted Weblate</a>.</p>
 
-<h3><a href="http://sourceforge.net/projects/phpmyadmin"><img src="${server}${base_url}images/sourceforge.png" alt="SourceForge" /></a></h3>
+<h3><a href="http://sourceforge.net/projects/phpmyadmin"><img src="{% static 'images/sourceforge.png' %}" alt="SourceForge" /></a></h3>
 
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
