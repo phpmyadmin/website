@@ -31,13 +31,18 @@ class Release(models.Model):
 class Download(models.Model):
     release = models.ForeignKey(Release)
     filename = models.CharField(max_length=50)
+    size = models.IntegerField(default=0)
     md5 = models.CharField(max_length=32)
     sha1 = models.CharField(max_length=40)
     signed = models.BooleanField(default=False)
 
+    class Meta(object):
+        ordering = ['filename']
+        unique_together = ['release', 'filename']
+
     def __unicode__(self):
         return '/phpMyAdmin/{0}/{1}'.format(
-            self.relese.version,
+            self.release.version,
             self.filename
         )
 
