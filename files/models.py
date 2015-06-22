@@ -2,6 +2,20 @@ from django.db import models
 from django.conf import settings
 import os.path
 
+# Naming of versions
+VERSION_INFO = (
+    ('beta1', ' First beta version.'),
+    ('beta2', ' Second beta version.'),
+    ('beta3', ' Third beta version.'),
+    ('beta4', ' Fourth beta version.'),
+    ('beta', ' Beta version.'),
+    ('rc1', ' First release candidate.'),
+    ('rc2', ' Second release candidate.'),
+    ('rc3', ' Third release candidate.'),
+    ('rc4', ' Fourth release candidate.'),
+    ('rc', ' Release candidate.'),
+)
+
 
 class Release(models.Model):
     version = models.CharField(max_length=50, unique=True)
@@ -45,6 +59,56 @@ class Release(models.Model):
     def save(self, *args, **kwargs):
         self.version_num = self.parse_version()
         super(Release, self).save(*args, **kwargs)
+
+    def get_version_suffix(self):
+        '''
+        Returns suffix for a version.
+        '''
+        for match, result in VERSION_INFO:
+            if self.version.find(match) != -1:
+                return result
+        return ''
+
+    def get_version_info(self):
+        '''
+        Returns description to the phpMyAdmin version.
+        '''
+        if self.version[:2] == '1.':
+            text = 'Historical release.'
+        elif self.version[:2] == '2.':
+            text = 'Version compatible with PHP 4+ and MySQL 3+.'
+        elif self.version[:2] == '3.':
+            text = (
+                'Frames version not requiring Javascript. ' +
+                'Requires PHP 5.2 and MySQL 5. ' +
+                'Supported for security fixes only, until Jan 1, 2014.'
+            )
+        elif self.version[:3] == '4.4':
+            text = 'Current version compatible with PHP 5.3 and MySQL 5.5.'
+        elif self.version[:3] == '4.3':
+            text = (
+                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Supported for security fixes only, until Oct 1, 2015.'
+            )
+        elif self.version[:3] == '4.2':
+            text = (
+                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Supported for security fixes only, until Jul 1, 2015.'
+            )
+        elif self.version[:3] == '4.1':
+            text = (
+                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Supported for security fixes only, until Jan 1, 2015.'
+            )
+        elif self.version[:3] == '4.0':
+            text = (
+                'Older version compatible with PHP 5.2 and MySQL 5. ' +
+                'Supported for security fixes only, until Jan 1, 2017.'
+            )
+        text += self.get_version_suffix()
+
+        return text
+
 
 
 class Download(models.Model):
