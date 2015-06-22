@@ -9,6 +9,10 @@ class ReleaseTest(TestCase):
             102030199
         )
         self.assertEquals(
+            Release.parse_version('1.2'),
+            102000099
+        )
+        self.assertEquals(
             Release.parse_version('1.2.3'),
             102030099
         )

@@ -23,6 +23,7 @@ class Release(models.Model):
     release_notes = models.TextField()
     featured = models.BooleanField(default=False)
     visible = models.BooleanField(default=False)
+    stable = models.BooleanField(default=False)
 
     class Meta(object):
         ordering = ['-version_num']
@@ -46,6 +47,8 @@ class Release(models.Model):
             suffix_num = 99
             version = version
         parts = [int(x) for x in version.split('.')]
+        if len(parts) == 2:
+            parts.append(0)
         if len(parts) == 3:
             parts.append(0)
         assert len(parts) == 4
@@ -59,6 +62,7 @@ class Release(models.Model):
 
     def save(self, *args, **kwargs):
         self.version_num = self.parse_version(self.version)
+        self.stable = self.version_num % 100 == 99
         super(Release, self).save(*args, **kwargs)
 
     def get_version_suffix(self):

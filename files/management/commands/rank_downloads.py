@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+from django.conf import settings
 from files.models import Release
 
 
@@ -17,3 +18,13 @@ class Command(BaseCommand):
 
         print 'BETA', beta
         print 'LATEST', latest
+
+        delta = 1000000
+
+        for version in settings.LISTED_BRANCHES:
+            min_vernum = Release.parse_version(version)
+            max_vernum = min_vernum + delta
+            print Release.objects.filter(
+                version_num__gte=min_vernum,
+                version_num__lt=max_vernum,
+            )[0]
