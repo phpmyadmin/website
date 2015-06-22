@@ -4,3 +4,4 @@ output
 cache
 /build/
 /django
+/frs
