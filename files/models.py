@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+import os.path
 
 
 class Release(models.Model):
@@ -50,4 +52,16 @@ class Download(models.Model):
         return self.__unicode__()
 
 
-# TODO: themes
+class Theme(models.Model):
+    name = models.CharField(max_length=50)
+    version = models.CharField(max_length=50)
+    filename = models.CharField(max_length=200, unique=True)
+    supported_versions = models.CharField(max_length=50)
+    description = models.TextField()
+    author = models.CharField(max_length=200)
+
+    class Meta(object):
+        ordering = ['name', 'version']
+
+    def __unicode__(self):
+        return u'{0} {1}'.format(self.name, self.version)
