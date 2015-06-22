@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     url(
         r'auth_key',
         RedirectView.as_view(
-            url='http://store.swekey.com/index.php?promo=pma'
+            url='http://store.swekey.com/index.php?promo=pma',
             permanent=False,
         )
     ),
@@ -46,7 +46,7 @@ urlpatterns = patterns('',
     url(
         r'^documentation',
         RedirectView.as_view(
-            url='http://docs.phpmyadmin.net/'
+            url='http://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
