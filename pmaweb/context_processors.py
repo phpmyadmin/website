@@ -6,6 +6,7 @@ import datetime
 
 from data.menu import MENU
 from data.screenshots import SCREENSHOTS
+from data.themes import CSSVERSIONS
 
 
 def basic(request):
@@ -14,6 +15,7 @@ def basic(request):
         'short_news': Post.objects.all()[:5],
         'screenshots': SCREENSHOTS,
         'themes': Theme.objects.all(),
+        'themecssversions': CSSVERSIONS,
     }
 
 

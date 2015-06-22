@@ -24,7 +24,7 @@ Please read the documentation for more details.
 </p>
 <p>
 You can try the themes in action on our <a
-href="${base_url}try.${file_ext}">demo server</a>.
+href="{% url 'try' %}">demo server</a>.
 </p>
 
 <h2>Submit Theme</h2>
@@ -35,7 +35,9 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 
 <h2>Available Themes</h2>
 <p>Select your phpMyAdmin version (requires JavaScript):
-<a py:for="css in themecssversions" class="themelink" href="#${css.css}" onclick="show_theme('${css.css}')">${css.name}</a>
+{% for css in themecssversions %}
+<a class="themelink" href="#{{css.css}}" onclick="show_theme('{{css.css}}')">{{css.name}}</a>
+{% endfor %}
 </p>
 {% for theme in themes %}
     <div class="theme {{theme.get_css}}">
