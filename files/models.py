@@ -11,7 +11,7 @@ class Release(models.Model):
     visible = models.BooleanField(default=False)
 
     class Meta(object):
-        ordering = ['version_num']
+        ordering = ['-version_num']
 
     def __unicode__(self):
         return self.version
