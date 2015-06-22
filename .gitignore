@@ -1,7 +1,8 @@
 *.pyc
-*.swp
+*.sw[po]
 output
 cache
 /build/
 /django
 /frs
+db.sqlite3
