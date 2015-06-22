@@ -1,11 +1,13 @@
 from files.models import Release
+from news.models import Post
 from django.conf import settings
 import datetime
 
 
 def basic(request):
     return {
-        'current_year': datetime.datetime.now().year
+        'current_year': datetime.datetime.now().year,
+        'short_news': Post.objects.all()[:5],
     }
 
 
