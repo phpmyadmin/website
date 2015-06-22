@@ -144,11 +144,11 @@ urlpatterns = patterns('',
         name='about-website'
     ),
     url(
-        r'^news/$',
+        r'^downloads/$',
         TemplateView.as_view(
-            template_name='news.html',
+            template_name='downloads.html',
         ),
-        name='news'
+        name='downloads'
     ),
     url(
         r'^news/$',
