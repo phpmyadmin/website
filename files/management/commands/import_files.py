@@ -47,6 +47,7 @@ class Command(BaseCommand):
                 continue
             release, created = Release.objects.get_or_create(version=version)
             if created:
+                self.stdout.write('Added {0}'.format(version))
                 notes = '{0}/{1}/phpMyAdmin-{1}-notes.html'.format(
                     path, version
                 )
