@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'files',
     'news',
+    'pmaweb',
 )
 
 MIDDLEWARE_CLASSES = (
