@@ -1,11 +1,10 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-<py:def function="page_title">Donations</py:def>
-
-<div py:match="content" id="body">
+{% block content %}
 <h2>Donations</h2>
 
-<xi:include href="_conservancy.tpl" />
+{% include "_conservancy.html" %}
 
 <p>
 As a free software project, phpMyAdmin has almost no revenues itself. On the
@@ -76,7 +75,5 @@ Donations will be used for the promotion of phpMyAdmin, mostly by allowing team 
 
 <p>If you want to sponsor phpMyAdmin in a recurring way, please check our 
 <a href="${base_url}sponsors.${file_ext}">sponsorship page</a>.</p>
-</div>
 
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
