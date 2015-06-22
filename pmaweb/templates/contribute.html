@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Contribute</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Contribute to phpMyAdmin</h2>
 
@@ -20,7 +21,7 @@ To gain practical experience in open-source development, you are welcome to cont
 <h3>Helping users</h3>
 
 <p>
-Interested in helping other users with phpMyAdmin? Visit our <a href="${base_url}support.${file_ext}">support</a> page and share your experience.
+Interested in helping other users with phpMyAdmin? Visit our <a href="{% url 'support' %}">support</a> page and share your experience.
 </p>
 
 <h3 id="translate">Localization</h3>
@@ -29,7 +30,7 @@ Interested in helping other users with phpMyAdmin? Visit our <a href="${base_url
 phpMyAdmin is being translated to many languages, but maybe your language is not 
 really up to date? You can easily contribute on our
 <a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>.
-You can find out more on the <a href="${base_url}translate.${file_ext}">translation
+You can find out more on the <a href="{% url 'translate' %}">translation
 page</a>.
 </p>
 
@@ -65,7 +66,7 @@ video tutorials giving users hints how to do specific tasks inside phpMyAdmin.
 <p>
 Coding contributions are very welcome, the easiest way is to fork our code on github 
 and submit a pull request. We really welcome bug fixes or new features. 
-You can find out more on the <a href="${base_url}devel.${file_ext}">developers
+You can find out more on the <a href="{% url 'develop' %}">developers
 page</a>.
 </p>
 
@@ -84,11 +85,8 @@ information or whether they were already reported is welcome help.
 
 <p>
 We need money to allow our presence at conferences, buy new hardware or provide various
-useful services to our users and developers. By <a href="${base_url}donate.${file_ext}">donating</a>
+useful services to our users and developers. By <a href="{% url 'donate' %}">donating</a>
 you help us in this area and possibly increase our presence at conferences.
 </p>
 
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}

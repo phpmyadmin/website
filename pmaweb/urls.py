@@ -53,11 +53,11 @@ urlpatterns = patterns('',
         name='try'
     ),
     url(
-        r'^improve/$',
+        r'^contribute/$',
         TemplateView.as_view(
-            template_name='improve.html',
+            template_name='contribute.html',
         ),
-        name='improve'
+        name='contribute'
     ),
     url(
         r'^sponsors/$',
@@ -149,6 +149,20 @@ urlpatterns = patterns('',
             template_name='downloads.html',
         ),
         name='downloads'
+    ),
+    url(
+        r'^translate/$',
+        TemplateView.as_view(
+            template_name='translate.html',
+        ),
+        name='translate'
+    ),
+    url(
+        r'^develop/$',
+        TemplateView.as_view(
+            template_name='develop.html',
+        ),
+        name='develop'
     ),
     url(
         r'^news/$',

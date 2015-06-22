@@ -27,7 +27,7 @@ MENU = [
     ('support', 'Support'),
     ('docs', 'Docs'),
     ('try', 'Try'),
-    ('improve', 'Contribute'),
+    ('contribute', 'Contribute'),
     ('sponsors', 'Sponsors'),
     ('themes', 'Themes'),
     ('downloads', 'Download'),
