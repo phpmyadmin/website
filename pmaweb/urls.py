@@ -14,5 +14,11 @@ urlpatterns = patterns('',
             url='http://store.swekey.com/index.php?promo=pma'
         )
     ),
+    url(
+        r'documentation'
+        RedirectView.as_view(
+            url='http://docs.phpmyadmin.net/'
+        )
+    ),
     url(r'^admin/', include(admin.site.urls)),
 )
