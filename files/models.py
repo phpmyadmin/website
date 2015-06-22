@@ -30,9 +30,10 @@ class Release(models.Model):
     def __unicode__(self):
         return self.version
 
-    def parse_version(self):
-        if '-' in self.version:
-            version, suffix = self.version.split('-')
+    @staticmethod
+    def parse_version(version):
+        if '-' in version:
+            version, suffix = version.split('-')
             if suffix.startswith('alpha'):
                 suffix_num = int(suffix[5:])
             elif suffix.startswith('beta'):
@@ -40,10 +41,10 @@ class Release(models.Model):
             elif suffix.startswith('rc'):
                 suffix_num = 50 + int(suffix[2:])
             else:
-                raise ValueError(self.version)
+                raise ValueError(version)
         else:
             suffix_num = 99
-            version = self.version
+            version = version
         parts = [int(x) for x in version.split('.')]
         if len(parts) == 3:
             parts.append(0)
@@ -57,7 +58,7 @@ class Release(models.Model):
         )
 
     def save(self, *args, **kwargs):
-        self.version_num = self.parse_version()
+        self.version_num = self.parse_version(self.version)
         super(Release, self).save(*args, **kwargs)
 
     def get_version_suffix(self):
