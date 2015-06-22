@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 import os.path
+from data.themes import CSSMAP
 
 # Naming of versions
 VERSION_INFO = (
@@ -176,3 +177,7 @@ class Theme(models.Model):
             self.version,
             self.filename,
         )
+
+    @property
+    def get_css(self):
+        return CSSMAP[self.supported_versions]

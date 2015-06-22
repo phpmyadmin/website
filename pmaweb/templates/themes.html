@@ -38,7 +38,7 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 <a py:for="css in themecssversions" class="themelink" href="#${css.css}" onclick="show_theme('${css.css}')">${css.name}</a>
 </p>
 {% for theme in themes %}
-    <div class="theme {{theme.classes}}">
+    <div class="theme {{theme.get_css}}">
         <h3>{{theme}}</h3>
             <div class="themeimgborder">
             <div class="themeimg">
