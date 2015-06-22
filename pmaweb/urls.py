@@ -8,12 +8,15 @@ urlpatterns = patterns('',
     # url(r'^$', 'pmaweb.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    # Swekey link from our documentation
     url(
         r'auth_key',
         RedirectView.as_view(
             url='http://store.swekey.com/index.php?promo=pma'
         )
     ),
+
+    # Compatibility redirects
     url(
         r'documentation'
         RedirectView.as_view(
@@ -26,5 +29,7 @@ urlpatterns = patterns('',
             url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs'
         )
     ),
+
+    # Admin interface
     url(r'^admin/', include(admin.site.urls)),
 )
