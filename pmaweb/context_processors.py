@@ -1,5 +1,12 @@
 from files.models import Release
 from django.conf import settings
+import datetime
+
+
+def basic(request):
+    return {
+        'current_year': datetime.datetime.now().year
+    }
 
 
 def releases(request=None):

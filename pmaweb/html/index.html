@@ -1,15 +1,14 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
 
 <py:def function="page_rss">${rss_news}</py:def>
 <py:def function="page_rss_title">phpMyAdmin project news</py:def>
 
-<div py:match="content" id="body">
-
+{% block content %}
 <div class="hitbuttons">
-<xi:include href="_littleboxes.tpl" />
+{% include '_littleboxes.html' %}
 </div>
 
-<xi:include href="_sponsors.tpl" />
+{% include '_sponsors.html' %}
 
 <h2>About</h2>
 
@@ -23,7 +22,7 @@ user interface, while you still have the ability to directly execute any SQL sta
 </p>
 
 <div class="bookbanner">
-<a href="${base_url}docs.${file_ext}#books" id="fader">
+<a href="{% url 'docs' %}#books" id="fader">
 <img src="images/books/pma_en_3.4_150x185.png" alt="phpMyAdmin book" />
 <img src="images/books/pma_starter_150x184.jpg" alt="phpMyAdmin Starter" />
 </a>
@@ -31,36 +30,36 @@ user interface, while you still have the ability to directly execute any SQL sta
 
 <p>
 phpMyAdmin comes with a wide range of <a
-href="${base_url}docs.${file_ext}">documentation</a> and users are welcome to
+href="{% url 'docs' %}">documentation</a> and users are welcome to
 update <a href="http://wiki.phpmyadmin.net/">our wiki pages</a> to share ideas and
 howtos for various operations. The <a
-href="${base_url}team.${file_ext}">phpMyAdmin team</a> will try to help you if
+href="{% url 'team' %}">phpMyAdmin team</a> will try to help you if
 you face any problem; you can use a <a
-href="${base_url}support.${file_ext}">variety of support channels</a> to get
+href="{% url 'support' %}">variety of support channels</a> to get
 help.
 </p>
 
 <p>
 phpMyAdmin is also very deeply documented in a book written by one of the developers
 &ndash; <a href="http://link.packtpub.com/XJdqZr">Mastering phpMyAdmin for
-Effective MySQL Management</a>, which is available in English and <a href="${base_url}docs.${file_ext}#books">Spanish</a>.
+Effective MySQL Management</a>, which is available in English and <a href="{% url 'docs' %}#books">Spanish</a>.
 </p>
 
 <p>
 To ease usage to a wide range of people, phpMyAdmin is being translated into <a
-href="${base_url}translations.${file_ext}">72 languages</a> and supports both LTR
+href="{% url 'translations' %}">72 languages</a> and supports both LTR
 and RTL languages.
 </p>
 
 <p>
-phpMyAdmin has won several <a href="${base_url}awards.${file_ext}">awards</a>.
+phpMyAdmin has won several <a href="{% url 'awards' %}">awards</a>.
 Among others, it was chosen as the best PHP application in various awards and
 has won every year the SourceForge.net Community Choice Awards as &quot;Best Tool or Utility for SysAdmins&quot;.
 </p>
 
 <p>
 phpMyAdmin is a sixteen-year-old project with a stable and flexible code
-base; you can find out more about the <a href="${base_url}about.${file_ext}">project and its history</a>. When the project turned 15, we published a <a href="${base_url}15-years.${file_ext}">celebration page</a>.
+base; you can find out more about the <a href="{% url 'about' %}">project and its history</a>. When the project turned 15, we published a <a href="{% url '15-years' %}">celebration page</a>.
 
 </p>
 
@@ -111,13 +110,13 @@ base; you can find out more about the <a href="${base_url}about.${file_ext}">pro
 </div>
 
 <div class="floatbox hslice" id="latest-news">
-    <h2 class="entry-title"><a href="${base_url}news.${file_ext}">Latest News</a></h2>
+    <h2 class="entry-title"><a href="{% url 'news' %}">Latest News</a></h2>
     <ul>
     <li py:for="item in short_news">
-        <a href="${base_url}news.${file_ext}#${item.anchor}">${item.date}: ${item.title}</a>
+        <a href="{% url 'news' %}#${item.anchor}">${item.date}: ${item.title}</a>
     </li>
     </ul>
-    <p class="signature"><a href="${base_url}news.${file_ext}">...more news.</a></p>
+    <p class="signature"><a href="{% url 'news' %}">...more news.</a></p>
 </div>
 
 <div class="floatbox hslice" id="latest-blogs">
@@ -133,6 +132,4 @@ base; you can find out more about the <a href="${base_url}about.${file_ext}">pro
 <div class="clearer"></div>
 
 </div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}

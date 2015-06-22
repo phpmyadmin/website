@@ -58,6 +58,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
+    'pmaweb.context_processors.basic',
     'pmaweb.context_processors.releases',
 )
 
