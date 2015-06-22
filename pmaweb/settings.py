@@ -99,4 +99,4 @@ STATIC_URL = '/static/'
 FILES_PATH = os.path.join(BASE_DIR, 'frs')
 
 # List of major versions to offer for download
-LISTED_BRANCHES = set(('4.0', '4.2', '4.3', '4.4'))
+LISTED_BRANCHES = ('4.4', '4.3', '4.2', '4.0')
