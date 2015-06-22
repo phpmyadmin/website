@@ -1,13 +1,48 @@
 from files.models import Release
 from news.models import Post
 from django.conf import settings
+from django.core.urlresolvers import reverse
 import datetime
+
+
+MENU = [
+    ('', 'Home'),
+    ('news', 'News'),
+    ('security', 'Security'),
+    ('support', 'Support'),
+    ('docs', 'Docs'),
+    ('try', 'Try'),
+    ('improve', 'Contribute'),
+    ('sponsors', 'Sponsors'),
+    ('themes', 'Themes'),
+    ('downloads', 'Download'),
+]
 
 
 def basic(request):
     return {
         'current_year': datetime.datetime.now().year,
         'short_news': Post.objects.all()[:5],
+    }
+
+
+def menu(request):
+    result = []
+
+    for name, title in MENU:
+        if name:
+            urlname = name
+        else:
+            urlname = 'home'
+
+        result.append({
+            'title': title,
+            'url': reverse(urlname),
+            'active': urlname == request.resolver_match.url_name,
+        })
+
+    return {
+        'menu': result,
     }
 
 

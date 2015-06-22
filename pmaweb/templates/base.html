@@ -52,7 +52,9 @@
   <header>
    <nav>
    <div class="menu">
-   <py:for each="item in menu"><a href="${item.link}" py:attrs="item['class']">${item.title}</a></py:for>
+   {% for item in menu %}
+   <a href="{{ item.url }}" {% if item.active %}class="active"{% endif %}>{{ item.title }}</a>
+   {% endfor %}
    </div>
    <div class="clearer"></div>
    </nav>
