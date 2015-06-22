@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Team</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Team</h2>
 
@@ -10,7 +11,7 @@
 The phpMyAdmin development team has been organized on <a
 href="http://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> since
 its start in 2001. They are responsible for the development of phpMyAdmin and represent
-it at various conferences. You can find more about the <a href="${base_url}about.${file_ext}">project and its history</a>.
+it at various conferences. You can find more about the <a href="{% url 'about' %}">project and its history</a>.
 </p>
 
 <p>
@@ -25,7 +26,7 @@ You can follow the developers blogs at
 <h3 class="fn">Marc Delisle</h3>
 <h4>Release coordinator</h4>
 
-<img class="head photo" src="${server}${base_url}images/heads/marc.jpg" alt="Photo of Marc Delisle" />
+<img class="head photo" src="{% static 'images/heads/marc.jpg' %}" alt="Photo of Marc Delisle" />
 <p>
 Marc started contributing to <span class="org">phpMyAdmin</span> in 1998. He then took over the project from founder Tobias Ratschiller and started a new era of phpMyAdmin together with Olivier Müller and Loïc Chapeaux in 2001. 
 </p>
@@ -38,7 +39,7 @@ code to the project. He lives in <span class="adr"><span class="locality">Sherbr
 <div class="floatbox vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
 <h4>Infrastructure coordinator</h4>
-<img class="head photo" src="${server}${base_url}images/heads/nijel.jpg" alt="Photo of Michal Čihař" />
+<img class="head photo" src="{% static 'images/heads/nijel.jpg' %}" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
@@ -54,7 +55,7 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 <div class="floatbox vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
 <h4>Bug fixing and security coordinator</h4>
-<img class="head photo" src="${server}${base_url}images/heads/madhura.jpg" alt="Photo of Madhura Jayaratne" />
+<img class="head photo" src="{% static 'images/heads/madhura.jpg' %}" alt="Photo of Madhura Jayaratne" />
 <p>
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
 </p>
@@ -66,7 +67,7 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 <div class="floatbox vcard" id="atul">
 <h3 class="fn">Atul Pratap Singh</h3>
 <h4>JavaScript Q/A coordinator</h4>
-<img class="head photo" src="${server}${base_url}images/heads/atul.jpg" alt="Photo of Atul Pratap Singh" />
+<img class="head photo" src="{% static 'images/heads/atul.jpg' %}" alt="Photo of Atul Pratap Singh" />
 <p>
 Atul joined the team in August 2012, after he took part in Google Summer of Code 2012 for phpMyAdmin. He contributed by refactoring a part of the project and helped in phpMyAdmin's migration to 'jqplot'.
 </p>
@@ -78,7 +79,7 @@ He lives in <span class="adr"><span class="locality">New Delhi</span>, <span cla
 <div class="floatbox vcard" id="isaac">
 <h3 class="fn">Isaac Bennetch</h3>
 <h4>Support and documentation coordinator</h4>
-<img class="head photo" src="${server}${base_url}images/heads/isaac.jpg" alt="Photo of Isaac Bennetch" />
+<img class="head photo" src="{% static 'images/heads/isaac.jpg' %}" alt="Photo of Isaac Bennetch" />
 <p>
 Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
 support and improving the documentation. He officially joined the development team in April, 2013. 
@@ -93,7 +94,7 @@ He lives in the <span class="adr"><span class="country">United States</span></sp
 <div class="floatbox vcard" id="hugues">
 <h3 class="fn">Hugues Peccatte</h3>
 <h4>Developer</h4>
-<img class="head photo" src="${server}${base_url}images/heads/hugues.jpg" alt="Photo of Hugues Peccatte" width="70" height="70" />
+<img class="head photo" src="{% static 'images/heads/hugues.jpg' %}" alt="Photo of Hugues Peccatte" width="70" height="70" />
 <p>
 Hugues has joined the <span class="org">phpMyAdmin</span> team in November 2013 after fixing somes bugs and completing PHPDoc. He tries to keep the source code sound and clear and to complete unit tests.  
 </p>
@@ -105,7 +106,7 @@ He currently lives in <span class="adr">Etampes, <span class="country">France</s
 <div class="floatbox vcard" id="chirayu">
 <h3 class="fn">Chirayu Chiripal</h3>
 <h4>Developer / HHVM Coordinator</h4>
-<img class="head photo" src="${server}${base_url}images/heads/chirayu.jpg" alt="Photo of Chirayu Chiripal" width="65" height="84" />
+<img class="head photo" src="{% static 'images/heads/chirayu.jpg' %}" alt="Photo of Chirayu Chiripal" width="65" height="84" />
 <p>
 Chirayu joined the <span class="org">phpMyAdmin</span> team in September 2014 after successfully completing Google Summer of Code 2014 program. Chirayu is a passionate programmer looking for opportunities to enhance his knowledge and also
 contribute to the open source community alongside.
@@ -118,7 +119,7 @@ He lives in <span class="country">India</span>.
 <div class="floatbox vcard" id="smita">
 <h3 class="fn">Smita Kumari</h3>
 <h4>Developer</h4>
-<img class="head photo" src="${server}${base_url}images/heads/smita.jpg" alt="Photo of Smita Kumari" width="101" height="84" />
+<img class="head photo" src="{% static 'images/heads/smita.jpg' %}" alt="Photo of Smita Kumari" width="101" height="84" />
 <p>
 Smita started her open source journey with <span class="org">phpMyAdmin</span> from December, 2013 and took part in Google Summer of Code 2014. Most of her contributions are in bug fixes and a few feature implementations. She worked on automated normalization and the central list of columns as part of GSoC project.  As part of phpMyAdmin team, she would like to focus mostly on server-side bug fixing and developments. 
 </p>
@@ -223,7 +224,4 @@ A full list is maintained in the <a
 href="https://phpmyadmin.readthedocs.org/en/latest/credits.html">documentation</a>.
 </p>
     
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
