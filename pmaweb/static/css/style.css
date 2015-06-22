@@ -1,7 +1,7 @@
 #logo {
     padding: 0;
     margin: 0 20px;
-    background: url('${base_url}images/logo.png') no-repeat;
+    background: url('../images/logo.png') no-repeat;
     width: 172px;
     height: 100px;
     font-size: 1px;
@@ -373,16 +373,16 @@ pre {
 }
 
 .sortable thead th {
-    background: url(${base_url}images/icon-table-sort.png) no-repeat 2px 8px;
+    background: url(../images/icon-table-sort.png) no-repeat 2px 8px;
     padding: 4px 4px 4px 14px;
 }
 
 .sortable thead th.forward_sort {
-    background: url(${base_url}images/icon-table-sort-asc.png) no-repeat 2px 4px;
+    background: url(../images/icon-table-sort-asc.png) no-repeat 2px 4px;
 }
 
 .sortable thead th.reverse_sort {
-    background: url(${base_url}images/icon-table-sort-desc.png) no-repeat 2px 10px;
+    background: url(../images/icon-table-sort-desc.png) no-repeat 2px 10px;
 }
 
 .dllist td {
