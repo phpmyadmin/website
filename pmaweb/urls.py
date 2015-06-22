@@ -29,16 +29,17 @@ urlpatterns = patterns('',
             template_name='test-data',
             content_type='text/plain'
         )
+    ),
 
     # Compatibility redirects
     url(
-        r'documentation'
+        r'documentation',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/'
         )
     ),
     url(
-        r'snapshot'
+        r'snapshot',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/phpmyadmin/'
         )
