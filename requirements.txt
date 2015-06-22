@@ -3,4 +3,4 @@ python-dateutil
 feedparser
 django-markupfield
 docutils
-python-markdown
+Markdown
