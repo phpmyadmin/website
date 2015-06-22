@@ -17,6 +17,11 @@ urlpatterns = patterns('',
         )
     ),
 
+    # TODO:
+    # favicon.ico
+    # robots.txt
+    # version.txt
+
     # Test backend
     url(
         r'test/data$',
