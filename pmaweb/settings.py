@@ -84,4 +84,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Location of download files
 FILES_PATH = os.path.join(BASE_DIR, 'frs')
+
+# List of major versions to offer for download
+LISTED_BRANCHES = set(('4.0', '4.2', '4.3', '4.4'))
