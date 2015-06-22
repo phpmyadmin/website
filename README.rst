@@ -1,15 +1,15 @@
-Website generator for phpMyAdmin
-================================
+Website for phpMyAdmin
+======================
 
-Python code to generate phpMyAdmin's website using Genshi templates.
+Django code for phpMyAdmin's website.
 
 Requirements
 ------------
 
 Python - http://www.python.org/
-    (2.7 tested, other should work also)
-Genshi -  http://genshi.edgewall.org/
-    (0.6.0 tested)
+    (2.7 tested)
+Django - https://www.djangoproject.com/
+    (1.8.2 tested)
 python-feedparser - http://code.google.com/p/feedparser/
     (5.1 tested)
 python-dateutil - http://labix.org/python-dateutil
