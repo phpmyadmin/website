@@ -24,6 +24,12 @@ urlpatterns = patterns('',
         )
     ),
     url(
+        r'snapshot'
+        RedirectView.as_view(
+            url='https://github.com/phpmyadmin/phpmyadmin/'
+        )
+    ),
+    url(
         r'old-stuff/ChangeLogs/',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs'
