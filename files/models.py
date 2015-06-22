@@ -164,4 +164,4 @@ class Theme(models.Model):
         ordering = ['name', 'version']
 
     def __unicode__(self):
-        return u'{0} {1}'.format(self.name, self.version)
+        return u'{0} {1}'.format(self.display_name, self.version)
