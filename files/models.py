@@ -29,6 +29,14 @@ class Release(models.Model):
     def __unicode__(self):
         return self.version
 
+    def simpledownload(self):
+        try:
+            return self.download_set.get(
+                filename__endswith='-all-languages.zip'
+            )
+        except Download.DoesNotExist:
+            return self.download_set.all()[0]
+
     @staticmethod
     def parse_version(version):
         if '-' in version:
@@ -133,7 +141,13 @@ class Download(models.Model):
         )
 
     def get_absolute_url(self):
-        return self.__unicode__()
+        return 'https://files.phpmyadmin.net/{0}'.format(
+            self.__unicode__()
+        )
+
+    @property
+    def archive(self):
+        return self.filename.rsplit('.', 1)[-1]
 
 
 class Theme(models.Model):
