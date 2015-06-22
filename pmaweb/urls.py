@@ -20,5 +20,11 @@ urlpatterns = patterns('',
             url='http://docs.phpmyadmin.net/'
         )
     ),
+    url(
+        r'old-stuff/ChangeLogs/',
+        RedirectView.as_view(
+            url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs'
+        )
+    ),
     url(r'^admin/', include(admin.site.urls)),
 )
