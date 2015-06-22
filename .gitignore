@@ -6,3 +6,4 @@ cache
 /django
 /frs
 db.sqlite3
+/static
