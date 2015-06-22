@@ -9,11 +9,22 @@ urlpatterns = patterns('',
     # url(r'^$', 'pmaweb.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    # Pages
+    url(
+        r'^$',
+        TemplateView.as_view(
+            template_name='index.html',
+        ),
+        name='home'
+    ),
+
+
     # Swekey link from our documentation
     url(
         r'auth_key',
         RedirectView.as_view(
             url='http://store.swekey.com/index.php?promo=pma'
+            permanent=False,
         )
     ),
 
@@ -24,7 +35,7 @@ urlpatterns = patterns('',
 
     # Test backend
     url(
-        r'test/data$',
+        r'^test/data$',
         TemplateView.as_view(
             template_name='test-data',
             content_type='text/plain'
@@ -33,21 +44,24 @@ urlpatterns = patterns('',
 
     # Compatibility redirects
     url(
-        r'documentation',
+        r'^documentation',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/'
+            permanent=True,
         )
     ),
     url(
-        r'snapshot',
+        r'^snapshot',
         RedirectView.as_view(
-            url='https://github.com/phpmyadmin/phpmyadmin/'
+            url='https://github.com/phpmyadmin/phpmyadmin/',
+            permanent=True,
         )
     ),
     url(
-        r'old-stuff/ChangeLogs/',
+        r'^old-stuff/ChangeLogs/',
         RedirectView.as_view(
-            url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs'
+            url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs',
+            permanent=True,
         )
     ),
 
