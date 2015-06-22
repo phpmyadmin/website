@@ -16,17 +16,34 @@ class Release(models.Model):
     def __unicode__(self):
         return self.version
 
-    def save(self, *args, **kwargs):
-        parts = [int(x) for x in self.version.split('.')]
+    def parse_version(self):
+        if '-' in self.version:
+            version, suffix = self.version.split('-')
+            if suffix.startswith('alpha'):
+                suffix_num = int(suffix[5:])
+            elif suffix.startswith('beta'):
+                suffix_num = 10 + int(suffix[4:])
+            elif suffix.startswith('rc'):
+                suffix_num = 50 + int(suffix[2:])
+            else:
+                raise ValueError(self.version)
+        else:
+            suffix_num = 99
+            version = self.version
+        parts = [int(x) for x in version.split('.')]
         if len(parts) == 3:
             parts.append(0)
         assert len(parts) == 4
-        self.version_num = (
-            1000000 * parts[0] +
-            10000 * parts[1] +
-            100 * parts[2] +
-            parts[3]
+        return (
+            100000000 * parts[0] +
+            1000000 * parts[1] +
+            10000 * parts[2] +
+            100 * parts[3] +
+            suffix_num
         )
+
+    def save(self, *args, **kwargs):
+        self.version_num = self.parse_version()
         super(Release, self).save(*args, **kwargs)
 
 
