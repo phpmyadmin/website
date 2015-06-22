@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Support</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <div class="floatbox">
 <h2>Getting support</h2>
@@ -58,7 +59,5 @@ Please note that these services are not in any way connected with the phpMyAdmin
 </div>
 
 <div class="clearer"></div>
-</div>
 
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
