@@ -4,4 +4,12 @@
 - purge cdn on new release/theme/post/...
 - release dates
 - news archive
+- RSS feeds
+    - news
+    - CVE
+    - files
 - files archive
+- titles for pages
+- RSS for pages
+- check for py: in templates
+- check for ${ in templates
