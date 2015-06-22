@@ -1,4 +1,4 @@
-from files.models import Release
+from files.models import Release, Theme
 from news.models import Post
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -13,6 +13,7 @@ def basic(request):
         'current_year': datetime.datetime.now().year,
         'short_news': Post.objects.all()[:5],
         'screenshots': SCREENSHOTS,
+        'themes': Theme.objects.all(),
     }
 
 

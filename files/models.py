@@ -165,3 +165,14 @@ class Theme(models.Model):
 
     def __unicode__(self):
         return u'{0} {1}'.format(self.display_name, self.version)
+
+    @property
+    def imgname(self):
+        return 'images/themes/{0}.png'.format(self.name)
+
+    def get_absolute_url(self):
+        return 'https://files.phpmyadmin.net/themes/{0}/{1}/{2}'.format(
+            self.name,
+            self.version,
+            self.filename,
+        )

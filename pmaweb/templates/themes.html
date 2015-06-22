@@ -1,10 +1,11 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Themes</py:def>
 <py:def function="page_rss">${rss_files}</py:def>
 <py:def function="page_rss_title">phpMyAdmin file releases</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 <h2>Themes</h2>
 <p>
 phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
@@ -36,26 +37,27 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 <p>Select your phpMyAdmin version (requires JavaScript):
 <a py:for="css in themecssversions" class="themelink" href="#${css.css}" onclick="show_theme('${css.css}')">${css.name}</a>
 </p>
-    <div py:for="theme in themes" class="theme ${theme.classes}">
-        <h3>${theme.fullname}</h3>
+{% for theme in themes %}
+    <div class="theme {{theme.classes}}">
+        <h3>{{theme}}</h3>
             <div class="themeimgborder">
             <div class="themeimg">
-                <a href="${base_url}${theme.imgname}"
-                rel="lightbox[themes]" title="${theme.name}">
-                    <img src="${base_url}${theme.imgname}" alt="${theme.name} thumbnail" />
+                <a href="{% static '' %}{{ theme.imgname }}"
+                rel="lightbox[themes]" title="{{theme.name}}">
+                    <img src="{% static '' %}{{ theme.imgname }}" alt="{{theme.display_name}} thumbnail" />
                 </a>
             </div>
             </div>
             <p>Released on ${theme.date}</p>
-            <p>Compatible with phpMyAdmin <strong>${theme.support}</strong>.</p>
-            <p py:if="theme.author">Author: ${theme.author}</p>
-            <p>${Markup(theme.info)}</p>
+            <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
+            {% if theme.author %}
+            <p>Author: {{theme.author}}</p>
+            {% endif %}
+            <p>{{ theme.description }}</p>
             <ul class="dl">
-                <li><a href="${theme.file.cdn_url}#!md5!${theme.file.md5}">${theme.file.name}</a> (${theme.file.humansize}, MD5: ${theme.file.md5})</li>
+                <li><a href="{{ theme.get_absolute_url }}">{{theme.filename}}</a> ({{theme.size|filesizeformat}}, MD5: ${theme.file.md5})</li>
             </ul> 
     </div>
+    {% endfor %}
     <div class="clearer"></div>
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
