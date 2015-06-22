@@ -1,3 +1,4 @@
 Django>=1.8
 python-dateutil
 feedparser
+django-markupfield
