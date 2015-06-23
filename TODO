@@ -1,6 +1,5 @@
-- CVEs
 - render pages
-- create news entry on new release
+- create news entry on new release/PMASA
 - purge cdn on new release/theme/post/...
 - import release dates
 - news archive
