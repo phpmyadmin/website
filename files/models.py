@@ -51,6 +51,10 @@ class Release(models.Model):
     def __unicode__(self):
         return self.version
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('release', (), {'version': self.version})
+
     def simpledownload(self):
         try:
             return self.download_set.get(

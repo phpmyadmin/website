@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Archive of phpMyAdmin releases, you can find currently supported versions <a href="{% url 'downloads' %}">on downloads page</a>.</p>
+
+<table>
+<thead>
+<tr><th>Release</th><th>Date</th></tr>
+</thead>
+<tbody>
+{% for object in object_list %}
+<tr>
+    <th><a href="{{ object.get_absolute_url }}">{{ object }}</a></th>
+    <td>{{ object.date|date:"Y-m-d" }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}

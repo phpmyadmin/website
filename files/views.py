@@ -20,6 +20,22 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-from django.shortcuts import render
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from files.models import Release
 
-# Create your views here.
+
+class ReleaseList(ListView):
+    model = Release
+
+
+class ReleaseDetail(DetailView):
+    model = Release
+
+    def get_object(self, queryset=None):
+        if queryset is None:
+            queryset = self.get_queryset()
+
+        return queryset.get(
+            version=self.kwargs['version'],
+        )

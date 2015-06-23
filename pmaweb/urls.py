@@ -24,6 +24,7 @@ from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
 from security.views import PMASAView
+from files.views import ReleaseList, ReleaseDetail
 
 
 urlpatterns = patterns('',
@@ -207,6 +208,16 @@ urlpatterns = patterns('',
             template_name='news.html',
         ),
         name='news'
+    ),
+    url(
+        r'^files/$',
+        ReleaseList.as_view(),
+        name='files'
+    ),
+    url(
+        r'^files/(?P<version>[a-z0-9.-]*)/$',
+        ReleaseDetail.as_view(),
+        name='release'
     ),
 
     # Swekey link from our documentation
