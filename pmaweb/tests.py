@@ -22,6 +22,7 @@
 
 from django.test import TestCase
 from django.core.urlresolvers import reverse
+from pmaweb.views import REDIRECT_MAP, redirect_home_page
 
 
 class ViewTest(TestCase):
@@ -36,3 +37,15 @@ class ViewTest(TestCase):
     def test_themes(self):
         response = self.client.get(reverse('themes'))
         self.assertContains(response, 'Metro')
+
+    def test_redirects(self):
+        for url in REDIRECT_MAP:
+            response = self.client.get(
+                '/home_page/{0}.php'.format(url),
+                follow=True
+            )
+            self.assertContains(
+                response,
+                'http://github.com/phpmyadmin/',
+                msg_prefix='Invalid response for {0}'.format(url),
+            )

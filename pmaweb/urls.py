@@ -186,6 +186,20 @@ urlpatterns = patterns('',
         name='develop'
     ),
     url(
+        r'^contest/$',
+        TemplateView.as_view(
+            template_name='contest.html',
+        ),
+        name='contest'
+    ),
+    url(
+        r'^news/$',
+        TemplateView.as_view(
+            template_name='news.html',
+        ),
+        name='news'
+    ),
+    url(
         r'^news/$',
         TemplateView.as_view(
             template_name='news.html',
@@ -206,6 +220,7 @@ urlpatterns = patterns('',
     # favicon.ico
     # robots.txt
     # version.txt
+    # home_page/version.php
 
     # Test backend
     url(
@@ -244,6 +259,10 @@ urlpatterns = patterns('',
             url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs',
             permanent=True,
         )
+    ),
+    url(
+        r'^home_page/(?P<page>[a-z0-9-]*)\.php$',
+        'pmaweb.views.redirect_home_page',
     ),
 
     # Admin interface
