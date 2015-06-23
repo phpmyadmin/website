@@ -39,7 +39,7 @@ REDIRECT_MAP = {
     'about': 'about',
     'awards': 'awards',
     'contest': 'contest',
-    'devel': 'devel',
+    'devel': 'develop',
     'docs': 'docs',
     'donate': 'donate',
     'downloads': 'downloads',
