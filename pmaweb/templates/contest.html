@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Contest</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 <h2>Contest results</h2>
 <p>
 Packt Publishing (publisher of <a href="http://www.packtpub.com/mastering-phpmyadmin-3-4-for-effective-mysql-management/book">Mastering phpMyAdmin 3.4</a>) sponsored this programming contest, offering five e-books of your choice from their entire collection, plus a special prize of a yearly subscription to <a href="http://packtlib.packtpub.com">PacktLib</a>.
@@ -23,8 +24,5 @@ Packt Publishing (publisher of <a href="http://www.packtpub.com/mastering-phpmya
  <li>Book : <strong>mRvKXazB</strong></li>
  <li>E-book: <strong>eB3Nu2yG</strong></li>
 </ul>
-<a href="http://link.packtpub.com/XJdqZr"><img src="${base_url}images/books/pma_en_3.4_150x185.png" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+<a href="http://link.packtpub.com/XJdqZr"><img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
+{% endblock %}
