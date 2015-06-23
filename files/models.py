@@ -183,6 +183,11 @@ class Download(models.Model):
             self.__unicode__()
         )
 
+    def get_alternate_url(self):
+        return 'https://1126968067.rsc.cdn77.org{0}'.format(
+            self.__unicode__()
+        )
+
     @property
     def archive(self):
         return self.filename.rsplit('.', 1)[-1]
