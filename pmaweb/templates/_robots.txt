@@ -1,3 +1,0 @@
-User-Agent: *
-Allow: /
-Sitemap: ${server}${base_url}sitemap.xml
