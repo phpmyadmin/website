@@ -1,11 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
-
-<py:def function="page_rss">${rss_news}</py:def>
-<py:def function="page_rss_title">15 years</py:def>
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">15 years</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2> The <a href="http://www.phpmyadmin.net">phpMyAdmin</a> project is thrilled to celebrate fifteen years of phpMyAdmin </h2>
  
@@ -66,7 +64,4 @@ from 2002.
 <sup>1</sup> &#8211; These analyses provided by <a href="http://www.openhub.net/p/phpmyadmin">Open HUB</a> by Black Duck.
 </p>
  
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+ {% endblock %}
