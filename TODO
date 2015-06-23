@@ -9,7 +9,6 @@
 - RSS for pages
 - check for py: in templates
 - check for ${ in templates
-- remove data/sf.py
 - html sitemap
 - xml sitemap
 - error page
