@@ -7,7 +7,6 @@
     - news
     - CVE
     - files
-- files archive
 - titles for pages
 - RSS for pages
 - check for py: in templates
