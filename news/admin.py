@@ -23,4 +23,17 @@ from django.contrib import admin
 from news.models import Post
 
 
-admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'date', 'author')
+    list_filter = ('author',)
+    date_hierarchy = 'date'
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ['title', 'slug']
+
+    def save_model(self, request, obj, form, change):
+        if getattr(obj, 'author', None) is None:
+            obj.author = request.user
+        obj.save()
+
+
+admin.site.register(Post, PostAdmin)

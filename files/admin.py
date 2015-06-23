@@ -23,6 +23,24 @@
 from django.contrib import admin
 from files.models import Release, Download, Theme
 
-admin.site.register(Release)
-admin.site.register(Download)
-admin.site.register(Theme)
+
+class ReleaseAdmin(admin.ModelAdmin):
+    list_display = ('version', 'stable')
+    search_fields = ('version',)
+
+
+class DownloadAdmin(admin.ModelAdmin):
+    list_display = ('filename', 'release', 'size', 'signed')
+    search_fields = ('filename',)
+
+
+class ThemeAdmin(admin.ModelAdmin):
+    list_display = (
+        'display_name', 'version', 'filename', 'supported_versions', 'size',
+    )
+    list_filter = ('supported_versions', )
+
+
+admin.site.register(Release, ReleaseAdmin)
+admin.site.register(Download, DownloadAdmin)
+admin.site.register(Theme, ThemeAdmin)

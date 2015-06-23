@@ -30,7 +30,7 @@ class Post(models.Model):
     slug = models.SlugField(db_index=True, unique_for_date='date')
     date = models.DateTimeField(db_index=True)
     body = MarkupField(default_markup_type='markdown')
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, editable=False)
 
     class Meta(object):
         ordering = ['-date']

@@ -153,7 +153,7 @@ class Download(models.Model):
     signed = models.BooleanField(default=False)
 
     class Meta(object):
-        ordering = ['filename']
+        ordering = ['-release__version_num', 'filename']
         unique_together = ['release', 'filename']
 
     def __unicode__(self):
