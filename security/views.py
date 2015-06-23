@@ -26,6 +26,11 @@ from security.models import PMASA
 class PMASAView(DetailView):
     model = PMASA
 
+    def get_context_data(self, **kwargs):
+        context = super(PMASAView, self).get_context_data(**kwargs)
+        context['page_title'] = 'Security - {0}'.format(self.object)
+        return context
+
     def get_object(self, queryset=None):
         if queryset is None:
             queryset = self.get_queryset()
