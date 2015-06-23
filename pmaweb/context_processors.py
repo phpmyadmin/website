@@ -49,10 +49,15 @@ def menu(request):
         else:
             urlname = 'home'
 
+        active = (
+            request.resolver_match and
+            urlname == request.resolver_match.url_name
+        )
+
         result.append({
             'title': title,
             'url': reverse(urlname),
-            'active': urlname == request.resolver_match.url_name,
+            'active': active,
         })
 
     return {
