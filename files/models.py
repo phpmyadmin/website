@@ -160,6 +160,9 @@ class Theme(models.Model):
     description = models.TextField()
     author = models.CharField(max_length=200)
     size = models.IntegerField(default=0)
+    md5 = models.CharField(max_length=32)
+    sha1 = models.CharField(max_length=40)
+    signed = models.BooleanField(default=False)
 
     class Meta(object):
         ordering = ['name', 'version']

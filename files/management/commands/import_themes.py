@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 from django.conf import settings
 import os
 from files.models import Theme
+from files.utils import read_sum
 from data.themes import THEMES
 
 
@@ -17,16 +18,21 @@ class Command(BaseCommand):
             self.stderr.write('Unknown theme: {0}'.format(namever))
             return
 
+        complete_name = os.path.join(path, fullname)
+
         Theme.objects.get_or_create(
             filename=filename,
             name=name,
             version=version,
             defaults={
-                'size': os.path.getsize(os.path.join(path, fullname)),
+                'size': os.path.getsize(complete_name),
                 'display_name': data['name'],
                 'supported_versions': data['support'],
                 'description': data['info'],
                 'author': data['author'],
+                'sha1': read_sum('{0}.sha1'.format(complete_name)),
+                'md5': read_sum('{0}.md5'.format(complete_name)),
+                'signed': os.path.exists('{0}.asc'.format(complete_name)),
             }
         )
 

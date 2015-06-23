@@ -4,6 +4,7 @@ import os
 from glob import glob
 from files.models import Release, Download
 from bs4 import BeautifulSoup
+from files.utils import read_sum
 
 
 def glob_downloads():
@@ -14,14 +15,6 @@ def glob_downloads():
         glob('*.tar.bz2') +
         glob('*.tar.xz')
     )
-
-
-def read_sum(filename):
-    try:
-        with open(filename, 'r') as handle:
-            return handle.read().split()[0]
-    except IOError:
-        return ''
 
 
 class Command(BaseCommand):
