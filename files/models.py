@@ -170,6 +170,14 @@ class Download(models.Model):
             self.filename
         )
 
+    def get_filesystem_path(self):
+        return os.path.join(
+            settings.FILES_PATH,
+            'phpMyAdmin',
+            self.release.version,
+            self.filename
+        )
+
     def get_absolute_url(self):
         return 'https://files.phpmyadmin.net{0}'.format(
             self.__unicode__()
@@ -211,6 +219,15 @@ class Theme(models.Model):
             self.name,
             self.version,
             self.filename,
+        )
+
+    def get_filesystem_path(self):
+        return os.path.join(
+            settings.FILES_PATH,
+            'themes',
+            self.name,
+            self.version,
+            self.filename
         )
 
     @property
