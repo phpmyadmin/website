@@ -1,8 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">About Website</py:def>
 
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>About Website</h2>
 
@@ -54,7 +55,4 @@ history</a>.
 <li><a href="http://trac.usefulinc.com/doap">DOAP</a>: <a href="http://www.phpmyadmin.net/home_page/phpmyadmin-doap.xml">http://www.phpmyadmin.net/home_page/phpmyadmin-doap.xml</a></li>
 </ul>
 
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
