@@ -279,6 +279,10 @@ urlpatterns = patterns('',
         )
     ),
     url(
+        r'^home_page/security\.php$',
+        'pmaweb.views.redirect_security',
+    ),
+    url(
         r'^home_page/(?P<page>[a-z0-9-]*)\.php$',
         'pmaweb.views.redirect_home_page',
     ),

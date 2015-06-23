@@ -49,3 +49,10 @@ class ViewTest(TestCase):
                 'http://github.com/phpmyadmin/',
                 msg_prefix='Invalid response for {0}'.format(url),
             )
+
+    def test_security_redirect(self):
+        # TODO: remove fetch_redirect_response once these pages are implemented
+        response = self.client.get('/home_page/security.php')
+        self.assertRedirects(response, '/security/', fetch_redirect_response=False)
+        response = self.client.get('/home_page/security.php?issue=PMASA-2011-1')
+        self.assertRedirects(response, '/security/PMASA-2011-1/', fetch_redirect_response=False)

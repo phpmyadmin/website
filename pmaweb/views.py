@@ -48,7 +48,6 @@ REDIRECT_MAP = {
     'license': 'license',
     'news': 'news',
     'search': 'search',
-    'security': 'security',
     'sitemap': 'sitemap',
     'sponsors': 'sponsors',
     'support': 'support',
@@ -60,9 +59,17 @@ REDIRECT_MAP = {
 }
 
 
-def redirect_home_page(self, page):
+def redirect_home_page(request, page):
     """Redirect handled for old website links"""
     try:
-        return redirect(reverse(REDIRECT_MAP[page]), permanent=True)
+        return redirect(REDIRECT_MAP[page], permanent=True)
     except KeyError:
         raise Http404('Not existing page: {0}'.format(page))
+
+
+def redirect_security(request):
+    """Redirect for old security page"""
+    if 'issue' in request.GET:
+        return redirect('security-issue', entry=request.GET['issue'])
+    else:
+        return redirect('security')
