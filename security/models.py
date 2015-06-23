@@ -84,3 +84,7 @@ class PMASA(models.Model):
 
     def __unicode__(self):
         return 'PMASA-{0}-{1}'.format(self.year, self.sequence)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('security-issue', (), {'entry': str(self)})
