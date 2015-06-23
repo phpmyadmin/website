@@ -192,6 +192,9 @@ class Theme(models.Model):
     md5 = models.CharField(max_length=32)
     sha1 = models.CharField(max_length=40)
     signed = models.BooleanField(default=False)
+    date = models.DateField(
+        default=datetime.date.today
+    )
 
     class Meta(object):
         ordering = ['name', 'version']
