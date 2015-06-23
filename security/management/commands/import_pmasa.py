@@ -84,7 +84,7 @@ class PMASAParser(object):
         self.data['description_markup_type'] = 'html'
 
     def parse_announcement_commits(self, text, branch):
-        self.commits[branch] = text.replace('\n', ' ')
+        self.commits[branch.replace('_', '.')] = text.replace('\n', ' ')
         result = []
         if 'master' in self.commits:
             result.append(self.commits['master'])

@@ -19748,7 +19748,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.5), 4.1.x (prior to 4.1.14.6) and 4.2.x (prior to 4.2.10.1) are affected.",
     "description": "<p>With a crafted database or table name it is possible to trigger an XSS in SQL debug output when enabled and in server monitor page when viewing and analysing executed queries.</p>",
     "sequence": 12,
-    "commits": "bd68c54d1beeef79d237e8bfda44690834012a76 7b8962dede7631298c81e2c1cd267b81f1e08a8c\n4_0: 57594febab385cd8fa3bc2c4511caa014d09485a a150ea1df477fcc9a79bbdf3f26b40d9e333bcf1\n4_1: f989e2a94cb75158d33330e0e29f9b54ce3d7c07 0092f608d37d0ce7acea30ec9e7e995ef1a6e06c",
+    "commits": "bd68c54d1beeef79d237e8bfda44690834012a76 7b8962dede7631298c81e2c1cd267b81f1e08a8c\n4.0: 57594febab385cd8fa3bc2c4511caa014d09485a a150ea1df477fcc9a79bbdf3f26b40d9e333bcf1\n4.1: f989e2a94cb75158d33330e0e29f9b54ce3d7c07 0092f608d37d0ce7acea30ec9e7e995ef1a6e06c",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.5 or newer, or 4.1.14.6 or newer, or 4.2.10.1 or newer, or apply the patch listed below.",
     "summary": "XSS vulnerabilities in SQL debug output and server monitor page.",
@@ -19762,7 +19762,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 121
+  "pk": 241
 },
 {
   "fields": {
@@ -19772,7 +19772,7 @@
     "affected": "Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.",
     "description": "<p><ul>\n    <li>\n        In the setup/index.php, using a crafted # hash with a Javascript event,\n        untrusted JS code could be executed.\n    </li>\n    <li>\n        In the Display chart view, a chart title containing HTML code\n        was rendered unescaped, leading to possible JavaScript code\n        execution via events.\n    </li>\n    <li>\n        A malicious user with permission to create databases or users\n        having HTML tags in their name, could trigger an XSS vulnerability by\n        issuing a sleep query with a long delay. In the server status\n        monitor, the query parameters were shown unescaped.\n    </li>\n    <li>\n        By configuring a malicious URL for the phpMyAdmin logo link in the\n        navigation sidebar, untrusted script code could be executed when\n        a user clicked the logo.\n    </li>\n    <li>\n        The setup field for \"List of trusted proxies for IP allow/deny\"\n        Ajax validation code returned the unescaped input on errors,\n        leading to possible JavaScript execution by entering arbitrary HTML.\n    </li>\n</ul></p>",
     "sequence": 9,
-    "commits": "2005c4b7c15afa61a41e1087464fe12645f535e1 d096a0fc46ef4708f3f4a440a8aba40163e3b72a e0d8568ac681073b09f10ad1c4d801df36290036\n3_5: 299c481a58386a846884720d90682ad4079edf3a 7f9d762e89157144fbcc01167a3141e39ac25da1 6f003b0ccb1293e5ff5be41bd25582485f480743 7c58ed002f570c3793df0a77a625d3177ee9a12e 845dae144f4ed665a14bf4912046d5d3d220ef96",
+    "commits": "2005c4b7c15afa61a41e1087464fe12645f535e1 d096a0fc46ef4708f3f4a440a8aba40163e3b72a e0d8568ac681073b09f10ad1c4d801df36290036\n3.5: 299c481a58386a846884720d90682ad4079edf3a 7f9d762e89157144fbcc01167a3141e39ac25da1 6f003b0ccb1293e5ff5be41bd25582485f480743 7c58ed002f570c3793df0a77a625d3177ee9a12e 845dae144f4ed665a14bf4912046d5d3d220ef96",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer or apply the patches\nlisted below.",
     "summary": "5 XSS vulnerabilities in setup, chart display, process list, and logo link.",
@@ -19786,7 +19786,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 122
+  "pk": 242
 },
 {
   "fields": {
@@ -19810,7 +19810,7 @@
     "severity": "Default configuration is not affected by this issue, it can happen only\nwhen $$cfg['LeftFrameLight'] is FALSE. When this condition is met,\nattacker can execute arbitrary php code which is shipped by his patched\nMySQL version. If php is running in safe mode or there is firewall not\nallowing outgoing connections to outside machines, this issue can not\ncause any harm. As this can cause serious problems, we consider this\nissue as critical."
   },
   "model": "security.pmasa",
-  "pk": 123
+  "pk": 243
 },
 {
   "fields": {
@@ -19834,7 +19834,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 124
+  "pk": 244
 },
 {
   "fields": {
@@ -19858,7 +19858,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 125
+  "pk": 245
 },
 {
   "fields": {
@@ -19868,7 +19868,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3), 4.3.x (prior to 4.3.13.1) and 4.4.x (prior to 4.4.6.1) are affected.",
     "description": "<p>By deceiving a user to click on a crafted URL, it is possible to alter the configuration file\nbeing generated with phpMyAdmin setup.</p>",
     "sequence": 2,
-    "commits": "ee92eb9bab8e2d546756c1d4aec81ec7c8e44b83\n4_0: fea1d39fef540afa4105c6fbcc849f7e516f3da8\n4_2: c903ecf6751684b6af2d079c78b1f0d09ea2bd47\n4_3: 9817bd4030de949ba9ce4cd1b3f047e22d8f66bd",
+    "commits": "ee92eb9bab8e2d546756c1d4aec81ec7c8e44b83\n4.0: fea1d39fef540afa4105c6fbcc849f7e516f3da8\n4.2: c903ecf6751684b6af2d079c78b1f0d09ea2bd47\n4.3: 9817bd4030de949ba9ce4cd1b3f047e22d8f66bd",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.13.1 or newer, or 4.4.6.1 or newer, or apply the patch listed below.",
     "summary": "XSRF/CSRF vulnerability in phpMyAdmin setup.",
@@ -19882,7 +19882,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 126
+  "pk": 246
 },
 {
   "fields": {
@@ -19906,7 +19906,7 @@
     "severity": "We consider those vulnerabilities to be minor (see Mitigation factor)."
   },
   "model": "security.pmasa",
-  "pk": 127
+  "pk": 247
 },
 {
   "fields": {
@@ -19930,7 +19930,7 @@
     "severity": "We consider this vulnerability serious."
   },
   "model": "security.pmasa",
-  "pk": 128
+  "pk": 248
 },
 {
   "fields": {
@@ -19940,7 +19940,7 @@
     "affected": "For 2.11.x: versions before 2.11.10 are affected.",
     "description": "<p>phpMyAdmin used to automatically create temporary world writable directory\nwhat could lead to possible misuse of it.</p>",
     "sequence": 1,
-    "commits": "e903114c5854b24ca06fc1f1edfca6ece9e3ad2c\n2_11: 6c96a59db5e9f86deeab04e820c30553dada8252",
+    "commits": "e903114c5854b24ca06fc1f1edfca6ece9e3ad2c\n2.11: 6c96a59db5e9f86deeab04e820c30553dada8252",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.0.0 or 2.11.10.",
     "summary": "Unsafe handling of temporary directory",
@@ -19954,7 +19954,7 @@
     "severity": "We consider these vulnerabilities to be not critical."
   },
   "model": "security.pmasa",
-  "pk": 129
+  "pk": 249
 },
 {
   "fields": {
@@ -19978,7 +19978,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 130
+  "pk": 250
 },
 {
   "fields": {
@@ -19988,7 +19988,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.1), 4.1.x (prior to 4.1.14.2) and 4.2.x (prior to 4.2.6) are affected.",
     "description": "<p>When navigating into the database triggers page, it is possible to trigger an XSS with a crafted trigger name.</p>",
     "sequence": 5,
-    "commits": "10014d4dc596b9e3a491bf04f3e708cf1887d5e1\n4_0: 1b5592435617fa1b9dd68e2dc263de64c69fdc8a\n4_1: 511c596b175889b8e6b9c423e352ca64fa20af2b",
+    "commits": "10014d4dc596b9e3a491bf04f3e708cf1887d5e1\n4.0: 1b5592435617fa1b9dd68e2dc263de64c69fdc8a\n4.1: 511c596b175889b8e6b9c423e352ca64fa20af2b",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.1 or newer, or 4.1.14.2 or newer, or 4.2.6 or newer, or apply the patch listed below.",
     "summary": "Self-XSS due to unescaped HTML output in database triggers page.",
@@ -20002,7 +20002,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 131
+  "pk": 251
 },
 {
   "fields": {
@@ -20026,7 +20026,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 132
+  "pk": 252
 },
 {
   "fields": {
@@ -20050,7 +20050,7 @@
     "severity": "As any of those vulnerabilites can be used for command execution or file\ndisclosure, we consider them to be serious (on servers where PHP safe mode is off)."
   },
   "model": "security.pmasa",
-  "pk": 133
+  "pk": 253
 },
 {
   "fields": {
@@ -20060,7 +20060,7 @@
     "affected": "The 2.11.x and 3.3.x versions are affected.",
     "description": "<p>It was possible to create a bookmark which would be executed unintentionally by other users.</p>",
     "sequence": 2,
-    "commits": "a5464b4daff0059cdf8c9e5f4d54a80e2dd2a5b0\n2_11: 2fa4c8d97a92ae0d4e2051d5d18a18688c31f84f",
+    "commits": "a5464b4daff0059cdf8c9e5f4d54a80e2dd2a5b0\n2.11: 2fa4c8d97a92ae0d4e2051d5d18a18688c31f84f",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.9.2 or newer (2.11.11.3 or newer for the older\nfamily) or apply the related patch listed below.",
     "summary": "SQL query could be executed under another user.",
@@ -20074,7 +20074,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 134
+  "pk": 254
 },
 {
   "fields": {
@@ -20084,7 +20084,7 @@
     "affected": "Versions 4.1.x (prior to 4.1.14.3) and 4.2.x (prior to 4.2.7.1) are affected.",
     "description": "<p>With a crafted view name it is possible to trigger an XSS when dropping the view in view operation page.</p>",
     "sequence": 9,
-    "commits": "0cd293f5e13aa245e4a57b8d373597cc0e421b6f\n4_1: 65eef3d65411b985250487e14f1121754a91c6d5",
+    "commits": "0cd293f5e13aa245e4a57b8d373597cc0e421b6f\n4.1: 65eef3d65411b985250487e14f1121754a91c6d5",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.1.14.3 or newer, or 4.2.7.1 or newer, or apply the patch listed below.",
     "summary": "XSS in view operations page.",
@@ -20098,7 +20098,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 135
+  "pk": 255
 },
 {
   "fields": {
@@ -20108,7 +20108,7 @@
     "affected": "All versions prior to 3.4.0-beta1.",
     "description": "<p>It was possible to display arbitrary text and link to external site using\nparameters passed to particular script.</p>",
     "sequence": 9,
-    "commits": "aa6fec0532a9dd48d4e35831c1b1c9785c124dd7\n2_11: b01a58118f973f98ab99a4bb28d340af49fa251f\n3_3: 9ebd401b0ea4efea8ddc8cd846da559bf420ccaa",
+    "commits": "aa6fec0532a9dd48d4e35831c1b1c9785c124dd7\n2.11: b01a58118f973f98ab99a4bb28d340af49fa251f\n3.3: 9ebd401b0ea4efea8ddc8cd846da559bf420ccaa",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.4.0-beta1 or newer or apply patch listed below. Due\nto its minor impact, a fix will be included in the next regular release\nwhich is 3.3.10.",
     "summary": "Unvalidated input on error page.",
@@ -20122,7 +20122,7 @@
     "severity": "This issue is considered minor, because the only purpose of affected file is to\ndisplay an error message."
   },
   "model": "security.pmasa",
-  "pk": 136
+  "pk": 256
 },
 {
   "fields": {
@@ -20132,7 +20132,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.9), 4.2.x (prior to 4.2.13.2) and 4.3.x (prior to 4.3.11.1) are affected.",
     "description": "<p>With a large number of crafted requests it was possible to infer the CSRF token by a BREACH attack.</p>",
     "sequence": 1,
-    "commits": "b2f1e895038a5700bf8e81fb9a5da36cbdea0eeb\n4_0: e1a68ad02c5b1a516b3787ce114ef6a6be004630\n4_2: d0f109dfe3b345094d7ceb49df0dbb68efc032ed",
+    "commits": "b2f1e895038a5700bf8e81fb9a5da36cbdea0eeb\n4.0: e1a68ad02c5b1a516b3787ce114ef6a6be004630\n4.2: d0f109dfe3b345094d7ceb49df0dbb68efc032ed",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.9 or newer, or 4.2.13.2 or newer, or 4.3.11.1 or newer, or apply the patch listed below.",
     "summary": "Risk of BREACH attack due to reflected parameter.",
@@ -20146,7 +20146,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 137
+  "pk": 257
 },
 {
   "fields": {
@@ -20156,7 +20156,7 @@
     "affected": "The 3.4.3 and earlier versions are affected.",
     "description": "<p>Through a possible bug in PHP, a null byte can truncate the pattern string allowing an attacker to inject the /e modifier causing the preg_replace function to execute its second argument as PHP code.</p>",
     "sequence": 7,
-    "commits": "69fb0f8e7dc38075427aceaf09bcac697d0590ff\n3_3: ca74f480f119a53ef07ca40d2ab28f063cc89ec9",
+    "commits": "69fb0f8e7dc38075427aceaf09bcac697d0590ff\n3.3: ca74f480f119a53ef07ca40d2ab28f063cc89ec9",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.",
     "summary": "Regular expression quoting issue in Synchronize code.",
@@ -20170,7 +20170,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 138
+  "pk": 258
 },
 {
   "fields": {
@@ -20194,7 +20194,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 139
+  "pk": 259
 },
 {
   "fields": {
@@ -20218,7 +20218,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 140
+  "pk": 260
 },
 {
   "fields": {
@@ -20242,7 +20242,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 141
+  "pk": 261
 },
 {
   "fields": {
@@ -20252,7 +20252,7 @@
     "affected": "For 2.11.x: versions before 2.11.9.5.<br />\nFor 3.x: versions before 3.1.3.1.<br />",
     "description": "<p>Export page uses cookies to remember user settings of file name template.\nThese cookies could be used for cross-site scripting because they were not\nsanitized sufficiently.</p>",
     "sequence": 2,
-    "commits": "184934bb10bbe9c9dcc3fe35cf2760029d1974ea\n2_11: 36ddf8b61ee17cb37c0cba666179376a2d965c61",
+    "commits": "184934bb10bbe9c9dcc3fe35cf2760029d1974ea\n2.11: 36ddf8b61ee17cb37c0cba666179376a2d965c61",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.9.5 or 3.1.3.1 or apply patch listed below.",
     "summary": "Cross-site scripting on export page using cookies.",
@@ -20266,7 +20266,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 142
+  "pk": 262
 },
 {
   "fields": {
@@ -20276,7 +20276,7 @@
     "affected": "The 2.11.x and 3.3.x versions are affected.",
     "description": "<p>When the files README, ChangeLog or LICENSE have been removed from their\noriginal place (possibly by the distributor), the scripts used to display\nthese files can show their full path, leading to possible further attacks.</p>",
     "sequence": 1,
-    "commits": "035d002db1e1201e73e560d7d98591563b506a83\n2_11: f0e8849034132e2114f1d77d9d37185bc5b49886\n3_3: 4c8c7080a76b837ae55cdc5e010c793b389a671a",
+    "commits": "035d002db1e1201e73e560d7d98591563b506a83\n2.11: f0e8849034132e2114f1d77d9d37185bc5b49886\n3.3: 4c8c7080a76b837ae55cdc5e010c793b389a671a",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.9.1 or newer (2.11.11.2 or newer for the older\nfamily) or apply the related patch listed below.",
     "summary": "Path disclosure when some files have been removed.",
@@ -20290,7 +20290,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 143
+  "pk": 263
 },
 {
   "fields": {
@@ -20300,7 +20300,7 @@
     "affected": "For 2.11.x: versions before 2.11.9.4.<br />\nFor 3.x: versions before 3.1.1.0.<br />",
     "description": "<p>A logged-in user can be subject of SQL injection through cross site request\nforgery. Several pages which use affected library in phpMyAdmin are vulnerable\nand the attack can be made through <tt>table</tt> parameter.</p>",
     "sequence": 10,
-    "commits": "01685c90aaba943511de0496e7ecb7fe49fa765b\n2_11: 0d4adbfc1996c7d715b0ac9fa39a2ac14d8b28ad",
+    "commits": "01685c90aaba943511de0496e7ecb7fe49fa765b\n2.11: 0d4adbfc1996c7d715b0ac9fa39a2ac14d8b28ad",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.9.4 or 3.1.1.0 or apply patch listed below.",
     "summary": "SQL injection through XSRF on several pages",
@@ -20314,7 +20314,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 144
+  "pk": 264
 },
 {
   "fields": {
@@ -20338,7 +20338,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 145
+  "pk": 265
 },
 {
   "fields": {
@@ -20362,7 +20362,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 146
+  "pk": 266
 },
 {
   "fields": {
@@ -20386,7 +20386,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 147
+  "pk": 267
 },
 {
   "fields": {
@@ -20410,7 +20410,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 148
+  "pk": 268
 },
 {
   "fields": {
@@ -20420,7 +20420,7 @@
     "affected": "For 2.11.x: versions before 2.11.10.1 are affected.<br />\nFor 3.x: versions before 3.3.5.1 are affected.",
     "description": "<p>It was possible to conduct a XSS attack using crafted URLs or POST parameters on several pages.</p>",
     "sequence": 5,
-    "commits": "48e909660032ddcbc13172830761e363e7a64d72 be0f47a93141e2950ad400b8d22a2a98512825c2 cd205cc55a46e3dc0f8883966f5c854f842e1000 7dc6cea06522b2d4af50934c983f3967540a4918 6028221d97efa2a7d56a61ab4c5750d1b2343619 2a1233b69ccc6c64819c2840ca5277c2dde0b9e0 fa30188dde357426d339d0d7e29a3969f88d188a 00add5c43f594f80dab6304a5bb35d2e50540d2d c75e41d5d8cdd9bbc745c8cbe2c16998fda1de0c 533e10213590e7ccd83b98a5cd19ba1c3be119dd ea3b718fc379c15e773cc2f18ea4c8ccfa9af57b 7f266483b827fb05a4be11663003418c2ef1c878 5bcd95a42c8ba924d389eafee4d7be80bd4039a3 6d548f7d449b7d4b796949d10a503484f63eaf82 d2e0e09e0d402555a6223f0b683fdbfa97821a63 f273e6cbf6e2eea7367f7ef9c63c97ea55b92ca0 bf60ec82e948450ae18b9e66c48d27da55ebe860 59b3b4916b31fa44f31b1e2d243ca7dda012ba37\n2_11: a7c004d8d4069ca3c7d1c221f37b9cab39e36aaf 8b7f07cd954221f276ab11e2c3d98f18deb2f551 1fe1aa6c0e2d85bed1343f4be21d672368e0a9c1 8b8ce64792bb981cefc37a19f29f28f112df1c16 a4a54da173440d4c5097aececef56c28c14dc52e c69fca50ee81ff74cda860aad339d4185d32e194 c910f4c9ec9af876675d96df3fa65d7fc4551cc6 08e27b89077df26a0f7f0390322bbe80e0437aa1 110c44a7a3117b94b065742606cc6f7bc05f8cd5 4951fd1c854d88e22935fd55d342fcb1670dc8e4 4a50055d52cb1d6ba125b743b0eb422d5549b9c9 0fd0512c9b7344abad60ab9effb7b7537b2b5d08 2051a861f8a968dafc297650036cc7e640a18887 a88dbaf305a44107ffb557e9d93512792744af84",
+    "commits": "48e909660032ddcbc13172830761e363e7a64d72 be0f47a93141e2950ad400b8d22a2a98512825c2 cd205cc55a46e3dc0f8883966f5c854f842e1000 7dc6cea06522b2d4af50934c983f3967540a4918 6028221d97efa2a7d56a61ab4c5750d1b2343619 2a1233b69ccc6c64819c2840ca5277c2dde0b9e0 fa30188dde357426d339d0d7e29a3969f88d188a 00add5c43f594f80dab6304a5bb35d2e50540d2d c75e41d5d8cdd9bbc745c8cbe2c16998fda1de0c 533e10213590e7ccd83b98a5cd19ba1c3be119dd ea3b718fc379c15e773cc2f18ea4c8ccfa9af57b 7f266483b827fb05a4be11663003418c2ef1c878 5bcd95a42c8ba924d389eafee4d7be80bd4039a3 6d548f7d449b7d4b796949d10a503484f63eaf82 d2e0e09e0d402555a6223f0b683fdbfa97821a63 f273e6cbf6e2eea7367f7ef9c63c97ea55b92ca0 bf60ec82e948450ae18b9e66c48d27da55ebe860 59b3b4916b31fa44f31b1e2d243ca7dda012ba37\n2.11: a7c004d8d4069ca3c7d1c221f37b9cab39e36aaf 8b7f07cd954221f276ab11e2c3d98f18deb2f551 1fe1aa6c0e2d85bed1343f4be21d672368e0a9c1 8b8ce64792bb981cefc37a19f29f28f112df1c16 a4a54da173440d4c5097aececef56c28c14dc52e c69fca50ee81ff74cda860aad339d4185d32e194 c910f4c9ec9af876675d96df3fa65d7fc4551cc6 08e27b89077df26a0f7f0390322bbe80e0437aa1 110c44a7a3117b94b065742606cc6f7bc05f8cd5 4951fd1c854d88e22935fd55d342fcb1670dc8e4 4a50055d52cb1d6ba125b743b0eb422d5549b9c9 0fd0512c9b7344abad60ab9effb7b7537b2b5d08 2051a861f8a968dafc297650036cc7e640a18887 a88dbaf305a44107ffb557e9d93512792744af84",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.5.1 or 2.11.10.1 or newer or apply patch listed below.",
     "summary": "Several XSS vulnerabilities were found in the code.",
@@ -20434,7 +20434,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 149
+  "pk": 269
 },
 {
   "fields": {
@@ -20444,7 +20444,7 @@
     "affected": "For 2.11.x: versions before 2.11.9.5.<br />\nFor 3.x: versions before 3.1.3.1.<br />",
     "description": "<p>Setup script used to generate configuration can be fooled using a crafted POST\nrequest to include arbitrary PHP code in generated configuration file.\nCombined with ability to save files on server, this can allow unauthenticated\nusers to execute arbitrary PHP code.</p>",
     "sequence": 3,
-    "commits": "e67226a446d7e92055f0a497292841412cdc5139\n2_11: 460a649dbcc47065fbf01bbc14392c3fc6ea161b",
+    "commits": "e67226a446d7e92055f0a497292841412cdc5139\n2.11: 460a649dbcc47065fbf01bbc14392c3fc6ea161b",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.9.5 or 3.1.3.1 or apply patch listed below.",
     "summary": "Insufficient output sanitizing when generating configuration file.",
@@ -20458,7 +20458,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 150
+  "pk": 270
 },
 {
   "fields": {
@@ -20468,7 +20468,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.10), 4.2.x (prior to 4.2.13.3), 4.3.x (prior to 4.3.13.1) and 4.4.x (prior to 4.4.6.1) are affected.",
     "description": "<p>A vulnerability in the API call to GitHub can be exploited to perform a man-in-the-middle attack.</p>",
     "sequence": 3,
-    "commits": "5ebc4daf131dd3bd646326267f3e765d0249bbb4\r\n4_0: e97e7fb0ea2dedfaa95c7dbe872027fb4bd4204c\r\n4_2: 0e18931d9e4b23053285b6fddf3493ca426ff684\r\n4_3: 75499e790429c491840a0ad31d4de84aca215d23",
+    "commits": "5ebc4daf131dd3bd646326267f3e765d0249bbb4\n4.0: e97e7fb0ea2dedfaa95c7dbe872027fb4bd4204c\n4.2: 0e18931d9e4b23053285b6fddf3493ca426ff684\n4.3: 75499e790429c491840a0ad31d4de84aca215d23",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.10 or newer, or 4.2.13.3 or newer, or 4.3.13.1 or newer, or 4.4.6.1 or newer, or apply the patch listed below.",
     "summary": "Vulnerability allowing man-in-the-middle attack on API call to GitHub.",
@@ -20482,7 +20482,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 151
+  "pk": 271
 },
 {
   "fields": {
@@ -20492,7 +20492,7 @@
     "affected": "All versions prior to 3.4.0-beta1.",
     "description": "<p>Unauthenticated user was able to display phpinfo output if phpMyAdmin was\nenabled to show it.</p>",
     "sequence": 10,
-    "commits": "4d9fd005671b05c4d74615d5939ed45e4d019e4c\n2_11: 373a6626ade37c0fee1dfc7c757ca55c7652874b\n3_3: 8928900532d111e849362b6359571a3b079eb9ea",
+    "commits": "4d9fd005671b05c4d74615d5939ed45e4d019e4c\n2.11: 373a6626ade37c0fee1dfc7c757ca55c7652874b\n3.3: 8928900532d111e849362b6359571a3b079eb9ea",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.4.0-beta1 or newer or apply patch listed below. Due\nto its minor impact, a fix will be included in the next regular release\nwhich is 3.3.10.",
     "summary": "Possible information disclosure.",
@@ -20506,7 +20506,7 @@
     "severity": "The issue is considered minor, because this feature is not enabled in default\ninstallation."
   },
   "model": "security.pmasa",
-  "pk": 152
+  "pk": 272
 },
 {
   "fields": {
@@ -20530,7 +20530,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 153
+  "pk": 273
 },
 {
   "fields": {
@@ -20540,7 +20540,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.2), 4.1.x (prior to 4.1.14.3) and 4.2.x (prior to 4.2.7.1) are affected.",
     "description": "<p>With a crafted database, table or a primary/unique key column name it is possible to trigger an XSS when dropping a row from the table.\nWith a crafted column name it is possible to trigger an XSS in the ENUM editor dialog.\nWith a crafted variable name or a crafted value for unit field it is possible to trigger a self-XSS when adding a new chart in the monitor page.\nWith a crafted value for x-axis label it is possible to trigger a self-XSS in the query chart page.\nWith a crafted relation name it is possible to trigger an XSS in table relations page.</p>",
     "sequence": 8,
-    "commits": "647c9d12e33a6b64e1c3ff7487f72696bdf2dccb 2c45d7caa614afd71dbe3d0f7270f51ce5569614 cd9f302bf7f91a160fe7080f9a612019ef847f1c 90ddeecf60fc029608b972e490b735f3a65ed0cb 3ffc967fb60cf2910cc2f571017e977558c67821\n4_0: 285ed5b8d3bc9279fe6ed01da8151ed66be9b137 0433d463b6c05ea7b1080995414268fe0a449b00 3668255202062dd7d60bff70236302084e73fc11 03b92aa6e923f2b4a54b298cc0042548ff7ba89b 098caf93b63d4928e4df53310222c8727d0be9fe\n4_1: 2d394521197f81dce0d9529b2d86ed24760b5b2a 1956420ddab0595016ba2b3af89f7f82d39f5afa 69f746b7dc09f7b1a18b09de0b5cd71f0bcd0a3d bbd20b54864a389c7a0cd2c4d4715f00b81a03e9 5519905a2519d9a102b172432448c7e91d5601a6",
+    "commits": "647c9d12e33a6b64e1c3ff7487f72696bdf2dccb 2c45d7caa614afd71dbe3d0f7270f51ce5569614 cd9f302bf7f91a160fe7080f9a612019ef847f1c 90ddeecf60fc029608b972e490b735f3a65ed0cb 3ffc967fb60cf2910cc2f571017e977558c67821\n4.0: 285ed5b8d3bc9279fe6ed01da8151ed66be9b137 0433d463b6c05ea7b1080995414268fe0a449b00 3668255202062dd7d60bff70236302084e73fc11 03b92aa6e923f2b4a54b298cc0042548ff7ba89b 098caf93b63d4928e4df53310222c8727d0be9fe\n4.1: 2d394521197f81dce0d9529b2d86ed24760b5b2a 1956420ddab0595016ba2b3af89f7f82d39f5afa 69f746b7dc09f7b1a18b09de0b5cd71f0bcd0a3d bbd20b54864a389c7a0cd2c4d4715f00b81a03e9 5519905a2519d9a102b172432448c7e91d5601a6",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.2 or newer, or 4.1.14.3 or newer, or 4.2.7.1 or newer, or apply the patches listed below.",
     "summary": "Multiple XSS vulnerabilities in browse table, ENUM editor, monitor, query charts and table relations pages",
@@ -20554,7 +20554,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 154
+  "pk": 274
 },
 {
   "fields": {
@@ -20564,7 +20564,7 @@
     "affected": "Versions before 2.11.9.2.",
     "description": "<p>We received an advisory from Masako Oono of NetAgent Co.,Ltd. via JPCERT/CC Vulnerability Handling Team and we wish to thank them for their work. A logged-in user (when using Microsoft Internet Explorer) can be subject of cross site scripting attack using several variables. This issue does not affect other browsers (tested with Mozilla Firefox, Google Chrome, Konqueror and Apple Safari).</p>",
     "sequence": 8,
-    "commits": "0d219abdcd55c11f7f629a58a2279f0839bd2acc\n2_11: 44f9f2f8b7475c2d48c529d9bfd0ff473cd328b1",
+    "commits": "0d219abdcd55c11f7f629a58a2279f0839bd2acc\n2.11: 44f9f2f8b7475c2d48c529d9bfd0ff473cd328b1",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.9.2 or newer.",
     "summary": "XSS for Microsoft Internet Explorer on several places",
@@ -20578,7 +20578,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 155
+  "pk": 275
 },
 {
   "fields": {
@@ -20602,7 +20602,7 @@
     "severity": "We consider both vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 156
+  "pk": 276
 },
 {
   "fields": {
@@ -20612,7 +20612,7 @@
     "affected": "The 3.3.x and 3.4.0 versions are affected.",
     "description": "<p>It was possible to create a crafted table name that leads to XSS.</p>",
     "sequence": 3,
-    "commits": "7e10c132a3887c8ebfd7a8eee356b28375f1e287 d3ccf798fdbd4f8a89d4088130637d8dee918492\n3_3_10: 1300510d3686b40adefafb7f1778a6f06d0a553a 452669a1746898a08129d3a555ac4b1ec084b423",
+    "commits": "7e10c132a3887c8ebfd7a8eee356b28375f1e287 d3ccf798fdbd4f8a89d4088130637d8dee918492\n3.3.10: 1300510d3686b40adefafb7f1778a6f06d0a553a 452669a1746898a08129d3a555ac4b1ec084b423",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.1 or 3.4.1 or apply the related patch listed below.",
     "summary": "XSS vulnerability on Tracking page.",
@@ -20626,7 +20626,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 157
+  "pk": 277
 },
 {
   "fields": {
@@ -20636,7 +20636,7 @@
     "affected": "The 3.4.3.1 and earlier versions are affected.",
     "description": "<p>The attacker must trick the victim into clicking a link that reaches phpMyAdmin's table print view script; one of the link's parameters is a crafted table name (the name containing Javascript code).</p>",
     "sequence": 9,
-    "commits": "a0823be05aa5835f207c0838b9cca67d2d9a050a 4bd27166c314faa37cada91533b86377f4d4d214\n3_3: 8ac8328229ae7493d6060b6272578d85879c698d",
+    "commits": "a0823be05aa5835f207c0838b9cca67d2d9a050a 4bd27166c314faa37cada91533b86377f4d4d214\n3.3: 8ac8328229ae7493d6060b6272578d85879c698d",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.3 or 3.4.3.2 or apply the related patch listed below.",
     "summary": "XSS in table Print view.",
@@ -20650,7 +20650,7 @@
     "severity": "We consider this vulnerability to be minor."
   },
   "model": "security.pmasa",
-  "pk": 158
+  "pk": 278
 },
 {
   "fields": {
@@ -20674,7 +20674,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 159
+  "pk": 279
 },
 {
   "fields": {
@@ -20684,7 +20684,7 @@
     "affected": "Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.",
     "description": "<p>When calling schema_export.php with crafted parameters, it is possible to trigger an XSS.</p>",
     "sequence": 14,
-    "commits": "1293e9b6e9eb7a831c5738f346ea44dee6d1bf0f\n3_5: dede065d7ad59fb7c31ae384961564b7f7a7c005",
+    "commits": "1293e9b6e9eb7a831c5738f346ea44dee6d1bf0f\n3.5: dede065d7ad59fb7c31ae384961564b7f7a7c005",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer, or apply the patch listed below.",
     "summary": "Self-XSS due to unescaped HTML output in schema export.",
@@ -20698,7 +20698,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 160
+  "pk": 280
 },
 {
   "fields": {
@@ -20708,7 +20708,7 @@
     "affected": "Versions 3.5.x and 4.0.0 (before -rc3) are affected.",
     "description": "<p>In some PHP versions, the preg_replace() function can be tricked into executing arbitrary PHP code on the server. This is done by passing a crafted argument as the regular expression, containing a null byte.\n\nphpMyAdmin does not correctly sanitize an argument passed to preg_replace() when using the \"Replace table prefix\" feature, opening the way to this vulnerability.</p>",
     "sequence": 2,
-    "commits": "3_5: dedd542cdaf1606ca9aa3f6f8f8adb078d8ad549 ffa720d90a79c1f33cf4c5a33403d09a67b42a66",
+    "commits": "3.5: dedd542cdaf1606ca9aa3f6f8f8adb078d8ad549 ffa720d90a79c1f33cf4c5a33403d09a67b42a66",
     "description_markup_type": "html",
     "solution": "For 3.5.x, upgrade to phpMyAdmin 3.5.8 or newer; for 4.0.x, upgrade to 4.0.0-rc3 or newer. You can also apply the patches listed below.",
     "summary": "Remote code execution via preg_replace().",
@@ -20722,7 +20722,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 161
+  "pk": 281
 },
 {
   "fields": {
@@ -20746,7 +20746,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 162
+  "pk": 282
 },
 {
   "fields": {
@@ -20756,7 +20756,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.6), 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.12) are affected.",
     "description": "<p><ul>\n    <li>\n        With a crafted database, table or column name it is possible to trigger an XSS attack in the table browse page.\n    </li>\n    <li>\n        With a crafted ENUM value it is possible to trigger XSS attacks in the table print view and zoom search pages.\n    </li>\n    <li>\n        With a crafted value for font size it is possible to trigger an XSS attack in the home page.\n    </li>\n</ul></p>",
     "sequence": 13,
-    "commits": "d32da348c4de2379482a48661ce968a55eebe5c4 1bc04ec95038f2356ad33752090001bf1c047208 2a3b7393d1d5a8ba0543699df94a08a0f5728fe0 2ffdbf2d7daa0b92541d8b754e2afac555d3ed21\n4_0: c5783321cd387d0b65b32cf399766f08a9acad68 42b64e12b5f596366f94ef72365fd69a019ba820 58cdd91fc83703a1ab645764fb3708e8e0b7c4a2 c7685e5acd3f8e722f4f374c6fa821590865b68d\n4_1: 47a6ece0427a23c47f2b1a88dfb0f46ca344aaec 816fa880060f37932be291d2918fd5c6ac474ab5 60c619fa1679a7c4fe09657da293e84dde02eede cea7c5fba8224b8380f2a83a689eb6caa6c79662",
+    "commits": "d32da348c4de2379482a48661ce968a55eebe5c4 1bc04ec95038f2356ad33752090001bf1c047208 2a3b7393d1d5a8ba0543699df94a08a0f5728fe0 2ffdbf2d7daa0b92541d8b754e2afac555d3ed21\n4.0: c5783321cd387d0b65b32cf399766f08a9acad68 42b64e12b5f596366f94ef72365fd69a019ba820 58cdd91fc83703a1ab645764fb3708e8e0b7c4a2 c7685e5acd3f8e722f4f374c6fa821590865b68d\n4.1: 47a6ece0427a23c47f2b1a88dfb0f46ca344aaec 816fa880060f37932be291d2918fd5c6ac474ab5 60c619fa1679a7c4fe09657da293e84dde02eede cea7c5fba8224b8380f2a83a689eb6caa6c79662",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.12 or newer, or apply the patch listed below.",
     "summary": "Multiple XSS vulnerabilities.",
@@ -20770,7 +20770,7 @@
     "severity": "We consider this vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 163
+  "pk": 283
 },
 {
   "fields": {
@@ -20780,7 +20780,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.1), 4.1.x (prior to 4.1.14.2) and 4.2.x (prior to 4.2.6) are affected.",
     "description": "<p>With a crafted column name it is possible to trigger an XSS when dropping the column in table structure page.\nWith a crafted table name it is possible to trigger an XSS when dropping or truncating the table in table operations page.</p>",
     "sequence": 6,
-    "commits": "29a1f56495a7d1d98da31a614f23c0819a606a4d\n4_0: a92753bd65e1f8b72c46ed3dda6c362628e0daf7\n4_1: cd5697027a2ee7e1f7d7000b23be6051cdb0516c",
+    "commits": "29a1f56495a7d1d98da31a614f23c0819a606a4d\n4.0: a92753bd65e1f8b72c46ed3dda6c362628e0daf7\n4.1: cd5697027a2ee7e1f7d7000b23be6051cdb0516c",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.1 or newer, or 4.1.14.2 or newer, or 4.2.6 or newer, or apply the patch listed below.",
     "summary": "Multiple XSS in AJAX confirmation messages.",
@@ -20794,7 +20794,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 164
+  "pk": 284
 },
 {
   "fields": {
@@ -20818,7 +20818,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 165
+  "pk": 285
 },
 {
   "fields": {
@@ -20842,7 +20842,7 @@
     "severity": "We consider these vulnerabilities to be serious. However, they can only be triggered on systems running with <tt>register_globals = on</tt>."
   },
   "model": "security.pmasa",
-  "pk": 166
+  "pk": 286
 },
 {
   "fields": {
@@ -20866,7 +20866,7 @@
     "severity": "As any of those vulnerabilites can be used for a XSS attack, we consider them \nto be serious."
   },
   "model": "security.pmasa",
-  "pk": 167
+  "pk": 287
 },
 {
   "fields": {
@@ -20890,7 +20890,7 @@
     "severity": "In default setup this feature is not enabled and many hosting providers\nrun php in safe mode with disabled exec support, which both make them\nunaffected by this issue. User also need to be logged in into\nphpMyAdmin, what limites range of attackers to users of the server, who\nusually also can execute php code directly, so this possibility doesn't\nextend his privileges. However this could cause some harm, so we\nconsider this as important."
   },
   "model": "security.pmasa",
-  "pk": 168
+  "pk": 288
 },
 {
   "fields": {
@@ -20914,7 +20914,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 169
+  "pk": 289
 },
 {
   "fields": {
@@ -20924,7 +20924,7 @@
     "affected": "The 3.4.3.1 and earlier versions are affected.",
     "description": "<p>It was possible to manipulate the PHP superglobals (including SESSION) using some of the Swekey authentication code. Also, variables local to the affected Swekey function were at risk.\nThis is similar to PMASA-2011-5.</p>",
     "sequence": 12,
-    "commits": "e7bb42c002885c2aca7aba4d431b8c63ae4de9b7 571cdc6ff4bf375871b594f4e06f8ad3159d1754\n3_3: f6f6ee3f1171addb166fa18e75a0b56599bf374c 630b8260be45eb9b211f5d7628dbb9e5c1b05bc6",
+    "commits": "e7bb42c002885c2aca7aba4d431b8c63ae4de9b7 571cdc6ff4bf375871b594f4e06f8ad3159d1754\n3.3: f6f6ee3f1171addb166fa18e75a0b56599bf374c 630b8260be45eb9b211f5d7628dbb9e5c1b05bc6",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.3 or 3.4.3.2 or apply the related patch listed below.",
     "summary": "Possible superglobal and local variables manipulation in swekey authentication.",
@@ -20938,7 +20938,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 170
+  "pk": 290
 },
 {
   "fields": {
@@ -20962,7 +20962,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 171
+  "pk": 291
 },
 {
   "fields": {
@@ -20972,7 +20972,7 @@
     "affected": "Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.",
     "description": "<p>Due to not properly validating the version.json file,\nwhich is fetched from the phpMyAdmin.net website,\ncould lead to an XSS attack, if a crafted version.json file would be presented.</p>",
     "sequence": 11,
-    "commits": "b9c814ed6d59733c54965e01e90ffd5d3348fd2c\n3_5: 333d82d3271b2a1b445134bb6bbb15ae8c9ba8a6",
+    "commits": "b9c814ed6d59733c54965e01e90ffd5d3348fd2c\n3.5: 333d82d3271b2a1b445134bb6bbb15ae8c9ba8a6",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer or apply the patches\nlisted below.",
     "summary": "If a crafted version.json would be presented, an XSS could be introduced.",
@@ -20986,7 +20986,7 @@
     "severity": "We consider this vulnerability serious."
   },
   "model": "security.pmasa",
-  "pk": 172
+  "pk": 292
 },
 {
   "fields": {
@@ -21010,7 +21010,7 @@
     "severity": "Only really problematic issue in current versions is XSS attack, which\nin combination with clever javascript could be used to steal\nauthentication, but this would require to force user to click on link\nsupplied by attacker. Therefore we consider this issue as important."
   },
   "model": "security.pmasa",
-  "pk": 173
+  "pk": 293
 },
 {
   "fields": {
@@ -21020,7 +21020,7 @@
     "affected": "Versions 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.12) are affected.",
     "description": "<p>With a crafted file name it is possible to trigger an XSS in the error reporting page.</p>",
     "sequence": 15,
-    "commits": "9364e2eee5681681caf7205c0933bc18af11e233\n4_1: c641ad40c37bc562226c8a25cce77a273a07756b",
+    "commits": "9364e2eee5681681caf7205c0933bc18af11e233\n4.1: c641ad40c37bc562226c8a25cce77a273a07756b",
     "description_markup_type": "html",
     "solution": "Upgrade to 4.1.14.7 or newer, or 4.2.12 or newer, or apply the patch listed below.",
     "summary": "XSS vulnerability in error reporting functionality.",
@@ -21034,7 +21034,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 174
+  "pk": 294
 },
 {
   "fields": {
@@ -21058,7 +21058,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 175
+  "pk": 295
 },
 {
   "fields": {
@@ -21082,7 +21082,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 176
+  "pk": 296
 },
 {
   "fields": {
@@ -21092,7 +21092,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.3), 4.1.x (prior to 4.1.14.4) and 4.2.x (prior to 4.2.8.1) are affected.",
     "description": "<p>By deceiving a logged-in user to click on a crafted URL, it is possible to perform remote code execution and in some cases, create a root account due to a DOM based XSS vulnerability in the micro history feature.</p>",
     "sequence": 10,
-    "commits": "33b39f9f1dd9a4d27856530e5ac004e23b30e8ac\n4_0: ab0dba4533f1d01dde43c1864413478c921cfe6b\n4_1: 621772aa0d19d5f3ac21af2611c1dbda9b356506",
+    "commits": "33b39f9f1dd9a4d27856530e5ac004e23b30e8ac\n4.0: ab0dba4533f1d01dde43c1864413478c921cfe6b\n4.1: 621772aa0d19d5f3ac21af2611c1dbda9b356506",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.3 or newer, or 4.1.14.4 or newer, or 4.2.8.1 or newer, or apply the patches listed below.",
     "summary": "XSRF/CSRF due to DOM based XSS in the micro history feature",
@@ -21106,7 +21106,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 177
+  "pk": 297
 },
 {
   "fields": {
@@ -21130,7 +21130,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 178
+  "pk": 298
 },
 {
   "fields": {
@@ -21140,7 +21140,7 @@
     "affected": "For 2.11.x: versions before 2.11.10.1.",
     "description": "<p>The setup script used to generate configuration can be fooled using a crafted POST\nrequest to include arbitrary PHP code in generated configuration file.\nCombined with the ability to save files on the server, this can allow unauthenticated\nusers to execute arbitrary PHP code.</p>",
     "sequence": 4,
-    "commits": "2_11: 30c83acddb58d3bbf940b5f9ec28abf5b235f4d2",
+    "commits": "2.11: 30c83acddb58d3bbf940b5f9ec28abf5b235f4d2",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.10.1 or apply the patch listed below.",
     "summary": "Insufficient output sanitizing when generating configuration file.",
@@ -21154,7 +21154,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 179
+  "pk": 299
 },
 {
   "fields": {
@@ -21178,7 +21178,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 180
+  "pk": 300
 },
 {
   "fields": {
@@ -21188,7 +21188,7 @@
     "affected": "The 3.4.3 and earlier versions are affected.",
     "description": "<p>Fixed filtering of a file path in the MIME-type transformation code, which allowed for directory traversal.</p>",
     "sequence": 8,
-    "commits": "b434320eff8ca9c2fc1b043c1804f868341af9a7\n3_3: 5ee357a572866e730d83f56d6187a67c7c48e523",
+    "commits": "b434320eff8ca9c2fc1b043c1804f868341af9a7\n3.3: 5ee357a572866e730d83f56d6187a67c7c48e523",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.",
     "summary": "Possible directory traversal.",
@@ -21202,7 +21202,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 181
+  "pk": 301
 },
 {
   "fields": {
@@ -21226,7 +21226,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 182
+  "pk": 302
 },
 {
   "fields": {
@@ -21250,7 +21250,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 183
+  "pk": 303
 },
 {
   "fields": {
@@ -21274,7 +21274,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 184
+  "pk": 304
 },
 {
   "fields": {
@@ -21298,7 +21298,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 185
+  "pk": 305
 },
 {
   "fields": {
@@ -21308,7 +21308,7 @@
     "affected": "For 2.11.x: versions before 2.11.10 are affected.",
     "description": "<p>phpMyAdmin created temporary files with predictable file name.</p>",
     "sequence": 2,
-    "commits": "6df6ebf95de332f7887d19c8c08541c05973c34c\n2_11: 8fcdad43064afb187823680022711b8d3a1bb533",
+    "commits": "6df6ebf95de332f7887d19c8c08541c05973c34c\n2.11: 8fcdad43064afb187823680022711b8d3a1bb533",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.0.0 or 2.11.10.",
     "summary": "Unsafe handling of temporary files",
@@ -21322,7 +21322,7 @@
     "severity": "We consider these vulnerabilities to be not critical."
   },
   "model": "security.pmasa",
-  "pk": 186
+  "pk": 306
 },
 {
   "fields": {
@@ -21332,7 +21332,7 @@
     "affected": "The 3.4.3 and earlier versions are affected.",
     "description": "<p>It was possible to manipulate the PHP session superglobal using some of the Swekey authentication code.\nThis could open a path for other attacks.</p>",
     "sequence": 5,
-    "commits": "7ebd958b2bf59f96fecd5b3322bdbd0b244a7967\n3_3: 6e6e129f26295c83d67b74e202628a4b8bc49e54",
+    "commits": "7ebd958b2bf59f96fecd5b3322bdbd0b244a7967\n3.3: 6e6e129f26295c83d67b74e202628a4b8bc49e54",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.",
     "summary": "Possible session manipulation in Swekey authentication.",
@@ -21346,7 +21346,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 187
+  "pk": 307
 },
 {
   "fields": {
@@ -21370,7 +21370,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 188
+  "pk": 308
 },
 {
   "fields": {
@@ -21394,7 +21394,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 189
+  "pk": 309
 },
 {
   "fields": {
@@ -21418,7 +21418,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 190
+  "pk": 310
 },
 {
   "fields": {
@@ -21428,7 +21428,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.7), 4.1.x (prior to 4.1.14.8) and 4.2.x (prior to 4.2.13.1) are affected.",
     "description": "<p>With very long passwords it was possible to initiate a denial of service attack on phpMyAdmin.</p>",
     "sequence": 17,
-    "commits": "1ac863c7573d12012374d5d41e5c7dc5505ea6e1\n4_0: 095729d81205f15f40d216d25917017da4c2fff8\n4_1: 62b2c918d26cc78d1763945e3d44d1a63294a819",
+    "commits": "1ac863c7573d12012374d5d41e5c7dc5505ea6e1\n4.0: 095729d81205f15f40d216d25917017da4c2fff8\n4.1: 62b2c918d26cc78d1763945e3d44d1a63294a819",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.7 or newer, or 4.1.14.8 or newer, or 4.2.13.1 or newer, or apply the patch listed below.",
     "summary": "DoS vulnerability with long passwords.",
@@ -21442,7 +21442,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 191
+  "pk": 311
 },
 {
   "fields": {
@@ -21452,7 +21452,7 @@
     "affected": "Versions before 2.11.8.",
     "description": "<p>We received two advisories from Aung Khant (YGN Ethical Hacker Group), and we wish to thank him for his work. It was permitted to display phpMyAdmin's frames\ninside another page, opening phishing or fooling possibilities; now, a parameter AllowThirdPartyFraming must be set to true in config.inc.php to allow this behavior. Also, XSS was possible for someone who could overwrite config/config.inc.php during the time this file is present in this directory.</p>",
     "sequence": 6,
-    "commits": "0bfb27fb0538f43e9c49b6a183b767c2bed1524d\n2_11: 6a5e53c31bcbcadcb5d16cffaa3b9af181b26296",
+    "commits": "0bfb27fb0538f43e9c49b6a183b767c2bed1524d\n2.11: 6a5e53c31bcbcadcb5d16cffaa3b9af181b26296",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.8 or newer.",
     "summary": "Cross-site Framing; XSS in setup.php",
@@ -21466,7 +21466,7 @@
     "severity": "We consider these vulnerabilities to be serious. See YGN's advisories for\nsome mitigation factors."
   },
   "model": "security.pmasa",
-  "pk": 192
+  "pk": 312
 },
 {
   "fields": {
@@ -21490,7 +21490,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 193
+  "pk": 313
 },
 {
   "fields": {
@@ -21500,7 +21500,7 @@
     "affected": "Versions 4.1.x (prior to 4.1.14.2) and 4.2.x (prior to 4.2.6) are affected.",
     "description": "<p>An unpriviledged user could view the MySQL user list and manipulate the tabs displayed in phpMyAdmin for them.</p>",
     "sequence": 7,
-    "commits": "395265e9937beb21134626c01a21f44b28e712e5\n4_1: 45550b8cff06ad128129020762f9b53d125a6934",
+    "commits": "395265e9937beb21134626c01a21f44b28e712e5\n4.1: 45550b8cff06ad128129020762f9b53d125a6934",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.1.14.2 or newer, or 4.2.6 or newer, or apply the patch listed below.",
     "summary": "Access for an unprivileged user to MySQL user list.",
@@ -21514,7 +21514,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 194
+  "pk": 314
 },
 {
   "fields": {
@@ -21524,7 +21524,7 @@
     "affected": "For 2.11.x: versions before 2.11.9.3.<br />\nFor 3.0.x: versions before 3.0.1.1.<br />",
     "description": "<p>A logged-in user can be subject of cross site scripting attack via the <tt>pmd_pdf.php</tt> script.</p>",
     "sequence": 9,
-    "commits": "600a2ca21bc8b40742fd0a919a6b06a477548647\n2_11: 625e9f2e93671f9e4a9086b8d6c8111f70ffcc3d",
+    "commits": "600a2ca21bc8b40742fd0a919a6b06a477548647\n2.11: 625e9f2e93671f9e4a9086b8d6c8111f70ffcc3d",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.9.3 or 3.0.1.1.",
     "summary": "XSS on a Designer component",
@@ -21538,7 +21538,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 195
+  "pk": 315
 },
 {
   "fields": {
@@ -21562,7 +21562,7 @@
     "severity": "We consider this vulnerability to be serious; however, we could only trigger it when using Internet Explorer with the 'send URLs as UTF8' setting disabled. The default value of this setting being 'enabled' reduces the impact of this problem."
   },
   "model": "security.pmasa",
-  "pk": 196
+  "pk": 316
 },
 {
   "fields": {
@@ -21586,7 +21586,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 197
+  "pk": 317
 },
 {
   "fields": {
@@ -21596,7 +21596,7 @@
     "affected": "Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.",
     "description": "<p>By calling some scripts that are part of phpMyAdmin in an unexpected way, \nit is possible to trigger phpMyAdmin to display a PHP error message which \ncontains the full path of the directory where phpMyAdmin is installed.</p>",
     "sequence": 12,
-    "commits": "0fea53b7b82134ce0e1979a71b7ce080b5b6ff9a 8e4fe7c57a976f2ce9a6931687f4697d519111ec 7992beb8e42f2a4a3dab275b119d1ebd58e3b164 142e465c80a1fb3d71e214d29c566c15a416518d\n3_5: 142e465c80a1fb3d71e214d29c566c15a416518d 63848b24389dfabda8306112e20742b3ff7b8b12 4cc91616057d7517df306fe27b291c9639493d88 5d49c44fb862bfdfb8205ff15e8469cfb1b1c5d9 2f93578e20fd422f922183254dd50318d03a3e24 8559162ebc8ce822fa01ac429a6aab08cfa4ceda 1c1e3dca2b0cdfe10615f51a73b7d00718ad8d4b",
+    "commits": "0fea53b7b82134ce0e1979a71b7ce080b5b6ff9a 8e4fe7c57a976f2ce9a6931687f4697d519111ec 7992beb8e42f2a4a3dab275b119d1ebd58e3b164 142e465c80a1fb3d71e214d29c566c15a416518d\n3.5: 142e465c80a1fb3d71e214d29c566c15a416518d 63848b24389dfabda8306112e20742b3ff7b8b12 4cc91616057d7517df306fe27b291c9639493d88 5d49c44fb862bfdfb8205ff15e8469cfb1b1c5d9 2f93578e20fd422f922183254dd50318d03a3e24 8559162ebc8ce822fa01ac429a6aab08cfa4ceda 1c1e3dca2b0cdfe10615f51a73b7d00718ad8d4b",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer or apply the patches\nlisted below.",
     "summary": "Full path disclosure vulnerabilities.",
@@ -21610,7 +21610,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 198
+  "pk": 318
 },
 {
   "fields": {
@@ -21634,7 +21634,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 199
+  "pk": 319
 },
 {
   "fields": {
@@ -21658,7 +21658,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 200
+  "pk": 320
 },
 {
   "fields": {
@@ -21682,7 +21682,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 201
+  "pk": 321
 },
 {
   "fields": {
@@ -21692,7 +21692,7 @@
     "affected": "Versions 3.4.x are affected, for issues #1 and #2.\nVersions 3.5.x are affected, for all issues.",
     "description": "<p>Using a crafted table name, it was possible to produce a XSS :\n1) On the Database Structure page, creating a new table with a crafted name\n2) On the Database Structure page, using the Empty and Drop links of the crafted table name\n3) On the Table Operations page of a crafted table, using the 'Empty the table (TRUNCATE)' and 'Delete the table (DROP)' links\n4) On the Triggers page of a database containing tables with a crafted name, when opening the 'Add Trigger' popup\n5) When creating a trigger for a table with a crafted name, with an invalid definition.\nHaving crafted data in a database table, it was possible to produce a XSS :\n6) When visualizing GIS data, having a crafted label name.</p>",
     "sequence": 4,
-    "commits": "50d1a4884306ae6705f0bb665ba71da24089b6fe ee306681d0d5ac09b6fc62a7d573020af083e856 dca22c5046aa16899042592b40a0af7b5c4f1fc7 1aec25f5f2163029da51da39a1d13dcb20fb00ea d56335691cf1c1d8be3453904a885038da0a8c93\n3_4: d84b98d34012cc5986fe84f1871b0396990391ef e094f34bed5ef3fd9a4a3cd08e01ff59a260c730",
+    "commits": "50d1a4884306ae6705f0bb665ba71da24089b6fe ee306681d0d5ac09b6fc62a7d573020af083e856 dca22c5046aa16899042592b40a0af7b5c4f1fc7 1aec25f5f2163029da51da39a1d13dcb20fb00ea d56335691cf1c1d8be3453904a885038da0a8c93\n3.4: d84b98d34012cc5986fe84f1871b0396990391ef e094f34bed5ef3fd9a4a3cd08e01ff59a260c730",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.4.11.1 or 3.5.2.2 or newer or apply the patches\nlisted below.",
     "summary": "Multiple XSS in Table operations, Database structure, Trigger and Visualize\nGIS data pages.",
@@ -21706,7 +21706,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 202
+  "pk": 322
 },
 {
   "fields": {
@@ -21730,7 +21730,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 203
+  "pk": 323
 },
 {
   "fields": {
@@ -21754,7 +21754,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 204
+  "pk": 324
 },
 {
   "fields": {
@@ -21778,7 +21778,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 205
+  "pk": 325
 },
 {
   "fields": {
@@ -21802,7 +21802,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 206
+  "pk": 326
 },
 {
   "fields": {
@@ -21812,7 +21812,7 @@
     "affected": "Versions before 2.11.9.1.",
     "description": "<p>We received an advisory from Norman Hippert and we wish to thank him for his work. The <tt>server_databases.php</tt> script was vulnerable to an attack coming from a user who is already logged-on to phpMyAdmin, where he can execute shell code (if the PHP configuration permits commands like <tt>exec</tt>).</p>",
     "sequence": 7,
-    "commits": "64623fe9dbccff3f1ad9a54f844f91cefd07569c\n2_11: f8d65ec564ada5c839be8f3f07f483cd82ce6a11",
+    "commits": "64623fe9dbccff3f1ad9a54f844f91cefd07569c\n2.11: f8d65ec564ada5c839be8f3f07f483cd82ce6a11",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 2.11.9.1 or newer.",
     "summary": "Code execution vulnerability",
@@ -21826,7 +21826,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 207
+  "pk": 327
 },
 {
   "fields": {
@@ -21836,7 +21836,7 @@
     "affected": "For 2.11.x: versions before 2.11.10 are affected.",
     "description": "<p>phpMyAdmin used the unserialize() PHP function on potentially unsafe \ndata in setup script, what could be potentially used for XSRF attack, \nwhich can lead to code execution.</p>",
     "sequence": 3,
-    "commits": "2_11: 719e0dce659f4a452d06a26e9432d888531a6e7b",
+    "commits": "2.11: 719e0dce659f4a452d06a26e9432d888531a6e7b",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.0.0 or 2.11.10.",
     "summary": "Unsafe usage of unserialize function.",
@@ -21850,7 +21850,7 @@
     "severity": "We consider these vulnerabilities to be critical."
   },
   "model": "security.pmasa",
-  "pk": 208
+  "pk": 328
 },
 {
   "fields": {
@@ -21860,7 +21860,7 @@
     "affected": "Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.",
     "description": "<p>Due to a missing validation of parameters passed to <code>schema_export.php</code> and <code>pmd_pdf.php</code>, it was possible to inject SQL statements that would run with the privileges of the control user. This gives read and write access to the tables of the configuration storage database, and if the control user has the necessary privileges, read access to some tables of the <code>mysql</code> database.</p>",
     "sequence": 15,
-    "commits": "974d0dedeea7c79ac4533e614d9c0c3abd97e8f9 8ef025ef3d05c164654fee7001517626cf604bb1\n3_5: 4cbeef599cda87c6d2b1d7ef5542fe1ff316f706 20f71e767bcd037178cb5455543071323bc7ffd9",
+    "commits": "974d0dedeea7c79ac4533e614d9c0c3abd97e8f9 8ef025ef3d05c164654fee7001517626cf604bb1\n3.5: 4cbeef599cda87c6d2b1d7ef5542fe1ff316f706 20f71e767bcd037178cb5455543071323bc7ffd9",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or apply the patches below.",
     "summary": "SQL injection vulnerabilities, producing a privilege escalation (control user).",
@@ -21874,7 +21874,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 209
+  "pk": 329
 },
 {
   "fields": {
@@ -21884,7 +21884,7 @@
     "affected": "Versions 4.1.x (prior to 4.1.14.1) and 4.2.x (prior to 4.2.4) are affected.",
     "description": "<p>When hiding or unhiding a crafted table name in the navigation, it is possible to trigger an XSS.</p>",
     "sequence": 3,
-    "commits": "d4f754c937f9e2c0beadff5b2e38215dde1d6a79\n4_1: daa98d0c7ed24b529dc5df0d5905873acd0b00be",
+    "commits": "d4f754c937f9e2c0beadff5b2e38215dde1d6a79\n4.1: daa98d0c7ed24b529dc5df0d5905873acd0b00be",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.1.14.1 or newer, or 4.2.4 or newer, or apply the patch listed below.",
     "summary": "Self-XSS due to unescaped HTML output in navigation items hiding feature.",
@@ -21898,7 +21898,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 210
+  "pk": 330
 },
 {
   "fields": {
@@ -21908,7 +21908,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.4), 4.1.x (prior to 4.1.14.5) and 4.2.x (prior to 4.2.9.1) are affected.",
     "description": "<p>With a crafted ENUM value it is possible to trigger an XSS in table search and table structure pages.</p>",
     "sequence": 11,
-    "commits": "c1a3f85fbd1a9569646e7cf1b791325ae82c7961 304fb2b645b36a39e03b954fdbd567173ebe6448\n4_0: c6c77589a5860f20b5fb335033389de50e1a9031\n4_1: 71ccbbc423bcfd14ba40174b3adcd9a0fafaa511",
+    "commits": "c1a3f85fbd1a9569646e7cf1b791325ae82c7961 304fb2b645b36a39e03b954fdbd567173ebe6448\n4.0: c6c77589a5860f20b5fb335033389de50e1a9031\n4.1: 71ccbbc423bcfd14ba40174b3adcd9a0fafaa511",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.4 or newer, or 4.1.14.5 or newer, or 4.2.9.1 or newer, or apply the patch listed below.",
     "summary": "XSS vulnerabilities in table search and table structure pages.",
@@ -21922,7 +21922,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 211
+  "pk": 331
 },
 {
   "fields": {
@@ -21932,7 +21932,7 @@
     "affected": "Versions 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.12) are affected.",
     "description": "<p>In the error reporting feature, a parameter specifying the file was not correctly validated, allowing the attacker to derive the line count of an arbitrary file.</p>",
     "sequence": 16,
-    "commits": "b99b6b6672ff2419f05b05740c80c7a23c1da994\n4_1: da44dd4fd7432b915203e3e723a4534a01c12cd9",
+    "commits": "b99b6b6672ff2419f05b05740c80c7a23c1da994\n4.1: da44dd4fd7432b915203e3e723a4534a01c12cd9",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.1.14.7 or newer, or 4.2.12 or newer, or apply the patch listed below.",
     "summary": "Leakage of line count of an arbitrary file.",
@@ -21946,7 +21946,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 212
+  "pk": 332
 },
 {
   "fields": {
@@ -21956,7 +21956,7 @@
     "affected": "Versions 4.0.x (prior to 4.0.10.6), 4.1.x (prior to 4.1.14.7) and 4.2.x (prior to 4.2.12) are affected.",
     "description": "<p>In the GIS editor feature, a parameter specifying the geometry type was not correcly validated, opening the door to a local file inclusion attack.</p>",
     "sequence": 14,
-    "commits": "80cd40b6687a6717860d345d6eb55bef2908e961\n4_0: 2e3f0b9457b3c8f78beb864120bd9d55617a11b5\n4_1: 59557b51362edc5eee024f3f2912a9d598e42763",
+    "commits": "80cd40b6687a6717860d345d6eb55bef2908e961\n4.0: 2e3f0b9457b3c8f78beb864120bd9d55617a11b5\n4.1: 59557b51362edc5eee024f3f2912a9d598e42763",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 4.0.10.6 or newer, or 4.1.14.7 or newer, or 4.2.12 or newer, or apply the patch listed below.",
     "summary": "Local file inclusion vulnerability.",
@@ -21970,7 +21970,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 213
+  "pk": 333
 },
 {
   "fields": {
@@ -21994,7 +21994,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 214
+  "pk": 334
 },
 {
   "fields": {
@@ -22018,7 +22018,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 215
+  "pk": 335
 },
 {
   "fields": {
@@ -22028,7 +22028,7 @@
     "affected": "Versions 3.3.0 to 3.4.3.2 are affected.",
     "description": "<p>Missing sanitization on the table, column and index names leads to XSS vulnerabilities.</p>",
     "sequence": 13,
-    "commits": "f00c57bdf3669d7471b30e6750f6762d2e01947b 4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d c547703b1089bff62b238a908d8559ca3ad845f1 b659fbeb128b3235738d6fd787cab096ddc3a591 0f5f2d960184db7333ecf7d52da406cae306412b 39edf6e1fbe4a39f6fec0919d60eca5dfc2708ff 3d8fddceb0f084d4b77c58c48a98e002db6baa6a 2b0d12b2deb1b6b5c4073ecaa7971cb0bbb83389 ec848d825ffe896b96b6c3e4b8c7d4c12aadd310\n3_3: a5716cb3892f1714a97d8808cde9229ccc8752c8 4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d ae20845e36e0e019715842c71eed9e4a9ff99223 e11e55cb0689b4a6de5f0d996166668a47f96da9 9d54e57fc8946db9b04666a93541871c80867fe7 c78da1582799f35c8f12ca930062ea987a350282 a6c8a8fe8ac03f4f36e5aaa7f7fb3bf0e11654f8",
+    "commits": "f00c57bdf3669d7471b30e6750f6762d2e01947b 4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d c547703b1089bff62b238a908d8559ca3ad845f1 b659fbeb128b3235738d6fd787cab096ddc3a591 0f5f2d960184db7333ecf7d52da406cae306412b 39edf6e1fbe4a39f6fec0919d60eca5dfc2708ff 3d8fddceb0f084d4b77c58c48a98e002db6baa6a 2b0d12b2deb1b6b5c4073ecaa7971cb0bbb83389 ec848d825ffe896b96b6c3e4b8c7d4c12aadd310\n3.3: a5716cb3892f1714a97d8808cde9229ccc8752c8 4e5c583dcfdd6307f1093f80a9e1d1ff0480cc7d ae20845e36e0e019715842c71eed9e4a9ff99223 e11e55cb0689b4a6de5f0d996166668a47f96da9 9d54e57fc8946db9b04666a93541871c80867fe7 c78da1582799f35c8f12ca930062ea987a350282 a6c8a8fe8ac03f4f36e5aaa7f7fb3bf0e11654f8",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.4 or 3.4.4 or apply the related patch listed below.",
     "summary": "Multiple XSS in the Tracking feature.",
@@ -22042,7 +22042,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 216
+  "pk": 336
 },
 {
   "fields": {
@@ -22066,7 +22066,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 217
+  "pk": 337
 },
 {
   "fields": {
@@ -22090,7 +22090,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 218
+  "pk": 338
 },
 {
   "fields": {
@@ -22114,7 +22114,7 @@
     "severity": "Such issue is quite common in many PHP applications and users should\ntake care what links they follow. We consider these vulnerabilities\nto be quite dangerous."
   },
   "model": "security.pmasa",
-  "pk": 219
+  "pk": 339
 },
 {
   "fields": {
@@ -22124,7 +22124,7 @@
     "affected": "Versions 3.4.x are affected.",
     "description": "<p>When the js_frame parameter of phpmyadmin.css.php is defined as an array,\nan error message shows the full path of this file,\nleading to possible further attacks.</p>",
     "sequence": 15,
-    "commits": "d35cba980893aa6e6455fd6e6f14f3e3f1204c52\n3_4: e05b37d3c9e5b99e8a779fe55780d92df17b4a55",
+    "commits": "d35cba980893aa6e6455fd6e6f14f3e3f1204c52\n3.4: e05b37d3c9e5b99e8a779fe55780d92df17b4a55",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.4.6 or newer or apply the related patch listed below.",
     "summary": "Path disclosure due to insufficient url parameter validation.",
@@ -22138,7 +22138,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 220
+  "pk": 340
 },
 {
   "fields": {
@@ -22162,7 +22162,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 221
+  "pk": 341
 },
 {
   "fields": {
@@ -22186,7 +22186,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 222
+  "pk": 342
 },
 {
   "fields": {
@@ -22196,7 +22196,7 @@
     "affected": "Versions 3.3.x and 3.4.x are affected.",
     "description": "<p>Importing a specially-crafted XML file which contains an XML entity injection\npermits to retrieve a local file (limited by the privileges of the user\nrunning the web server).</p>",
     "sequence": 17,
-    "commits": "05f96b921a7e7dacd02be5ca61b2e7bdd014ee55 34d99de000de9d15cfdf5e9cc8b7682d51110bbd a5e206fbd2ca814042cfc1bb7dd3b40c28ce3fb5\n3_3: 75606e5f82280eb1a3817badf1b24d512a010b80 1a89c8ecfd09ceace81fb11e488f12599c0e49b6 2fbf631384fd8cded55f4500cb87b129442f9ed2 5fa86b8e81565c15ddbc359e8f59ecd829a2b717",
+    "commits": "05f96b921a7e7dacd02be5ca61b2e7bdd014ee55 34d99de000de9d15cfdf5e9cc8b7682d51110bbd a5e206fbd2ca814042cfc1bb7dd3b40c28ce3fb5\n3.3: 75606e5f82280eb1a3817badf1b24d512a010b80 1a89c8ecfd09ceace81fb11e488f12599c0e49b6 2fbf631384fd8cded55f4500cb87b129442f9ed2 5fa86b8e81565c15ddbc359e8f59ecd829a2b717",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.4.7.1 or newer (or 3.3.10.5) or apply the related patches listed below.",
     "summary": "Local file inclusion.",
@@ -22210,7 +22210,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 223
+  "pk": 343
 },
 {
   "fields": {
@@ -22220,7 +22220,7 @@
     "affected": "The 3.4.3 and earlier versions are affected.",
     "description": "<p>An unsanitized key from the Servers array is written in a comment of the generated config.\nAn attacker can modify this key by modifying the SESSION superglobal array.\nThis allows the attacker to close the comment and inject code.</p>",
     "sequence": 6,
-    "commits": "0fbedaf5fd7a771d0885c6b7385d934fc90d0d7f\n3_3: 2e01647949df937040e73a94ce0bac0daecbdcf4",
+    "commits": "0fbedaf5fd7a771d0885c6b7385d934fc90d0d7f\n3.3: 2e01647949df937040e73a94ce0bac0daecbdcf4",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.10.2 or 3.4.3.1 or apply the related patch listed below.",
     "summary": "Possible code injection in setup script in case session variables are compromised.",
@@ -22234,7 +22234,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 224
+  "pk": 344
 },
 {
   "fields": {
@@ -22244,7 +22244,7 @@
     "affected": "Versions 3.5.x and 4.0.0 (before -rc3) are affected.",
     "description": "<p>phpMyAdmin can be configured to save an export file on the web server, via its SaveDir directive. With this in place, it's possible, either via a crafted filename template or a crafted table name, to save a double extension file like foobar.php.sql. In turn, an Apache webserver on which there is no definition for the MIME type \"sql\" (the default) will treat this saved file as a \".php\" script, leading to remote code execution.</p>",
     "sequence": 3,
-    "commits": "3_5: d3fafdfba0807068196655e9b6d16c5d1d3ccf8a 1f6bc0b707002e26cab216b9e57b4d5de764de48",
+    "commits": "3.5: d3fafdfba0807068196655e9b6d16c5d1d3ccf8a 1f6bc0b707002e26cab216b9e57b4d5de764de48",
     "description_markup_type": "html",
     "solution": "For 3.5.x, upgrade to phpMyAdmin 3.5.8 or newer; for 4.0.x, upgrade to 4.0.0-rc3 or newer. You can also apply the patches listed below.",
     "summary": "Locally Saved SQL Dump File Multiple File Extension Remote Code Execution.",
@@ -22258,7 +22258,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 225
+  "pk": 345
 },
 {
   "fields": {
@@ -22268,7 +22268,7 @@
     "affected": "For 3.x: versions before 3.3.8.1 are affected. For 2.11.x: versions before 2.11.11.1 are affected.",
     "description": "<p>It was possible to conduct a XSS attack using spoofed request on the db search script.</p>",
     "sequence": 8,
-    "commits": "4341818d73d454451f024950a4ce0141608ac7f8\n2_11: e1f4901ffc400b6d2df15eac0ba5015fe48a27c4",
+    "commits": "4341818d73d454451f024950a4ce0141608ac7f8\n2.11: e1f4901ffc400b6d2df15eac0ba5015fe48a27c4",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.3.8.1 or newer, or 2.11.11.1 if using the 2.11.x family. You can also apply the patch listed below.",
     "summary": "XSS attack in database search.",
@@ -22282,7 +22282,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 226
+  "pk": 346
 },
 {
   "fields": {
@@ -22306,7 +22306,7 @@
     "severity": "We consider this vulnerability to be serious."
   },
   "model": "security.pmasa",
-  "pk": 227
+  "pk": 347
 },
 {
   "fields": {
@@ -22330,7 +22330,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 228
+  "pk": 348
 },
 {
   "fields": {
@@ -22354,7 +22354,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 229
+  "pk": 349
 },
 {
   "fields": {
@@ -22364,7 +22364,7 @@
     "affected": "For 2.11.x: versions before 2.11.9.6 are affected.<br />\nFor 3.x: versions before 3.2.2.1 are affected.",
     "description": "<p>Cross-site scripting (XSS) vulnerability allows remote attackers to inject \narbitrary web script or HTML via a crafted MySQL table name.<br />\nSQL injection vulnerability allows remote attackers to inject SQL via various \ninterface parameters of the PDF schema generator feature.<br /></p>",
     "sequence": 6,
-    "commits": "8ec5434999724f61d7df1f9b0b13545274c78b1e\n2_11: 212daad0c082dfb853e3a4098838781a96b2ce1f",
+    "commits": "8ec5434999724f61d7df1f9b0b13545274c78b1e\n2.11: 212daad0c082dfb853e3a4098838781a96b2ce1f",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.2.2.1 or 2.11.9.6.",
     "summary": "XSS and SQL injection vulnerabilities",
@@ -22378,7 +22378,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 230
+  "pk": 350
 },
 {
   "fields": {
@@ -22402,7 +22402,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 231
+  "pk": 351
 },
 {
   "fields": {
@@ -22426,7 +22426,7 @@
     "severity": "We consider these vulnerabilities to be serious."
   },
   "model": "security.pmasa",
-  "pk": 232
+  "pk": 352
 },
 {
   "fields": {
@@ -22450,7 +22450,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 233
+  "pk": 353
 },
 {
   "fields": {
@@ -22474,7 +22474,7 @@
     "severity": "We consider these vulnerabilities to be serious. However, (1) can be exploited only on systems not running in PHP safe mode (unless a deliberate hole was opened by including in open_basedir some paths containing sensitive data)."
   },
   "model": "security.pmasa",
-  "pk": 234
+  "pk": 354
 },
 {
   "fields": {
@@ -22498,7 +22498,7 @@
     "severity": "We consider this vulnerability to be critical."
   },
   "model": "security.pmasa",
-  "pk": 235
+  "pk": 355
 },
 {
   "fields": {
@@ -22522,7 +22522,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 236
+  "pk": 356
 },
 {
   "fields": {
@@ -22532,7 +22532,7 @@
     "affected": "Versions 3.5.x (prior to 3.5.8.2) and 4.0.x (prior to 4.0.4.2) are affected.",
     "description": "<p>Using a crafted SQL query, it was possible to produce an XSS on the SQL query form.</p>",
     "sequence": 8,
-    "commits": "56e9ede5223219cef2187ced385924ef2e0ae21d\n3_5: 01d35b3558e47fba947719857bd71f6fd9e5dce8",
+    "commits": "56e9ede5223219cef2187ced385924ef2e0ae21d\n3.5: 01d35b3558e47fba947719857bd71f6fd9e5dce8",
     "description_markup_type": "html",
     "solution": "Upgrade to phpMyAdmin 3.5.8.2 or 4.0.4.2 or newer or apply the patches\nlisted below.",
     "summary": "XSS due to unescaped HTML Output when executing a SQL query.",
@@ -22546,7 +22546,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 237
+  "pk": 357
 },
 {
   "fields": {
@@ -22570,7 +22570,7 @@
     "severity": "We consider these vulnerabilities to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 238
+  "pk": 358
 },
 {
   "fields": {
@@ -22594,7 +22594,7 @@
     "severity": "We consider this vulnerability to be serious. However, it can be exploited only on systems not running in PHP safe mode (unless a deliberate hole was opened by including in open_basedir some paths containing sensitive data)."
   },
   "model": "security.pmasa",
-  "pk": 239
+  "pk": 359
 },
 {
   "fields": {
@@ -22618,7 +22618,7 @@
     "severity": "We consider this vulnerability to be non critical."
   },
   "model": "security.pmasa",
-  "pk": 240
+  "pk": 360
 },
 {
   "fields": {
