@@ -15,3 +15,5 @@
 - check for ${ in templates
 - remove data/sf.py
 - integrate data/redirects.py
+- html sitemap
+- xml sitemap
