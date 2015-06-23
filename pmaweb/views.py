@@ -70,6 +70,7 @@ def redirect_home_page(request, page):
 def redirect_security(request):
     """Redirect for old security page"""
     if 'issue' in request.GET:
-        return redirect('security-issue', entry=request.GET['issue'])
+        prefix, year, sequence = request.GET['issue'].split('-')
+        return redirect('security-issue', year=year, sequence=sequence)
     else:
         return redirect('security')

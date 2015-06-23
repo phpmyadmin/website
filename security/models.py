@@ -87,4 +87,24 @@ class PMASA(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('security-issue', (), {'entry': str(self)})
+        return ('security-issue', (), {'year': self.year, 'sequence': self.sequence})
+
+    def get_cves(self):
+        return self.cve.split()
+
+    def get_cwes(self):
+        return self.cwe.split()
+
+    def get_commits(self):
+        lines = self.commits.split('\n')
+        result = []
+        for line in lines:
+            if ':' in line:
+                branch, line = line.split(':')
+            else:
+                branch = ''
+            result.append({
+                'branch': branch,
+                'commits': line.strip().split(),
+            })
+        return result

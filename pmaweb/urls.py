@@ -23,6 +23,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
+from security.views import PMASAView
 
 
 urlpatterns = patterns('',
@@ -49,11 +50,8 @@ urlpatterns = patterns('',
         name='security'
     ),
     url(
-        r'^security/(?P<entry>PMASA-20[0-9][0-9]-[0-9]+)/$',
-        # TODO: Add real view
-        TemplateView.as_view(
-            template_name='security.html',
-        ),
+        r'^security/PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)/$',
+        PMASAView.as_view(),
         name='security-issue'
     ),
     url(
@@ -272,7 +270,7 @@ urlpatterns = patterns('',
         )
     ),
     url(
-        r'^home_page/security/(?P<entry>PMASA-20[0-9][0-9]-[0-9]+).php$',
+        r'^home_page/security/PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)\.php$',
         RedirectView.as_view(
             pattern_name='security-issue',
             permanent=True,

@@ -1,152 +1,87 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Security - ${announcement_id()}</py:def>
 <py:def function="page_rss">${base_url}security/index.xml</py:def>
 <py:def function="page_rss_title">phpMyAdmin security issues</py:def>
 
-<div py:match="content">
-
-<xi:include href="_list.tpl" />
+{% block content %}
+{% include "security/_list.html" %}
 
 <div id="body">
-    <h2>${announcement_id()}</h2>
+    <h2>{{ pmasa }}</h2>
 
-    <p><strong>Announcement-ID:</strong> ${announcement_id()}</p>
-    <p><strong>Date:</strong> ${announcement_date()}</p>
-    <p py:if="defined('announcement_updated')"><strong>Updated:</strong> ${announcement_updated()}</p>
+    <p><strong>Announcement-ID:</strong> {{ pmasa }}</p>
+    <p><strong>Date:</strong> {{ pmasa.date|date:"Y-m-d" }}</p>
+    {% if pmasa.updated %}
+    <p><strong>Updated:</strong> {{ pmasa.updated|date:"Y-m-d" }}</p>
+    {% endif %}
 
     <h3>Summary</h3>
-    <p>${announcement_summary()}</p>
+    <p>{{ pmasa.summary }}</p>
 
     <h3>Description</h3>
-    <p py:if="defined('announcement_description')">${announcement_description()}</p>
-    <py:if test="defined('announcement_description_fmt')">${announcement_description_fmt()}</py:if>
+    {{ pmasa.description }}
 
     <h3>Severity</h3>
-    <p>${announcement_severity()}</p>
+    <p>{{ pmasa.severity }}</p>
 
-    <py:if test="defined('announcement_mitigation')">
+    {% if pmasa.mitigation %}
     <h3>Mitigation factor</h3>
-    <p>${announcement_mitigation()}</p>
-    </py:if>
+    <p>{{ pmasa.mitigation }}</p>
+    {% endif %}
 
     <h3>Affected Versions</h3>
-    <p>${announcement_affected()}</p>
+    <p>{{ pmasa.affected }}</p>
 
-    <py:if test="defined('announcement_unaffected')">
+    {% if pmasa.unaffected %}
     <h3>Unaffected Versions</h3>
-    <p>${announcement_unaffected()}</p>
-    </py:if>
+    <p>{{ pmasa.unaffected }}</p>
+    {% endif %}
 
     <h3>Solution</h3>
-    <p>${announcement_solution()}</p>
+    <p>{{ pmasa.solution }}</p>
 
-    <py:if test="defined('announcement_references') or defined('announcement_cve') or defined('announcement_cwe')">
+    {% if pmasa.references or pmasa.cve or pmasa.cwe %}
     <h3>References</h3>
-    <p py:if="defined('announcement_references')">${announcement_references()}</p>
-    <p py:if="defined('announcement_cve')">
+    {% if pmasa.references %}
+    <p>{{ pmasa.references }}</p>
+    {% endif %}
+    {% if pmasa.cve %}
+    <p>
     Assigned CVE ids:
-    <!--! This is a bit ugly expression and there must be better way to do
-    this, but I haven't found it. -->
-    <py:for each="cve in announcement_cve().next()[1].split(' ')">
-    <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=${cve}">${cve}</a>
-    </py:for>
+    {% for cve in pmasa.get_cves %}
+    <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name={{cve}}">{{cve}}</a>
+    {% endfor %}
     </p>
-    <p py:if="defined('announcement_cwe')">
+    {% endif %}
+    {% if pmasa.cwe %}
+    <p>
     CWE ids:
-    <!--! This is a bit ugly expression and there must be better way to do
-    this, but I haven't found it. -->
-    <py:for each="cwe in announcement_cwe().next()[1].split(' ')">
-    <a href="http://cwe.mitre.org/data/definitions/${cwe}.html">CWE-${cwe}</a>
-    </py:for>
+    {% for cwe in pmasa.get_cwes %}
+    <a href="http://cwe.mitre.org/data/definitions/{{cwe}}.html">CWE-{{cwe}}</a>
+    {% endfor %}
     </p>
-    </py:if>
+    {% endif %}
+    {% endif %}
 
-    <py:if test="defined('announcement_commits') or defined('announcement_commits_2_11') or defined('announcement_commits_3_3') or defined('announcement_commits_3_4') or defined('announcement_commits_3_5') or defined('announcement_commits_4_0') or defined('announcement_commits_4_1') or defined('announcement_commits_4_2')">
+    {% if pmasa.commits %}
     <h3>Patches</h3>
 
-    <py:if test="defined('announcement_commits')">
+    {% for commits in pmasa.get_commits %}
+    {% if commits.branch %}
+    <p>The following commits have been made on the {{ commits.branch }} branch to fix this issue:</p>
+    {% else %}
     <p>The following commits have been made to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
+    {% endif %}
 
-    <py:if test="defined('announcement_commits_4_3')">
-    <p>The following commits have been made on the 4.3 branch to fix this issue:</p>
     <ul>
-    <py:for each="hash in announcement_commits_4_3().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
+    {% for hash in commits.commits %}
+    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/{{hash}}">{{hash}}</a></li>
+    {% endfor %}
     </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_4_2')">
-    <p>The following commits have been made on the 4.2 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_4_2().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_4_1')">
-    <p>The following commits have been made on the 4.1 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_4_1().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_4_0')">
-    <p>The following commits have been made on the 4.0 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_4_0().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_3_5')">
-    <p>The following commits have been made on the 3.5 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_3_5().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_3_4')">
-    <p>The following commits have been made on the 3.4 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_3_4().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_3_3')">
-    <p>The following commits have been made on the 3.3 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_3_3().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    <py:if test="defined('announcement_commits_2_11')">
-    <p>The following commits have been made on the 2.11 branch to fix this issue:</p>
-    <ul>
-    <py:for each="hash in announcement_commits_2_11().next()[1].strip().split('\n')">
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/${hash}">${hash}</a></li>
-    </py:for>
-    </ul>
-    </py:if>
-
-    </py:if>
+    {% endfor %}
+    {% endif %}
 
     <h3>More information</h3>
 
@@ -158,7 +93,4 @@
 
 </div>
 <div class="clearer"></div>
-</div>
-
-<xi:include href="../_page.tpl" />
-</html>
+{% endblock %}

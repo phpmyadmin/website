@@ -19,6 +19,18 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-from django.shortcuts import render
+from django.views.generic.detail import DetailView
+from security.models import PMASA
 
-# Create your views here.
+
+class PMASAView(DetailView):
+    model = PMASA
+
+    def get_object(self, queryset=None):
+        if queryset is None:
+            queryset = self.get_queryset()
+
+        return queryset.get(
+            year=self.kwargs['year'],
+            sequence=self.kwargs['sequence'],
+        )
