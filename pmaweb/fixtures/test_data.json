@@ -1,6 +1,7 @@
 [
 {
   "fields": {
+    "date": "2014-10-01",
     "version": "4.1.14.5",
     "release_notes": "Welcome to phpMyAdmin 4.1.14.5, a security release.\n\n4.1.14.5 (2014-10-01)\n- bug #4544 [security] XSS vulnerabilities in table search and table structure pages\n",
     "version_num": 401140599,
@@ -11,6 +12,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-05",
     "version": "4.3.0",
     "release_notes": "\n\n\nWelcome to phpMyAdmin 4.3. This release contains many bug fixes and several\nnew features including the work done by our Google Summer of Code (GSoC)\nstudents, and is the first release since the hiring of a full-time\ndeveloper. Read on for more information or skip directly to the\ndownload at https://sourceforge.net/projects/phpmyadmin/files or always read\nthe complete list of changes by referring to the changelog.php or ChangeLog\nfiles, included with this release.\n\nFirst, some information on our featured GSoC projects:\n\nSmita Kumari worked on two structure tools,\n1) \u201ca feature that enables a user to maintain a central list of columns per database\nto avoid similar name for the same data element and bring consistency of data\ntype for the same data element.\u201d\n\n2) Automated normalization is known as \"Improve table structure\" within phpMyAdmin.\nIt helps to bring the table structure upto Third Normal Form. A wizard is\npresented to user which asks questions about the elements during the various\nsteps for normalization and a new structure is proposed accordingly to bring the\ntable optionally into the First/Second/Third Normal form.\n\nEdward Cheng implemented a component which provides easy access to a console,\nincluding bookmarking and a history viewer.\n\nChirayu Chiripal and Ashutosh Dhundhara both worked on many feature improvements.\nThese improvements may not be glamorous but feature some much needed maintenance\nand minor improvements.\n\nBehind the scenes, Dhananjay Nakrani has improved the error reporting server,\nan optional reporting feature allowing users to automatically submit error\nreports directly to the phpMyAdmin developers. Now, PHP errors can also be reported.\n\nAdditional behind the scenes work was done by Bimal Yashodha to refactor the code\nbehind the Designer interface. Most of these improvements are transparent to users\nbut help ease the maintenance  required on this portion of the code.\n\nOur second piece of exciting news is that this release includes many improvements\nthanks to our new full-time developer, Madhura Jayaratne.\n\n\"I am so excited to be working for phpMyAdmin as a contract developer and since\nI started working, my focus has mainly been on stabilizing the code for the upcoming\nversion 4.3 release. This involved fixing a number of bugs as well as improving\nperformance, which was due for some time.\u201d\n\nThe biggest improvement Madhura has brought to 4.3 is increased speed and performance\nwhen operating with many (thousands) databases, such as in a shared hosting environment.\n\nSome of the new features are:\n* Smart sorting for int keys\n* Confirmation message when dropping user(s)\n* Confirm dialog on accidentally leaving a page\n* Allow clicking an approximate row count to get a correct one\n* Support for editing binary fields in hexadecimal\n* MariaDB 10+ multi-master replication support\n* Allow saving query charts as images\n* Use aliases in SQL export for tables and columns\n* Export with table/column name changes\n* Dynamic process list\n* Drag and Drop SQL import\n* Preview SQL instead of executing it\n* Run SQL query: Allow rollback for InnoDB tables\n* Zeroconf PMA tables support\n* Regexp replace\n* Avoid session timeout when user is active\n* MySQL 5.7.5 compatibility\n* Avoid session timeout when user is active\n* Multiple-column foreign key relation\n* Charts for data in  format\n* Range Search Capability\n* Improvements for the table editor (index creation)\n* PHP OpenSSL support for cookie encryption/decryption\n\nThe phpMyAdmin team\n\n\n\n",
     "version_num": 403000099,
@@ -21,6 +23,7 @@
 },
 {
   "fields": {
+    "date": "2014-11-30",
     "version": "4.2.13",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.13, a bugfix version.\n\n4.2.13.0 (2014-11-30)\n- bug #4604 Query history not being deleted\n- bug #4057 db/table query string parameters no longer work\n- bug #4605 Unseen messages in tracking\n- bug #4606 Tracking report export as SQL dump does not work\n- bug #4607 Syntax error during db_copy operation\n- bug #4608 SELECT permission issues with relations and restricted access\n\n\n\n",
     "version_num": 402130099,
@@ -31,6 +34,7 @@
 },
 {
   "fields": {
+    "date": "2012-10-08",
     "version": "3.5.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.3, a bugfix release with minor security fixes. This release no longer contains the Highcharts library (which caused a licensing problem).\n\n3.5.3.0 (2012-10-08)\n- bug #3539044 [interface] Browse mode \"Show\" button gives blank page if no resu\nlts anymore\n- bug #3534979 [interface] Copy Database Ajax feedback vanishes long before copy\ning is done\n- bug #3527531 [interface] GC-maxlifetime warning incorrectly displayed\n- bug #3526916 [interface] Search fails with JS error when tooltips disabled\n- bug #3544366 [interface] Event comments not saved\n- bug #3549084 [edit] Can't enter date directly when editing inline\n- bug #3548491 [interface] Inline query editor doesn't work from search results\n- bug #3547825 [edit] BLOB download no longer works\n- bug #3541966 [config] Error in generated configuration arrray\n- bug #3553551 [GUI] Invalid HTML code in multi submits confirmation form\n- [interface] Designer sometimes places tables on the top menu\n- bug #3546277 [core] Call to undefined function __() when config file has wrong\n permissions\n- bug #3540922 [edit] Error searching table with many fields\n- bug #3555104 [edit] Cannot copy a DB with table and views\n- bug #3559925 [privileges] Incorrect updating of the list of users\n- bug #3561224 [edit] cell edit date field with empty date fills in current date\n- bug #3559955 [edit] current_date from function drop down fails on update\n- bug #3562472 add support for Solaris and FreeBSD system load and memory displa\ny in server status\n- bug #3553068 [import] Table import from XML file fails\n- replace Highcharts with jqplot for Display chart\n- bug #3567684 [edit] Pasting value doesn't clear null checkbox\n- bug #3570786 [edit] Datepicker for date and datetime fields is broken\n\n\n\n",
     "version_num": 305030099,
@@ -41,6 +45,7 @@
 },
 {
   "fields": {
+    "date": "2013-06-30",
     "version": "4.0.4.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.4.1, a security release.\n\n4.0.4.1 (2013-06-30)\n- [security] Global variables scope injection vulnerability (see PMASA-2013-7)\n\n\n\n",
     "version_num": 400040199,
@@ -51,6 +56,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-28",
     "version": "4.4.8",
     "release_notes": "\n\r\nWelcome to phpMyAdmin 4.4.8, a bugfix version.\r\n\r\n4.4.8.0 (2015-05-28)\r\n- bug       Allow accessing visual query builder when pmadb is not configured\r\n- bug #4893 Nav tree line alignment issue\r\n- bug #4911 Lock page icon is not shown after fresh reload\r\n- bug #4912 \"Highlight pointer\" and \"Row marker\" doesn't work properly\r\n- bug       Browse foreigners window goes out of the window\r\n- bug #4918 Date field popup dialog position bug\r\n- bug       In /setup, PMA_messages is not defined\r\n- bug #4924 Recaptcha failure\r\n- bug #4930 Database copy doesn't work for tables with more than one FULLTEXT index\r\n- bug #4929 Edit view structure doesn't load the algorithm\r\n- bug #4923 Do not limit table comments to 60 characters\r\n\r\n\n\n",
     "version_num": 404080099,
@@ -61,6 +67,7 @@
 },
 {
   "fields": {
+    "date": "2012-08-03",
     "version": "3.5.2.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.2.1, a security release.\n\n3.5.2.1 (2012-08-03)\n- [security] Fixed local path disclosure vulnerability, see PMASA-2012-3\n\n\n\n",
     "version_num": 305020199,
@@ -71,6 +78,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-13",
     "version": "4.3.13.1",
     "release_notes": "Welcome to phpMyAdmin 4.3.13.1, a security release. \n\n4.3.13.1 (2015-05-13)\n- bug #4899 [security] CSRF vulnerability in setup\n- bug #4900 [security] Vulnerability allowing man-in-the-middle attack\n\n",
     "version_num": 403130199,
@@ -81,6 +89,7 @@
 },
 {
   "fields": {
+    "date": "2011-02-08",
     "version": "3.3.9.1",
     "release_notes": "",
     "version_num": 303090199,
@@ -91,6 +100,7 @@
 },
 {
   "fields": {
+    "date": "2014-05-20",
     "version": "4.2.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.2, a bugfix version.\n\n4.2.2.0 (2014-05-20)\n- bug #4388 Disable database expansion when enabled throws Error 500 when database name is clicked in navigation tree\n- bug #4414 table display of performance_schema DB structure\n- bug #4411 Protect Binary Columns: many problems\n- bug #4395 BLOB link transformation is broken\n- bug       Respect ['ShowCreateDb'] in the navi panel\n- bug #4392 Cannot see databases in nav panel on databases grouping when disabled database expansion\n- bug #4419 No more calendar into search tab\n- bug #4398 Monitor should fit into screen width\n- bug #4418 When copying databases, primary key attributes get lost\n- bug #4421 empty maxInputVars on js/messages.php\n\n\n\n",
     "version_num": 402020099,
@@ -101,6 +111,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-13",
     "version": "4.4.6.1",
     "release_notes": "Welcome to phpMyAdmin 4.4.6.1, a security release. \n\n4.4.6.1 (2015-05-13)\n- bug #4899 [security] CSRF vulnerability in setup\n- bug #4900 [security] Vulnerability allowing man-in-the-middle attack\n\n",
     "version_num": 404060199,
@@ -111,6 +122,7 @@
 },
 {
   "fields": {
+    "date": "2014-04-26",
     "version": "4.1.14",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.14, a bugfix version.\n\n4.1.14.0 (2014-04-26)\n- bug #4365 Creating bookmark with multiple queries not working\n- bug #4375 Group two DB, one's name is the prefix of the other one\n- bug #4376 [interface] Login fields show in separate line\n- bug #4372 Changing browser transformation results in unnecessary table rebuild\n\n\n\n",
     "version_num": 401140099,
@@ -121,6 +133,7 @@
 },
 {
   "fields": {
+    "date": "2015-04-01",
     "version": "4.4.0",
     "release_notes": "Welcome to phpMyAdmin 4.4.0, an incremental feature release including many bug fixes.\n\nA complete list of new features and bugs fixed is available in the ChangeLog file or changelog.php included with this release.\n\nA few highlights:\n* Rename configuration directive from $cfg['NavigationTreeDisableDatabaseExpansion']\n  to $cfg['NavigationTreeEnableExpansion'] -- if used, please update your config.inc.php\n* Move the SQL scripts to create phpMyAdmin configuration storage from 'examples' to 'sql' directory\n* Upgrade Recaptcha to version 2 of the API\n* Added support for the SSL GRANT option\n* Improvements to the table structure and tracking pages\n* Improvements to the console feature\n* Improvements to the ZeroConf feature\n\nThere are many more; please refer to the ChangeLog for full details.\n\nAs always, downloads are available at http://www.phpmyadmin.net\n\nThe phpMyAdmin Team\n\n",
     "version_num": 404000099,
@@ -131,6 +144,7 @@
 },
 {
   "fields": {
+    "date": "2015-03-29",
     "version": "4.3.13",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.13, a bugfix release.\n\n4.3.13.0 (2015-03-29)\n- bug #4803 \"Show hidden items\" is sometimes hidden\n- bug #4807 Breaks when sorting by multiple columns while using UNION\n- bug #4798 Missing column when exporting in sql\n- bug #4810 Broken find and replace\n- bug #4804 Undefined Index after export schema\n- bug #4802 Changelog page is not working\n- bug #4815 Infinite calls to index.php\n- bug #4820 Invalid links to dev.mysql.com\n- bug #4718 simulate query fails, but actual query does not\n\n\n\n",
     "version_num": 403130099,
@@ -141,6 +155,7 @@
 },
 {
   "fields": {
+    "date": "2013-06-05",
     "version": "4.0.3",
     "release_notes": "\n\nWelcome to the first release candidate for phpMyAdmin 4.0.3, a bugfix version containing a minor security fix.\n\n4.0.3.0 (2013-06-05)\n- bug #3941 Recent tables list always empty\n- bug #3933 Do not translate \"Open Document\" in export settings\n- bug #3927 List of tables is missing after expanding in the navigation frame\n- bug #3942 Warnings about reserved word for many non reserved words\n- bug #3912 Exporting row selection, resulted by ORDER BY query\n- bug #3957 Cookies must be enabled past this point\n- bug #3956 \"Browse foreign values\" search filter / page selector not working\n- bug #3579 NOW() function incorrectly selected (partial regression)\n- [security] Javascript execution vulnerability in Create view,\n  reported by Maxim Rupp (see PMASA-2013-6)\n\n\n\n",
     "version_num": 400030099,
@@ -151,6 +166,7 @@
 },
 {
   "fields": {
+    "date": "2014-07-17",
     "version": "4.1.14.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.14.2, a security release.\n\n4.1.14.2 (2014-07-17)\n- bug #4488 [security] XSS injection due to unescaped table name (triggers)\n- bug #4492 [security] XSS in AJAX confirmation messages\n- bug #4491 [security] Missing validation for accessing User groups feature\n\n\n\n",
     "version_num": 401140299,
@@ -161,6 +177,7 @@
 },
 {
   "fields": {
+    "date": "2015-04-13",
     "version": "4.4.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.2, a bugfix version.\n\n4.4.2.0 (2015-04-13)\n- bug #4835 PMA_hideShowConnection not called after submit_num_fields\n- bug #4836 Server warning after moving from console to direct clicks\n- bug #4837 Duplicate new version notification when using the \"Back\" button\n- bug #4839 DOC link in setting is broken\n- bug #4841 Status page: Mislukte pogingen per uur value is incorrect\n- bug       MIME Transformation link fixed\n- bug #4838 Prevents console window from moving out of the screen height\n- bug #4829 Create procedure via SQL Editor not more possible\n- bug #4833 CSS and Javascript are not compressed\n- bug #4849 Functions accessed from navigation do not load on ajax dialog\n- bug #4850 Relation view on 1920\n\n\n\n",
     "version_num": 404020099,
@@ -171,6 +188,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-13",
     "version": "4.0.10.10",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.10, a security release. \n\n4.0.10.10 (2015-05-13)\n- bug #4899 [security] CSRF vulnerability in setup\n- bug #4900 [security] Vulnerability allowing Man-in-the-middle attack\n\n",
     "version_num": 400101099,
@@ -181,6 +199,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-03",
     "version": "4.0.10.7",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.7, a security release.\n\n4.0.10.7 (2014-12-03)\n- bug #4611 [security] DOS attack with long passwords\n\n",
     "version_num": 400100799,
@@ -191,6 +210,7 @@
 },
 {
   "fields": {
+    "date": "2013-07-28",
     "version": "3.5.8.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.8.2, a security release.\n\n3.5.8.2 (2013-07-28)\n- [security] Fix self-XSS in \"Showing rows\", see PMASA-2013-8\n- [security] Fix self-XSS in Display chart, see PMASA-2013-9\n- [security] Fix stored XSS in Server status monitor, see PMASA-2013-9\n- [security] Fix stored XSS in navigation panel logo link, see PMASA-2013-9\n- [security] Fix self-XSS in setup, trusted proxies validation, see PMASA-2013-9\n+ [security] JSON content type header for version_check.php, see PMASA-2013-9\n+ [security] Backport fix for jQuery issue #9521 from jQuery 1.6.3, see PMASA-2013-9\n+ [security] Fix full path disclosure, see PMASA-2013-12\n+ [security] Fix control user SQL injection in pmd_pdf.php, see PMASA-2013-15\n+ [security] Fix control user SQL injection in schema_export.php, see PMASA-2013-15\n- [security] Fix self-XSS in schema export, see PMASA-2013-14\n- [security] Fix unencoded json object, see PMASA-2013-11\n\n\n\n",
     "version_num": 305080299,
@@ -201,6 +221,7 @@
 },
 {
   "fields": {
+    "date": "2011-03-02",
     "version": "1.1.0",
     "release_notes": "",
     "version_num": 101000099,
@@ -211,6 +232,7 @@
 },
 {
   "fields": {
+    "date": "2015-04-26",
     "version": "4.4.4",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.4, a bugfix version.\n\n4.4.4.0 (2015-04-26)\n- bug #4863 Edit vs Change\n- bug #4859 Don't scroll (to bottom) when editing multiple rows\n- bug #4862 Misaligned Inline edit field\n- bug #4861 Use of undefined constant PMA_DRIZZLE\n- bug #4865 sprintf(): Too few arguments\n- bug #4866 Limit column ordering in index edit dialog\n- bug #4867 Incorrect ALTER TABLE statement generated\n- bug #4870 Inconsistency in 'Ignore' checkbox in insert page\n- bug #4869 Drop column action not asking to confirm\n- bug #4871 Error on creating table\n- bug       Undefined index: Rows\n\n\n\n",
     "version_num": 404040099,
@@ -221,6 +243,7 @@
 },
 {
   "fields": {
+    "date": "2015-03-02",
     "version": "4.3.11",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.11, a bugfix version.\n\n4.3.11.0 (2015-03-02)\n- bug #4774 SQL links are completely wrong\n- bug #4768 MariaDB: version mismatch\n- bug #4777 Some images are missing in Designer for original theme\n- bug #4767 Drizzle: undefined index in mysql_charsets.inc.php\n- bug #4753 Normal field and multi-line field have different margins\n- bug #4760 Cannot re-import settings from local storage\n- bug #4778 SQL error when database list is sorted by additional columns\n- bug #4780 Notice when timestamp column does not have default value\n\n\n\n",
     "version_num": 403110099,
@@ -231,6 +254,7 @@
 },
 {
   "fields": {
+    "date": "2011-08-24",
     "version": "3.4.4",
     "release_notes": "",
     "version_num": 304040099,
@@ -241,6 +265,7 @@
 },
 {
   "fields": {
+    "date": "2013-12-04",
     "version": "4.0.10",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.10, a bugfix version.\n\n4.0.10.0 (2013-12-04)\n- bug #4150 Clicking database name in query window opens a new tab\n- bug #4141 Wrong page is shown after editing; also, do not show a modal\n            dialog for multi-row edit\n- bug #3939 PHP NavigationTree error when paging through list\n- bug #4075 Support A10 Networks load balancer\n- bug #4083 row deleting isn't binlogs friendly\n- bug #4163 Setup script does not recognize manually-configured server\n- bug #4158 Events page says no privileges with ALL PRIVILEGES\n\n\n\n",
     "version_num": 400100099,
@@ -251,6 +276,7 @@
 },
 {
   "fields": {
+    "date": "2012-03-28",
     "version": "3.4.10.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.10.2, a minor security release.\n\n3.4.10.2 (2012-03-28)\n- [security] Fixed local path disclosure vulnerability, see PMASA-2012-2\n\n\n\n",
     "version_num": 304100299,
@@ -261,6 +287,7 @@
 },
 {
   "fields": {
+    "date": "2015-06-17",
     "version": "4.4.10",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.10, a bugfix version.\n\n4.4.10.0 (2015-06-17)\n- bug #4950 Issues in database selection for replication\n- bug #4951 Trying to save chart as image crashes the browser\n- bug #4953 cant drag sql.gz file onto import input\n- bug #4960 Table creation results in GET request with missing server parameter that invalidates the session\n- bug #4961 Javascript error when Designer is opened\n- bug #4962 Insert by foreign key scrolls page to top\n- bug #4955 Clicking on the navi logo does not always work\n- bug       External URL for $cfg['NavigationLogoLink'] causes JavaScript error when clicked\n\n\n\n",
     "version_num": 404100099,
@@ -271,6 +298,7 @@
 },
 {
   "fields": {
+    "date": "2011-01-03",
     "version": "3.3.9",
     "release_notes": "",
     "version_num": 303090099,
@@ -281,6 +309,7 @@
 },
 {
   "fields": {
+    "date": "2010-09-07",
     "version": "2.11.11",
     "release_notes": "\n\nWelcome to phpMyAdmin 2.11.11, a bugfix release.\n\n2.11.11.0 (2010-09-07)\n- [core] Fix broken cleanup of $_GET\n- bug #3054458 [core] Fixed displaying number of rows.\n\n\n\n",
     "version_num": 211110099,
@@ -291,6 +320,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-21",
     "version": "4.2.10.1",
     "release_notes": "Welcome to phpMyAdmin 4.2.10.1, a security release.\n\n4.2.10.1 (2014-10-21)\n- bug #4562 [security] XSS in debug SQL output\n- bug #4563 [security] XSS in monitor query analyzer\n\n",
     "version_num": 402100199,
@@ -301,6 +331,7 @@
 },
 {
   "fields": {
+    "date": "2013-07-28",
     "version": "4.0.4.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.4.2, a security release.\n\n4.0.4.2 (2013-07-28)\n- [security] Fix stored XSS in Server status monitor, see PMASA-2013-9\n- [security] Fix stored XSS in navigation panel logo link, see PMASA-2013-9\n- [security] Fix self-XSS in setup, trusted proxies validation, see PMASA-2013-9\n- [security] Fix full path disclosure, see PMASA-2013-12\n- [security] Fix control user SQL injection in pmd_pdf.php, see PMASA-2013-15\n- [security] Fix control user SQL injection in schema_export.php, see PMASA-2013-15\n- [security] Fix self-XSS in schema export, see PMASA-2013-14\n- [security] Fix unencoded json object, see PMASA-2013-11\n- [security] Fix stored XSS in link transformation plugin, see PMASA-2013-13\n\n\n\n",
     "version_num": 400040299,
@@ -311,6 +342,7 @@
 },
 {
   "fields": {
+    "date": "2011-10-23",
     "version": "3.4.7",
     "release_notes": "",
     "version_num": 304070099,
@@ -321,6 +353,7 @@
 },
 {
   "fields": {
+    "date": "2011-09-14",
     "version": "3.4.5",
     "release_notes": "",
     "version_num": 304050099,
@@ -331,6 +364,7 @@
 },
 {
   "fields": {
+    "date": "2014-07-17",
     "version": "4.0.10.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.10.1, a security release.\n\n4.0.10.1 (2014-07-17)\n- bug #4488 [security] XSS injection due to unescaped table name (triggers)\n- bug #4492 [security] XSS in AJAX confirmation messages \n\n\n\n",
     "version_num": 400100199,
@@ -341,6 +375,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-16",
     "version": "4.4.7",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.7, a bugfix version.\n\n4.4.7.0 (2015-05-16)\n- bug #4876 Settings issues (Favorite tables shown twice in Settings)\n- bug #4896 Non-styled error page when following results link\n- bug #4894 Deleting without confirmation\n- bug #4858 Issues with SQL autocomplete\n- bug #4897 Column hint in SQL autocomplete is sometimes not shown\n- bug #4898 JS error after selecting a field and press Enter\n- bug       Honor proxy settings when getting Git commit information\n- bug       Missing title on link\n- bug #4512 ForceSSL Redirect Check\n- bug       Undefined index collation_connection\n- bug       Error when the reporting server is down\n- bug       Escape database and table names for partition maintenance\n- bug       Invalid value for CURLOPT_SSL_VERIFYPEER\n- bug #4367 Import status infinite loop\n- bug #4902 Designer: Loading does not work\n- bug #4904 Setup: Overview > Display does not work\n- bug #4906 Designer: pages from all databases\n\n\n\n",
     "version_num": 404070099,
@@ -351,6 +386,7 @@
 },
 {
   "fields": {
+    "date": "2011-06-27",
     "version": "3.4.3",
     "release_notes": "",
     "version_num": 304030099,
@@ -361,6 +397,7 @@
 },
 {
   "fields": {
+    "date": "2013-06-17",
     "version": "4.0.4",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.4, a bugfix version.\n\n4.0.4.0 (2013-06-17)\n- bug #3959 Using DefaultTabDatabase in NavigationTree for Database Click\n- bug #3961 Avoid Suhosin warning when in simulation mode\n- bug #3897 Row Statistics and Space usage bugs\n- bug #3966 Only display \"table has no unique column\" message when applicable\n- bug #3960 NavigationBarIconic config not honored\n- bug #3965 Default language wrong with zh-TW\n- bug #3921 Call to undefined function PMA_isSuperuser() if default server is\nnot set\n- bug #3971 Ctrl/shift + click opens links in same window\n- bug #3964 Import using https does not work\n- bug Missing removeCRLF option in ExportCsv and ExportExcel plugins\n- bug #3631 Drop not working Visio schema export.\n- bug #3645 Better handling of invalid ODS documents\n- bug #3976 Number of pages\n- bug #3922 User privileges, database name unescaped\n\n\n\n",
     "version_num": 400040099,
@@ -371,6 +408,7 @@
 },
 {
   "fields": {
+    "date": "2011-02-08",
     "version": "2.11.11.2",
     "release_notes": "",
     "version_num": 211110299,
@@ -381,6 +419,7 @@
 },
 {
   "fields": {
+    "date": "2015-02-20",
     "version": "4.3.10",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.10, a bugfix version.\n\n4.3.10.0 (2015-02-20)\n- bug       Undefined index navwork\n- bug #4744 Opening console scroll down the page\n- bug       Remove extra column heading in view structure page\n- bug       Add missing confirmation when deleting central columns\n- bug       Undefined index DisableIS\n- bug #4763 Database export with more than 512 tables fails\n- bug #4769 Previously set column aliases are destroyed if returned to the same table\n- bug #4752 Incorrect page after creating table\n- bug #4771 Central Columns not working, showing error\n\n\n\n",
     "version_num": 403100099,
@@ -391,6 +430,7 @@
 },
 {
   "fields": {
+    "date": "2014-09-13",
     "version": "4.0.10.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.10.3, a security release.\n\n4.0.10.3 (2014-09-13)\n- bug #4530 [security] DOM based XSS that results to a CSRF that creates a\nROOT account in certain conditions\n\n\n\n",
     "version_num": 400100399,
@@ -401,6 +441,7 @@
 },
 {
   "fields": {
+    "date": "2011-02-11",
     "version": "3.3.9.2",
     "release_notes": "",
     "version_num": 303090299,
@@ -411,6 +452,7 @@
 },
 {
   "fields": {
+    "date": "2013-10-06",
     "version": "4.0.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.8, a bugfix release.\n\n4.0.8.0 (2013-10-06)\n- bug #3988 Rename view is not working\n- bug #4041 Interaction between linkified fields and grid editing\n- bug #3975 Table grouping isn't implemented properly\n- bug #4060 Browser tries to remember wrong password when creating new user\n- bug #4002 Edit Index on big table doesn't show \"Loading\" or any message\n- bug #4098 Default table tab is ignored\n- bug #4099 Server/library difference warning: setting is ignored\n- bug #4100 table tree group strategy\n- bug #4102 ALTER TABLE ORDER BY and InnoDB\n- bug #4103 Tracking report: cannot delete a statement\n- bug #3996 Drizzle navigation doesn't expand\n- bug #4074 GIS column editor: point not displayed\n- bug #4109 Drizzle tables in navigation are shown as views\n- bug #4095 NUL symbols added to the end of database dump file\n- bug #4105 More disappears in table Structure\n- bug #3992 Multi-row edit doesn't clear values when checking NULL\n\n\n\n",
     "version_num": 400080099,
@@ -421,6 +463,7 @@
 },
 {
   "fields": {
+    "date": "2014-08-31",
     "version": "4.2.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.8, a bugfix release.\n\n4.2.8.0 (2014-08-31)\n- bug #4516 Odd export behavior\n- bug #4519 Uncaught TypeError: Cannot read property 'success' of null\n- bug #4520 sql.js: cannot read property\n- bug #4521 Initially allowed chart types do not match selected data\n- bug #4518 Export to SQL: CREATE TABLE option AUTO_INCREMENT ignored\n- bug #4522 Duplicate column names while assigning index\n- bug #4487 Export of partitioned table does not import\n- bug       server_privileges.js: cannot read property\n- bug #4527 Importing ODS files with column names having trailing spaces fails\n- bug #4413 Navigation Error in Nav Tree for Search Results Past the First Page\n- bug       functions.js: Cannot read property 'replace' of undefined\n\n\n\n",
     "version_num": 402080099,
@@ -431,6 +474,7 @@
 },
 {
   "fields": {
+    "date": "2013-08-04",
     "version": "4.0.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.5, a bugfix and security fix release.\n\n4.0.5.0 (2013-08-04)\n- bug #3977 Not detected configuration storage\n- bug #3970 Pressing enter in the filter field reloads page\n- bug #3984 Cannot insert in this table (PHP \n\n",
     "version_num": 400050099,
@@ -441,6 +485,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-12",
     "version": "4.3.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.2, a bugfix version.\n\n4.3.2.0 (2014-12-12)\n- bug #4628 PHP error while exporting schema as PDF\n- bug #4631 Server selector submits two server parameter values\n- bug #4629 Problem with custom SQL queries using cookie authentication\n- bug       Undefined index central_columnswork\n- bug #4632 Notice in ./libraries/Util.class.php#1916 Undefined index: query\n- bug #4633 Wrong parameter in fetchValue\n- bug #4634 Error reporting creates an infinite loop\n- bug #4635 Token mismatch while creating configuration storage\n- bug #4640 Incorrect reference to PHP 6\n- bug #3794 failure to handle repeating empty columns when importing ODS\n- bug #4638 Default Export Method setting broken\n- bug #4639 Export SQL missing indentation first field\n- bug #4637 Field Alignment\n- bug #4644 Error when browsing tables\n\n\n\n",
     "version_num": 403020099,
@@ -451,6 +496,7 @@
 },
 {
   "fields": {
+    "date": "2011-12-01",
     "version": "3.4.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.8, a bugfix release with minor security corrections.\n\n3.4.8.0 (2011-12-01)\n- bug #3425230 [interface] enum data split at space char (more space to edit)\n- bug #3426840 [interface] ENUM/SET editor can't handle commas in values\n- bug #3427256 [interface] no links to browse/empty views and tables\n- bug #3430377 [interface] Deleted search results remain visible\n- bug #3428627 [import] ODS import ignores memory limits\n- bug #3426836 [interface] Visual column separation\n- bug #3428065 [parser] TRUE not recognized by parser\n+ patch #3433770 [config] Make location of php-gettext configurable\n- patch #3430291 [import] Handle conflicts in some open_basedir situations\n- bug #3431427 [display] Dropdown results - setting NULL does not work\n- patch #3428764 [edit] Inline edit on multi-server configuration\n- patch #3437354 [core] Notice: Array to string conversion in PHP 5.4\n- [interface] When ShowTooltipAliasTB is true, VIEW is wrongly shown as the\n  view name in main panel db Structure page\n- bug #3439292 [core] Fail to synchronize column with name of keyword\n- bug #3425156 [interface] Add column after drop\n- [interface] Avoid showing the password in phpinfo()'s output\n- bug #3441572 [GUI] 'newer version of phpMyAdmin' message not shown in IE8\n- bug #3407235 [interface] Entering the key through a lookup window does not res\net NULL\n- [security] Self-XSS on database names (Synchronize), see PMASA-2011-18\n- [security] Self-XSS on database names (Operations/rename), see PMASA-2011-18\n- [security] Self-XSS on column type (Create index), see PMASA-2011-18\n- [security] Self-XSS on column type (table Search), see PMASA-2011-18\n- [security] Self-XSS on invalid query (table overview), see PMASA-2011-18\n\n\n\n",
     "version_num": 304080099,
@@ -461,6 +507,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-11",
     "version": "4.2.10",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.10, a bugfix release.\n\n4.2.10.0 (2014-10-11)\n- bug #4361 Can't change font size (when config.inc.php not present)\n- bug #4542 Tab key in column name not shown\n- bug       PDF export: title not present in PDF\n- bug #4543 Changing column name can break saved \"order by\" clause\n- bug #4545 trying to favorite table while browser localStorage is disabled thro\nws JS error\n- bug #4259 reCaptcha sound session expired problem\n- bug #4548 Inline editing a field converts tab to spaces\n- bug #4252 Database-level permission bug for db names containing underscores\n- bug #3120 Events are not exported when using xml\n- bug #4554 Grid-editing timestamp column forces datepicker\n- bug #4556 Fast filters for tables, views etc. should be governed by Navigation\nTreeDisplayItemFilterMinimum\n\n\n\n",
     "version_num": 402100099,
@@ -471,6 +518,7 @@
 },
 {
   "fields": {
+    "date": "2010-11-29",
     "version": "2.11.11.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 2.11.11.1, a security release. Please refer to the\nupcoming PMASA-2010-8 announcement on http://www.phpmyadmin.net/home_page/security/.\n\n\n\n",
     "version_num": 211110199,
@@ -481,6 +529,7 @@
 },
 {
   "fields": {
+    "date": "2014-02-22",
     "version": "4.1.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.8, a bugfix version.\n\n4.1.8.0 (2014-02-22)\n- bug #4276 Login loop on session expiry\n- bug #4249 Incorrect number of result rows for SQL with subqueries\n- bug #4275 Broken Link to php extension manual\n- bug #4053 List of procedures is not displayed after executing with Enter\n- bug #4081 Setup page content shifted to the right edge of its tabs\n- bug #4284 Reordering a column erases comments for other columns\n- bug #4286 Open \"Browse\" in a new tab\n- bug #4287 Printview - Always one column too much\n- bug #4288 Expand database (+ icon) after timeout doesn't do anything\n- bug #4285 Fixed CSS for setup\n- Fixed altering table to DOUBLE/FLOAT field\n- bug #4292 Success message and failure message being shown together\n- bug #4293 opening new tab (using selflink) for import.php based actions\n            results in error and logout \n\n\n\n",
     "version_num": 401080099,
@@ -491,6 +540,7 @@
 },
 {
   "fields": {
+    "date": "2013-04-08",
     "version": "3.5.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.8, a bugfix release.\n\n3.5.8.0 (2013-04-08)\n- bug #3828 MariaDB reported as MySQL\n- bug #3854 Incorrect header for Safari 6.0\n- bug #3705 Attempt to open trigger for edit gives NULL\n- Use HTML5 DOCTYPE\n- [security] Self-XSS on GIS visualisation page, reported by Janek Vind\n- bug #3800 Incorrect keyhandler behaviour #2\n\n\n\n",
     "version_num": 305080099,
@@ -501,6 +551,7 @@
 },
 {
   "fields": {
+    "date": "2013-09-05",
     "version": "4.0.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.6, a bugfix version with improvements in the navigation panel.\n\n4.0.6.0 (2013-09-05)\n- bug #4036 Call to undefined function mb_detect_encoding (clarify the doc)\n- bug Missing hints when changing a column's structure\n- bug #4048 Cannot select foreign value in Search\n- bug #4025 gzip export is not actually compressed with mod_deflate\n- bug #4054 query analysis doesn't launch in status monitor\n+ Add pmahomme icon credits (FamFamFam silk icon set)\n- bug #4064 Table structure statistics \"Space usage\" caption too small for l10n\n- bug #4051 Wrong tabindex when inserting rows\n- bug #4066 varchar field not truncated in table browse mode\n+ rfe #1435 Opening database should expand it in the navigation menu\n- (performance) Removed ShowTooltip directive\n- bug #4046 Exporting huge Tables causes memory-Problems\n\n\n\n",
     "version_num": 400060099,
@@ -511,6 +562,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-31",
     "version": "4.2.11",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.11, a bugfix version.\n\n4.2.11.0 (2014-10-31)\n- bug ReferenceError: Table_onover is not defined\n- bug #4552 Incorrect routines display for database due to case insensitive checks\n- bug #4259 reCaptcha sound session expired problem\n- bug #4557 PHP fatal error, undefined function __()\n- bug #4568 Date displayed incorrectly when charting a timeline\n- bug #4571 Database Privileges link does not work\n- bug makegrid.js: where_clause is undefined\n- bug #4572 missing trailing slash (import and open_basedir)\n\n\n\n",
     "version_num": 402110099,
@@ -521,6 +573,7 @@
 },
 {
   "fields": {
+    "date": "2010-08-28",
     "version": "3.3.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.3.6, a bugfix release.\n\n3.3.6.0\n- bug #3033063 [core] Navi gets wrong db name\n- bug #3031705 [core] Fix generating condition for real numbers by comparing\n  them to string.\n- bug #3034026 [confirmation] TRUNCATE queries get no confirmation request\n- bug #3036132 [core] Triggers not fetched if dbname has an hyphen\n- patch #3039269 [dbi] Wrong variable checked for nopassword option,\n  thanks to Will Palmer - wpalmer\n- bug #3040226 [XHTML] LockFromUpdate checkbox not checked by default\n- bug [doc] Withdraw or edit FAQ entries related to older MySQL or PHP\n- bug #3042706 [pmadb] Relations, bookmarks, etc deleted after table drop\n- bug #3044189 [doc] Cleared documentation for hide_db.\n- bug #3042495 [core] Move PMA_sendHeaderLocation to core.lib.php.\n\n\n\n",
     "version_num": 303060099,
@@ -531,6 +584,7 @@
 },
 {
   "fields": {
+    "date": "2011-05-11",
     "version": "3.4.0",
     "release_notes": "",
     "version_num": 304000099,
@@ -541,6 +595,7 @@
 },
 {
   "fields": {
+    "date": "2015-01-05",
     "version": "4.3.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.5, a bugfix version.\n\n4.3.5.0 (2015-01-05)\n- bug       Auto-configuration: tables were not created automatically\n- bug #4677 Advanced feature checker does not check for favorite tables feature\n- bug #4678 Some of the data stored in configuration storage are not deleted upon db or table delete\n- bug #4679 Setup does not allow providing a name for favorites table\n- bug #4680 Number of favorite table are not configurable in setup\n- bug #4681 'Central columns table' field in setup does not have a description\n- bug #4318 Default connection collation and sorting\n- bug #4683 Relational data is not properly updated on table rename\n- bug #4655 Undefined index: collation_connection (second patch)\n- bug #4682 4.3.3 & 4.3.4 Import sql created by mysqldump fails on foreign keys\n- bug #4676 Auto-configuration issues\n- bug #4416 New lines are removed when grid editing (part two: TEXT)\n\n\n\n",
     "version_num": 403050099,
@@ -551,6 +606,7 @@
 },
 {
   "fields": {
+    "date": "2012-08-12",
     "version": "3.5.2.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.2.2, a security release.\n\n3.5.2.2 (2012-08-12)\n- [security] Fixed XSS vulnerabilities, see PMASA-2012-4\n\n\n\n",
     "version_num": 305020299,
@@ -561,6 +617,7 @@
 },
 {
   "fields": {
+    "date": "2014-02-09",
     "version": "4.1.7",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.7, a bugfix version.\n\n4.1.7.0 (2014-02-09)\n- bug #4245 initial Browse query does not match sorting order\n- bug #4250 Notice on export page\n- bug #4253 \"New\" text in navigation frame acts like a database\n- bug #4262 Cannot define a column with fractional seconds\n- bug #4265 Missing datepicker icon for DATETIME(length)\n- bug #4257 Hide fractional seconds when applicable\n- bug #4264 Uncheck \"Ignore\" while inserting, upon leaving a textarea\n- bug #4260 reCaptcha is ignoring language settings\n- bug #4259 reCaptcha sound session expired problem\n- bug #4263 Japanese character encoding not working properly when exporting\n- bug #4269 Notice on table relation page\n- bug #4270 Bad text-color for table comments\n- bug #4278 reCaptcha re-login requires double effort\n- bug #4272 Incorrect tabindex\n- bug #4271 Query by example and the second criteria line\n- bug #4242 Wildcard-containing only_db failure in sidebar\n\n\n\n",
     "version_num": 401070099,
@@ -571,6 +628,7 @@
 },
 {
   "fields": {
+    "date": "2011-11-10",
     "version": "3.4.7.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.7.1, a security release.\n\n3.4.7.1 (2011-11-10)\n- [security] Fixed possible local file inclusion in XML import\n(CVE-2011-4107).\n\n\n\n",
     "version_num": 304070199,
@@ -581,6 +639,7 @@
 },
 {
   "fields": {
+    "date": "2013-05-24",
     "version": "4.0.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.2, a bugfix version.\n\n4.0.2.0 (2013-05-24)\n- bug #3902 Cannot browse when table name contains keyword \"call\"\n+ center loading indicator for navigation refresh, related to bug #3920\n- bug #3925 Table sorting in navigation panel is case-sensitive\n- bug #3915 Import of CSV file (Replace table data with file) with duplicate values\n- bug #3907 undefined variables, function parameter problems\n- bug #3898 Structure not refreshed after column drop\n- bug #3926 View is not updatable\n- bug #3919 PropertiesIconic not honored\n- bug #3930 Databases to choose for specific privileges show up escaped\n- bug #3910 Export database with empty table as a php array, does not produce valid PHP\n- bug #3936 Query profiler chart not loading from SQL Query page\n- bug #3946 Missing CSV import option \"Do not abort on INSERT error\"\n- bug #3943 Missing Operations>Table options>AUTO_INCREMENT\n- bug Missing CREATE DATABASE statement when exporting at database level\n- bug #3924 Show warning when CSV file does not contain data for all columns\n- bug #3947 Missing Sql Query after modify structure\n- bug #3948 Server export problems\n- bug #3917 CountTables directive is deprecated\n\n\n\n",
     "version_num": 400020099,
@@ -591,6 +650,7 @@
 },
 {
   "fields": {
+    "date": "2014-01-07",
     "version": "4.1.4",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.4, a bugfix version.\n\n4.1.4.0 (2014-01-07)\n- bug #3840 (additional fix) When exporting to gzip format, the data is compress\ned 2 times\n- bug #4209 Missing compression in one case\n- bug #4208 Can't browse tables after sorting on columns with fieldnames that ha\nve a '-'\n- bug #4184 Switch to wrong page after adding an index\n- bug #3885 Additional fix for this bug\n- bug #4212 Table \"disappears\" if it has the same name as its tablegroup\n- bug #4213 Datetime Quick Edit decrements by one day\n- bug #4217 Current value not highlighted when browsing foreign values\n- bug #4220 Incorrect key values in foreign key browser\n- bug #4215 MariaDB 5.5: error in Drizzle detection\n\n\n\n",
     "version_num": 401040099,
@@ -601,6 +661,7 @@
 },
 {
   "fields": {
+    "date": "2011-08-24",
     "version": "3.3.10.4",
     "release_notes": "",
     "version_num": 303100499,
@@ -611,6 +672,7 @@
 },
 {
   "fields": {
+    "date": "2015-03-04",
     "version": "4.0.10.9",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.9, a security release. \n\n4.0.10.9 (2015-03-04)\n- bug [security] Risk of BREACH attack, see PMASA-2015-1\n\n",
     "version_num": 400100999,
@@ -621,6 +683,7 @@
 },
 {
   "fields": {
+    "date": "2014-08-17",
     "version": "4.1.14.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.14.3, a security release.\n\n4.1.14.3 (2014-08-17)\n- bug #4501 [security] XSS in table browse page\n- bug #4502 [security] Self-XSS in enum value editor\n- bug #4503 [security] Self-XSSes in monitor\n- bug #4505 [security] XSS in view operations page\n- bug #4504 [security] Self-XSS in query charts\n- bug #4517 [security] XSS in relation view\n\n\n\n",
     "version_num": 401140399,
@@ -631,6 +694,7 @@
 },
 {
   "fields": {
+    "date": "2015-03-14",
     "version": "4.3.12",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.12, a bugfix release.\n\n4.3.12.0 (2015-03-14)\n- bug #4746 Right-aligned columns have left-aligned header\n- bug #4779 PMA_Util::parseEnumSetValues fails on enums with UTF-8 values\n- bug       Undefined index savedsearcheswork\n- bug #4788 Inline edit of DATE fields with NULL, NULL checkbox is under datepicker\n- bug #4790 DROP TABLE/VIEW IF EXISTS are not tracked\n- bug       Compatibility with central columns of version 4.4\n- bug #4758 Firefox with auth_type to http with multiple server doesn't work anymore\n- bug #4789 Views aren't dropped when copying a database\n- bug #4784 Incomplete bookmark saving\n- bug #4786 SELECT width on relations page\n\n\n\n",
     "version_num": 403120099,
@@ -641,6 +705,7 @@
 },
 {
   "fields": {
+    "date": "2014-05-13",
     "version": "4.2.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.1, a bugfix version.\n\n4.2.1.0 (2014-05-13)\n- bug #4380 Cannot display table structure with enums containing special charact\ners\n- bug #4381 Cannot remove the last remembered sorted column\n- bug       Correctly fetch length of user and host fields in MySQL tables\n- bug #4364 examples/signon.php does not support the SessionSavePath directive\n- bug #4382 Missing source for OpenLayers library\n- bug       Incorrect attributes for number fields\n- bug #4383 Cannot update values in Zoom search\n- bug #4313 GIS Visualization Extension does not work with PointFromText() funct\nion\n- bug #4384 Incorrect \"Rows\" total shown when truncating or dropping a table on\nDB Structure page\n- bug #4385 Grid edit on sorted columns fails\n- bug #4389 Null checkbox covering data input when editing\n- bug #4390 Data type changing by itself (no size but attribute present)\n\n\n\n",
     "version_num": 402010099,
@@ -651,6 +716,7 @@
 },
 {
   "fields": {
+    "date": "2011-05-20",
     "version": "3.4.1",
     "release_notes": "",
     "version_num": 304010099,
@@ -661,6 +727,7 @@
 },
 {
   "fields": {
+    "date": "2011-07-23",
     "version": "3.3.10.3",
     "release_notes": "",
     "version_num": 303100399,
@@ -671,6 +738,7 @@
 },
 {
   "fields": {
+    "date": "2011-12-21",
     "version": "3.4.9",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.9, a bugfix release with minor security corrections.\n\n3.4.9.0 (2011-12-21)\n- bug #3442028 [edit] Inline editing enum fields with null shows no dropdown\n- bug #3442004 [interface] DB suggestion not correct for user with underscore\n- bug #3438420 [core] Magic quotes removed in PHP 5.4\n- bug #3398788 [session] No feedback when result is empty (signon auth_type)\n- bug #3384035 [display] Problems regarding ShowTooltipAliasTB\n- bug #3306875 [edit] Can't rename a database that contains views\n- bug #3452506 [edit] Unable to move tables with triggers\n- bug #3449659 [navi] Fast filter broken with table tree\n- bug #3448485 [GUI] Firefox favicon frameset regression\n- [core] Better compatibility with mysql extension\n- [security] Self-XSS on export options (export server/database/table), see PMASA-2011-20\n- [security] Self-XSS in setup (host parameter), see PMASA-2011-19\n\n\n\n",
     "version_num": 304090099,
@@ -681,6 +749,7 @@
 },
 {
   "fields": {
+    "date": "2014-09-13",
     "version": "4.1.14.4",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.14.4, a security release.\n\n4.1.14.4 (2014-09-13)\n- bug #4530 [security] DOM based XSS that results to a CSRF that creates a\n            ROOT account in certain conditions\n\n\n\n",
     "version_num": 401140499,
@@ -691,6 +760,7 @@
 },
 {
   "fields": {
+    "date": "2010-10-25",
     "version": "3.3.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.3.8, a bugfix release.\n\n3.3.8.0 (2010-10-25)\n- bug #3059311 [import] BIGINT field type added to table analysis\n- [core] Update library PHPExcel to version 1.7.4\n- bug #3062455 [core] copy procedures and routines before tables\n- bug #3062455 [export] with SQL, export procedures and routines before tables\n- bug #3056023 [import] USE query not working\n- bug #3038193 [display] Error when editing row with GEOMETRY column\n- bug #3062454 [interface] Display routines/events also when no tables are defin\ned\n- support ARIA storage engine as well as its previous name MARIA\n\n\n\n",
     "version_num": 303080099,
@@ -701,6 +771,7 @@
 },
 {
   "fields": {
+    "date": "2015-01-07",
     "version": "4.0.10.8",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.8, a release to support PHP 5.2.0 to 5.2.2.\n\n4.0.10.8 (2015-01-07)\n- rfe #1588 recursive function too deep - operator change suggestion\n- rfe #1589 support early versions of PHP5.2 (register_shutdown_function)\n",
     "version_num": 400100899,
@@ -711,6 +782,7 @@
 },
 {
   "fields": {
+    "date": "2011-11-10",
     "version": "3.3.10.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.3.10.5, a security release.\n\n3.3.10.5 (2011-11-10)\n- [security] Fixed possible local file inclusion in XML import\n(CVE-2011-4107).\n\n\n\n",
     "version_num": 303100599,
@@ -721,6 +793,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-21",
     "version": "4.1.14.6",
     "release_notes": "Welcome to phpMyAdmin 4.1.14.6, a security release.\n\n4.1.14.6 (2014-10-21)\n- bug #4562 [security] XSS in debug SQL output\n- bug #4563 [security] XSS in monitor query analyzer\n\n",
     "version_num": 401140699,
@@ -731,6 +804,7 @@
 },
 {
   "fields": {
+    "date": "2011-03-02",
     "version": "1.3.0",
     "release_notes": "",
     "version_num": 103000099,
@@ -741,6 +815,7 @@
 },
 {
   "fields": {
+    "date": "2015-02-05",
     "version": "4.3.9",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.9, a bugfix version.\n\n4.3.9.0 (2015-02-05)\n- bug #4728 Incorrect headings in routine editor\n- bug #4730 Notice while browsing tables when phpmyadmin pma database exists, but not all the tables\n- bug #4729 Display original field when using \"Relational display column\" option and display column is empty\n- bug #4734 Default values for binary fields do not support binary values\n- bug #4736 Changing display options breaks query highlighting\n- bug       Undefined index submit_type\n- bug #4738 Header lose align when scrolling in Firefox\n- bug #4741 in ./libraries/Advisor.class.php#184 vsprintf(): Too few arguments\n- bug #4743 Unable to move cursor with keyboard in filter rows box\n- bug       Incorrect link in doc\n- bug #4745 Tracking does not handle views properly\n- bug #4706 Schema export doesn't handle dots in db/table name\n- bug #3935 Table Header not displayed correct (Safari 5.0.5 Mac)\n- bug #4750 Disable renaming referenced columns\n- bug #4748 Column name center-aligned instead of left-aligned in Relations\n\n\n\n",
     "version_num": 403090099,
@@ -751,6 +826,7 @@
 },
 {
   "fields": {
+    "date": "2012-04-07",
     "version": "3.5.0",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.0; here are the major new features:\n\n* browse-mode improvements\n** grid editing\n** remember recent tables\n** remember last sort order by table\n** flexible column width\n** reorder columns\n** more compact navigation bar\n* AJAXification of many operations\n* reorganised server status page, with server monitoring\n* improved support for stored routines, events and triggers\n* openGIS support\n* zoom-search in table search\n* Drizzle support\n* improved ENUM/SET editor\n\n\n\n",
     "version_num": 305000099,
@@ -761,6 +837,7 @@
 },
 {
   "fields": {
+    "date": "2015-03-04",
     "version": "4.3.11.1",
     "release_notes": "Welcome to phpMyAdmin 4.3.11.1, a security release. \n\n4.3.11.1 (2015-03-04)\n- bug [security] Risk of BREACH attack, see PMASA-2015-1\n\n",
     "version_num": 403110199,
@@ -771,6 +848,7 @@
 },
 {
   "fields": {
+    "date": "2012-04-14",
     "version": "3.4.11",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.11, the last bugfix release in the 3.4 series.\n\n3.4.11.0 (2012-04-14)\n- bug #3486970 [import] Exception on XML import\n- bug #3488777 [navi] $cfg['ShowTooltipAliasTB'] and blank names in navigation\n- bug #3512565 [navi] Fixed missing word \"Rows\" in table list tooltip after click\n\n\n\n",
     "version_num": 304110099,
@@ -781,6 +859,7 @@
 },
 {
   "fields": {
+    "date": "2014-03-27",
     "version": "4.1.12",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.12, a bugfix version.\n\n4.1.12.0 (2014-03-27)\n- bug #4334 Add event : datepicker won't open\n- bug #4338 Fix missing value error while executing SQL query\n- TCPDF library is now optional dependency\n- bug #4326 Cannot find the import plugins which start with uppercase 'I'\n\n\n\n",
     "version_num": 401120099,
@@ -791,6 +870,7 @@
 },
 {
   "fields": {
+    "date": "2013-12-12",
     "version": "4.1.0",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.0.\n\nThis release contains many improvements and bug fixes. With this release the minimum supported PHP version is now 5.3 and the minimum MySQL version is 5.5.\n \nA few highlights include:\n* Allow specifying a port when connecting to the controlhost\n* User interface improvements to server privileges, view creation, the\nOperations tab, Relation View, and when creating new users.\n* Added support for AES_ENCRYPT on BLOB columns\n* Added support for relations with ndbcluser\n* Added optional ReCAPTCHA support during login\n* Added support for fractional seconds in time, datetime, and timestamp\ncolumns\n* Added find and replace by column\n* Added the Error Reporting Component, an optional feature allowing\nusers to report certain errors directly to the phpMyAdmin bug team.\n* Added configurable menus (so an administrator can hide certain\nfeatures)\n \nThe SQP and MySQLManual* configuration directives have been removed.\n \nFor complete information, please view changelog.php or the ChangeLog file,\nincluded with this release.\n\n\n\n",
     "version_num": 401000099,
@@ -801,6 +881,7 @@
 },
 {
   "fields": {
+    "date": "2014-11-20",
     "version": "4.0.10.6",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.6, a security release.\n\n4.0.10.6 (2014-11-20)\n- bug #4578 [security] XSS vulnerability in table print view\n- bug #4579 [security] XSS vulnerability in zoom search page\n- bug #4594 [security] Path traversal in file inclusion of GIS factory\n- bug #4598 [security] XSS in multi submit\n- bug #4597 [security] XSS through pma_fontsize cookie\n\n",
     "version_num": 400100699,
@@ -811,6 +892,7 @@
 },
 {
   "fields": {
+    "date": "2013-09-23",
     "version": "4.0.7",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.7, a bugfix version.\n\n4.0.7.0 (2013-09-23)\n- bug #3993 Sorting in database overview with statistics doesn't work\n- bug Handle the situation where PHP_SELF is not set\n- bug #4080 Overwrite existing file not obeyed\n- bug #3929 Database-specific privileges are not copied when cloning user\n- bug #3997 Error handling in case MySQL extension is missing\n- bug #4089 Moving Columns will alter column definition\n- bug #4091 Insert ignore option does not work\n- bug #4090 Downloading BLOB downloads page template\n- bug #4092 Clicking on table name in view of information_schema redirects to wr\nong page\n- bug #4079 Copy Table Add AUTO_INCREMENT value checkbox not working\n- bug #4088 MySQL server version at index.php incorrect w/ controlhost\n- bug #4001 Import error: Class 'ImportOds' not found\n- bug #3986 Missing DROP VIEW button\n\n\n\n",
     "version_num": 400070099,
@@ -821,6 +903,7 @@
 },
 {
   "fields": {
+    "date": "2014-03-22",
     "version": "4.1.11",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.11, a bugfix version.\n\n4.1.11.0 (2014-03-23)\n- bug #4335 reCaptcha problem (4.1.10 regression) \n\n\n\n",
     "version_num": 401110099,
@@ -831,6 +914,7 @@
 },
 {
   "fields": {
+    "date": "2013-12-23",
     "version": "4.1.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.2, a bugfix version.\n\n4.1.2.0 (2013-12-23)\n- bug #4178 Quick edit for BIT type does not work\n- bug #2760 Warn about incomplete exports\n- bug #4190 Fractional seconds cause row update even if the value is not changed\n- bug #4170 Overflow scroll for table grid is not a good solution\n- bug #2961 Relations settings not updated on config change\n- bug #4187 SQL query inline edit doesn't post changes on the first run\n+ rfe #1465 Docs for connections to IPv6 only MySQL instances\n+ rfe #1468 [interface] No floating for server breadcrumb menu\n\n\n\n",
     "version_num": 401020099,
@@ -841,6 +925,7 @@
 },
 {
   "fields": {
+    "date": "2013-12-17",
     "version": "4.1.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.1, a bugfix version.\n\n4.1.1.0 (2013-12-17)\n- bug #4154 Error using UNION query\n- bug #4173 Transformations overview not reachable\n- bug #4149 Js freezes in the management of replication\n- bug #3903 Query fails when using aliases after ordering result\n- bug #4181 Adding columns in table creation clears existing columns\n- bug #4023 Requires wildcard EXECUTE/ALTER ROUTINE on DB to allow\nProcedures to be executed by user\n- bug #4186 Adding a column when creating a table does not propagate index info\n- bug #4185 Unable to execute create procedure statement from query window\n\n\n\n",
     "version_num": 401010099,
@@ -851,6 +936,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-05",
     "version": "4.4.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.5, a bugfix version.\n\n4.4.5.0 (2015-05-05)\n- bug       Table overhead stats: missing space before the unit\n- bug       Fix resize icon in Designer\n- bug #4879 Exit fullscreen in Designer does not change the button text\n- bug #4880 Designer icons missing when using original theme\n- bug #4878 Column list of central columns is not cleared\n- bug #4881 jQuery dialogs of the Designer are not displayed in fullscreen\n- bug #4883 Search function breaks when searching for certain combinations of backslashes and slashes\n- bug #4830 Maximum execution time exceeded in Util.class.php (better fix)\n- bug #4885 Some icons are above the overlay of jQuery dialogs\n- bug #4886 Clicking on external links in advisor rules give JS error\n- bug #4888 Filter in central columns does not work in other languages\n\n\n\n",
     "version_num": 404050099,
@@ -861,6 +947,7 @@
 },
 {
   "fields": {
+    "date": "2012-08-12",
     "version": "3.4.11.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.11.1, a security release.\n\n3.4.11.1 (2012-08-12)\n- [security] Fixed XSS vulnerabilities, see PMASA-2012-4\n\n\n\n",
     "version_num": 304110199,
@@ -871,6 +958,7 @@
 },
 {
   "fields": {
+    "date": "2014-08-17",
     "version": "4.2.7.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.7.1, a security release.\n\n4.2.7.1 (2014-08-17)\n- bug #4501 [security] XSS in table browse page\n- bug #4502 [security] Self-XSS in enum value editor\n- bug #4503 [security] Self-XSSes in monitor\n- bug #4504 [security] Self-XSS in query charts\n- bug #4505 [security] XSS in view operations page\n- bug #4517 [security] XSS in relation view\n\n\n\n",
     "version_num": 402070199,
@@ -881,6 +969,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-03",
     "version": "4.1.14.8",
     "release_notes": "Welcome to phpMyAdmin 4.1.14.8, a security release.\n\n4.1.14.8 (2014-12-03)\n- bug #4611 [security] DOS attack with long passwords\n\n",
     "version_num": 401140899,
@@ -891,6 +980,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-08",
     "version": "4.3.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.1, a bugfix version.\n\n4.3.1.0 (2014-12-08)\n- bug #4609 'Show all' checkbox label is not clickable\n- bug #4610 JS error reporting: Hash fragment is reset\n- bug       Undefined index menuswork\n- bug #4614 Separator between \"Show All\" and \"Number of rows\" disappears\n- bug #4615 SQL highlighting in process list breaks on auto refresh\n- bug #4616 Warning in db structure print view page\n- bug       Undefined index navwork, savedsearcheswork, fields\n- bug #4620 Undefined index while adding to the central columns list\n- bug #4618 Page scrolls while GIS visualization is zoomed in/out with mousewheel\n- bug #4613 HHVM: method 'ob_gzhandler' not found\n- bug #4593 Manual \"SELECT\" doesn't change active table\n- bug #4623 Incomplete PHP OpenSSL support\n- bug #4626 Ctrl + click on a column not in sort triggers a server call to erron\neous url\n- bug #4625 \"Insufficient space to save the file\" on export SQL to file on server\n- bug #4627 \"file_get_contents(examples/create_tables.sql): failed to open stream\" after update\n- bug #4617 UI issues with sortable tables\n- bug #4619 SELECT LENGTH(`field`) FROM `table` does not sort\n\n\n\n",
     "version_num": 403010099,
@@ -901,6 +991,7 @@
 },
 {
   "fields": {
+    "date": "2014-01-17",
     "version": "4.1.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.5, a bugfix version.\n\n4.1.5.0 (2014-01-17)\n- bug #3780 Allow aborting loading pages\n- bug #4223 Database list: Create database misses collation column\n- bug #4224 Empty table names when a table is \"inuse\"\n- bug #4225 Partition maintenance broken\n- bug #4219 Table list (left panel) does not reload when table renamed\n- bug #4230 \"in use\" displayed for all views in database print view\n- bug #4226 Notice: Undefined index: pma_config_loading\n- bug #4221 Bzip2 export cannot be directly imported (so withdraw bz2 export)\n- bug #4204 Reloading user privileges hides user groups submenu\n- bug #4231 DATE columns quick edit decrement by one day\n\n\n\n",
     "version_num": 401050099,
@@ -911,6 +1002,7 @@
 },
 {
   "fields": {
+    "date": "2013-04-24",
     "version": "3.5.8.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.8.1, a security release.\n\n3.5.8.1 (2013-04-24)\n- [security] Remote code execution (preg_replace), reported by Janek Vind\n  (see PMASA-2013-2)\n- [security] Locally Saved SQL Dump File Multiple File Extension Remote Code\n  Execution, reported by Janek Vind (see PMASA-2013-3)\n\n\n\n",
     "version_num": 305080199,
@@ -921,6 +1013,7 @@
 },
 {
   "fields": {
+    "date": "2015-06-04",
     "version": "4.4.9",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.9, a bugfix version.\n\n4.4.9.0 (2015-06-04)\n- bug #4920 relation view doesn't list fields of table in other database\n- bug #4905 Sorting by an alias\n- bug #4931 False error before entering reCAPTCHA\n- bug #4909 central column with multiple server\n- bug #4937 Custom export with backquotes off is not working\n- bug #4908 Reverse proxy: infinite internal redirect (added warning in doc)\n- bug #4942 Export to gzip saves plain text under Chrome\n\n\n\n",
     "version_num": 404090099,
@@ -931,6 +1024,7 @@
 },
 {
   "fields": {
+    "date": "2015-04-20",
     "version": "4.4.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.3, a bugfix version.\n\n4.4.3.0 (2015-04-20)\n- bug #4851 PHP errors in login dialogue\n- bug #4845 White screen (Cloudflare)\n- bug #4207 json_encode error due to strftime returning non utf8 chars in Windows 8.1 Chinese version\n- bug #4794 Server error viewing table content\n- bug       Fix issues related to number of decimal places in time\n- bug #4853 Relation view between 1600 and 1780 px\n- bug       PHP 7 compatibility in php-gettext\n- bug       PHP 7 compatibility in bfShapeFiles\n- bug       PHP 7 session_regenerate_id() warning\n- bug #4857 Alter table after changing column name error\n- bug #4830 Maximum execution time exceeded in Util.class.php\n\n\n\n",
     "version_num": 404030099,
@@ -941,6 +1035,7 @@
 },
 {
   "fields": {
+    "date": "2013-11-04",
     "version": "4.0.9",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.9, a bugfix version.\n\n4.0.9.0 (2013-11-04)\n- bug #4104 Can't edit updatable view when searching\n- bug #4108 Missing refresh by deleting databases\n- bug #3995 Drizzle server charset notice\n- bug #3911 Filtering database names includes empty groupings\n- bug #3678 Does not display or manipulate bit(64) fields appropriately\n- bug #4129 Unneeded navi panel refresh\n- bug #4120 SSL redirects to port 80\n- bug #4144 DROP DATABASE displays wrong database name\n- bug #4059 Running delete query asks for confirmation but says it was already executed\n- bug #4147 Accessibility: Images without Alt nor title attribute\n\n\n\n",
     "version_num": 400090099,
@@ -951,6 +1046,7 @@
 },
 {
   "fields": {
+    "date": "2015-01-15",
     "version": "4.3.7",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.7, a bugfix version.\n\n4.3.7.0 (2015-01-15)\n- bug #4694 js error on marking table as favorite in Safari (in private mode)\n- bug #4695 Changing $cfg['DefaultTabTable'] doesn't update link and title\n- bug       Undefined index menuswork\n- bug       Undefined index navwork\n- bug       Undefined index central_columnswork\n- bug #4697 Server Status refresh not behaving as expected\n- bug       Null argument in array_multisort()\n- bug #4699 Navigation panel should not hide icons based on 'TableNavigationLinksMode'\n- bug #4703 Unsaved schema page exported as pdf.pdf\n- bug #4707 Call to undefined method PMA_Schema_PDF::dieSchema()\n- bug #4702 URL is non RFC-2396 compatible in get_scripts.js.php\n\n\n\n",
     "version_num": 403070099,
@@ -961,6 +1057,7 @@
 },
 {
   "fields": {
+    "date": "2014-07-31",
     "version": "4.2.7",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.7, a bugfix release.\n\n4.2.7.0 (2014-07-31)\n- bug       Broken links on home page\n- bug #4494 Overlap in navigation panel\n- bug #4427 Action icons not in horizontal order\n- bug #4493 s_attention.png is missing\n- bug #4499 Uncaught TypeError: Cannot call method 'substr' of undefined\n- bug #4498 PMA 4.2.x and HHVM\n- bug #4500 mysql_doc_template is not defined\n\n\n\n",
     "version_num": 402070099,
@@ -971,6 +1068,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-07",
     "version": "4.4.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.6, a bugfix version.\n\n4.4.6.0 (2015-05-07)\n- bug #4890 webkitStorageInfo and webkitIndexedDB is deprecated\n- bug #4892 Undefined variable: unique_conditions\n- bug #4891 CSV Import ignores \"Replace table data with file\" checkbox\n\n\n\n",
     "version_num": 404060099,
@@ -981,6 +1079,7 @@
 },
 {
   "fields": {
+    "date": "2011-03-19",
     "version": "3.3.10",
     "release_notes": "",
     "version_num": 303100099,
@@ -991,6 +1090,7 @@
 },
 {
   "fields": {
+    "date": "2014-11-20",
     "version": "4.1.14.7",
     "release_notes": "Welcome to phpMyAdmin 4.1.14.7, a security release.\n\n4.1.14.7 (2014-11-20)\n- bug #4596 [security] XSS through exception stack\n- bug #4595 [security] Path traversal can lead to leakage of line count\n- bug #4578 [security] XSS vulnerability in table print view\n- bug #4579 [security] XSS vulnerability in zoom search page\n- bug #4594 [security] Path traversal in file inclusion of GIS factory\n- bug #4598 [security] XSS in multi submit\n- bug #4597 [security] XSS through pma_fontsize cookie\n\n",
     "version_num": 401140799,
@@ -1001,6 +1101,7 @@
 },
 {
   "fields": {
+    "date": "2014-05-08",
     "version": "4.2.0",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.0, containing new features and fixes.\n\n4.2.0.0 (2014-05-08)\n+ rfe #1403 Export only triggers\n+ rfe #1483 Export Server/Database/Table without triggers\n+ rfe #1662 Add table comment tool tip in database structure page\n+ rfe #1447 Single table for display Character Sets and Collations\n+ rfe #1455 Display icons/text/both for the table row actions\n+ rfe #1473 Transformation to convert Boolean value to text\n- bug #4157 Changing users password will delete it\n+ rfe #1474 Text transformation combines Append and Prepend\n+ Added warning about the mysql extension being deprecated\n  and removed the extension directive\n+ Added support for scatter charts\n+ rfe #1478 Make Column Headings Sticky\n+ rfe #1480 Enhance privileges initials table\n+ rfe #1472 [interface] Break \"Edit privileges\" with sub-menus\n+ rfe #1466 Minor refactoring required\n+ rfe #1004 Create indexes at the end in SQL export\n+ rfe #1479 Relations edit form for larger monitors\n+ rfe #1475 Inline query box vertical resize\n+ rfe #1500 [interface] Add bottom border to top menu container\n+ rfe #1498 Add datepicker for 'TIME' type\n- bug #4237 HTTP Referer disclosure in SQL links\n+ rfe       Show full names on navigation hover\n+ rfe #1505 Behaviour on click on a routine in nav panel\n+ rfe #1418 Support more than one separating character on CSV import\n+ rfe #569  Load/Save Query By Example\n- bug #4281 Grid edit ENUM field, dialog disappears when trying to select\n- bug #4304 DB export using zip compression generates an empty archive\n+ rfe #1508 confirmation message at the top\n- bug #4306 breadcrubs wrong on table create\n+ rfe #1511 better validate database name for copying\n+ rfe #1510 Database tab \"Drop\" button should be a link\n+ rfe #1513 Highlight required form fields after failed submission\n+ rfe #1460 Redirect to login page after session has expired\n- bug #4316 Grid edit: can't change month on date fields\n+ rfe #1501 add maxlength by field with length-spec\n+ rfe #1512 Import happily doesn't do anything with no file name provided\n+ rfe #1514 Add function to all the insert boxes automatically\n+ rfe #1515 Option to skip tables larger than n\n+ rfe #1486 Possibility of disabling database expansion\n+ rfe #1476 Favourite tables select box\n+ rfe #420  $cfg['CharEditing']='textarea' for structure edit\n+ rfe #1329 Avoid editing of fields which are part of relation\n+ rfe       [interface] Highlight active left menu item in setup\n+ rfe       Filter on-screen rows during Browse\n  Removed support for SQL Validator (SOAP service no longer offered)\n- bug #4352 Settings > Manage: incorrect messages\n- bug #4337 \"More\" in Actions area doesn't collapse to fit available space\n- bug #4375 Group two DB, one's name is the prefix of the other one\n- bug #4070 Confusing database/table grouping\n- bug #4366 Creating Index doesn't update index-list\n\n\n\n",
     "version_num": 402000099,
@@ -1011,6 +1112,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-29",
     "version": "4.3.4",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.4, a bugfix release.\n\n4.3.4.0 (2014-12-29)\n- bug #4653 Always connection error was shown, on /setup at tab \"configuration s\ntorage\"\n- bug #4661 Drag and drop file import always fails\n- bug #4651 don't open console with esc\n- bug #4664 select min() displays 1 row, but reports the table amount of rows re\nturned\n- bug #4666 Undefined indexes in table stucture print view of a view\n- bug #4663 Export missing back ticks for order table name\n- bug #4668 Remove from central columns error\n- bug #4670 CSV import reads both commas and values into first column after firs\nt row\n- bug #4642 phpmyadmin often fails to load due to specific load order\n- bug #4671 Unable to move all columns\n- bug #4645 Import of export created with mysqldump\n- bug #4672 \"Distinct values\" does not page\n- bug #4667 Consistency in borders\n- bug #4658 Illegal string offset (Data_length, Index_length)\n- bug #4655 Undefined index: collation_connection\n- bug #4673 Delimiter causing page lock\n\n\n\n",
     "version_num": 403040099,
@@ -1021,6 +1123,7 @@
 },
 {
   "fields": {
+    "date": "2015-04-08",
     "version": "4.4.1.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.1.1, containing an urgent fix for 4.4.1. Some debugging code slipped into the 4.4.1 codebase, producing messages in the web server's error log.\n\n\n\n",
     "version_num": 404010199,
@@ -1031,6 +1134,7 @@
 },
 {
   "fields": {
+    "date": "2012-12-20",
     "version": "3.5.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.5, a bugfix release.\n\n3.5.5.0 (2012-12-21)\n- bug #3563824 [export] Support Apache's mod_deflate\n- bug #3585523 [interface] Inline query editing broken after row update\n- bug #3586389 [setup] Cannot switch language in /setup\n- bug #3585695 [CSS] Font size in inline query editor is way too big\n- bug #3588354 [l10n] Portuguese Language not displaying correctly\n- bug #3591412 [status] Live charts don't work for non-default server\n- bug [core] Proxy ajax calls to pma.net to avoid browser notices\n- bug #3593534 [tracking] Structure Snapshot on tracked view renders invalid\nSQL\n- bug #3544366 [events] Event comments not saved\n\n\n\n",
     "version_num": 305050099,
@@ -1041,6 +1145,7 @@
 },
 {
   "fields": {
+    "date": "2012-07-07",
     "version": "3.5.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.2, a bugfix release. \n\n3.5.2.0 (2012-07-07)\n- bug #3521416 [interface] JS error when editing index\n- bug #3521313 [core] Call to undefined function __()\n- bug #3521016 [edit] NOW() function incorrectly selected\n- bug [GUI] Invalid HTML code on transformation_overview.php\n- bug #3522930 [browse] Missing validation in Ajax mode\n- bug Fix popup message on build SQL of import\n- bug #3523499 [core] Make X-WebKit-CSP work better\n- replace Highcharts with jqplot for query profiling, zoom search\n- bug #3531584 [interface] No form validation in change password dialog\n- bug #3531585 [interface] Broken password validation in copy user form\n- bug #3531586 [unterface] Add user form prints JSON when user presses enter\n- bug #3534121 [config] duplicate line in config.sample.inc.php\n- bug #3534311 [interface] Grid editing incorrectly parses ENUM/SET values\n- bug #3510196 [core] More clever URL rewriting with ForceSSL\n\n\n\n",
     "version_num": 305020099,
@@ -1051,6 +1156,7 @@
 },
 {
   "fields": {
+    "date": "2011-10-16",
     "version": "3.4.6",
     "release_notes": "",
     "version_num": 304060099,
@@ -1061,6 +1167,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-03",
     "version": "4.2.13.1",
     "release_notes": "Welcome to phpMyAdmin 4.2.13.1, a security release.\n\n4.2.13.1 (2014-12-03)\n- bug #4612 [security] XSS vulnerability in redirection mechanism\n- bug #4611 [security] DOS attack with long passwords\n\n",
     "version_num": 402130199,
@@ -1071,6 +1178,7 @@
 },
 {
   "fields": {
+    "date": "2015-05-13",
     "version": "4.2.13.3",
     "release_notes": "Welcome to phpMyAdmin 4.2.13.3, a security release. \n\n4.2.13.3 (2015-05-13)\n- bug #4899 [security] CSRF vulnerability in setup\n- bug #4900 [security] Vulnerability allowing man-in-the-middle attack\n\n\n",
     "version_num": 402130399,
@@ -1081,6 +1189,7 @@
 },
 {
   "fields": {
+    "date": "2012-11-16",
     "version": "3.5.4",
     "release_notes": "\n\nWelcome to the first release candidate for phpMyAdmin 3.5.4, a bugfix release.\n\n3.5.4.0 (2012-11-16)\n- bug #3570212 [edit] uuid_short() is a no-arguments function\n- bug #3569577 [edit] Add routine parameter headers not valid for \"function\"\n- bug #3575799 [search] Various search operators not working as expected\n- bug #3576322 [search] Invalid select query generated for tables with ENUM fiel\nds\n- bug #3577468 [display] Incorrect imagejpeg Syntax Breaks Image Transformation\n- bug #3578776 [search] Editing SQL not possible when no records found\n- bug #3571970 [interface] Display chart and number of rows to plot\n- bug #3582631 [core] Wrong redirect url caused cookies error with ForceSSL\n\n\n\n",
     "version_num": 305040099,
@@ -1091,6 +1200,7 @@
 },
 {
   "fields": {
+    "date": "2014-06-08",
     "version": "4.2.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.3, a bugfix release.\n\n4.2.3.0 (2014-06-08)\n- bug #4423 Moving fields not working\n- bug #4424 Table indexes disappear after altering field\n- bug #4432 Error while displaying chart at server level\n- bug #4405 Cannot import (open_basedir)\n- bug #4396 Problem copying constraints (such as Sakila)\n- bug #4433 Missing privileges submenu\n- bug #4394 Drop db confirmation message when dropping a user\n- bug #4436 Insert form numeric field with function drop-down list\n- bug #4437 Problems due to missing enforcement of the minimum supported MySQL v\nersion\n+ Add enforcement of the minimum supported PHP version (5.3.0)\n- bug       Query error on submitting a column change form containing a disabled\n input field\n- bug       Incorrect menu tab generation from usergroups\n- bug       Missing space in index creation/edit generated query\n- bug #4434 Unchecking 'Show SQL queries' results NaN\n\n\n\n",
     "version_num": 402030099,
@@ -1101,6 +1211,7 @@
 },
 {
   "fields": {
+    "date": "2013-12-31",
     "version": "4.1.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.3, a bugfix version.\n\n4.1.3.0 (2013-12-31)\n- bug #3938 PDFDefaultPageSize doc and easy configurability\n- bug #4198 Hovering over pie chart gives fatal JS error\n- bug #4200 Missing syntax highlighting\n- bug #4201 Exports are not compressed\n- bug #4131 Import: \"number of rows to skip\" is ambiguous\n- bug #4205 Add a user shows additional \"edit user group\" link\n- bug #4202 Cannot read property 'token' of undefined\n- bug #4203 On refreshing designer, $.FullScreen is undefined\n- bug #3920 Lost space in navigation area\n\n\n\n",
     "version_num": 401030099,
@@ -1111,6 +1222,7 @@
 },
 {
   "fields": {
+    "date": "2011-06-07",
     "version": "3.4.2",
     "release_notes": "",
     "version_num": 304020099,
@@ -1121,6 +1233,7 @@
 },
 {
   "fields": {
+    "date": "2014-04-13",
     "version": "4.1.13",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.13, a bugfix version.\n\n4.1.13.0 (2014-04-13)\n- bug #4279 CTRL + up or down moves 2 fields\n- bug #4336 List server css style wrong\n- bug       Missing value on the Status > Server page\n- bug #4347 Fixed PHP Parse error in Advisor\n- bug #4350 Deleting the DB if it is renamed by the same name\n- bug #4353 makeProfilingChart is not defined\n- bug #4355 Precision specifier for DOUBLE type is truncated\n- bug #4346 Incorrect \"Export incomplete\" message\n- bug #4359 Notices on create table page \n- bug #4356 GROUPed selects show number of rows as if not grouped\n- bug #4357 JS Form submitted on \"enter\" even if focus is inside a select field\n\n\n\n",
     "version_num": 401130099,
@@ -1131,6 +1244,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-01",
     "version": "4.0.10.4",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.4, a security release.\n\n4.0.10.4 (2014-10-01)\n- bug #4544 [security] XSS vulnerabilities in table search and table structure pages\n",
     "version_num": 400100499,
@@ -1141,6 +1255,7 @@
 },
 {
   "fields": {
+    "date": "2012-02-18",
     "version": "3.4.10.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.10.1, a minor security release.\n\n3.4.10.1 (2012-02-18)\n- [security] XSS in replication setup, see PMASA-2012-1\n\n\n\n",
     "version_num": 304100199,
@@ -1151,6 +1266,7 @@
 },
 {
   "fields": {
+    "date": "2010-08-20",
     "version": "3.3.5.1",
     "release_notes": "Welcome to phpMyAdmin 3.3.5.1, a security bugfix release.\n\n3.3.5.1 (2010-10-20)\n- [core] Fixed various XSS issues, see PMASA-2010-5 for more details.\n\n",
     "version_num": 303050199,
@@ -1161,6 +1277,7 @@
 },
 {
   "fields": {
+    "date": "2014-06-21",
     "version": "4.1.14.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.14.1, a minor security fix version.\n\n4.1.14.1 (2014-06-21)\n- bug #4464 [security] XSS injection due to unescaped db/table name in navigation hiding\n\n\n\n",
     "version_num": 401140199,
@@ -1171,6 +1288,7 @@
 },
 {
   "fields": {
+    "date": "2011-07-23",
     "version": "3.4.3.2",
     "release_notes": "",
     "version_num": 304030299,
@@ -1181,6 +1299,7 @@
 },
 {
   "fields": {
+    "date": "2014-09-13",
     "version": "4.2.8.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.8.1, a security release.\n\n4.2.8.1 (2014-09-13)\n- bug #4530 [security] DOM based XSS that results to a CSRF that creates a\n            ROOT account in certain conditions\n\n\n\n",
     "version_num": 402080199,
@@ -1191,6 +1310,7 @@
 },
 {
   "fields": {
+    "date": "2014-01-26",
     "version": "4.1.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.6, a bugfix version.\n\n4.1.6.0 (2014-01-26)\n- bug #4232 User not found after creating the user\n- bug #4241 Confusing dialog when trying to create an already existing user\n- bug #4239 Missing LIMIT clause for some queries\n- rfe #1489 Do not show create icon when user has no privileges\n- bug #4218 Chrome behavior with date fields\n- bug #3579 NOW() function incorrectly selected (regression)\n- bug #4244 Advisor complaints about MariaDB 10.x is version less than 5.1\n- bug #3889 When login fails and error display is active, login data is\ndisplayed (regression)\n- bug #4247 open_basedir warnings on export page\n- bug #4013 AJAX request waiting until version info is retrieved\n- bug #4248 js error when changing number of columns in status monitor\n\n\n\n",
     "version_num": 401060099,
@@ -1201,6 +1321,7 @@
 },
 {
   "fields": {
+    "date": "2015-01-07",
     "version": "4.3.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.6, a bugfix version.\n\n4.3.6.0 (2015-01-07)\n- bug       Undefined index notices while configuring recent and favorite tables\n- bug #4687 Designer breaks without configuration storage\n- bug #4686 Select elements flicker and selects something else\n- bug #4689 Setup tool creates \"pma__favorites\" incorrectly\n- bug #4685 Call to a member function isUserType() on a non-object\n- bug #4691 Do not include console when no server is selected\n- bug #4688 File permissions in archive\n- bug #4692 Dynamic javascripts gives 500 when db selected\n\n\n\n",
     "version_num": 403060099,
@@ -1211,6 +1332,7 @@
 },
 {
   "fields": {
+    "date": "2014-03-06",
     "version": "4.1.9",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.9, a bugfix version.\n\n4.1.9.0 (2014-03-06)\n- bug #4279 CTRL + up or down moves two fields (part one)\n- bug #4294 output as text radio clickable for \"OpenDocument Text\" export\n- bug #4297 DROP DATABASE tick box in export no longer works\n- bug #4291 Unable to export comments in OpenDocument text format\n- bug #4299 Deletion even when the user says \"No\" to the confirmation message\n- bug #4303 \"New\" link in navi panel is shown even if no privileges\n- bug #4302 Some params are being omitted from microhistory\n- bug #4298 Missing validation on Import CSV: \"Columns enclosed with\" and \"Colum\nns escaped with\"\n- bug #4040 Fatal error while resetting settings\n- bug #4305 JS error when editing procedure from nav panel\n- bug #4308 Edit routine form submitting when pressing enter\n- bug #4307 Nav: \"Columns\" won't expand with specific schema\n\n\n\n",
     "version_num": 401090099,
@@ -1221,6 +1343,7 @@
 },
 {
   "fields": {
+    "date": "2010-11-29",
     "version": "3.3.8.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.3.8.1, a security release. Please refer to the\nupcoming PMASA-2010-8 announcement on http://www.phpmyadmin.net/home_page/security/.\n\n\n\n",
     "version_num": 303080199,
@@ -1231,6 +1354,7 @@
 },
 {
   "fields": {
+    "date": "2013-05-14",
     "version": "4.0.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.1, a bugfix version.\n\n4.0.1.0 (2013-05-14)\n- bug #3879 Import broken for CSV using LOAD DATA\n- bug #3889 When login fails and error display is active, login data is displaye\nd\n- bug #3890 [import] Web server upload directory import fails\n- bug #3891 [import] Server upload folder import file name missing in success me\nssage\n+ rfe #1421 [auth] Add retry button on connection failure with config auth\n- bug #3894 [interface] Provide feedback if no columns selected for multi-submit\n- bug #3799 [interface] Incorrect select field change on ctrl key navigation in\nFirefox\n- bug #3885 [browse] display_binary_as_hex option causes unexpected behavior\n- bug #3899 Git commit links to Github missing\n- bug #3900 CSP WARN in Firefox console\n- bug #3901 Setup script warning for config auth (stored login data) shows link\nBBcode\n- bug #3895 [browse] Fixed getting BLOB data\n- bug #3905 [export] Custom Exporting exports all databases\n- bug #3909 [import] Import of CSV FIle to selected table doesn't work\n- bug #3904 Browsing an empty table should not display its Structure\n- bug #3908 Calendar widget improperly redirects to home\n- bug #3916 [interface] Missing scrollbar (original theme)\n+ [vendor] add tcpdf path to vendor_config.php\n- bug fix compat with tcpdf >= 6.0 (tested with 6.0.012)\n\n\n\n",
     "version_num": 400010099,
@@ -1241,6 +1365,7 @@
 },
 {
   "fields": {
+    "date": "2011-03-02",
     "version": "2.1.0",
     "release_notes": "",
     "version_num": 201000099,
@@ -1251,6 +1376,7 @@
 },
 {
   "fields": {
+    "date": "2014-07-17",
     "version": "4.2.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.6, a bugfix release with security fixes.\n\n4.2.6.0 (2014-07-17)\n- bug #4471 Undefined index warning with referenced column.\n- bug #4027 $cfg['MaxExactCount'] is ignored when BROWSING is back\n- bug #4482 Multi Column sorting (improved user experience)\n- bug #4478 Server validation does not work while in setup/mysqli\n- bug       Undefined variable when grid editing a foreign key column\n- bug #4481 mult_submits.inc.php Undefined variable Error\n- bug #4485 Sorting breaks the copy column feature\n- bug #4440 Javascript error when renaming table\n- bug #4483 'New window' link (selflink) disappears, causing Javascript error\n- bug #4489 Incorrect detection of privileges for routine creation\n- bug #4459 First few characters of database name aren't clickable when expanded\n- bug #4486 [security] XSS injection due to unescaped table comment\n- bug #4488 [security] XSS injection due to unescaped table name (triggers)\n- bug #4492 [security] XSS in AJAX confirmation messages\n- bug #4491 [security] Missing validation for accessing User groups feature\n\n\n\n",
     "version_num": 402060099,
@@ -1261,6 +1387,7 @@
 },
 {
   "fields": {
+    "date": "2011-07-03",
     "version": "3.4.3.1",
     "release_notes": "",
     "version_num": 304030199,
@@ -1271,6 +1398,7 @@
 },
 {
   "fields": {
+    "date": "2014-08-17",
     "version": "4.0.10.2",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.10.2, a security release.\n\n4.0.10.2 (2014-08-17)\n- bug #4501 [security] XSS in table browse page\n- bug #4502 [security] Self-XSS in enum value editor\n- bug #4503 [security] Self-XSSes in monitor\n- bug #4504 [security] Self-XSS in query charts\n- bug #4517 [security] XSS in relation view\n\n\n\n",
     "version_num": 400100299,
@@ -1281,6 +1409,7 @@
 },
 {
   "fields": {
+    "date": "2014-11-20",
     "version": "4.2.12",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.12, a bugfix version with minor security fixes.\n\n4.2.12.0 (2014-11-20)\n- bug #4574 Blank/white page when JavaScript disabled\n- bug #4577 Multi row actions cause full page reloads\n- bug       ReferenceError: targeurl is not defined\n- bug       Incorrect text/icon display in Tracking report\n- bug #4404 Recordset return from procedure display nothing\n- bug #4584 Edit dialog for routines is too long for smaller displays\n- bug #4586 Javascript error after moving a column\n- bug #4576 Issue with long comments on table columns\n- bug #4599 Input field unnecessarily selected on focus\n- bug #4602 Exporting selected rows exports all rows of the query\n- bug #4444 No insert statement produced in SQL export for queries with alias\n- bug #4603 Field disabled when internal relations used\n- bug #4596 [security] XSS through exception stack\n- bug #4595 [security] Path traversal can lead to leakage of line count\n- bug #4578 [security] XSS vulnerability in table print view\n- bug #4579 [security] XSS vulnerability in zoom search page\n- bug #4594 [security] Path traversal in file inclusion of GIS factory\n- bug #4598 [security] XSS in multi submit\n- bug #4597 [security] XSS through pma_fontsize cookie\n\n\n\n",
     "version_num": 402120099,
@@ -1291,6 +1420,7 @@
 },
 {
   "fields": {
+    "date": "2013-01-28",
     "version": "3.5.6",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.6, a bugfix release.\n\n3.5.6.0 (2013-01-28)\n- bug #3593604 [status] Erroneous advisor rule\n- bug #3596070 [status] localStorage broken in server status monitor\n- bug #3598736 [routines] Editing a procedure with special characters\n- bug #3600322 [core] Visualize GIS data throws Fatal Error\n- bug #3599362 [core] Double-escaped error message\n- bug #3776 [cookies] Login without auth on second server\n\n\n\n",
     "version_num": 305060099,
@@ -1301,6 +1431,7 @@
 },
 {
   "fields": {
+    "date": "2015-01-24",
     "version": "4.3.8",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.8, a bugfix release.\n\n4.3.8.0 (2015-01-24)\n- bug       Undefined constant PMA_DRIZZLE\n- bug #4712 Wrongly positioned date-picker while Grid-Editing\n- bug #4714 Forced ORDER BY for own sql statements\n- bug #4721 Undefined property: stdClass::$version\n- bug #4719 'only_db' not working\n- bug #4700 Error text: Internal Server Error\n- bug #4722 Incorrect width table summary when favorite tables is disabled\n- bug #4710 Nav tree error after filtering the tables\n- bug #4716 Collapse all in navigation panel is sometimes broken\n- bug #4724 Cannot navigate in filtered table list\n- bug #4717 Database navigation menu broken when resolution/screen is changing\n- bug #4727 Collation column missing in database list when DisableIS is true\n- bug       Undefined index central_columnswork\n- bug       Undefined index favorite_tables \n\n\n\n",
     "version_num": 403080099,
@@ -1311,6 +1442,7 @@
 },
 {
   "fields": {
+    "date": "2013-02-15",
     "version": "3.5.7",
     "release_notes": "\n\nWelcome to the first release candidate for phpMyAdmin 3.5.7, a bugfix release.\n\n3.5.7.0 (2013-02-15)\n- bug #3779 [core] Problem with backslash in enum fields\n- bug #3816 Missing server_processlist.php\n- bug #3821 Safari: white page\n- Correct detection of the Chrome browser\n\n\n\n",
     "version_num": 305070099,
@@ -1321,6 +1453,7 @@
 },
 {
   "fields": {
+    "date": "2011-03-02",
     "version": "2.0.5",
     "release_notes": "",
     "version_num": 200050099,
@@ -1331,6 +1464,7 @@
 },
 {
   "fields": {
+    "date": "2011-05-20",
     "version": "3.3.10.1",
     "release_notes": "",
     "version_num": 303100199,
@@ -1341,6 +1475,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-21",
     "version": "4.0.10.5",
     "release_notes": "Welcome to phpMyAdmin 4.0.10.5, a security release.\n\n4.0.10.5 (2014-10-21)\n- bug #4562 [security] XSS in debug SQL output\n- bug #4563 [security] XSS in monitor query analyzer\n\n",
     "version_num": 400100599,
@@ -1351,6 +1486,7 @@
 },
 {
   "fields": {
+    "date": "2014-06-20",
     "version": "4.2.4",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.4, a bugfix version with minor security fixes.\n\n4.2.4.0 (2014-06-20)\n- bug #4449 Mediawiki export does not produce table header row; also fix related\n PHP warnings\n- bug #4442 New lines are added to query every time\n- bug #4445 Fatal error on SQL Export of join query\n- bug #4448 Dump binary columns in hexadecimal notation not working\n- Regenerate cookie encryption IV for every session\n- bug #4405 Cannot import (open_basedir): fix another case\n- bug #4457 SQL tab - Insert queries not showing affected row count\n- bug       Missing warning about existing account, on multi-server config\n- bug #4435 WHERE clause can be undefined\n- bug       SQL export views as tables option getting ignored\n- bug #4464 [security] XSS injection due to unescaped db/table name in navigation hiding\n- bug #4465 [security] XSS injection due to unescaped db/table name in recent/favorite tables\n\n\n\n",
     "version_num": 402040099,
@@ -1361,6 +1497,7 @@
 },
 {
   "fields": {
+    "date": "2013-05-03",
     "version": "4.0.0",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.0.0. With this version, the HTML frames are gone and the navigation panel now presents a tree. This version requires Javascript.\n\nVersion 4.0 contains many bug fixes and smaller new features; moreover, the documentation has a new look and contains an index. Enjoy!\n\n\n\n",
     "version_num": 400000099,
@@ -1371,6 +1508,7 @@
 },
 {
   "fields": {
+    "date": "2011-07-03",
     "version": "3.3.10.2",
     "release_notes": "",
     "version_num": 303100299,
@@ -1381,6 +1519,7 @@
 },
 {
   "fields": {
+    "date": "2012-05-03",
     "version": "3.5.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.5.1, a bugfix release. \n\n3.5.1.0 (2012-05-03)\n- bug #3510784 [edit] Limit clause ignored when sort order is remembered\n- bug #3511471 [interface] View name not seen in navi panel (MySQL 5.1)\n- bug #3512916 [display] Right frame reloads after displaying SQL result(zero ro\nws)\n- bug [interface] Fixed missing Codemirror for inline query edit when exporting\na result set\n- bug #3514490 [auth] Multiple Navigation panels bug still present\n- bug #3515181 [users] Error in create user + underscore + create database\n- bug #3515666 [display] Profiling chart shows wrong data\n- bug #3516037 [auth] JS includes missing in auth config error page\n- bug #3516183 [display] Missing image extension\n- bug [display] Added missing icons in original theme\n- bug #3516761 [edit] Query error after search\n- bug #3516405 [display] Chart title is getting wrong within chart export\n- bug #3517021 [interface] Header links except 'More' hide after closing dialog\n- bug #3516817 [interface] \"More\" actions in table structure\n- bug #3518484 [privileges] PMA_sqlAddSlashes() does not quote the table names c\norrectly\n- bug #3518983 [designer] Error messages do not appear in the Designer\n- bug #3519747 [interface] Suhosin patch warning incorrectly displayed\n- bug #3520107 [interface] Server status page: Incorrect dialog box titles\n- bug #3516089 [structure] DROP does not work on defective VIEWs\n\n\n\n",
     "version_num": 305010099,
@@ -1391,6 +1530,7 @@
 },
 {
   "fields": {
+    "date": "2014-10-01",
     "version": "4.2.9.1",
     "release_notes": "Welcome to phpMyAdmin 4.2.9.1, a security release.\n\n4.2.9.1 (2014-10-01)\n- bug #4544 [security] XSS vulnerabilities in table search and table structure pages\n",
     "version_num": 402090199,
@@ -1401,6 +1541,7 @@
 },
 {
   "fields": {
+    "date": "2014-09-20",
     "version": "4.2.9",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.9, a bugfix release.\n\n4.2.9.0 (2014-09-20)\n- bug       ajax.js responseHandler: cannot read property of null\n- bug       sql.js: str is undefined\n- bug #4524 Allow for direct selection of \"0\" on the \"user overview\" page\n- bug #4529 Undefined index: pos\n- bug #4523 tbl_change.js: insert as new row submit type on multiple selected re\ncords does not set all AUTO_INCREMENTs to 0 value\n- bug       ajax.js responseHandler: another \"cannot read property\"\n- bug       tbl_structure.js \"cannot read property\"\n\n\n\n",
     "version_num": 402090099,
@@ -1411,6 +1552,7 @@
 },
 {
   "fields": {
+    "date": "2010-08-20",
     "version": "2.11.10.1",
     "release_notes": "Welcome to phpMyAdmin 2.11.10.1, a security bugfix release.\n\n2.11.10.1 (2010-08-20)\n- [setup] Fixed output sanitizing in setup script, see PMASA-2010-4 for\n  more details.\n- [core] Fixed various XSS issues, see PMASA-2010-5 for more details.\n",
     "version_num": 211100199,
@@ -1421,6 +1563,7 @@
 },
 {
   "fields": {
+    "date": "2012-02-14",
     "version": "3.4.10",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.4.10, a bugfix release.\n\n3.4.10.0 (2012-02-14)\n- bug #3460090 [interface] TextareaAutoSelect feature broken\n- patch #3375984 [export] PHP Array export might generate invalid php code\n- bug #3049209 [import] Import from ODS ignores cell that is the same as cell be\nfore\n- bug #3463933 [display] SELECT DISTINCT displays wrong total records found\n- patch #3458944 [operations] copy table data missing SET SQL_MODE='NO_AUTO_VALU\nE_ON_ZERO'\n- bug #3469254 [edit] Setting data to NULL and drop-downs\n- bug #3477063 [edit] Missing set fields and values in generated INSERT query\n- bug #3460867 [libraries] license issue with TCPDF (updated to 5.9.145)\n\n\n\n",
     "version_num": 304100099,
@@ -1431,6 +1574,7 @@
 },
 {
   "fields": {
+    "date": "2014-06-26",
     "version": "4.2.5",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.2.5, a bugfix version.\n\n4.2.5.0 (2014-06-26)\n- bug #4467 shell_exec() has been disabled for security reasons\n- bug #4470 Error while submitting empty query\n- bug #4463 Fatal error: Class 'PMA_DatabaseInterface' not found\n- bug #4469 Fixed cookie based login for installations without mcrypt\n- bug #4473 incorrect result count when having clause is used\n-           mcrypt: remove the requirement (64-bit) and the related warning\n\n\n\n",
     "version_num": 402050099,
@@ -1441,6 +1585,7 @@
 },
 {
   "fields": {
+    "date": "2010-09-07",
     "version": "3.3.7",
     "release_notes": "\n\nWelcome to phpMyAdmin 3.3.7, a bugfix release.\n\n3.3.7.0 (2010-09-07)\n- patch #3050492 [PDF scratchboard] Cannot drag table box to the edge after\n  a page size increase, thanks to Martin Sch\u00f6nberger - mad05\n- bug #3054458 [core] Fixed displaying number of rows.\n- bug #3035300 [parser] Fixed wrong definition of keywords.\n- [setup] Fixed escaping of server name.\n\n\n\n",
     "version_num": 303070099,
@@ -1451,6 +1596,7 @@
 },
 {
   "fields": {
+    "date": "2014-12-21",
     "version": "4.3.3",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.3.3, a bugfix release.\n\n4.3.3.0 (2014-12-21)\n- bug       The \"Recently used tables\" setting should be with Nav panel\n- bug #4647 Can't disable Favorites\n- bug #4646 Version Check Broken\n- bug #4630 AJAX request infinite loop\n- bug #4649 Attributes field size smaller than others\n- bug #4622 Cannot remove table ordering on a Mac\n- bug       Fix initial replication configuration\n- bug       Undefined index central_columnswork\n- bug #4657 Don't have default blowfish_secret\n- bug #4656 Some error popups fade away too quickly\n- bug #4648 Consistency in borders\n- bug       $cfg['Error_Handler']['display'] no longer necessary\n- bug #4659 Leading and trailing whitespace in column name\n\n\n\n",
     "version_num": 403030099,
@@ -1461,6 +1607,7 @@
 },
 {
   "fields": {
+    "date": "2015-03-04",
     "version": "4.2.13.2",
     "release_notes": "Welcome to phpMyAdmin 4.2.13.2, a security release. \n\n4.2.13.2 (2015-03-04)\n- bug [security] Risk of BREACH attack, see PMASA-2015-1\n\n",
     "version_num": 402130299,
@@ -1471,6 +1618,7 @@
 },
 {
   "fields": {
+    "date": "2014-03-22",
     "version": "4.1.10",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.1.10, a bugfix version.\n\n4.1.10.0 (2014-03-22)\n- bug #4301 Grid edit: \"SELECT\" query is replaced by \"UPDATE\" query after edit\n- bug #4278 reCaptcha re-login requires double effort\n- bug #4324 Datepicker not showing up on insert page\n- bug #3991 Problem selecting item in select boxes with the ENTER keystroke in s\nome browsers\n- bug #4323 QueryWindow ignores CodeMirror\n- bug       None of the live charts shown on \"Status -> Monitor\" (Chrome) \n\n\n\n",
     "version_num": 401100099,
@@ -1481,6 +1629,7 @@
 },
 {
   "fields": {
+    "date": "2015-04-07",
     "version": "4.4.1",
     "release_notes": "\n\nWelcome to phpMyAdmin 4.4.1, a bugfix version.\n\n4.4.1.0 (2015-04-07)\n- bug #4813 MySQL 5.7.6 and the Users menu tab\n- bug #4818 MySQL 5.7.6 and changing the password for another user\n- bug #4819 Request URI too large\n- bug #4814 MySQL 5.7.6 and Databases\n- bug       Use 'server' parameter in console to work in multi server environmen\nts\n- bug       Missing tooltip in monitor\n- bug       Missing sort icons in monitor\n- bug #4805 Inline edit broken when using functions in query\n- bug #4821 Timed-out import fails to restart when file represented\n- bug #4754 pMA DB not detected properly\n- bug #4825 Datepicker missing when changing number of rows on Insert page\n- bug #4824 INNODB STATUS page is empty\n- bug #4828 JavaScript is loaded in wrong order\n- bug #4827 TEXT formatting doesn't work after inline editing\n- bug #4822 Compress when php.ini output_buffering is active\n- bug #4832 Sorting distinct values result loses links\n- bug #4834 Do not attach token to css requests to improve caching\n\n\n\n",
     "version_num": 404010099,
@@ -1491,6 +1640,7 @@
 },
 {
   "fields": {
+    "date": "2011-02-11",
     "version": "2.11.11.3",
     "release_notes": "",
     "version_num": 211110399,
@@ -1501,6 +1651,7 @@
 },
 {
   "fields": {
+    "date": "2015-06-23",
     "version": "4.4.11-rc1",
     "release_notes": "",
     "version_num": 404110051,
@@ -18906,6 +19057,7 @@
     "signed": false,
     "filename": "toba-0.1.zip",
     "version": "0.1",
+    "date": "2011-03-02",
     "display_name": "Toba",
     "size": 205867,
     "md5": "",
@@ -18923,6 +19075,7 @@
     "signed": false,
     "filename": "toba-0.2.zip",
     "version": "0.2",
+    "date": "2011-05-11",
     "display_name": "Toba",
     "size": 205965,
     "md5": "",
@@ -18940,6 +19093,7 @@
     "signed": false,
     "filename": "smooth_yellow-3.3.zip",
     "version": "3.3",
+    "date": "2010-03-07",
     "display_name": "Smooth Yellow",
     "size": 209031,
     "md5": "",
@@ -18957,6 +19111,7 @@
     "signed": false,
     "filename": "pmahomme-1.0b.zip",
     "version": "1.0b",
+    "date": "2010-12-28",
     "display_name": "pmamhomme",
     "size": 147419,
     "md5": "",
@@ -18974,6 +19129,7 @@
     "signed": false,
     "filename": "graphite-1.0.zip",
     "version": "1.0",
+    "date": "2011-05-11",
     "display_name": "Graphite",
     "size": 173024,
     "md5": "",
@@ -18991,6 +19147,7 @@
     "signed": false,
     "filename": "graphite-0.9.zip",
     "version": "0.9",
+    "date": "2011-03-02",
     "display_name": "Graphite",
     "size": 173882,
     "md5": "",
@@ -19008,6 +19165,7 @@
     "signed": false,
     "filename": "blueorange-1.0b.zip",
     "version": "1.0b",
+    "date": "2012-10-17",
     "display_name": "blueorange",
     "size": 245482,
     "md5": "",
@@ -19025,6 +19183,7 @@
     "signed": false,
     "filename": "paradice-2.11e.zip",
     "version": "2.11e",
+    "date": "2008-05-12",
     "display_name": "Paradice",
     "size": 167032,
     "md5": "",
@@ -19042,6 +19201,7 @@
     "signed": false,
     "filename": "paradice-3.4.zip",
     "version": "3.4",
+    "date": "2011-10-18",
     "display_name": "Paradice",
     "size": 196819,
     "md5": "",
@@ -19059,6 +19219,7 @@
     "signed": false,
     "filename": "paradice-3.0b.zip",
     "version": "3.0b",
+    "date": "2010-06-15",
     "display_name": "Paradice",
     "size": 187219,
     "md5": "",
@@ -19076,6 +19237,7 @@
     "signed": false,
     "filename": "cleanstrap-1.0.zip",
     "version": "1.0",
+    "date": "2012-12-04",
     "display_name": "Cleanstrap",
     "size": 208406,
     "md5": "",
@@ -19093,6 +19255,7 @@
     "signed": false,
     "filename": "xampp-2.11.zip",
     "version": "2.11",
+    "date": "2007-11-28",
     "display_name": "XAMPP (Apachefriends.org)",
     "size": 153267,
     "md5": "",
@@ -19110,6 +19273,7 @@
     "signed": false,
     "filename": "hillside-2.11.zip",
     "version": "2.11",
+    "date": "2008-08-16",
     "display_name": "Hillside",
     "size": 208991,
     "md5": "",
@@ -19127,6 +19291,7 @@
     "signed": false,
     "filename": "hillside-3.0.zip",
     "version": "3.0",
+    "date": "2008-10-25",
     "display_name": "Hillside",
     "size": 219163,
     "md5": "",
@@ -19144,6 +19309,7 @@
     "signed": false,
     "filename": "arctic_ocean-3.3.zip",
     "version": "3.3",
+    "date": "2010-03-07",
     "display_name": "Arctic Ocean",
     "size": 184707,
     "md5": "",
@@ -19161,6 +19327,7 @@
     "signed": false,
     "filename": "arctic_ocean-2.11a.zip",
     "version": "2.11a",
+    "date": "2008-03-03",
     "display_name": "Arctic Ocean",
     "size": 180217,
     "md5": "",
@@ -19178,6 +19345,7 @@
     "signed": false,
     "filename": "crimson_gray-2.11b.zip",
     "version": "2.11b",
+    "date": "2008-08-14",
     "display_name": "Crimson Gray",
     "size": 97379,
     "md5": "",
@@ -19195,6 +19363,7 @@
     "signed": false,
     "filename": "crimson_gray-3.1-3.2.zip",
     "version": "3.1-3.2",
+    "date": "2009-05-25",
     "display_name": "Crimson Gray",
     "size": 98070,
     "md5": "",
@@ -19212,6 +19381,7 @@
     "signed": false,
     "filename": "metro-2.3.zip",
     "version": "2.3",
+    "date": "2015-04-23",
     "display_name": "Metro",
     "size": 1622567,
     "md5": "",
@@ -19229,6 +19399,7 @@
     "signed": false,
     "filename": "metro-2.2.zip",
     "version": "2.2",
+    "date": "2015-03-27",
     "display_name": "Metro",
     "size": 1656697,
     "md5": "",
@@ -19246,6 +19417,7 @@
     "signed": false,
     "filename": "metro-2.1.zip",
     "version": "2.1",
+    "date": "2013-09-10",
     "display_name": "Metro",
     "size": 1732571,
     "md5": "",
@@ -19263,6 +19435,7 @@
     "signed": false,
     "filename": "metro-1.0.zip",
     "version": "1.0",
+    "date": "2013-01-15",
     "display_name": "Metro",
     "size": 1782951,
     "md5": "",
@@ -19280,6 +19453,7 @@
     "signed": false,
     "filename": "metro-2.0.zip",
     "version": "2.0",
+    "date": "2013-04-03",
     "display_name": "Metro",
     "size": 1732566,
     "md5": "",
@@ -19297,6 +19471,7 @@
     "signed": false,
     "filename": "grid-2.11d.zip",
     "version": "2.11d",
+    "date": "2008-08-14",
     "display_name": "Grid",
     "size": 26066,
     "md5": "",
@@ -19314,6 +19489,7 @@
     "signed": false,
     "filename": "clearview3-3.1.zip",
     "version": "3.1",
+    "date": "2009-01-10",
     "display_name": "ClearView",
     "size": 187529,
     "md5": "",
@@ -19331,6 +19507,7 @@
     "signed": false,
     "filename": "darkblue_orange-2.11.zip",
     "version": "2.11",
+    "date": "2012-10-17",
     "display_name": "Darkblue/orange",
     "size": 164119,
     "md5": "",
@@ -19348,6 +19525,7 @@
     "signed": false,
     "filename": "darkblue_orange-2.9.zip",
     "version": "2.9",
+    "date": "2011-03-02",
     "display_name": "Darkblue/orange",
     "size": 162721,
     "md5": "",
@@ -19365,6 +19543,7 @@
     "signed": false,
     "filename": "darkblue_orange-2.10.zip",
     "version": "2.10",
+    "date": "2011-05-11",
     "display_name": "Darkblue/orange",
     "size": 162873,
     "md5": "",
@@ -19382,6 +19561,7 @@
     "signed": false,
     "filename": "silkline-2.11.zip",
     "version": "2.11",
+    "date": "2007-10-09",
     "display_name": "Silkline",
     "size": 169743,
     "md5": "",
@@ -19399,6 +19579,7 @@
     "signed": false,
     "filename": "pixeline-2.11a.zip",
     "version": "2.11a",
+    "date": "2007-10-17",
     "display_name": "Pixeline",
     "size": 113810,
     "md5": "",
@@ -19712,7 +19893,7 @@
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
-    "last_login": "2015-06-22T08:51:13.698Z",
+    "last_login": "2015-06-23T16:48:21.029Z",
     "groups": [],
     "user_permissions": [],
     "password": "pbkdf2_sha256$20000$HPjGHnb4iiuT$eQ2ST6cE1cmbT6UH0y9nwLVah/FEFp5osH20fDHML9I=",
@@ -19730,10 +19911,10 @@
     "is_active": true,
     "is_superuser": false,
     "is_staff": false,
-    "last_login": "2015-06-22T08:51:13.698Z",
+    "last_login": "2015-06-23T16:48:42Z",
     "groups": [],
     "user_permissions": [],
-    "password": "pbkdf2_sha256$20000$6TnCRUcxRGiM$FBkczeO+b7jFe/sGbjCo81DhTQMtAHJOKRvjf64Ybdg=",
+    "password": "pbkdf2_sha256$20000$fBkZPcZRW8qn$LYVCjZJwv6m/DZdNKPcQScFgAedqdc+hA7JTcY1pWJM=",
     "email": "",
     "date_joined": "2015-06-22T11:05:29Z"
   },
