@@ -27,6 +27,19 @@ from security.views import PMASAView
 from files.views import ReleaseList, ReleaseDetail
 
 
+class TitleView(TemplateView):
+    title = ''
+
+    def __init__(self, *args, **kwargs):
+        self.title = kwargs.pop('title')
+        super(TitleView, self).__init__(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(TitleView, self).get_context_data(**kwargs)
+        context['page_title'] = self.title
+        return context
+
+
 urlpatterns = patterns('',
     # Pages
     url(
@@ -38,15 +51,17 @@ urlpatterns = patterns('',
     ),
     url(
         r'^news/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='news.html',
+            title='News',
         ),
         name='news'
     ),
     url(
         r'^security/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='security/index.html',
+            title='Security',
         ),
         name='security'
     ),
@@ -57,157 +72,164 @@ urlpatterns = patterns('',
     ),
     url(
         r'^support/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='support.html',
+            title='Support',
         ),
         name='support'
     ),
     url(
         r'^docs/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='docs.html',
+            title='Documentation',
         ),
         name='docs'
     ),
     url(
         r'^try/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='try.html',
+            title='Try',
+
         ),
         name='try'
     ),
     url(
         r'^contribute/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='contribute.html',
+            title='Contribute',
         ),
         name='contribute'
     ),
     url(
         r'^sponsors/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='sponsors.html',
+            title='Sponsors',
         ),
         name='sponsors'
     ),
     url(
         r'^themes/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='themes.html',
+            title='Themes',
         ),
         name='themes'
     ),
     url(
         r'^license/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='license.html',
+            title='License',
         ),
         name='license'
     ),
     url(
         r'^team/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='team.html',
+            title='Team',
         ),
         name='team'
     ),
     url(
         r'^translations/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='translations.html',
+            title='Translations',
         ),
         name='translations'
     ),
     url(
         r'^awards/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='awards.html',
+            title='Awards',
         ),
         name='awards'
     ),
     url(
         r'^about/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='about.html',
+            title='About',
         ),
         name='about'
     ),
     url(
         r'^15-years/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='15-years.html',
+            title='15 years',
         ),
         name='15-years'
     ),
     url(
         r'^donate/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='donate.html',
+            title='Donate',
         ),
         name='donate'
     ),
     url(
         r'^sitemap/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='sitemap.html',
+            title='Sitemap',
         ),
         name='sitemap'
     ),
     url(
         r'^search/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='search.html',
+            title='Search',
         ),
         name='search'
     ),
     url(
         r'^about-website/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='about-website.html',
+            title='About website',
         ),
         name='about-website'
     ),
     url(
         r'^downloads/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='downloads.html',
+            title='Downloads',
         ),
         name='downloads'
     ),
     url(
         r'^translate/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='translate.html',
+            title='Translating',
         ),
         name='translate'
     ),
     url(
         r'^develop/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='develop.html',
+            title='Developing',
         ),
         name='develop'
     ),
     url(
         r'^contest/$',
-        TemplateView.as_view(
+        TitleView.as_view(
             template_name='contest.html',
+            title='Contest',
         ),
         name='contest'
-    ),
-    url(
-        r'^news/$',
-        TemplateView.as_view(
-            template_name='news.html',
-        ),
-        name='news'
-    ),
-    url(
-        r'^news/$',
-        TemplateView.as_view(
-            template_name='news.html',
-        ),
-        name='news'
     ),
     url(
         r'^files/$',

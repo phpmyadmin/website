@@ -28,6 +28,11 @@ from files.models import Release
 class ReleaseList(ListView):
     model = Release
 
+    def get_context_data(self, **kwargs):
+        context = super(ReleaseList, self).get_context_data(**kwargs)
+        context['page_title'] = 'Files'
+        return context
+
 
 class ReleaseDetail(DetailView):
     model = Release
@@ -39,3 +44,8 @@ class ReleaseDetail(DetailView):
         return queryset.get(
             version=self.kwargs['version'],
         )
+
+    def get_context_data(self, **kwargs):
+        context = super(ReleaseDetail, self).get_context_data(**kwargs)
+        context['page_title'] = self.object.version
+        return context

@@ -7,7 +7,6 @@
     - news
     - CVE
     - files
-- titles for pages
 - RSS for pages
 - check for py: in templates
 - check for ${ in templates
