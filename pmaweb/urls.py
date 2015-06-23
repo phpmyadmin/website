@@ -218,6 +218,13 @@ urlpatterns = patterns('',
 
     # Compatibility redirects
     url(
+        r'^documentation/changelog.php$',
+        RedirectView.as_view(
+            url='http://demo.phpmyadmin.net/master-config/changelog.php',
+            permanent=True,
+        )
+    ),
+    url(
         r'^documentation',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
