@@ -13,3 +13,6 @@
 - RSS for pages
 - check for py: in templates
 - check for ${ in templates
+- remove data/sf.py
+- integrate data/redirects.py
+- integrate data/sitemap.py
