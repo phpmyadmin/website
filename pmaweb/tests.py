@@ -52,7 +52,8 @@ class ViewTest(TestCase):
 
     def test_security_redirect(self):
         # TODO: remove fetch_redirect_response once these pages are implemented
-        response = self.client.get('/home_page/security.php')
-        self.assertRedirects(response, '/security/', fetch_redirect_response=False)
+        response = self.client.get('/home_page/security.php', follow=True)
+        self.assertRedirects(response, '/security/')
+        self.assertContains(response, 'PMASA-2011-12')
         response = self.client.get('/home_page/security.php?issue=PMASA-2011-1')
         self.assertRedirects(response, '/security/PMASA-2011-1/', fetch_redirect_response=False)

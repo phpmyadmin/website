@@ -21,6 +21,7 @@
 
 from files.models import Release, Theme
 from news.models import Post
+from security.models import PMASA
 from django.conf import settings
 from django.core.urlresolvers import reverse
 import datetime
@@ -39,6 +40,7 @@ def basic(request):
         'themes': Theme.objects.all(),
         'themecssversions': CSSVERSIONS,
         'awards': AWARDS,
+        'pmasas': PMASA.objects.filter(draft=False),
     }
 
 

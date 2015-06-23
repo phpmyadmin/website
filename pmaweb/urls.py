@@ -44,7 +44,7 @@ urlpatterns = patterns('',
     url(
         r'^security/$',
         TemplateView.as_view(
-            template_name='security.html',
+            template_name='security/index.html',
         ),
         name='security'
     ),

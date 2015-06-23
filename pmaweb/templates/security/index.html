@@ -1,11 +1,12 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
 <py:def function="page_title">Security</py:def>
 <py:def function="page_rss">${rss_security}</py:def>
 <py:def function="page_rss_title">phpMyAdmin security issues</py:def>
 
-<div py:match="content">
-<xi:include href="_list.tpl" />
+{% block content %}
+{% include "security/_list.html" %}
 
 <div id="body">
 <h2>Security</h2>
@@ -17,7 +18,7 @@ For critical issues, we publish a security release (whose number contains
 a fourth digit like 3.3.10.5).
 </p>
 
-<xi:include href="../_security_contact.tpl" />
+{% include "_security_contact.html" %}
 
 <p>
 Please note that any support requests on this address will not be answered;
@@ -31,7 +32,5 @@ To follow latest security releases you can use a <a href="${rss_security}">RSS f
 
 </div>
 <div class="clearer"></div>
-</div>
 
-<xi:include href="../_page.tpl" />
-</html>
+{% endblock %}

@@ -78,7 +78,7 @@ class PMASA(models.Model):
 
     class Meta(object):
         unique_together = ('year', 'sequence')
-        ordering = ('year', 'sequence')
+        ordering = ('-year', '-sequence')
         verbose_name = 'PMASA'
         verbose_name_plural = 'PMASAs'
 
