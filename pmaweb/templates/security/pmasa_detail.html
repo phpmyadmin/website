@@ -44,7 +44,7 @@
     {% if pmasa.references or pmasa.cve or pmasa.cwe %}
     <h3>References</h3>
     {% if pmasa.references %}
-    <p>{{ pmasa.references }}</p>
+    <p>{% autoescape off %}{{ pmasa.references }}{% endautoescape %}</p>
     {% endif %}
     {% if pmasa.cve %}
     <p>
