@@ -22,6 +22,7 @@
 from django.db import models
 from django.conf import settings
 import os.path
+import datetime
 from data.themes import CSSMAP
 
 # Naming of versions
@@ -44,6 +45,9 @@ class Release(models.Model):
     version_num = models.IntegerField(default=0, unique=True)
     release_notes = models.TextField()
     stable = models.BooleanField(default=False, db_index=True)
+    date = models.DateField(
+        default=datetime.date.today
+    )
 
     class Meta(object):
         ordering = ['-version_num']
