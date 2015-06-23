@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XML_DIZ_INFO xmlns:py="http://genshi.edgewall.org/">
-<py:for each="release in releases_featured">
-<py:for each="file in release.files"><py:if test="file.featured"><py:if test="file.ext == '.zip'">
+<XML_DIZ_INFO>
 	<MASTER_PAD_VERSION_INFO>
 		<MASTER_PAD_VERSION>3.01</MASTER_PAD_VERSION>
         <MASTER_PAD_EDITOR>vim http://www.vim.org + Genshi</MASTER_PAD_EDITOR>
@@ -36,10 +34,10 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>phpMyAdmin</Program_Name>
-		<Program_Version>${release.version}</Program_Version>
-		<Program_Release_Month>${"%02d" % release.date.month}</Program_Release_Month>
-		<Program_Release_Day>${"%02d" % release.date.day}</Program_Release_Day>
-		<Program_Release_Year>${release.date.year}</Program_Release_Year>
+		<Program_Version>{{ latest.version }}</Program_Version>
+		<Program_Release_Month>{{ latest.date|date:"m" }}</Program_Release_Month>
+		<Program_Release_Day>{{ latest.date|date:"d" }}</Program_Release_Day>
+		<Program_Release_Year>{{ latest.date|date:"Y" }}</Program_Release_Year>
 		<Program_Cost_Dollars />
         <Program_Cost_Other_Code />
 		<Program_Cost_Other />
@@ -62,9 +60,9 @@
 			<Expire_Year />
 		</Expire_Info>
         <File_Info>
-            <File_Size_Bytes>${file.size}</File_Size_Bytes>
-            <File_Size_K>${file.size_k}</File_Size_K>
-            <File_Size_MB>${file.size_m}</File_Size_MB>
+            <File_Size_Bytes>{{ latest.simpledownload.size }}</File_Size_Bytes>
+            <File_Size_K>{{ latest.simpledownload.size_k }}</File_Size_K>
+            <File_Size_MB>{{ latest.simpledownload.size_m }}</File_Size_MB>
         </File_Info>
 	</Program_Info>
 	<Program_Descriptions>
@@ -95,8 +93,8 @@
 			<Application_XML_File_URL>http://www.phpmyadmin.net/home_page/phpmyadmin.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>${file.url}</Primary_Download_URL>
-			<Secondary_Download_URL />
+			<Primary_Download_URL>{{ latest.simpledownload.get_absolute_url }}</Primary_Download_URL>
+			<Secondary_Download_URL>{{ latest.simpledownload.get_alternate_url }}</Secondary_Download_URL>
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>
@@ -133,6 +131,4 @@ this program; if not, write to the Free Software Foundation, Inc.,
 		<RSS_Feed_Company>${rss_news}</RSS_Feed_Company>
 		<RSS_Feed_Product>${rss_news}</RSS_Feed_Product>
 	</RSS>
-</py:if></py:if></py:for>
-</py:for>
 </XML_DIZ_INFO>

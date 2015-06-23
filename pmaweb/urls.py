@@ -255,6 +255,22 @@ urlpatterns = patterns('',
     # favicon.ico
     # robots.txt
 
+    # Machine parsable output
+    url(
+        r'^(home_page/)?phpmyadmin.xml$',
+        TemplateView.as_view(
+            template_name='phpmyadmin.xml',
+            content_type='application/xml'
+        )
+    ),
+    url(
+        r'^(home_page/)?phpmyadmin-doap.xml$',
+        TemplateView.as_view(
+            template_name='phpmyadmin-doap.xml',
+            content_type='application/xml'
+        )
+    ),
+
     # Version information
     url(
         r'^(home_page/)?version\.(php|txt)$',

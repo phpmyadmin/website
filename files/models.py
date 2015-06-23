@@ -170,6 +170,14 @@ class Download(models.Model):
             self.filename
         )
 
+    @property
+    def size_k(self):
+        return self.size / 1024
+
+    @property
+    def size_m(self):
+        return self.size / (1024 * 1024)
+
     def get_filesystem_path(self):
         return os.path.join(
             settings.FILES_PATH,
