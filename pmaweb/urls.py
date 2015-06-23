@@ -26,10 +26,6 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'pmaweb.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     # Pages
     url(
         r'^$',
@@ -51,6 +47,14 @@ urlpatterns = patterns('',
             template_name='security.html',
         ),
         name='security'
+    ),
+    url(
+        r'^security/(?P<entry>PMASA-20[0-9][0-9]-[0-9]+)/$',
+        # TODO: Add real view
+        TemplateView.as_view(
+            template_name='security.html',
+        ),
+        name='security-issue'
     ),
     url(
         r'^support/$',
@@ -257,6 +261,20 @@ urlpatterns = patterns('',
         r'^old-stuff/ChangeLogs/',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs',
+            permanent=True,
+        )
+    ),
+    url(
+        r'^home_page/security/(?:index.php)?$',
+        RedirectView.as_view(
+            pattern_name='security',
+            permanent=True,
+        )
+    ),
+    url(
+        r'^home_page/security/(?P<entry>PMASA-20[0-9][0-9]-[0-9]+).php$',
+        RedirectView.as_view(
+            pattern_name='security-issue',
             permanent=True,
         )
     ),
