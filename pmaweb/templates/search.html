@@ -1,11 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:gcse="uri:google-did-not-provide-a-real-ns" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-<py:def function="page_rss">${rss_news}</py:def>
-<py:def function="page_rss_title">phpMyAdmin project summary</py:def>
+<py:def function="page_title">Search</py:def>
 
-<py:def function="page_title">About</py:def>
-
-<div py:match="content" id="body">
+{% block content %}
 
 <h2>Search</h2>
 
@@ -29,8 +27,5 @@ on Google</a>.
   })();
 </script>
 <gcse:search></gcse:search>
-    
-</div>
 
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}
