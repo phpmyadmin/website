@@ -1,3 +1,0 @@
-{% for release in releases_featured %}
-{"version": "${release.version}","date": "${release.date.datestring()}"}
-{% end %}

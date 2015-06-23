@@ -254,8 +254,29 @@ urlpatterns = patterns('',
     # TODO:
     # favicon.ico
     # robots.txt
-    # version.txt
-    # home_page/version.php
+
+    # Version information
+    url(
+        r'^(home_page/)?version\.(php|txt)$',
+        TemplateView.as_view(
+            template_name='version/version.txt',
+            content_type='text/plain'
+        )
+    ),
+    url(
+        r'^(home_page/)?version\.js$',
+        TemplateView.as_view(
+            template_name='version/version.js',
+            content_type='application/javascript'
+        )
+    ),
+    url(
+        r'^(home_page/)?version\.json$',
+        TemplateView.as_view(
+            template_name='version/version.json',
+            content_type='application/json'
+        )
+    ),
 
     # Test backend
     url(
