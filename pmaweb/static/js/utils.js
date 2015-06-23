@@ -5,18 +5,18 @@
  */
 function show_theme(version) {
     if (version == "all") {
-        $$("div.theme").setStyle("display", "block");
+        $$("div.themediv").setStyle("display", "block");
         return;
     }
-    $$("div.theme." + version).setStyle("display", "block");
-    $$("div.theme:not(." + version + ")").setStyle("display", "none");
+    $$("div.themediv." + version).setStyle("display", "block");
+    $$("div.themediv:not(." + version + ")").setStyle("display", "none");
 }
 
 /* Auto load blocks */
 
 function theme_load() {
     /* Is this document with themes? */
-    if ($$("div.theme").length === 0) {
+    if ($$("div.themediv").length === 0) {
         return;
     }
 
@@ -27,7 +27,7 @@ function theme_load() {
 
     /* Is the parameter existing class for theme? */
     var hash = self.document.location.hash.substring(1);
-    if ($$("div.theme." + hash).length === 0) {
+    if ($$("div.themediv." + hash).length === 0) {
         return;
     }
 
