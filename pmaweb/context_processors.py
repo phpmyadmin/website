@@ -28,6 +28,7 @@ import datetime
 from data.menu import MENU
 from data.screenshots import SCREENSHOTS
 from data.themes import CSSVERSIONS
+from data.awards import AWARDS
 
 
 def basic(request):
@@ -37,6 +38,7 @@ def basic(request):
         'screenshots': SCREENSHOTS,
         'themes': Theme.objects.all(),
         'themecssversions': CSSVERSIONS,
+        'awards': AWARDS,
     }
 
 
