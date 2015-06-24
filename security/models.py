@@ -20,11 +20,13 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 from django.db import models
+from django.utils import timezone
 from markupfield.fields import MarkupField
 import datetime
 
 YEAR_TODAY = datetime.date.today().year
 YEAR_CHOICES = [(i, i) for i in range(2003, YEAR_TODAY + 1)]
+
 
 class PMASA(models.Model):
     year = models.IntegerField(
@@ -33,10 +35,8 @@ class PMASA(models.Model):
     sequence = models.IntegerField(
         help_text='Sequence number of PMASA in given year'
     )
-    date = models.DateField(
-        default=datetime.date.today
-    )
-    updated = models.DateField(
+    date = models.DateTimeField(db_index=True, default=timezone.now)
+    updated = models.DateTimeField(
         null=True,
         blank=True,
         help_text='Set this in case of major update to the entry'

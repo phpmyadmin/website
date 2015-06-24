@@ -67,13 +67,13 @@ class PMASAParser(object):
         self.data['sequence'] = int(sequence)
 
     def parse_announcement_date(self, text):
-        self.data['date'] = parser.parse(text).date()
+        self.data['date'] = parser.parse(text)
 
     def parse_announcement_updated(self, text):
         if ' ' in text:
             print 'Skipping second part:', text
         text = text.split()[0]
-        self.data['updated'] = parser.parse(text).date()
+        self.data['updated'] = parser.parse(text)
 
     def parse_announcement_description(self, text):
         self.data['description'] = u'<p>{0}</p>'.format(text)

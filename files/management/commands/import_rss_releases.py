@@ -45,7 +45,7 @@ class Command(BaseCommand):
         else:
             return
 
-        date = parser.parse(item.find('pubDate').text).date()
+        date = parser.parse(item.find('pubDate').text)
         if release.date != date:
             self.stdout.write(
                 'Setting date of {0} from {1} to {2}'.format(
