@@ -40,10 +40,10 @@ history</a>.
 <p>Following RSS feeds are available for syndication:</p>
 
 <ul>
-<li><a href="${rss_news}">phpMyAdmin project news</a></li>
-<li><a href="${rss_files}">phpMyAdmin file releases</a></li>
-<li><a href="${rss_security}">phpMyAdmin security issues</a></li>
-<li><a href="${rss_vcs}">phpMyAdmin commits</a></li>
+<li><a href="{% url 'feed-news' %}">phpMyAdmin project news</a></li>
+<li><a href="{% url 'feed-files' %}">phpMyAdmin file releases</a></li>
+<li><a href="{% url 'feed-security' %}">phpMyAdmin security issues</a></li>
+<li><a href="http://github.com/phpmyadmin/phpmyadmin/commits/master.atom">phpMyAdmin commits</a></li>
 </ul>
 
 <p>phpMyAdmin software information is available in following machine readable formats:</p>
