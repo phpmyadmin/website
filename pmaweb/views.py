@@ -79,6 +79,8 @@ def redirect_security(request):
 
 class PMAView(TemplateView):
     title = ''
+    rss = ''
+    rss_title = ''
 
     def __init__(self, *args, **kwargs):
         self.title = kwargs.pop('title', '')
