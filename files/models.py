@@ -24,6 +24,7 @@ from django.conf import settings
 from django.utils import timezone
 import os.path
 from data.themes import CSSMAP
+from markupfield.fields import MarkupField
 
 # Naming of versions
 VERSION_INFO = (
@@ -43,7 +44,7 @@ VERSION_INFO = (
 class Release(models.Model):
     version = models.CharField(max_length=50, unique=True)
     version_num = models.IntegerField(default=0, unique=True)
-    release_notes = models.TextField()
+    release_notes = MarkupField(default_markup_type='markdown')
     stable = models.BooleanField(default=False, db_index=True)
     date = models.DateTimeField(db_index=True, default=timezone.now)
 

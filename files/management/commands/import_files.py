@@ -67,9 +67,12 @@ class Command(BaseCommand):
                 )
                 if os.path.exists(notes):
                     with open(notes, 'r') as handle:
-                        release.release_notes = BeautifulSoup(
-                            handle.read()
-                        ).get_text()
+                        release.release_notes_markup_type = 'html'
+                        release.release_notes = '<pre>{0}</pre>'.format(
+                            BeautifulSoup(
+                                handle.read()
+                            ).get_text()
+                        )
                         release.save()
             self.process_files(
                 os.path.join(path, version),
