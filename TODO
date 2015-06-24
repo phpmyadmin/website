@@ -3,7 +3,6 @@
 - news archive
 - RSS feeds
     - CVE
-    - files
 - RSS for pages
 - check for py: in templates
 - check for ${ in templates

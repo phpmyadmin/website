@@ -26,6 +26,7 @@ from django.views.generic import TemplateView
 from security.views import PMASAView
 from files.views import ReleaseList, ReleaseDetail
 from news.feeds import NewsFeed
+from files.feeds import ReleaseFeed
 
 
 class TitleView(TemplateView):
@@ -42,6 +43,16 @@ class TitleView(TemplateView):
 
 
 urlpatterns = patterns('',
+    # Feeds
+    url(
+        r'news/feed/$',
+        NewsFeed(),
+    ),
+    url(
+        r'files/feed/$',
+        ReleaseFeed(),
+    ),
+
     # Pages
     url(
         r'^$',
@@ -241,12 +252,6 @@ urlpatterns = patterns('',
         r'^files/(?P<version>[a-z0-9.-]*)/$',
         ReleaseDetail.as_view(),
         name='release'
-    ),
-
-    # Feeds
-    url(
-        r'news/feed/$',
-        NewsFeed(),
     ),
 
     # Swekey link from our documentation
