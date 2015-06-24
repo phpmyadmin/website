@@ -6,13 +6,14 @@
 
 <table>
 <thead>
-<tr><th>Release</th><th>Date</th></tr>
+<tr><th>Release</th><th>Date</th><th>Quick download</th></tr>
 </thead>
 <tbody>
 {% for object in object_list %}
 <tr>
     <th><a href="{{ object.get_absolute_url }}">{{ object }}</a></th>
     <td>{{ object.date|date:"Y-m-d" }}</td>
+    <td><a href="{{ object.simpledownload.get_absolute_url }}">{{ object.simpledownload.filename }}</a></td>
 </tr>
 {% endfor %}
 </tbody>
