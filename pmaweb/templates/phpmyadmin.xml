@@ -128,7 +128,7 @@ this program; if not, write to the Free Software Foundation, Inc.,
 </EULA>
 	</Permissions>
 	<RSS>
-		<RSS_Feed_Company>{% reverse 'feed-news' %}</RSS_Feed_Company>
-		<RSS_Feed_Product>{% reverse 'feed-news' %}</RSS_Feed_Product>
+		<RSS_Feed_Company>{% url 'feed-news' %}</RSS_Feed_Company>
+		<RSS_Feed_Product>{% url 'feed-news' %}</RSS_Feed_Product>
 	</RSS>
 </XML_DIZ_INFO>
