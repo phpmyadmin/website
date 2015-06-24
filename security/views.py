@@ -20,6 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 from django.views.generic.detail import DetailView
+from django.core.urlresolvers import reverse
 from security.models import PMASA
 
 
@@ -29,6 +30,8 @@ class PMASAView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(PMASAView, self).get_context_data(**kwargs)
         context['page_title'] = 'Security - {0}'.format(self.object)
+        context['page_rss'] = reverse('feed-security')
+        context['page_rss_title'] = 'phpMyAdmin security announcements'
         return context
 
     def get_object(self, queryset=None):

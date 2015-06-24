@@ -22,6 +22,7 @@
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.core.urlresolvers import reverse
 from files.models import Release
 
 
@@ -31,6 +32,8 @@ class ReleaseList(ListView):
     def get_context_data(self, **kwargs):
         context = super(ReleaseList, self).get_context_data(**kwargs)
         context['page_title'] = 'Files'
+        context['page_rss'] = reverse('feed-files')
+        context['page_rss_title'] ='phpMyAdmin releases'
         return context
 
 
@@ -48,4 +51,6 @@ class ReleaseDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ReleaseDetail, self).get_context_data(**kwargs)
         context['page_title'] = self.object.version
+        context['page_rss'] = reverse('feed-files')
+        context['page_rss_title'] ='phpMyAdmin releases'
         return context

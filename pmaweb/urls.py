@@ -23,24 +23,12 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
+from pmaweb.views import PMAView
 from security.views import PMASAView
 from files.views import ReleaseList, ReleaseDetail
 from news.feeds import NewsFeed
 from files.feeds import ReleaseFeed
 from security.feeds import PMASAFeed
-
-
-class TitleView(TemplateView):
-    title = ''
-
-    def __init__(self, *args, **kwargs):
-        self.title = kwargs.pop('title')
-        super(TitleView, self).__init__(*args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context = super(TitleView, self).get_context_data(**kwargs)
-        context['page_title'] = self.title
-        return context
 
 
 urlpatterns = patterns('',
@@ -64,14 +52,14 @@ urlpatterns = patterns('',
     # Pages
     url(
         r'^$',
-        TemplateView.as_view(
+        PMAView.as_view(
             template_name='index.html',
         ),
         name='home'
     ),
     url(
         r'^news/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='news.html',
             title='News',
         ),
@@ -79,9 +67,11 @@ urlpatterns = patterns('',
     ),
     url(
         r'^security/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='security/index.html',
             title='Security',
+            rss='feed-security',
+            rss_title='phpMyAdmin security announcements',
         ),
         name='security'
     ),
@@ -92,7 +82,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^support/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='support.html',
             title='Support',
         ),
@@ -100,7 +90,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^docs/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='docs.html',
             title='Documentation',
         ),
@@ -108,7 +98,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^try/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='try.html',
             title='Try',
 
@@ -117,7 +107,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^contribute/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='contribute.html',
             title='Contribute',
         ),
@@ -125,7 +115,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^sponsors/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='sponsors.html',
             title='Sponsors',
         ),
@@ -133,7 +123,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^themes/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='themes.html',
             title='Themes',
         ),
@@ -141,7 +131,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^license/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='license.html',
             title='License',
         ),
@@ -149,7 +139,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^team/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='team.html',
             title='Team',
         ),
@@ -157,7 +147,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^translations/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='translations.html',
             title='Translations',
         ),
@@ -165,7 +155,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^awards/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='awards.html',
             title='Awards',
         ),
@@ -173,7 +163,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^about/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='about.html',
             title='About',
         ),
@@ -181,7 +171,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^15-years/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='15-years.html',
             title='15 years',
         ),
@@ -189,7 +179,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^donate/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='donate.html',
             title='Donate',
         ),
@@ -197,7 +187,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^sitemap/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='sitemap.html',
             title='Sitemap',
         ),
@@ -205,7 +195,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^search/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='search.html',
             title='Search',
         ),
@@ -213,7 +203,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^about-website/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='about-website.html',
             title='About website',
         ),
@@ -221,15 +211,17 @@ urlpatterns = patterns('',
     ),
     url(
         r'^downloads/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='downloads.html',
             title='Downloads',
+            rss='feed-files',
+            rss_title='phpMyAdmin releases',
         ),
         name='downloads'
     ),
     url(
         r'^translate/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='translate.html',
             title='Translating',
         ),
@@ -237,7 +229,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^develop/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='develop.html',
             title='Developing',
         ),
@@ -245,7 +237,7 @@ urlpatterns = patterns('',
     ),
     url(
         r'^contest/$',
-        TitleView.as_view(
+        PMAView.as_view(
             template_name='contest.html',
             title='Contest',
         ),

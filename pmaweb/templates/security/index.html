@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-<py:def function="page_rss">${rss_security}</py:def>
-<py:def function="page_rss_title">phpMyAdmin security issues</py:def>
-
 {% block content %}
 {% include "security/_list.html" %}
 

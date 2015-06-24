@@ -24,6 +24,7 @@
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.http import Http404
+from django.views.generic import TemplateView
 
 REDIRECT_MAP = {
     # Historical pages
@@ -74,3 +75,20 @@ def redirect_security(request):
         return redirect('security-issue', year=year, sequence=sequence)
     else:
         return redirect('security')
+
+
+class PMAView(TemplateView):
+    title = ''
+
+    def __init__(self, *args, **kwargs):
+        self.title = kwargs.pop('title', '')
+        self.rss = reverse(kwargs.pop('rss', 'feed-news'))
+        self.rss_title = kwargs.pop('rss_title', 'phpMyAdmin news')
+        super(PMAView, self).__init__(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(PMAView, self).get_context_data(**kwargs)
+        context['page_title'] = self.title
+        context['page_rss'] = self.rss
+        context['page_rss_title'] = self.rss_title
+        return context
