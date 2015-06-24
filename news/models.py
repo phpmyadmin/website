@@ -21,15 +21,15 @@
 #
 
 from django.db import models
-from markupfield.fields import MarkupField
+from django.utils import timezone
 from django.contrib.auth.models import User
+from markupfield.fields import MarkupField
 
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(db_index=True, unique_for_date='date')
-    # TODO: add sensible default value
-    date = models.DateTimeField(db_index=True)
+    date = models.DateTimeField(db_index=True, default=timezone.now)
     body = MarkupField(default_markup_type='markdown')
     author = models.ForeignKey(User, editable=False)
 
