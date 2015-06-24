@@ -47,10 +47,12 @@ urlpatterns = patterns('',
     url(
         r'news/feed/$',
         NewsFeed(),
+        name='feed-news',
     ),
     url(
         r'files/feed/$',
         ReleaseFeed(),
+        name='feed-files',
     ),
 
     # Pages
