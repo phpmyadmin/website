@@ -2,7 +2,6 @@
 - purge cdn on new release/theme/post/...
 - news archive
 - RSS feeds
-    - news
     - CVE
     - files
 - RSS for pages

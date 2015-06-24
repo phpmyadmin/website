@@ -18,26 +18,27 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#
 
-from django.db import models
-from markupfield.fields import MarkupField
-from django.contrib.auth.models import User
+from django.contrib.syndication.views import Feed
+from news.models import Post
 
 
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    slug = models.SlugField(db_index=True, unique_for_date='date')
-    # TODO: add sensible default value
-    date = models.DateTimeField(db_index=True)
-    body = MarkupField(default_markup_type='markdown')
-    author = models.ForeignKey(User, editable=False)
+class NewsFeed(Feed):
+    title = "phpMyAdmin news"
+    link = "/news/"
+    description = "News from the phpMyAdmin project."
 
-    class Meta(object):
-        ordering = ['-date']
+    def items(self):
+        return Post.objects.all()[:10]
 
-    def __unicode__(self):
-        return self.title
+    def item_title(self, item):
+        return item.title
 
-    def get_absolute_url(self):
-        return '/TODO:link/'
+    def item_description(self, item):
+        return item.body
+
+    def item_author_name(self, item):
+        return item.author.get_full_name()
+
+    def item_pubdate(self, item):
+        return item.date
