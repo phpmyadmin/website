@@ -49,8 +49,8 @@ history</a>.
 <p>phpMyAdmin software information is available in following machine readable formats:</p>
 
 <ul>
-<li><a href="http://www.asp-shareware.org/pad/">PAD</a>: <a href="http://www.phpmyadmin.net/home_page/phpmyadmin.xml">http://www.phpmyadmin.net/home_page/phpmyadmin.xml</a></li>
-<li><a href="http://trac.usefulinc.com/doap">DOAP</a>: <a href="http://www.phpmyadmin.net/home_page/phpmyadmin-doap.xml">http://www.phpmyadmin.net/home_page/phpmyadmin-doap.xml</a></li>
+<li><a href="http://www.asp-shareware.org/pad/">PAD</a>: <a href="{% url 'pad' %}">https://www.phpmyadmin.net/{% url 'pad' %}</a></li>
+<li><a href="http://trac.usefulinc.com/doap">DOAP</a>: <a href="{% url 'doap' %}">https://www.phpmyadmin.net/{% url 'doap' %}</a></li>
 </ul>
 
 {% endblock %}

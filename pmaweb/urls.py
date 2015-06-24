@@ -285,18 +285,20 @@ urlpatterns = patterns('',
 
     # Machine parsable output
     url(
-        r'^(home_page/)?phpmyadmin.xml$',
+        r'^home_page/phpmyadmin.xml$',
         TemplateView.as_view(
             template_name='phpmyadmin.xml',
             content_type='application/xml'
-        )
+        ),
+        name='pad',
     ),
     url(
-        r'^(home_page/)?phpmyadmin-doap.xml$',
+        r'^home_page/phpmyadmin-doap.xml$',
         TemplateView.as_view(
             template_name='phpmyadmin-doap.xml',
             content_type='application/xml'
-        )
+        ),
+        name='doap',
     ),
 
     # Version information
