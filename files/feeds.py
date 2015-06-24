@@ -29,7 +29,7 @@ class ReleaseFeed(Feed):
     description = "Releases from the phpMyAdmin project."
 
     def items(self):
-        return Release.objects.all()[:10]
+        return Release.objects.order_by('-date')[:10]
 
     def item_title(self, item):
         return item.version
@@ -37,7 +37,6 @@ class ReleaseFeed(Feed):
     def item_description(self, item):
         return item.release_notes
 
-# TODO:
-#    def item_pubdate(self, item):
-#        return item.date
+    def item_pubdate(self, item):
+        return item.date
 
