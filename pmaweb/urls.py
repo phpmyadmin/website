@@ -27,6 +27,7 @@ from security.views import PMASAView
 from files.views import ReleaseList, ReleaseDetail
 from news.feeds import NewsFeed
 from files.feeds import ReleaseFeed
+from security.feeds import PMASAFeed
 
 
 class TitleView(TemplateView):
@@ -53,6 +54,11 @@ urlpatterns = patterns('',
         r'files/feed/$',
         ReleaseFeed(),
         name='feed-files',
+    ),
+    url(
+        r'security/feed/$',
+        PMASAFeed(),
+        name='feed-security',
     ),
 
     # Pages
@@ -358,6 +364,13 @@ urlpatterns = patterns('',
         r'^home_page/security/(?:index.php)?$',
         RedirectView.as_view(
             pattern_name='security',
+            permanent=True,
+        )
+    ),
+    url(
+        r'^home_page/security/index.xml$',
+        RedirectView.as_view(
+            pattern_name='feed-security',
             permanent=True,
         )
     ),

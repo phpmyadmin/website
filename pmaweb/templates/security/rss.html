@@ -1,0 +1,10 @@
+<p>{{ obj.summary }}</p>
+
+<h3>Affected Versions</h3>
+<p>{{ obj.affected }}</p>
+
+<h3>CVE ID</h3>
+{% for cve in obj.get_cves %}
+<p><a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name={{ cve }}">{{ cve }}</a></p>
+{% endfor %}
+

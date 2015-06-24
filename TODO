@@ -1,8 +1,6 @@
 - create news entry on new release/PMASA
 - purge cdn on new release/theme/post/...
 - news archive
-- RSS feeds
-    - CVE
 - RSS for pages
 - check for py: in templates
 - check for ${ in templates
