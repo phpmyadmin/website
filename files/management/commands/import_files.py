@@ -26,6 +26,7 @@ from glob import glob
 from files.models import Release, Download
 from bs4 import BeautifulSoup
 from files.utils import read_sum
+import codecs
 
 
 def glob_downloads():
@@ -66,9 +67,9 @@ class Command(BaseCommand):
                     path, version
                 )
                 if os.path.exists(notes):
-                    with open(notes, 'r') as handle:
+                    with codecs.open(notes, 'r', 'utf-8') as handle:
                         release.release_notes_markup_type = 'html'
-                        release.release_notes = '<pre>{0}</pre>'.format(
+                        release.release_notes = u'<pre>{0}</pre>'.format(
                             BeautifulSoup(
                                 handle.read()
                             ).get_text()
