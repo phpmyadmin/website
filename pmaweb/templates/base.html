@@ -10,6 +10,8 @@
   <title>phpMyAdmin{% if page_title %} - {{ page_title }}{% endif %}</title>
   {% if page_rss %}
   <link rel="alternate" type="application/rss+xml" href="{{ page_rss }}" title="{{ page_rss_title }}"/>
+  {% else %}
+  <link rel="alternate" type="application/rss+xml" href="{% url 'feed-news' %}" title="phpMyAdmin news"/>
   {% endif %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/slimbox.css' %}" media="screen" />
