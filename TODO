@@ -1,4 +1,5 @@
 - purge cdn on new release/theme/post/...
+- planet
 - news archive
 - check for py: in templates
 - check for ${ in templates
