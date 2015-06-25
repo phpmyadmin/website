@@ -30,17 +30,19 @@ The translation server also provides you overview of translation status.
 </thead>
 
 <tbody>
-<tr py:for="item in translations">
+{% for translation in translations %}
+<tr>
 <td class="name">
-<a href="${item.url}">${item.name}</a>
+<a href="{{ translation.get_absolute_url }}">{{ translation }}</a>
 </td>
-<td class="size">${item.translated}</td>
-<td class="size">${item.percent}%</td>
-<td class="bar${item.css}">
-<div class="bar" style="width: ${round(float(item.percent))}%;"></div>
+<td class="size">{{ translation.translated }}</td>
+<td class="size">{{ translation.percent }}%</td>
+<td class="bar{{ translation.css }}">
+<div class="bar" style="width: {{ translation.percent|floatformat:"0" }}%;"></div>
 </td>
-<td class="date">${item.updated}</td>
+<td class="date">{{ translation.updated|date:"Y-m-d" }}</td>
 </tr>
+{% endfor %}
 </tbody>
 </table>
 

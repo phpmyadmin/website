@@ -21,6 +21,7 @@
 
 from files.models import Release, Theme
 from news.models import Post
+from translations.models import Translation
 from security.models import PMASA
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -41,6 +42,7 @@ def basic(request):
         'themecssversions': CSSVERSIONS,
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
+        'translations': Translation.objects.all(),
     }
 
 

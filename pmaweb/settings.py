@@ -63,6 +63,7 @@ INSTALLED_APPS = (
     'files',
     'news',
     'security',
+    'translations',
     'pmaweb',
 )
 
