@@ -53,6 +53,25 @@ Screenshots
 All screenshots are listed in data/screenshots.py.
 
 
+Deployment
+----------
+
+Cron jobs:
+
+.. code-block:: sh
+
+    # Update translation stats
+    ./manage.py fetch_translations
+
+File releases scan:
+
+.. code-block:: sh
+
+    # Import new releases from file storage
+    ./manage.py import_files 
+    # Import new themes from file storage
+    ./manage.py import_themes
+
 License
 -------
 
