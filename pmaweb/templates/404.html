@@ -1,10 +1,9 @@
-<html xmlns:py="http://genshi.edgewall.org/" xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-<py:def function="page_title">Page not found</py:def>
+{% block content %}
 
-<div py:match="content" id="body">
-
-<xi:include href="_littleboxes.tpl" />
+{% include "_littleboxes.html" %}
 
 <h2>Page Not Found</h2>
 
@@ -21,7 +20,4 @@ var GOOG_FIXURL_SITE = 'http://www.phpmyadmin.net/';
 </script>
 <script type="text/javascript" src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
 
-</div>
-
-<xi:include href="_page.tpl" />
-</html>
+{% endblock %}

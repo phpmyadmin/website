@@ -25,6 +25,8 @@ from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.views.generic import TemplateView
+from django.shortcuts import render
+
 
 REDIRECT_MAP = {
     # Historical pages
@@ -75,6 +77,15 @@ def redirect_security(request):
         return redirect('security-issue', year=year, sequence=sequence)
     else:
         return redirect('security')
+
+
+def notfound(request):
+    return render(
+        request,
+        '404.html',
+        {'title': 'Page Not Found'},
+        status=404
+    )
 
 
 class PMAView(TemplateView):
