@@ -31,6 +31,9 @@ from files.feeds import ReleaseFeed
 from security.feeds import PMASAFeed
 
 
+TRANSLATIONS_RSS = 'https://hosted.weblate.org/exports/rss/phpmyadmin/'
+
+
 urlpatterns = patterns('',
     # Feeds
     url(
@@ -150,6 +153,8 @@ urlpatterns = patterns('',
         PMAView.as_view(
             template_name='translations.html',
             title='Translations',
+            rss=TRANSLATIONS_RSS,
+            rss_title='phpMyAdmin translation changes',
         ),
         name='translations'
     ),
@@ -224,6 +229,8 @@ urlpatterns = patterns('',
         PMAView.as_view(
             template_name='translate.html',
             title='Translating',
+            rss=TRANSLATIONS_RSS,
+            rss_title='phpMyAdmin translation changes',
         ),
         name='translate'
     ),

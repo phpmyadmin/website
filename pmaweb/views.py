@@ -84,7 +84,9 @@ class PMAView(TemplateView):
 
     def __init__(self, *args, **kwargs):
         self.title = kwargs.pop('title', '')
-        self.rss = reverse(kwargs.pop('rss', 'feed-news'))
+        self.rss = kwargs.pop('rss', 'feed-news')
+        if '/' not in self.rss:
+            self.rss = reverse(self.rss)
         self.rss_title = kwargs.pop('rss_title', 'phpMyAdmin news')
         super(PMAView, self).__init__(*args, **kwargs)
 
