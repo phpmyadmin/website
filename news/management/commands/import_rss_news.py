@@ -103,6 +103,6 @@ class Command(BaseCommand):
         data = handle.read()
         parsed = feedparser.parse(data)
         if parsed.bozo == 1:
-            self.stderr.write(parsed.bozo_exception)
+            raise CommandError(parsed.bozo_exception)
         else:
             self.process_feed(parsed)
