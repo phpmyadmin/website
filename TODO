@@ -1,6 +1,5 @@
 - purge cdn on new release/theme/post/...
 - news archive
-- RSS for pages
 - check for py: in templates
 - check for ${ in templates
 - html sitemap
