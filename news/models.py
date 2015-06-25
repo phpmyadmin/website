@@ -41,3 +41,19 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return '/TODO:link/'
+
+
+class Planet(models.Model):
+    """Cache for planet phpMyAdmin posts"""
+    url = models.URLField(unique=True)
+    title = models.CharField(max_length=100)
+    date = models.DateTimeField(db_index=True, default=timezone.now)
+
+    class Meta(object):
+        ordering = ['-date']
+
+    def __unicode__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return self.url

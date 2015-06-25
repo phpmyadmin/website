@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 from django.contrib import admin
-from news.models import Post
+from news.models import Post, Planet
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -36,4 +36,11 @@ class PostAdmin(admin.ModelAdmin):
         obj.save()
 
 
+class PlanetAdmin(admin.ModelAdmin):
+    list_display = ('title', 'date', 'url')
+    date_hierarchy = 'date'
+    search_fields = ['title', 'url']
+
+
+admin.site.register(Planet, PlanetAdmin)
 admin.site.register(Post, PostAdmin)

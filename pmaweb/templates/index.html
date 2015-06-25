@@ -122,9 +122,11 @@ base; you can find out more about the <a href="{% url 'about' %}">project and it
 <div class="floatbox hslice" id="latest-blogs">
     <h2 class="entry-title"><a href="http://planet.phpmyadmin.net/">Latest Posts in Developers Blogs</a></h2>
     <ul>
-    <li py:for="item in short_blogs">
-        <a href="${item.link}">${item.date}: ${item.title}</a>
+    {% for item in short_planet %}
+    <li>
+        <a href="{{ item.get_absolute_url }}">{{ item.date|date:"Y-m-d" }}: {{item.title}}</a>
     </li>
+    {% endfor %}
     </ul>
     <p class="signature"><a href="http://planet.phpmyadmin.net/">...more blogs.</a></p>
 </div>

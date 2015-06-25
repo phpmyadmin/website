@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from files.models import Release, Theme
-from news.models import Post
+from news.models import Post, Planet
 from translations.models import Translation
 from security.models import PMASA
 from django.conf import settings
@@ -37,6 +37,7 @@ def basic(request):
     return {
         'current_year': datetime.datetime.now().year,
         'short_news': Post.objects.all()[:5],
+        'short_planet': Planet.objects.all()[:5],
         'screenshots': SCREENSHOTS,
         'themes': Theme.objects.all(),
         'themecssversions': CSSVERSIONS,
