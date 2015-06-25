@@ -20189,13 +20189,40 @@
 },
 {
   "fields": {
+    "codename": "add_translation",
+    "name": "Can add translation",
+    "content_type": 12
+  },
+  "model": "auth.permission",
+  "pk": 34
+},
+{
+  "fields": {
+    "codename": "change_translation",
+    "name": "Can change translation",
+    "content_type": 12
+  },
+  "model": "auth.permission",
+  "pk": 35
+},
+{
+  "fields": {
+    "codename": "delete_translation",
+    "name": "Can delete translation",
+    "content_type": 12
+  },
+  "model": "auth.permission",
+  "pk": 36
+},
+{
+  "fields": {
     "username": "nijel",
     "first_name": "",
     "last_name": "",
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
-    "last_login": "2015-06-24T07:19:08.448Z",
+    "last_login": "2015-06-25T12:13:58.248Z",
     "groups": [],
     "user_permissions": [],
     "password": "pbkdf2_sha256$20000$GoidkBgxk1Q8$ezerOrLyzBMeQfI5g3APOhTjK1DB/yId7Z6HD8tOlPA=",
@@ -23102,6 +23129,886 @@
   },
   "model": "security.pmasa",
   "pk": 120
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/af/",
+    "translated": 299,
+    "updated": null,
+    "percent": "9.5",
+    "name": "Afrikaans"
+  },
+  "model": "translations.translation",
+  "pk": 81
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sq/",
+    "translated": 3058,
+    "updated": "2015-05-03T14:39:04Z",
+    "percent": "97.8",
+    "name": "Albanian"
+  },
+  "model": "translations.translation",
+  "pk": 82
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ar/",
+    "translated": 1160,
+    "updated": "2015-03-27T09:17:50Z",
+    "percent": "37.1",
+    "name": "Arabic"
+  },
+  "model": "translations.translation",
+  "pk": 83
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hy/",
+    "translated": 99,
+    "updated": "2014-11-14T18:09:38Z",
+    "percent": "3.1",
+    "name": "Armenian"
+  },
+  "model": "translations.translation",
+  "pk": 84
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/az/",
+    "translated": 1770,
+    "updated": "2015-05-20T23:04:11Z",
+    "percent": "56.6",
+    "name": "Azerbaijani"
+  },
+  "model": "translations.translation",
+  "pk": 85
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/eu/",
+    "translated": 518,
+    "updated": null,
+    "percent": "16.5",
+    "name": "Basque"
+  },
+  "model": "translations.translation",
+  "pk": 86
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/be/",
+    "translated": 816,
+    "updated": "2015-05-15T12:28:20Z",
+    "percent": "26.1",
+    "name": "Belarusian"
+  },
+  "model": "translations.translation",
+  "pk": 87
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/be%40latin/",
+    "translated": 799,
+    "updated": null,
+    "percent": "25.5",
+    "name": "Belarusian (latin)"
+  },
+  "model": "translations.translation",
+  "pk": 88
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/bn/",
+    "translated": 2492,
+    "updated": "2014-11-05T09:27:19Z",
+    "percent": "79.7",
+    "name": "Bengali"
+  },
+  "model": "translations.translation",
+  "pk": 89
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/bs/",
+    "translated": 424,
+    "updated": null,
+    "percent": "13.5",
+    "name": "Bosnian"
+  },
+  "model": "translations.translation",
+  "pk": 90
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/br/",
+    "translated": 575,
+    "updated": null,
+    "percent": "18.4",
+    "name": "Breton"
+  },
+  "model": "translations.translation",
+  "pk": 91
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/bg/",
+    "translated": 1884,
+    "updated": "2015-05-23T20:10:11Z",
+    "percent": "60.2",
+    "name": "Bulgarian"
+  },
+  "model": "translations.translation",
+  "pk": 92
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ca/",
+    "translated": 3050,
+    "updated": "2015-05-30T15:56:53Z",
+    "percent": "97.6",
+    "name": "Catalan"
+  },
+  "model": "translations.translation",
+  "pk": 93
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/km/",
+    "translated": 179,
+    "updated": null,
+    "percent": "5.7",
+    "name": "Central Khmer"
+  },
+  "model": "translations.translation",
+  "pk": 94
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/zh_CN/",
+    "translated": 2426,
+    "updated": "2015-04-21T06:43:34Z",
+    "percent": "77.7",
+    "name": "Chinese (China)"
+  },
+  "model": "translations.translation",
+  "pk": 95
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/zh_TW/",
+    "translated": 3053,
+    "updated": "2015-05-28T07:43:41Z",
+    "percent": "97.8",
+    "name": "Chinese (Taiwan)"
+  },
+  "model": "translations.translation",
+  "pk": 96
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ksh/",
+    "translated": 32,
+    "updated": "2014-10-02T13:06:50Z",
+    "percent": "1.0",
+    "name": "Colognian"
+  },
+  "model": "translations.translation",
+  "pk": 97
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hr/",
+    "translated": 970,
+    "updated": null,
+    "percent": "31.0",
+    "name": "Croatian"
+  },
+  "model": "translations.translation",
+  "pk": 98
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/cs/",
+    "translated": 2927,
+    "updated": "2015-05-14T13:44:41Z",
+    "percent": "93.6",
+    "name": "Czech"
+  },
+  "model": "translations.translation",
+  "pk": 99
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/da/",
+    "translated": 3017,
+    "updated": "2015-06-10T21:07:28Z",
+    "percent": "96.5",
+    "name": "Danish"
+  },
+  "model": "translations.translation",
+  "pk": 100
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/nl/",
+    "translated": 3124,
+    "updated": "2015-06-23T14:27:06Z",
+    "percent": "100.0",
+    "name": "Dutch"
+  },
+  "model": "translations.translation",
+  "pk": 101
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/en_GB/",
+    "translated": 2656,
+    "updated": "2015-03-02T13:11:44Z",
+    "percent": "84.9",
+    "name": "English (United Kingdom)"
+  },
+  "model": "translations.translation",
+  "pk": 102
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/eo/",
+    "translated": 76,
+    "updated": "2015-01-01T16:51:44Z",
+    "percent": "2.4",
+    "name": "Esperanto"
+  },
+  "model": "translations.translation",
+  "pk": 103
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/et/",
+    "translated": 3115,
+    "updated": "2015-06-19T14:32:46Z",
+    "percent": "99.6",
+    "name": "Estonian"
+  },
+  "model": "translations.translation",
+  "pk": 104
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fi/",
+    "translated": 1903,
+    "updated": "2015-01-18T14:39:28Z",
+    "percent": "60.8",
+    "name": "Finnish"
+  },
+  "model": "translations.translation",
+  "pk": 105
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fr/",
+    "translated": 3125,
+    "updated": "2015-06-23T11:29:35Z",
+    "percent": "100.0",
+    "name": "French"
+  },
+  "model": "translations.translation",
+  "pk": 106
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fy/",
+    "translated": 636,
+    "updated": "2015-04-15T20:05:13Z",
+    "percent": "20.3",
+    "name": "Frisian"
+  },
+  "model": "translations.translation",
+  "pk": 107
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/gl/",
+    "translated": 2300,
+    "updated": "2014-10-10T21:59:14Z",
+    "percent": "73.6",
+    "name": "Galician"
+  },
+  "model": "translations.translation",
+  "pk": 108
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ka/",
+    "translated": 462,
+    "updated": null,
+    "percent": "14.7",
+    "name": "Georgian"
+  },
+  "model": "translations.translation",
+  "pk": 109
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/de/",
+    "translated": 3125,
+    "updated": "2015-06-24T07:21:57Z",
+    "percent": "100.0",
+    "name": "German"
+  },
+  "model": "translations.translation",
+  "pk": 110
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/el/",
+    "translated": 3125,
+    "updated": "2015-06-22T12:51:37Z",
+    "percent": "100.0",
+    "name": "Greek"
+  },
+  "model": "translations.translation",
+  "pk": 111
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/he/",
+    "translated": 570,
+    "updated": "2014-10-22T13:46:05Z",
+    "percent": "18.2",
+    "name": "Hebrew"
+  },
+  "model": "translations.translation",
+  "pk": 112
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hi/",
+    "translated": 1253,
+    "updated": "2015-02-04T17:17:06Z",
+    "percent": "40.0",
+    "name": "Hindi"
+  },
+  "model": "translations.translation",
+  "pk": 113
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hu/",
+    "translated": 3125,
+    "updated": "2015-06-23T06:32:17Z",
+    "percent": "100.0",
+    "name": "Hungarian"
+  },
+  "model": "translations.translation",
+  "pk": 114
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/id/",
+    "translated": 2299,
+    "updated": "2015-06-17T04:05:10Z",
+    "percent": "73.5",
+    "name": "Indonesian"
+  },
+  "model": "translations.translation",
+  "pk": 115
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ia/",
+    "translated": 2173,
+    "updated": "2015-06-22T20:26:14Z",
+    "percent": "69.5",
+    "name": "Interlingua"
+  },
+  "model": "translations.translation",
+  "pk": 116
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/it/",
+    "translated": 3125,
+    "updated": "2015-06-24T20:37:39Z",
+    "percent": "100.0",
+    "name": "Italian"
+  },
+  "model": "translations.translation",
+  "pk": 117
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ja/",
+    "translated": 2208,
+    "updated": "2015-03-28T03:08:16Z",
+    "percent": "70.6",
+    "name": "Japanese"
+  },
+  "model": "translations.translation",
+  "pk": 118
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/kn/",
+    "translated": 83,
+    "updated": "2014-12-24T01:27:37Z",
+    "percent": "2.6",
+    "name": "Kannada"
+  },
+  "model": "translations.translation",
+  "pk": 119
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/kk/",
+    "translated": 316,
+    "updated": null,
+    "percent": "10.1",
+    "name": "Kazakh"
+  },
+  "model": "translations.translation",
+  "pk": 120
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ko/",
+    "translated": 2463,
+    "updated": "2015-03-30T01:04:01Z",
+    "percent": "78.8",
+    "name": "Korean"
+  },
+  "model": "translations.translation",
+  "pk": 121
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ckb/",
+    "translated": 620,
+    "updated": "2015-06-22T09:43:13Z",
+    "percent": "19.8",
+    "name": "Kurdish Sorani"
+  },
+  "model": "translations.translation",
+  "pk": 122
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ky/",
+    "translated": 56,
+    "updated": null,
+    "percent": "1.7",
+    "name": "Kyrgyz"
+  },
+  "model": "translations.translation",
+  "pk": 123
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/lv/",
+    "translated": 646,
+    "updated": "2015-04-04T16:47:36Z",
+    "percent": "20.6",
+    "name": "Latvian"
+  },
+  "model": "translations.translation",
+  "pk": 124
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/li/",
+    "translated": 50,
+    "updated": "2014-12-27T14:51:37Z",
+    "percent": "1.6",
+    "name": "Limburgish"
+  },
+  "model": "translations.translation",
+  "pk": 125
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/lt/",
+    "translated": 1456,
+    "updated": "2015-02-15T17:57:47Z",
+    "percent": "46.5",
+    "name": "Lithuanian"
+  },
+  "model": "translations.translation",
+  "pk": 126
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/mk/",
+    "translated": 539,
+    "updated": "2014-11-05T09:33:08Z",
+    "percent": "17.2",
+    "name": "Macedonian"
+  },
+  "model": "translations.translation",
+  "pk": 127
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ms/",
+    "translated": 341,
+    "updated": "2014-11-05T09:35:19Z",
+    "percent": "10.9",
+    "name": "Malay"
+  },
+  "model": "translations.translation",
+  "pk": 128
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ml/",
+    "translated": 52,
+    "updated": null,
+    "percent": "1.6",
+    "name": "Malayalam"
+  },
+  "model": "translations.translation",
+  "pk": 129
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/mn/",
+    "translated": 682,
+    "updated": "2014-11-05T09:28:46Z",
+    "percent": "21.8",
+    "name": "Mongolian"
+  },
+  "model": "translations.translation",
+  "pk": 130
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ne/",
+    "translated": 52,
+    "updated": null,
+    "percent": "1.6",
+    "name": "Nepali"
+  },
+  "model": "translations.translation",
+  "pk": 131
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/nb/",
+    "translated": 1943,
+    "updated": "2015-06-22T02:13:06Z",
+    "percent": "62.1",
+    "name": "Norwegian Bokm\u00e5l"
+  },
+  "model": "translations.translation",
+  "pk": 132
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fa/",
+    "translated": 838,
+    "updated": "2014-12-18T08:39:58Z",
+    "percent": "26.8",
+    "name": "Persian"
+  },
+  "model": "translations.translation",
+  "pk": 133
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pl/",
+    "translated": 2602,
+    "updated": "2015-01-21T01:11:11Z",
+    "percent": "83.2",
+    "name": "Polish"
+  },
+  "model": "translations.translation",
+  "pk": 134
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pt/",
+    "translated": 1784,
+    "updated": "2015-06-11T16:19:04Z",
+    "percent": "57.0",
+    "name": "Portuguese"
+  },
+  "model": "translations.translation",
+  "pk": 135
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pt_BR/",
+    "translated": 3031,
+    "updated": "2015-06-03T14:37:43Z",
+    "percent": "97.0",
+    "name": "Portuguese (Brazil)"
+  },
+  "model": "translations.translation",
+  "pk": 136
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pa/",
+    "translated": 85,
+    "updated": "2014-12-24T01:54:10Z",
+    "percent": "2.7",
+    "name": "Punjabi"
+  },
+  "model": "translations.translation",
+  "pk": 137
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ro/",
+    "translated": 1776,
+    "updated": "2015-05-29T10:40:23Z",
+    "percent": "56.8",
+    "name": "Romanian"
+  },
+  "model": "translations.translation",
+  "pk": 138
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ru/",
+    "translated": 2935,
+    "updated": "2015-05-31T00:17:11Z",
+    "percent": "93.9",
+    "name": "Russian"
+  },
+  "model": "translations.translation",
+  "pk": 139
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sr/",
+    "translated": 753,
+    "updated": null,
+    "percent": "24.0",
+    "name": "Serbian"
+  },
+  "model": "translations.translation",
+  "pk": 140
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sr%40latin/",
+    "translated": 1508,
+    "updated": null,
+    "percent": "48.2",
+    "name": "Serbian (latin)"
+  },
+  "model": "translations.translation",
+  "pk": 141
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/si/",
+    "translated": 1965,
+    "updated": "2014-11-11T11:16:10Z",
+    "percent": "62.8",
+    "name": "Sinhala"
+  },
+  "model": "translations.translation",
+  "pk": 142
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sk/",
+    "translated": 2606,
+    "updated": "2015-06-16T05:14:21Z",
+    "percent": "83.3",
+    "name": "Slovak"
+  },
+  "model": "translations.translation",
+  "pk": 143
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sl/",
+    "translated": 3125,
+    "updated": "2015-06-25T09:36:01Z",
+    "percent": "100.0",
+    "name": "Slovenian"
+  },
+  "model": "translations.translation",
+  "pk": 144
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/es/",
+    "translated": 3060,
+    "updated": "2015-06-22T18:58:30Z",
+    "percent": "97.9",
+    "name": "Spanish"
+  },
+  "model": "translations.translation",
+  "pk": 145
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sv/",
+    "translated": 2656,
+    "updated": "2014-12-29T14:37:23Z",
+    "percent": "84.9",
+    "name": "Swedish"
+  },
+  "model": "translations.translation",
+  "pk": 146
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ta/",
+    "translated": 1160,
+    "updated": "2015-03-02T18:02:52Z",
+    "percent": "37.1",
+    "name": "Tamil"
+  },
+  "model": "translations.translation",
+  "pk": 147
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/tt/",
+    "translated": 548,
+    "updated": "2014-11-05T09:35:07Z",
+    "percent": "17.5",
+    "name": "Tatar"
+  },
+  "model": "translations.translation",
+  "pk": 148
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/te/",
+    "translated": 322,
+    "updated": null,
+    "percent": "10.3",
+    "name": "Telugu"
+  },
+  "model": "translations.translation",
+  "pk": 149
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/th/",
+    "translated": 1048,
+    "updated": "2015-02-09T15:12:16Z",
+    "percent": "33.5",
+    "name": "Thai"
+  },
+  "model": "translations.translation",
+  "pk": 150
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/tr/",
+    "translated": 3125,
+    "updated": "2015-06-22T17:27:52Z",
+    "percent": "100.0",
+    "name": "Turkish"
+  },
+  "model": "translations.translation",
+  "pk": 151
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/tk/",
+    "translated": 9,
+    "updated": null,
+    "percent": "0.2",
+    "name": "Turkmen"
+  },
+  "model": "translations.translation",
+  "pk": 152
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ug/",
+    "translated": 340,
+    "updated": null,
+    "percent": "10.8",
+    "name": "Uighur"
+  },
+  "model": "translations.translation",
+  "pk": 153
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/uk/",
+    "translated": 2701,
+    "updated": "2015-01-02T16:07:53Z",
+    "percent": "86.4",
+    "name": "Ukrainian"
+  },
+  "model": "translations.translation",
+  "pk": 154
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ur/",
+    "translated": 601,
+    "updated": null,
+    "percent": "19.2",
+    "name": "Urdu"
+  },
+  "model": "translations.translation",
+  "pk": 155
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/uz/",
+    "translated": 1092,
+    "updated": "2014-11-14T18:09:42Z",
+    "percent": "34.9",
+    "name": "Uzbek"
+  },
+  "model": "translations.translation",
+  "pk": 156
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/uz%40latin/",
+    "translated": 1065,
+    "updated": "2014-11-05T09:33:40Z",
+    "percent": "34.1",
+    "name": "Uzbek (latin)"
+  },
+  "model": "translations.translation",
+  "pk": 157
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/vi/",
+    "translated": 70,
+    "updated": "2015-04-15T07:55:22Z",
+    "percent": "2.2",
+    "name": "Vietnamese"
+  },
+  "model": "translations.translation",
+  "pk": 158
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/cy/",
+    "translated": 592,
+    "updated": "2014-11-14T18:10:50Z",
+    "percent": "18.9",
+    "name": "Welsh"
+  },
+  "model": "translations.translation",
+  "pk": 159
+},
+{
+  "fields": {
+    "url": "https://hosted.weblate.org/projects/phpmyadmin/master/vls/",
+    "translated": 92,
+    "updated": "2014-12-24T00:37:21Z",
+    "percent": "2.9",
+    "name": "West Flemish"
+  },
+  "model": "translations.translation",
+  "pk": 160
 },
 {
   "fields": {
