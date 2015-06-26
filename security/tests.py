@@ -20,5 +20,23 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 from django.test import TestCase
+from security.models import PMASA
 
-# Create your tests here.
+
+class PMASATest(TestCase):
+    def test_commits(self):
+        self.assertEqual(
+            PMASA(commits='1234\n3.3: 4312').get_commits(),
+            [
+                {'commits': ['1234'], 'branch': ''},
+                {'commits': ['4312'], 'branch': '3.3'},
+            ]
+        )
+        self.assertEqual(
+            PMASA(commits='1234\n3.3: 4312\n4.4: 6667').get_commits(),
+            [
+                {'commits': ['1234'], 'branch': ''},
+                {'commits': ['4312'], 'branch': '3.3'},
+                {'commits': ['6667'], 'branch': '4.4'},
+            ]
+        )
