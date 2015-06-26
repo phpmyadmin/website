@@ -16,10 +16,10 @@ python-dateutil - http://labix.org/python-dateutil
     (1.5 tested)
 
 
-Security announcements
-----------------------
+Security announcements and news
+-------------------------------
 
-Edit announcements in the web UI.
+Edit announcements and news entries in the web UI.
 
 
 Page generating
