@@ -20,5 +20,11 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 from django.shortcuts import render
+from django.views.generic.dates import ArchiveIndexView
+from news.models import Post
 
-# Create your views here.
+
+class PostArchive(ArchiveIndexView):
+    model = Post
+    date_field = 'date'
+    paginate_by = 10
