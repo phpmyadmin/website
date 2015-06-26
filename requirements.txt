@@ -5,3 +5,4 @@ django-markupfield
 docutils
 Markdown
 pytz
+beautifulsoup4
