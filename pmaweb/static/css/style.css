@@ -418,3 +418,16 @@ li.disabled a {
     color: black;
     text-decoration: none;
 }
+.fa-google-plus-square {
+    color: #dd4b39;
+}
+.fa-twitter-square {
+    color: #55acee;
+}
+.fa-facebook-official {
+    color: #3b5998;
+}
+.logo .fa {
+    text-decoration: none;
+    font-size: 150%;
+}
