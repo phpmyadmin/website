@@ -99,17 +99,16 @@ class PMASAParser(object):
 class Command(BaseCommand):
     help = 'Imports PMASA entries from filesystem'
 
-
     def process_entry(self, path, name):
-        parser = ElementTree.XMLParser()
-        parser.entity = EntityDict()
+        xmlparser = ElementTree.XMLParser()
+        xmlparser.entity = EntityDict()
         filename = os.path.join(path, name)
         with open(filename, 'r') as handle:
             data = handle.read()
 
         print name
 
-        tree = ElementTree.fromstring(INTRO + data, parser)
+        tree = ElementTree.fromstring(INTRO + data, xmlparser)
 
         result = PMASAParser()
 
