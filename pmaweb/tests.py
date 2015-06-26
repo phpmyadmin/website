@@ -22,9 +22,10 @@
 
 from django.test import TestCase
 from django.core.urlresolvers import reverse
-from django.test.utils import override_settings
+from django.utils.timezone import utc, make_aware
 from urlparse import parse_qs
 import httpretty
+import datetime
 from pmaweb.views import REDIRECT_MAP
 from pmaweb.cdn import URL as CDN_URL
 from files.models import Release, Download, Theme
@@ -83,15 +84,73 @@ class CDNTest(TestCase):
         )
 
     @httpretty.activate
-    @override_settings(CDN_PASSWORD='x')
-    def test_release(self):
+    def cdn_tester(self, model, urls, **kwargs):
         httpretty.register_uri(
             httpretty.POST,
             CDN_URL,
             body=self.cdn_response,
         )
-        Release.objects.create(version='0.1')
+        self.trigger_urls = []
+        with self.settings(CDN_PASSWORD='x'):
+            model.objects.create(**kwargs)
         self.assertEqual(
             self.trigger_urls,
-            ['/', '/news/', '/files/', '/downloads/', '/files/0.1/']
+            urls,
+        )
+
+    def test_pmasa(self):
+        self.cdn_tester(
+            PMASA,
+            ['/security/', '/security/PMASA-2000-99/'],
+            year=2000,
+            sequence=99,
+        )
+
+    def test_translation(self):
+        self.cdn_tester(
+            Translation,
+            ['/translations/'],
+            name='trans', translated=1, percent=10,
+        )
+
+    def test_theme(self):
+        self.cdn_tester(
+            Theme,
+            ['/themes/'],
+            name='themeeee',
+        )
+
+    def test_release(self):
+        self.cdn_tester(
+            Release,
+            ['/', '/news/', '/files/', '/downloads/', '/files/0.1/'],
+            version='0.1',
+        )
+
+    def test_download(self):
+        release = Release.objects.create(version='0.2')
+        self.cdn_tester(
+            Download,
+            ['/', '/news/', '/files/', '/downloads/', '/files/0.2/'],
+            release=release,
+        )
+
+    def test_news_post(self):
+        self.cdn_tester(
+            Post,
+            ['/', '/news/', '/news/2000/1/1/slug/'],
+            title='title', slug='slug', author_id=0,
+            date=make_aware(
+                datetime.datetime(year=2000, month=1, day=1), utc
+            ),
+        )
+
+    def test_news_planet(self):
+        self.cdn_tester(
+            Planet,
+            ['/'],
+            title='title', url='http://example.net/',
+            date=make_aware(
+                datetime.datetime(year=2000, month=1, day=1), utc
+            ),
         )
