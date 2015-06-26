@@ -35,7 +35,6 @@ REDIRECT_MAP = {
     'feedback': 'support',
     'relnotes': 'news',
     'stats': 'team',
-    'sitemap': 'home',
 
     # Alive pages
     '15-years': '15-years',
@@ -52,6 +51,7 @@ REDIRECT_MAP = {
     'license': 'license',
     'news': 'news',
     'search': 'search',
+    'sitemap': 'sitemap',
     'sponsors': 'sponsors',
     'support': 'support',
     'team': 'team',
@@ -74,6 +74,8 @@ def redirect_security(request):
     """Redirect for old security page"""
     if 'issue' in request.GET:
         prefix, year, sequence = request.GET['issue'].split('-')
+        if prefix != 'PMASA':
+            return redirect('security')
         return redirect('security-issue', year=year, sequence=sequence)
     else:
         return redirect('security')
