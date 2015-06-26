@@ -80,12 +80,12 @@ def releases(request=None):
         beta = None
 
     delta = 1000000
-    releases = []
+    result = []
 
     for version in settings.LISTED_BRANCHES:
         min_vernum = Release.parse_version(version)
         max_vernum = min_vernum + delta
-        releases.append(Release.objects.filter(
+        result.append(Release.objects.filter(
             version_num__gte=min_vernum,
             version_num__lt=max_vernum,
             stable=True,
@@ -94,5 +94,5 @@ def releases(request=None):
     return {
         'latest': latest,
         'beta': beta,
-        'releases': releases,
+        'releases': result,
     }
