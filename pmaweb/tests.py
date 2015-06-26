@@ -50,6 +50,7 @@ class ViewTest(TestCase):
 
     def test_redirects(self):
         for url in REDIRECT_MAP:
+            print '/home_page/{0}.php'.format(url)
             response = self.client.get(
                 '/home_page/{0}.php'.format(url),
                 follow=True
