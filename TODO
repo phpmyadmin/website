@@ -1,3 +1,4 @@
 - xml sitemap
 - PGP signatures visibility
 - replace some images with font awesome stuff
+- management command to purge all CDN
