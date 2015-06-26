@@ -35,7 +35,9 @@ def perform(url, data):
     response = handle.read()
     decoded = json.loads(response)
     if decoded['status'] != 'ok':
-        raise Exception(decoded['errors'])
+        if 'errors' in decoded:
+            raise Exception(decoded['errors'])
+        raise Exception(decoded)
     return decoded
 
 
