@@ -21,8 +21,6 @@
 #
 
 from django.core.management.base import BaseCommand
-from django.conf import settings
-from files.models import Release
 from pmaweb.context_processors import releases
 
 

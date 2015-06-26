@@ -25,7 +25,7 @@ from django.core.urlresolvers import reverse
 from django.test.utils import override_settings
 from urlparse import parse_qs
 import httpretty
-from pmaweb.views import REDIRECT_MAP, redirect_home_page
+from pmaweb.views import REDIRECT_MAP
 from pmaweb.cdn import URL as CDN_URL
 from files.models import Release, Download, Theme
 from news.models import Post, Planet

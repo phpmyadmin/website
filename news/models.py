@@ -21,6 +21,7 @@
 #
 
 from django.dispatch import receiver
+from django.core.urlresolvers import reverse
 from django.db.models.signals import post_save
 from django.db import models
 from django.utils import timezone
@@ -74,7 +75,7 @@ class Planet(models.Model):
 
 
 @receiver(post_save, sender=Post)
-def purge_planet(sender, instance, **kwargs):
+def purge_post(sender, instance, **kwargs):
     purge_cdn(
         reverse('home'),
         reverse('news'),
