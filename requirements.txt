@@ -4,3 +4,4 @@ feedparser
 django-markupfield
 docutils
 Markdown
+pytz
