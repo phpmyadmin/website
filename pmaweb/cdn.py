@@ -31,7 +31,7 @@ URL_ALL = 'https://api.cdn77.com/v2.0/data/purge-all'
 
 def perform(url, data):
     """Perform CDN POST request"""
-    handle = urlopen(URL, urlencode(data))
+    handle = urlopen(url, urlencode(data))
     response = handle.read()
     decoded = json.loads(response)
     if decoded['status'] != 'ok':
