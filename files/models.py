@@ -208,7 +208,7 @@ class Theme(models.Model):
     name = models.CharField(max_length=50)
     display_name = models.CharField(max_length=50)
     version = models.CharField(max_length=50)
-    filename = models.CharField(max_length=200, unique=True)
+    filename = models.CharField(max_length=100, unique=True)
     supported_versions = models.CharField(max_length=50)
     description = models.TextField()
     author = models.CharField(max_length=200)

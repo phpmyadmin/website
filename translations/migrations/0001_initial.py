@@ -18,7 +18,10 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
                 ('translated', models.IntegerField()),
                 ('percent', models.DecimalField(max_digits=4, decimal_places=1)),
-                ('updated', models.DateTimeField()),
+                ('updated', models.DateTimeField(null=True, blank=True)),
             ],
+            options={
+                'ordering': ['name'],
+            },
         ),
     ]
