@@ -266,8 +266,11 @@ urlpatterns = patterns('',
         )
     ),
 
-    # TODO:
     # favicon.ico
+    url(
+        r'^favicon\.ico$',
+        RedirectView.as_view(url='/static/favicon.ico')
+    ),
 
     # robots.txt
     url(
