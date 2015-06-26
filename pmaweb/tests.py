@@ -22,7 +22,16 @@
 
 from django.test import TestCase
 from django.core.urlresolvers import reverse
+from django.test.utils import override_settings
+from urlparse import parse_qs
+import httpretty
 from pmaweb.views import REDIRECT_MAP, redirect_home_page
+from pmaweb.cdn import URL as CDN_URL
+from files.models import Release, Download, Theme
+from news.models import Post, Planet
+from security.models import PMASA
+from translations.models import Translation
+
 
 
 class ViewTest(TestCase):
@@ -59,3 +68,30 @@ class ViewTest(TestCase):
         )
         self.assertRedirects(response, '/security/PMASA-2011-1/')
         self.assertContains(response, 'PMASA-2011-12')
+
+
+
+class CDNTest(TestCase):
+    trigger_urls = []
+    def cdn_response(self, request, uri, headers):
+        self.assertEqual(uri, CDN_URL)
+        params = parse_qs(request.body.decode('utf-8'))
+        self.trigger_urls = params['url[]']
+        return (
+            200, headers,
+            '{"status":"ok"}',
+        )
+
+    @httpretty.activate
+    @override_settings(CDN_PASSWORD='x')
+    def test_release(self):
+        httpretty.register_uri(
+            httpretty.POST,
+            CDN_URL,
+            body=self.cdn_response,
+        )
+        Release.objects.create(version='0.1')
+        self.assertEqual(
+            self.trigger_urls,
+            ['/', '/news/', '/files/', '/downloads/', '/files/0.1/']
+        )

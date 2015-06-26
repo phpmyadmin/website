@@ -19,10 +19,14 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils import timezone
 from markupfield.fields import MarkupField
 import datetime
+from pmaweb.cdn import purge_cdn
 
 YEAR_TODAY = datetime.date.today().year
 YEAR_CHOICES = [(i, i) for i in range(2003, YEAR_TODAY + 1)]
@@ -108,3 +112,11 @@ class PMASA(models.Model):
                 'commits': line.strip().split(),
             })
         return result
+
+
+@receiver(post_save, sender=PMASA)
+def purge_pmasa(sender, instance, **kwargs):
+    purge_cdn(
+        reverse('security'),
+        instance.get_absolute_url(),
+    )

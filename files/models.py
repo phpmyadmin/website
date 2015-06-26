@@ -19,12 +19,16 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
 import os.path
 from data.themes import CSSMAP
 from markupfield.fields import MarkupField
+from pmaweb.cdn import purge_cdn
 
 # Naming of versions
 VERSION_INFO = (
@@ -243,3 +247,27 @@ class Theme(models.Model):
     @property
     def get_css(self):
         return CSSMAP[self.supported_versions]
+
+
+@receiver(post_save, sender=Release)
+def purge_release(sender, instance, **kwargs):
+    purge_cdn(
+        # Pages with _littleboxes.html
+        reverse('home'),
+        reverse('news'),
+        # Download lists
+        reverse('files'),
+        reverse('downloads'),
+        # This release
+        instance.get_absolute_url(),
+    )
+
+
+@receiver(post_save, sender=Download)
+def purge_download(sender, instance, **kwargs):
+    purge_release(sender, instance.release)
+
+
+@receiver(post_save, sender=Theme)
+def purge_theme(sender, instance, **kwargs):
+    purge_cdn(reverse('themes'))

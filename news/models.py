@@ -20,10 +20,13 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from markupfield.fields import MarkupField
+from pmaweb.cdn import purge_cdn
 
 
 class Post(models.Model):
@@ -68,3 +71,17 @@ class Planet(models.Model):
 
     def get_absolute_url(self):
         return self.url
+
+
+@receiver(post_save, sender=Post)
+def purge_planet(sender, instance, **kwargs):
+    purge_cdn(
+        reverse('home'),
+        reverse('news'),
+        instance.get_absolute_url(),
+    )
+
+
+@receiver(post_save, sender=Planet)
+def purge_planet(sender, instance, **kwargs):
+    purge_cdn(reverse('home'))
