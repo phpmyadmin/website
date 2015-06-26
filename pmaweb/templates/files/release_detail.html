@@ -4,6 +4,10 @@
 
 <h2>phpMyAdmin {{ release.version }}</h2>
 
-{% include "_release.html" %}
+<p>Released {{release.date|date:"Y-m-d"}}.</p>
+
+{{ release.release_notes }}
+
+{% include "_dllist.html" %}
 
 {% endblock %}

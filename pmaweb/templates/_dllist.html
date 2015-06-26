@@ -1,0 +1,21 @@
+<p>{{ release.get_version_info }}</p>
+
+<table class="dllist">
+<thead>
+    <tr>
+        <th>File</th>
+        <th>Size</th>
+        <th>MD5 checksum</th>
+    </tr>
+</thead>
+<tbody>
+{% for file in release.download_set.all %}
+    <tr>
+        <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
+        <td class="size">{{ file.size | filesizeformat }}</td>
+        <td>{{ file.md5 }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table> 
+
