@@ -26,6 +26,17 @@ from urllib import urlencode
 import json
 
 URL = 'https://api.cdn77.com/v2.0/data/purge'
+URL_ALL = 'https://api.cdn77.com/v2.0/data/purge-all'
+
+
+def perform(url, data):
+    """Perform CDN POST request"""
+    handle = urlopen(URL, urlencode(data))
+    response = handle.read()
+    decoded = json.loads(response)
+    if decoded['status'] != 'ok':
+        raise Exception(decoded['errors'])
+    return decoded
 
 
 def purge_cdn(*pages):
@@ -39,8 +50,16 @@ def purge_cdn(*pages):
     ]
     for page in pages:
         data.append(('url[]', page))
-    handle = urlopen(URL, urlencode(data))
-    response = handle.read()
-    decoded = json.loads(response)
-    if decoded['status'] != 'ok':
-        raise Exception(decoded['errors'])
+    return perform(URL, data)
+
+
+def purge_all_cdn():
+    """Purges all pages on CDN"""
+    if not settings.CDN_PASSWORD:
+        return
+    data = [
+        ('login', settings.CDN_LOGIN),
+        ('passwd', settings.CDN_PASSWORD),
+        ('cdn_id', settings.CDN_ID),
+    ]
+    return perform(URL_ALL, data)
