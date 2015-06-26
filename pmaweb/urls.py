@@ -36,7 +36,8 @@ TRANSLATIONS_RSS = 'https://hosted.weblate.org/exports/rss/phpmyadmin/'
 
 handler404 = 'pmaweb.views.notfound'
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Feeds
     url(
         r'news/feed/$',

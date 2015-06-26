@@ -74,6 +74,7 @@ class ViewTest(TestCase):
 
 class CDNTest(TestCase):
     trigger_urls = []
+
     def cdn_response(self, request, uri, headers):
         self.assertEqual(uri, CDN_URL)
         params = parse_qs(request.body.decode('utf-8'))
