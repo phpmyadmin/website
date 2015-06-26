@@ -59,7 +59,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         path = os.path.join(settings.FILES_PATH, 'themes')
-        for root, dirs, files in os.walk(path):
+        for root, dummy, files in os.walk(path):
             for filename in files:
                 if filename.endswith(".zip"):
                     fullname = os.path.join(
