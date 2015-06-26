@@ -26,7 +26,7 @@ from django.views.generic import TemplateView
 from pmaweb.views import PMAView
 from security.views import PMASAView
 from files.views import ReleaseList, ReleaseDetail
-from news.views import PostArchive
+from news.views import PostArchive, PostDetail
 from news.feeds import NewsFeed
 from files.feeds import ReleaseFeed
 from security.feeds import PMASAFeed
@@ -66,6 +66,11 @@ urlpatterns = patterns('',
         r'^news/$',
         PostArchive.as_view(),
         name='news'
+    ),
+    url(
+        r'^news/(?P<year>\d+)/(?P<month>\d+)/(?P<day>\d+)/(?P<slug>[^/]+)/$',
+        PostDetail.as_view(),
+        name='news-item'
     ),
     url(
         r'^security/$',

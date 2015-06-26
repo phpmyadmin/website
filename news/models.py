@@ -39,7 +39,18 @@ class Post(models.Model):
     def __unicode__(self):
         return self.title
 
+    @models.permalink
     def get_absolute_url(self):
+        return (
+            'news-item',
+            (),
+            {
+                'day': self.date.day,
+                'month': self.date.month,
+                'year': self.date.year,
+                'slug': self.slug,
+            }
+        )
         return '/TODO:link/'
 
 

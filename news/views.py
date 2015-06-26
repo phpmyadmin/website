@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 from django.shortcuts import render
-from django.views.generic.dates import ArchiveIndexView
+from django.views.generic.dates import ArchiveIndexView, DateDetailView
 from news.models import Post
 
 
@@ -28,3 +28,19 @@ class PostArchive(ArchiveIndexView):
     model = Post
     date_field = 'date'
     paginate_by = 10
+
+    def get_context_data(self, **kwargs):
+        context = super(PostArchive, self).get_context_data(**kwargs)
+        context['page_title'] = 'News'
+        return context
+
+
+class PostDetail(DateDetailView):
+    model = Post
+    date_field = 'date'
+    month_format = '%m'
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetail, self).get_context_data(**kwargs)
+        context['page_title'] = self.object.title
+        return context
