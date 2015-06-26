@@ -55,7 +55,6 @@ class Post(models.Model):
                 'slug': self.slug,
             }
         )
-        return '/TODO:link/'
 
 
 class Planet(models.Model):
