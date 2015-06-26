@@ -124,9 +124,10 @@ class Command(BaseCommand):
             defaults=result.data
         )
 
-
     def handle(self, *args, **options):
-        path = os.path.join(settings.BASE_DIR, 'pmaweb', 'templates', 'security')
+        path = os.path.join(
+            settings.BASE_DIR, 'pmaweb', 'templates', 'security'
+        )
         for filename in os.listdir(path):
             if not filename.startswith('PMASA-'):
                 continue
