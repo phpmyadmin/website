@@ -86,11 +86,11 @@
 	</Program_Descriptions>
 	<Web_Info>
 		<Application_URLs>
-			<Application_Info_URL>http://www.phpmyadmin.net/</Application_Info_URL>
-			<Application_Order_URL>http://www.phpmyadmin.net/home_page/donate.php</Application_Order_URL>
-			<Application_Screenshot_URL>http://www.phpmyadmin.net/home_page/images/screenshots/main-page.png</Application_Screenshot_URL>
-			<Application_Icon_URL>http://www.phpmyadmin.net/home_page/images/icon.png</Application_Icon_URL>
-			<Application_XML_File_URL>http://www.phpmyadmin.net/home_page/phpmyadmin.xml</Application_XML_File_URL>
+			<Application_Info_URL>https://www.phpmyadmin.net/</Application_Info_URL>
+			<Application_Order_URL>https://www.phpmyadmin.net{% url 'donate' %}</Application_Order_URL>
+			<Application_Screenshot_URL>https://www.phpmyadmin.net/static/images/screenshots/monitor.png</Application_Screenshot_URL>
+			<Application_Icon_URL>https://www.phpmyadmin.net/static/images/icon.png</Application_Icon_URL>
+			<Application_XML_File_URL>https://www.phpmyadmin.net{% url 'pad' %}</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
 			<Primary_Download_URL>{{ latest_release.simpledownload.get_absolute_url }}</Primary_Download_URL>

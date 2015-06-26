@@ -5,11 +5,11 @@
   <description xml:lang="en">phpMyAdmin is a free software tool written in PHP intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations with MySQL. The most frequently used operations are supported by the user interface (managing databases, tables, fields, relations, indexes, users, permissions, etc), while you still have the ability to directly execute any SQL statement. To ease usage to a wide range of people, phpMyAdmin is translated into 55 languages and supports both LTR and RTL languages.</description>
   <bug-database rdf:resource="https://sourceforge.net/p/phpmyadmin/bugs/" />
   <programming-language>PHP</programming-language>
-  <download-page rdf:resource="http://www.phpmyadmin.net/home_page/downloads.php" />
-  <homepage rdf:resource="http://www.phpmyadmin.net/" />
+  <download-page rdf:resource="https://www.phpmyadmin.net{% url 'downloads' %}" />
+  <homepage rdf:resource="https://www.phpmyadmin.net/" />
   <license rdf:resource="http://usefulinc.com/doap/licenses/gpl" />
   <wiki rdf:resource="http://wiki.phpmyadmin.net/" />
-  <screenshots rdf:resource="http://www.phpmyadmin.net/home_page/try.php" />
+  <screenshots rdf:resource="https://www.phpmyadmin.net{% url 'try' %}" />
   <old-homepage rdf:resource="http://phpmyadmin.sourceforge.net/" />
   <old-homepage rdf:resource="http://phpmyadmin.sf.net/" />
   <category rdf:resource="http://freshmeat.net/browse/253/"/>
