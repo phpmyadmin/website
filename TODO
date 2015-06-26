@@ -1,5 +1,3 @@
 - purge cdn on new release/theme/post/...
-- check for py: in templates
-- check for ${ in templates
 - html sitemap
 - xml sitemap
