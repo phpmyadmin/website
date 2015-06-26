@@ -5,7 +5,7 @@
     <tr>
         <th>File</th>
         <th>Size</th>
-        <th>MD5 checksum</th>
+        <th>Verification</th>
     </tr>
 </thead>
 <tbody>
@@ -13,7 +13,15 @@
     <tr>
         <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
         <td class="size">{{ file.size | filesizeformat }}</td>
-        <td>{{ file.md5 }}</td>
+        <td>
+        {% if file.signed %}
+        [<a href="{{ file.get_absolute_url }}.asc">PGP</a>]
+        [<a href="{{ file.get_absolute_url }}.md5">MD5</a>]
+        [<a href="{{ file.get_absolute_url }}.sha1">SHA1</a>]
+        {% else %}
+        MD5: {{ file.md5 }}
+        {% endif %}
+        </td>
     </tr>
 {% endfor %}
 </tbody>
