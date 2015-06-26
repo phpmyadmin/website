@@ -35,6 +35,7 @@ REDIRECT_MAP = {
     'feedback': 'support',
     'relnotes': 'news',
     'stats': 'team',
+    'sitemap': 'home',
 
     # Alive pages
     '15-years': '15-years',
@@ -51,7 +52,6 @@ REDIRECT_MAP = {
     'license': 'license',
     'news': 'news',
     'search': 'search',
-    'sitemap': 'sitemap',
     'sponsors': 'sponsors',
     'support': 'support',
     'team': 'team',

@@ -195,14 +195,6 @@ urlpatterns = patterns('',
         name='donate'
     ),
     url(
-        r'^sitemap/$',
-        PMAView.as_view(
-            template_name='sitemap.html',
-            title='Sitemap',
-        ),
-        name='sitemap'
-    ),
-    url(
         r'^search/$',
         PMAView.as_view(
             template_name='search.html',
