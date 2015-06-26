@@ -32,7 +32,9 @@ from pmaweb.cdn import purge_cdn
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField(db_index=True, unique_for_date='date')
+    slug = models.SlugField(
+        db_index=True, unique_for_date='date', max_length=100
+    )
     date = models.DateTimeField(db_index=True, default=timezone.now)
     body = MarkupField(default_markup_type='markdown')
     author = models.ForeignKey(User, editable=False)

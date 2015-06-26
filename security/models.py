@@ -47,7 +47,7 @@ class PMASA(models.Model):
     )
     summary = models.CharField(max_length=200)
     description = MarkupField(default_markup_type='markdown')
-    severity = models.CharField(max_length=200)
+    severity = models.TextField()
     mitigation = models.TextField(blank=True)
     affected = models.TextField()
     unaffected = models.TextField(blank=True)
