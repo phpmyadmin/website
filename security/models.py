@@ -118,5 +118,6 @@ class PMASA(models.Model):
 def purge_pmasa(sender, instance, **kwargs):
     purge_cdn(
         reverse('security'),
+        reverse('feed-security'),
         instance.get_absolute_url(),
     )

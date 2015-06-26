@@ -79,6 +79,7 @@ def purge_post(sender, instance, **kwargs):
     purge_cdn(
         reverse('home'),
         reverse('news'),
+        reverse('feed-news'),
         instance.get_absolute_url(),
     )
 

@@ -101,7 +101,7 @@ class CDNTest(TestCase):
     def test_pmasa(self):
         self.cdn_tester(
             PMASA,
-            ['/security/', '/security/PMASA-2000-99/'],
+            ['/security/', '/security/feed/', '/security/PMASA-2000-99/'],
             year=2000,
             sequence=99,
         )
@@ -123,7 +123,10 @@ class CDNTest(TestCase):
     def test_release(self):
         self.cdn_tester(
             Release,
-            ['/', '/news/', '/files/', '/downloads/', '/files/0.1/'],
+            [
+                '/', '/news/', '/files/', '/files/feed/',
+                '/downloads/', '/files/0.1/'
+            ],
             version='0.1',
         )
 
@@ -131,14 +134,17 @@ class CDNTest(TestCase):
         release = Release.objects.create(version='0.2')
         self.cdn_tester(
             Download,
-            ['/', '/news/', '/files/', '/downloads/', '/files/0.2/'],
+            [
+                '/', '/news/', '/files/', '/files/feed/',
+                '/downloads/', '/files/0.2/'
+            ],
             release=release,
         )
 
     def test_news_post(self):
         self.cdn_tester(
             Post,
-            ['/', '/news/', '/news/2000/1/1/slug/'],
+            ['/', '/news/', '/news/feed/', '/news/2000/1/1/slug/'],
             title='title', slug='slug', author_id=0,
             date=make_aware(
                 datetime.datetime(year=2000, month=1, day=1), utc

@@ -257,6 +257,7 @@ def purge_release(sender, instance, **kwargs):
         reverse('news'),
         # Download lists
         reverse('files'),
+        reverse('feed-files'),
         reverse('downloads'),
         # This release
         instance.get_absolute_url(),
