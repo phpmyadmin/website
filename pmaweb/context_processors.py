@@ -95,7 +95,7 @@ def releases(request=None):
         )[0])
 
     return {
-        'latest': latest,
-        'beta': beta,
+        'latest_release': latest,
+        'beta_release': beta,
         'releases': result,
     }

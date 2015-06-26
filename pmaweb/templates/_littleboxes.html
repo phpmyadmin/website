@@ -1,11 +1,11 @@
-{% with latest as release %}
+{% with latest_release as release %}
 <div class="downloadbutton">
     {% include "_dlbox.html" %}
 </div>
 {% endwith %}
 
-{% if beta %}
-{% with beta as release %}
+{% if beta_release %}
+{% with beta_release as release %}
 <div class="downloadbutton">
     {% include "_dlbox.html" %}
 </div>

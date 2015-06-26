@@ -1,1 +1,1 @@
-{"version": "{{ latest.version }}","date": "{{ latest.date|date:"Y-m-d" }}"}
+{"version": "{{ latest_release.version }}","date": "{{ latest_release.date|date:"Y-m-d" }}"}

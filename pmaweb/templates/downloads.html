@@ -28,8 +28,8 @@
     {% include "_release.html" %}
     {% endfor %}
 
-    {% if beta %}
-    {% with beta as release %}
+    {% if beta_release %}
+    {% with beta_release as release %}
     <h2>Testing: phpMyAdmin {{ release.version }}</h2>
     {% include "_release.html" %}
     {% endwith %}

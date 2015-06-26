@@ -34,10 +34,10 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>phpMyAdmin</Program_Name>
-		<Program_Version>{{ latest.version }}</Program_Version>
-		<Program_Release_Month>{{ latest.date|date:"m" }}</Program_Release_Month>
-		<Program_Release_Day>{{ latest.date|date:"d" }}</Program_Release_Day>
-		<Program_Release_Year>{{ latest.date|date:"Y" }}</Program_Release_Year>
+		<Program_Version>{{ latest_release.version }}</Program_Version>
+		<Program_Release_Month>{{ latest_release.date|date:"m" }}</Program_Release_Month>
+		<Program_Release_Day>{{ latest_release.date|date:"d" }}</Program_Release_Day>
+		<Program_Release_Year>{{ latest_release.date|date:"Y" }}</Program_Release_Year>
 		<Program_Cost_Dollars />
         <Program_Cost_Other_Code />
 		<Program_Cost_Other />
@@ -60,9 +60,9 @@
 			<Expire_Year />
 		</Expire_Info>
         <File_Info>
-            <File_Size_Bytes>{{ latest.simpledownload.size }}</File_Size_Bytes>
-            <File_Size_K>{{ latest.simpledownload.size_k }}</File_Size_K>
-            <File_Size_MB>{{ latest.simpledownload.size_m }}</File_Size_MB>
+            <File_Size_Bytes>{{ latest_release.simpledownload.size }}</File_Size_Bytes>
+            <File_Size_K>{{ latest_release.simpledownload.size_k }}</File_Size_K>
+            <File_Size_MB>{{ latest_release.simpledownload.size_m }}</File_Size_MB>
         </File_Info>
 	</Program_Info>
 	<Program_Descriptions>
@@ -93,8 +93,8 @@
 			<Application_XML_File_URL>http://www.phpmyadmin.net/home_page/phpmyadmin.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>{{ latest.simpledownload.get_absolute_url }}</Primary_Download_URL>
-			<Secondary_Download_URL>{{ latest.simpledownload.get_alternate_url }}</Secondary_Download_URL>
+			<Primary_Download_URL>{{ latest_release.simpledownload.get_absolute_url }}</Primary_Download_URL>
+			<Secondary_Download_URL>{{ latest_release.simpledownload.get_alternate_url }}</Secondary_Download_URL>
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>

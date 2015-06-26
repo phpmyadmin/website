@@ -34,12 +34,12 @@
       <browse rdf:resource="http://github.com/phpmyadmin/" />
     </GitRepository>
   </repository>
-{% for file in latest.download_set.all %}
+{% for file in latest_release.download_set.all %}
 <release>
     <Version>
       <name>{{ file.filename }}</name>
-      <created>{{ latest.date|date:"Y-m-d"}}</created>
-      <revision>{{ latest.version }}</revision>
+      <created>{{ latest_release.date|date:"Y-m-d"}}</created>
+      <revision>{{ latest_release.version }}</revision>
       <file-release rdf:resource="{{ file.get_absolute_url }}" />
     </Version>
   </release>
