@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="hitbuttons">
-    <xi:include href="_littleboxes.tpl" />
+    {% include "_littleboxes.html" %}
 </div>
 
 <p>Bored of official project news? Then check out developers blogs at 
@@ -18,7 +18,7 @@ href="http://twitter.com/phpmya">Twitter</a>.
 {% for item in latest %}
 <div class="hentry">
         <h2 class="entry-title"><a rel="bookmark" href="{{ item.get_absolute_url }}">{{ item.title }}</a></h2>
-        <p class="date"><abbr class="published" title="${item.date.w3cdtf()}">{{item.date|date:"Y-m-d"}}</abbr></p>
+        <p class="date"><abbr class="published" title="{{ item.date.isoformat }}">{{item.date|date:"Y-m-d"}}</abbr></p>
         <p class="entry-content">{{ item.body }}</p>
 </div>
 {% endfor %}
