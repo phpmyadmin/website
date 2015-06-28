@@ -49,8 +49,3 @@ class Translation(models.Model):
         elif self.percent < 80:
             return ' b80'
         return ''
-
-
-@receiver(post_save, sender=Translation)
-def purge_translation(sender, instance, **kwargs):
-    purge_cdn(reverse('translations'))
