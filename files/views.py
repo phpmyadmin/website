@@ -44,9 +44,12 @@ class ReleaseDetail(DetailView):
         if queryset is None:
             queryset = self.get_queryset()
 
-        return queryset.get(
-            version=self.kwargs['version'],
-        )
+        try:
+            return queryset.get(
+                version=self.kwargs['version'],
+            )
+        except queryset.model.DoesNotExist:
+            raise Http404("No release found matching the query")
 
     def get_context_data(self, **kwargs):
         context = super(ReleaseDetail, self).get_context_data(**kwargs)
