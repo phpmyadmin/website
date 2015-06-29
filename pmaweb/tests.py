@@ -31,8 +31,6 @@ from pmaweb.cdn import URL as CDN_URL
 from files.models import Release, Download, Theme
 from news.models import Post, Planet
 from security.models import PMASA
-from translations.models import Translation
-
 
 
 class ViewTest(TestCase):
@@ -105,13 +103,6 @@ class CDNTest(TestCase):
             ['/security/', '/security/feed/', '/security/PMASA-2000-99/'],
             year=2000,
             sequence=99,
-        )
-
-    def test_translation(self):
-        self.cdn_tester(
-            Translation,
-            ['/translations/'],
-            name='trans', translated=1, percent=10,
         )
 
     def test_theme(self):
