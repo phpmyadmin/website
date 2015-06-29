@@ -20,17 +20,16 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-from django.core.management.base import BaseCommand, CommandError
-import feedparser
 from dateutil import parser
-import urllib
+from news.management.commands import FeedCommand
 from news.models import Planet
 
 URL = 'http://planet.phpmyadmin.net/rss20.xml'
 
 
-class Command(BaseCommand):
+class Command(FeedCommand):
     help = 'Imports planet posts'
+    url = URL
 
     def process_feed(self, feed):
         for entry in feed.entries:
@@ -52,12 +51,3 @@ class Command(BaseCommand):
                     modified = True
             if modified:
                 planet.save()
-
-    def handle(self, *args, **options):
-        handle = urllib.urlopen(URL)
-        data = handle.read()
-        parsed = feedparser.parse(data)
-        if parsed.bozo == 1:
-            raise CommandError(parsed.bozo_exception)
-        else:
-            self.process_feed(parsed)

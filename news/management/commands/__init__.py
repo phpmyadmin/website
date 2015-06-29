@@ -19,3 +19,22 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
+from django.core.management.base import BaseCommand, CommandError
+import feedparser
+from urllib2 import urlopen
+
+
+class FeedCommand(BaseCommand):
+    url = None
+
+    def process_feed(self, feed):
+        raise NotImplementedError()
+
+    def handle(self, *args, **options):
+        handle = urlopen(self.url)
+        data = handle.read()
+        parsed = feedparser.parse(data)
+        if parsed.bozo == 1:
+            raise CommandError(parsed.bozo_exception)
+        else:
+            self.process_feed(parsed)

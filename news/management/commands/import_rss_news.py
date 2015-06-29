@@ -20,13 +20,11 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-from django.core.management.base import BaseCommand, CommandError
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
-import feedparser
 from dateutil import parser
-import urllib
 import re
+from news.management.commands import FeedCommand
 from news.models import Post
 
 URL = 'https://sourceforge.net/p/phpmyadmin/news/feed?limit=10000'
@@ -77,8 +75,9 @@ def fixup_summary(summary):
     return summary
 
 
-class Command(BaseCommand):
+class Command(FeedCommand):
     help = 'Imports news from sf.net RSS feed'
+    url = URL
 
     def process_feed(self, feed):
         for entry in feed.entries:
@@ -97,12 +96,3 @@ class Command(BaseCommand):
                     ),
                 }
             )
-
-    def handle(self, *args, **options):
-        handle = urllib.urlopen(URL)
-        data = handle.read()
-        parsed = feedparser.parse(data)
-        if parsed.bozo == 1:
-            raise CommandError(parsed.bozo_exception)
-        else:
-            self.process_feed(parsed)
