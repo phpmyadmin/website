@@ -96,6 +96,7 @@ ROOT_URLCONF = 'pmaweb.urls'
 
 WSGI_APPLICATION = 'pmaweb.wsgi.application'
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
