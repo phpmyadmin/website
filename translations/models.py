@@ -19,11 +19,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-from django.dispatch import receiver
-from django.db.models.signals import post_save
-from django.core.urlresolvers import reverse
 from django.db import models
-from pmaweb.cdn import purge_cdn
 
 
 class Translation(models.Model):
