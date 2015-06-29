@@ -30,6 +30,7 @@ from news.views import PostArchive, PostDetail
 from news.feeds import NewsFeed
 from files.feeds import ReleaseFeed
 from security.feeds import PMASAFeed
+from pmaweb.sitemaps import SITEMAPS
 
 
 TRANSLATIONS_RSS = 'https://hosted.weblate.org/exports/rss/phpmyadmin/'
@@ -53,6 +54,18 @@ urlpatterns = patterns(
         r'security/feed/$',
         PMASAFeed(),
         name='feed-security',
+    ),
+
+    # XML sitemap
+    url(
+        r'^sitemap.xml$',
+        'django.contrib.sitemaps.views.index',
+        {'sitemaps': SITEMAPS}
+    ),
+    url(
+        r'^sitemap-(?P<section>.+)\.xml$',
+        'django.contrib.sitemaps.views.sitemap',
+        {'sitemaps': SITEMAPS}
     ),
 
     # Pages
