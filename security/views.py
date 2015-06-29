@@ -39,10 +39,12 @@ class PMASAView(DetailView):
         if queryset is None:
             queryset = self.get_queryset()
 
+        queryset = queryset.filter(
+            year=self.kwargs['year'],
+            sequence=self.kwargs['sequence'],
+        )
+
         try:
-            return queryset.get(
-                year=self.kwargs['year'],
-                sequence=self.kwargs['sequence'],
-            )
+            return queryset.get()
         except queryset.model.DoesNotExist:
             raise Http404("No PMASA found matching the query")
