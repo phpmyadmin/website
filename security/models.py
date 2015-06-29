@@ -91,7 +91,11 @@ class PMASA(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('security-issue', (), {'year': self.year, 'sequence': self.sequence})
+        return (
+            'security-issue',
+            (),
+            {'year': self.year, 'sequence': self.sequence}
+        )
 
     def get_cves(self):
         return self.cve.split()

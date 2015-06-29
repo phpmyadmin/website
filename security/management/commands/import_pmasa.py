@@ -40,9 +40,10 @@ class EntityDict(object):
 
 class PMASAParser(object):
     simple_items = (
-        'summary', 'severity', 'mitigation', 'affected', 'solution', 'cve', 'cwe',
-        'references', 'unaffected',
+        'summary', 'severity', 'mitigation', 'affected', 'solution', 'cve',
+        'cwe', 'references', 'unaffected',
     )
+
     def __init__(self):
         self.data = {'commits': '', 'draft': False}
         self.commits = {}

@@ -28,6 +28,7 @@ from files.models import Release, Theme
 
 URL = 'http://sourceforge.net/projects/phpmyadmin/rss?path=/&limit=10000'
 
+
 class Command(BaseCommand):
     help = 'Imports themes metadata from sf.net'
 

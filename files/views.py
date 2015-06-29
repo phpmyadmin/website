@@ -34,7 +34,7 @@ class ReleaseList(ListView):
         context = super(ReleaseList, self).get_context_data(**kwargs)
         context['page_title'] = 'Files'
         context['page_rss'] = reverse('feed-files')
-        context['page_rss_title'] ='phpMyAdmin releases'
+        context['page_rss_title'] = 'phpMyAdmin releases'
         return context
 
 
@@ -56,5 +56,5 @@ class ReleaseDetail(DetailView):
         context = super(ReleaseDetail, self).get_context_data(**kwargs)
         context['page_title'] = self.object.version
         context['page_rss'] = reverse('feed-files')
-        context['page_rss_title'] ='phpMyAdmin releases'
+        context['page_rss_title'] = 'phpMyAdmin releases'
         return context

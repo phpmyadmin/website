@@ -69,7 +69,6 @@ class ViewTest(TestCase):
         self.assertContains(response, 'PMASA-2011-12')
 
 
-
 class CDNTest(TestCase):
     trigger_urls = []
 

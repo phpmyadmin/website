@@ -154,7 +154,6 @@ class Release(models.Model):
         return text
 
 
-
 class Download(models.Model):
     release = models.ForeignKey(Release)
     filename = models.CharField(max_length=50)
