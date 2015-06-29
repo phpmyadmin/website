@@ -137,4 +137,4 @@ LISTED_BRANCHES = ('4.4', '4.3', '4.2', '4.0')
 
 CDN_LOGIN = 'admins@phpmyadmin.net'
 CDN_PASSWORD = ''
-CDN_ID = '40200'
+CDN_ID = '41205'
