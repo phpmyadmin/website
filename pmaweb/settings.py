@@ -139,7 +139,7 @@ FILES_PATH = os.path.join(BASE_DIR, 'frs')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # List of major versions to offer for download
-LISTED_BRANCHES = ('4.4', '4.3', '4.2', '4.0')
+LISTED_BRANCHES = ('4.4', '4.3', '4.0')
 
 CDN_LOGIN = 'admins@phpmyadmin.net'
 CDN_PASSWORD = ''
