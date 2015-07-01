@@ -48,7 +48,13 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'web.phpmyadmin.net', 'www.phpmyadmin.net']
+ALLOWED_HOSTS = (
+    '127.0.0.1',
+    'web.phpmyadmin.net',
+    'www.phpmyadmin.net',
+    'web-backend.phpmyadmin.net',
+    'cdn.phpmyadmin.net',
+)
 
 
 # Application definition
