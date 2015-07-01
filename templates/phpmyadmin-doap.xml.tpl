@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Project rdf:about="#Project" xmlns="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:py="http://genshi.edgewall.org/">
-  <name>Wammu</name>
+  <name>phpMyAdmin</name>
   <shortdesc xml:lang="en">Administration of MySQL over the Web.</shortdesc>
   <description xml:lang="en">phpMyAdmin is a free software tool written in PHP intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations with MySQL. The most frequently used operations are supported by the user interface (managing databases, tables, fields, relations, indexes, users, permissions, etc), while you still have the ability to directly execute any SQL statement. To ease usage to a wide range of people, phpMyAdmin is translated into 55 languages and supports both LTR and RTL languages.</description>
   <bug-database rdf:resource="https://sourceforge.net/p/phpmyadmin/bugs/" />
