@@ -56,7 +56,7 @@ import data.sitemap
 FILES_REGEXP = re.compile(r'.*all-languages\.(zip).*')
 BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
 MAJOR_BRANCH_REGEXP = re.compile(r'^([0-9]+\.[0-9]+)\.')
-LISTED_BRANCHES = set(('4.0', '4.2', '4.3', '4.4'))
+LISTED_BRANCHES = set(('4.0', '4.3', '4.4'))
 TESTING_REGEXP = re.compile(r'.*(beta|alpha|rc).*')
 
 # List of extensions allowed in downloads
