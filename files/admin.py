@@ -25,7 +25,8 @@ from files.models import Release, Download, Theme
 
 
 class ReleaseAdmin(admin.ModelAdmin):
-    list_display = ('version', 'stable')
+    date_hierarchy = 'date'
+    list_display = ('version', 'stable', 'date')
     search_fields = ('version',)
 
 
