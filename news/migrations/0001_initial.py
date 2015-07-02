@@ -34,6 +34,8 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(unique_for_date=b'date')),
                 ('date', models.DateTimeField(default=django.utils.timezone.now, db_index=True)),
                 ('body', markupfield.fields.MarkupField(rendered_field=True)),
+                ('body_markup_type', models.CharField(default=b'markdown', max_length=30, choices=[(b'', b'--'), (b'html', 'HTML'), (b'plain', 'Plain'), (b'markdown', 'Markdown'), (b'restructuredtext', 'Restructured Text')])),
+                ('_body_rendered', models.TextField(editable=False)),
                 ('author', models.ForeignKey(editable=False, to=settings.AUTH_USER_MODEL)),
             ],
             options={
