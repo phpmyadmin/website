@@ -378,6 +378,13 @@ urlpatterns = patterns(
         )
     ),
     url(
+        r'^old-stuff/$',
+        RedirectView.as_view(
+            url='https://github.com/phpmyadmin/history',
+            permanent=True,
+        )
+    ),
+    url(
         r'^old-stuff/ChangeLogs/',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs',
