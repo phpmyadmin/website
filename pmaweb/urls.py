@@ -371,7 +371,7 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^Documentation.html$',
+        r'^(phpMyAdmin/)?Documentation.html$',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
             permanent=True,
