@@ -443,6 +443,15 @@ urlpatterns = patterns(
         'pmaweb.views.redirect_home_page',
     ),
 
+    # Some weird URLs seen in wild
+    url(
+        r'^(http://www\.phpmyadmin\.net/|default\.htm)$',
+        RedirectView.as_view(
+            pattern_name='home',
+            permanent=True,
+        )
+    ),
+
     # Admin interface
     url(r'^admin/', include(admin.site.urls)),
 )
