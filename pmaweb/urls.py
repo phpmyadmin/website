@@ -357,6 +357,13 @@ urlpatterns = patterns(
         )
     ),
     url(
+        r'^documentation/scripts/setup.php$',
+        RedirectView.as_view(
+            url='http://demo.phpmyadmin.net/master-config/setup/',
+            permanent=True,
+        )
+    ),
+    url(
         r'^phpdoc',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
