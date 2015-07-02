@@ -34,9 +34,7 @@ class Migration(migrations.Migration):
                 ('version_num', models.IntegerField(default=0, unique=True)),
                 ('release_notes', markupfield.fields.MarkupField(rendered_field=True)),
                 ('stable', models.BooleanField(default=False, db_index=True)),
-                ('release_notes_markup_type', models.CharField(default=b'markdown', max_length=30, choices=[(b'', b'--'), (b'html', 'HTML'), (b'plain', 'Plain'), (b'markdown', 'Markdown'), (b'restructuredtext', 'Restructured Text')])),
                 ('date', models.DateTimeField(default=django.utils.timezone.now, db_index=True)),
-                ('_release_notes_rendered', models.TextField(editable=False)),
             ],
             options={
                 'ordering': ['-version_num'],
