@@ -31,3 +31,8 @@ SCREENSHOTS = [
     {'name': 'rtl', 'title': 'Main page with an RTL language'},
     {'name': 'advisor', 'title': 'Server configuration advisor'},
 ]
+
+for i in range(len(SCREENSHOTS)):
+    SCREENSHOTS[i]['image'] = 'images/screenshots/{0}.png'.format(
+        SCREENSHOTS[i]['name']
+    )

@@ -40,9 +40,9 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
         <h3>{{theme}}</h3>
             <div class="themeimgborder">
             <div class="themeimg">
-                <a href="{% static '' %}{{ theme.imgname }}"
+                <a href="{% static theme.imgname %}"
                 rel="lightbox[themes]" title="{{theme.name}}">
-                    <img src="{% static '' %}{{ theme.imgname }}" alt="{{theme.display_name}} thumbnail" />
+                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" />
                 </a>
             </div>
             </div>

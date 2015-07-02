@@ -21,9 +21,9 @@ full control on MySQL. The default login is root with empty password.
 
 {% for screen in screenshots %}
 <div class="screenshot">
-    <a href="{% static '' %}images/screenshots/{{screen.name}}.png"
+    <a href="{% static screen.image %}"
     rel="lightbox[screenshots]" title="{{screen.title}}">
-        <img src="{% static '' %}images/screenshots/{{ screen.name }}-small.png"
+        <img src="{% static screen.image %}"
         alt="{{ screen.title }}" /><br />
     {{ screen.title }}
     </a>

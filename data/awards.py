@@ -26,7 +26,7 @@ from cgi import escape
 # List of awards
 AWARDS = [
     {
-        'image': 'percona-live-logo.png',
+        'image': 'images/awards/percona-live-logo.png',
         'link': 'http://openlife.cc/'
                 'blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
@@ -37,24 +37,24 @@ project has won</p>
     ''',
         'photos': [
             (
-                '2013-community-awards-3.jpg',
+                'images/awards/2013-community-awards-3.jpg',
                 'Accepting the award',
                 'Marc Delisle representing the team'
             ),
             (
-                '2013-community-awards-1.jpg',
+                'images/awards/2013-community-awards-1.jpg',
                 'The trophy',
                 'The trophy'
             ),
             (
-                '2013-community-awards-2.jpg',
+                'images/awards/2013-community-awards-2.jpg',
                 'The trophy\'s inscription',
                 'The trophy\'s inscription'
             ),
         ],
     },
     {
-        'image': 'sf_cca_2009_logo.png',
+        'image': 'images/awards/sf_cca_2009_logo.png',
         'link': 'http://sourceforge.net/community/cca09',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
@@ -63,10 +63,16 @@ phpMyAdmin was present in two categories:</p>
 <p class="award">Best Tool or Utility for Developers (finalist)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
-        'photos': [('sf_cca_2009_trophy.jpg', 'The trophy', 'The trophy')],
+        'photos': [
+            (
+                'images/awards/sf_cca_2009_trophy.jpg',
+                'The trophy',
+                'The trophy'
+            )
+        ],
     },
     {
-        'image': 'infoworld-bossie-2008.jpg',
+        'image': 'images/awards/infoworld-bossie-2008.jpg',
         'link': 'http://www.infoworld.com/'
                 'slideshow/2008/08/171-best_of_open_so-5.html',
         'title': 'InfoWorld 2008 Best of Open Source Awards',
@@ -78,7 +84,7 @@ phpMyAdmin was present in two categories:</p>
         'photos': [],
     },
     {
-        'image': 'sf_cca_2008_winner.png',
+        'image': 'images/awards/sf_cca_2008_winner.png',
         'link': 'http://sourceforge.net/'
                 'community/index.php/landing-pages/cca08',
         'title': '2008 SourceForge.net Community Choice Awards',
@@ -91,14 +97,14 @@ phpMyAdmin was present in three categories:</p>
     ''',
         'photos': [
             (
-                'sf_cca_2008_trophies.jpg',
+                'images/awards/sf_cca_2008_trophies.jpg',
                 'The two trophies',
                 'The two trophies'
             )
         ],
     },
     {
-        'image': 'sf_cca_2007_sysadmin.gif',
+        'image': 'images/awards/sf_cca_2007_sysadmin.gif',
         'link': 'http://sourceforge.net/'
                 'community/index.php/landing-pages/cca07',
         'title': '2007 SourceForge.net Community Choice Awards',
@@ -108,10 +114,16 @@ phpMyAdmin was present in two categories:</p>
 <p class="award">Best Tool or Utility for Developers (nominated)</p>
 <p class="award">Best Tool or Utility for SysAdmins (winner)</p>
     ''',
-        'photos': [('sf_cca_2007_trophy.jpg', 'The trophy', 'The trophy')],
+        'photos': [
+            (
+                'images/awards/sf_cca_2007_trophy.jpg',
+                'The trophy',
+                'The trophy'
+            )
+        ],
     },
     {
-        'image': '2006-trophees-logo.png',
+        'image': 'images/awards/2006-trophees-logo.png',
         'link': 'http://www.tropheesdulibre.org/',
         'title': '2006 Trophees du Libre',
         'text': '''
@@ -122,7 +134,7 @@ in the category</p>
     ''',
         'photos': [
             (
-                '2006-trophees-marc.jpg',
+                'images/awards/2006-trophees-marc.jpg',
                 'Receiving the award',
                 'Marc Delisle (right) receiving the award in the name of '
                 'the phpMyAdmin development team.'
@@ -130,7 +142,7 @@ in the category</p>
         ],
     },
     {
-        'image': '2005-os2world.png',
+        'image': 'images/awards/2005-os2world.png',
         'link': 'http://www.os2world.com/'
                 'cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
         'title': '2005 OS2World.com Awards',
@@ -142,7 +154,7 @@ phpMyAdmin won in the category</p>
         'photos': [],
     },
     {
-        'image': 'sf_cca_2006_winner.png',
+        'image': 'images/awards/sf_cca_2006_winner.png',
         'link': 'http://sourceforge.net/community/index.php/cca06',
         'title': '2006 SourceForge.net Community Choice Awards',
         'text': '''
@@ -154,7 +166,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
         'photos': [],
     },
     {
-        'image': '2006-phpmag-ger.png',
+        'image': 'images/awards/2006-phpmag-ger.png',
         'link': 'http://www.phpmagazin.de/'
                 'itr/service/psecom,id,304,nodeid,64.html',
         'title': 'PHP Magazin Reader\'s Choice Award 2006',
@@ -166,7 +178,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
         'photos': [],
     },
     {
-        'image': '2005-phpmag-ger.gif',
+        'image': 'images/awards/2005-phpmag-ger.gif',
         'link': 'http://www.phpmagazin.de/umfrage2005',
         'title': 'PHP Magazin Reader\'s Choice Award 2005',
         'text': '''
@@ -177,7 +189,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
         'photos': [],
     },
     {
-        'image': '2003-phpmag-ger.gif',
+        'image': 'images/awards/2003-phpmag-ger.gif',
         'link': 'http://www.php-mag.de/itr/service/show.php3?id=109&nodeid=64',
         'title': 'PHP Magazin Reader\'s Choice Award 2003',
         'text': '''
@@ -187,7 +199,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     ''',
         'photos': [
             (
-                '2003-php-conf.jpg',
+                'images/awards/2003-php-conf.jpg',
                 'Receiving the award',
                 'Alexander Turek and Garvin Hicking receiving the award '
                 'in the name of the phpMyAdmin development team at '
@@ -196,7 +208,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
         ],
     },
     {
-        'image': '2003-phpmag-int.gif',
+        'image': 'images/awards/2003-phpmag-int.gif',
         'link': 'http://www.php-mag.de/itr/service/show.php3?id=109&nodeid=64',
         'title': 'International PHP Magazine Reader\'s Choice Award 2003',
         'text': '''
@@ -206,7 +218,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     ''',
         'photos': [
             (
-                '2003-php-conf.jpg',
+                'images/awards/2003-php-conf.jpg',
                 'Receiving the award',
                 'Alexander Turek and Garvin Hicking receiving the award '
                 'in the name of the phpMyAdmin development team at '
@@ -215,7 +227,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
         ],
     },
     {
-        'image': '2002-12-sfnet-potm.png',
+        'image': 'images/awards/2002-12-sfnet-potm.png',
         'link': 'http://sourceforge.net/potm/potm-2002-12.php',
         'title': 'Sourceforge.net project of the month',
         'text': '''
