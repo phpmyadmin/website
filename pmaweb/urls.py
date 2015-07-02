@@ -371,14 +371,14 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^(phpMyAdmin/)?Documentation.html$',
+        r'^(?:phpMyAdmin/)?Documentation.html$',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
     url(
-        r'^(documentation|pma_localized_docs)',
+        r'^(?:documentation|pma_localized_docs)',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
             permanent=True,
@@ -421,7 +421,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^home_?page/' +
-        r'(security/PMASA|security/pmasa|\.\.\.ASA)-'
+        r'(?:security/PMASA|security/pmasa|\.\.\.ASA)-'
         r'(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)(\.php.*)?$',
         RedirectView.as_view(
             pattern_name='security-issue',
@@ -446,7 +446,7 @@ urlpatterns = patterns(
 
     # Some weird URLs seen in wild
     url(
-        r'^(http://www\.phpmyadmin\.net/|default\.htm|home)$',
+        r'^(?:http://www\.phpmyadmin\.net/|default\.htm|home|\&lang=en.*)$',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
