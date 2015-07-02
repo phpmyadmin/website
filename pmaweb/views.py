@@ -59,6 +59,9 @@ REDIRECT_MAP = {
     'translate': 'translate',
     'translations': 'translations',
     'try': 'try',
+
+    # Broken links
+    'ownloads': 'downloads',
 }
 
 
