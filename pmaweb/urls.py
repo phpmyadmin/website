@@ -357,6 +357,13 @@ urlpatterns = patterns(
         )
     ),
     url(
+        r'^phpdoc',
+        RedirectView.as_view(
+            url='http://docs.phpmyadmin.net/',
+            permanent=True,
+        )
+    ),
+    url(
         r'^documentation',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
