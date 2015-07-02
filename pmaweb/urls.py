@@ -371,14 +371,14 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^Documentation.html',
+        r'^Documentation.html$',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
     url(
-        r'^documentation',
+        r'^(documentation|pma_localized_docs)',
         RedirectView.as_view(
             url='http://docs.phpmyadmin.net/',
             permanent=True,
