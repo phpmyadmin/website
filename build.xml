@@ -4,10 +4,10 @@
  <property name="source" value="."/>
  <property name="source_comma_sep" value="."/>
 
- <fileset dir="${source}" includes="js/utils.js" id="jsfiles" />
+ <fileset dir="${source}" includes="pmaweb/static/js/utils.js" id="jsfiles" />
  <pathconvert pathsep=" " property="js-list" refid="jsfiles" />
 
- <fileset dir="${source}" includes="css/style.css,css/feed.css" id="cssfiles" />
+ <fileset dir="${source}" includes="pmaweb/static/css/style.css" id="cssfiles" />
  <pathconvert pathsep=" " property="css-list" refid="cssfiles" />
 
  <target name="clean" description="Clean up and create artifact directories">
@@ -16,9 +16,9 @@
   <mkdir dir="${basedir}/build"/>
  </target>
 
- <target name="render" description="Renders website">
-  <exec executable="./render.py" failonerror="true">
-      <arg line="-s http://ci.phpmyadmin.net -b /job/phpMyAdmin-website/Generated_website/ -e html"/>
+ <target name="test" description="Runs testsuite">
+  <exec executable="./manage.py" failonerror="true">
+      <arg line="test" />
   </exec>
  </target>
 
@@ -36,15 +36,15 @@
 
  <target name="pep8" description="PEP8">
   <exec executable="pep8" output="${basedir}/build/pep8.report">
-   <arg line="render.py data helper" />
+   <arg line="manage.py data files news pmaweb security translations" />
   </exec>
  </target>
 
  <target name="pylint" description="pylint">
   <exec executable="pylint" output="${basedir}/build/pylint.report">
-   <arg line="--rcfile=./pylint.rc render data helper" />
+   <arg line="--rcfile=./pylint.rc manage.py data files news pmaweb security translations" />
   </exec>
  </target>
 
- <target name="build" depends="clean,render,jshint,csslint,pep8,pylint"/>
+ <target name="build" depends="clean,test,jshint,csslint,pep8,pylint"/>
 </project>
