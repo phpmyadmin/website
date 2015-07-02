@@ -439,13 +439,13 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^home_page/(?P<page>[a-z0-9-]*)\.php$',
+        r'^home_page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
         'pmaweb.views.redirect_home_page',
     ),
 
     # Some weird URLs seen in wild
     url(
-        r'^(http://www\.phpmyadmin\.net/|default\.htm)$',
+        r'^(http://www\.phpmyadmin\.net/|default\.htm|home)$',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
