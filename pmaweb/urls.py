@@ -318,7 +318,7 @@ urlpatterns = patterns(
 
     # Version information
     url(
-        r'^(home_page/)?version\.(php|txt)$',
+        r'^(home_page/)?(latest|version)\.(php|txt)$',
         TemplateView.as_view(
             template_name='version/version.txt',
             content_type='text/plain'
