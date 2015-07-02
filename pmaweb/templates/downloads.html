@@ -23,6 +23,8 @@
     and MySQL 5.
     </p>
 
+    {% include "_verify.html" %}
+
     {% for release in releases %}
     <h2>phpMyAdmin {{ release.version }}</h2>
     {% include "_release.html" %}
