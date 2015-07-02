@@ -19,21 +19,21 @@
 var SortingTable = new Class({
 
   Implements: Options,
-  
+
   options: {
     zebra: true,
     details: false,
     paginator: false,
     dont_sort_class: 'nosort',
-    forward_sort_class: 'forward_sort',
-    reverse_sort_class: 'reverse_sort'
+    forward_sort_class: 'fa-sort-desc',
+    reverse_sort_class: 'fa-sort-asc'
   },
 
   initialize: function( table, options ) {
     this.table = $(table);
     this.setOptions(options);
     this.sort_column = 0;
-    
+
     this.tbody = this.table.getElement('tbody');
     if (this.options.zebra) {
       SortingTable.stripe_table(this.tbody.getChildren());
@@ -59,10 +59,10 @@ var SortingTable = new Class({
 
   sort_by_header: function( header ){
     var rows = [];
-    
+
     var before = this.tbody.getPrevious();
     this.tbody.dispose();
-    
+
     var trs = this.tbody.getChildren();
     while ( row = trs.shift() ) {
       row = { row: row.dispose() };
@@ -71,21 +71,21 @@ var SortingTable = new Class({
       }
       rows.unshift( row );
     }
-    
+
     if ( this.sort_column >= 0 &&
          this.sort_column == header.retrieve('column') ) {
       // They were pulled off in reverse
-      if ( header.hasClass( this.options.reverse_sort_class ) ) {
-        header.removeClass( this.options.reverse_sort_class );
-        header.addClass( this.options.forward_sort_class );
+      if ( header.getElement('i').hasClass( this.options.reverse_sort_class ) ) {
+        header.getElement('i').removeClass( this.options.reverse_sort_class );
+        header.getElement('i').addClass( this.options.forward_sort_class );
       } else {
-        header.removeClass( this.options.forward_sort_class );
-        header.addClass( this.options.reverse_sort_class );
+        header.getElement('i').removeClass( this.options.forward_sort_class );
+        header.getElement('i').addClass( this.options.reverse_sort_class );
       }
     } else {
       this.headers.each(function(h){
-        h.removeClass( this.options.forward_sort_class );
-        h.removeClass( this.options.reverse_sort_class );
+        h.getElement('i').removeClass( this.options.forward_sort_class );
+        h.getElement('i').removeClass( this.options.reverse_sort_class );
       }, this);
       this.sort_column = header.retrieve('column');
       if (header.retrieve('conversion_function')) {
@@ -109,7 +109,7 @@ var SortingTable = new Class({
         header.store('conversion_function', this.conversion_function );
         header.store('conversion_matcher', this.conversion_matcher );
       }
-      header.addClass( this.options.forward_sort_class );
+      header.getElement('i').addClass( this.options.forward_sort_class );
       rows.each(function(row){
         var compare_value = this.conversion_function( row );
         row.toString = function(){
@@ -128,7 +128,7 @@ var SortingTable = new Class({
         if (row.detail)
           row.detail.className = row.detail.className.replace( this.removeAltClassRe, '$1').clean();
         if (index % 2) {
-          row.row.addClass( 'alt' ); 
+          row.row.addClass( 'alt' );
           if (row.detail) row.detail.addClass( 'alt' );
         }
       }
@@ -218,7 +218,7 @@ var SortingTable = new Class({
           return '00000000000000000000000000000000'.substr(0,32-cell.length).concat(cell);
         }
       },
-      // Fallback 
+      // Fallback
       { matcher: /.*/,
         conversion_function: function( row ) {
           return $(row.row.getElementsByTagName('td')[this.sort_column]).get('text');
