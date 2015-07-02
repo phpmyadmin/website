@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load compress %}
 
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -13,9 +14,11 @@
   {% else %}
   <link rel="alternate" type="application/rss+xml" href="{% url 'feed-news' %}" title="phpMyAdmin news"/>
   {% endif %}
+{% compress css %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/slimbox.css' %}" media="screen" />
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+{% endcompress %}
   <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
   <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
   {% if page_title %}
@@ -29,12 +32,14 @@
   <link rel="vcs-git" href="git://github.com/phpmyadmin/phpmyadmin.git" title="phpMyAdmin Git repository" />
   <link rel="vcs-browse" href="http://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />
   <link href="https://plus.google.com/112870346549275765217/" rel="publisher" />
+{% compress js %}
   <script src="{% static 'js/mootools.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/mootools-more.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/slimbox.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/fader.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/master_sorting_table.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/utils.js' %}" type="text/javascript"></script>
+{% endcompress %}
   <meta name="verify-v1" content="3AM2eNj0zQ1Ao/N2eGE02S45V3p5KQxAyMIxdUJhtEQ=" />
   <meta name="robots" content="index, follow" />
  </head>
