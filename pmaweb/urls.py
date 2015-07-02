@@ -421,7 +421,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^home_page/security/' +
-        r'PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)\.php$',
+        r'(PMASA|pmasa|\.\.\.ASA)-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)\.php$',
         RedirectView.as_view(
             pattern_name='security-issue',
             permanent=True,
