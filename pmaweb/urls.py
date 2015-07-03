@@ -420,7 +420,7 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^home_?page/' +
+        r'^home[_ ]?page/' +
         r'(?:security/PMASA|security/pmasa|\.\.\.ASA)-'
         r'(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)(\.php.*)?$',
         RedirectView.as_view(
@@ -429,7 +429,7 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^home_?page/security\.php$',
+        r'^home[_ ]?page/security\.php$',
         'security.views.redirect_security',
     ),
     url(
