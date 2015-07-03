@@ -446,7 +446,8 @@ urlpatterns = patterns(
 
     # Some weird URLs seen in wild
     url(
-        r'^(?:http://www\.phpmyadmin\.net/|default\.htm|home|\&lang=en.*)$',
+        r'^(?:http://www\.phpmyadmin\.net/|' +
+        r'default\.htm|home|\&lang=en.*|phpMyAdmin.*|[0-9.]+)$',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
