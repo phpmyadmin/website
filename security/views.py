@@ -22,7 +22,25 @@
 from django.views.generic.detail import DetailView
 from django.core.urlresolvers import reverse
 from django.http import Http404
+from django.shortcuts import redirect
 from security.models import PMASA
+
+
+def redirect_security(request):
+    """Redirect for old security page"""
+    if 'issue' in request.GET:
+        prefix, year, sequence = request.GET['issue'].split('-')
+        if prefix != 'PMASA':
+            return redirect('security')
+
+        try:
+            return redirect(
+                PMASA.objects.get(year=year, sequence=sequence)
+            )
+        except (PMASA.DoesNotExist, ValueError):
+            return redirect('security')
+    else:
+        return redirect('security')
 
 
 class PMASAView(DetailView):

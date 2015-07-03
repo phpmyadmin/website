@@ -430,7 +430,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^home_?page/security\.php$',
-        'pmaweb.views.redirect_security',
+        'security.views.redirect_security',
     ),
     url(
         r'^home_?page/$',

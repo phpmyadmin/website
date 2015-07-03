@@ -73,17 +73,6 @@ def redirect_home_page(request, page):
         raise Http404('Not existing page: {0}'.format(page))
 
 
-def redirect_security(request):
-    """Redirect for old security page"""
-    if 'issue' in request.GET:
-        prefix, year, sequence = request.GET['issue'].split('-')
-        if prefix != 'PMASA':
-            return redirect('security')
-        return redirect('security-issue', year=year, sequence=sequence)
-    else:
-        return redirect('security')
-
-
 def notfound(request):
     return render(
         request,

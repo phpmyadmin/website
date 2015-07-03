@@ -40,3 +40,25 @@ class PMASATest(TestCase):
                 {'commits': ['6667'], 'branch': '4.4'},
             ]
         )
+
+
+class ViewTest(TestCase):
+    fixtures = ['test_data.json']
+
+    def test_index(self):
+        response = self.client.get('/home_page/security.php', follow=True)
+        self.assertRedirects(response, '/security/')
+        self.assertContains(response, 'PMASA-2011-12')
+
+    def test_existing(self):
+        response = self.client.get(
+            '/home_page/security.php?issue=PMASA-2011-1', follow=True
+        )
+        self.assertRedirects(response, '/security/PMASA-2011-1/')
+        self.assertContains(response, 'PMASA-2011-12')
+
+    def test_non_existing(self):
+        response = self.client.get(
+            '/home_page/security.php?issue=PMASA-2011-1_2', follow=True
+        )
+        self.assertRedirects(response, '/security/')

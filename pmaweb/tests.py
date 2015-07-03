@@ -58,16 +58,6 @@ class ViewTest(TestCase):
                 msg_prefix='Invalid response for {0}'.format(url),
             )
 
-    def test_security_redirect(self):
-        response = self.client.get('/home_page/security.php', follow=True)
-        self.assertRedirects(response, '/security/')
-        self.assertContains(response, 'PMASA-2011-12')
-        response = self.client.get(
-            '/home_page/security.php?issue=PMASA-2011-1', follow=True
-        )
-        self.assertRedirects(response, '/security/PMASA-2011-1/')
-        self.assertContains(response, 'PMASA-2011-12')
-
 
 class CDNTest(TestCase):
     trigger_urls = []
