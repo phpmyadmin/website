@@ -433,14 +433,14 @@ urlpatterns = patterns(
         'security.views.redirect_security',
     ),
     url(
-        r'^home_?page/$',
+        r'^home[_ ]?page/$',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
         )
     ),
     url(
-        r'^home_?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
+        r'^home[_ ]?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
         'pmaweb.views.redirect_home_page',
     ),
 
