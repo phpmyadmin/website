@@ -350,7 +350,7 @@ urlpatterns = patterns(
 
     # Compatibility redirects
     url(
-        r'^documentation/changelog.php$',
+        r'^(?:documentation/changelog.php|ChangeLog.txt|ANNOUNCE.txt)$',
         RedirectView.as_view(
             url='http://demo.phpmyadmin.net/master-config/changelog.php',
             permanent=True,
