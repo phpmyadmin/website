@@ -451,6 +451,13 @@ urlpatterns = patterns(
         r'^home[_ ]?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
         'pmaweb.views.redirect_home_page',
     ),
+    url(
+        r'gophp5',
+        RedirectView.as_view(
+            pattern_name='home',
+            permanent=True,
+        )
+    ),
 
     # Some weird URLs seen in wild
     url(

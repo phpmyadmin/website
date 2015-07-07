@@ -36,6 +36,7 @@ REDIRECT_MAP = {
     'relnotes': 'news',
     'stats': 'team',
     'sitemap': 'home',
+    'gophp5': 'home',
 
     # Alive pages
     '15-years': '15-years',
