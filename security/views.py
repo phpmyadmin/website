@@ -29,7 +29,10 @@ from security.models import PMASA
 def redirect_security(request):
     """Redirect for old security page"""
     if 'issue' in request.GET:
-        prefix, year, sequence = request.GET['issue'].split('-')
+        try:
+            prefix, year, sequence = request.GET['issue'].split('-')
+        except ValueError:
+            return redirect('security')
         if prefix != 'PMASA':
             return redirect('security')
 
