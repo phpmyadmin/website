@@ -60,7 +60,8 @@ urlpatterns = patterns(
     url(
         r'^sitemap.xml$',
         'django.contrib.sitemaps.views.index',
-        {'sitemaps': SITEMAPS}
+        {'sitemaps': SITEMAPS},
+        name='sitemap',
     ),
     url(
         r'^sitemap-(?P<section>.+)\.xml$',
@@ -436,6 +437,13 @@ urlpatterns = patterns(
         r'^home[_ ]?page/$',
         RedirectView.as_view(
             pattern_name='home',
+            permanent=True,
+        )
+    ),
+    url(
+        r'^home_page/sitemap\.xml$',
+        RedirectView.as_view(
+            pattern_name='sitemap',
             permanent=True,
         )
     ),
