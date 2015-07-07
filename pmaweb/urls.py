@@ -386,7 +386,7 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^snapshot',
+        r'^(?:snapshot|cvs)',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/phpmyadmin/',
             permanent=True,
