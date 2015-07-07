@@ -448,7 +448,7 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^home[_ ]?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
+        r'^home[_ /]?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
         'pmaweb.views.redirect_home_page',
     ),
     url(
