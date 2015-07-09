@@ -2,7 +2,7 @@
 <XML_DIZ_INFO>
 	<MASTER_PAD_VERSION_INFO>
 		<MASTER_PAD_VERSION>3.01</MASTER_PAD_VERSION>
-        <MASTER_PAD_EDITOR>vim http://www.vim.org + Genshi</MASTER_PAD_EDITOR>
+        <MASTER_PAD_EDITOR>vim http://www.vim.org + Django</MASTER_PAD_EDITOR>
         <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
 	</MASTER_PAD_VERSION_INFO>
 	<Company_Info>
