@@ -16,6 +16,17 @@ full control on MySQL. The default login is root with empty password.
     <li><a href="http://demo.phpmyadmin.net/STABLE">Latest released stable version</a></li>
 </ul>
 
+<h4>Releases and maintenance branches</h4>
+
+{% with demo_stable as demos %}
+{% include '_list-demos.html' %}
+{% endwith %}
+
+<h4>Development version (future {{ demo_devel.0.master_version }})</h4>
+
+{% with demo_devel as demos %}
+{% include '_list-demos.html' %}
+{% endwith %}
 
 <h2>Screenshots</h2>
 

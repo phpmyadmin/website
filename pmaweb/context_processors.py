@@ -23,6 +23,7 @@ from files.models import Release, Theme
 from news.models import Post, Planet
 from translations.models import Translation
 from security.models import PMASA
+from demo.models import Demo
 from django.conf import settings
 from django.core.urlresolvers import reverse
 import datetime
@@ -44,6 +45,8 @@ def basic(request):
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
         'translations': Translation.objects.all(),
+        'demo_stable': Demo.objects.exclude(name__startswith='master'),
+        'demo_devel': Demo.objects.filter(name__startswith='master'),
     }
 
 

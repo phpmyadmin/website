@@ -1,0 +1,12 @@
+<ul>
+{% for demo in demos %}
+<li>
+<a href="{{ demo.get_absolute_url }}">{{ demo.description }}</a>
+{% with demo.get_login_url as login %}
+{% if login %}
+(<a href="{{ login }}">direct login</a>)
+{% endif %}
+{% endwith %}
+{% endfor %}
+</ul>
+
