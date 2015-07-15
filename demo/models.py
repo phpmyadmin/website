@@ -23,6 +23,10 @@ from django.db import models
 import re
 
 
+QA_RE = re.compile(r'QA_([0-9]*)_([0-9]*)')
+MAINT_RE = re.compile(r'MAINT_([0-9]*)_([0-9]*)_([0-9]*)')
+
+
 class Demo(models.Model):
     name = models.CharField(max_length=100, unique=True)
     master_version = models.CharField(max_length=100)
@@ -36,4 +40,35 @@ class Demo(models.Model):
         return u'{0}?pma_username=root'.format(self.get_absolute_url())
 
     def get_description(self):
+        if self.name.startswith('master'):
+            desc = []
+            if '-config' in self.name:
+                desc.append('Configured for config auth.')
+            elif '-http' in self.name:
+                desc.append('Configured for http auth.')
+            else:
+                desc.append('Configured for cookie auth.')
+            if '-nopmadb' in self.name:
+                desc.append(
+                    'Without advanced features requiring extra database.'
+                )
+            return ' '.join(desc)
+        if self.name == 'STABLE':
+            return 'Latest phpMyAdmin stable release.'
+
+        match = QA_RE.match(self.name)
+        if match:
+            return 'Maintenance branch for {0}.{1}.x releases.'.format(
+                match.group(1),
+                match.group(2),
+            )
+
+        match = MAINT_RE.match(self.name)
+        if match:
+            return 'Maintenance branch for {0}.{1}.{2} releases. This gets only urgent fixes.'.format(
+                match.group(1),
+                match.group(2),
+                match.group(3),
+            )
+
         return 'VERSION: {0}'.format(self.name)
