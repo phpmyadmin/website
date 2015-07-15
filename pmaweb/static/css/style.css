@@ -12,37 +12,32 @@
 
 nav {
     width: 100%;
-    -moz-box-shadow: 0 6px 3px -3px #ccc;
-    -webkit-box-shadow: 0 6px 3px -3px #ccc;
-    box-shadow: 0 6px 3px -3px #ccc;
-    border-top: 3px solid #ccc;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    border-top: 0px none;
+    border-bottom: 3px solid #669;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.21);
 }
 .menu {
     text-align: center;
     display: block;
-    padding: 0;
-    margin: 0 auto;
+    padding: 0px;
+    margin: 0px auto;
+    max-width: 1000px;
+    overflow: auto;
 }
-
 nav a {
     font-weight: bold;
-    padding: 0.5em;
-    margin: -3px 0 0 0;
-    border-right: 1px solid #ccc;
-    border-top: 3px solid #666699;
-    color: #ff9900;
-    display: inline-block;
-}
-
-nav a:first-child {
-    border-left: 1px solid #ccc;
+    padding: 0.5em 0.8em;
+    border-right: 1px solid #CCC;
+    color: #656565;
+    float: left;
+    font-size: 0.9em;
 }
 nav a:hover {
-    background-color: #ff9900;
+    background-color: #EFEFEF;
     text-decoration: none;
-    color: #fff;
+    color: #B16D00;
 }
 
 a.active {
