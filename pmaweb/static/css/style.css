@@ -59,8 +59,8 @@ a.active {
 }
 
 a {
-    color: #ff9900;
-    text-decoration: none;
+    color: #656565;
+    text-decoration: underline;
 }
 
 a:hover {
