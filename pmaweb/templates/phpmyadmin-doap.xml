@@ -3,7 +3,7 @@
   <name>phpMyAdmin</name>
   <shortdesc xml:lang="en">Administration of MySQL over the Web.</shortdesc>
   <description xml:lang="en">phpMyAdmin is a free software tool written in PHP intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations with MySQL. The most frequently used operations are supported by the user interface (managing databases, tables, fields, relations, indexes, users, permissions, etc), while you still have the ability to directly execute any SQL statement. To ease usage to a wide range of people, phpMyAdmin is translated into 55 languages and supports both LTR and RTL languages.</description>
-  <bug-database rdf:resource="https://sourceforge.net/p/phpmyadmin/bugs/" />
+  <bug-database rdf:resource="https://github.com/phpmyadmin/phpmyadmin/issues" />
   <programming-language>PHP</programming-language>
   <download-page rdf:resource="https://www.phpmyadmin.net{% url 'downloads' %}" />
   <homepage rdf:resource="https://www.phpmyadmin.net/" />
