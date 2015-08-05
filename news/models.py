@@ -83,6 +83,11 @@ def purge_post(sender, instance, **kwargs):
         reverse('feed-news'),
         instance.get_absolute_url(),
     )
+    num_pages = 1 + (Post.objects.count() / 10)
+    purge_cnd(*[
+        reverse('news-page', kwargs={'page': x + 1})
+        for x in range(num_pages)
+    ])
 
 
 @receiver(post_save, sender=Planet)
