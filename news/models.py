@@ -77,17 +77,18 @@ class Planet(models.Model):
 
 @receiver(post_save, sender=Post)
 def purge_post(sender, instance, **kwargs):
-    purge_cdn(
+    num_pages = 1 + (Post.objects.count() / 10)
+    pages = [
         reverse('home'),
         reverse('news'),
         reverse('feed-news'),
         instance.get_absolute_url(),
-    )
-    num_pages = 1 + (Post.objects.count() / 10)
-    purge_cdn(*[
+    ]
+    pages.extend([
         reverse('news-page', kwargs={'page': x + 1})
         for x in range(num_pages)
     ])
+    purge_cdn(*pages)
 
 
 @receiver(post_save, sender=Planet)

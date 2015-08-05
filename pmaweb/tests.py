@@ -125,7 +125,7 @@ class CDNTest(TestCase):
     def test_news_post(self):
         self.cdn_tester(
             Post,
-            ['/', '/news/', '/news/feed/', '/news/2000/1/1/slug/'],
+            ['/', '/news/', '/news/feed/', '/news/2000/1/1/slug/', '/news/1/'],
             title='title', slug='slug', author_id=0,
             date=make_aware(
                 datetime.datetime(year=2000, month=1, day=1), utc
