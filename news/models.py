@@ -84,7 +84,7 @@ def purge_post(sender, instance, **kwargs):
         instance.get_absolute_url(),
     )
     num_pages = 1 + (Post.objects.count() / 10)
-    purge_cnd(*[
+    purge_cdn(*[
         reverse('news-page', kwargs={'page': x + 1})
         for x in range(num_pages)
     ])
