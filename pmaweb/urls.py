@@ -83,6 +83,11 @@ urlpatterns = patterns(
         name='news'
     ),
     url(
+        r'^news/(?P<page>[0-9]+)/$',
+        PostArchive.as_view(),
+        name='news-page'
+    ),
+    url(
         r'^news/(?P<year>\d+)/(?P<month>\d+)/(?P<day>\d+)/(?P<slug>[^/]+)/$',
         PostDetail.as_view(),
         name='news-item'
