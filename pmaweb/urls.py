@@ -331,6 +331,13 @@ urlpatterns = patterns(
         )
     ),
     url(
+        r'^downloads/list\.txt$',
+        TemplateView.as_view(
+            template_name='version/list.txt',
+            content_type='text/plain'
+        )
+    ),
+    url(
         r'^(home_page/)?version\.js$',
         TemplateView.as_view(
             template_name='version/version.js',
