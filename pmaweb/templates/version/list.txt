@@ -1,2 +1,2 @@
-{% for file in release.download_set.all %}{{ file.get_absolute_url }}
+{% for file in latest_release.download_set.all %}{{ file.get_absolute_url }}
 {% endfor %}
