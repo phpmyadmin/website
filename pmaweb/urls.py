@@ -352,6 +352,15 @@ urlpatterns = patterns(
         )
     ),
 
+    # Composer packages
+    url(
+        r'^packages\.json$',
+        TemplateView.as_view(
+            template_name='version/packages.json',
+            content_type='application/json'
+        )
+    ),
+
     # Test backend
     url(
         r'^test/data$',

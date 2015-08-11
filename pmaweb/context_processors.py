@@ -101,4 +101,5 @@ def releases(request=None):
         'latest_release': latest,
         'beta_release': beta,
         'releases': result,
+        'all_releases': Release.objects.all(),
     }

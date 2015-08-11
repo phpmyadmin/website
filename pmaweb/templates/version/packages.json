@@ -1,0 +1,24 @@
+{
+    "packages": {
+        "phpmyadmin/phpmyadmin": {
+{% for release in all_releases %}
+            "{{ release.version }}": {
+                "name": "phpmyadmin/phpmyadmin",
+                "version": "{{ release.version }}",
+                "dist": {
+                    "url": "{{ release.simpledownload.get_absolute_url }}",
+                    "type": "zip"
+                }
+            },
+{% endfor %}
+            "dev-master": {
+                "name": "phpmyadmin/phpmyadmin",
+                "version": "dev-master",
+                "dist": {
+                    "url": "https://github.com/phpmyadmin/phpmyadmin/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    }
+}
