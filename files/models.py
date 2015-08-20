@@ -258,6 +258,13 @@ def purge_release(sender, instance, **kwargs):
         reverse('files'),
         reverse('feed-files'),
         reverse('downloads'),
+        # Version dumps
+        '/downloads/list.txt',
+        '/home_page/version.txt',
+        '/home_page/version.js',
+        '/home_page/version.json',
+        reverse('doap'),
+        reverse('pad'),
         # This release
         instance.get_absolute_url(),
     )
