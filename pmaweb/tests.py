@@ -81,10 +81,11 @@ class CDNTest(TestCase):
         self.trigger_urls = []
         with self.settings(CDN_PASSWORD='x'):
             model.objects.create(**kwargs)
-        self.assertEqual(
-            self.trigger_urls,
-            urls,
-        )
+        for url in urls:
+            self.assertIn(
+                url,
+                self.trigger_urls,
+            )
 
     def test_pmasa(self):
         self.cdn_tester(
