@@ -133,17 +133,17 @@ class Release(models.Model):
             text = 'Current version compatible with PHP 5.3 to 7.0 and MySQL 5.5.'
         elif self.version[:3] == '4.3':
             text = (
-                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
                 'Supported for security fixes only, until Oct 1, 2015.'
             )
         elif self.version[:3] == '4.2':
             text = (
-                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
                 'Supported for security fixes only, until Jul 1, 2015.'
             )
         elif self.version[:3] == '4.1':
             text = (
-                'Older version compatible with PHP 5.3 and MySQL 5.5.' +
+                'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
                 'Supported for security fixes only, until Jan 1, 2015.'
             )
         elif self.version[:3] == '4.0':
