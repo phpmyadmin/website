@@ -57,7 +57,8 @@ class PMASA(models.Model):
     )
     references = models.TextField(
         max_length=200,
-        help_text='Links to reporter etc.'
+        help_text='Links to reporter etc.',
+        blank=True,
     )
     cve = models.CharField(
         max_length=200,
