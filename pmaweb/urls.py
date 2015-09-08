@@ -350,11 +350,8 @@ urlpatterns = patterns(
         )
     ),
     url(
-        r'^(home_page/)?version\.json$',
-        TemplateView.as_view(
-            template_name='version/version.json',
-            content_type='application/json'
-        )
+        r'^(?:home_page/)?version\.json$',
+        'files.views.version_json',
     ),
 
     # Composer packages

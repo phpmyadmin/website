@@ -23,8 +23,9 @@
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.core.urlresolvers import reverse
-from django.http import Http404
+from django.http import HttpResponse, Http404
 from files.models import Release
+import json
 
 
 class ReleaseList(ListView):
@@ -60,3 +61,15 @@ class ReleaseDetail(DetailView):
         context['page_rss'] = reverse('feed-files')
         context['page_rss_title'] = 'phpMyAdmin releases'
         return context
+
+
+def version_json(request):
+    latest = Release.objects.filter(stable=True)[0]
+    response = {
+        'version': latest.version,
+        'date': latest.date.date().isoformat(),
+    }
+    return HttpResponse(
+        json.dumps(response, indent=4),
+        content_type='application/json'
+    )
