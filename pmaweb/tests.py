@@ -93,6 +93,7 @@ class CDNTest(TestCase):
             ['/security/', '/security/feed/', '/security/PMASA-2000-99/'],
             year=2000,
             sequence=99,
+            draft=False,
         )
 
     def test_theme(self):
