@@ -46,11 +46,11 @@ def redirect_security(request):
         return redirect('security')
 
 
-class PMASAView(DetailView):
+class PMASABaseView(DetailView):
     model = PMASA
 
     def get_context_data(self, **kwargs):
-        context = super(PMASAView, self).get_context_data(**kwargs)
+        context = super(PMASABaseView, self).get_context_data(**kwargs)
         context['page_title'] = 'Security - {0}'.format(self.object)
         context['page_rss'] = reverse('feed-security')
         context['page_rss_title'] = 'phpMyAdmin security announcements'
@@ -69,3 +69,23 @@ class PMASAView(DetailView):
             return queryset.get()
         except queryset.model.DoesNotExist:
             raise Http404("No PMASA found matching the query")
+
+
+class PMASADraftView(PMASABaseView):
+    def get_object(self, queryset=None):
+        result = super(PMASADraftView, self).get_object(queryset)
+
+        if not result.draft:
+            raise Http404("No PMASA found matching the query")
+
+        return result
+
+
+class PMASAView(PMASABaseView):
+    def get_object(self, queryset=None):
+        result = super(PMASAView, self).get_object(queryset)
+
+        if result.draft:
+            raise Http404("No PMASA found matching the query")
+
+        return result

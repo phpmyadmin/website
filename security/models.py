@@ -91,8 +91,12 @@ class PMASA(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
+        if self.draft:
+            page = 'security-issue-draft'
+        else:
+            page = 'security-issue'
         return (
-            'security-issue',
+            page,
             (),
             {'year': self.year, 'sequence': self.sequence}
         )

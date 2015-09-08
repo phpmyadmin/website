@@ -24,7 +24,7 @@ from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
 from pmaweb.views import PMAView
-from security.views import PMASAView
+from security.views import PMASAView, PMASADraftView
 from files.views import ReleaseList, ReleaseDetail
 from news.views import PostArchive, PostDetail
 from news.feeds import NewsFeed
@@ -106,6 +106,11 @@ urlpatterns = patterns(
         r'^security/PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)/$',
         PMASAView.as_view(),
         name='security-issue'
+    ),
+    url(
+        r'^security/PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)/draft/$',
+        PMASADraftView.as_view(),
+        name='security-issue-draft'
     ),
     url(
         r'^support/$',
