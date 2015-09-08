@@ -130,7 +130,7 @@ class Release(models.Model):
         elif self.version[:3] == '4.5':
             text = 'Development version compatible with PHP 5.5 to 7.0 and MySQL 5.5.'
         elif self.version[:3] == '4.4':
-            text = 'Current version compatible with PHP 5.3 to 7.0 and MySQL 5.5.'
+            text = 'Current version compatible with PHP 5.3.7 to 7.0 and MySQL 5.5.'
         elif self.version[:3] == '4.3':
             text = (
                 'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
