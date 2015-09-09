@@ -129,6 +129,34 @@ class Release(models.Model):
                 return result
         return ''
 
+    def get_php_versions(self):
+        if self.version[:3] == '4.5':
+            return '>=5.5,<=7.0'
+        elif self.version[:3] == '4.4':
+            return '>=5.3,<=7.0'
+        elif self.version[:3] == '4.3':
+            return '<=5.3'
+        elif self.version[:3] == '4.2':
+            return '<=5.3'
+        elif self.version[:3] == '4.1':
+            return '<=5.3'
+        elif self.version[:3] == '4.0':
+            return '<=5.2'
+
+    def get_mysql_versions(self):
+        if self.version[:3] == '4.5':
+            return '>=5.5'
+        elif self.version[:3] == '4.4':
+            return '>=5.5'
+        elif self.version[:3] == '4.3':
+            return '>=5.5'
+        elif self.version[:3] == '4.2':
+            return '>=5.5'
+        elif self.version[:3] == '4.1':
+            return '>=5.5'
+        elif self.version[:3] == '4.0':
+            return '>=5.0'
+
     def get_version_info(self):
         '''
         Returns description to the phpMyAdmin version.

@@ -74,6 +74,8 @@ def version_json(request):
         response['releases'].append({
             'version': release.version,
             'date': release.date.date().isoformat(),
+            'php_versions': release.get_php_versions(),
+            'mysql_versions': release.get_mysql_versions(),
         })
     return HttpResponse(
         json.dumps(response, indent=4),
