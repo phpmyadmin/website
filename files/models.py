@@ -45,6 +45,22 @@ VERSION_INFO = (
 )
 
 
+def get_current_releases():
+    delta = 1000000
+    result = []
+
+    for version in settings.LISTED_BRANCHES:
+        min_vernum = Release.parse_version(version)
+        max_vernum = min_vernum + delta
+        result.append(Release.objects.filter(
+            version_num__gte=min_vernum,
+            version_num__lt=max_vernum,
+            stable=True,
+        )[0])
+
+    return result
+
+
 class Release(models.Model):
     version = models.CharField(max_length=50, unique=True)
     version_num = models.IntegerField(default=0, unique=True)

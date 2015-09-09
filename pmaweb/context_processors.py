@@ -19,12 +19,11 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from files.models import Release, Theme
+from files.models import Release, Theme, get_current_releases
 from news.models import Post, Planet
 from translations.models import Translation
 from security.models import PMASA
 from demo.models import Demo
-from django.conf import settings
 from django.core.urlresolvers import reverse
 import datetime
 
@@ -85,21 +84,9 @@ def releases(request=None):
     else:
         beta = None
 
-    delta = 1000000
-    result = []
-
-    for version in settings.LISTED_BRANCHES:
-        min_vernum = Release.parse_version(version)
-        max_vernum = min_vernum + delta
-        result.append(Release.objects.filter(
-            version_num__gte=min_vernum,
-            version_num__lt=max_vernum,
-            stable=True,
-        )[0])
-
     return {
         'latest_release': latest,
         'beta_release': beta,
-        'releases': result,
+        'releases': get_current_releases(),
         'all_releases': Release.objects.all(),
     }
