@@ -24,7 +24,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, Http404
-from files.models import Release
+from files.models import Release, get_current_releases
 import json
 
 
@@ -68,7 +68,13 @@ def version_json(request):
     response = {
         'version': latest.version,
         'date': latest.date.date().isoformat(),
+        'releases': [],
     }
+    for release in get_current_releases():
+        response['releases'].append({
+            'version': release.version,
+            'date': release.date.date().isoformat(),
+        })
     return HttpResponse(
         json.dumps(response, indent=4),
         content_type='application/json'
