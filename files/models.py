@@ -131,17 +131,17 @@ class Release(models.Model):
 
     def get_php_versions(self):
         if self.version[:3] == '4.5':
-            return '>=5.5,<=7.0'
+            return '>=5.5,<7.1'
         elif self.version[:3] == '4.4':
-            return '>=5.3,<=7.0'
+            return '>=5.3,<7.1'
         elif self.version[:3] == '4.3':
-            return '<=5.3'
+            return '>=5.3,<7.0'
         elif self.version[:3] == '4.2':
-            return '<=5.3'
+            return '>=5.3,<7.0'
         elif self.version[:3] == '4.1':
-            return '<=5.3'
+            return '>=5.3,<7.0'
         elif self.version[:3] == '4.0':
-            return '<=5.2'
+            return '>=5.2,<5.3'
 
     def get_mysql_versions(self):
         if self.version[:3] == '4.5':
