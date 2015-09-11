@@ -57,6 +57,33 @@ Screenshots
 All screenshots are listed in data/screenshots.py.
 
 
+Development
+-----------
+
+For development, first install dependencies. The ones needed for running the
+server are listed in ``requirements.txt``, for running testsuite in
+``requirements-test.txt``. You can install them using your distribution (the
+package names will usually add python- prefix) or using pip:
+
+.. code-block:: sh
+
+    pip install -r requirements-test.txt
+
+Once you have all dependencies, you can start development server:
+
+.. code-block:: sh
+
+    ./manage.py runserver
+
+It will listed on port 8080 by default (you can change this by parameters).
+
+To run testuite execute:
+
+.. code-block:: sh
+
+    ./manage.py test
+
+
 Deployment
 ----------
 
