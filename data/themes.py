@@ -315,14 +315,6 @@ THEMES = {
         'author': u'hplhu',
     },
 }
-TEMPLATE = {
-    '': {
-        'name': '',
-        'support': '',
-        'info': u'',
-        'author': u'',
-    },
-}
 
 CSSMAP = {
     '2.6 - 2.9': 'pma_2_6 pma_2_7 pma_2_8 pma_2_9',
