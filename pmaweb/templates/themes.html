@@ -54,6 +54,9 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
             <p>{{ theme.description }}</p>
             <ul class="dl">
                 <li><a href="{{ theme.get_absolute_url }}">{{theme.filename}}</a> ({{theme.size|filesizeformat}}, MD5: {{theme.md5}})</li>
+                {% if theme.signed %}
+                <li><a href="{{ theme.get_absolute_url }}.asc">{{theme.filename}}.asc</a> (PGP signature)</li>
+                {% endif %}
             </ul> 
     </div>
     {% endfor %}
