@@ -19,10 +19,20 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+from hashlib import sha1, md5
 
-def read_sum(filename):
+
+def read_sum(filename, origfile=None):
     try:
         with open(filename, 'r') as handle:
             return handle.read().split()[0]
     except IOError:
+        if origfile is not None:
+            with open(origfile, 'r') as handle:
+                data = handle.read()
+            if filename.endswith('.sha1'):
+                return sha1(data).hexdigest()
+            elif filename.endswith('.md5'):
+                return md5(data).hexdigest()
+
         return ''
