@@ -37,6 +37,7 @@ class Command(BaseCommand):
             data = THEMES[namever]
         except KeyError:
             self.stderr.write('Unknown theme: {0}'.format(namever))
+            self.stderr.write('Definition missing in website:data/themes.py')
             return
 
         complete_name = os.path.join(path, fullname)
