@@ -308,6 +308,12 @@ THEMES = {
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
     },
+    'metro-2.4': {
+        'name': 'Metro',
+        'support': '4.5',
+        'info': u'Windows 8 / Metro Theme for phpMyAdmin',
+        'author': u'hplhu',
+    },
 }
 TEMPLATE = {
     '': {
