@@ -175,7 +175,7 @@ class Release(models.Model):
             text = 'Current version compatible with PHP 5.5 to 7.0 and MySQL 5.5.'
         elif self.version[:3] == '4.4':
             text = (
-                'Older version compatible with PHP 5.3.7 to 7.0 and MySQL 5.5.' +
+                'Older version compatible with PHP 5.3.7 to 7.0 and MySQL 5.5. ' +
                 'Supported for security fixes only, until April 1, 2016'
             )
         elif self.version[:3] == '4.3':
