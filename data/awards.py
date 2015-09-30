@@ -127,9 +127,8 @@ phpMyAdmin was present in two categories:</p>
         'link': 'http://www.tropheesdulibre.org/',
         'title': '2006 Trophees du Libre',
         'text': '''
-<p>phpMyAdmin has won a Silver Trophy at the Third
-<a href="%(link)s">Trophees du Libre</a> (Free Software Awards)
-in the category</p>
+<p>phpMyAdmin has won a Silver Trophy at the Third Trophees du Libre 
+(Free Software Awards) in the category</p>
 <p class="award">PHP</p>
     ''',
         'photos': [
