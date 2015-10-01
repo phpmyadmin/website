@@ -52,11 +52,13 @@ def get_current_releases():
     for version in settings.LISTED_BRANCHES:
         min_vernum = Release.parse_version(version)
         max_vernum = min_vernum + delta
-        result.append(Release.objects.filter(
+        stable_releases = Release.objects.filter(
             version_num__gte=min_vernum,
             version_num__lt=max_vernum,
             stable=True,
-        )[0])
+        )
+        if stable_releases.exists():
+            result.append(stable_releases[0])
 
     return result
 
