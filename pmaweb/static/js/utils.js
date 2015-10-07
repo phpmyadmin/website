@@ -4,7 +4,7 @@
  * as a parameter.
  */
 function show_theme(version) {
-    if (version == "all") {
+    if (version === "all") {
         $$("div.themediv").setStyle("display", "block");
         return;
     }
