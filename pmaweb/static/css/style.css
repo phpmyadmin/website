@@ -12,17 +12,17 @@
 
 nav {
     width: 100%;
-    padding: 0px;
-    margin: 0px;
-    border-top: 0px none;
+    padding: 0;
+    margin: 0;
+    border-top: 0 none;
     border-bottom: 3px solid #669;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.21);
 }
 .menu {
     text-align: center;
     display: block;
-    padding: 0px;
-    margin: 0px auto;
+    padding: 0;
+    margin: 0 auto;
     max-width: 1000px;
     overflow: auto;
 }
