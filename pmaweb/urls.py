@@ -481,10 +481,32 @@ urlpatterns = patterns(
             permanent=True,
         )
     ),
-
+    url(
+        r'cgi-bin/mailman/listinfo/mailman',
+        RedirectView.as_view(
+            url='https://lists.phpmyadmin.net/',
+            permanent=True,
+        )
+    ),
     # Some weird URLs seen in wild
     url(
+        r'^news/&.*',
+        RedirectView.as_view(
+            pattern_name='news',
+            permanent=True,
+        )
+    ),
+    url(
+        r'^(?:download|files/\*/|downloads/\.PhpMyAdmin)$',
+        RedirectView.as_view(
+            pattern_name='download',
+            permanent=True,
+        )
+    ),
+    url(
         r'^(?:http://www\.phpmyadmin\.net/|index\.html|' +
+        r'logout|auth|login|auth_|auth%5C_key|' +
+        r'SignonURL.*|logoutURL.*|' +
         r'default\.htm|home|\&lang=en.*|phpMyAdmin.*|[0-9.]+)$',
         RedirectView.as_view(
             pattern_name='home',
