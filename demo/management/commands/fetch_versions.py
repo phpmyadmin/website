@@ -25,7 +25,7 @@ from demo.models import Demo
 from ConfigParser import RawConfigParser
 from pmaweb.cdn import purge_cdn
 import urllib
-from collections import OrderdDict
+from collections import OrderedDict
 
 URL = 'http://demo.phpmyadmin.net/versions.ini'
 
