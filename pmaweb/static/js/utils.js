@@ -42,7 +42,7 @@ function fader_autoload() {
         return;
     }
 
-    var f = new Fader('fader');
+    new Fader('fader');
 }
 
 window.addEvent('domready', fader_autoload);
