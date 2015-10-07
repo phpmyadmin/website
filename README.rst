@@ -3,6 +3,16 @@ Website for phpMyAdmin
 
 Django code for phpMyAdmin's website.
 
+.. image:: https://travis-ci.org/phpmyadmin/website.svg?branch=master
+    :target: https://travis-ci.org/phpmyadmin/website
+
+.. image:: http://codecov.io/github/phpmyadmin/website/coverage.svg?branch=master
+    :target: http://codecov.io/github/phpmyadmin/website?branch=master
+
+.. image:: https://api.codacy.com/project/badge/4cfc116f766947dcad6c006b295aafc2
+    :alt: Codacy Badge
+    :target: https://www.codacy.com/app/michal_2/website
+
 Requirements
 ------------
 
