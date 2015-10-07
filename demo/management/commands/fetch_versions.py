@@ -25,17 +25,17 @@ from demo.models import Demo
 from ConfigParser import RawConfigParser
 from pmaweb.cdn import purge_cdn
 import urllib
-import collections
+from collections import OrderdDict
 
 URL = 'http://demo.phpmyadmin.net/versions.ini'
 
 
-class MultiOrderedDict(collections.OrderedDict):
+class MultiOrderedDict(OrderedDict):
     def __setitem__(self, key, value):
         if isinstance(value, list) and key in self:
             self[key].extend(value)
         else:
-            super(collections.OrderedDict, self).__setitem__(key, value)
+            super(OrderedDict, self).__setitem__(key, value)
 
 
 class Command(BaseCommand):
