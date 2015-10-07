@@ -11,6 +11,11 @@ ignore=migrations,settings_jenkins.py,settings_test.py,.git,test-repos,repos
 persistent=yes
 cache-size=500
 
+# List of plugins (as comma separated values of python modules names) to load,
+# usually to register additional checkers.
+load-plugins=pylint_django
+
+
 [MESSAGES CONTROL]
 # C0111 Missing docstring 
 # I0011 Warning locally suppressed using disable-msg
