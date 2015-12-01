@@ -23,22 +23,22 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
-from pmaweb.views import PMAView
-from security.views import PMASAView, PMASADraftView
-from files.views import ReleaseList, ReleaseDetail
+from pmaweb.views import PMAView, redirect_home_page
+from security.views import PMASAView, PMASADraftView, redirect_security
+from files.views import ReleaseList, ReleaseDetail, version_json
 from news.views import PostArchive, PostDetail
 from news.feeds import NewsFeed
 from files.feeds import ReleaseFeed
 from security.feeds import PMASAFeed
 from pmaweb.sitemaps import SITEMAPS
+import django.contrib.sitemaps.views
 
 
 TRANSLATIONS_RSS = 'https://hosted.weblate.org/exports/rss/phpmyadmin/'
 
 handler404 = 'pmaweb.views.notfound'
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     # Feeds
     url(
         r'news/feed/$',
@@ -59,13 +59,13 @@ urlpatterns = patterns(
     # XML sitemap
     url(
         r'^sitemap.xml$',
-        'django.contrib.sitemaps.views.index',
+        django.contrib.sitemaps.views.index,
         {'sitemaps': SITEMAPS},
         name='sitemap',
     ),
     url(
         r'^sitemap-(?P<section>.+)\.xml$',
-        'django.contrib.sitemaps.views.sitemap',
+        django.contrib.sitemaps.views.sitemap,
         {'sitemaps': SITEMAPS}
     ),
 
@@ -351,7 +351,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^(?:home_page/)?version\.json$',
-        'files.views.version_json',
+        version_json,
     ),
 
     # Composer packages
@@ -454,7 +454,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^home[_ ]?page/security\.php$',
-        'security.views.redirect_security',
+        redirect_security,
     ),
     url(
         r'^home[_ ]?page/$',
@@ -472,7 +472,7 @@ urlpatterns = patterns(
     ),
     url(
         r'^home[_ /]?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
-        'pmaweb.views.redirect_home_page',
+        redirect_home_page,
     ),
     url(
         r'gophp5',
@@ -516,4 +516,4 @@ urlpatterns = patterns(
 
     # Admin interface
     url(r'^admin/', include(admin.site.urls)),
-)
+]
