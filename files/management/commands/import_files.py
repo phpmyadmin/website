@@ -71,7 +71,8 @@ class Command(BaseCommand):
                         release.release_notes_markup_type = 'html'
                         release.release_notes = u'<pre>{0}</pre>'.format(
                             BeautifulSoup(
-                                handle.read()
+                                handle.read(),
+                                'lxml',
                             ).get_text()
                         )
                         release.save()
