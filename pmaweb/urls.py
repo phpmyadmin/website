@@ -25,7 +25,9 @@ from django.views.generic import RedirectView
 from django.views.generic import TemplateView
 from pmaweb.views import PMAView, redirect_home_page
 from security.views import PMASAView, PMASADraftView, redirect_security
-from files.views import ReleaseList, ReleaseDetail, version_json
+from files.views import (
+    ReleaseList, ReleaseDetail, version_json, latest_download
+)
 from news.views import PostArchive, PostDetail
 from news.feeds import NewsFeed
 from files.feeds import ReleaseFeed
@@ -341,6 +343,12 @@ urlpatterns = [
             template_name='version/list.txt',
             content_type='text/plain'
         )
+    ),
+    url(
+        r'^downloads/phpMyAdmin-latest-'
+        r'(?P<flavor>all-languages|english)'
+        r'(?P<extension>\.zip|\.tar\.gz|\.tar\.xz|\.tar\.bz2)$',
+        latest_download,
     ),
     url(
         r'^(home_page/)?version\.js$',

@@ -24,7 +24,8 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, Http404
-from files.models import Release, get_current_releases
+from django.shortcuts import redirect
+from files.models import Release, get_current_releases, Download
 import json
 
 
@@ -81,3 +82,14 @@ def version_json(request):
         json.dumps(response, indent=4),
         content_type='application/json'
     )
+
+
+def latest_download(request, flavor, extension):
+    latest = Release.objects.filter(stable=True)[0]
+    try:
+        result = latest.download_set.get(
+            filename__endswith='-{0}{1}'.format(flavor, extension)
+        )
+        return redirect(result, permanent=False)
+    except Download.DoesNotExist:
+        raise Http404("No release found matching the query")
