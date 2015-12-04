@@ -46,7 +46,7 @@ VERSION_INFO = (
 )
 
 DOCKER_TRIGGER = \
-    'https://registry.hub.docker.com/u/phpmyadmin/phpmyadmin/trigger/{0}'
+    'https://registry.hub.docker.com/u/phpmyadmin/phpmyadmin/trigger/{0}/'
 
 
 def get_current_releases():
