@@ -153,3 +153,5 @@ LISTED_BRANCHES = ('4.5', '4.4', '4.0')
 CDN_LOGIN = 'admins@phpmyadmin.net'
 CDN_PASSWORD = ''
 CDN_ID = '41205'
+
+DOCKERHUB_TOKEN = None

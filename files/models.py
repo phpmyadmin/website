@@ -19,6 +19,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+import urllib2
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.core.urlresolvers import reverse
@@ -43,6 +44,9 @@ VERSION_INFO = (
     ('rc4', ' Fourth release candidate.'),
     ('rc', ' Release candidate.'),
 )
+
+DOCKER_TRIGGER = \
+    'https://registry.hub.docker.com/u/phpmyadmin/phpmyadmin/trigger/{0}'
 
 
 def get_current_releases():
@@ -297,6 +301,19 @@ class Theme(models.Model):
     @property
     def get_css(self):
         return CSSMAP[self.supported_versions]
+
+
+@receiver(post_save, sender=Release)
+def dockerhub_trigger(sender, instance, **kwargs):
+    if settings.DOCKERHUB_TOKEN is None:
+        return
+    request = urllib2.Request(
+        DOCKER_TRIGGER.format(settings.DOCKERHUB_TOKEN),
+        '{"build": true}',
+        {'Content-Type': 'application/json'}
+    )
+    handle = urllib2.urlopen(request)
+    handle.read()
 
 
 @receiver(post_save, sender=Release)
