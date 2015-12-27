@@ -4,6 +4,8 @@
  * as a parameter.
  */
 function show_theme(version) {
+    $$('.themelink').setStyle('background', 'none').setStyle('color', 'inherit');
+    $$('.themelink.' + version).setStyle('background', '#666699').setStyle('color', 'white');
     if (version === "all") {
         $$("div.themediv").setStyle("display", "block");
         return;

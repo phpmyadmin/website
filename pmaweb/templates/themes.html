@@ -34,7 +34,7 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 <h2>Available Themes</h2>
 <p>Select your phpMyAdmin version (requires JavaScript):
 {% for css in themecssversions %}
-<a class="themelink" href="#{{css.css}}" onclick="show_theme('{{css.css}}')">{{css.name}}</a>
+<a class="themelink {{css.css}}" href="#{{css.css}}" onclick="show_theme('{{css.css}}')">{{css.name}}</a>
 {% endfor %}
 </p>
 {% for theme in themes %}
