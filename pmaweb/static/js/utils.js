@@ -20,15 +20,14 @@ function theme_load() {
         return;
     }
 
-    /* Do we have some parameter? */
-    if (self.document.location.hash.length < 1) {
-        return;
-    }
+    var hash = null;
 
-    /* Is the parameter existing class for theme? */
-    var hash = self.document.location.hash.substring(1);
-    if ($$("div.themediv." + hash).length === 0) {
-        return;
+    /* Do we have some parameter? */
+    if (self.document.location.hash.length > 1) {
+        hash = self.document.location.hash.substring(1);
+    } else {
+        var links = $$('.themelink');
+        hash = links[links.length - 1].get('href').substring(1);
     }
 
     /* Finally show chosen schema */
