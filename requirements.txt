@@ -6,4 +6,4 @@ docutils
 Markdown
 pytz
 beautifulsoup4
-django_compressor
+django_compressor!=2.0
