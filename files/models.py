@@ -33,6 +33,10 @@ from pmaweb.cdn import purge_cdn
 
 # Naming of versions
 VERSION_INFO = (
+    ('alpha1', ' First alpha version.'),
+    ('alpha2', ' Second alpha version.'),
+    ('alpha3', ' Third alpha version.'),
+    ('alpha4', ' Fourth alpha version.'),
     ('beta1', ' First beta version.'),
     ('beta2', ' Second beta version.'),
     ('beta3', ' Third beta version.'),
