@@ -177,6 +177,10 @@ class Release(models.Model):
                 'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
             )
+        elif self.version[:3] == '4.6':
+            text = (
+                'Current version compatible with PHP 5.5 to 7.0 and MySQL 5.5. '
+            )
         elif self.version[:3] == '4.5':
             text = (
                 'Current version compatible with PHP 5.5 to 7.0 and MySQL 5.5. ' +
