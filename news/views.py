@@ -33,6 +33,12 @@ class PostArchive(ArchiveIndexView):
         context['page_title'] = 'News'
         return context
 
+    def paginate_queryset(self, queryset, page_size):
+        # We don't want to page parameter from GET to be used
+        if 'page' not in self.kwargs:
+            self.kwargs['page'] = '1'
+        return super(PostArchive, self).paginate_queryset(queryset, page_size)
+
 
 class PostDetail(DateDetailView):
     model = Post
