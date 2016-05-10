@@ -128,6 +128,19 @@ body {
     font-size: smaller;
     color: #666699;
 }
+.sp a {
+    display: block;
+    padding: 0.2em;
+}
+.diamond a {
+    min-height: 250px;
+}
+.platinum a {
+    min-height: 130px;
+}
+.gold a {
+    min-height: 70px;
+}
 
 .logos a {
     display: inline-block;
