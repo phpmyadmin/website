@@ -398,21 +398,21 @@ urlpatterns = [
     url(
         r'^phpdoc',
         RedirectView.as_view(
-            url='http://docs.phpmyadmin.net/',
+            url='https://develdocs.phpmyadmin.net/',
             permanent=True,
         )
     ),
     url(
         r'^(?:phpMyAdmin/)?Documentation.html$',
         RedirectView.as_view(
-            url='http://docs.phpmyadmin.net/',
+            url='https://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
     url(
         r'^(?:documentation|pma_localized_docs|localized_|manual/)',
         RedirectView.as_view(
-            url='http://docs.phpmyadmin.net/',
+            url='https://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
