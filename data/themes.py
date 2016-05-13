@@ -314,6 +314,12 @@ THEMES = {
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
     },
+    'metro-2.5': {
+        'name': 'Metro',
+        'support': '4.6',
+        'info': u'Windows 8 / Metro Theme for phpMyAdmin',
+        'author': u'hplhu',
+    },
 }
 
 CSSMAP = {
