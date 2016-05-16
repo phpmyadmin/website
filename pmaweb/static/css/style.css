@@ -128,18 +128,22 @@ body {
     font-size: smaller;
     color: #666699;
 }
+.sp {
+    display: table;
+    width: 100%;
+}
 .sp a {
-    display: block;
-    padding: 0.2em;
+        display:table-cell;
+        vertical-align:middle;
 }
-.diamond a {
-    min-height: 250px;
+.diamond {
+    height: 250px;
 }
-.platinum a {
-    min-height: 130px;
+.platinum {
+    height: 130px;
 }
-.gold a {
-    min-height: 70px;
+.gold {
+    height: 70px;
 }
 
 .logos a {
