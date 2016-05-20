@@ -23,7 +23,6 @@ from django.core.management.base import BaseCommand
 from translations.models import Translation
 import json
 from dateutil import parser
-from django.utils.timezone import pytz, make_aware
 import urllib
 
 URL = 'http://hosted.weblate.org/exports/stats/phpmyadmin/master/'
@@ -40,10 +39,7 @@ class Command(BaseCommand):
         for item in content:
             updated = None
             if item['last_change']:
-                updated = make_aware(
-                    parser.parse(item['last_change']),
-                    pytz.timezone('Europe/Prague'),
-                )
+                updated = parser.parse(item['last_change'])
             params = {
                 'name': item['name'],
                 'translated': item['translated'],
