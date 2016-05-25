@@ -4,6 +4,44 @@
 {% block content %}
 
 <div class="floatbox">
+<h2>Getting help with phpMyAdmin</h2>
+
+<p>
+phpMyAdmin strives to be as helpful as possible during the install, but
+sometimes it happens: it just won't work. Here's a list of resources and
+information you can use when you're trying to get it working:
+</p>
+
+<h3>Recent versions of all programs</h3>
+
+<p>
+It's true, software has bugs. Those bugs get fixed, but if you're still running
+a broken version of PHP that doesn't handle arrays correctly, you'll never get
+phpMyAdmin (or any other PHP script) working properly. If at all possible try
+to run the most recent versions of MySQL, PHP, and phpMyAdmin.
+</p>
+
+<h3>Use the phpMyAdmin source</h3>
+
+<p>
+Many distributions ship with binary installs for phpMyAdmin (Gentoo's
+portage/emerge, Debian's dpkg/apt, etc). If you have a problem with one of
+those, seek help from the package maintainer. If you want to ask us, first get
+the source from <a href="{% url 'downloads' %}">our downloads page</a> and run through the 
+<a href="https://docs.phpmyadmin.net/en/latest/setup.html#quick-install">quick_install guide</a>.
+</p>
+
+<h3>Read the documentation!</h3>
+
+<p>
+Yes, <a href="https://docs.phpmyadmin.net/">the documentation</a> is large, but
+that's because it has a lot of information in it. Search for your error message
+or problem. Read the <a href="https://docs.phpmyadmin.net/en/latest/faq.html">frequently asked questions</a> — many
+common problems are answered there.
+</p>
+</div>
+
+<div class="floatbox">
 <h2>Types of questions and where to ask</h2>
 <ul>
   <li>How do I? &mdash; <a href="http://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
