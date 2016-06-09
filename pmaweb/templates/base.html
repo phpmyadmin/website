@@ -28,6 +28,9 @@
   {% endif %}
   <meta property="og:site_name" content="phpMyAdmin" />
   <meta property="og:image" content="{% static 'images/logo-og.png' %}" />
+  {% block ogtags %}
+  <meta property="og:type" content="website" />
+  {% endblock %}
   <link rel="image_src" href="{% static 'images/logo-og.png' %}" />
   <link rel="vcs-git" href="git://github.com/phpmyadmin/phpmyadmin.git" title="phpMyAdmin Git repository" />
   <link rel="vcs-browse" href="http://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />

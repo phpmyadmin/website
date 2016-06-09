@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block ogtags %}
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="{{post.date.isoformat }}" />
+{% endblock %}
+
 {% block content %}
 
 <h2 class="entry-title"><a rel="bookmark" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
