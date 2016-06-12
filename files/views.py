@@ -3,7 +3,7 @@
 #
 # phpMyAdmin web site
 #
-# Copyright (C) 2008 - 2015 Michal Cihar <michal@cihar.com>
+# Copyright (C) 2008 - 2016 Michal Cihar <michal@cihar.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
