@@ -75,31 +75,43 @@ class DailySitemap(PagesSitemap):
         ]
 
 
+class NewsSitemap(Sitemap):
+    priority = 0.8
+    changefreq = 'monthly'
+
+    def items(self):
+        return Post.objects.filter(date__lt=timezone.now())
+
+    def lastmod(self, item):
+        return item.date
+
+
+class SecuritySitemap(Sitemap):
+    priority = 1
+    changefreq = 'weekly'
+
+    def items(self):
+        return PMASA.objects.filter(draft=False)
+
+    def lastmod(self, item):
+        return item.date
+
+
+class ReleasesSitemap(Sitemap):
+    priority = 0.8
+    changefreq = 'monthly'
+
+    def items(self):
+        return Release.objects.all()
+
+    def lastmod(self, item):
+        return item.date
+
+
 SITEMAPS = {
-    'news': GenericSitemap(
-        {
-            'queryset': Post.objects.filter(date__lt=timezone.now()),
-            'date_field': 'date',
-        },
-        priority=0.8,
-        changefreq='monthly'
-    ),
-    'security': GenericSitemap(
-        {
-            'queryset': PMASA.objects.filter(draft=False),
-            'date_field': 'date',
-        },
-        priority=1,
-        changefreq='monthly'
-    ),
-    'releases': GenericSitemap(
-        {
-            'queryset': Release.objects.all(),
-            'date_field': 'date',
-        },
-        priority=0.8,
-        changefreq='monthly'
-    ),
+    'news': NewsSitemap(),
+    'security': SecuritySitemap(),
+    'releases': ReleasesSitemap(),
     'pages': PagesSitemap(),
     'daily': DailySitemap(),
 }
