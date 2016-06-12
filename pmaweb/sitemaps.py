@@ -86,7 +86,7 @@ SITEMAPS = {
     ),
     'security': GenericSitemap(
         {
-            'queryset': PMASA.objects.all(),
+            'queryset': PMASA.objects.filter(draft=False),
             'date_field': 'date',
         },
         priority=1,
