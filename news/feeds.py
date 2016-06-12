@@ -20,6 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from django.contrib.syndication.views import Feed
+from django.utils import timezone
 from news.models import Post
 
 
@@ -29,7 +30,7 @@ class NewsFeed(Feed):
     description = "News from the phpMyAdmin project."
 
     def items(self):
-        return Post.objects.all()[:10]
+        return Post.objects.filter(date__lt=timezone.now())[:10]
 
     def item_title(self, item):
         return item.title

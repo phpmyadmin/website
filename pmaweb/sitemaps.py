@@ -21,6 +21,7 @@
 
 from django.contrib.sitemaps import GenericSitemap, Sitemap
 from django.core.urlresolvers import reverse
+from django.utils import timezone
 from news.models import Post
 from security.models import PMASA
 from files.models import Release
@@ -77,7 +78,7 @@ class DailySitemap(PagesSitemap):
 SITEMAPS = {
     'news': GenericSitemap(
         {
-            'queryset': Post.objects.all(),
+            'queryset': Post.objects.filter(date__lt=timezone.now()),
             'date_field': 'date',
         },
         priority=0.8,

@@ -25,6 +25,7 @@ from translations.models import Translation
 from security.models import PMASA
 from demo.models import Demo
 from django.core.urlresolvers import reverse
+from django.utils import timezone
 import datetime
 
 from data.menu import MENU
@@ -36,7 +37,7 @@ from data.awards import AWARDS
 def basic(request):
     return {
         'current_year': datetime.datetime.now().year,
-        'short_news': Post.objects.all()[:5],
+        'short_news': Post.objects.filter(date__lt=timezone.now())[:5],
         'short_planet': Planet.objects.all()[:5],
         'screenshots': SCREENSHOTS,
         'themes': Theme.objects.all(),
