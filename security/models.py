@@ -56,7 +56,6 @@ class PMASA(models.Model):
         default='Upgrade to phpMyAdmin ? or newer or apply patch listed below.'
     )
     references = models.TextField(
-        max_length=200,
         help_text='Links to reporter etc.',
         blank=True,
     )
