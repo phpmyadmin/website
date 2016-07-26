@@ -230,6 +230,7 @@ class Download(models.Model):
     size = models.IntegerField(default=0)
     md5 = models.CharField(max_length=32)
     sha1 = models.CharField(max_length=40)
+    sha256 = models.CharField(max_length=64)
     signed = models.BooleanField(default=False)
 
     class Meta(object):
@@ -284,6 +285,7 @@ class Theme(models.Model):
     size = models.IntegerField(default=0)
     md5 = models.CharField(max_length=32)
     sha1 = models.CharField(max_length=40)
+    sha256 = models.CharField(max_length=64)
     signed = models.BooleanField(default=False)
     date = models.DateTimeField(db_index=True, default=timezone.now)
 
