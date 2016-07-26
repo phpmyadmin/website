@@ -44,7 +44,6 @@ class PagesSitemap(Sitemap):
             ('about', 0.2),
             ('15-years', 0.8),
             ('donate', 0.5),
-            ('search', 0.1),
             ('about-website', 0.2),
             ('translate', 1),
             ('develop', 1),
