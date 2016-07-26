@@ -25,7 +25,7 @@ import json
 from dateutil import parser
 import urllib
 
-URL = 'http://hosted.weblate.org/exports/stats/phpmyadmin/master/'
+URL = 'https://hosted.weblate.org/exports/stats/phpmyadmin/master/'
 
 
 class Command(BaseCommand):
