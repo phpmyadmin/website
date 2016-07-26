@@ -54,7 +54,7 @@ class ViewTest(TestCase):
             )
             self.assertContains(
                 response,
-                'http://github.com/phpmyadmin/',
+                'https://github.com/phpmyadmin/',
                 msg_prefix='Invalid response for {0}'.format(url),
             )
 

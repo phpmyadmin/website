@@ -32,7 +32,7 @@ class Demo(models.Model):
     master_version = models.CharField(max_length=100)
 
     def get_absolute_url(self):
-        return u'http://demo.phpmyadmin.net/{0}/'.format(self.name)
+        return u'https://demo.phpmyadmin.net/{0}/'.format(self.name)
 
     def get_login_url(self):
         if '-config' in self.name or '-http' in self.name:

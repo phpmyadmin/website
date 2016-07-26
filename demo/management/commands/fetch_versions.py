@@ -27,7 +27,7 @@ from pmaweb.cdn import purge_cdn
 import urllib
 from collections import OrderedDict
 
-URL = 'http://demo.phpmyadmin.net/versions.ini'
+URL = 'https://demo.phpmyadmin.net/versions.ini'
 
 
 class MultiOrderedDict(OrderedDict):
