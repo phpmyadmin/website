@@ -20,7 +20,7 @@ Python - http://www.python.org/
     (2.7 tested)
 Django - https://www.djangoproject.com/
     (1.8.2 tested)
-python-feedparser - http://code.google.com/p/feedparser/
+python-feedparser - https://github.com/kurtmckee/feedparser
     (5.1 tested)
 python-dateutil - http://labix.org/python-dateutil
     (1.5 tested)
