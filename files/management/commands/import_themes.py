@@ -52,6 +52,10 @@ class Command(BaseCommand):
                 'supported_versions': data['support'],
                 'description': data['info'],
                 'author': data['author'],
+                'sha256': read_sum(
+                    '{0}.sha256'.format(complete_name),
+                    complete_name
+                ),
                 'sha1': read_sum(
                     '{0}.sha1'.format(complete_name),
                     complete_name
