@@ -55,7 +55,7 @@ project has won</p>
     },
     {
         'image': 'images/awards/sf_cca_2009_logo.png',
-        'link': 'http://sourceforge.net/community/cca09',
+        'link': 'https://sourceforge.net/community/cca09',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="%(link)s">2009 SourceForge.net Community Choice Awards</a>,
@@ -73,8 +73,7 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'images/awards/infoworld-bossie-2008.jpg',
-        'link': 'http://www.infoworld.com/'
-                'slideshow/2008/08/171-best_of_open_so-5.html',
+        'link': 'http://www.infoworld.com/',
         'title': 'InfoWorld 2008 Best of Open Source Awards',
         'text': '''
 <p>Our project has won this <a href="%(link)s">Infoworld 2008 award:</a></p>
@@ -85,7 +84,7 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'images/awards/sf_cca_2008_winner.png',
-        'link': 'http://sourceforge.net/'
+        'link': 'https://sourceforge.net/'
                 'community/index.php/landing-pages/cca08',
         'title': '2008 SourceForge.net Community Choice Awards',
         'text': '''
@@ -105,7 +104,7 @@ phpMyAdmin was present in three categories:</p>
     },
     {
         'image': 'images/awards/sf_cca_2007_sysadmin.gif',
-        'link': 'http://sourceforge.net/'
+        'link': 'https://sourceforge.net/'
                 'community/index.php/landing-pages/cca07',
         'title': '2007 SourceForge.net Community Choice Awards',
         'text': '''
@@ -142,8 +141,7 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'images/awards/2005-os2world.png',
-        'link': 'http://www.os2world.com/'
-                'cgi-bin/news/viewnews.cgi?category=29&id=1145794857',
+        'link': 'http://www.os2world.com/',
         'title': '2005 OS2World.com Awards',
         'text': '''
 <p>For the <a href="%(link)s">5th Annual OS/2 World Awards</a>,
@@ -154,7 +152,7 @@ phpMyAdmin won in the category</p>
     },
     {
         'image': 'images/awards/sf_cca_2006_winner.png',
-        'link': 'http://sourceforge.net/community/index.php/cca06',
+        'link': 'https://sourceforge.net/community/index.php/cca06',
         'title': '2006 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the first annual SourceForge.net <a href="%(link)s">Community Choice
@@ -166,8 +164,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     },
     {
         'image': 'images/awards/2006-phpmag-ger.png',
-        'link': 'http://www.phpmagazin.de/'
-                'itr/service/psecom,id,304,nodeid,64.html',
+        'link': 'https://www.phpmagazin.de/',
         'title': 'PHP Magazin Reader\'s Choice Award 2006',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2006 in the category</p>
@@ -178,7 +175,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     },
     {
         'image': 'images/awards/2005-phpmag-ger.gif',
-        'link': 'http://www.phpmagazin.de/umfrage2005',
+        'link': 'https://www.phpmagazin.de/',
         'title': 'PHP Magazin Reader\'s Choice Award 2005',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2005 in the category</p>
@@ -189,7 +186,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     },
     {
         'image': 'images/awards/2003-phpmag-ger.gif',
-        'link': 'http://www.php-mag.de/itr/service/show.php3?id=109&nodeid=64',
+        'link': 'https://www.phpmagazin.de/',
         'title': 'PHP Magazin Reader\'s Choice Award 2003',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2003 in the category</p>
@@ -208,7 +205,7 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     },
     {
         'image': 'images/awards/2003-phpmag-int.gif',
-        'link': 'http://www.php-mag.de/itr/service/show.php3?id=109&nodeid=64',
+        'link': 'https://www.phpmagazin.de/',
         'title': 'International PHP Magazine Reader\'s Choice Award 2003',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2003 in the category</p>
@@ -227,11 +224,11 @@ Awards</a>, phpMyAdmin won the first place in two categories:</p>
     },
     {
         'image': 'images/awards/2002-12-sfnet-potm.png',
-        'link': 'http://sourceforge.net/potm/potm-2002-12.php',
+        'link': 'https://sourceforge.net/potm/potm-2002-12.php',
         'title': 'Sourceforge.net project of the month',
         'text': '''
 <p>phpMyAdmin was awarded
-<a href="http://sourceforge.net">Sourceforge.net</a>'s</p>
+<a href="https://sourceforge.net">Sourceforge.net</a>'s</p>
 <p class="award"><a href="%(link)s">Project of the month</a></p>
 <p>in December 2002. Have a look at that <a href="%(link)s">article</a>, if you
 want to learn about the early years of phpMyAdmin.</p>
