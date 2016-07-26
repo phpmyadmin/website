@@ -222,14 +222,6 @@ urlpatterns = [
         name='donate'
     ),
     url(
-        r'^search/$',
-        PMAView.as_view(
-            template_name='search.html',
-            title='Search',
-        ),
-        name='search'
-    ),
-    url(
         r'^about-website/$',
         PMAView.as_view(
             template_name='about-website.html',
@@ -466,6 +458,13 @@ urlpatterns = [
     ),
     url(
         r'^home[_ ]?page/$',
+        RedirectView.as_view(
+            pattern_name='home',
+            permanent=True,
+        )
+    ),
+    url(
+        r'^search/$',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,

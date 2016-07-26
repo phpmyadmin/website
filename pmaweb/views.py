@@ -37,6 +37,7 @@ REDIRECT_MAP = {
     'stats': 'team',
     'sitemap': 'home',
     'gophp5': 'home',
+    'search': 'home',
 
     # Alive pages
     '15-years': '15-years',
@@ -52,7 +53,6 @@ REDIRECT_MAP = {
     'index': 'home',
     'license': 'license',
     'news': 'news',
-    'search': 'search',
     'sponsors': 'sponsors',
     'support': 'support',
     'team': 'team',
