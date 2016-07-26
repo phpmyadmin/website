@@ -6,8 +6,8 @@ Django code for phpMyAdmin's website.
 .. image:: https://travis-ci.org/phpmyadmin/website.svg?branch=master
     :target: https://travis-ci.org/phpmyadmin/website
 
-.. image:: http://codecov.io/github/phpmyadmin/website/coverage.svg?branch=master
-    :target: http://codecov.io/github/phpmyadmin/website?branch=master
+.. image:: https://codecov.io/github/phpmyadmin/website/coverage.svg?branch=master
+    :target: https://codecov.io/github/phpmyadmin/website?branch=master
 
 .. image:: https://api.codacy.com/project/badge/4cfc116f766947dcad6c006b295aafc2
     :alt: Codacy Badge
@@ -16,13 +16,13 @@ Django code for phpMyAdmin's website.
 Requirements
 ------------
 
-Python - http://www.python.org/
+Python - https://www.python.org/
     (2.7 tested)
 Django - https://www.djangoproject.com/
     (1.8.2 tested)
 python-feedparser - https://github.com/kurtmckee/feedparser
     (5.1 tested)
-python-dateutil - http://labix.org/python-dateutil
+python-dateutil - https://labix.org/python-dateutil
     (1.5 tested)
 
 
@@ -121,8 +121,8 @@ License
 The website generator is licensed under GNU GPL version 2 or later.
 
 Website itself uses mootools <http://mootools.net/>, slimbox
-<http://www.digitalia.be/software/slimbox>, fader and sorting_table
-<http://madhatted.com/2008/6/20/the-joy-of-tables-on-cows> which are
+<https://www.digitalia.be/software/slimbox>, fader and sorting_table
+<https://madhatted.com/2008/6/20/the-joy-of-tables-on-cows> which are
 licensed under terms of MIT license.
 
 The website content is licensed under Creative Commons
