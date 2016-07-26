@@ -21,7 +21,7 @@
 
 from django.core.management.base import BaseCommand
 from django.db.models import Q
-from hashlib import sha1, md5
+from hashlib import sha256, sha1, md5
 from files.models import Download, Theme
 
 
@@ -32,6 +32,9 @@ class Command(BaseCommand):
         with open(item.get_filesystem_path(), 'r') as handle:
             data = handle.read()
 
+        if item.sha256 == '':
+            item.sha256 = sha256(data).hexdigest()
+
         if item.sha1 == '':
             item.sha1 = sha1(data).hexdigest()
 
@@ -41,7 +44,7 @@ class Command(BaseCommand):
         item.save()
 
     def handle(self, *args, **options):
-        query = Q(sha1='') | Q(md5='')
+        query = Q(sha256='') | Q(sha1='') | Q(md5='')
         for item in Theme.objects.filter(query):
             self.add_sums(item)
         for item in Download.objects.filter(query):
