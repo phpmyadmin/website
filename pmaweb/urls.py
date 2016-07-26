@@ -288,8 +288,8 @@ urlpatterns = [
     url(
         r'auth_key',
         RedirectView.as_view(
-            url='http://store.swekey.com/index.php?promo=pma',
-            permanent=False,
+            pattern_name='home',
+            permanent=True,
         )
     ),
 
