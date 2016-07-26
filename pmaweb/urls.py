@@ -384,14 +384,14 @@ urlpatterns = [
     url(
         r'^(?:documentation/changelog.php|[cC]hange[Ll]og.txt|ANNOUNCE.txt)',
         RedirectView.as_view(
-            url='http://demo.phpmyadmin.net/master-config/changelog.php',
+            url='https://demo.phpmyadmin.net/master-config/changelog.php',
             permanent=True,
         )
     ),
     url(
         r'^documentation/scripts/setup.php$',
         RedirectView.as_view(
-            url='http://demo.phpmyadmin.net/master-config/setup/',
+            url='https://demo.phpmyadmin.net/master-config/setup/',
             permanent=True,
         )
     ),
@@ -512,7 +512,7 @@ urlpatterns = [
         )
     ),
     url(
-        r'^(?:http://www\.phpmyadmin\.net/|index\.html|' +
+        r'^(?:https?://www\.phpmyadmin\.net/|index\.html|' +
         r'logout|auth|login|auth_|auth%5C_key|' +
         r'SignonURL.*|logoutURL.*|' +
         r'default\.htm|home|\&lang=en.*|phpMyAdmin.*|[0-9.]+)$',
