@@ -24,7 +24,7 @@ from dateutil import parser
 from news.management.commands import FeedCommand
 from news.models import Planet
 
-URL = 'http://planet.phpmyadmin.net/rss20.xml'
+URL = 'https://planet.phpmyadmin.net/rss20.xml'
 
 
 class Command(FeedCommand):
