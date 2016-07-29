@@ -10,113 +10,7 @@
     vertical-align: middle;
 }
 
-nav {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-top: 0 none;
-    border-bottom: 3px solid #669;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.21);
-}
-.menu {
-    text-align: center;
-    display: block;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1000px;
-    overflow: auto;
-}
-nav a {
-    font-weight: bold;
-    padding: 0.5em 0.8em;
-    border-right: 1px solid #CCC;
-    color: #656565;
-    float: left;
-    font-size: 0.9em;
-}
-nav a:hover {
-    background-color: #EFEFEF;
-    text-decoration: none;
-    color: #B16D00;
-}
-
-a.active {
-    background-color: #666699;
-    color: #fff;
-}
-
-.planet-body {
-    margin-right: 20em;
-}
-
-#body {
-    margin: 0 1em 1em 1em;
-    padding-top:1%;
-    overflow: auto;
-}
-
-a {
-    color: #656565;
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #8f5902;
-}
-
-img {
-    border: 0;
-}
-
-h1, h2, h2 a, h3, h3 a {
-    color: #666699;
-}
-
-body {
-    margin: 0;
-    background-color: white;
-    font-family: sans-serif;
-    color: black;
-}
-
-.banner {
-    width: 80em;
-    max-width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.2em;
-}
-
-.bannerimg {
-    float: right;
-    clear: both;
-    margin: 0;
-}
-
-/* For planet */
-.sidebar {
-    position: absolute;
-    top: 4em;
-    right: 0;
-    width: 20em;
-
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-
-    padding-top: 20px;
-    padding-left: 0;
-
-    font-size: smaller;
-}
-
 .sponsors {
-    float: right;
-    margin: 1em;
-    text-align: center;
-    width: 12em;
     min-width: 250px;
 }
 
@@ -150,83 +44,6 @@ body {
     display: inline-block;
     padding: 0.5em;
     vertical-align: middle;
-}
-
-.hitbuttons div {
-    padding: 0;
-    margin: 0 0 0 1em;
-    border: 1px solid white;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #666699;
-    color: white;
-    font-weight: bolder;
-    -moz-box-shadow:0 0 8px #AAA;
-    -webkit-box-shadow:0 0 8px #AAA;
-    box-shadow:0 0 8px #AAA;
-    -webkit-transition:-webkit-box-shadow 0.1s ease-out;
-    -moz-transition:-webkit-box-shadow 0.1s ease-out;
-    -o-transition:-webkit-box-shadow 0.1s ease-out;
-    transition:-webkit-box-shadow 0.1s ease-out;
-    display: inline-block;
-}
-.hitbuttons div:hover {
-    background-color: #8888cc;
-}
-
-.hitbuttons div a {
-    color: white;
-    display: block;
-    padding: 0.5em 2em;
-    text-decoration: none;
-}
-
-div.tip {
-    border: 1px solid black;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #ffff87;
-    font-size: smaller;
-    padding: 0.2em;
-    width: 15em;
-}
-
-footer ul {
-    padding: 0;
-    margin: 0;
-    max-width: none;
-    clear: both;
-}
-
-footer li {
-    font-size: smaller;
-    list-style: none;
-    float: left;
-    padding: 1em;
-    color: gray;
-    border: none;
-}
-
-.left-list {
-    margin: 2em 1em 1em 1em;
-    float: left;
-    padding: 0pt 2em;
-}
-.left-list ul {
-    margin: 0;
-    padding: 0;
-}
-.left-list li {
-    margin: 0;
-    padding: 0;
-}
-
-.clearer {
-    clear: both;
-    padding: 0;
-    margin: 0;
 }
 
 .themeimgborder {
@@ -281,18 +98,6 @@ ul.security li.active a {
     color: black;
 }
 
-p.signature {
-    text-align: right;
-    font-style: italic;
-}
-
-.floatbox {
-    float: left;
-    width: 50em;
-    margin: 0.2em;
-    padding: 0.2em;
-}
-
 .book img {
     margin: 1em;
     float: left;
@@ -340,22 +145,6 @@ div.award {
     margin: 5px;
     width: 300px;
 }
-
-.head {
-    float: left;
-    border: none;
-    margin: 0 .3em .8em 0;
-    padding: 0.2em;
-}
-
-pre {
-    border: 1px solid black;
-    margin: 1em;
-    background: #ccc;
-    width: auto;
-    padding: 0.5em;
-}
-
 .graph td.bar {
     width: 400px;
 }
