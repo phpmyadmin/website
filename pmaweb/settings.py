@@ -150,6 +150,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Enable offline javascript/css compression
 COMPRESS_OFFLINE = True
 
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.CSSCompressorFilter',
+]
+
 # List of major versions to offer for download
 LISTED_BRANCHES = ('4.6', '4.4', '4.0')
 
