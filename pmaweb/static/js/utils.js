@@ -32,7 +32,7 @@ function theme_load() {
             hash = null;
         }
     }
-    if (hash !== null) {
+    if (hash === null) {
         var links = $$('.themelink');
         hash = links[links.length - 1].get('href').substring(1);
     }
