@@ -66,7 +66,7 @@ The phpMyAdmin project is a member of <a href="https://sfconservancy.org">Softwa
     </a>
 </div>
 
-<div class="floatbox">
+<div>
     <h2>Features</h2>
     <ul>
         <li>Intuitive web interface</li>
@@ -111,7 +111,7 @@ The phpMyAdmin project is a member of <a href="https://sfconservancy.org">Softwa
     </ul>
 </div>
 
-<div class="floatbox hslice" id="latest-news">
+<div id="latest-news">
     <h2 class="entry-title"><a href="{% url 'news' %}">Latest News</a></h2>
     <ul>
     {% for item in short_news %}
@@ -123,7 +123,7 @@ The phpMyAdmin project is a member of <a href="https://sfconservancy.org">Softwa
     <p class="signature"><a href="{% url 'news' %}">...more news.</a></p>
 </div>
 
-<div class="floatbox hslice" id="latest-blogs">
+<div id="latest-blogs">
     <h2 class="entry-title"><a href="https://planet.phpmyadmin.net/">Latest Posts in Developers Blogs</a></h2>
     <ul>
     {% for item in short_planet %}
@@ -135,7 +135,6 @@ The phpMyAdmin project is a member of <a href="https://sfconservancy.org">Softwa
     <p class="signature"><a href="https://planet.phpmyadmin.net/">...more blogs.</a></p>
 </div>
 
-<div class="clearer"></div>
 </div>
 
 <div class="col-md-3">
