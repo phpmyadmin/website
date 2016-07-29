@@ -28,7 +28,7 @@ function theme_load() {
     if (self.document.location.hash.length > 1) {
         hash = self.document.location.hash.substring(1);
         /* Check validity */
-        if (hash.match(/^pma_[0-9]_[0-9]$/) === null) {
+        if (hash.match(/^(pma_[0-9]_[0-9]|all)$/) === null) {
             hash = null;
         }
     }
