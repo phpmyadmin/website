@@ -2,9 +2,10 @@
 {% load staticfiles %}
 
 {% block content %}
-{% include "security/_list.html" %}
+<div class="row">
 
-<div id="body">
+<div class="col-md-10">
+
     <h2>{{ pmasa }}</h2>
 
     <p><strong>Announcement-ID:</strong> {{ pmasa }}</p>
@@ -88,5 +89,6 @@
     </p>
 
 </div>
-<div class="clearer"></div>
+{% include "security/_list.html" %}
+</div>
 {% endblock %}
