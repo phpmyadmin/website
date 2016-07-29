@@ -147,6 +147,9 @@ FILES_PATH = os.path.join(BASE_DIR, 'frs')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# Enable offline javascript/css compression
+COMPRESS_OFFLINE = True
+
 # List of major versions to offer for download
 LISTED_BRANCHES = ('4.6', '4.4', '4.0')
 
