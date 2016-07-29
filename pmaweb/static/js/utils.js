@@ -27,7 +27,12 @@ function theme_load() {
     /* Do we have some parameter? */
     if (self.document.location.hash.length > 1) {
         hash = self.document.location.hash.substring(1);
-    } else {
+        /* Check validity */
+        if (hash.match(/^pma_[0-9]_[0-9]$/) === null) {
+            hash = null;
+        }
+    }
+    if (hash !== null) {
         var links = $$('.themelink');
         hash = links[links.length - 1].get('href').substring(1);
     }
