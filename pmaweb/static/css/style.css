@@ -383,18 +383,6 @@ pre {
     border-bottom: solid 2px #882200;
 }
 
-.sortable thead th {
-    cursor: pointer;
-}
-
-.sortable .fa-sort {
-    color: #ccc;
-}
-
-.sortable .fa-sort-asc, .sortable .fa-sort-desc {
-    color: #000;
-}
-
 .dllist td {
     padding: 2px;
 }
