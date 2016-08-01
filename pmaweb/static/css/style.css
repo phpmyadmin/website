@@ -204,3 +204,17 @@ li.disabled a {
 div.sfc-logo {
     text-align: center;
 }
+footer ul {
+    padding:0;
+    margin:1em;
+    max-width:none;
+    clear:both;
+}
+footer li{
+    font-size:small;
+    list-style:none;
+    float:left;
+    padding:1em;
+    color:gray;
+    border:none;
+}
