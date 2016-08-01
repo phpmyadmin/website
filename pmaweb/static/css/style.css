@@ -27,8 +27,10 @@
     width: 100%;
 }
 .sp a {
-        display:table-cell;
-        vertical-align:middle;
+    display:table-cell;
+    vertical-align:middle;
+    min-width: 264px;
+    text-align: center;
 }
 .diamond {
     height: 250px;
@@ -44,6 +46,9 @@
     display: inline-block;
     padding: 0.5em;
     vertical-align: middle;
+    /* 250 + 2 * 7 padding */
+    min-width: 264px;
+    text-align: center;
 }
 
 .themeimgborder {
