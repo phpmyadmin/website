@@ -44,6 +44,7 @@ def basic(request):
         'themecssversions': CSSVERSIONS,
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
+        'pmasa_year': PMASA.objects.filter(draft=False).order_by('-year').values_list('year', flat=True)[0],
         'translations': Translation.objects.all(),
         'demo_stable': Demo.objects.exclude(name__startswith='master'),
         'demo_devel': Demo.objects.filter(name__startswith='master'),

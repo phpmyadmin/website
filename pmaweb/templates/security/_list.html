@@ -1,8 +1,28 @@
 <div class="col-md-2">
 <h2>Announcements</h2>
+
+<div class="panel-group security" id="accordion" role="tablist" aria-multiselectable="true">
+
+{% regroup pmasas by year as pmasa_list %}
+{% for year in pmasa_list %}
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading{{ year.grouper }}">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#pmasa{{ year.grouper }}" {% if year.grouper == pmasa_year %}aria-expanded="true"{% endif %} aria-controls="pmasa{{ year.grouper }}" class="ahead">
+            {{ year.grouper }}
+        </a>
+      </h4>
+    </div>
+    <div id="pmasa{{ year.grouper }}" class="panel-collapse collapse {% if year.grouper == pmasa_year %}in{% endif %}" role="tabpanel" aria-labelledby="heading{{ year.grouper }}">
+      <div class="panel-body">
 <ul class="nav nav-pills nav-stacked">
-{% for item in pmasas %}
+{% for item in year.list %}
     <li {% if pmasa == item %}class="active"{% endif %}><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
 {% endfor %}
 </ul>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
 </div>

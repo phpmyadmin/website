@@ -218,3 +218,9 @@ footer li{
     color:gray;
     border:none;
 }
+.security a {
+    white-space: nowrap;
+}
+.ahead {
+    display: block;
+}
