@@ -81,23 +81,6 @@ p {
     margin: 1em;
 }
 
-ul, dl {
-    margin: 1em;
-    max-width: 55em;
-}
-.sidebar ul {
-    margin: 0;
-}
-
-ul ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-ul.security li.active a {
-    color: black;
-}
-
 .book img {
     margin: 1em;
     float: left;
