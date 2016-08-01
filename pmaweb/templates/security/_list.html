@@ -9,6 +9,7 @@
     <div class="panel-heading" role="tab" id="heading{{ year.grouper }}">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#pmasa{{ year.grouper }}" {% if year.grouper == pmasa_year %}aria-expanded="true"{% endif %} aria-controls="pmasa{{ year.grouper }}" class="ahead">
+            <span class="badge pull-right">{{ year.list|length }}</span>
             {{ year.grouper }}
         </a>
       </h4>
