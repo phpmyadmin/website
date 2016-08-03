@@ -96,31 +96,15 @@ p.award {
     font-weight: bold;
 }
 
-.graph td.bar {
+td.bar {
     width: 400px;
 }
 
-.graph td.bar div {
-    border-top: solid 2px #0077DD;
-    background-color: #004080;
-    border-bottom: solid 2px #002266;
-    text-align: right;
-    color: white;
-    float: left;
-    padding-top: 0;
-    height: 1em;
+.progress {
+    margin-bottom: 0;
 }
-
-.graph td.b80 div {
-    border-top: solid 2px #dd7700;
-    background-color: #804000;
-    border-bottom: solid 2px #662200;
-}
-
-.graph td.b50 div {
-    border-top: solid 2px #ff7700;
-    background-color: #d04000;
-    border-bottom: solid 2px #882200;
+.progress-bar {
+    min-width: 3em;
 }
 
 .dllist td {

@@ -41,7 +41,7 @@ class Translation(models.Model):
     @property
     def css(self):
         if self.percent < 50:
-            return ' b50'
+            return 'progress-bar-danger'
         elif self.percent < 80:
-            return ' b80'
-        return ''
+            return 'progress-bar-warning'
+        return 'progress-bar-success'
