@@ -8,7 +8,18 @@ function cycleImages(){
       });
     }
 
-$(document).ready(function(){
+$(function(){
     // run every 5s
     setInterval('cycleImages()', 5000);
-})
+
+    // colorbox init
+    $('.colorbox').colorbox({
+        rel: 'gal',
+        maxWidth: '100%',
+        maxHeight: '100%',
+        width: '100%',
+        height: '100%',
+        current: '{current}/{total}'
+    });
+
+});

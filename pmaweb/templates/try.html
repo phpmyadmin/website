@@ -78,7 +78,7 @@ Please note that git versions don't have to be working, that's why it's developm
 {% for screen in screenshots %}
   <div class="col-xs-6 col-md-3">
     <a href="{% static screen.image %}"
-    class="thumbnail" rel="lightbox[screenshots]" title="{{screen.title}}">
+    class="thumbnail colorbox" title="{{screen.title}}">
         <img src="{% static screen.image %}"
         alt="{{ screen.title }}" /><br />
     <div class="caption">
