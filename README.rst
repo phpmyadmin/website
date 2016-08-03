@@ -120,10 +120,11 @@ License
 
 The website generator is licensed under GNU GPL version 2 or later.
 
-Website itself uses mootools <http://mootools.net/>, slimbox
-<https://www.digitalia.be/software/slimbox>, fader and sorting_table
-<https://madhatted.com/2008/6/20/the-joy-of-tables-on-cows> which are
-licensed under terms of MIT license.
+Website itself uses some MIT licensed Javascript libraries:
+
+* jQuery <https://jquery.com/>
+* Bootstrap <https://getbootstrap.com/>
+* Colorbox <http://www.jacklmoore.com/colorbox/>
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
