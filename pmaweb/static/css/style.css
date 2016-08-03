@@ -51,26 +51,9 @@
     text-align: center;
 }
 
-.themeimgborder {
-    float: right;
-    border: 1px solid #7584b3;
-    margin: 0.2em;
-    padding: 0.2em;
-}
-
 .themeimg {
-    overflow: hidden;
-    height: 8em;
-    max-width: 30em;
-}
-
-.themediv {
-    float: left;
-    width: 70em;
-    max-width: none;
-    border: 1px solid #7584b3;
-    margin: 0.2em;
-    padding: 0.2em;
+    height: 8em !important;
+    max-width: 30em !important;
 }
 
 p.date {

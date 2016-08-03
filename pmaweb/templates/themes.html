@@ -43,14 +43,15 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 </ul>
 </p>
 {% for theme in themes %}
-    <div class="themediv {{theme.get_css}}">
-        <h3>{{theme}}</h3>
-            <div class="themeimgborder">
-            <div class="themeimg">
+<div class="panel panel-default themediv {{theme.get_css}}">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ theme }}</h3>
+  </div>
+  <div class="panel-body">
+            <div class="pull-right thumbnail">
                 <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
-                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" />
+                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
                 </a>
-            </div>
             </div>
             <p>Released on {{theme.date|date:"Y-m-d"}}</p>
             <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
@@ -65,6 +66,6 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
                 {% endif %}
             </ul> 
     </div>
-    {% endfor %}
-    <div class="clearer"></div>
+</div>
+{% endfor %}
 {% endblock %}
