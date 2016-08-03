@@ -185,14 +185,6 @@ table.nice td, table.nice th {
 table.nice {
     margin: 0 1em 1em 1em;
 }
-.pagination li {
-    list-style: none;
-    display: inline-block;
-}
-li.disabled a {
-    color: black;
-    text-decoration: none;
-}
 .fa-google-plus-square {
     color: #dd4b39;
 }
