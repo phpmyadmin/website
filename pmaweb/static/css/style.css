@@ -220,3 +220,11 @@ footer li{
     z-index: 3;
 }
 
+.boxes {
+    max-width: 15em;
+}
+
+.boxes a {
+    width: 100%;
+    margin: 5px;
+}
