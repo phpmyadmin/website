@@ -13,14 +13,14 @@ function cycleImages(){
  * as a parameter.
  */
 function show_theme(version) {
-    $('.themelink').css('background', 'none').css('color', 'inherit');
-    $('.themelink.' + version).css('background', '#666699').css('color', 'white');
+    $('.themelink').parent().removeClass('active');
+    $('.themelink.' + version).parent().addClass('active');
     if (version === "all") {
-        $(".themediv").css("display", "block");
+        $(".themediv").show();
         return;
     }
-    $(".themediv." + version).css("display", "block");
-    $(".themediv:not(." + version + ")").css("display", "none");
+    $(".themediv." + version).show();
+    $(".themediv:not(." + version + ")").hide();
 }
 
 /* Auto load blocks */
