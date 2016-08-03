@@ -25,6 +25,6 @@ from translations.models import Translation
 
 class TranslationTest(TestCase):
     def test_css(self):
-        self.assertEqual(Translation(percent=10).css, ' b50')
-        self.assertEqual(Translation(percent=60).css, ' b80')
-        self.assertEqual(Translation(percent=100).css, '')
+        self.assertEqual(Translation(percent=10).css, 'progress-bar-danger')
+        self.assertEqual(Translation(percent=60).css, 'progress-bar-warning')
+        self.assertEqual(Translation(percent=100).css, 'progress-bar-success')
