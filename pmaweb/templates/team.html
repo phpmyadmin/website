@@ -22,10 +22,10 @@ You can follow the developers blogs at
 <a href="https://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
 </p>
 
-<div class="floatbox vcard" id="michal">
+<div class="vcard" id="michal">
 <h3 class="fn">Michal Čihař</h3>
 <h4>Project admin and infrastructure coordinator</h4>
-<img class="head photo" src="{% static 'images/heads/nijel.jpg' %}" alt="Photo of Michal Čihař" />
+<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/nijel.jpg' %}" alt="Photo of Michal Čihař" />
 <p>
 Michal made his first contribution to <span class="org">phpMyAdmin</span> in 2001 by updating the Czech
 translation. Later he contributed charset conversion code and improved export
@@ -38,10 +38,10 @@ services. He lives in <span class="adr"><span class="locality">Prague</span>, <s
 <p>Contact options: <a class="url" href="https://cihar.com/">website</a>, <a class="url" href="xmpp:michal@cihar.com">jabber</a>, <a class="email" href="mailto:michal@cihar.com">email</a>.</p>
 </div>
 
-<div class="floatbox vcard" id="madhura">
+<div class="vcard" id="madhura">
 <h3 class="fn">Madhura Jayaratne</h3>
 <h4>Bug fixing and security coordinator</h4>
-<img class="head photo" src="{% static 'images/heads/madhura.jpg' %}" alt="Photo of Madhura Jayaratne" />
+<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/madhura.jpg' %}" alt="Photo of Madhura Jayaratne" />
 <p>
 Madhura joined the <span class="org">phpMyAdmin</span> in early 2011 and continues to contribute by fixing bugs and translating phpMyAdmin to his native language, Sinhala. He also took part in GSoC 2011 to implement GIS support for phpMyAdmin.
 </p>
@@ -50,10 +50,10 @@ He lives in <span class="adr"><span class="locality">Colombo</span>, <span class
 </p>
 </div>
 
-<div class="floatbox vcard" id="isaac">
+<div class="vcard" id="isaac">
 <h3 class="fn">Isaac Bennetch</h3>
 <h4>Release, support and documentation coordinator</h4>
-<img class="head photo" src="{% static 'images/heads/isaac.jpg' %}" alt="Photo of Isaac Bennetch" />
+<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/isaac.jpg' %}" alt="Photo of Isaac Bennetch" />
 <p>
 Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
 support and improving the documentation. He officially joined the development team in April, 2013. 
@@ -65,10 +65,10 @@ He lives in the <span class="adr"><span class="country">United States</span></sp
 </p>
 </div>
 
-<div class="floatbox vcard" id="deven">
+<div class="vcard" id="deven">
 <h3 class="fn">Deven Bansod</h3>
 <h4>Developer</h4>
-<img class="head photo" src="{% static 'images/heads/deven.jpg' %}" alt="Photo of Deven Bansod" width="65" height="72" />
+<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/deven.jpg' %}" alt="Photo of Deven Bansod" />
 <p>
 Deven started contributing to <span class="org">phpMyAdmin</span> in January 2015 and participated in Google Summer of Code, 2015. He has worked on implementing several feature requests related to interface and usability improvement and continues to help out with bug fixes and testing out new features and patches.
 </p>
@@ -77,7 +77,7 @@ He is currently a computer science undergrad at BITS Pilani, <span class="countr
 </p>
 </div>
 
-<div class="floatbox vcard" id="dan">
+<div class="vcard" id="dan">
 <h3 class="fn">Dan Ungureanu</h3>
 <h4>Developer</h4>
 <p>
@@ -85,8 +85,6 @@ Dan participated in Google Summer of Code 2015, where he implemented a new
 SQL parser.
 </p>
 </div>
-
-<div class="clearer"></div>
 
 <h2>Team meetings</h2>
 
@@ -115,63 +113,64 @@ showing basic and more advanced features of phpMyAdmin.
 </p>
 <p>The sixth team meeting was held during <a href="https://fosdem.org/2015">FOSDEM 2015</a>. We also attended a community dinner for the 20th anniversary of MySQL.</p>
 
-<div class="screenshot">
+<div class="row">
+  <div class="col-xs-6 col-md-3">
     <a href="{% static 'images/linuxtag/IMG_4187.JPG' %}"
-    rel="lightbox[meeting]" title="2005 team with Rasmus (PHP) - Marc Delisle, Olivier Müller, Alexander M. Turek, Rasmus Lerdorf, Garvin Hicking, Michal Čihař, Robin Johnson">
+    class="thumbnail" rel="lightbox[meeting]" title="2005 team with Rasmus (PHP) - Marc Delisle, Olivier Müller, Alexander M. Turek, Rasmus Lerdorf, Garvin Hicking, Michal Čihař, Robin Johnson">
         <img src="{% static 'images/linuxtag/IMG_4187_tn.JPG' %}"
         alt="phpMyAdmin team with Rasmus (PHP)" />
     </a>
 </div>
 
-<div class="screenshot">
+<div class="col-xs-6 col-md-3">
     <a href="{% static 'images/linuxtag/IMG_4189.JPG' %}"
-    rel="lightbox[meeting]" title="2005 team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
+    class="thumbnail" rel="lightbox[meeting]" title="2005 team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
         <img src="{% static 'images/linuxtag/IMG_4189_tn.JPG' %}"
         alt="phpMyAdmin team with Monty (MySQL)" />
     </a>
 </div>
 
-<div class="screenshot">
+<div class="col-xs-6 col-md-3">
     <a href="{% static 'images/fosdem-2010/fosdem-2010-med.jpg' %}"
-    rel="lightbox[meeting]" title="2010 team - Marc Delisle, Robin H. Johnson, Herman van Rink, Michal Čihař, Alexander M. Turek">
+    class="thumbnail" rel="lightbox[meeting]" title="2010 team - Marc Delisle, Robin H. Johnson, Herman van Rink, Michal Čihař, Alexander M. Turek">
         <img src="{% static 'images/fosdem-2010/fosdem-2010-tn.jpg' %}"
         alt="phpMyAdmin team at FOSDEM 2010" />
     </a>
 </div>
 
-<div class="screenshot">
+<div class="col-xs-6 col-md-3">
     <a href="{% static 'images/fosdem-2012/fosdem-2012-med.jpg' %}"
-    rel="lightbox[meeting]" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (not in the picture: Michal Čihař)">
+    class="thumbnail" rel="lightbox[meeting]" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (not in the picture: Michal Čihař)">
         <img src="{% static 'images/fosdem-2012/fosdem-2012-tn.jpg' %}"
         alt="phpMyAdmin team at FOSDEM 2012" />
     </a>
 </div>
 
-<div class="screenshot">
+<div class="col-xs-6 col-md-3">
     <a href="{% static 'images/debconf-2013/debconf-2013-med.jpg' %}"
-    rel="lightbox[meeting]" title="2013 team - Rouslan Placella, Dieter Adriaenssens, Chanaka Dharmarathna, Isaac Bennetch, Madhura Jayaratne, Marc Delisle, Michal Čihař">
+    class="thumbnail" rel="lightbox[meeting]" title="2013 team - Rouslan Placella, Dieter Adriaenssens, Chanaka Dharmarathna, Isaac Bennetch, Madhura Jayaratne, Marc Delisle, Michal Čihař">
         <img src="{% static 'images/debconf-2013/debconf-2013-tn.jpg' %}"
         alt="phpMyAdmin team at DebConf 2013" />
     </a>
 </div>
 
-<div class="screenshot">
+<div class="col-xs-6 col-md-3">
     <a href="{% static 'images/linuxtag/2014/linuxtag-2014-team-photo.jpg' %}"
-    rel="lightbox[meeting]" title="2014 team - Chanaka Dharmarathna, J.M., Madhura Jayaratne, Michal Čihař, Marc Delisle, Atul Pratap Singh, Isaac Bennetch">
+    class="thumbnail" rel="lightbox[meeting]" title="2014 team - Chanaka Dharmarathna, J.M., Madhura Jayaratne, Michal Čihař, Marc Delisle, Atul Pratap Singh, Isaac Bennetch">
         <img src="{% static 'images/linuxtag/2014/linuxtag-2014-team-photo_tn.jpg' %}"
         alt="phpMyAdmin team at LinuxTag 2014 in Berlin" />
     </a>
 </div>
 
-<div class="screenshot">
+<div class="col-xs-6 col-md-3">
     <a href="{% static 'images/fosdem-2015/fosdem-2015-med.jpg' %}"
-    rel="lightbox[meeting]" title="2015 team meeting - Chirayu Chiripal, Smita Kumari, Marc Delisle, Hugues Peccatte, Atul Pratap Singh">
+    class="thumbnail" rel="lightbox[meeting]" title="2015 team meeting - Chirayu Chiripal, Smita Kumari, Marc Delisle, Hugues Peccatte, Atul Pratap Singh">
         <img src="{% static 'images/fosdem-2015/fosdem-2015-tn.jpg' %}"
         alt="phpMyAdmin team at FOSDEM 2015 in Brussels" />
     </a>
 </div>
+</div>
 
-<div class="clearer"></div>
 
 <h2>Contributors</h2>
 
