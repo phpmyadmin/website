@@ -42,13 +42,3 @@ function theme_load() {
 }
 
 window.addEvent("domready", theme_load);
-
-function fader_autoload() {
-    if ($("fader") === null) {
-        return;
-    }
-
-    new Fader('fader');
-}
-
-window.addEvent('domready', fader_autoload);
