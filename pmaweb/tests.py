@@ -27,7 +27,7 @@ from urlparse import parse_qs
 import httpretty
 import datetime
 from pmaweb.views import REDIRECT_MAP
-from pmaweb.cdn import URL as CDN_URL
+from pmaweb.cdn import URL as CDN_URL, URL_ALL as CDN_URL_ALL
 from files.models import Release, Download, Theme
 from news.models import Post, Planet
 from security.models import PMASA
@@ -63,9 +63,13 @@ class CDNTest(TestCase):
     trigger_urls = []
 
     def cdn_response(self, request, uri, headers):
-        self.assertEqual(uri, CDN_URL)
-        params = parse_qs(request.body.decode('utf-8'))
-        self.trigger_urls = params['url[]']
+        if uri == CDN_URL_ALL:
+            self.trigger_urls.append('__ALL__')
+        elif uri == CDN_URL:
+            params = parse_qs(request.body.decode('utf-8'))
+            self.trigger_urls.extend(params['url[]'])
+        else:
+            raise ValueError('Not supported URL: {0}'.format(uri))
         return (
             200, headers,
             '{"status":"ok"}',
@@ -76,6 +80,11 @@ class CDNTest(TestCase):
         httpretty.register_uri(
             httpretty.POST,
             CDN_URL,
+            body=self.cdn_response,
+        )
+        httpretty.register_uri(
+            httpretty.POST,
+            CDN_URL_ALL,
             body=self.cdn_response,
         )
         self.trigger_urls = []
@@ -108,7 +117,8 @@ class CDNTest(TestCase):
             Release,
             [
                 '/', '/news/', '/files/', '/files/feed/',
-                '/downloads/', '/files/0.1/'
+                '/downloads/', '/files/0.1/',
+                '__ALL__',
             ],
             version='0.1',
         )
@@ -119,7 +129,8 @@ class CDNTest(TestCase):
             Download,
             [
                 '/', '/news/', '/files/', '/files/feed/',
-                '/downloads/', '/files/0.2/'
+                '/downloads/', '/files/0.2/',
+                '__ALL__',
             ],
             release=release,
         )
