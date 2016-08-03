@@ -401,11 +401,12 @@
     "progress-bars.less",
     "media.less",
     "list-group.less",
-    "panels.less"
+    "panels.less",
+    "component-animations.less"
   ],
   "js": [
     "tab.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=7f93fb2a2d83e7547c2d2cd3fa6f4ee0"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=53520db78d08d3a3c70d7a80d0281c7b"
 }
