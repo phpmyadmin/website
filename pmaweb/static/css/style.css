@@ -107,10 +107,6 @@ td.bar {
     min-width: 3em;
 }
 
-.dllist td {
-    padding: 2px;
-}
-
 td.size {
     text-align: right;
 }
