@@ -4,8 +4,11 @@
 {% block content %}
 
 {% for award in awards %}
-    <div class="award">
-        <a href="{{award.link}}" class="awardlink"><img src="{% static award.image %}" alt="{{award.title}}" /></a>
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <a href="{{award.link}}"><img class="img-margin" src="{% static award.image %}" alt="{{award.title}}" /></a>
+      </div>
+      <div class="col-md-9">
         {% autoescape off %}{{award.text}}{% endautoescape %}
         {% if award.photos %}
         <p>Photos:
@@ -16,8 +19,7 @@
         {% endfor %}
         </p>
         {% endif %}
-        <div class="clearer"></div>
+      </div>
     </div>
-    <div class="clearer"></div>
 {% endfor %}
 {% endblock %}

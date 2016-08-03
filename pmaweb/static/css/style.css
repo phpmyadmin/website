@@ -112,27 +112,11 @@ p {
     overflow: hidden;
 }
 
-div.award p {
-    /* This has to fit for a.awardlink */
-    margin-left: 310px;
-}
-
 p.award {
     font-size: large;
     font-weight: bold;
 }
 
-div.award {
-    margin: 4em 1em 4em 1em;
-}
-
-.awardlink {
-    float: left;
-    height: 100%;
-    display: block;
-    margin: 5px;
-    width: 300px;
-}
 .graph td.bar {
     width: 400px;
 }
