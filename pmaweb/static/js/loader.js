@@ -8,6 +8,26 @@ function cycleImages(){
       });
     }
 
+/**
+ * Shows only subset of divs with class "theme" which have class passed
+ * as a parameter.
+ */
+function show_theme(version) {
+    $('.themelink').css('background', 'none').css('color', 'inherit');
+    $('.themelink.' + version).css('background', '#666699').css('color', 'white');
+    if (version === "all") {
+        $(".themediv").css("display", "block");
+        return;
+    }
+    $(".themediv." + version).css("display", "block");
+    $(".themediv:not(." + version + ")").css("display", "none");
+}
+
+/* Auto load blocks */
+
+function theme_load() {
+}
+
 $(function(){
     // run every 5s
     setInterval('cycleImages()', 5000);
@@ -21,5 +41,31 @@ $(function(){
         height: '100%',
         current: '{current}/{total}'
     });
+
+
+    /* Theme loader */
+    if ($(".themediv").length > 0) {
+
+        var hash = null;
+
+        /* Do we have some parameter? */
+        if (self.document.location.hash.length > 1) {
+            hash = self.document.location.hash.substring(1);
+            /* Check validity */
+            if (hash.match(/^(pma_[0-9]_[0-9]|all)$/) === null) {
+                hash = null;
+            }
+        }
+        if (hash === null) {
+            hash = $('.themelink:last').data('theme');
+        }
+
+        /* Finally show chosen schema */
+        show_theme(hash);
+
+        $('.themelink').click(function () {
+            show_theme($(this).data('theme'));
+        });
+    }
 
 });

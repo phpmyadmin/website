@@ -32,10 +32,15 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 </p>
 
 <h2>Available Themes</h2>
-<p>Select your phpMyAdmin version (requires JavaScript):
+<p>Select your phpMyAdmin version:
+
+<ul class="nav nav-pills">
 {% for css in themecssversions %}
-<a class="themelink {{css.css}}" href="#{{css.css}}" onclick="show_theme('{{css.css}}')">{{css.name}}</a>
+<li role="presentation">
+<a class="themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
+</li>
 {% endfor %}
+</ul>
 </p>
 {% for theme in themes %}
     <div class="themediv {{theme.get_css}}">
