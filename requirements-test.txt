@@ -1,3 +1,2 @@
-codecov
 HTTPretty
 -r requirements.txt

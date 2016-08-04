@@ -7,6 +7,6 @@ script:
   - ./manage.py check
   - coverage run --source=. ./manage.py test
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
 sudo: false
 
