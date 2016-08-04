@@ -1,2 +1,3 @@
+coverage
 HTTPretty
 -r requirements.txt
