@@ -273,6 +273,14 @@ class Download(models.Model):
     def archive(self):
         return self.filename.rsplit('.', 1)[-1]
 
+    @property
+    def composer_type(self):
+        ext = self.filename.rsplit('.', 1)[-1]
+        if ext == 'zip':
+            return 'zip'
+        else:
+            return 'tar'
+
 
 class Theme(models.Model):
     name = models.CharField(max_length=50)
