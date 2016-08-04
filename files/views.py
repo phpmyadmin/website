@@ -84,12 +84,15 @@ def version_json(request):
     )
 
 
-def latest_download(request, flavor, extension):
+def latest_download(request, flavor, extension, checksum=None):
+    print checksum
     latest = Release.objects.filter(stable=True)[0]
     try:
         result = latest.download_set.get(
             filename__endswith='-{0}{1}'.format(flavor, extension)
         )
+        if checksum == '.asc':
+            return redirect(result.get_signed_url(), permanent=False)
         return redirect(result, permanent=False)
     except Download.DoesNotExist:
         raise Http404("No release found matching the query")

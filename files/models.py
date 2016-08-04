@@ -264,6 +264,11 @@ class Download(models.Model):
             self.__unicode__()
         )
 
+    def get_signed_url(self):
+        return 'https://files.phpmyadmin.net{0}.asc'.format(
+            self.__unicode__()
+        )
+
     def get_alternate_url(self):
         return 'https://1126968067.rsc.cdn77.org{0}'.format(
             self.__unicode__()
@@ -309,6 +314,13 @@ class Theme(models.Model):
 
     def get_absolute_url(self):
         return 'https://files.phpmyadmin.net/themes/{0}/{1}/{2}'.format(
+            self.name,
+            self.version,
+            self.filename,
+        )
+
+    def get_signed_url(self):
+        return 'https://files.phpmyadmin.net/themes/{0}/{1}/{2}.asc'.format(
             self.name,
             self.version,
             self.filename,

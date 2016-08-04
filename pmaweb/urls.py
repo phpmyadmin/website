@@ -339,7 +339,8 @@ urlpatterns = [
     url(
         r'^downloads/phpMyAdmin-latest-'
         r'(?P<flavor>all-languages|english)'
-        r'(?P<extension>\.zip|\.tar\.gz|\.tar\.xz|\.tar\.bz2)$',
+        r'(?P<extension>\.zip|\.tar\.gz|\.tar\.xz|\.tar\.bz2)'
+        r'(?P<checksum>\.asc)?$',
         latest_download,
     ),
     url(
