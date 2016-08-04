@@ -110,7 +110,7 @@ THEMES = {
             "Silk" is a smooth theme designed to be clear and easy for the
             eyes, based on <a href="http://famfamfam.com/lab/icons/silk/">
             Silk icons</a> by Mark James which is licensed under the
-            <a href="http://creativecommons.org/licenses/by/2.5/">
+            <a href="https://creativecommons.org/licenses/by/2.5/">
             Cc-by-2.5</a>
         ''',
         'author': u'Matthias Mailander',
@@ -166,14 +166,14 @@ THEMES = {
     'pixeline-2.10': {
         'name': 'Pixeline',
         'support': '2.9 - 2.10',
-        'info': u'By <a href="http://www.pixeline.be">Pixeline</a>.',
+        'info': u'By <a href="https://pixeline.be/">Pixeline</a>.',
         'author': u'Pixeline',
         'ignore': True,
     },
     'pixeline-2.11a': {
         'name': 'Pixeline',
         'support': '2.11',
-        'info': u'By <a href="http://www.pixeline.be">Pixeline</a>.',
+        'info': u'By <a href="https://pixeline.be/">Pixeline</a>.',
         'author': u'Pixeline',
         'ignore': True,
     },

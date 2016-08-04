@@ -138,7 +138,7 @@ class CDNTest(TestCase):
         self.cdn_tester(
             Planet,
             ['/'],
-            title='title', url='http://example.net/',
+            title='title', url='https://example.net/',
             date=make_aware(
                 datetime.datetime(year=2000, month=1, day=1), utc
             ),
