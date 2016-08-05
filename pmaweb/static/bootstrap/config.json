@@ -409,7 +409,8 @@
   "js": [
     "modal.js",
     "tab.js",
+    "collapse.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=114bcf377c77c8faf49a438c6cb5d6a9"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=164ddcf6cf6399e8f40ea7375121843c"
 }
