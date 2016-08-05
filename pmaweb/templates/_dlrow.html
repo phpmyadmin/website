@@ -1,5 +1,5 @@
     <tr>
-        <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
+        <td><a href="{{ file.get_absolute_url }}" class="piwik_download download_popup" data-sha1="{{ file.sha1 }}" data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}">{{ file.filename }}</a></td>
         <td class="td-size">{{ file.size | filesizeformat }}</td>
         <td>
         {% if file.signed %}
