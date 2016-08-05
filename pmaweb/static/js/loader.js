@@ -12,7 +12,7 @@ function cycleImages(){
  * Shows only subset of divs with class "theme" which have class passed
  * as a parameter.
  */
-function show_theme(version) {
+function showTheme(version) {
     $('.themelink').parent().removeClass('active');
     $('.themelink.' + version).parent().addClass('active');
     if (version === "all") {
@@ -61,10 +61,10 @@ $(function(){
         }
 
         /* Finally show chosen schema */
-        show_theme(hash);
+        showTheme(hash);
 
         $('.themelink').click(function () {
-            show_theme($(this).data('theme'));
+            showTheme($(this).data('theme'));
         });
     }
 
