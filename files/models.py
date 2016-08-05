@@ -265,6 +265,8 @@ class Download(models.Model):
         )
 
     def get_signed_url(self):
+        if not self.signed:
+            return ''
         return 'https://files.phpmyadmin.net{0}.asc'.format(
             self.__unicode__()
         )
@@ -320,6 +322,8 @@ class Theme(models.Model):
         )
 
     def get_signed_url(self):
+        if not self.signed:
+            return ''
         return 'https://files.phpmyadmin.net/themes/{0}/{1}/{2}.asc'.format(
             self.name,
             self.version,
