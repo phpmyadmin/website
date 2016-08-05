@@ -75,12 +75,16 @@
   </nav>
 
   <div class="container">
-    <div class="pull-right boxes">
+  <div class="row">
+  <div class="col-sm-9">
+    <h1><a href="{% url 'home' %}" rel="home"><span id="logo">phpMyAdmin</span></a> <span class="hidden-sm hidden-xs">Bringing MySQL to the web</span></h1>
+  </div>
+  <div class="col-sm-3 boxes">
     {% block littleboxes %}
     {% include '_littleboxes.html' %}
     {% endblock %}
     </div>
-    <h1><a href="{% url 'home' %}" rel="home"><span id="logo">phpMyAdmin</span></a> <span class="hidden-sm hidden-xs">Bringing MySQL to the web</span></h1>
+  </div>
   </div>
   </header>
 
