@@ -24,10 +24,6 @@ function showTheme(version) {
 }
 
 /* Auto load blocks */
-
-function theme_load() {
-}
-
 $(function(){
     // run every 5s
     setInterval(cycleImages, 5000);
