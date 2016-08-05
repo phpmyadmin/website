@@ -30,7 +30,7 @@ function theme_load() {
 
 $(function(){
     // run every 5s
-    setInterval('cycleImages()', 5000);
+    setInterval(cycleImages, 5000);
 
     // colorbox init
     $('.colorbox').colorbox({
