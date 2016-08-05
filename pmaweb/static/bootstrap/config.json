@@ -402,11 +402,14 @@
     "media.less",
     "list-group.less",
     "panels.less",
-    "component-animations.less"
+    "close.less",
+    "component-animations.less",
+    "modals.less"
   ],
   "js": [
+    "modal.js",
     "tab.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=53520db78d08d3a3c70d7a80d0281c7b"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=114bcf377c77c8faf49a438c6cb5d6a9"
 }
