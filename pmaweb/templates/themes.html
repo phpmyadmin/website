@@ -59,12 +59,8 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
             <p>Author: {{theme.author}}</p>
             {% endif %}
             <p>{{ theme.description }}</p>
-            <ul class="dl">
-                <li><a href="{{ theme.get_absolute_url }}">{{theme.filename}}</a> ({{theme.size|filesizeformat}}, SHA1: {{ theme.sha1 }}, SHA256: {{theme.sha256}})</li>
-                {% if theme.signed %}
-                <li><a href="{{ theme.get_absolute_url }}.asc">{{theme.filename}}.asc</a> (PGP signature)</li>
-                {% endif %}
-            </ul> 
+
+            {% include '_dltable.html' with download_item=theme %}
     </div>
 </div>
 {% endfor %}

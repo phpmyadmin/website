@@ -1,27 +1,3 @@
 <p>{{ release.get_version_info }}</p>
 
-<table class="table table-condensed table-striped">
-<thead>
-    <tr>
-        <th>File</th>
-        <th>Size</th>
-        <th>Verification</th>
-    </tr>
-</thead>
-<tbody>
-{% for file in release.download_set.all %}
-    <tr>
-        <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
-        <td class="size">{{ file.size | filesizeformat }}</td>
-        <td>
-        {% if file.signed %}
-        [<a href="{{ file.get_signed_url }}">PGP</a>]
-        {% endif %}
-        [<a href="{{ file.get_absolute_url }}.sha1">SHA1</a>]
-        [<a href="{{ file.get_absolute_url }}.sha256">SHA256</a>]
-        </td>
-    </tr>
-{% endfor %}
-</tbody>
-</table> 
-
+{% include '_dltable.html' with download_list=release.download_set.all %}
