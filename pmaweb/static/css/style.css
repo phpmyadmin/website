@@ -96,7 +96,7 @@ p.award {
     font-weight: bold;
 }
 
-td.bar {
+.td-bar {
     width: 400px;
 }
 
@@ -107,7 +107,7 @@ td.bar {
     min-width: 3em;
 }
 
-td.size {
+.td-size {
     text-align: right;
 }
 
@@ -135,7 +135,7 @@ div.subscribe {
     text-decoration: none;
     font-size: 150%;
 }
-div.sfc-logo {
+.sfc-logo {
     text-align: center;
 }
 footer ul {
@@ -169,7 +169,7 @@ footer li{
     position: absolute;
     z-index: 1;
 }
-#cycler img.active{
+#cycler .active{
     z-index: 3;
 }
 

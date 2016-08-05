@@ -1,6 +1,6 @@
     <tr>
         <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
-        <td class="size">{{ file.size | filesizeformat }}</td>
+        <td class="td-size">{{ file.size | filesizeformat }}</td>
         <td>
         {% if file.signed %}
         [<a href="{{ file.get_signed_url }}">PGP</a>]
