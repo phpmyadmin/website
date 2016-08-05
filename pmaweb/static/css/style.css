@@ -173,11 +173,7 @@ footer li{
     z-index: 3;
 }
 
-.boxes {
-    max-width: 15em;
-}
-
 .boxes a {
-    width: 100%;
+    display: block;
     margin: 5px;
 }
