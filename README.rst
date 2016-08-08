@@ -79,6 +79,12 @@ package names will usually add python- prefix) or using pip:
 
     pip install -r requirements-test.txt
 
+You might want to import some data to have at least some content on the website:
+
+.. code-block:: sh
+
+    ./manage.py loaddata pmaweb/fixtures/test_data.json
+
 Once you have all dependencies, you can start development server:
 
 .. code-block:: sh
