@@ -94,7 +94,10 @@ class Release(models.Model):
                 filename__endswith='-all-languages.zip'
             )
         except Download.DoesNotExist:
-            return self.download_set.all()[0]
+            try:
+                return self.download_set.all()[0]
+            except IndexError:
+                return None
 
     @staticmethod
     def parse_version(version):
@@ -175,7 +178,9 @@ class Release(models.Model):
         '''
         Returns description to the phpMyAdmin version.
         '''
-        if self.version[:2] == '1.':
+        if self.version[:2] == '0.':
+            text = 'Historical release.'
+        elif self.version[:2] == '1.':
             text = 'Historical release.'
         elif self.version[:2] == '2.':
             text = 'Version compatible with PHP 4+ and MySQL 3+.'

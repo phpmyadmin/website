@@ -1,3 +1,12 @@
 <p>{{ release.get_version_info }}</p>
 
-{% include '_dltable.html' with download_list=release.download_set.all %}
+{% with release.download_set.all as download_list %}
+
+{% if download_list %}
+{% include '_dltable.html' %}
+{% else %}
+<div class="alert alert-warning">
+Sorry, but no files to download are available for this release. Most likely this is too old release and we didn't find it in our archives.
+</div>
+{% endif %}
+{% endwith %}
