@@ -1,5 +1,8 @@
 <p>{{ release.get_version_info }}</p>
 
+{% with release.download_set.all as download_set %}
+
+{% if download_set %}
 <table class="dllist">
 <thead>
     <tr>
@@ -9,7 +12,7 @@
     </tr>
 </thead>
 <tbody>
-{% for file in release.download_set.all %}
+{% for file in download_set %}
     <tr>
         <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
         <td class="size">{{ file.size | filesizeformat }}</td>
@@ -24,4 +27,7 @@
 {% endfor %}
 </tbody>
 </table> 
-
+{% else %}
+<p>Sorry, but no files to download are available for this release. Most likely this is too old release and we didn't find it in our archives.</p>
+{% endif %}
+{% endwith %}
