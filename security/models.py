@@ -108,7 +108,7 @@ class PMASA(models.Model):
         return self.cwe.split()
 
     def get_commits(self):
-        lines = self.commits.split('\n')
+        lines = self.commits.strip().split('\n')
         result = []
         for line in lines:
             if ':' in line:
