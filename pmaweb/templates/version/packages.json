@@ -2,16 +2,18 @@
     "packages": {
         "phpmyadmin/phpmyadmin": {
 {% for release in all_releases %}
+{% with release.simpledownload as download %}
+{% if download %}
             "{{ release.version }}": {
                 "name": "phpmyadmin/phpmyadmin",
                 "version": "{{ release.version }}",
                 "dist": {
-{% with release.simpledownload as download %}
                     "url": "{{ download.get_absolute_url }}",
                     "type": "{{ download.composer_type }}"
-{% endwith %}
                 }
             },
+{% endif %}
+{% endwith %}
 {% endfor %}
             "dev-master": {
                 "name": "phpmyadmin/phpmyadmin",

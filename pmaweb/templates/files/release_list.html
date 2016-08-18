@@ -20,6 +20,7 @@
     <th><a href="{{ object.get_absolute_url }}">{{ object }}</a></th>
     <td>{{ object.date|date:"Y-m-d" }}</td>
 {% with object.simpledownload as file %}
+{% if file %}
     <td><a href="{{ file.get_absolute_url }}">{{ file.filename }}</a></td>
         <td class="size">{{ file.size | filesizeformat }}</td>
         <td>
@@ -29,6 +30,9 @@
         [<a href="{{ file.get_absolute_url }}.sha1">SHA1</a>]
         [<a href="{{ file.get_absolute_url }}.sha256">SHA256</a>]
         </td>
+{% else %}
+     <td colspan="3">Download not available</td>
+{% endif %}
 {% endwith %}
 </tr>
 {% endfor %}

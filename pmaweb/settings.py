@@ -161,5 +161,6 @@ LISTED_BRANCHES = ('4.6', '4.4', '4.0')
 CDN_LOGIN = 'admins@phpmyadmin.net'
 CDN_PASSWORD = ''
 CDN_ID = '41205'
+DOCS_CDN_ID = '71264'
 
 DOCKERHUB_TOKEN = None
