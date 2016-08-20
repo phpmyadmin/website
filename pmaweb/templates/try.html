@@ -3,18 +3,6 @@
 
 {% block content %}
 
-<div class="hitbuttons">
-<div class="downloadbutton">
-<a href="https://demo.phpmyadmin.net/master/">Demo with cookie auth</a>
-</div>
-<div class="downloadbutton">
-<a href="https://demo.phpmyadmin.net/master-config/">Demo with config auth</a>
-</div>
-<div class="downloadbutton">
-<a href="https://demo.phpmyadmin.net/master-http/">Demo with HTTP auth</a>
-</div>
-</div>
-
 <h2>Demo Server</h2>
 
 <p>
@@ -82,17 +70,19 @@ Please note that git versions don't have to be working, that's why it's developm
 
 <h2>Screenshots</h2>
 
+<div class="row">
 {% for screen in screenshots %}
-<div class="screenshot">
+  <div class="col-xs-6 col-md-3">
     <a href="{% static screen.image %}"
-    rel="lightbox[screenshots]" title="{{screen.title}}">
+    class="thumbnail colorbox" title="{{screen.title}}">
         <img src="{% static screen.image %}"
         alt="{{ screen.title }}" /><br />
+    <div class="caption">
     {{ screen.title }}
+    </div>
     </a>
-</div>
+  </div>
 {% endfor %}
-
-<div class="clearer"></div>
+</div>
 
 {% endblock %}

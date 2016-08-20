@@ -1,0 +1,19 @@
+
+<table class="table table-condensed table-striped">
+<thead>
+    <tr>
+        <th>File</th>
+        <th>Size</th>
+        <th>Verification</th>
+    </tr>
+</thead>
+<tbody>
+{% for file in download_list %}
+{% include '_dlrow.html' %}
+{% endfor %}
+{% if download_item %}
+{% include '_dlrow.html' with file=download_item%}
+{% endif %}
+</tbody>
+</table> 
+

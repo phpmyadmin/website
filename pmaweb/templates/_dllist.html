@@ -1,33 +1,12 @@
 <p>{{ release.get_version_info }}</p>
 
-{% with release.download_set.all as download_set %}
+{% with release.download_set.all as download_list %}
 
-{% if download_set %}
-<table class="dllist">
-<thead>
-    <tr>
-        <th>File</th>
-        <th>Size</th>
-        <th>Verification</th>
-    </tr>
-</thead>
-<tbody>
-{% for file in download_set %}
-    <tr>
-        <td><a href="{{ file.get_absolute_url }}" class="piwik_download">{{ file.filename }}</a></td>
-        <td class="size">{{ file.size | filesizeformat }}</td>
-        <td>
-        {% if file.signed %}
-        [<a href="{{ file.get_signed_url }}">PGP</a>]
-        {% endif %}
-        [<a href="{{ file.get_absolute_url }}.sha1">SHA1</a>]
-        [<a href="{{ file.get_absolute_url }}.sha256">SHA256</a>]
-        </td>
-    </tr>
-{% endfor %}
-</tbody>
-</table> 
+{% if download_list %}
+{% include '_dltable.html' %}
 {% else %}
-<p>Sorry, but no files to download are available for this release. Most likely this is too old release and we didn't find it in our archives.</p>
+<div class="alert alert-warning">
+Sorry, but no files to download are available for this release. Most likely this is too old release and we didn't find it in our archives.
+</div>
 {% endif %}
 {% endwith %}

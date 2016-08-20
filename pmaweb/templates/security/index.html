@@ -2,9 +2,10 @@
 {% load staticfiles %}
 
 {% block content %}
-{% include "security/_list.html" %}
 
-<div id="body">
+<div class="row">
+
+<div class="col-md-9">
 <h2>Security</h2>
 
 <p>
@@ -27,6 +28,8 @@ To follow latest security releases you can use a <a href="{% url 'feed-security'
 </p>
 
 </div>
-<div class="clearer"></div>
+{% include "security/_list.html" %}
+
+</div>
 
 {% endblock %}

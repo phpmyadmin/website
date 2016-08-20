@@ -29,7 +29,7 @@ from django.utils import timezone
 import os.path
 from data.themes import CSSMAP
 from markupfield.fields import MarkupField
-from pmaweb.cdn import purge_cdn
+from pmaweb.cdn import purge_cdn, purge_all_cdn
 
 # Naming of versions
 VERSION_INFO = (
@@ -270,6 +270,8 @@ class Download(models.Model):
         )
 
     def get_signed_url(self):
+        if not self.signed:
+            return ''
         return 'https://files.phpmyadmin.net{0}.asc'.format(
             self.__unicode__()
         )
@@ -325,6 +327,8 @@ class Theme(models.Model):
         )
 
     def get_signed_url(self):
+        if not self.signed:
+            return ''
         return 'https://files.phpmyadmin.net/themes/{0}/{1}/{2}.asc'.format(
             self.name,
             self.version,
@@ -386,6 +390,8 @@ def purge_release(sender, instance, **kwargs):
         # This release
         instance.get_absolute_url(),
     )
+    # Purge all pages as every page contains download link
+    purge_all_cdn()
 
 
 @receiver(post_save, sender=Download)

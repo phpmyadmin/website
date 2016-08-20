@@ -2,6 +2,11 @@
 {% load staticfiles %}
 
 {% block content %}
+
+<div class="row">
+
+<div class="col-md-6">
+
 <h2>Donations</h2>
 
 {% include "_conservancy.html" %}
@@ -76,9 +81,15 @@ microdonation system allowing users to easily appreciate others.
 Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
 </p>
 
+</div>
+
+<div class="col-md-6">
 <h2>Sponsorship</h2>
 
 <p>If you want to sponsor phpMyAdmin in a recurring way, please check our 
 <a href="{% url 'sponsors' %}">sponsorship page</a>.</p>
+
+</div>
+</div>
 
 {% endblock %}

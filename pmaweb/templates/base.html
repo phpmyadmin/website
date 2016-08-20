@@ -1,10 +1,12 @@
 {% load staticfiles %}
 {% load compress %}
 
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
- <head profile="http://purl.org/uF/2008/03/ http://purl.org/uF/hAtom/0.1/">
-  <meta charset="utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+  <head profile="http://purl.org/uF/2008/03/ http://purl.org/uF/hAtom/0.1/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="phpMyAdmin contributors" />
   <meta name="copyright" content="Copyright &copy; 2003 - {{current_year}} phpMyAdmin contributors" />
   <link rel="copyright" href="{% url 'license' %}" />
@@ -15,8 +17,10 @@
   <link rel="alternate" type="application/rss+xml" href="{% url 'feed-news' %}" title="phpMyAdmin news"/>
   {% endif %}
 {% compress css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap-theme.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'css/slimbox.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'colorbox/colorbox.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
 {% endcompress %}
   <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
@@ -36,29 +40,56 @@
   <link rel="vcs-browse" href="https://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />
   <link href="https://plus.google.com/112870346549275765217/" rel="publisher" />
 {% compress js %}
-  <script src="{% static 'js/mootools.js' %}" type="text/javascript"></script>
-  <script src="{% static 'js/slimbox.js' %}" type="text/javascript"></script>
-  <script src="{% static 'js/fader.js' %}" type="text/javascript"></script>
-  <script src="{% static 'js/utils.js' %}" type="text/javascript"></script>
+  <script src="{% static 'bootstrap/js/jquery-2.2.4.js' %}" type="text/javascript"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.js' %}" type="text/javascript"></script>
+  <script src="{% static 'js/loader.js' %}" type="text/javascript"></script>
+  <script src="{% static 'colorbox/jquery.colorbox.js' %}" type="text/javascript"></script>
 {% endcompress %}
   <meta name="verify-v1" content="3AM2eNj0zQ1Ao/N2eGE02S45V3p5KQxAyMIxdUJhtEQ=" />
   <meta name="robots" content="index, follow" />
  </head>
  <body>
   <header>
-   <nav>
-   <div class="menu">
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
    {% for item in menu %}
-   <a href="{{ item.url }}" {% if item.active %}class="active"{% endif %}>{{ item.title }}</a>
+   <li {% if item.active %}class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
    {% endfor %}
-   </div>
-   <div class="clearer"></div>
-   </nav>
-    <h1><a href="{% url 'home' %}" rel="home"><span id="logo">phpMyAdmin</span></a> Bringing MySQL to the web</h1>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-9">
+    <h1><a href="{% url 'home' %}" rel="home"><span id="logo">phpMyAdmin</span></a> <span class="hidden-sm hidden-xs">Bringing MySQL to the web</span></h1>
+  </div>
+  <div class="col-sm-3 boxes">
+    {% block littleboxes %}
+    {% include '_littleboxes.html' %}
+    {% endblock %}
+    </div>
+  </div>
+  </div>
   </header>
 
   <content>
-<div id="body">
+<div class="container">
   {% block content %}
     Placeholder.
   {% endblock %}
@@ -66,7 +97,7 @@
   </content>
 
   <footer>
-  <ul>
+<ul class="footer">
     <li>Copyright &copy; 2003 - {{ current_year }} <span class="vcard"><a class="url org fn" href="{% url 'team' %}">phpMyAdmin contributors</a><a href="mailto:developers@phpmyadmin.net" class="email"></a></span></li>
     <li><a href="{% url 'license' %}" rel="license">License</a></li>
     <li><a href="{% url 'donate' %}" rel="payment" title="Support phpMyAdmin by donating money!">Donate</a></li>

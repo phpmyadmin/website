@@ -1,21 +1,13 @@
 {% with latest_release as release %}
-<div class="downloadbutton">
     {% include "_dlbox.html" %}
-</div>
 {% endwith %}
 
 {% if beta_release %}
 {% with beta_release as release %}
-<div class="downloadbutton">
     {% include "_dlbox.html" %}
-</div>
 {% endwith %}
 {% endif %}
 
-<div>
-    <a href="https://demo.phpmyadmin.net/master-config/" title="Go to demo server">Try demo</a>
-</div>
+    <a class="btn btn-success" href="https://demo.phpmyadmin.net/master-config/" title="Go to demo server"><i class="fa fa-search"></i> Try demo</a>
 
-<div>
-    <a href="{% url 'donate' %}" rel="payment">Donate</a>
-</div>
+    <a class="btn btn-success" href="{% url 'donate' %}" rel="payment"><i class="fa fa-credit-card"></i> Donate</a>

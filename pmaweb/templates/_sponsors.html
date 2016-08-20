@@ -1,6 +1,8 @@
 {% load staticfiles %}
 <div class="sponsors">
 
+<h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>
+
 <h3>Diamond sponsor</h3>
 
 <div class="sp diamond">
@@ -49,8 +51,6 @@
 <a href="http://7binaryoptions.com/">7binaryoptions.com</a>
 </div>
 
-<h3><a href="{% url 'sponsors' %}">Sponsorship</a></h3>
-
-<p><a href="{% url 'sponsors' %}">See other sponsors and information for new sponsors.</a></p>
+{% include '_sponsorship_note.html' %}
 
 </div>

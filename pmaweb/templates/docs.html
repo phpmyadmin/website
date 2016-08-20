@@ -3,9 +3,12 @@
 
 {% block content %}
 
+<div class="row">
+
+<div class="col-md-6">
+
 <h2>Documentation</h2>
 
-<div class="floatbox">
 <h3>Official Documentation</h3>
 <ul>
     <li><b><a href="https://docs.phpmyadmin.net/">Main documentation</a></b> (from the development version)</li>
@@ -15,9 +18,7 @@
     <li><a href="https://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
     <li><a href="{% url 'translations' %}">Translations overview</a></li>
 </ul>
-</div>
 
-<div class="floatbox">
 <h3>Localized Documentation</h3>
 
 <p>Please note that these translations are not always complete, but you can <a
@@ -33,9 +34,7 @@ href="{% url 'contribute' %}#translate">help</a>.</p>
     <li><a href="https://phpmyadmin-turkish.readthedocs.org/en/latest/">Turkish</a></li>
     <li><a href="https://phpmyadmin-chinese-china.readthedocs.org/en/latest/">Simplified Chinese</a></li>
 </ul>
-</div>
 
-<div class="floatbox">
 <h3>Third Party Tutorials and Articles</h3>
 <ul>
     <li><a href="https://cloud.google.com/sql/docs/phpmyadmin-on-app-engine">Using phpMyAdmin with Google Cloud SQL on Google App Engine</a></li>
@@ -45,24 +44,23 @@ href="{% url 'contribute' %}#translate">help</a>.</p>
         <a href="https://www.devshed.com/c/a/PHP/Doing-More-with-phpMyAdmin-Part-2/">part 2</a></li>
     <li><a href="http://www.php-editors.com/articles/sql_phpmyadmin.php">Learning SQL Using phpMyAdmin</a></li>
 </ul>
-</div>
 
-<div class="floatbox">
 <h3>Sites Dedicated to phpMyAdmin</h3>
 <ul>
     <li><a href="http://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
 </ul>
+
 </div>
 
-<div class="clearer"></div>
+<div class="col-md-6">
 
 <h2><a id="books"></a>Books</h2>
 
-<div class="floatbox book">
+<div class="row">
 
 <h3>Mastering phpMyAdmin 3.4 for Effective MySQL Management</h3>
 
-<a href="https://link.packtpub.com/XJdqZr"><img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" width="150" height="185" style="border: 0px;" /></a>
+<a class="pull-left img-margin" href="https://link.packtpub.com/XJdqZr"><img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" /></a>
 
 <p>
 A percentage of the book's sales is <a href="https://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
@@ -70,11 +68,11 @@ A percentage of the book's sales is <a href="https://www.packtpub.com/article/op
 
 </div>
 
-<div class="floatbox book">
+<div class="row">
 
 <h3>phpMyAdmin Starter</h3>
 
-<a href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1"><img src="{% static 'images/books/pma_starter_150x184.jpg' %}" alt="Book cover" width="150" height="184" style="border: 0px;" /></a>
+<a class="pull-left img-margin" href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1"><img src="{% static 'images/books/pma_starter_150x184.jpg' %}" alt="Book cover" /></a>
 
 <p>
 A percentage of the book's sales is <a href="https://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
@@ -82,11 +80,11 @@ A percentage of the book's sales is <a href="https://www.packtpub.com/article/op
 
 </div>
 
-<div class="floatbox book">
+<div class="row">
 
 <h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
 
-<a href="https://www.packtpub.com/phpmyadmin-3rd-edition/book"><img src="{% static 'images/books/pma_en_100x123.png' %}" alt="Book cover" width="100" height="123" /></a>
+<a class="pull-left img-margin" href="https://www.packtpub.com/phpmyadmin-3rd-edition/book"><img src="{% static 'images/books/pma_en_100x123.png' %}" alt="Book cover"  /></a>
 
 <p>
 A percentage of the book's sales is <a href="https://www.packtpub.com/article/open_source_receives_royalties_boost">donated</a> to help phpMyAdmin.
@@ -94,10 +92,10 @@ A percentage of the book's sales is <a href="https://www.packtpub.com/article/op
 
 </div>
 
-<div class="floatbox book">
+<div class="row">
 <h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
 
-<a href="https://www.packtpub.com/dominary-phpMyAdmin-es"><img src="{% static 'images/books/pma_es_100x123.png' %}" alt="Book cover" width="100" height="123" /></a>
+<a class="pull-left img-margin" href="https://www.packtpub.com/dominary-phpMyAdmin-es"><img src="{% static 'images/books/pma_es_100x123.png' %}" alt="Book cover" /></a>
 
 <p xml:lang="es">
 Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencial de phpMyAdmin. Ya sea un programador experimentado, un administrador de sistemas, un dise&ntilde;ador Web o nuevo a las tecnolog&iacute;as de MySQL y phpMyAdmin, este libro le mostrar&aacute; como aumentar su productividad y control cuando trabaje con MySQL. Por ello se ha traducido, de modo que esta gu&iacute;a completa sea m&aacute;s accesible al lector espa&ntilde;ol.
@@ -105,6 +103,7 @@ Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencia
 
 </div>
 
-<div class="clearer"></div>
+</div>
+</div>
 
 {% endblock %}

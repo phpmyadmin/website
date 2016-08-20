@@ -32,21 +32,26 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 </p>
 
 <h2>Available Themes</h2>
-<p>Select your phpMyAdmin version (requires JavaScript):
+<p>Select your phpMyAdmin version:
+
+<ul class="nav nav-pills">
 {% for css in themecssversions %}
-<a class="themelink {{css.css}}" href="#{{css.css}}" onclick="show_theme('{{css.css}}')">{{css.name}}</a>
+<li role="presentation">
+<a class="themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
+</li>
 {% endfor %}
+</ul>
 </p>
 {% for theme in themes %}
-    <div class="themediv {{theme.get_css}}">
-        <h3>{{theme}}</h3>
-            <div class="themeimgborder">
-            <div class="themeimg">
-                <a href="{% static theme.imgname %}"
-                rel="lightbox[themes]" title="{{theme.name}}">
-                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" />
+<div class="panel panel-default themediv {{theme.get_css}}">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ theme }}</h3>
+  </div>
+  <div class="panel-body">
+            <div class="pull-right thumbnail">
+                <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
+                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
                 </a>
-            </div>
             </div>
             <p>Released on {{theme.date|date:"Y-m-d"}}</p>
             <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
@@ -54,13 +59,9 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
             <p>Author: {{theme.author}}</p>
             {% endif %}
             <p>{{ theme.description }}</p>
-            <ul class="dl">
-                <li><a href="{{ theme.get_absolute_url }}">{{theme.filename}}</a> ({{theme.size|filesizeformat}}, SHA1: {{ theme.sha1 }}, SHA256: {{theme.sha256}})</li>
-                {% if theme.signed %}
-                <li><a href="{{ theme.get_absolute_url }}.asc">{{theme.filename}}.asc</a> (PGP signature)</li>
-                {% endif %}
-            </ul> 
+
+            {% include '_dltable.html' with download_item=theme %}
     </div>
-    {% endfor %}
-    <div class="clearer"></div>
+</div>
+{% endfor %}
 {% endblock %}

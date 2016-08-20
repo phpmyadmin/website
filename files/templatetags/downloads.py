@@ -18,30 +18,28 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#
-from django.db import models
 
 
-class Translation(models.Model):
-    url = models.URLField(unique=True)
-    name = models.CharField(max_length=100)
-    translated = models.IntegerField()
-    percent = models.DecimalField(max_digits=4, decimal_places=1)
-    updated = models.DateTimeField(null=True, blank=True)
+import os
 
-    class Meta(object):
-        ordering = ['name']
+from django.template import Library
+from django.utils.html import escape
+from django.utils.safestring import mark_safe
 
-    def __unicode__(self):
-        return self.name
+from files.models import Release
 
-    def get_absolute_url(self):
-        return self.url
+register = Library()
 
-    @property
-    def css(self):
-        if self.percent < 50:
-            return 'progress-bar-danger'
-        elif self.percent < 80:
-            return 'progress-bar-warning'
-        return 'progress-bar-success'
+
+@register.simple_tag
+def releaselink(name):
+    try:
+        release = Release.objects.get(version=name)
+        return mark_safe(
+            '<a href="{0}">{1}</a>'.format(
+                escape(release.get_absolute_url()),
+                escape(release.version)
+            )
+        )
+    except:
+        return name
