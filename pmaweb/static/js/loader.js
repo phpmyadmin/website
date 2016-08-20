@@ -64,4 +64,19 @@ $(function(){
         });
     }
 
+    $('.download_popup').click(function () {
+        var $this = $(this);
+        var pgp = $this.data('pgp');
+        $('#dl-link').attr('href', $this.attr('href'));
+        $('#dl-sha1').text($this.data('sha1'));
+        $('#dl-sha256').text($this.data('sha256'));
+        if (pgp !== '') {
+            $('#dl-li-pgp').show();
+            $('#dl-pgp').attr('href', pgp);
+        } else {
+            $('#dl-li-pgp').hide();
+        }
+        $('#downloadModal').modal('show');
+    });
+
 });
