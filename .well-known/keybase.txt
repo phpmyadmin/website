@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/phpmyadmin_sec
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://phpmyadmin.net
+  * I am phpmyadmin_sec (https://keybase.io/phpmyadmin_sec) on keybase.
+  * I have a public key with fingerprint 5BAD 38CF B980 50B9 4BD7  FB5B DA68 AB39 218A B947
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101cc0bdb9b6e2b1ed99301dedbefabe55de95b49ab0f69ce4c4da75b8dea31f7ad0a",
+            "fingerprint": "5bad38cfb98050b94bd7fb5bda68ab39218ab947",
+            "host": "keybase.io",
+            "key_id": "da68ab39218ab947",
+            "kid": "0101cc0bdb9b6e2b1ed99301dedbefabe55de95b49ab0f69ce4c4da75b8dea31f7ad0a",
+            "uid": "c0c64e2685b7dec5f5d8f0920c551419",
+            "username": "phpmyadmin_sec"
+        },
+        "service": {
+            "hostname": "phpmyadmin.net",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1475574227,
+    "expire_in": 157680000,
+    "prev": "7bad577cc11e7057ce3043928776a3bf5526e788feb3bc5e9d975786badef0a7",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUn9QFFUcv+PMhIlkLJ0MM1mdTuXC3bt9t7vnWDgdA8QYmGNMOHWz7+3bu427
+vePuQBakmbQfcIlDRUIODr9GIRWd0uIsSyiBMZAEUimBGMcwhhDRQQfEaJepv+rP
+3j/fee/7+Xze533etyzaoFuk/8V1lIsLnU7Wd45CXeYdZaiQgF5BIWyFRDaeL9gt
+4EDQkS0JhI0gKZJCiIQC5KAVmyGFBY6zkJSABYhFHmIABMwBSHM8JEUrhzCNaIFn
+AGQFzFsokeEFkidMhCjJTuz3+SU5qMoCyAsWFomQY0lAQo6GAiNCAAXeyvLQwpkp
+tXA0oxJd3oDGUM1BPoATJK96pm4c8/b+A/8/+86dl0MkstLYbGUBZASMgAgEViQ5
+M4kAoGiK04AB7Jd5D1bRPpfPo/CCR5IdAYyIIhOh9vIkhLV4tff8C5cg46Cq4fN7
+g17kdas9VzDoC9g0blDxaeCdGDr+lnFASRbUPFVGHvYHJK9M2CgViYKSpkvRDAAM
+bTYzJgLn+yQ/dkgaAjBWllSXdg/OI2w8wajfABgGIYrCDAkYhC0krabJMoyVt0AR
+ALMVMywrYmiBCGBO4BjAsFaVhkWS1+IO4BzZq4pbVKO8U/UZkJwyH8z1Y6IoqiRi
+xQKdfpFu4UMR2qjpoiJj/pm/letidG2X+g6HWpJSTw02juw2eCT+ZgbMkZt6gykf
+ZfbbB2MGRkrbuiJfGdifvGFm9eyVYz3LFh748SxFd0zNftL+2n0lS5/YehBPj3rP
+Pv7HuqwdyuK4ZXUl9rtKZL2sb36r03TJP3wLfpAca+orirwxWb7L96w7+t0T5YVN
+u+reuFARN5mE3UZ26fd5jt0NndkLDj4wuXqX/rB837bMbQyw27duBEWGm6UxFdL1
+8TZHa34BSsme0S/2SFc39RzpSci892jtm1X3t3efi93e27PaPPpp/PS9KKXg6deH
+NodyhoiqywcuTNeP19yyp1xOl1ZmjODEuRfcz0u2U81zWc89IE6u7xBfAkblQx1/
+pAI3LCmuHntx1f7EpOZVTcNbyr9IPS+fGET5A1FTL389m9JV3FUeUVPcUds+Vn/o
+N7L6ve730+JLJuzGO9615aGkyp+6hG8OG5nEmZ/X9hXolcnefWf+LJur63vm2PoJ
+c8Vm/PbAO+fDH1+DdU1wyeiG6Kstd8PGPRBdC4fSl1ciQ8zp258/Uq08nF0crsm4
+CONPbllj2LOxdG+s0nlD12/9cmL497Sq6yMj3elPNRyHT/BlTzo741Yov57pT3N6
+NhV+pd9JxkbsnTm3deKKMXnKfvSzysaLwmPVbuXQjtyxWpeTvl3y6vGEcGtD8ndi
+e2Pqt21pIWPLmvG/AA==
+=R/Yj
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/phpmyadmin_sec
+
+==================================================================
