@@ -19,23 +19,27 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+from collections import OrderedDict
+from ConfigParser import RawConfigParser
+import urllib
+
 from django.core.management.base import BaseCommand
 from django.core.urlresolvers import reverse
+
 from demo.models import Demo
-from ConfigParser import RawConfigParser
+
 from pmaweb.cdn import purge_cdn
-import urllib
-from collections import OrderedDict
 
 URL = 'https://demo.phpmyadmin.net/versions.ini'
 
 
 class MultiOrderedDict(OrderedDict):
-    def __setitem__(self, key, value):
+    def __setitem__(self, key, value, dict_setitem=dict.__setitem__):
         if isinstance(value, list) and key in self:
             self[key].extend(value)
         else:
-            super(MultiOrderedDict, self).__setitem__(key, value)
+            # We intentionally skip parent class here
+            dict_setitem(self, key, value)
 
 
 class Command(BaseCommand):
