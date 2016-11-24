@@ -53,7 +53,6 @@ class Command(BaseCommand):
             download.size = os.path.getsize(filename)
             download.sha1 = read_sum('{0}.sha1'.format(filename))
             download.sha256 = read_sum('{0}.sha256'.format(filename))
-            download.md5 = read_sum('{0}.md5'.format(filename))
             download.signed = os.path.exists('{0}.asc'.format(filename))
             download.save()
 

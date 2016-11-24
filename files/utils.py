@@ -19,7 +19,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from hashlib import sha1, sha256, md5
+from hashlib import sha1, sha256
 
 
 def read_sum(filename, origfile=None):
@@ -34,7 +34,5 @@ def read_sum(filename, origfile=None):
                 return sha1(data).hexdigest()
             if filename.endswith('.sha256'):
                 return sha256(data).hexdigest()
-            elif filename.endswith('.md5'):
-                return md5(data).hexdigest()
 
         return ''

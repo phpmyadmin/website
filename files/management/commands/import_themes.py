@@ -60,10 +60,6 @@ class Command(BaseCommand):
                     '{0}.sha1'.format(complete_name),
                     complete_name
                 ),
-                'md5': read_sum(
-                    '{0}.md5'.format(complete_name),
-                    complete_name
-                ),
                 'signed': os.path.exists('{0}.asc'.format(complete_name)),
             }
         )
