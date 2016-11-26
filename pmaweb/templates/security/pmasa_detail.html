@@ -48,7 +48,11 @@
     <p>
     Assigned CVE ids:
     {% for cve in pmasa.get_cves %}
-    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name={{cve}}">{{cve}}</a>
+    {% if cve.0 %}
+    <a href="{{ cve.0 }}">{{ cve.1 }}</a>
+    {% else %}
+    {{ cve.1 }}
+    {% endif %}
     {% endfor %}
     </p>
     {% endif %}

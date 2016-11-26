@@ -102,7 +102,12 @@ class PMASA(models.Model):
         )
 
     def get_cves(self):
-        return self.cve.split()
+        for cve in self.cve.split():
+            # Incomplete reference as CVE-2016-
+            if cve[-1] == '-':
+                yield '', 'Not yet assigned'
+            else:
+                yield 'https://cve.mitre.org/cgi-bin/cvename.cgi?name={0}'. format(cve), cve
 
     def get_cwes(self):
         return self.cwe.split()
