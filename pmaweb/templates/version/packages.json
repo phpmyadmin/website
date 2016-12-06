@@ -9,6 +9,7 @@
                 "version": "{{ release.version }}",
                 "dist": {
                     "url": "{{ download.get_absolute_url }}",
+                    "checksum": "{{ download.sha1 }}",
                     "type": "{{ download.composer_type }}"
                 }
             },
