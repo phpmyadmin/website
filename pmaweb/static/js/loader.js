@@ -67,6 +67,7 @@ $(function(){
     $('.download_popup').click(function () {
         var $this = $(this);
         var pgp = $this.data('pgp');
+        ga('send', 'pageview', $this.attr('href'));
         $('#dl-link').attr('href', $this.attr('href'));
         $('#dl-sha1').text($this.data('sha1'));
         $('#dl-sha256').text($this.data('sha256'));
