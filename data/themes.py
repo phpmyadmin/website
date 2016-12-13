@@ -320,6 +320,12 @@ THEMES = {
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
     },
+    'pmaterial-1.0': {
+        'name': 'pmaterial',
+        'support': '4.6',
+        'info': u'Material Theme for phpMyAdmin',
+        'author': u'jeeskdenny',
+    },
 }
 
 CSSMAP = {
