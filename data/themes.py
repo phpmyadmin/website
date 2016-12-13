@@ -326,6 +326,12 @@ THEMES = {
         'info': u'Material Theme for phpMyAdmin',
         'author': u'jeeskdenny',
     },
+    'mhn-1.0': {
+        'name': 'MHN',
+        'support': '4.6',
+        'info': u'Flat Theme for phpMyAdmin',
+        'author': 'khadkamhn',
+    },
 }
 
 CSSMAP = {
