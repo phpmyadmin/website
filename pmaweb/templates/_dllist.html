@@ -1,6 +1,6 @@
 <p>{{ release.get_version_info }}</p>
 
-{% with release.download_set.all as download_list %}
+{% with release.get_downloads as download_list %}
 
 {% if download_list %}
 {% include '_dltable.html' %}
