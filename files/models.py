@@ -228,6 +228,14 @@ class Release(models.Model):
 
         return text
 
+    def get_downloads(self):
+        """Lists downloads, making all-languages.zip first"""
+        dlset = self.download_set
+        return (
+            list(dlset.filter(filename__endswith='all-languages.zip')) +
+            list(dlset.exclude(filename__endswith='all-languages.zip'))
+        )
+
 
 class Download(models.Model):
     release = models.ForeignKey(Release)
@@ -291,6 +299,10 @@ class Download(models.Model):
             return 'zip'
         else:
             return 'tar'
+
+    @property
+    def is_featured(self):
+        return self.filename.endswith('all-languages.zip')
 
 
 class Theme(models.Model):

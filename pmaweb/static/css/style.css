@@ -177,3 +177,7 @@ footer li{
     display: block;
     margin: 5px;
 }
+
+.featured-dl {
+    font-weight: bold;
+}
