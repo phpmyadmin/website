@@ -332,6 +332,12 @@ THEMES = {
         'info': u'Flat Theme for phpMyAdmin',
         'author': 'khadkamhn',
     },
+    'fallen-0.2': {
+        'name': 'Fallen',
+        'support': '4.6',
+        'info': 'Fallen theme for phpMyAdmin',
+        'author': 'fransallen',
+    },
 }
 
 CSSMAP = {
