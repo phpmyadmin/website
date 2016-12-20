@@ -338,6 +338,12 @@ THEMES = {
         'info': 'Fallen theme for phpMyAdmin',
         'author': 'fransallen',
     },
+    'fallen-0.3': {
+        'name': 'Fallen',
+        'support': '4.6',
+        'info': 'Fallen theme for phpMyAdmin',
+        'author': 'fransallen',
+    },
 }
 
 CSSMAP = {
