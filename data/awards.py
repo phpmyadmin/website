@@ -26,6 +26,21 @@ from cgi import escape
 # List of awards
 AWARDS = [
     {
+        'image': 'images/awards/2017-hosting-advice.png',
+        'link': (
+            'http://www.hostingadvice.com/blog/'
+            'why-phpmyadmin-best-db-admin-tool-for-business/'
+        ),
+        'title': 'Best Database Admin Tool for Business Hosting',
+        'text': '''
+<p>phpMyAdmin was awarded
+<a href="http://www.hostingadvice.com/">HostingAdvice</a>'s</p>
+<p class="award"><a href="%(link)s">Best Database Admin Tool for Business Hosting</a></p>.
+<p>in January 2017.</p>
+''',
+        'photos': [],
+    },
+    {
         'image': 'images/awards/percona-live-logo.png',
         'link': 'http://openlife.cc/'
                 'blogs/2013/april/mysql-community-awards-2013-and-winners-are',
