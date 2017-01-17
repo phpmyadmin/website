@@ -301,6 +301,7 @@ THEMES = {
         'support': '4.4',
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
+        'ignore': True,
     },
     'metro-2.3': {
         'name': 'Metro',
@@ -331,6 +332,7 @@ THEMES = {
         'support': '4.6',
         'info': u'Flat Theme for phpMyAdmin',
         'author': 'khadkamhn',
+        'ignore': True,
     },
     'mhn-1.1': {
         'name': 'MHN',
@@ -343,6 +345,7 @@ THEMES = {
         'support': '4.6',
         'info': 'Fallen theme for phpMyAdmin',
         'author': 'fransallen',
+        'ignore': True,
     },
     'fallen-0.3': {
         'name': 'Fallen',
