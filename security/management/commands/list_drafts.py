@@ -29,7 +29,7 @@ class Command(BaseCommand):
     help = 'Downloads demo server versions'
 
     def handle(self, *args, **options):
-        for pmasa in PMASA.objects.filter(draft=False):
+        for pmasa in PMASA.objects.filter(draft=True):
             name = force_text(pmasa)
             self.stdout.write(name)
             self.stdout.write('-' * len(name))
