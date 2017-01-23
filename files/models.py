@@ -202,7 +202,6 @@ class Release(models.Model):
         elif self.version[:3] == '4.4':
             text = (
                 'Older version compatible with PHP 5.3.7 to 7.0 and MySQL 5.5. ' +
-                '<div class="alert alert-warning">No longer supported</div>.' +
                 'This version is no longer supported for security fixes. Users are urged to upgrade.'
             )
         elif self.version[:3] == '4.3':
