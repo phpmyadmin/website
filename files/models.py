@@ -178,6 +178,7 @@ class Release(models.Model):
         '''
         Returns description to the phpMyAdmin version.
         '''
+        text = ''
         if self.version[:2] == '0.':
             text = 'Historical release.'
         elif self.version[:2] == '1.':
@@ -190,13 +191,17 @@ class Release(models.Model):
                 'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
             )
+        elif self.version[:3] == '4.7':
+            text = (
+                'Current version compatible with PHP 5.5 to 7.1 and MySQL 5.5 and newer. '
+            )
         elif self.version[:3] == '4.6':
             text = (
-                'Current version compatible with PHP 5.5 to 7.0 and MySQL 5.5 and newer. '
+                'Current version compatible with PHP 5.5 to 7.1 and MySQL 5.5 and newer. '
             )
         elif self.version[:3] == '4.5':
             text = (
-                'Current version compatible with PHP 5.5 to 7.0 and MySQL 5.5. ' +
+                'Older version compatible with PHP 5.5 to 7.0 and MySQL 5.5. ' +
                 'Supported until April 1, 2016.'
             )
         elif self.version[:3] == '4.4':
