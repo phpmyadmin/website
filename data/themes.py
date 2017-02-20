@@ -321,9 +321,21 @@ THEMES = {
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
     },
+    'metro-2.6': {
+        'name': 'Metro',
+        'support': '4.7',
+        'info': u'Windows 8 / Metro Theme for phpMyAdmin',
+        'author': u'hplhu',
+    },
     'pmaterial-1.0': {
         'name': 'pmaterial',
         'support': '4.6',
+        'info': u'Material Theme for phpMyAdmin',
+        'author': u'jeeskdenny',
+    },
+    'pmaterial-1.1': {
+        'name': 'pmaterial',
+        'support': '4.7',
         'info': u'Material Theme for phpMyAdmin',
         'author': u'jeeskdenny',
     },
@@ -340,6 +352,12 @@ THEMES = {
         'info': u'Flat Theme for phpMyAdmin',
         'author': 'khadkamhn',
     },
+    'mhn-1.2': {
+        'name': 'MHN',
+        'support': '4.7',
+        'info': u'Flat Theme for phpMyAdmin',
+        'author': 'khadkamhn',
+    },
     'fallen-0.2': {
         'name': 'Fallen',
         'support': '4.6',
@@ -350,6 +368,12 @@ THEMES = {
     'fallen-0.3': {
         'name': 'Fallen',
         'support': '4.6',
+        'info': 'Fallen theme for phpMyAdmin',
+        'author': 'fransallen',
+    },
+    'fallen-0.4': {
+        'name': 'Fallen',
+        'support': '4.7',
         'info': 'Fallen theme for phpMyAdmin',
         'author': 'fransallen',
     },
@@ -378,6 +402,7 @@ CSSMAP = {
     '4.4 - 4.5': 'pma_4_4 pma_4_5',
     '4.5': 'pma_4_5',
     '4.6': 'pma_4_6',
+    '4.7': 'pma_4_7',
 }
 
 CSSVERSIONS = [
@@ -391,4 +416,5 @@ CSSVERSIONS = [
     {'name': '4.4', 'css': 'pma_4_4'},
     {'name': '4.5', 'css': 'pma_4_5'},
     {'name': '4.6', 'css': 'pma_4_6'},
+    {'name': '4.7', 'css': 'pma_4_7'},
 ]
