@@ -170,3 +170,6 @@ CDN_ID = '41205'
 DOCS_CDN_ID = '71264'
 
 DOCKERHUB_TOKEN = None
+
+GITHUB_USER = 'phpmyadmin-bot'
+GITHUB_TOKEN = None

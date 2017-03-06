@@ -21,8 +21,10 @@
 #
 """Compatibility redirect handlers"""
 
-from urllib import urlopen
+import urllib2
+import base64
 
+from django.conf import settings
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, Http404, HttpResponseServerError
@@ -90,7 +92,11 @@ def notfound(request):
 
 def proxy_request(url):
     """Helper for proxying requests"""
-    handle = urlopen(url)
+    request = urllib2.Request(url)
+    if settings.GITHUB_USER and settings.GITHUB_TOKEN:
+        base64string = base64.b64encode('%s:%s' % (settings.GITHUB_USER, settings.GITHUB_TOKEN))
+        request.add_header('Authorization', 'Basic %s' % base64string)
+    handle = urllib2.urlopen(request)
     code = handle.getcode()
     content = handle.read()
     if code == 404:
