@@ -92,16 +92,20 @@ def notfound(request):
 
 def proxy_request(url):
     """Helper for proxying requests"""
-    request = urllib2.Request(url)
-    if settings.GITHUB_USER and settings.GITHUB_TOKEN:
-        base64string = base64.b64encode('%s:%s' % (settings.GITHUB_USER, settings.GITHUB_TOKEN))
-        request.add_header('Authorization', 'Basic %s' % base64string)
-    handle = urllib2.urlopen(request)
-    code = handle.getcode()
-    content = handle.read()
-    if code == 404:
-        raise Http404(content)
-    if code != 200:
+    try:
+        request = urllib2.Request(url)
+        if settings.GITHUB_USER and settings.GITHUB_TOKEN:
+            base64string = base64.b64encode('%s:%s' % (settings.GITHUB_USER, settings.GITHUB_TOKEN))
+            request.add_header('Authorization', 'Basic %s' % base64string)
+        handle = urllib2.urlopen(request)
+        code = handle.getcode()
+        content = handle.read()
+    except IOError as err:
+        content = str(err)
+        if hasattr(err, 'fp'):
+            content = err.fp.read()
+        if hasattr(err, 'code') and err.code == 404:
+            raise Http404(content)
         return HttpResponseServerError(content)
     return HttpResponse(
         content,
