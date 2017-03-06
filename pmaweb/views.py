@@ -21,9 +21,12 @@
 #
 """Compatibility redirect handlers"""
 
+from urllib import urlopen
+
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
-from django.http import Http404
+from django.http import HttpResponse, Http404, HttpResponseServerError
+from django.views.decorators.cache import cache_control
 from django.views.generic import TemplateView
 from django.shortcuts import render
 
@@ -65,6 +68,8 @@ REDIRECT_MAP = {
     'ownloads': 'downloads',
 }
 
+GITHUB_API = 'https://api.github.com/repos/phpmyadmin/phpmyadmin/git/'
+
 
 def redirect_home_page(request, page):
     """Redirect handled for old website links"""
@@ -81,6 +86,33 @@ def notfound(request):
         {'title': 'Page Not Found'},
         status=404
     )
+
+
+def proxy_request(url):
+    """Helper for proxying requests"""
+    handle = urlopen(url)
+    code = handle.getcode()
+    content = handle.read()
+    if code == 404:
+        raise Http404(content)
+    if code != 200:
+        return HttpResponseServerError(content)
+    return HttpResponse(
+        content,
+        content_type='application/json',
+    )
+
+
+@cache_control(max_age=600)
+def github_tree(request, name):
+    """Proxy for GitHub tree API"""
+    return proxy_request('{0}trees/{1}'.format(GITHUB_API, name))
+
+
+@cache_control(max_age=86400)
+def github_commit(request, name):
+    """Proxy for GitHub commit API"""
+    return proxy_request('{0}commits/{1}'.format(GITHUB_API, name))
 
 
 class PMAView(TemplateView):

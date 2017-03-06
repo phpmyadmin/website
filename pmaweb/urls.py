@@ -23,7 +23,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
-from pmaweb.views import PMAView, redirect_home_page
+from pmaweb.views import PMAView, redirect_home_page, github_tree, github_commit
 from security.views import PMASAView, PMASADraftView, redirect_security
 from files.views import (
     ReleaseList, ReleaseDetail, version_json, latest_download
@@ -354,6 +354,17 @@ urlpatterns = [
         r'^(?:home_page/)?version\.json$',
         version_json,
     ),
+
+    # GiHub API proxy
+    url(
+        r'^api/commit/(?P<name>[a-f0-9]{40})/',
+        github_commit,
+    ),
+    url(
+        r'^api/tree/(?P<name>[a-zA-Z0-9_]*)/',
+        github_tree,
+    ),
+
 
     # Composer packages
     url(
