@@ -68,7 +68,8 @@ urlpatterns = [
     url(
         r'^sitemap-(?P<section>.+)\.xml$',
         django.contrib.sitemaps.views.sitemap,
-        {'sitemaps': SITEMAPS}
+        {'sitemaps': SITEMAPS},
+        name='django.contrib.sitemaps.views.sitemap',
     ),
 
     # Pages
