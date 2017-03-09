@@ -20,6 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+from xml.etree import cElementTree as ElementTree
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from django.utils.timezone import utc, make_aware
@@ -57,6 +58,25 @@ class ViewTest(TestCase):
                 'https://github.com/phpmyadmin/',
                 msg_prefix='Invalid response for {0}'.format(url),
             )
+
+    def test_sitemaps(self):
+        # Get root sitemap
+        response = self.client.get('/sitemap.xml')
+        self.assertContains(response, '<sitemapindex')
+
+        # Parse it
+        tree = ElementTree.fromstring(response.content)
+        sitemaps = tree.findall(
+            '{http://www.sitemaps.org/schemas/sitemap/0.9}sitemap'
+        )
+        for sitemap in sitemaps:
+            location = sitemap.find(
+                '{http://www.sitemaps.org/schemas/sitemap/0.9}loc'
+            )
+            response = self.client.get(location.text)
+            self.assertContains(response, '<urlset')
+            # Try if it's a valid XML
+            ElementTree.fromstring(response.content)
 
 
 class CDNTest(TestCase):
