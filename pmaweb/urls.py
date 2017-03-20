@@ -157,6 +157,14 @@ urlpatterns = [
         name='sponsors'
     ),
     url(
+        r'^sponsors/subscribe/$',
+        PMAView.as_view(
+            template_name='sponsors-subscribe.html',
+            title='Subscribe to sponsorship',
+        ),
+        name='sponsors-subscribe'
+    ),
+    url(
         r'^themes/$',
         PMAView.as_view(
             template_name='themes.html',
