@@ -69,7 +69,6 @@ $(function(){
         var pgp = $this.data('pgp');
         ga('send', 'event', 'Download', $this.attr('href').replace('https://files.phpmyadmin.net/', ''));
         $('#dl-link').attr('href', $this.attr('href'));
-        $('#dl-sha1').text($this.data('sha1'));
         $('#dl-sha256').text($this.data('sha256'));
         if (pgp !== '') {
             $('#dl-li-pgp').show();
