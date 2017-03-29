@@ -61,7 +61,7 @@ class PMASA(models.Model):
     )
     cve = models.CharField(
         max_length=200,
-        help_text='Space separated list of related CVE entries'
+        help_text='Space separated list of related CVE entries, enter CVE-2017- in case none is assigned yet'
     )
     cwe = models.CharField(
         max_length=200,
