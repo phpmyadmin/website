@@ -376,6 +376,13 @@ THEMES = {
         'support': '4.7',
         'info': 'Fallen theme for phpMyAdmin',
         'author': 'fransallen',
+        'ignore': True,
+    },
+    'fallen-0.5': {
+        'name': 'Fallen',
+        'support': '4.7',
+        'info': 'Fallen theme for phpMyAdmin',
+        'author': 'fransallen',
     },
 }
 
