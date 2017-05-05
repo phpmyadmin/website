@@ -56,6 +56,11 @@
     href="{% url 'develop' %}">development page</a>.
     </p>
 
+    {% for release in all_snapshots %}
+    <h3>phpMyAdmin {{ release.version }}</h3>
+    {% include "_release.html" %}
+    {% endfor %}
+
     <h2 id="stable">Latest Stable Version</h2>
 
     <p>You can also directly download latest version on following URLs:</p>

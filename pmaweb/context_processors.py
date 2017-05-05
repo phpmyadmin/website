@@ -91,4 +91,5 @@ def releases(request=None):
         'beta_release': beta,
         'releases': get_current_releases(),
         'all_releases': Release.objects.filter(snapshot=False),
+        'all_snapshots': Release.objects.filter(snapshot=True),
     }
