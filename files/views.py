@@ -85,7 +85,6 @@ def version_json(request):
 
 
 def latest_download(request, flavor, extension, checksum=None):
-    print checksum
     latest = Release.objects.filter(stable=True)[0]
     try:
         result = latest.download_set.get(

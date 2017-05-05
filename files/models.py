@@ -312,6 +312,21 @@ class Download(models.Model):
             return 'tar'
 
     @property
+    def get_stable_url(self):
+        filename, ext = self.filename.rsplit('.', 1)
+        if ext not in ('zip', '7z'):
+            filename, ext2 = filename.rsplit('.', 1)
+            ext = '{0}.{1}'.format(ext2, ext)
+        variant = filename.split('-', 2)[2]
+        return reverse(
+            'latest-download',
+            kwargs={
+                'flavor': variant,
+                'extension': '.' + ext,
+            }
+        )
+
+    @property
     def is_featured(self):
         return self.filename.endswith('all-languages.zip')
 
