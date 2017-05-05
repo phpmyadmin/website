@@ -32,6 +32,9 @@ import json
 class ReleaseList(ListView):
     model = Release
 
+    def get_queryset(self):
+        return Release.objects.filter(snapshot=False)
+
     def get_context_data(self, **kwargs):
         context = super(ReleaseList, self).get_context_data(**kwargs)
         context['page_title'] = 'Files'
