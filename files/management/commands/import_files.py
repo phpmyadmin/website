@@ -29,26 +29,26 @@ from files.utils import read_sum
 import codecs
 
 
-def glob_downloads():
+def glob_downloads(prefix=''):
     return (
-        glob('*.zip') +
-        glob('*.7z') +
-        glob('*.tar.gz') +
-        glob('*.tar.bz2') +
-        glob('*.tar.xz')
+        glob(prefix + '*.zip') +
+        glob(prefix + '*.7z') +
+        glob(prefix + '*.tar.gz') +
+        glob(prefix + '*.tar.bz2') +
+        glob(prefix + '*.tar.xz')
     )
 
 
 class Command(BaseCommand):
     help = 'Imports files from filesystem'
 
-    def process_files(self, path, release):
+    def process_files(self, path, release, prefix='', force=False):
         os.chdir(path)
-        for filename in glob_downloads():
+        for filename in glob_downloads(prefix):
             download, created = Download.objects.get_or_create(
                 release=release, filename=filename
             )
-            if not created:
+            if not created and not force:
                 continue
             download.size = os.path.getsize(filename)
             download.sha1 = read_sum('{0}.sha1'.format(filename))
@@ -81,5 +81,32 @@ class Command(BaseCommand):
                 release
             )
 
+    def process_snapshots(self, path):
+        os.chdir(path)
+
+        # List current versions
+        versions = set([x.split('-')[1] for x in glob('*+snapshot*.*')])
+
+        # Delete no longer present snapshots
+        Release.objects.filter(snapshot=True).exclude(version__in=versions).delete()
+
+        # Process versions
+        for version in versions:
+            release, created = Release.objects.get_or_create(
+                version=version,
+                defaults={
+                    'snapshot': True,
+                }
+            )
+            if created:
+                self.stdout.write('Added {0}'.format(version))
+            self.process_files(
+                path,
+                release,
+                prefix='phpMyAdmin-' + version,
+                force=True,
+            )
+
     def handle(self, *args, **options):
         self.process_releases(os.path.join(settings.FILES_PATH, 'phpMyAdmin'))
+        self.process_snapshots(os.path.join(settings.FILES_PATH, 'snapshots'))

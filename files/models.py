@@ -85,9 +85,10 @@ class Release(models.Model):
     def __unicode__(self):
         return self.version
 
-    @models.permalink
     def get_absolute_url(self):
-        return ('release', (), {'version': self.version})
+        if self.snapshot:
+            return reverse('downloads')
+        return reverse('release', kwargs={'version': self.version})
 
     def simpledownload(self):
         try:
@@ -102,6 +103,14 @@ class Release(models.Model):
 
     @staticmethod
     def parse_version(version):
+        if '+' in version:
+            # Snapshots, eg. 4.7+snapshot
+            parts = [int(x) for x in version.split('+')[0].split('.')]
+            assert len(parts) == 2
+            return (
+                100000000 * parts[0] +
+                1000000 * parts[1]
+            )
         if '-' in version:
             version, suffix = version.split('-')
             if suffix.startswith('alpha'):
@@ -262,6 +271,10 @@ class Download(models.Model):
         unique_together = ['release', 'filename']
 
     def __unicode__(self):
+        if self.release.snapshot:
+            return '/snapshots/{0}'.format(
+                self.filename
+            )
         return '/phpMyAdmin/{0}/{1}'.format(
             self.release.version,
             self.filename
