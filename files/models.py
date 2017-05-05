@@ -76,6 +76,7 @@ class Release(models.Model):
     version_num = models.IntegerField(default=0, unique=True)
     release_notes = MarkupField(default_markup_type='markdown')
     stable = models.BooleanField(default=False, db_index=True)
+    snapshot = models.BooleanField(default=False, db_index=True)
     date = models.DateTimeField(db_index=True, default=timezone.now)
 
     class Meta(object):

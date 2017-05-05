@@ -79,8 +79,8 @@ def menu(request):
 def releases(request=None):
 
     latest = Release.objects.filter(stable=True)[0]
-    if Release.objects.filter(stable=False).exists():
-        beta = Release.objects.filter(stable=False)[0]
+    if Release.objects.filter(stable=False, snapshot=False).exists():
+        beta = Release.objects.filter(stable=False, snapshot=False)[0]
         if beta.version_num < latest.version_num:
             beta = None
     else:
@@ -90,5 +90,5 @@ def releases(request=None):
         'latest_release': latest,
         'beta_release': beta,
         'releases': get_current_releases(),
-        'all_releases': Release.objects.all(),
+        'all_releases': Release.objects.filter(snapshot=False),
     }

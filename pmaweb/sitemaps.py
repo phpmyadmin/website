@@ -101,7 +101,7 @@ class ReleasesSitemap(Sitemap):
     changefreq = 'monthly'
 
     def items(self):
-        return Release.objects.all()
+        return Release.objects.filter(snapshot=False)
 
     def lastmod(self, item):
         return item.date
