@@ -348,8 +348,15 @@ urlpatterns = [
     url(
         r'^downloads/phpMyAdmin-latest-'
         r'(?P<flavor>all-languages|english)'
-        r'(?P<extension>\.zip|\.tar\.gz|\.tar\.xz|\.tar\.bz2)'
-        r'(?P<checksum>\.asc)?$',
+        r'(?P<extension>\.zip|\.tar\.gz|\.tar\.xz)'
+        r'(?P<checksum>\.asc|\.sha256)?$',
+        latest_download,
+    ),
+    url(
+        r'^downloads/phpMyAdmin-latest-'
+        r'(?P<flavor>source)'
+        r'(?P<extension>\.tar\.xz)'
+        r'(?P<checksum>\.asc|\.sha256)?$',
         latest_download,
     ),
     url(
