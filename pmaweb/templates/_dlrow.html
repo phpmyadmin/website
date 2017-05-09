@@ -1,6 +1,6 @@
     <tr {% if file.is_featured %}class="featured-dl"{% endif %}>
     {% if latest %}
-        <td><a href="{{ file.get_stable_url }}" class="download_popup" data-sha256="{{ file.sha256 }}" data-pgp="{% if file.signed %}{{ file.get_stable_url }}.asc{% endif %}">{{ file.get_stable_url }}</a></td>
+        <td><a href="{{ file.get_stable_url }}" class="download_popup" data-sha256="{{ file.sha256 }}" data-pgp="{% if file.signed %}{{ file.get_stable_url }}.asc{% endif %}">{{ file.get_stable_filename }}</a></td>
     {% else %}
         <td><a href="{{ file.get_absolute_url }}" class="download_popup" data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}">{{ file.filename }}</a></td>
     {% endif %}

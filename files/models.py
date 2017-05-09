@@ -349,6 +349,10 @@ class Download(models.Model):
         )
 
     @property
+    def get_stable_filename(self):
+        return self.get_stable_url.rsplit('/', 1)[1]
+
+    @property
     def is_featured(self):
         return self.filename.endswith('all-languages.zip')
 
