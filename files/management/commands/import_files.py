@@ -21,6 +21,8 @@
 
 from django.core.management.base import BaseCommand
 from django.conf import settings
+from dateutil import parser
+import json
 import os
 from glob import glob
 from files.models import Release, Download
@@ -85,21 +87,44 @@ class Command(BaseCommand):
         os.chdir(path)
 
         # List current versions
-        versions = set([x.split('-')[1] for x in glob('*+snapshot*.*')])
+        versions = set([x.rsplit('.', 1)[0].split('-')[1] for x in glob('*+snapshot.json')])
 
         # Delete no longer present snapshots
         Release.objects.filter(snapshot=True).exclude(version__in=versions).delete()
 
         # Process versions
         for version in versions:
+            metafile = os.path.join(
+                path,
+                'phpMyAdmin-' + version + '.json'
+            )
+            with open(metafile, 'r') as handle:
+                metadata = json.load(handle)
+            defaults = {
+                'snapshot': True,
+                'release_notes': metadata['commit'],
+                'release_notes_markup_type': 'plain',
+                'date': parser.parse(metadata['date']),
+            }
             release, created = Release.objects.get_or_create(
                 version=version,
-                defaults={
-                    'snapshot': True,
-                }
+                defaults=defaults,
             )
             if created:
                 self.stdout.write('Added {0}'.format(version))
+            else:
+                modified = False
+                for item in defaults:
+                    if item == 'release_notes':
+                        current = release.release_notes.raw
+                    else:
+                        current = getattr(release, item)
+                    if current != defaults[item]:
+                        setattr(release, item, defaults[item])
+                        modified = True
+                if modified:
+                    self.stdout.write('Updated {0}'.format(version))
+                    release.save()
             self.process_files(
                 path,
                 release,
