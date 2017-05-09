@@ -1,5 +1,5 @@
 {% if release.snapshot %}
-<p>Daily updated snapshot.</p>
+<p>Daily snapshot, generated {{release.date|date:"Y-m-d"}}, from <a href="https://github.com/phpmyadmin/phpmyadmin/commit/{{ release.release_notes.raw }}">Git commit {{ release.release_notes.raw }}</a>.</p>
 {% else %}
 <p>Released {{release.date|date:"Y-m-d"}}, see <a href="{{ release.get_absolute_url }}">release notes</a> for details.</p>
 {% endif %}
