@@ -19,6 +19,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+import json
 import urllib2
 from django.dispatch import receiver
 from django.db.models.signals import post_save
@@ -411,13 +412,12 @@ class Theme(models.Model):
         return CSSMAP[self.supported_versions]
 
 
-@receiver(post_save, sender=Release)
-def dockerhub_trigger(sender, instance, **kwargs):
+def dockerhub_trigger(tag):
     if settings.DOCKERHUB_TOKEN is None:
         return
     request = urllib2.Request(
         DOCKER_TRIGGER.format(settings.DOCKERHUB_TOKEN),
-        '{"build": true}',
+        json.dumps({'docker_tag': tag}),
         {'Content-Type': 'application/json'}
     )
     handle = urllib2.urlopen(request)
