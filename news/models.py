@@ -62,7 +62,7 @@ class Post(models.Model):
 class Planet(models.Model):
     """Cache for planet phpMyAdmin posts"""
     url = models.URLField(unique=True)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=150)
     date = models.DateTimeField(db_index=True, default=timezone.now)
 
     class Meta(object):
