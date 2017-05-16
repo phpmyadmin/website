@@ -56,7 +56,11 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
             <p>Released on {{theme.date|date:"Y-m-d"}}</p>
             <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
             {% if theme.author %}
+            {% if theme.url %}
+            <p>Author: <a href="{{ theme.url }}">{{theme.author}}</a></p>
+            {% else %}
             <p>Author: {{theme.author}}</p>
+            {% endif %}
             {% endif %}
             <p>{{ theme.description }}</p>
 

@@ -64,6 +64,7 @@ class Command(BaseCommand):
                 'display_name': data['name'],
                 'supported_versions': data['support'],
                 'description': data['info'],
+                'url': data['url'] if 'url' in data else '',
                 'author': data['author'],
                 'sha256': read_sum(
                     '{0}.sha256'.format(complete_name),

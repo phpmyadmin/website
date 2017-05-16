@@ -366,6 +366,7 @@ class Theme(models.Model):
     supported_versions = models.CharField(max_length=50)
     description = models.TextField()
     author = models.CharField(max_length=200)
+    url = models.URLField(blank=True)
     size = models.IntegerField(default=0)
     sha1 = models.CharField(max_length=40)
     sha256 = models.CharField(max_length=64)
