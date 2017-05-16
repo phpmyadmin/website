@@ -23,6 +23,7 @@
 
 
 # List of theme metadata
+# This is not needed for recent themes having theme.json
 
 THEMES = {
     'aqua-2.2a': {
@@ -30,21 +31,18 @@ THEMES = {
         'support': '2.7 - 2.8',
         'info': u'With crystal icons.',
         'author': u'Scummer',
-        'ignore': True,
     },
     'xp_dirty-1.2': {
         'name': 'WinXP - Dirty',
         'support': '2.6',
         'info': u'Original a clan-theme, but modified for posting here.',
         'author': u'Spockman',
-        'ignore': True,
     },
     'xp_dirty-2.9a': {
         'name': 'WinXP - Dirty',
         'support': '2.6 - 2.9',
         'info': u'Original a clan-theme, but modified for posting here.',
         'author': u'Spockman',
-        'ignore': True,
     },
     'grid-2.11d': {
         'name': 'Grid',
@@ -54,21 +52,18 @@ THEMES = {
             optimal readable and show maximum amount of data on screen.
         ''',
         'author': u'Jürgen Wind',
-        'ignore': True,
     },
     'original_small-2.9': {
         'name': 'Original small',
         'support': '2.9',
         'info': u'Original theme altered to show a maximum amount of data.',
         'author': u'Ruben Barkow',
-        'ignore': True,
     },
     'paradice-3.0a': {
         'name': 'Paradice',
         'support': '3.0 - 3.3',
         'info': u'Based on the original theme and the nuvola iconset.',
         'author': u'Andy Scherzinger, icons by David Vignoni',
-        'ignore': True,
     },
     'paradice-3.0b': {
         'name': 'Paradice',
@@ -87,21 +82,18 @@ THEMES = {
         'support': '2.11',
         'info': u'Based on the original theme and the nuvola iconset.',
         'author': u'Andy Scherzinger, icons by David Vignoni',
-        'ignore': True,
     },
     'very_small-2.9b': {
         'name': 'Very small',
         'support': '2.7 - 2.9',
         'info': u'Based on arctic ocean.',
         'author': u'Ruben Barkow; modified by Akos Szots',
-        'ignore': True,
     },
     'very_small-2.10a': {
         'name': 'Very small',
         'support': '2.7 - 2.10',
         'info': u'Based on arctic ocean.',
         'author': u'Ruben Barkow; modified by Akos Szots',
-        'ignore': True,
     },
     'silk-2.10': {
         'name': 'Silk',
@@ -114,14 +106,12 @@ THEMES = {
             Cc-by-2.5</a>
         ''',
         'author': u'Matthias Mailander',
-        'ignore': True,
     },
     'arctic_ocean-2.11a': {
         'name': 'Arctic Ocean',
         'support': '2.9 - 2.11',
         'info': u'New theme with new database icons.',
         'author': u'Michael Keck',
-        'ignore': True,
     },
     'arctic_ocean-3.3': {
         'name': 'Arctic Ocean',
@@ -140,77 +130,66 @@ THEMES = {
         'support': '2.9 - 2.10',
         'info': u'A theme with black and lime colors.',
         'author': u'GamBit',
-        'ignore': True,
     },
     'crimson_gray-2.10': {
         'name': 'Crimson Gray',
         'support': '2.9 - 2.10',
         'info': u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
-        'ignore': True,
     },
     'crimson_gray-2.11b': {
         'name': 'Crimson Gray',
         'support': '2.11',
         'info': u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
-        'ignore': True,
     },
     'crimson_gray-3.1-3.2': {
         'name': 'Crimson Gray',
         'support': '3.1 - 3.2',
         'info': u'Theme based on Original.',
         'author': u'Audrius Kovalenko',
-        'ignore': True,
     },
     'pixeline-2.10': {
         'name': 'Pixeline',
         'support': '2.9 - 2.10',
         'info': u'By <a href="https://pixeline.be/">Pixeline</a>.',
         'author': u'Pixeline',
-        'ignore': True,
     },
     'pixeline-2.11a': {
         'name': 'Pixeline',
         'support': '2.11',
         'info': u'By <a href="https://pixeline.be/">Pixeline</a>.',
         'author': u'Pixeline',
-        'ignore': True,
     },
     'hillside-2.11': {
         'name': 'Hillside',
         'support': '2.11',
         'info': u'Theme based on Silkline.',
         'author': u'Tim Golen',
-        'ignore': True,
     },
     'hillside-3.0': {
         'name': 'Hillside',
         'support': '3.0 - 3.2',
         'info': u'Theme based on Silkline.',
         'author': u'Tim Golen',
-        'ignore': True,
     },
     'silkline-2.11': {
         'name': 'Silkline',
         'support': '2.11',
         'info': u'Theme based on themes Silk and Pixeline.',
         'author': u'Douwe Ikkuh',
-        'ignore': True,
     },
     'xampp-2.11': {
         'name': 'XAMPP (Apachefriends.org)',
         'support': '2.11',
         'info': u'This theme was built for the XAMPP-Project.',
         'author': u'Michael Keck',
-        'ignore': True,
     },
     'clearview3-3.1': {
         'name': 'ClearView',
         'support': '3.0 - 3.2',
         'info': u'Very light and clear with white color and super Silk icons.',
         'author': u'beholder',
-        'ignore': True,
     },
     'pmahomme-1.0b': {
         'name': 'pmamhomme',
@@ -223,21 +202,18 @@ THEMES = {
         'support': '3.4',
         'info': u'Light blue theme',
         'author': u'Azhari Harahap',
-        'ignore': True,
     },
     'graphite-0.9': {
         'name': 'Graphite',
         'support': '3.4',
         'info': u'Light grey theme using Tango icons',
         'author': u'Michal Čihař',
-        'ignore': True,
     },
     'darkblue_orange-2.9': {
         'name': 'Darkblue/orange',
         'support': '3.4',
         'info': u'Theme included in phpMyAdmin up to 3.3',
         'author': u'Various contributors',
-        'ignore': True,
     },
     'toba-0.2': {
         'name': 'Toba',
@@ -256,7 +232,6 @@ THEMES = {
         'support': '3.4',
         'info': u'Theme included in phpMyAdmin up to 3.3',
         'author': u'Various contributors',
-        'ignore': True,
     },
     'darkblue_orange-2.11': {
         'name': 'Darkblue/orange',
@@ -281,14 +256,12 @@ THEMES = {
         'support': '3.5',
         'info': u'Windows 8 Boot (Metro) theme for phpMyAdmin',
         'author': u'hplhu',
-        'ignore': True,
     },
     'metro-2.0': {
         'name': 'Metro',
         'support': '3.5',
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
-        'ignore': True,
     },
     'metro-2.1': {
         'name': 'Metro',
@@ -301,7 +274,6 @@ THEMES = {
         'support': '4.4',
         'info': u'Windows 8 / Metro Theme for phpMyAdmin',
         'author': u'hplhu',
-        'ignore': True,
     },
     'metro-2.3': {
         'name': 'Metro',
@@ -344,7 +316,6 @@ THEMES = {
         'support': '4.6',
         'info': u'Flat Theme for phpMyAdmin',
         'author': 'khadkamhn',
-        'ignore': True,
     },
     'mhn-1.1': {
         'name': 'MHN',
@@ -363,7 +334,6 @@ THEMES = {
         'support': '4.6',
         'info': 'Fallen theme for phpMyAdmin',
         'author': 'fransallen',
-        'ignore': True,
     },
     'fallen-0.3': {
         'name': 'Fallen',
@@ -376,7 +346,6 @@ THEMES = {
         'support': '4.7',
         'info': 'Fallen theme for phpMyAdmin',
         'author': 'fransallen',
-        'ignore': True,
     },
     'fallen-0.5': {
         'name': 'Fallen',
