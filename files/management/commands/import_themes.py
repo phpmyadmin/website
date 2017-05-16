@@ -38,14 +38,22 @@ class Command(BaseCommand):
         name, version, filename = fullname.split('/')
         namever = os.path.splitext(filename)[0]
 
+        theme = Theme.objects.filter(
+            filename=filename,
+            name=name,
+            version=version
+        )
+        if theme.exists():
+            return
+
         zipfile = ZipFile(os.path.join(path, fullname), 'r')
         try:
             metadata = zipfile.open(os.path.join(name, 'theme.json'), 'r')
             data = json.load(metadata)
             data['support'] = ','.join(data['supports'])
             data['info' ] = data['description']
-
         except KeyError:
+            self.stderr.write('Missing theme.json in {0}'.format(fullname))
             try:
                 data = THEMES[namever]
             except KeyError:
