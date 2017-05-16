@@ -371,6 +371,7 @@ class Theme(models.Model):
     sha256 = models.CharField(max_length=64)
     signed = models.BooleanField(default=False)
     date = models.DateTimeField(db_index=True, default=timezone.now)
+    show = models.BooleanField(default=True)
 
     class Meta(object):
         ordering = ['name', 'version']

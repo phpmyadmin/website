@@ -38,8 +38,18 @@ class DownloadAdmin(admin.ModelAdmin):
 class ThemeAdmin(admin.ModelAdmin):
     list_display = (
         'display_name', 'version', 'filename', 'supported_versions', 'size',
+        'show',
     )
-    list_filter = ('supported_versions', )
+    list_filter = ('supported_versions', 'show')
+    actions = ('do_show', 'do_hide')
+
+    def do_show(self, request, queryset):
+        queryset.update(show=True)
+    do_show.short_description = "Mark selected themes as shown"
+
+    def do_hide(self, request, queryset):
+        queryset.update(show=False)
+    do_hide.short_description = "Mark selected themes as hidden"
 
 
 admin.site.register(Release, ReleaseAdmin)

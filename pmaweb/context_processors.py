@@ -40,7 +40,7 @@ def basic(request):
         'short_news': Post.objects.filter(date__lt=timezone.now())[:5],
         'short_planet': Planet.objects.all()[:5],
         'screenshots': SCREENSHOTS,
-        'themes': Theme.objects.all(),
+        'themes': Theme.objects.filter(show=True),
         'themecssversions': CSSVERSIONS,
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
