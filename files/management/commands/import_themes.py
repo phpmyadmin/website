@@ -19,9 +19,13 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+import os
+import json
+from zipfile import ZipFile
+
 from django.core.management.base import BaseCommand
 from django.conf import settings
-import os
+
 from files.models import Theme
 from files.utils import read_sum
 from data.themes import THEMES
@@ -33,12 +37,21 @@ class Command(BaseCommand):
     def process_theme(self, path, fullname):
         name, version, filename = fullname.split('/')
         namever = os.path.splitext(filename)[0]
+
+        zipfile = ZipFile(os.path.join(path, fullname), 'r')
         try:
-            data = THEMES[namever]
+            metadata = zipfile.open(os.path.join(name, 'theme.json'), 'r')
+            data = json.load(metadata)
+            data['support'] = ','.join(data['supports'])
+            data['info' ] = data['description']
+
         except KeyError:
-            self.stderr.write('Unknown theme: {0}'.format(namever))
-            self.stderr.write('Definition missing in website:data/themes.py')
-            return
+            try:
+                data = THEMES[namever]
+            except KeyError:
+                self.stderr.write('Unknown theme: {0}'.format(namever))
+                self.stderr.write('Definition missing in website:data/themes.py')
+                return
 
         complete_name = os.path.join(path, fullname)
 
