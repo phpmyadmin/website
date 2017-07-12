@@ -9,9 +9,8 @@ Django code for phpMyAdmin's website.
 .. image:: https://codecov.io/github/phpmyadmin/website/coverage.svg?branch=master
     :target: https://codecov.io/github/phpmyadmin/website?branch=master
 
-.. image:: https://api.codacy.com/project/badge/4cfc116f766947dcad6c006b295aafc2
-    :alt: Codacy Badge
-    :target: https://www.codacy.com/app/nijel/phpmyadmin-website
+.. image:: https://api.codacy.com/project/badge/Grade/4cfc116f766947dcad6c006b295aafc2    
+    :target: https://www.codacy.com/app/phpMyAdmin/website
 
 Requirements
 ------------
