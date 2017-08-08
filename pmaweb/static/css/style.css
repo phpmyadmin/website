@@ -181,3 +181,6 @@ footer li{
 .featured-dl {
     font-weight: bold;
 }
+.images .col-md-3 {
+    min-height: 300px;
+}
