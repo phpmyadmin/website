@@ -149,6 +149,14 @@ urlpatterns = [
         name='contribute'
     ),
     url(
+        r'^contractor/$',
+        PMAView.as_view(
+            template_name='contractor.html',
+            title='Work for us',
+        ),
+        name='contract'
+    ),
+    url(
         r'^sponsors/$',
         PMAView.as_view(
             template_name='sponsors.html',
