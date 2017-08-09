@@ -32,6 +32,8 @@ from django.views.decorators.cache import cache_control
 from django.views.generic import TemplateView
 from django.shortcuts import render
 
+# Aliases to redirect from old website URLs (/home_page/something.php)
+# to new ones (/something/):
 
 REDIRECT_MAP = {
     # Historical pages
