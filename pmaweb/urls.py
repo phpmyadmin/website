@@ -154,7 +154,7 @@ urlpatterns = [
             template_name='contractor.html',
             title='Work for us',
         ),
-        name='contract'
+        name='contractor'
     ),
     url(
         r'^sponsors/$',
