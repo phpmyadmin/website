@@ -3,9 +3,6 @@
 
 {% block content %}
 
-<div class="row">
-<div class="col-md-9">
-
     <h2>Download</h2>
     <p>
     Many operating systems already include a phpMyAdmin package and will
@@ -116,21 +113,5 @@
         appliances are <a href="https://en.wikipedia.org/wiki/List_of_AMP_packages">
         listed on Wikipedia</a>.
     </p>
-</div>
-<div class="col-md-3">
-<div class="sponsors">
 
-<h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>
-
-<h3>Platinum sponsors</h3>
-
-<div class="sp platinum">
-<a href="http://www.wpbeginner.com/?utm_source=phpmyadmin_footer&amp;utm_medium=banner&amp;utm_campaign=phpmyadmin"><img src="{% static 'images/wpbeginner-250.png' %}" alt="WPBeginner" /></a>
-</div>
-
-{% include '_sponsorship_note.html' %}
-
-</div>
-</div>
-</div>
 {% endblock %}
