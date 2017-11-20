@@ -60,7 +60,7 @@ class Command(BaseCommand):
 
     def process_releases(self, path):
         for version in os.listdir(path):
-            if version == 'README.rst':
+            if version in ('README.rst', 'index.html'):
                 continue
             release, created = Release.objects.get_or_create(version=version)
             if created:
