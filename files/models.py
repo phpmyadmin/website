@@ -80,6 +80,8 @@ class Release(models.Model):
     snapshot = models.BooleanField(default=False, db_index=True)
     date = models.DateTimeField(db_index=True, default=timezone.now)
 
+    purged = False
+
     class Meta(object):
         ordering = ['-version_num']
 
@@ -432,6 +434,9 @@ def dockerhub_trigger(tag):
 
 @receiver(post_save, sender=Release)
 def purge_release(sender, instance, **kwargs):
+    if instance.purged:
+        return
+    instance.purged = True
     purge_cdn(
         # Pages with _littleboxes.html
         reverse('home'),
