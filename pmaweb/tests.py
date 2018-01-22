@@ -149,6 +149,7 @@ class CDNTest(TestCase):
 
     def test_download(self):
         release = Release.objects.create(version='0.2')
+        release.purged = False
         self.cdn_tester(
             Download,
             [
