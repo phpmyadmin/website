@@ -379,6 +379,7 @@ CSSMAP = {
     '4.5': 'pma_4_5',
     '4.6': 'pma_4_6',
     '4.7': 'pma_4_7',
+    '4.8': 'pma_4_8',
 }
 
 CSSVERSIONS = [
@@ -393,4 +394,5 @@ CSSVERSIONS = [
     {'name': '4.5', 'css': 'pma_4_5'},
     {'name': '4.6', 'css': 'pma_4_6'},
     {'name': '4.7', 'css': 'pma_4_7'},
+    {'name': '4.8', 'css': 'pma_4_8'},
 ]
