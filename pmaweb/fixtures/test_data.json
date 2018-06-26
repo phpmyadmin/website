@@ -21652,6 +21652,78 @@
   "pk": 120
 },
 {
+"fields": {
+  "_description_rendered": "<p>abcd</p>",
+  "updated": null,
+  "cve": "CVE-2066-",
+  "affected": "For x.y.z: not affected.<br>\nFor x.y: versions since x.y.z.0 and before x.y.z.1.<br />",
+  "description": "<p>abcd</p>",
+  "sequence": 1,
+  "commits": "",
+  "description_markup_type": "html",
+  "solution": "",
+  "summary": "A test CVE",
+  "mitigation": "",
+  "references": "Thanks to anonymous.",
+  "year": 2066,
+  "date": "2066-03-24T00:00:00Z",
+  "draft": false,
+  "unaffected": "",
+  "cwe": "666 777",
+  "severity": "We consider this vulnerability to be critical."
+},
+"model": "security.pmasa",
+"pk": 121
+},
+{
+"fields": {
+  "_description_rendered": "<p>abcd</p>",
+  "updated": null,
+  "cve": "CVE-2068-2 CVE-2060-1 CVE-2070-",
+  "affected": "For x.y.z: not affected.<br>\nFor x.y: versions since x.y.z.0 and before x.y.z.1.<br />",
+  "description": "<p>abcd</p>",
+  "sequence": 2,
+  "commits": "",
+  "description_markup_type": "html",
+  "solution": "",
+  "summary": "A test CVE",
+  "mitigation": "",
+  "references": "Thanks to anonymous.",
+  "year": 2066,
+  "date": "2066-04-25T00:00:00Z",
+  "draft": false,
+  "unaffected": "",
+  "cwe": "666 777",
+  "severity": "We consider this vulnerability to be critical."
+},
+"model": "security.pmasa",
+"pk": 122
+},
+{
+"fields": {
+  "_description_rendered": "<p>abcd</p>",
+  "updated": null,
+  "cve": "CVE-2068-1",
+  "affected": "For x.y.z: not affected.<br>\nFor x.y: versions since x.y.z.0 and before x.y.z.1.<br />",
+  "description": "<p>abcd</p>",
+  "sequence": 1,
+  "commits": "",
+  "description_markup_type": "html",
+  "solution": "",
+  "summary": "A test CVE",
+  "mitigation": "",
+  "references": "Thanks to anonymous.",
+  "year": 2068,
+  "date": "2068-04-25T00:00:00Z",
+  "draft": false,
+  "unaffected": "",
+  "cwe": "666 777",
+  "severity": "We consider this vulnerability to be critical."
+},
+"model": "security.pmasa",
+"pk": 123
+},
+{
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/af/",
     "translated": 299,

@@ -5,6 +5,6 @@
 
 <h3>CVE ID</h3>
 {% for cve in obj.get_cves %}
-<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name={{ cve }}">{{ cve }}</a></p>
+<p><a href="{{ cve.0 }}">{{ cve.1 }}</a></p>
 {% endfor %}
 
