@@ -214,15 +214,17 @@ class Release(models.Model):
             )
         elif self.version[:3] == '4.8':
             text = (
-                'Future version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. '
+                'Current version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. '
             )
         elif self.version in ('4.7.0', '4.7.1', '4.7.2', '4.7.3', '4.7.0-rc1', '4.7.0-beta1'):
             text = (
-                'Current version compatible with PHP 5.5 to 7.1 and MySQL 5.5 and newer. '
+                'Older version compatible with PHP 5.5 to 7.1 and MySQL 5.5 and newer. ' +
+                'Was supported until April 7, 2018.'
             )
         elif self.version[:3] == '4.7':
             text = (
-                'Current version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. '
+                'Older version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. ' +
+                'Was supported until April 7, 2018.'
             )
         elif self.version[:3] == '4.6':
             text = (
