@@ -65,15 +65,3 @@ def purge_all_cdn():
         ('cdn_id', settings.CDN_ID),
     ]
     return perform(URL_ALL, data)
-
-
-def purge_docs_cdn():
-    """Purges all pages on CDN"""
-    if not settings.CDN_PASSWORD:
-        return
-    data = [
-        ('login', settings.CDN_LOGIN),
-        ('passwd', settings.CDN_PASSWORD),
-        ('cdn_id', settings.DOCS_CDN_ID),
-    ]
-    return perform(URL_ALL, data)
