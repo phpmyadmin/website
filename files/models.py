@@ -325,6 +325,11 @@ class Download(models.Model):
             self.__unicode__()
         )
 
+    def get_checksum_url(self):
+        return 'https://files.phpmyadmin.net{0}.sha256'.format(
+            self.__unicode__()
+        )
+
     def get_alternate_url(self):
         return 'https://1126968067.rsc.cdn77.org{0}'.format(
             self.__unicode__()
@@ -460,6 +465,7 @@ def purge_release(sender, instance, **kwargs):
         '/downloads/phpMyAdmin-latest-english.tar.gz',
         '/downloads/phpMyAdmin-latest-english.tar.xz',
         '/downloads/phpMyAdmin-latest-english.zip',
+        '/downloads/phpMyAdmin-latest-source.tar.xz',
         reverse('doap'),
         reverse('pad'),
         # This release
