@@ -96,7 +96,7 @@ def latest_download(request, flavor, extension, checksum=None):
         if checksum == '.asc':
             return redirect(result.get_signed_url(), permanent=False)
         if checksum == '.sha256':
-            return redirect(result.get_checksum_url('sha256'), permanent=False)
+            return redirect(result.get_checksum_url(), permanent=False)
         return redirect(result, permanent=False)
     except Download.DoesNotExist:
         raise Http404("No release found matching the query")
