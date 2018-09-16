@@ -22,6 +22,7 @@
 
 from django.test import TestCase
 from files.models import Release
+from files.models import Download
 
 
 class ReleaseTest(TestCase):
@@ -50,3 +51,74 @@ class ReleaseTest(TestCase):
             Release.parse_version('1.2.3-alpha2'),
             102030002
         )
+
+    def test_urls(self):
+        r = Release()
+        r.version = "1.2.3"
+        d = Download()
+        d.release = r
+        d.filename = "english.zip"
+        self.assertEquals(
+            d.get_checksum_url(),
+            'https://files.phpmyadmin.net/phpMyAdmin/1.2.3/english.zip.sha256'
+        )
+        self.assertEquals(
+            d.get_signed_url(),
+            ''
+        )
+        d.signed = True
+        self.assertEquals(
+            d.get_signed_url(),
+            'https://files.phpmyadmin.net/phpMyAdmin/1.2.3/english.zip.asc'
+        )
+        self.assertEquals(
+            d.get_absolute_url(),
+            'https://files.phpmyadmin.net/phpMyAdmin/1.2.3/english.zip'
+        )
+        self.assertEquals(
+            d.archive,
+            'zip'
+        )
+        self.assertEquals(
+            d.composer_type,
+            'zip'
+        )
+        d.filename = 'english.xz'
+        self.assertEquals(
+            d.composer_type,
+            'tar'
+        )
+        d.filename = 'english.zip'
+        self.assertEquals(
+            d.composer_type,
+            'zip'
+        )
+        self.assertEquals(
+            d.is_featured,
+            False
+        )
+        d.filename = 'all-languages.zip'
+        self.assertEquals(
+            d.is_featured,
+            True
+        )
+        d.filename = 'english.zip'
+        self.assertEquals(
+            d.is_featured,
+            False
+        )
+        d.filename = 'phpMyAdmin-latest-all-languages.zip'
+        self.assertEquals(
+            d.get_stable_url,
+            '/downloads/phpMyAdmin-latest-all-languages.zip'
+        )
+        self.assertEquals(
+            d.get_stable_filename,
+            'phpMyAdmin-latest-all-languages.zip'
+        )
+        d.filename = 'phpMyAdmin-latest-all-languages.tar.xz'
+        self.assertEquals(
+            d.get_stable_filename,
+            'phpMyAdmin-latest-all-languages.tar.xz'
+        )
+
