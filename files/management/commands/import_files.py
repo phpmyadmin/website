@@ -135,7 +135,13 @@ class Command(BaseCommand):
                 force=True,
             )
             if modified:
-                purge.extend((d.__unicode__() for d in release.download_set.all()))
+                for download in release.download_set.all():
+                    filename = download.__unicode__()
+                    purge.extend([
+                        filename,
+                        '{}.sha1'.format(filename),
+                        '{}.sha256'.format(filename),
+                    ])
         if purge:
             purge_files_cdn(purge)
 
