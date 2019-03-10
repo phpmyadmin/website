@@ -29,6 +29,7 @@ from files.models import Release, Download
 from bs4 import BeautifulSoup
 from files.utils import read_sum
 import codecs
+from pmaweb.cdn import purge_files_cdn
 
 
 def glob_downloads(prefix=''):
@@ -131,6 +132,8 @@ class Command(BaseCommand):
                 prefix='phpMyAdmin-' + version,
                 force=True,
             )
+            if modified:
+                purge_files_cdn([d.__unicode__() for d in release.download_set.all()])
 
     def handle(self, *args, **options):
         self.process_releases(os.path.join(settings.FILES_PATH, 'phpMyAdmin'))

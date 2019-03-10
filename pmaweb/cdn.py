@@ -55,6 +55,20 @@ def purge_cdn(*pages):
     return perform(URL, data)
 
 
+def purge_files_cdn(*pages):
+    """Purges page on CDN"""
+    if not settings.CDN_PASSWORD:
+        return
+    data = [
+        ('login', settings.CDN_LOGIN),
+        ('passwd', settings.CDN_PASSWORD),
+        ('cdn_id', settings.FILES_CDN_ID),
+    ]
+    for page in pages:
+        data.append(('url[]', page))
+    return perform(URL, data)
+
+
 def purge_all_cdn():
     """Purges all pages on CDN"""
     if not settings.CDN_PASSWORD:
