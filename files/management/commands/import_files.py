@@ -93,6 +93,8 @@ class Command(BaseCommand):
         # Delete no longer present snapshots
         Release.objects.filter(snapshot=True).exclude(version__in=versions).delete()
 
+        purge = []
+
         # Process versions
         for version in versions:
             metafile = os.path.join(
@@ -133,7 +135,9 @@ class Command(BaseCommand):
                 force=True,
             )
             if modified:
-                purge_files_cdn([d.__unicode__() for d in release.download_set.all()])
+                purge.extend((d.__unicode__() for d in release.download_set.all()))
+        if purge:
+            purge_files_cdn(purge)
 
     def handle(self, *args, **options):
         self.process_releases(os.path.join(settings.FILES_PATH, 'phpMyAdmin'))
