@@ -144,7 +144,7 @@ class Command(BaseCommand):
                         '{}.sha256'.format(filename),
                     ])
         if purge:
-            purge_files_cdn(purge)
+            purge_files_cdn(*purge)
 
     def handle(self, *args, **options):
         self.process_releases(os.path.join(settings.FILES_PATH, 'phpMyAdmin'))
