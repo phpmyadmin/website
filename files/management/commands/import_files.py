@@ -53,6 +53,7 @@ class Command(BaseCommand):
             )
             if not created and not force:
                 continue
+            download.release = release
             download.size = os.path.getsize(filename)
             download.sha1 = read_sum('{0}.sha1'.format(filename))
             download.sha256 = read_sum('{0}.sha256'.format(filename))
