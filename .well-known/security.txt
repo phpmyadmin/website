@@ -1,0 +1,6 @@
+Contact: mailto:security@phpmyadmin.net
+Encryption: https://files.phpmyadmin.net/phpmyadmin.keyring
+Encryption: https://keybase.io/phpmyadmin_sec
+Preferred-Languages: en
+Canonical: https://www.phpmyadmin.net/.well-known/security.txt
+Policy: https://www.phpmyadmin.net/security/
