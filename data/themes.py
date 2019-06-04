@@ -395,4 +395,5 @@ CSSVERSIONS = [
     {'name': '4.6', 'css': 'pma_4_6'},
     {'name': '4.7', 'css': 'pma_4_7'},
     {'name': '4.8', 'css': 'pma_4_8'},
+    {'name': '4.9', 'css': 'pma_4_9'},
 ]

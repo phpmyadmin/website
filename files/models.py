@@ -156,7 +156,9 @@ class Release(models.Model):
         return ''
 
     def get_php_versions(self):
-        if self.version[:3] == '4.8':
+        if self.version[:3] == '4.9':
+            return '>=5.5,<7.3'
+        elif self.version[:3] == '4.8':
             return '>=5.5,<7.3'
         elif self.version[:3] == '4.7':
             return '>=5.5,<7.3'
