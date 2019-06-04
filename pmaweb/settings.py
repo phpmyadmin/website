@@ -162,7 +162,7 @@ COMPRESS_CSS_FILTERS = [
 ]
 
 # List of major versions to offer for download
-LISTED_BRANCHES = ('4.8',)
+LISTED_BRANCHES = ('4.9',)
 
 CDN_LOGIN = 'admins@phpmyadmin.net'
 CDN_PASSWORD = ''
