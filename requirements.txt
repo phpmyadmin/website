@@ -1,4 +1,4 @@
-Django>=1.10,<1.11
+Django>=1.11,<2.0
 python-dateutil
 feedparser
 django-markupfield
