@@ -34,7 +34,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ADMINS = (
-    ('Michal Čihař', 'michal@cihar.com'),
+    ('phpMyAdmin infra', 'infrastructure@phpmyadmin.net'),
 )
 
 # Quick-start development settings - unsuitable for production
