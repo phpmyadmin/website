@@ -15,14 +15,7 @@ Django code for phpMyAdmin's website.
 Requirements
 ------------
 
-Python - https://www.python.org/
-    (2.7 tested)
-Django - https://www.djangoproject.com/
-    (1.8.2 tested)
-python-feedparser - https://github.com/kurtmckee/feedparser
-    (5.1 tested)
-python-dateutil - https://labix.org/python-dateutil
-    (1.5 tested)
+Website needs Python 2.7, additional dependencies are listed in `requirements.txt`.
 
 
 Security announcements and news
