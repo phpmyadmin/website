@@ -156,7 +156,9 @@ class Release(models.Model):
         return ''
 
     def get_php_versions(self):
-        if self.version[:3] == '4.9':
+        if self.version[:3] == '5.0':
+            return '>=7.1,<7.3'
+        elif self.version[:3] == '4.9':
             return '>=5.5,<7.3'
         elif self.version[:3] == '4.8':
             return '>=5.5,<7.3'
@@ -178,7 +180,11 @@ class Release(models.Model):
             return '>=5.2,<5.3'
 
     def get_mysql_versions(self):
-        if self.version[:3] == '4.8':
+        if self.version[:3] == '5.0':
+            return '>=5.5'
+        elif self.version[:3] == '4.9':
+            return '>=5.5'
+        elif self.version[:3] == '4.8':
             return '>=5.5'
         elif self.version[:3] == '4.7':
             return '>=5.5'
@@ -214,9 +220,18 @@ class Release(models.Model):
                 'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
             )
-        elif self.version[:3] == '4.8':
+        elif self.version[:3] == '5.0':
+            text = (
+                'Future version compatible with PHP 7.1 and newer and MySQL 5.5 and newer. '
+            )
+        elif self.version[:3] == '4.9':
             text = (
                 'Current version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. '
+            )
+        elif self.version[:3] == '4.8':
+            text = (
+                'Older version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. ' +
+                'Was supported until June 4, 2019.'
             )
         elif self.version in ('4.7.0', '4.7.1', '4.7.2', '4.7.3', '4.7.0-rc1', '4.7.0-beta1'):
             text = (
