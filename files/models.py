@@ -157,11 +157,11 @@ class Release(models.Model):
 
     def get_php_versions(self):
         if self.version[:3] == '5.1':
-            return '>=7.1,<7.3'
+            return '>=7.1,<8.0'
         elif self.version[:3] == '5.0':
-            return '>=7.1,<7.3'
+            return '>=7.1,<8.0'
         elif self.version[:3] == '4.9':
-            return '>=5.5,<7.4'
+            return '>=5.5,<8.0'
         elif self.version[:3] == '4.8':
             return '>=5.5,<7.3'
         elif self.version[:3] == '4.7':
@@ -234,7 +234,7 @@ class Release(models.Model):
             )
         elif self.version[:3] == '4.9':
             text = (
-                'Current version compatible with PHP 5.5 to 7.3 and MySQL 5.5 and newer. '
+                'Current version compatible with PHP 5.5 to 7.4 and MySQL 5.5 and newer. '
             )
         elif self.version[:3] == '4.8':
             text = (
