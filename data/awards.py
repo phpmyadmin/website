@@ -70,7 +70,7 @@ project has won</p>
     },
     {
         'image': 'images/awards/sf_cca_2009_logo.png',
-        'link': 'https://sourceforge.net/community/cca09',
+        'link': 'https://sourceforge.net/blog/cca06/',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="%(link)s">2009 SourceForge.net Community Choice Awards</a>,
@@ -99,8 +99,7 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'images/awards/sf_cca_2008_winner.png',
-        'link': 'https://sourceforge.net/'
-                'community/index.php/landing-pages/cca08',
+        'link': 'https://sourceforge.net/blog/cca08',
         'title': '2008 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="%(link)s">2008 SourceForge.net Community Choice Awards</a>,
@@ -119,8 +118,7 @@ phpMyAdmin was present in three categories:</p>
     },
     {
         'image': 'images/awards/sf_cca_2007_sysadmin.gif',
-        'link': 'https://sourceforge.net/'
-                'community/index.php/landing-pages/cca07',
+        'link': 'https://sourceforge.net/blog/cca07',
         'title': '2007 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the <a href="%(link)s">2007 SourceForge.net Community Choice Awards</a>,
@@ -167,7 +165,7 @@ phpMyAdmin won in the category</p>
     },
     {
         'image': 'images/awards/sf_cca_2006_winner.png',
-        'link': 'https://sourceforge.net/community/index.php/cca06',
+        'link': 'https://sourceforge.net/blog/cca06/',
         'title': '2006 SourceForge.net Community Choice Awards',
         'text': '''
 <p>For the first annual SourceForge.net <a href="%(link)s">Community Choice
