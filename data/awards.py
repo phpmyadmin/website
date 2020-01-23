@@ -28,13 +28,13 @@ AWARDS = [
     {
         'image': 'images/awards/2017-hosting-advice.png',
         'link': (
-            'http://www.hostingadvice.com/blog/'
+            'https://www.hostingadvice.com/blog/'
             'why-phpmyadmin-best-db-admin-tool-for-business/'
         ),
         'title': 'Best Database Admin Tool for Business Hosting',
         'text': '''
 <p>phpMyAdmin was awarded
-<a href="http://www.hostingadvice.com/">HostingAdvice</a>'s</p>
+<a href="https://www.hostingadvice.com/">HostingAdvice</a>'s</p>
 <p class="award"><a href="%(link)s">Best Database Admin Tool for Business Hosting</a></p>.
 <p>in January 2017.</p>
 ''',
@@ -42,7 +42,7 @@ AWARDS = [
     },
     {
         'image': 'images/awards/percona-live-logo.png',
-        'link': 'http://openlife.cc/'
+        'link': 'https://openlife.cc/'
                 'blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
         'text': '''
@@ -136,7 +136,7 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'images/awards/2006-trophees-logo.png',
-        'link': 'http://www.tropheesdulibre.org/',
+        'link': 'https://tropheesdulibre.org/',
         'title': '2006 Trophees du Libre',
         'text': '''
 <p>phpMyAdmin has won a Silver Trophy at the Third Trophees du Libre
@@ -154,7 +154,7 @@ phpMyAdmin was present in two categories:</p>
     },
     {
         'image': 'images/awards/2005-os2world.png',
-        'link': 'http://www.os2world.com/',
+        'link': 'https://www.os2world.com/',
         'title': '2005 OS2World.com Awards',
         'text': '''
 <p>For the <a href="%(link)s">5th Annual OS/2 World Awards</a>,

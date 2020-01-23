@@ -128,7 +128,7 @@ Website itself uses some MIT licensed Javascript libraries:
 
 * jQuery <https://jquery.com/>
 * Bootstrap <https://getbootstrap.com/>
-* Colorbox <http://www.jacklmoore.com/colorbox/>
+* Colorbox <https://www.jacklmoore.com/colorbox/>
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
