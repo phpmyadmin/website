@@ -414,7 +414,7 @@ urlpatterns = [
     url(
         r'^(?:documentation/changelog.php|[cC]hange[Ll]og.txt|ANNOUNCE.txt)',
         RedirectView.as_view(
-            url='https://demo.phpmyadmin.net/master-config/changelog.php',
+            url='https://demo.phpmyadmin.net/master-config/index.php?route=/changelog',
             permanent=True,
         )
     ),
