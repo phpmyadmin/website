@@ -34,7 +34,13 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         handle = urllib.urlopen(URL)
         data = handle.read()
-        content = json.loads(data)
+        try:
+            content = json.loads(data)
+        except ValueError:
+            print("There was a problem parsing the data from Hosted Weblate.")
+            print("Check the status of the feed page: " + URL)
+            import sys
+            sys.exit(1)
 
         for item in content:
             updated = None
