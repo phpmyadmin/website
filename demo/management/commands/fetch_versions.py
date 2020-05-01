@@ -48,7 +48,13 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         handle = urllib.urlopen(URL)
         config = RawConfigParser(dict_type=MultiOrderedDict)
-        config.readfp(handle)
+        try:
+          config.readfp(handle)
+        except:
+          print("Failed to read the version configuration file. ")
+          print("Check the status of " + URL)
+          import sys
+          sys.exit(1)
 
         master = config.get('demo', 'master-release')[0]
 
