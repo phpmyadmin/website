@@ -20,8 +20,8 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from collections import OrderedDict
-from ConfigParser import RawConfigParser
-import urllib
+from configparser import RawConfigParser
+import urllib.request, urllib.parse, urllib.error
 
 from django.core.management.base import BaseCommand
 from django.urls import reverse
@@ -46,13 +46,13 @@ class Command(BaseCommand):
     help = 'Downloads demo server versions'
 
     def handle(self, *args, **options):
-        handle = urllib.urlopen(URL)
+        handle = urllib.request.urlopen(URL)
         config = RawConfigParser(dict_type=MultiOrderedDict)
         try:
           config.readfp(handle)
         except:
           print("Failed to read the version configuration file. ")
-          print("Check the status of " + URL)
+          print(("Check the status of " + URL))
           import sys
           sys.exit(1)
 

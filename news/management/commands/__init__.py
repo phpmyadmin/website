@@ -21,7 +21,7 @@
 #
 from django.core.management.base import BaseCommand, CommandError
 import feedparser
-from urllib2 import urlopen
+from urllib.request import urlopen
 
 
 class FeedCommand(BaseCommand):

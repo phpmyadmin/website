@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 import json
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.urls import reverse
@@ -434,7 +434,7 @@ class Theme(models.Model):
         ordering = ['name', 'version']
 
     def __unicode__(self):
-        return u'{0} {1}'.format(self.display_name, self.version)
+        return '{0} {1}'.format(self.display_name, self.version)
 
     @property
     def imgname(self):
@@ -473,12 +473,12 @@ class Theme(models.Model):
 def dockerhub_trigger(tag):
     if settings.DOCKERHUB_TOKEN is None:
         return
-    request = urllib2.Request(
+    request = urllib.request.Request(
         DOCKER_TRIGGER.format(settings.DOCKERHUB_TOKEN),
         json.dumps({'docker_tag': tag}),
         {'Content-Type': 'application/json'}
     )
-    handle = urllib2.urlopen(request)
+    handle = urllib.request.urlopen(request)
     handle.read()
 
 

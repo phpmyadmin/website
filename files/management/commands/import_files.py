@@ -73,7 +73,7 @@ class Command(BaseCommand):
                 if os.path.exists(notes):
                     with codecs.open(notes, 'r', 'utf-8') as handle:
                         release.release_notes_markup_type = 'html'
-                        release.release_notes = u'<pre>{0}</pre>'.format(
+                        release.release_notes = '<pre>{0}</pre>'.format(
                             BeautifulSoup(
                                 handle.read(),
                                 'lxml',

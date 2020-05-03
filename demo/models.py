@@ -32,7 +32,7 @@ class Demo(models.Model):
     master_version = models.CharField(max_length=100)
 
     def get_absolute_url(self):
-        return u'https://demo.phpmyadmin.net/{0}/'.format(self.name)
+        return 'https://demo.phpmyadmin.net/{0}/'.format(self.name)
 
     def get_description(self):
         if self.name.startswith('master'):
