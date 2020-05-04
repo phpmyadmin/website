@@ -75,7 +75,7 @@ class Planet(models.Model):
 
 @receiver(post_save, sender=Post)
 def purge_post(sender, instance, **kwargs):
-    num_pages = 1 + (Post.objects.count() / 10)
+    num_pages = 1 + (Post.objects.count() // 10)
     pages = [
         reverse('home'),
         reverse('news'),
