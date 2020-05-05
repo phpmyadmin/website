@@ -21,7 +21,7 @@
 #
 """Data for awards"""
 
-from cgi import escape
+from html import escape
 
 # List of awards
 AWARDS = [
