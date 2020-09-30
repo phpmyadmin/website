@@ -125,7 +125,7 @@ License
 The website generator is licensed under GNU GPL version 2 or later.
 
 Website itself uses some MIT licensed Javascript libraries:
-
+<h1>I created awesome layout for your website</h1>
 * jQuery <https://jquery.com/>
 * Bootstrap <https://getbootstrap.com/>
 * Colorbox <https://www.jacklmoore.com/colorbox/>
