@@ -28,7 +28,7 @@ The are accessible through separate URL (you can click `View on the site` link
 while editing).
 
 
-Page generating
+Page generator
 ---------------
 
 Each page has its own template. For most things it means inclusion of
@@ -63,8 +63,8 @@ Development
 -----------
 
 For development, first install dependencies. The ones needed for running the
-server are listed in ``requirements.txt``, for running testsuite in
-``requirements-test.txt``. You can install them using your distribution (the
+server are listed in "requirements.txt", for running testsuite in
+"requirements-test.txt". You can install them using your distribution (the
 package names will usually add python- prefix) or using pip:
 
 .. code-block:: sh
