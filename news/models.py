@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # vim: set expandtab sw=4 ts=4 sts=4:
 #
-# phpMyAdmin web site
+# phpMyAdmin web site (An Amazing Project)
 #
 # Copyright (C) 2008 - 2016 Michal Cihar <michal@cihar.com>
 #
