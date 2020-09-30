@@ -1,11 +1,11 @@
 {
-    // Show more errors
+    // Show more errors..
     "maxerr" : 1000,
 
     // Globals
     "jquery" : true,
 
-    // Stricter checking
+    // Stricter checking..
     "curly" : true,
     "immed" : true,
     "indent" : 4,
@@ -15,7 +15,7 @@
     "unused" : false,
     "trailing" : true,
 
-    // Relaxing rules
+    // Relaxing rules..
     "sub" : false,
     "funcscope" : false,
     "laxbreak" : false
