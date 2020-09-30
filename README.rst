@@ -132,3 +132,4 @@ Website itself uses some MIT licensed Javascript libraries:
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
+Please do try we have made this for you
