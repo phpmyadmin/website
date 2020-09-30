@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: UTF-8 -*- my editting is this in the work
 # vim: set expandtab sw=4 ts=4 sts=4:
 #
 # phpMyAdmin web site
