@@ -1,4 +1,5 @@
 Website for phpMyAdmin
+for the best web developer
 ======================
 
 Django code for phpMyAdmin's website.
@@ -132,3 +133,4 @@ Website itself uses some MIT licensed Javascript libraries:
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
+#the best web developer indeed
