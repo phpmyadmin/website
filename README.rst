@@ -1,3 +1,4 @@
+phpMyAdmin: an amazing website
 Website for phpMyAdmin
 ======================
 
