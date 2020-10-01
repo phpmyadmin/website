@@ -96,7 +96,7 @@ To run testuite execute:
 .. code-block:: sh
 
     ./manage.py test
-
+Best website under security and development..
 
 Deployment
 ----------
