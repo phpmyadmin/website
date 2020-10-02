@@ -1,5 +1,5 @@
 # Configuration for probot-stale - https://github.com/probot/stale
-
+#github and open source community has the greatest opportunity for getting a free t shirt by completing the task of generating a 4 pull request
 # Number of days of inactivity before an Issue or Pull Request becomes stale
 daysUntilStale: 60
 # Number of days of inactivity before a stale Issue or Pull Request is closed
