@@ -1,5 +1,5 @@
-Website for phpMyAdmin
-======================
+Website for phpMyAdmin - An Amazing project
+==========================================
 
 Django code for phpMyAdmin's website.
 
