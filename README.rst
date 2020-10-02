@@ -1,3 +1,4 @@
+#logger an amazing project
 Website for phpMyAdmin
 ======================
 
