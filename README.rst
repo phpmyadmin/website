@@ -12,7 +12,7 @@ Django code for phpMyAdmin's website.
 .. image:: https://api.codacy.com/project/badge/Grade/4cfc116f766947dcad6c006b295aafc2    
     :target: https://www.codacy.com/app/phpMyAdmin/website
 
-Requirements
+Bsic Requirements
 ------------
 
 Website needs Python 2.7, additional dependencies are listed in `requirements.txt`.
