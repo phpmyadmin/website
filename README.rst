@@ -56,7 +56,7 @@ All awards are listed in data/awards.py.
 Screenshots
 -----------
 
-All screenshots are listed in data/screenshots.py.
+All the screenshots are listed in data/screenshots.py.
 
 
 Development
