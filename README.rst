@@ -9,7 +9,7 @@ Django code for phpMyAdmin's website.
 .. image:: https://codecov.io/github/phpmyadmin/website/coverage.svg?branch=master
     :target: https://codecov.io/github/phpmyadmin/website?branch=master
 
-.. image:: https://api.codacy.com/project/badge/Grade/4cfc116f766947dcad6c006b295aafc2    
+.. image:: https://api.codacy.com/project/badge/Grade/4cfc116f766947dcad6c006b295aafc2
     :target: https://www.codacy.com/app/phpMyAdmin/website
 
 Requirements
@@ -91,7 +91,7 @@ Once you have all dependencies, you can start development server:
 
 It will listed on port 8080 by default (you can change this by parameters).
 
-To run testuite execute:
+To run test-suite execute:
 
 .. code-block:: sh
 
@@ -115,7 +115,7 @@ File releases scan:
 .. code-block:: sh
 
     # Import new releases from file storage
-    ./manage.py import_files 
+    ./manage.py import_files
     # Import new themes from file storage
     ./manage.py import_themes
 
