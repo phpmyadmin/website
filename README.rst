@@ -2,7 +2,7 @@ Website for phpMyAdmin
 ======================
 
 Django code for phpMyAdmin's website.
-
+The website is nice but add a video for how to use it will be more confertable
 .. image:: https://travis-ci.org/phpmyadmin/website.svg?branch=master
     :target: https://travis-ci.org/phpmyadmin/website
 
