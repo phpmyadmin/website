@@ -24,7 +24,7 @@ Security announcements and news
 Edit announcements and news entries in the web UI.
 
 Security issues are not publicly visible as long as they are marked as draft.
-The are accessible through separate URL (you can click `View on the site` link
+They are accessible through a separate URL (you can click `View on the site` link
 while editing).
 
 
