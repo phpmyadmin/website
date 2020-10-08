@@ -1,6 +1,7 @@
 Website for phpMyAdmin
 ======================
 Logr - Amazing project
+Logr - good Project
 
 Django code for phpMyAdmin's website.
 
