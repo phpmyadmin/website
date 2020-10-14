@@ -1,29 +1,26 @@
 <div class="col-md-3">
-<h2>Announcements</h2>
+  <h2>Announcements</h2>
 
-<div class="panel-group security" id="accordion" role="tablist" aria-multiselectable="true">
-
-{% regroup pmasas by year as pmasa_list %}
-{% for year in pmasa_list %}
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading{{ year.grouper }}">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#pmasa{{ year.grouper }}" {% if year.grouper == pmasa_year %}aria-expanded="true"{% endif %} aria-controls="pmasa{{ year.grouper }}" class="ahead">
-            <span class="badge pull-right">{{ year.list|length }}</span>
+  {% regroup pmasas by year as pmasa_list %}
+  <div class="accordion" id="announcementsAccordion">
+    {% for year in pmasa_list %}
+    <div class="card">
+      <div class="card-header" id="heading{{ year.grouper }}">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left{% if year.grouper != pmasa_year %} collapsed{% endif %}" type="button" data-toggle="collapse" data-target="#collapse{{ year.grouper }}" aria-expanded="{% if year.grouper == pmasa_year %}true{% else %}false{% endif %}" aria-controls="collapse{{ year.grouper }}">
             {{ year.grouper }}
-        </a>
-      </h4>
-    </div>
-    <div id="pmasa{{ year.grouper }}" class="panel-collapse collapse {% if year.grouper == pmasa_year %}in{% endif %}" role="tabpanel" aria-labelledby="heading{{ year.grouper }}">
-      <div class="panel-body">
-<ul class="nav nav-pills nav-stacked">
-{% for item in year.list %}
-    <li {% if pmasa == item %}class="active"{% endif %}><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
-{% endfor %}
-</ul>
+            <span class="badge badge-dark float-right">{{ year.list|length }}</span>
+          </button>
+        </h2>
+      </div>
+      <div id="collapse{{ year.grouper }}" class="collapse{% if year.grouper == pmasa_year %} show{% endif %}" aria-labelledby="heading{{ year.grouper }}" data-parent="#announcementsAccordion">
+        <div class="list-group list-group-flush">
+        {% for item in year.list %}
+          <a href="{{ item.get_absolute_url }}" class="list-group-item list-group-item-action{% if pmasa == item %} active{% endif %}">{{ item }}</a>
+        {% endfor %}
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-{% endfor %}
-</div>
 </div>
