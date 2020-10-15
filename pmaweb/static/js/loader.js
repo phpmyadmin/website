@@ -59,12 +59,12 @@ $(function(){
         /* Finally show chosen schema */
         showTheme(hash);
 
-        $('.themelink').click(function () {
+        $('.themelink').on('click', function () {
             showTheme($(this).data('theme'));
         });
     }
 
-    $('.download_popup').click(function () {
+    $('.download_popup').on('click', function () {
         var $this = $(this);
         var pgp = $this.data('pgp');
         ga('send', 'event', 'Download', $this.attr('href').replace('https://files.phpmyadmin.net/', ''));

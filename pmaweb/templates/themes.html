@@ -27,7 +27,7 @@ href="{% url 'try' %}">demo server</a>.
 
 <h2>Submit Theme</h2>
 <p>
-You've made a new theme and you want to share it?  Please send your pull 
+You've made a new theme and you want to share it?  Please send your pull
 request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.com/phpmyadmin/themes/pulls</a>. The team will check and prepare your theme for downloading here.
 </p>
 
@@ -36,18 +36,18 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 
 <ul class="nav nav-pills">
 {% for css in themecssversions %}
-<li role="presentation">
-<a class="themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
+<li class="nav-item" role="presentation">
+<a class="nav-link themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
 </li>
 {% endfor %}
 </ul>
 </p>
 {% for theme in themes %}
-<div class="panel panel-default themediv {{theme.get_css}}">
-  <div class="panel-heading">
-    <h3 class="panel-title">{{ theme }}</h3>
+<div class="card mb-4 themediv {{theme.get_css}}">
+  <div class="card-header">
+    <h3 class="card-title">{{ theme }}</h3>
   </div>
-  <div class="panel-body">
+  <div class="card-body">
             <div class="pull-right thumbnail">
                 <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
                     <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />

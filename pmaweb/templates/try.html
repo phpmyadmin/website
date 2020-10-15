@@ -17,7 +17,7 @@ permissions. If you do so, demo can not be accessed  until privileges are
 restored, so you just break things for you and other users. Feel free to try
 any of the phpMyAdmin features. If you break something, just wait a while. The
 database configuration resets every hour. Databases are cleaned weekly, so do
-not expect that your data will stay there forever. 
+not expect that your data will stay there forever.
 </p>
 
 <p>
@@ -70,16 +70,14 @@ Please note that git versions don't have to be working, that's why it's developm
 
 <h2>Screenshots</h2>
 
-<div class="row images">
+<div class="row row-cols-4">
 {% for screen in screenshots %}
-  <div class="col-xs-6 col-md-3">
-    <a href="{% static screen.image %}"
-    class="thumbnail colorbox" title="{{screen.title}}">
-        <img src="{% static screen.image %}"
-        alt="{{ screen.title }}" /><br />
-    <div class="caption">
-    {{ screen.title }}
-    </div>
+  <div class="col">
+    <a class="colorbox" href="{% static screen.image %}" title="{{ screen.title }}">
+      <figure class="figure">
+        <img src="{% static screen.image %}" class="figure-img img-thumbnail rounded" alt="{{ screen.title }}">
+        <figcaption class="figure-caption">{{ screen.title }}</figcaption>
+      </figure>
     </a>
   </div>
 {% endfor %}
