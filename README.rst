@@ -28,13 +28,13 @@ They are accessible through a separate URL (you can click `View on the site` lin
 while editing).
 
 
-Page generating
+Page generating for Website 
 ---------------
 
 Each page has its own template. For most things it means inclusion of
 other templates to generate full page.
 
-Menu
+Menu of website
 ----
 
 Menu is configured in data/menu.py, the first element always means page name
