@@ -16,8 +16,8 @@
   {% else %}
   <link rel="alternate" type="application/rss+xml" href="{% url 'feed-news' %}" title="phpMyAdmin news"/>
   {% endif %}
-{% compress css %}
   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+{% compress css %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'colorbox/colorbox.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
