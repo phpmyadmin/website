@@ -1,235 +1,88 @@
-/* Global */
-*,
-::after,
-::before {
-    box-sizing: border-box;
+/* ---- Components */
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1140px;
 }
-
-/* Components */
 
 /* Navbar */
-.navbar {
-    display: flex;
-    align-items: center;
+.navbar-toggler {
+  display: none; /* Show only in small screens */
 }
+
+.navbar {
+  display: flex;  
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+
+/* Hero */
+.hero {
+  width: 100%;
+}
+
+.hero-content {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hero.hero-primary {
+  background-color: var(--brand-primary);
+}
+
 
 /* Brand */
-.brand-text {
-    font-family: 'OpenSans-Bold';
-}
 
-.brand-text .brand-text-primary {
-    color: var(--brand-primary);
-}
-.brand-text .brand-text-secondary {
-    color: var(--brand-secondary);
-}
+/* Buttons */
 
 /* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 8rem;
-    font-size: 1.2rem; 
-    border-top: 1px solid var(--color-gray-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  font-size: 1.2rem; 
+  border-top: 1px solid var(--color-gray-100);
 }
 
 footer > section {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer a {
-    color: var(--color-text-default);
+  color: var(--color-text-default);
 }
 footer a:hover {
-    color: var(--color-text-default);
+  color: var(--color-text-default);
 }
 
-/* Legacy ---- To Be Removed in final version */
-/* #logo {
-    padding: 0;
-    margin: 0 20px;
-    background: url('../images/logo.png') no-repeat;
-    width: 172px;
-    height: 100px;
-    font-size: 1px;
-    color: white;
-    display: inline-block;
-    vertical-align: middle;
+/* Screenreaders */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
-
-.sponsors {
-    min-width: 250px;
-}
-
-.sponsors div {
-    padding: 0.5em 0 0.5em 0;
-}
-
-.sponsors p a {
-    font-size: smaller;
-    color: #666699;
-}
-.sp {
-    display: table;
-    width: 100%;
-}
-.sp a {
-    display:table-cell;
-    vertical-align:middle;
-    min-width: 264px;
-    text-align: center;
-}
-.diamond {
-    height: 250px;
-}
-.platinum {
-    height: 130px;
-}
-.gold {
-    height: 70px;
-}
-
-.logos a {
-    display: inline-block;
-    padding: 0.5em;
-    vertical-align: middle;    
-    min-width: 264px;
-    text-align: center;
-}
-
-.themeimg {
-    height: 8em !important;
-    max-width: 30em !important;
-}
-
-p.date {
-    font-size: smaller;
-}
-
-p {
-    max-width: 55em;
-    margin: 1em;
-}
-
-.book img {
-    margin: 1em;
-    float: left;
-    border: 1px solid black;
-}
-
-.screenshot {
-    float: left;
-    border: 1px solid #7584b3;
-    margin: 0.2em;
-    padding: 0.2em;
-}
-
-.screenshot img {
-    max-height: 150px;
-    overflow: hidden;
-}
-
-.bookbanner {
-    float: left;
-    margin: 1em;
-    width: 150px;
-    height: 185px;
-    overflow: hidden;
-}
-
-p.award {
-    font-size: large;
-    font-weight: bold;
-}
-
-.td-bar {
-    width: 400px;
-}
-
-.progress {
-    margin-bottom: 0;
-}
-.progress-bar {
-    min-width: 3em;
-}
-
-.td-size {
-    text-align: right;
-}
-
-td.count {
-    text-align: right;
-}
-
-em.big {
-    font-style: normal;
-    font-size: 1.2em;
-}
-div.subscribe {
-    text-align: center;
-}
-.fa-google-plus-square {
-    color: #dd4b39;
-}
-.fa-twitter-square {
-    color: #55acee;
-}
-.fa-facebook-official {
-    color: #3b5998;
-}
-.logo .fa {
-    text-decoration: none;
-    font-size: 150%;
-}
-.sfc-logo {
-    text-align: center;
-}
-footer ul {
-    padding:0;
-    margin:1em;
-    max-width:none;
-    clear:both;
-}
-footer li{
-    font-size:small;
-    list-style:none;
-    float:left;
-    padding:1em;
-    color:gray;
-    border:none;
-}
-.security a {
-    white-space: nowrap;
-}
-.ahead {
-    display: block;
-}
-.img-margin {
-    margin: 7px;
-}
-
-#cycler {
-    position: relative;
-}
-#cycler img {
-    position: absolute;
-    z-index: 1;
-}
-#cycler .active{
-    z-index: 3;
-}
-
-.boxes a {
-    display: block;
-    margin: 5px;
-}
-
-.featured-dl {
-    font-weight: bold;
-}
-.images .col-md-3 {
-    min-height: 300px;
-} */
