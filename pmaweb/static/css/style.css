@@ -1,4 +1,54 @@
-#logo {
+/* Global */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+/* Components */
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Brand */
+.brand-text {
+    font-family: 'OpenSans-Bold';
+}
+
+.brand-text .brand-text-primary {
+    color: var(--brand-primary);
+}
+.brand-text .brand-text-secondary {
+    color: var(--brand-secondary);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    font-size: 1.2rem; 
+    border-top: 1px solid var(--color-gray-100);
+}
+
+footer > section {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: var(--color-text-default);
+}
+footer a:hover {
+    color: var(--color-text-default);
+}
+
+/* Legacy ---- To Be Removed in final version */
+/* #logo {
     padding: 0;
     margin: 0 20px;
     background: url('../images/logo.png') no-repeat;
@@ -45,8 +95,7 @@
 .logos a {
     display: inline-block;
     padding: 0.5em;
-    vertical-align: middle;
-    /* 250 + 2 * 7 padding */
+    vertical-align: middle;    
     min-width: 264px;
     text-align: center;
 }
@@ -183,4 +232,4 @@ footer li{
 }
 .images .col-md-3 {
     min-height: 300px;
-}
+} */
