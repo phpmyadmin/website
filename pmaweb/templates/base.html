@@ -16,12 +16,14 @@
     {% else %}
       <link rel="alternate" type="application/rss+xml" href="{% url 'feed-news' %}" title="phpMyAdmin news"/>
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" /> -->
+    
     {% compress css %}
       <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
       <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
       <link rel="stylesheet" type="text/css" href="{% static 'colorbox/colorbox.css' %}" />
-      <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/modal.css' %}" />
+      <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}"> -->
     {% endcompress %}
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
     <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
@@ -31,11 +33,11 @@
       <meta property="og:title" content="phpMyAdmin" />
     {% endif %}
     <meta property="og:site_name" content="phpMyAdmin" />
-    <meta property="og:image" content="https://www.phpmyadmin.net{% static 'images/logo-og.png' %}" />
+    <meta property="og:image" content="https://www.phpmyadmin.net{% static 'images/brand/logo-og.png' %}" />
     {% block ogtags %}
       <meta property="og:type" content="website" />
     {% endblock %}
-    <link rel="image_src" href="{% static 'images/logo-og.png' %}" title="phpMyAdmin"/>
+    <link rel="image_src" href="{% static 'images/brand/logo-og.png' %}" title="phpMyAdmin"/>
     <link rel="vcs-git" href="https://github.com/phpmyadmin/phpmyadmin.git" title="phpMyAdmin Git repository" />
     <link rel="vcs-browse" href="https://github.com/phpmyadmin/" title="phpMyAdmin Git repository browser" />
     {% compress js %}
@@ -48,26 +50,53 @@
     <meta name="robots" content="index, follow" />
   </head>
  <body>
+  <svg width="0" height="0" style="display:none;">
+    <symbol id="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
+    </symbol>
+    <symbol id="pmalogo" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 792">
+      <path
+        d="M391.5 692C275.957 735.125 270 758.5 159 752.5 80.614 748.262 0 715 0 715s107.244 77 214 77c60 0 148-40.244 221.5-74C536 671.844 624.159 664.842 698 660c122-8 322 32 322 32s-92.299-38.639-218-59.5c-140-23.234-294.957 16.374-410.5 59.5z"
+        fill="#5663A0" />
+      <path
+        d="M990.55 435.473L168.977 606.5s39.781 22.809 55.023 47c13.783 21.875 20 70 20 70s110.474-57.825 266-96.139C665.526 589.048 781.5 606.5 781.5 606.5s16.839-31.725 51.5-74c43.313-52.828 157.55-97.027 157.55-97.027z"
+        fill="#F89C0E" />
+      <path
+        d="M325 271c14.125 206-61 280-61 280s55.421-45.834 98-69.5c28.526-15.855 66-21.5 66-21.5s36.48-134.016-19-289C363 42.5 254 13 254 13s56.875 52 71 258z"
+        fill="#6C78AF" fill-opacity=".75" />
+      <path
+        d="M407.937 539.925c-1.242 1.392-1.937 2.074-1.937 2.074s.655-.734 1.937-2.074c12.166-13.631 76.793-95.306 54.563-270.426-24.5-193-123-246-123-246S506.066 28.327 632 201c97 133 97 268.5 97 268.5s-10.68-25.877-117-22.5c-113.611 3.609-191.065 79.349-204.063 92.926z"
+        fill="#6C78AF" />
+    </symbol>
+    <symbol id="pmalogo-text" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 15">
+      <path
+        d="M4.291 11.137c-.898 0-1.602-.326-2.112-.978h-.11c.073.638.11 1.007.11 1.108v3.096H.094V3.357h1.695l.294.992h.096c.487-.757 1.21-1.135 2.167-1.135.902 0 1.608.349 2.119 1.046.51.697.765 1.665.765 2.905 0 .816-.12 1.524-.362 2.126-.237.602-.576 1.06-1.018 1.374-.442.315-.962.472-1.559.472zm-.615-6.255c-.515 0-.891.16-1.128.478-.237.315-.36.837-.37 1.566v.225c0 .82.121 1.409.363 1.764.246.356.633.533 1.162.533.934 0 1.401-.77 1.401-2.31 0-.752-.116-1.315-.348-1.689-.228-.378-.588-.567-1.08-.567zM16.008 11h-2.085V6.536c0-1.103-.41-1.654-1.23-1.654-.584 0-1.005.198-1.265.595-.26.396-.39 1.039-.39 1.927V11H8.953V.363h2.085V2.53c0 .169-.016.565-.048 1.19l-.048.615h.11c.465-.747 1.203-1.121 2.215-1.121.897 0 1.579.241 2.043.724.465.484.698 1.176.698 2.079V11zm6.344.137c-.898 0-1.602-.326-2.113-.978h-.11c.074.638.11 1.007.11 1.108v3.096h-2.085V3.357h1.696l.294.992h.095c.488-.757 1.21-1.135 2.167-1.135.903 0 1.609.349 2.12 1.046.51.697.765 1.665.765 2.905 0 .816-.12 1.524-.362 2.126-.237.602-.577 1.06-1.019 1.374-.442.315-.961.472-1.558.472zm-.616-6.255c-.515 0-.89.16-1.128.478-.237.315-.36.837-.369 1.566v.225c0 .82.121 1.409.363 1.764.246.356.633.533 1.162.533.934 0 1.401-.77 1.401-2.31 0-.752-.116-1.315-.349-1.689-.227-.378-.587-.567-1.08-.567z"
+        fill="#545D86" />
+      <path
+        d="M31.41 11l-2.407-7.84h-.062c.087 1.594.13 2.658.13 3.192V11h-1.893V1.006h2.884l2.366 7.642h.04l2.51-7.642h2.884V11h-1.975V6.27c0-.224.002-.481.007-.773.009-.292.04-1.066.095-2.324h-.061L33.35 11h-1.942zm7.717-7.643h2.283l1.443 4.3c.123.374.207.816.252 1.326h.042c.05-.469.148-.911.293-1.326l1.416-4.3h2.235l-3.234 8.62c-.296.798-.72 1.395-1.271 1.792-.547.396-1.187.594-1.921.594-.36 0-.713-.038-1.06-.116v-1.654c.251.059.525.089.82.089.37 0 .691-.114.965-.342.278-.223.494-.563.65-1.019l.122-.376-3.035-7.588zM54.474 11l-.725-2.379h-3.644L49.382 11h-2.283L50.625.965h2.59L56.758 11h-2.283zm-1.23-4.156l-1.136-3.657a11.476 11.476 0 01-.177-.67c-.15.583-.581 2.025-1.292 4.327h2.604zm7.033 4.293c-.897 0-1.604-.349-2.119-1.046-.51-.697-.765-1.664-.765-2.899 0-1.253.26-2.228.779-2.925.524-.702 1.244-1.053 2.16-1.053.962 0 1.695.374 2.201 1.121h.069a8.517 8.517 0 01-.158-1.524V.363h2.092V11h-1.6l-.403-.991h-.089c-.474.752-1.196 1.128-2.167 1.128zm.732-1.661c.533 0 .923-.155 1.169-.465.25-.31.387-.837.41-1.58v-.225c0-.82-.128-1.408-.383-1.764-.25-.355-.66-.533-1.23-.533-.465 0-.828.198-1.087.595-.255.392-.383.964-.383 1.716s.13 1.317.39 1.695c.26.374.63.56 1.114.56zM73.559 11h-2.084V6.536c0-.551-.094-.964-.28-1.237-.183-.278-.472-.417-.869-.417-.533 0-.92.196-1.162.588-.242.392-.362 1.037-.362 1.934V11h-2.085V3.357h1.593l.28.978h.116c.205-.351.501-.624.889-.82.387-.2.831-.301 1.333-.301 1.144 0 1.918.374 2.324 1.121h.184c.206-.356.506-.631.903-.827a3.042 3.042 0 011.353-.294c.866 0 1.52.223 1.962.67.447.442.67 1.153.67 2.133V11h-2.092V6.536c0-.551-.093-.964-.28-1.237-.182-.278-.471-.417-.868-.417-.51 0-.893.182-1.148.547-.251.364-.376.943-.376 1.736V11zm6.823-9.618c0-.68.378-1.019 1.135-1.019.756 0 1.134.34 1.134 1.019 0 .323-.095.576-.287.759-.187.177-.47.266-.847.266-.757 0-1.135-.342-1.135-1.025zM82.556 11H80.47V3.357h2.085V11zm9.249 0H89.72V6.536c0-.551-.098-.964-.294-1.237-.196-.278-.508-.417-.937-.417-.583 0-1.005.196-1.264.588-.26.387-.39 1.032-.39 1.934V11H84.75V3.357h1.593l.28.978h.116c.233-.37.552-.647.957-.834a3.26 3.26 0 011.395-.287c.889 0 1.563.241 2.023.724.46.479.69 1.172.69 2.079V11z"
+        fill="#F89C0E" />
+    </symbol>
+
+  </svg>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
+    <nav class="navbar">
+      <div class="nav-container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-bars"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            {% for item in menu %}
-            <li class="nav-item{% if item.active %} active{% endif %}">
+        <div>
+          <a class="nav-brand" href="">
+            Logo Here
+          </a>
+          
+        </div>
+        <div id="navbarSupportedContent" class="nav-menu collapse navbar-collapse">
+          {% for item in menu %}
+            <div class="nav-item{% if item.active %} nav-active{% endif %}">
               <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if item.active %} <span class="sr-only">(current)</span>{% endif %}</a>
-            </li>
-            {% endfor %}
-          </ul>
-          <!-- <ul class="navbar-nav mr-0">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/phpmyadmin/phpmyadmin" title="phpMyAdmin is developed on GitHub"><i class="fa fa-github"></i> GitHub</a>
-            </li>
-          </ul> -->
+            </div>
+          {% endfor %}
         </div>
       </div>
     </nav>
@@ -81,56 +110,56 @@
     </div>
   </content>
 
-<!-- Modal -->
-<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="downloadModalLabel">Thank you for downloading phpMyAdmin</h3>
-      </div>
-      <div class="modal-body">
-        <p>
-        Your download should start soon, if not please <a id="dl-link" href="">click here</a>.
-        </p>
+  <!-- Modal -->
+  <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title" id="downloadModalLabel">Thank you for downloading phpMyAdmin</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+          Your download should start soon, if not please <a id="dl-link" href="">click here</a>.
+          </p>
 
-        <h4>Please verify the downloaded file</h4>
-        <p>
-        Please take additional steps to verify that the file you have downloaded is not corrupted,
-        you can verify it using the following methods:
-        </p>
-        <ul>
-        <li id="dl-li-pgp">Verify its <a id="dl-pgp" href="">PGP signature</a>, see the <a href="https://docs.phpmyadmin.net/en/latest/setup.html#verifying-phpmyadmin-releases">Verifying phpMyAdmin releases</a> chapter for more information.</li>
-        <li>Check that the file's SHA256 hash matches <code id="dl-sha256"></code></li>
-        </ul>
+          <h4>Please verify the downloaded file</h4>
+          <p>
+          Please take additional steps to verify that the file you have downloaded is not corrupted,
+          you can verify it using the following methods:
+          </p>
+          <ul>
+          <li id="dl-li-pgp">Verify its <a id="dl-pgp" href="">PGP signature</a>, see the <a href="https://docs.phpmyadmin.net/en/latest/setup.html#verifying-phpmyadmin-releases">Verifying phpMyAdmin releases</a> chapter for more information.</li>
+          <li>Check that the file's SHA256 hash matches <code id="dl-sha256"></code></li>
+          </ul>
 
-        <h4>phpMyAdmin needs your continued support to grow and thrive</h4>
+          <h4>phpMyAdmin needs your continued support to grow and thrive</h4>
 
-        <p>
-        phpMyAdmin would not exist without the work of many volunteers and contractors.
-        You can support us to make phpMyAdmin even better by <a href="{% url 'donate' %}">donating
-        to our project</a>. Every donation counts!
-        <p>
+          <p>
+          phpMyAdmin would not exist without the work of many volunteers and contractors.
+          You can support us to make phpMyAdmin even better by <a href="{% url 'donate' %}">donating
+          to our project</a>. Every donation counts!
+          <p>
 
-        <p>
-        We have also a <a href="{% url 'sponsors' %}#conditions">sponsorship program</a> for
-        corporates who are willing to spent more money and get some benefits such as
-        a logo placement in return.
-        </p>
+          <p>
+          We have also a <a href="{% url 'sponsors' %}#conditions">sponsorship program</a> for
+          corporates who are willing to spent more money and get some benefits such as
+          a logo placement in return.
+          </p>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a href="{% url 'donate' %}" class="btn btn-primary">Donate to phpMyAdmin</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <a href="{% url 'donate' %}" class="btn btn-primary">Donate to phpMyAdmin</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <footer>
     <section class="container">
       <section class="brand-text">
-        <span class="brand-text-primary">php<span class="brand-text-secondary">MyAdmin</span></span>
+        <span class="brand-text-primary"></span>
         <span>&copy; 2003 - {{ current_year }}
       </section>
       <section class="footer-links">
