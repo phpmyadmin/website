@@ -67,6 +67,10 @@ footer > section {
   justify-content: space-between;
 }
 
+footer > .content {
+  flex-direction: row;
+}
+
 footer a {
   color: var(--color-text-default);
 }
