@@ -14,7 +14,8 @@
 }
 
 .navbar {
-  display: flex;  
+  display: flex; 
+  height: 7rem; 
 }
 
 .nav-container {
@@ -28,8 +29,42 @@
   margin-right: auto;
 }
 
-.nav-menu {
+.nav-brand {
   display: flex;
+}
+
+.nav-brand a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-brand .brand-symbol {
+  width: 6rem;
+  height: 4.4rem;
+  margin-right: 10px;
+}
+
+.nav-menu,
+.nav-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-item {
+  height: 100%;
+  color: var(--color-text-default);
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.nav-item.nav-active {
+  color: var(--brand-primary);
 }
 
 
@@ -49,7 +84,10 @@
 
 
 /* Brand */
-
+.brand-text {
+  height: 1.4rem;
+  width: 9.4rem;
+}
 /* Buttons */
 
 /* Footer */
@@ -67,15 +105,28 @@ footer > section {
   justify-content: space-between;
 }
 
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.designed-by {
+  border-left: 1px solid rgba(0, 0, 0, 1);
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
 footer > .content {
   flex-direction: row;
 }
 
 footer a {
   color: var(--color-text-default);
+  text-decoration: none;
 }
 footer a:hover {
   color: var(--color-text-default);
+  text-decoration: underline;
 }
 
 /* Screenreaders */
