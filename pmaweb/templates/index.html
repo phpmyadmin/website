@@ -8,22 +8,19 @@
       Hero icon
     </div>
     <div>
-      Hero text
+      <div>
+        <strong>phpMyAdmin</strong> is a free software tool written in PHP, to handle the administration of MySQL or MariaDB server over a Web Interface and supports a wide range of operations.
+      </div>
       Buttons
     </div>
   </div>
 </div>
 <div class="content">
   <p>
+    Test links:<br>
     {% block littleboxes %}
       {% include '_littleboxes.html' %}
-    {% endblock %}
-    phpMyAdmin is a free software tool written in <a href="https://php.net/">PHP</a>,
-    intended to handle the administration of <a href="https://www.mysql.com/">MySQL</a>
-    over the Web. phpMyAdmin supports a wide range of operations on MySQL and 
-    MariaDB. Frequently used operations (managing databases, tables, 
-    columns, relations, indexes, users, permissions, etc) can be performed via the 
-    user interface, while you still have the ability to directly execute any SQL statement.  
+    {% endblock %}<br>
   </p>
 
   <!-- <div class="bookbanner">
@@ -33,7 +30,7 @@
     </a>
   </div> -->
 
-  <p>
+  <!-- <p>
   phpMyAdmin comes with a wide range of <a
   href="{% url 'docs' %}">documentation</a> and users are welcome to
   update <a href="https://github.com/phpmyadmin/phpmyadmin/wiki">our wiki pages</a> to share ideas and
@@ -42,34 +39,34 @@
   you face any problem; you can use a <a
   href="{% url 'support' %}">variety of support channels</a> to get
   help.
-  </p>
+  </p> -->
 
-  <p>
+  <!-- <p>
   phpMyAdmin is also very deeply documented in a book written by one of the developers
   &ndash; <a href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-phpmyadmin-34-effective-mysql-management">Mastering phpMyAdmin for
   Effective MySQL Management</a>, which is available in English and <a href="{% url 'docs' %}#books">Spanish</a>.
-  </p>
+  </p> -->
 
-  <p>
+  <!-- <p>
   To ease usage to a wide range of people, phpMyAdmin is being translated into <a
   href="{% url 'translations' %}">72 languages</a> and supports both LTR
   and RTL languages.
-  </p>
+  </p> -->
 
-  <p>
+  <!-- <p>
   phpMyAdmin is a mature project with a stable and flexible code
   base; you can find out more about the <a href="{% url 'about' %}">project and its history</a> and the <a href="{% url 'awards' %}">awards</a> it earned. When the project turned 15, we published a <a href="{% url '15-years' %}">celebration page</a>.
-  </p>
+  </p> -->
 
-  <p>
+  <!-- <p>
   The phpMyAdmin project is a member of <a href="https://sfconservancy.org">Software Freedom Conservancy</a>. SFC is a not-for-profit organization that helps promote, improve, develop, and defend Free, Libre, and Open Source Software (FLOSS) projects.
-  </p>
+  </p> -->
 
-  <div class="sfc-logo">
+  <!-- <div class="sfc-logo">
       <a href="https://sfconservancy.org">
           <img src="{% static 'images/sfc_logo.png' %}" alt="SFC" height="50" width="156" />
       </a>
-  </div>
+  </div> -->
 
   <div>
     <h2>Features</h2>
@@ -116,19 +113,39 @@
     </ul>
   </div>
 
-  <div id="latest-news">
-    <h2 class="entry-title"><a href="{% url 'news' %}">Latest News</a></h2>
-    <ul>
-    {% for item in short_news %}
-    <li>
-        <a href="{{ item.get_absolute_url }}">{{ item.date|date:"Y-m-d" }}: {{item.title}}</a>
-    </li>
-    {% endfor %}
-    </ul>
-    <p class="signature"><a href="{% url 'news' %}">...more news.</a></p>
+  <div>
+    {% include '_sponsors.html' %}
   </div>
 
-  <div id="latest-blogs">
+  <div id="latest-news">
+    <h2 class="entry-title">
+      <a href="{% url 'news' %}">News</a>
+    </h2>
+    <div class="news-list">
+    {% for item in short_news %}
+      <a class="news-item" href="{{ item.get_absolute_url }}">
+          <div class="news-date">
+            <div class="news-day">
+              {{ item.date|date:"d" }}
+            </div>
+            <div class="news-month">
+              {{ item.date|date:"mm" }}
+            </div>
+          </div>
+          <div class="news-info">
+            <div class="news-title">
+              {{item.title}}
+            </div>
+            <!-- <div class="news-excerpt">
+              {{item.title}}
+            </div> -->            
+          </div>
+      </a>
+    {% endfor %}
+    </div>
+  </div>
+
+  <!-- <div id="latest-blogs">
     <h2 class="entry-title"><a href="https://planet.phpmyadmin.net/">Latest Posts in Developers Blogs</a></h2>
     <ul>
     {% for item in short_planet %}
@@ -138,10 +155,6 @@
     {% endfor %}
     </ul>
     <p class="signature"><a href="https://planet.phpmyadmin.net/">...more blogs.</a></p>
-  </div>
-
-  </div>
-  <!-- <div class="col-md-3">
-  {--% include '_sponsors.html' %--}
   </div> -->
+</div>
 {% endblock %}
