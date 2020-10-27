@@ -29,9 +29,12 @@
   --color-blue-100: rgba(45,156,219,1);
   --color-blue-200: rgba(47,128,237,1);
   
-
   --color-purple-1: rgba(155,81,224,1);
   --color-purple-2: rgba(187,107,217,1);
+
+  --color-ghost-50: rgba(0, 0, 0, 0.2);
+  --color-ghost-100: rgba(0, 0, 0, 0.35);
+  --color-ghost-200: rgba(0, 0, 0, 0.6);
 
   --font-family-sans-serif: 'OpenSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

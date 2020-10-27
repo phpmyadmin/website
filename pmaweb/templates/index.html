@@ -5,13 +5,15 @@
 <div class="hero hero-primary">
   <div class="content hero-content">
     <div class="hero-image">
-      Hero icon
+      <svg>
+        <use xlink:href="#pma-hero-start"></use>
+      </svg>      
     </div>
     <div class="hero-description">
-      <div>
+      <div class="hero-description-text">
         <strong>phpMyAdmin</strong> is a free software tool written in PHP, to handle the administration of MySQL or MariaDB server over a Web Interface and supports a wide range of operations.
       </div>
-      <div>
+      <div class="hero-description-actions">
         {% with latest_release as release %}
           {% with release.simpledownload as file %}
             <a

@@ -15,7 +15,7 @@
 
 /* Navbar */
 .navbar-toggler {
-  display: none; /* Show only in small screens */
+  display: none; /* TODO: Show only in small screens, test on mobile screens */
 }
 
 .navbar {
@@ -73,6 +73,10 @@
   border-bottom: 3px solid transparent;
 }
 
+.nav-item:hover {
+  border-color: var(--brand-primary);
+}
+
 .nav-link {
   color: inherit;
   text-decoration: none;
@@ -110,6 +114,27 @@
   background-color: var(--color-gray-100);
 }
 
+.hero-image,
+.hero-image svg {
+  height: 30rem;
+  width: 30rem;
+  margin-right: 10rem;
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero-description-actions {
+  display: flex;
+}
+
+.hero-description-actions .btn {
+  width: 100%;
+}
+
 
 /* Brand */
 .brand-text {
@@ -130,7 +155,12 @@
   text-decoration: none;
   line-height: 2rem;
   color: inherit;
+  text-align: center;
   transition: background-color ease 0.3s;
+}
+
+.btn ~.btn {
+  margin-left: 2rem;
 }
 
 .btn:hover {
@@ -168,9 +198,13 @@
   background-color: var(--color-green-200);
 }
 
+.btn.btn-ghost:hover {
+  background-color: var(--color-ghost-50);
+}
+
 .btn.btn-big {
   height: 6rem;
-  line-height: 3rem;
+  line-height: 3.4rem;
 }
 
 
