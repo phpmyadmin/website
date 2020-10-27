@@ -212,6 +212,7 @@ footer .footer-links {
 footer a {
   color: var(--color-text-default);
   text-decoration: none;
+  margin-left: 2.4rem;
 }
 footer a:hover {
   color: var(--color-text-default);
@@ -221,6 +222,7 @@ footer a:hover {
 footer .footer-icon svg {
   height: 2.4rem;
   width: 2.4rem;
+  margin-top: 5px; /* TODO: See this later */
 }
 
 /* Utilities */
