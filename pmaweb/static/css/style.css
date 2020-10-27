@@ -208,6 +208,35 @@ button {
   line-height: 3.4rem;
 }
 
+/* Boxes */
+.box {
+  text-align: center;
+}
+
+.box .box-horz {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.box .box-item {
+  background-color: #fff;
+  border: 1px solid var(--color-gray-200);
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  margin-bottom: 3rem;
+}
+
+.box .box-item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.box .box-item .box-item-title {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
 /* News Block */
 .news-item {
   display: flex;
@@ -254,7 +283,7 @@ button {
 
 .news-excerpt {
   font-size: 1.4rem;
-  color: var(--color-gray-200);
+  color: var(--color-gray-300);
 }
 
 

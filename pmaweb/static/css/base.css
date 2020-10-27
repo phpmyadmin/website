@@ -1,5 +1,5 @@
 :root {
-  --color-primary-50: rgba(145, 154, 195, 1);
+  --color-primary-50:  rgba(145, 154, 195, 1);
   --color-primary-100: rgba(108, 120, 175, 1);
   --color-primary-200: rgba(84, 93, 134, 1);
 
@@ -11,28 +11,29 @@
   --color-background-section: rgba(255, 255, 255, 1);
   --color-background-section-stripe: rgba(242, 242, 242, 1);
   
-  --color-gray-50: rgba(224,224,224,1);
+  --color-gray-50:  rgba(224,224,224,1);
   --color-gray-100: rgba(242, 242, 242, 1);
-  --color-gray-200: rgba(102, 102, 102, 1);
+  --color-gray-200: rgba(199, 198, 198, 1);
+  --color-gray-300: rgba(102, 102, 102, 1);
   --color-gray-400: rgba(79, 79, 79, 1);
   --color-gray-700: rgba(51, 51, 51, 1);  
   
-  --color-red: rgba(235,87,87,1);
+  --color-red:    rgba(235,87,87,1);
   --color-orange: rgba(242,153,74,1);
   --color-yellow: rgba(242,201,76,1);
   
-  --color-green-50: rgba(111, 207, 151, 1);
+--color-green-50:    rgba(111, 207, 151, 1);
   --color-green-100: rgba(39, 174, 96, 1);
   --color-green-200: rgba(33, 150, 83, 1);
 
-  --color-blue-50: rgba(86,204,242,1);
+  --color-blue-50:  rgba(86,204,242,1);
   --color-blue-100: rgba(45,156,219,1);
   --color-blue-200: rgba(47,128,237,1);
   
   --color-purple-1: rgba(155,81,224,1);
   --color-purple-2: rgba(187,107,217,1);
 
-  --color-ghost-50: rgba(0, 0, 0, 0.2);
+  --color-ghost-50:  rgba(0, 0, 0, 0.2);
   --color-ghost-100: rgba(0, 0, 0, 0.35);
   --color-ghost-200: rgba(0, 0, 0, 0.6);
 
