@@ -1,38 +1,41 @@
 {% load staticfiles %}
 <div class="sponsors">
+  <h2>
+    <a href="{% url 'sponsors' %}">Sponsors</a>
+  </h2>
 
-<h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>
+  <div class="content-row">
+    <div class="sponsors-diamond">
+      <h3>Diamond sponsor</h3>
+      <div>
+        This space is available &mdash; contact us to get listed here.
+      </div>
+    </div>
 
-<h3>Diamond sponsor</h3>
+    <!--
+    <div>
+      <h3>Platinum sponsors</h3>
+      <div class="sp platinum"></div>
+    </div>
+    -->
 
-<div class="sp diamond">
-This space is available &mdash; contact us to get listed here.
-</div>
+    <div class="sponsors-gold">
+      <h3>Gold sponsors</h3>
+      <div>
+        <a href="http://www.trialpro.com/"><img src="{% static 'images/trialpro.png' %}" alt="TrialPro" /></a>
+      </div>
 
-<!--
-<h3>Platinum sponsors</h3>
+      <div>
+        <a href="https://www.vapehuset.se/"><img src="{% static 'images/vapehuset.png' %}" alt="Vapehuset" /></a>
+      </div>
 
-<div class="sp platinum">
-</div>
--->
+      <div>
+        <a href="https://www.4kdownload.com/"><img src="{% static 'images/4kdownload.png' %}" alt="4K Download" /></a>
+      </div>
 
-<h3>Gold sponsors</h3>
-<div class="sp gold">
-  <a href="http://www.trialpro.com/"><img src="{% static 'images/trialpro.png' %}" alt="TrialPro" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.vapehuset.se/"><img src="{% static 'images/vapehuset.png' %}" alt="Vapehuset" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.4kdownload.com/"><img src="{% static 'images/4kdownload.png' %}" alt="4K Download" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://goread.io/"><img src="{% static 'images/goread.png' %}" alt="goread" /></a>
-</div>
-
-{% include '_sponsorship_note.html' %}
-
+      <div>
+        <a href="https://goread.io/"><img src="{% static 'images/goread.png' %}" alt="goread" /></a>
+      </div>
+    </div>
+  </div>
 </div>

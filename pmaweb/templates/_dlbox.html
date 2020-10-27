@@ -1,3 +1,4 @@
+<!-- TODO: May be removed after the redesign since it's part of header/navbar -->
 {% with release.simpledownload as file %}
     <a class="btn btn-success download_popup" href="{{ file.get_absolute_url }}" title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}" rel="quick-download" data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}"><i class="fa fa-download"></i> Download {{ release.version }}</a>
 {% endwith %}
