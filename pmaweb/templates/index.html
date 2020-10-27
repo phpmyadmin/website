@@ -99,8 +99,12 @@
             <div class="news-day">
               {{ item.date|date:"d" }}
             </div>
-            <div class="news-month">
+            <div class="news-month" title="{{ item.date|date:'mmmm' }}">
               {{ item.date|date:"mm" }}
+            </div>
+            <div class="news-year">
+              <!-- TODO: Needs a if(item.date|date:'yyyy' == current_year) {display:none;} -->
+              {{ item.date|date:"yyyy" }}
             </div>
           </div>
           <div class="news-info">
@@ -120,10 +124,9 @@
             15
           </div>
           <div class="news-month">
-            Out
+            Oct
           </div>
-          <div class="news-year">
-            
+          <div class="news-year">            
           </div>
         </div>
         <div class="news-info">
@@ -141,7 +144,7 @@
             15
           </div>
           <div class="news-month">
-            Out
+            Oct
           </div>
           <div class="news-year">
             2019
