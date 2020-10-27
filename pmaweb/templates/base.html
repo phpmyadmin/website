@@ -50,6 +50,7 @@
     <meta name="robots" content="index, follow" />
   </head>
  <body>
+  <!-- TODO: Move to a component -->
   <svg width="0" height="0" style="display:none;">
     <symbol id="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path
@@ -187,6 +188,11 @@
       <section class="footer-links">
         <a class="url org fn vcard" href="{% url 'team' %}">Team</a>
         <a href="{% url 'license' %}" rel="license">License</a>
+        <a class="footer-icon" href="https://github.com/phpmyadmin/phpmyadmin" rel="github">
+          <svg>
+            <use xlink:href="#github"></use>
+          </svg>
+        </a>        
       </section>
     </section>
   </footer>

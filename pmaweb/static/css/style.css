@@ -204,6 +204,11 @@ footer > .content {
   flex-direction: row;
 }
 
+footer .footer-links {
+  display: flex;
+  align-items: center;
+}
+
 footer a {
   color: var(--color-text-default);
   text-decoration: none;
@@ -211,6 +216,11 @@ footer a {
 footer a:hover {
   color: var(--color-text-default);
   text-decoration: underline;
+}
+
+footer .footer-icon svg {
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 /* Utilities */
