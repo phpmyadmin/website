@@ -63,10 +63,6 @@
   margin-left: 2rem;
 }
 
-.nav-buttons > .btn:first-child {
-  margin-right: 1rem;
-}
-
 .nav-item {
   height: 100%;
   color: var(--color-text-default);
@@ -146,6 +142,10 @@
 
 
 /* Buttons */
+button {
+  cursor: pointer;
+}
+
 .btn {
   display: inline-block;
   height: 4.5rem;
@@ -156,6 +156,7 @@
   line-height: 2rem;
   color: inherit;
   text-align: center;
+  background-color: transparent;
   transition: background-color ease 0.3s;
 }
 
