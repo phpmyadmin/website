@@ -20,7 +20,8 @@
 
 .navbar {
   display: flex; 
-  height: 7rem; 
+  height: 7rem;
+  border-bottom: 1px solid var(--color-gray-100);
 }
 
 .nav-container {
@@ -51,15 +52,25 @@
 }
 
 .nav-menu,
-.nav-link {
+.nav-link,
+.nav-actions {
   display: flex;
   height: 100%;
   align-items: center;
 }
 
+.nav-buttons {
+  margin-left: 2rem;
+}
+
+.nav-buttons > .btn:first-child {
+  margin-right: 1rem;
+}
+
 .nav-item {
   height: 100%;
   color: var(--color-text-default);
+  border-bottom: 3px solid transparent;
 }
 
 .nav-link {
@@ -69,13 +80,16 @@
 }
 
 .nav-item.nav-active {
-  color: var(--brand-primary);
+  color: var(--color-primary-200);
+  border-color: var(--brand-primary);
 }
 
 
 /* Hero */
 .hero {
   width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .hero-content {
@@ -114,7 +128,51 @@
   border: 1px solid;
   padding: 1rem 1.5rem;
   text-decoration: none;
+  line-height: 2rem;
+  color: inherit;
+  transition: background-color ease 0.3s;
 }
+
+.btn:hover {
+  transition: background-color ease 0.3s;
+}
+
+.btn.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--color-primary-200);
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-primary-200);
+}
+
+.btn.btn-secondary {
+  background-color: var(--brand-secondary);
+  border-color: var(--color-secondary-200);
+  transition: background-color ease 0.3s;
+}
+
+.btn.btn-secondary:hover {
+  background-color: var(--color-secondary-200);
+}
+
+.btn.btn-tertiary {
+  background-color: var(--color-green-100);
+  border-color: var(--color-green-200);
+  color: #fff;
+  transition: background-color ease 0.3s;
+}
+
+.btn.btn-tertiary:hover {
+  background-color: var(--color-green-200);
+}
+
+.btn.btn-big {
+  height: 6rem;
+  line-height: 3rem;
+}
+
 
 /* Footer */
 footer {

@@ -96,24 +96,26 @@
           </a>          
         </div>
 
-        <div id="navbarSupportedContent" class="nav-menu collapse navbar-collapse">
-          {% for item in menu %}
-            <div class="nav-item{% if item.active %} nav-active{% endif %}">
-              <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if item.active %} <span class="sr-only">(current)</span>{% endif %}</a>
-            </div>
-          {% endfor %}
-        </div>
-        <div>
-          <a class="btn btn-tertiary" href="{% url 'donate' %}" rel="payment">Donate</a>
-          {% with latest_release as release %}
-            {% with release.simpledownload as file %}
-            <a class="btn btn-primary download_popup" href="{{ file.get_absolute_url }}"
-              title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}" rel="quick-download"
-              data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}">
-              Download
-            </a>
+        <div class="nav-actions">
+          <div id="navbarSupportedContent" class="nav-menu collapse navbar-collapse">
+            {% for item in menu %}
+              <div class="nav-item{% if item.active %} nav-active{% endif %}">
+                <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if item.active %} <span class="sr-only">(current)</span>{% endif %}</a>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="nav-buttons">
+            <a class="btn btn-tertiary" href="{% url 'donate' %}" rel="payment">Donate</a>
+            {% with latest_release as release %}
+              {% with release.simpledownload as file %}
+              <a class="btn btn-primary download_popup" href="{{ file.get_absolute_url }}"
+                title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}" rel="quick-download"
+                data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}">
+                Download
+              </a>
+              {% endwith %}
             {% endwith %}
-          {% endwith %}
+          </div>
         </div>
       </div>
     </nav>
