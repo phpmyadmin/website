@@ -24,17 +24,17 @@
     and MySQL versions.
     </p>
 
-    {% include "components/verify.html" %}
+    {% include "components/_verify.html" %}
 
     {% for release in releases %}
     <h2 id="release_{{ release.version }}">phpMyAdmin {{ release.version }}</h2>
-    {% include "components/release.html" %}
+    {% include "components\_release.html" %}
     {% endfor %}
 
     {% if beta_release %}
     {% with beta_release as release %}
     <h2>Testing: phpMyAdmin {{ release.version }}</h2>
-    {% include "components/release.html" %}
+    {% include "components\_release.html" %}
     {% endwith %}
     {% endif %}
 
@@ -48,14 +48,14 @@
 
     {% for release in all_snapshots %}
     <h3 id="snapshot_{{ release.version }}">phpMyAdmin {{ release.version }}</h3>
-    {% include "components/release.html" %}
+    {% include "components\_release.html" %}
     {% endfor %}
 
     <h2 id="stable">Latest Stable Version</h2>
 
     <p>You can also directly download latest version on following URLs:</p>
 
-    {% include 'components/stable-download.html' %}
+    {% include 'components\_stable-download.html' %}
 
     <p>
     We also publish a variety of formats intended for parsing by scripts to download the latest version.
