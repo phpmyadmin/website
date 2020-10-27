@@ -8,6 +8,11 @@
   max-width: 1140px;
 }
 
+.content-row {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Navbar */
 .navbar-toggler {
   display: none; /* Show only in small screens */
@@ -78,8 +83,17 @@
   justify-content: space-around;
 }
 
+.hero-content a {
+  color: inherit;
+}
+
 .hero.hero-primary {
   background-color: var(--brand-primary);
+  color: #FFF;
+}
+
+.hero.hero-secondary {
+  background-color: var(--color-gray-100);
 }
 
 
@@ -88,7 +102,19 @@
   height: 1.4rem;
   width: 9.4rem;
 }
+
+/* Sponsor Block */
+
+
 /* Buttons */
+.btn {
+  display: inline-block;
+  height: 4.5rem;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
 
 /* Footer */
 footer {
@@ -129,7 +155,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Screenreaders */
+/* Utilities */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -140,4 +166,12 @@ footer a:hover {
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
+}
+
+.is-hidden {
+  display: none;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
 }
