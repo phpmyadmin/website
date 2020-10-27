@@ -1,10 +1,10 @@
 {% with latest_release as release %}
-    {% include "_dlbox.html" %}
+    {% include "components\_dlbox.html" %}
 {% endwith %}
 
 {% if beta_release %}
 {% with beta_release as release %}
-    {% include "_dlbox.html" %}
+    {% include "components\_dlbox.html" %}
 {% endwith %}
 {% endif %}
 

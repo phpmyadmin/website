@@ -23,7 +23,7 @@ You can try the themes in action on our <a
 href="{% url 'try' %}">demo server</a>.
 </p>
 
-{% include "_verify.html" %}
+{% include "components/verify.html" %}
 
 <h2>Submit Theme</h2>
 <p>
@@ -64,7 +64,7 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
             {% endif %}
             <p>{{ theme.description }}</p>
 
-            {% include '_dltable.html' with download_item=theme %}
+            {% include 'components\_dltable.html' with download_item=theme %}
     </div>
 </div>
 {% endfor %}

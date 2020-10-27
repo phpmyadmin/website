@@ -9,10 +9,10 @@
 </thead>
 <tbody>
 {% for file in download_list %}
-{% include '_dlrow.html' %}
+{% include 'components\_dlrow.html' %}
 {% endfor %}
 {% if download_item %}
-{% include '_dlrow.html' with file=download_item%}
+{% include 'components\_dlrow.html' with file=download_item%}
 {% endif %}
 </tbody>
 </table> 

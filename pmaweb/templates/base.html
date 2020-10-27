@@ -17,8 +17,7 @@
       <link rel="alternate" type="application/rss+xml" href="{{ page_rss }}" title="{{ page_rss_title }}"/>
     {% else %}
       <link rel="alternate" type="application/rss+xml" href="{% url 'feed-news' %}" title="phpMyAdmin news"/>
-    {% endif %}
-    
+    {% endif %}    
     {% compress css %}
       <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
       <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
@@ -51,7 +50,6 @@
   </head>
  <body>
   {% include "components\_icon-library.html" %}
-
   <header>
     <nav class="navbar">
       <div class="nav-container">

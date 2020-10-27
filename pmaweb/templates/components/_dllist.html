@@ -3,7 +3,7 @@
 {% with release.get_downloads as download_list %}
 
 {% if download_list %}
-{% include '_dltable.html' %}
+{% include 'components\_dltable.html' %}
 {% else %}
 <div class="alert alert-warning">
 Sorry, but no files to download are available for this release. Most likely this is too old release and we didn't find it in our archives.
