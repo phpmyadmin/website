@@ -5,24 +5,27 @@
   </h2>
 
   <div class="content-row">
+
     <div class="sponsors-diamond">
       <h3>Diamond sponsor</h3>
-      <div>
-        This space is available &mdash; contact us to get listed here.
+      <div class="sponsor-list">
+        <span>
+          This space is available, <a href="{% url 'sponsors' %}">contact us</a> to get listed here.
+        </span>        
       </div>
     </div>
 
     <!--
-    <div>
+    <div class="sponsors-platinum">
       <h3>Platinum sponsors</h3>
-      <div class="sp platinum"></div>
+      <div class="sponsor-list"></div>
     </div>
     -->
 
     <div class="sponsors-gold">
       <h3>Gold sponsors</h3>
-      <div>
-        <a href="http://www.trialpro.com/"><img src="{% static 'images/trialpro.png' %}" alt="TrialPro" /></a>
+      <div class="sponsor-list">
+        <a href="http://www.trialpro.com/" class="link-external"><img src="{% static 'images/trialpro.png' %}" alt="TrialPro" /></a>
       </div>
 
       <div>
@@ -37,5 +40,6 @@
         <a href="https://goread.io/"><img src="{% static 'images/goread.png' %}" alt="goread" /></a>
       </div>
     </div>
+
   </div>
 </div>

@@ -11,6 +11,7 @@
 .content-row {
   display: flex;
   flex-direction: row;
+  overflow: auto;
 }
 
 /* Navbar */
@@ -139,6 +140,19 @@
 }
 
 /* Sponsor Block */
+.sponsors div[class*=' sponsors-'],
+.sponsors div[class^='sponsors-'] {
+  margin-right: 3rem;
+}
+
+.sponsor-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.sponsor-list a.link-external {
+  margin-right: 2rem;
+}
 
 
 /* Buttons */
