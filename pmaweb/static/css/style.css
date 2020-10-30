@@ -216,19 +216,25 @@ button {
 .box .box-horz {
   display: flex;
   justify-content: center;
-  flex: 1;
+  flex-wrap: wrap;
 }
 
 .box .box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
   background-color: #fff;
   border: 1px solid var(--color-gray-200);
   padding: 1rem;
-  border-radius: 10px;
-  flex: 1;
+  border-radius: 10px;  
   margin-bottom: 3rem;
+  min-width: 30%;
+  min-height: 34rem;
+  cursor: default;
 }
 
-.box .box-item:not(:last-child) {
+.box .box-item:not(:nth-child(3n)) {
   margin-right: 3rem;
 }
 
