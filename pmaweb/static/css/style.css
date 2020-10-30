@@ -43,7 +43,6 @@
 .nav-brand a {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
 .nav-brand .brand-symbol {
@@ -72,12 +71,16 @@
 
 .nav-item:hover {
   border-color: var(--brand-primary);
+  text-decoration: none;
 }
 
 .nav-link {
   color: inherit;
-  text-decoration: none;
   padding: 0 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: none;
 }
 
 .nav-item.nav-active {
@@ -166,7 +169,6 @@ button {
   border-radius: 5px;
   border: 1px solid;
   padding: 1rem 1.5rem;
-  text-decoration: none;
   line-height: 2rem;
   color: inherit;
   text-align: center;
@@ -180,6 +182,7 @@ button {
 
 .btn:hover {
   transition: background-color ease 0.3s;
+  text-decoration: none;
 }
 
 .btn.btn-primary {
@@ -269,7 +272,6 @@ button {
   border-radius: 5px;
   background-color: var(--color-gray-100);
   margin-bottom: 2rem;
-  text-decoration: none;
   padding: 2rem 2rem;
 }
 
@@ -312,6 +314,56 @@ button {
   color: var(--color-gray-300);
 }
 
+/* Alert */
+.alert {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Success State */
+.alert.alert-success {
+  background: var(--alert-success);
+  border-color: var(--color-green-200);
+}
+
+.alert.alert-success h4 {
+  color: var(--color-green-200);
+}
+
+/* Information State */
+.alert.alert-info {
+  background: var(--color-blue-50);
+  border-color: var(--alert-info);
+}
+
+.alert.alert-info h4 {
+  color: var(--alert-info);
+}
+
+/* Error State */
+.alert.alert-error {
+  background: var(--alert-error);
+  border-color: var(--color-red-200);
+}
+
+.alert.alert-error h4 {
+  color: var(--color-red-200);
+}
+
+/* Warning State */
+.alert.alert-warning {
+  background: var(--alert-warning);
+  border-color: var(--color-yellow-200);
+  color: #FFFFFF;
+}
+
+.alert.alert-warning h4 {
+  color: var(--color-yellow-200);
+}
+
 
 /* Footer */
 footer {
@@ -350,12 +402,10 @@ footer .footer-links {
 
 footer a {
   color: var(--color-text-default);
-  text-decoration: none;
   margin-left: 2.4rem;
 }
 footer a:hover {
   color: var(--color-text-default);
-  text-decoration: underline;
 }
 
 footer .footer-icon svg {

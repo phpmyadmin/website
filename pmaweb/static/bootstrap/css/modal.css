@@ -62,11 +62,17 @@
   opacity: 0.5;
 }
 .modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
 }
 .modal-header .close {
   margin-top: -2px;
+  background: transparent;
+  border: 0;
+  font-size: 2.3rem;
 }
 .modal-title {
   margin: 0;

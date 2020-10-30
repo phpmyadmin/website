@@ -113,15 +113,23 @@
           Your download should start soon, if not please <a id="dl-link" href="">click here</a>.
           </p>
 
-          <h4>Please verify the downloaded file</h4>
-          <p>
-          Please take additional steps to verify that the file you have downloaded is not corrupted,
-          you can verify it using the following methods:
-          </p>
-          <ul>
-          <li id="dl-li-pgp">Verify its <a id="dl-pgp" href="">PGP signature</a>, see the <a href="https://docs.phpmyadmin.net/en/latest/setup.html#verifying-phpmyadmin-releases">Verifying phpMyAdmin releases</a> chapter for more information.</li>
-          <li>Check that the file's SHA256 hash matches <code id="dl-sha256"></code></li>
-          </ul>
+          <div class="alert alert-info">
+            <h4>Please verify the downloaded file</h4>
+            
+            <div>
+              <p>
+                Please take additional steps to verify that the file you have downloaded is not corrupted,you can verify it using the
+                following methods:
+              </p>
+              <p id="dl-li-pgp">
+                Verify its <a id="dl-pgp" href="">PGP signature</a>, see the <a href="https://docs.phpmyadmin.net/en/latest/setup.html#verifying-phpmyadmin-releases">Verifying phpMyAdmin releases</a> chapter for more information.
+              </p>
+              <span>
+                Check that the file's SHA256 hash matches <code id="dl-sha256" class="select-all"></code>
+              </span>
+            </div>
+          </div>
+          
 
           <h4>phpMyAdmin needs your continued support to grow and thrive</h4>
 
