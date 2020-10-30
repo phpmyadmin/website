@@ -86,8 +86,14 @@ body {
 h2 {
   padding: 0;
   margin: 0;
+  margin-bottom: 2rem;
   color: var(--brand-primary);
   font-size: 2.5rem;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
 h2 > a {

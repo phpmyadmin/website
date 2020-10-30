@@ -237,6 +237,12 @@ button {
   font-weight: normal;
 }
 
+.box .box-item-image {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+
 /* News Block */
 .news-item {
   display: flex;
