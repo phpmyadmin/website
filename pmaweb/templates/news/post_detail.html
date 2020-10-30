@@ -9,8 +9,9 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="content">
 <h2 class="entry-title"><a rel="bookmark" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
 <p class="date"><abbr class="published" title="{{ post.date.isoformat }}">{{post.date|date:"Y-m-d"}}</abbr></p>
 <p class="entry-content">{{ post.body }}</p>
+</div>
 {% endblock %}

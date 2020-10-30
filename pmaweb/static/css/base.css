@@ -123,6 +123,11 @@ code {
   padding: 0.5rem;
 }
 
+code.code-block {
+  white-space: pre-wrap;
+  display: inline-block;
+}
+
 code:empty {
   display: none;
 }

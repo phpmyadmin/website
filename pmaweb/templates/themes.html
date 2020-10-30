@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
+<div class="content">
 <h2>Themes</h2>
 <p>
 phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
@@ -34,6 +35,7 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 <h2>Available Themes</h2>
 <p>Select your phpMyAdmin version:
 
+<!-- TODO: Fix nav pills -->
 <ul class="nav nav-pills">
 {% for css in themecssversions %}
 <li class="nav-item" role="presentation">
@@ -72,5 +74,5 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
 <h2>Support for themes</h2>
 
 <p>Themes are provided by third parties and the phpMyAdmin team does not provide any support for them, please contact original authors for improvements or security fixes.</p>
-
+</div>
 {% endblock %}
