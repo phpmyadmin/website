@@ -14,6 +14,39 @@
   overflow: auto;
 }
 
+/* A bit different from Bootstrap approach, but easily to remember.
+* If you need more than 1 column on screen, you can split with `<div class="content content-row">` in the parent
+* And use some of column combinations below in child column to create your screen.
+*/
+.content-row .col-md-1 {
+  width: 10%;
+}
+.content-row .col-md-2 {
+  width: 20%;
+}
+.content-row .col-md-3 {
+  width: 30%;
+}
+.content-row .col-md-4 {
+  width: 40%;
+}
+.content-row .col-md-5 {
+  width: 50%;
+}
+.content-row .col-md-6 {
+  width: 60%;
+}
+.content-row .col-md-7 {
+  width: 70%;
+}
+.content-row .col-md-8 {
+  width: 80%;
+}
+.content-row .col-md-9 {
+  width: 90%;
+}
+/* if you need 100%, you doesn't need .content-row class! */
+
 /* Navbar */
 .navbar-toggler {
   display: none; /* TODO: Show only in small screens, test on mobile screens */
@@ -23,6 +56,7 @@
   display: flex; 
   height: 7rem;
   border-bottom: 1px solid var(--color-gray-100);
+  color: var(--color-text-default);
 }
 
 .nav-container {
@@ -43,6 +77,7 @@
 .nav-brand a {
   display: flex;
   align-items: center;
+  color: inherit;
 }
 
 .nav-brand .brand-symbol {
@@ -79,6 +114,10 @@
   padding: 0 1rem;
 }
 
+.nav-link:visited {
+  color: inherit;
+}
+
 .nav-link:hover {
   text-decoration: none;
 }
@@ -94,6 +133,10 @@
   width: 100%;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.hero h2 {
+  margin-top: 0;
 }
 
 .hero-content {
@@ -140,21 +183,6 @@
 .brand-text {
   height: 1.4rem;
   width: 9.4rem;
-}
-
-/* Sponsor Block */
-.sponsors div[class*=' sponsors-'],
-.sponsors div[class^='sponsors-'] {
-  margin-right: 3rem;
-}
-
-.sponsor-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.sponsor-list a.link-external {
-  margin-right: 2rem;
 }
 
 
@@ -266,6 +294,22 @@ button {
 }
 
 
+/* Sponsor Block */
+.sponsors div[class*=' sponsors-'],
+.sponsors div[class^='sponsors-'] {
+  margin-right: 3rem;
+}
+
+.sponsor-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.sponsor-list a.link-external {
+  margin-right: 2rem;
+}
+
+
 /* News Block */
 .news-item {
   display: flex;
@@ -314,6 +358,45 @@ button {
   color: var(--color-gray-300);
 }
 
+/* Cards - List */
+.card-list {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  list-style-type: none;
+  width: auto;
+}
+
+.card-list li {  
+  border-radius: 5px;
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-100);
+  margin-bottom: .5rem;
+  transition: .5s ease background-color;
+}
+
+.card-list li:hover {  
+  background-color: var(--color-gray-200);
+  transition: .5s ease background-color;
+}
+
+.card-list li > a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card-list li > a.link-main {
+  font-weight: bold;
+}
+
+.card-list-side li {
+  display: inline-block;
+}
+
 /* Alert */
 .alert {
   padding: 2rem;
@@ -323,7 +406,7 @@ button {
   border-bottom-right-radius: 5px;
 }
 
-/* Success State */
+/* Alert - Success State */
 .alert.alert-success {
   background: var(--alert-success);
   border-color: var(--color-green-200);
@@ -333,7 +416,7 @@ button {
   color: var(--color-green-200);
 }
 
-/* Information State */
+/* Alert - Information State */
 .alert.alert-info {
   background: var(--color-blue-50);
   border-color: var(--alert-info);
@@ -343,7 +426,7 @@ button {
   color: var(--alert-info);
 }
 
-/* Error State */
+/* Alert - Error State */
 .alert.alert-error {
   background: var(--alert-error);
   border-color: var(--color-red-200);
@@ -353,7 +436,7 @@ button {
   color: var(--color-red-200);
 }
 
-/* Warning State */
+/* Alert - Warning State */
 .alert.alert-warning {
   background: var(--alert-warning);
   border-color: var(--color-yellow-200);
