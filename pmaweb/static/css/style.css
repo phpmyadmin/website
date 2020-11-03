@@ -202,6 +202,11 @@ button {
   text-align: center;
   background-color: transparent;
   transition: background-color ease 0.3s;
+  width: max-content;
+}
+
+.btn:visited {
+  color: inherit;
 }
 
 .btn ~.btn {

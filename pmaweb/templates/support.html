@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="content">
-<div class="floatbox">
+<div>
 <h2>Getting help with phpMyAdmin</h2>
 
 <p>
@@ -42,20 +42,29 @@ common problems are answered there.
 </p>
 </div>
 
-<div class="floatbox">
-<h2>Types of questions and where to ask</h2>
-<ul>
-  <li>How do I? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
-  <li>I got this error, why? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
-  <li>I got this web server error (like "404 - Not Found") &mdash; <a href="https://serverfault.com/tags/phpmyadmin">serverfault.com</a> or <a href="https://webmasters.stackexchange.com/tags/phpmyadmin">webmasters.stackexchange.com</a></li>
-  <li>I got this error on the current stable version and I'm sure it's a bug &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues">issue</a></li>
-  <li>I have an idea/request &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues">issue</a></li>
-  <li>I have found a security issue &mdash; Please see <a href="{% url 'security' %}">security page</a> for instructions how to report that</li>
-  <li>I have a question about the code itself &mdash; Use our <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">developers@phpmyadmin.net</a> mailing list</li>
-</ul>
+<div>
+<h2>Security Announces</h2>
+  <p>
+    We take seriously any security issues found in our code. On the right side, you can see past security issues which were discovered and fixed.
+    For critical issues, we publish a security release (whose number contains a fourth digit like 3.3.10.5).
+    See our <a href="https://docs.phpmyadmin.net/en/latest/security.html">documentation</a> and our <a href="{% url 'security' %}">Security Announces</a> page for more details about our security policy.
+  </p>
 </div>
 
-<div class="floatbox">
+<div>
+  <h2>Types of questions and where to ask</h2>
+  <ul>
+    <li>How do I? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
+    <li>I got this error, why? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
+    <li>I got this web server error (like "404 - Not Found") &mdash; <a href="https://serverfault.com/tags/phpmyadmin">serverfault.com</a> or <a href="https://webmasters.stackexchange.com/tags/phpmyadmin">webmasters.stackexchange.com</a></li>
+    <li>I got this error on the current stable version and I'm sure it's a bug &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues">issue</a></li>
+    <li>I have an idea/request &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues">issue</a></li>
+    <li>I have found a security issue &mdash; Please see <a href="{% url 'security' %}">security page</a> for instructions how to report that</li>
+    <li>I have a question about the code itself &mdash; Use our <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">developers@phpmyadmin.net</a> mailing list</li>
+  </ul>
+</div>
+
+<div>
 <h2>Mailing Lists</h2>
 <ul>
     <li>For news/announcements: <a href="https://lists.phpmyadmin.net/mailman/listinfo/news">news@phpmyadmin.net</a></li>
@@ -66,7 +75,7 @@ common problems are answered there.
 </ul>
 </div>
 
-<div class="floatbox">
+<div>
 <h2>Commercial Support</h2>
 
 <p>

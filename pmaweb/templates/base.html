@@ -77,15 +77,10 @@
           </div>
           <div class="nav-buttons">
             <a class="btn btn-tertiary" href="{% url 'donate' %}" rel="payment">Donate</a>
-            {% with latest_release as release %}
-              {% with release.simpledownload as file %}
-              <a class="btn btn-primary download_popup" href="{{ file.get_absolute_url }}"
-                title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}" rel="quick-download"
-                data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}">
-                Download
-              </a>
-              {% endwith %}
-            {% endwith %}
+            <a class="btn btn-primary" href="{% url 'downloads' %}"
+              title="Download">
+              Download
+            </a>
           </div>
         </div>
       </div>
