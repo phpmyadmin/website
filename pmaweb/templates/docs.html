@@ -5,15 +5,7 @@
 
 <div class="content content-row">
   <div class="col-md-7">
-    <h2 id="docs">Documentation</h2>
-
-    <h3 id="docs-official">Other links</h3>
-    <ul class="card-list">
-      <li><a href="{% url 'themes' %}">Themes</a></li>
-      <li><a href="{% url 'translations' %}">Translations Overview</a></li>
-      <li><a href="{% url 'security' %}">Security Announcements</a></li>
-
-    </ul>
+    <h2 id="docs">Documentation</h2>    
 
     <h3 id="docs-official">Official Documentation</h3>
     <ul class="card-list">
@@ -22,6 +14,15 @@
       <li><a href="https://wiki.phpmyadmin.net/" class="link-main">Official phpMyAdmin wiki</a></li>
       <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html">Frequently Asked Questions</a></li>      
       <li><a href="https://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>      
+    </ul>
+
+    <h3 id="docs-official">Other links</h3>
+    <ul class="card-list card-list-side">
+      <li><a href="{% url 'themes' %}">Themes</a></li>
+      <li><a href="{% url 'translations' %}">Translations Overview</a></li>
+      <li><a href="{% url 'security' %}">Security Announcements</a></li>
+      <li><a href="{% url 'awards' %}">Awards</a></li>
+      <li><a href="{% url '15-years' %}">15 years</a></li>
     </ul>
 
 
@@ -68,37 +69,39 @@
       <a id="books">Books</a>
     </h2>
 
-    <div>
-      <h3>Mastering phpMyAdmin 3.4 for Effective MySQL Management</h3>
-      <a class="pull-left img-margin" href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-phpmyadmin-34-effective-mysql-management">
-        <img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" />
-      </a>
-      <p class="note">
-        A percentage of the book's sales is donated to help phpMyAdmin.
-      </p>
+    <div class="card-simple">
+      <h4>Mastering phpMyAdmin 3.4 for Effective MySQL Management</h4>
+      <div class="card-info">
+        <a class="card-image" href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-phpmyadmin-34-effective-mysql-management">
+          <img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" />
+        </a>
+        <p class="card-description">
+          A percentage of the book's sales is donated to help phpMyAdmin.
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h3>phpMyAdmin Starter</h3>
+    <div class="card-simple">
+      <h4>phpMyAdmin Starter</h4>
       <a class="pull-left img-margin" href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1">
         <img src="{% static 'images/books/pma_starter_150x184.jpg' %}" alt="Book cover" />
       </a>
-      <p class="note">
+      <p class="card-description">
         A percentage of the book's sales is donated to help phpMyAdmin.
       </p>
     </div>
 
-    <div>
+    <div class="card-simple">
       <h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
       <a class="pull-left img-margin" href="https://www.packtpub.com/web-development/mastering-phpmyadmin-211-effective-mysql-management">
         <img src="{% static 'images/books/pma_en_100x123.png' %}" alt="Book cover"  />
       </a>
-      <p class="note">
+      <p class="card-description">
         A percentage of the book's sales is donated to help phpMyAdmin.
       </p>
     </div>
 
-    <div>
+    <div class="card-simple">
       <h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
       <a class="pull-left img-margin" href="https://www.packtpub.com/web-development/dominar-phpmyadmin-para-una-administracion-efectiva-de-mysql-espanol">
         <img src="{% static 'images/books/pma_es_100x123.png' %}" alt="Book cover" />

@@ -3,195 +3,227 @@
 
 {% block content %}
 
-<h2>Team</h2>
+<div class="content">
+  <h2>Team</h2>
 
-<p>
-The phpMyAdmin development team is responsible for the development of phpMyAdmin
-and represents the project at various conferences. The project used <a
-href="https://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> services from
-2001 to 2015, with a transition to <a href="https://github.com/phpmyadmin">GitHub</a> 
-starting in 2012 and completed by 2015. You can find more about the <a href="{% url 'about' %}">project and its history</a>.
-</p>
+  <p>
+  The phpMyAdmin development team is responsible for the development of phpMyAdmin
+  and represents the project at various conferences. The project used <a
+  href="https://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> services from
+  2001 to 2015, with a transition to <a href="https://github.com/phpmyadmin">GitHub</a> 
+  starting in 2012 and completed by 2015. You can find more about the <a href="{% url 'about' %}">project and its history</a>.
+  </p>
 
-<p>
-You can contact the team on the <a href="mailto:developers@phpmyadmin.net">development 
-mailing list</a> (<a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">subscription and archives</a>).
-You can follow the developers blogs at 
-<a href="https://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
-</p>
+  <p>
+  You can contact the team on the <a href="mailto:developers@phpmyadmin.net">development 
+  mailing list</a> (<a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">subscription and archives</a>).
+  You can follow the developers blogs at 
+  <a href="https://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
+  </p>
 
-<div class="vcard" id="isaac">
-<h3 class="fn">Isaac Bennetch</h3>
-<h4>Project administrator, release coordinator</h4>
-<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/isaac.jpg' %}" alt="Photo of Isaac Bennetch" />
-<p>
-Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
-support and improving the documentation. He officially joined the development team in April, 2013. 
-Isaac enjoys being able to give back to the Open Source community and is thrilled to be a part of
-the <span class="org">phpMyAdmin</span> community.
-</p>
-<p>
-He lives in the <span class="adr"><span class="country">United States</span></span>.
-</p>
-</div>
+  <div class="card-simple vcard" id="isaac">
+    <h3 class="card-title">Isaac Bennetch</h3>
+    <span class="card-subtitle">Project administrator, release coordinator</span>
+    <div class="card-info">
+      <div class="card-image">
+        <img src="{% static 'images/heads/isaac.jpg' %}" alt="Photo of Isaac Bennetch" />
+      </div>      
+      <div class="card-description">
+        <p>
+        Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
+        support and improving the documentation. He officially joined the development team in April, 2013. 
+        Isaac enjoys being able to give back to the Open Source community and is thrilled to be a part of
+        the <span class="org">phpMyAdmin</span> community.
+        </p>
+        <p>
+        He lives in the <span class="adr"><span class="country">United States</span></span>.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<div class="vcard" id="deven">
-<h3 class="fn">Deven Bansod</h3>
-<h4>Developer</h4>
-<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/deven.jpg' %}" alt="Photo of Deven Bansod" />
-<p>
-Deven started contributing to <span class="org">phpMyAdmin</span> in January 2015 and participated in Google Summer of Code, 2015. He has worked on implementing several feature requests related to interface and usability improvement and continues to help out with bug fixes and testing out new features and patches.
-</p>
-<p>
-He is currently a computer science undergrad at BITS Pilani, <span class="country">India</span>.
-</p>
-</div>
+  <div class="card-simple vcard" id="deven">
+    <h3 class="card-title">Deven Bansod</h3>
+    <span class="card-subtitle">Developer</span>
+    <div class="card-info">
+      <div class="card-image">
+        <img src="{% static 'images/heads/deven.jpg' %}" alt="Photo of Deven Bansod" />
+      </div>
+      <div class="card-description">
+        <p>
+          Deven started contributing to <span class="org">phpMyAdmin</span> in January 2015 and participated in Google Summer of
+          Code, 2015. He has worked on implementing several feature requests related to interface and usability improvement and
+          continues to help out with bug fixes and testing out new features and patches.
+        </p>
+        <p>
+          He is currently a computer science undergrad at BITS Pilani, <span class="country">India</span>.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<div class="vcard" id="dan">
-<h3 class="fn">Dan Ungureanu</h3>
-<h4>Developer</h4>
-<p>
-Dan participated in Google Summer of Code 2015, where he implemented a new
-SQL parser.
-</p>
-</div>
+  <div class="card-simple vcard" id="dan">
+    <h3 class="card-title">Dan Ungureanu</h3>
+    <span class="card-subtitle">Developer</span>
+    <div class="card-info">
+      <div class="card-description">
+        <p>
+          Dan participated in Google Summer of Code 2015, where he implemented a new SQL parser.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<div class="vcard" id="mauricio">
-<h3 class="fn">Maurício Meneghini Fauth</h3>
-<h4>Developer</h4>
-<img class="pull-left img-rounded img-margin" src="{% static 'images/heads/mauricio.jpg' %}" alt="Photo of Maurício Meneghini Fauth" />
-<p>
-Maurício's early work with the team began by being instrumental in designing and implementing a
-change of how <span class="org">phpMyAdmin's</span> internal class structure works as well as spearheading the
-incorporation of the Twig template engine. He has quickly become familiar with the rest of the code base and has
-offered many ideas for modernizing certain aspects of the code. He joined the team in 2017 and lives in Brazil.
-</p>
-</div>
+  <div class="card-simple vcard" id="userid">
+    <h3 class="card-title">Maurício Meneghini Fauth</h3>
+    <span class="card-subtitle">Developer</span>
+    <div class="card-info">
+      <div class="card-image">
+        <img src="{% static 'images/heads/mauricio.jpg' %}" alt="Photo of Maurício Meneghini Fauth" />
+      </div>
+      <div class="card-description">
+        <p>
+          Maurício's early work with the team began by being instrumental in designing and implementing a
+          change of how <span class="org">phpMyAdmin's</span> internal class structure works as well as spearheading the
+          incorporation of the Twig template engine. He has quickly become familiar with the rest of the code base and has
+          offered many ideas for modernizing certain aspects of the code. He joined the team in 2017 and lives in Brazil.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<div class="vcard" id="william">
-<h3 class="fn">William Desportes</h3>
-<h4>Developer</h4>
-<p>
-While doing application development, William used phpMyAdmin nearly every day and was attracted to the phpMyAdmin
-project as a way to give back to the community and so that others can have a great tool to use as they learn the first steps of programming
-with databases. One of his passions is to lower the barrier so new contributors can feel comfortable submitting a new pull request and he
-enjoys coaching prospective contributors through seeing their work merged. William lives in France.
-</p>
-</div>
+  <div class="card-simple vcard" id="william">
+    <h3 class="card-title">William Desportes</h3>
+    <span class="card-subtitle">Developer</span>
+    <div class="card-info">
+      <div class="card-description">
+        <p>
+          While doing application development, William used phpMyAdmin nearly every day and was attracted to the phpMyAdmin
+          project as a way to give back to the community and so that others can have a great tool to use as they learn the first
+          steps of programming
+          with databases. One of his passions is to lower the barrier so new contributors can feel comfortable submitting a new
+          pull request and he
+          enjoys coaching prospective contributors through seeing their work merged. William lives in France.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<h2>Team meetings</h2>
 
-<p>
-We would like to meet other members of the team more often; so far only a few
-team meetings in real life have happened.
-</p>
-<p>The first one was at a big party in Karlsruhe, Germany for the 10th anniversary
-of PHP and MySQL at the <a href="https://www.linuxtag.org/2005">LinuxTag</a> 2005
-LAMP Area, with some special guests.
-</p>
-<p>The second meeting took place in Brussels, Belgium during 
-<a href="https://fosdem.org/2010">FOSDEM 2010</a>. Marc Delisle talked
-about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
-</p>
-<p>The third meeting took place in Brussels, Belgium during 
-<a href="https://fosdem.org/2012">FOSDEM 2012</a>. The team talked about
-future directions for the project.
-</p>
-<p>The fourth meeting took place in Vaumarcus, Switzerland during
-<a href="https://debconf13.debconf.org/">Debconf13</a>. The team did
-a <a href="https://www.irill.org/videos/debconf13/phpMyAdmin_tutorial.html">tutorial</a>
-showing basic and more advanced features of phpMyAdmin.
-</p>
-<p>During <a href="https://linuxtag.org/2014/en">LinuxTag 2014</a> in Berlin, Germany, our project was an exhibitor and we held our fifth team meeting.
-</p>
-<p>The sixth team meeting was held during <a href="https://fosdem.org/2015">FOSDEM 2015</a>. We also attended a community dinner for the 20th anniversary of MySQL.</p>
-<p>A few members of the phpMyAdmin team were able to gather at <a href="https://debconf16.debconf.org">DebConf16</a> in Cape Town, South Africa. The team members met with the Debian developers, attended educational talks, and promoted the project.</p>
-<p>Team members met again at <a href="https://debconf17.debconf.org/">DebConf17</a> in Montréal, Canada. In addition to bugfixing and meeting to discuss a roadmap for future plans,
-team members also had the pleasure of reuniting with past member Marc Delisle who spent many years as project maintainer.
-</p>
 
-<div class="row images">
+  <h2>Team meetings</h2>
+  <p>
+  We would like to meet other members of the team more often; so far only a few
+  team meetings in real life have happened.
+  </p>
+  <p>The first one was at a big party in Karlsruhe, Germany for the 10th anniversary
+  of PHP and MySQL at the <a href="https://www.linuxtag.org/2005">LinuxTag</a> 2005
+  LAMP Area, with some special guests.
+  </p>
+  <p>The second meeting took place in Brussels, Belgium during 
+  <a href="https://fosdem.org/2010">FOSDEM 2010</a>. Marc Delisle talked
+  about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
+  </p>
+  <p>The third meeting took place in Brussels, Belgium during 
+  <a href="https://fosdem.org/2012">FOSDEM 2012</a>. The team talked about
+  future directions for the project.
+  </p>
+  <p>The fourth meeting took place in Vaumarcus, Switzerland during
+  <a href="https://debconf13.debconf.org/">Debconf13</a>. The team did
+  a <a href="https://www.irill.org/videos/debconf13/phpMyAdmin_tutorial.html">tutorial</a>
+  showing basic and more advanced features of phpMyAdmin.
+  </p>
+  <p>During <a href="https://linuxtag.org/2014/en">LinuxTag 2014</a> in Berlin, Germany, our project was an exhibitor and we held our fifth team meeting.
+  </p>
+  <p>The sixth team meeting was held during <a href="https://fosdem.org/2015">FOSDEM 2015</a>. We also attended a community dinner for the 20th anniversary of MySQL.</p>
+  <p>A few members of the phpMyAdmin team were able to gather at <a href="https://debconf16.debconf.org">DebConf16</a> in Cape Town, South Africa. The team members met with the Debian developers, attended educational talks, and promoted the project.</p>
+  <p>Team members met again at <a href="https://debconf17.debconf.org/">DebConf17</a> in Montréal, Canada. In addition to bugfixing and meeting to discuss a roadmap for future plans,
+  team members also had the pleasure of reuniting with past member Marc Delisle who spent many years as project maintainer.
+  </p>
+
+  <div class="row images">
+    <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/linuxtag/IMG_4187.JPG' %}"
+      class="thumbnail colorbox" title="2005 team with Rasmus (PHP) - Marc Delisle, Olivier Müller, Alexander M. Turek, Rasmus Lerdorf, Garvin Hicking, Michal Čihař, Robin Johnson">
+          <img src="{% static 'images/linuxtag/IMG_4187_tn.JPG' %}"
+          alt="phpMyAdmin team with Rasmus (PHP)" />
+      </a>
+  </div>
+
   <div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/linuxtag/IMG_4187.JPG' %}"
-    class="thumbnail colorbox" title="2005 team with Rasmus (PHP) - Marc Delisle, Olivier Müller, Alexander M. Turek, Rasmus Lerdorf, Garvin Hicking, Michal Čihař, Robin Johnson">
-        <img src="{% static 'images/linuxtag/IMG_4187_tn.JPG' %}"
-        alt="phpMyAdmin team with Rasmus (PHP)" />
-    </a>
+      <a href="{% static 'images/linuxtag/IMG_4189.JPG' %}"
+      class="thumbnail colorbox" title="2005 team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
+          <img src="{% static 'images/linuxtag/IMG_4189_tn.JPG' %}"
+          alt="phpMyAdmin team with Monty (MySQL)" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/fosdem-2010/fosdem-2010-med.jpg' %}"
+      class="thumbnail colorbox" title="2010 team - Marc Delisle, Robin H. Johnson, Herman van Rink, Michal Čihař, Alexander M. Turek">
+          <img src="{% static 'images/fosdem-2010/fosdem-2010-tn.jpg' %}"
+          alt="phpMyAdmin team at FOSDEM 2010" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/fosdem-2012/fosdem-2012-med.jpg' %}"
+      class="thumbnail colorbox" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (not in the picture: Michal Čihař)">
+          <img src="{% static 'images/fosdem-2012/fosdem-2012-tn.jpg' %}"
+          alt="phpMyAdmin team at FOSDEM 2012" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/debconf-2013/debconf-2013-med.jpg' %}"
+      class="thumbnail colorbox" title="2013 team - Rouslan Placella, Dieter Adriaenssens, Chanaka Dharmarathna, Isaac Bennetch, Madhura Jayaratne, Marc Delisle, Michal Čihař">
+          <img src="{% static 'images/debconf-2013/debconf-2013-tn.jpg' %}"
+          alt="phpMyAdmin team at DebConf 2013" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/linuxtag/2014/linuxtag-2014-team-photo.jpg' %}"
+      class="thumbnail colorbox" title="2014 team - Chanaka Dharmarathna, J.M., Madhura Jayaratne, Michal Čihař, Marc Delisle, Atul Pratap Singh, Isaac Bennetch">
+          <img src="{% static 'images/linuxtag/2014/linuxtag-2014-team-photo_tn.jpg' %}"
+          alt="phpMyAdmin team at LinuxTag 2014 in Berlin" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/fosdem-2015/fosdem-2015-med.jpg' %}"
+      class="thumbnail colorbox" title="2015 team meeting - Chirayu Chiripal, Smita Kumari, Marc Delisle, Hugues Peccatte, Atul Pratap Singh">
+          <img src="{% static 'images/fosdem-2015/fosdem-2015-tn.jpg' %}"
+          alt="phpMyAdmin team at FOSDEM 2015 in Brussels" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/debconf-2016/debconf-2016-med.jpg' %}"
+      class="thumbnail colorbox" title="2016 team meeting - Madhura Jayaratne, Deven Bansod">
+          <img src="{% static 'images/debconf-2016/debconf-2016-tn.jpg' %}"
+          alt="phpMyAdmin team at Debian Conference 2016 in Cape Town" />
+      </a>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="{% static 'images/debconf-2017/debconf-2017-med.jpg' %}"
+      class="thumbnail colorbox" title="2017 team meeting - Madhura Jayaratne, Marc Delisle, Michal Cihar, Deven Bansod">
+          <img src="{% static 'images/debconf-2017/debconf-2017-tn.jpg' %}"
+          alt="phpMyAdmin team at Debian Conference 2017 in Montreal" />
+      </a>
+  </div>
+  </div>
+
+
+  <h2>Contributors</h2>
+
+  <p>
+  We'd like to thank all the developers and contributors,
+  who have contributed to the success of phpMyAdmin over the years.
+  A full list is maintained in the <a
+  href="https://phpmyadmin.readthedocs.org/en/latest/credits.html">documentation</a>.
+  </p>
 </div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/linuxtag/IMG_4189.JPG' %}"
-    class="thumbnail colorbox" title="2005 team with Monty (MySQL) - Michal Čihař, Marc Delisle, Olivier Müller, Garvin Hicking, Michael Widenius (Monty), Alexander M. Turek, Robin Johnson">
-        <img src="{% static 'images/linuxtag/IMG_4189_tn.JPG' %}"
-        alt="phpMyAdmin team with Monty (MySQL)" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/fosdem-2010/fosdem-2010-med.jpg' %}"
-    class="thumbnail colorbox" title="2010 team - Marc Delisle, Robin H. Johnson, Herman van Rink, Michal Čihař, Alexander M. Turek">
-        <img src="{% static 'images/fosdem-2010/fosdem-2010-tn.jpg' %}"
-        alt="phpMyAdmin team at FOSDEM 2010" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/fosdem-2012/fosdem-2012-med.jpg' %}"
-    class="thumbnail colorbox" title="2012 team - Rouslan Placella, Madhura Jayaratne, Marc Delisle, Dieter Adriaenssens (not in the picture: Michal Čihař)">
-        <img src="{% static 'images/fosdem-2012/fosdem-2012-tn.jpg' %}"
-        alt="phpMyAdmin team at FOSDEM 2012" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/debconf-2013/debconf-2013-med.jpg' %}"
-    class="thumbnail colorbox" title="2013 team - Rouslan Placella, Dieter Adriaenssens, Chanaka Dharmarathna, Isaac Bennetch, Madhura Jayaratne, Marc Delisle, Michal Čihař">
-        <img src="{% static 'images/debconf-2013/debconf-2013-tn.jpg' %}"
-        alt="phpMyAdmin team at DebConf 2013" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/linuxtag/2014/linuxtag-2014-team-photo.jpg' %}"
-    class="thumbnail colorbox" title="2014 team - Chanaka Dharmarathna, J.M., Madhura Jayaratne, Michal Čihař, Marc Delisle, Atul Pratap Singh, Isaac Bennetch">
-        <img src="{% static 'images/linuxtag/2014/linuxtag-2014-team-photo_tn.jpg' %}"
-        alt="phpMyAdmin team at LinuxTag 2014 in Berlin" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/fosdem-2015/fosdem-2015-med.jpg' %}"
-    class="thumbnail colorbox" title="2015 team meeting - Chirayu Chiripal, Smita Kumari, Marc Delisle, Hugues Peccatte, Atul Pratap Singh">
-        <img src="{% static 'images/fosdem-2015/fosdem-2015-tn.jpg' %}"
-        alt="phpMyAdmin team at FOSDEM 2015 in Brussels" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/debconf-2016/debconf-2016-med.jpg' %}"
-    class="thumbnail colorbox" title="2016 team meeting - Madhura Jayaratne, Deven Bansod">
-        <img src="{% static 'images/debconf-2016/debconf-2016-tn.jpg' %}"
-        alt="phpMyAdmin team at Debian Conference 2016 in Cape Town" />
-    </a>
-</div>
-
-<div class="col-xs-6 col-md-3">
-    <a href="{% static 'images/debconf-2017/debconf-2017-med.jpg' %}"
-    class="thumbnail colorbox" title="2017 team meeting - Madhura Jayaratne, Marc Delisle, Michal Cihar, Deven Bansod">
-        <img src="{% static 'images/debconf-2017/debconf-2017-tn.jpg' %}"
-        alt="phpMyAdmin team at Debian Conference 2017 in Montreal" />
-    </a>
-</div>
-</div>
-
-
-<h2>Contributors</h2>
-
-<p>
-We'd like to thank all the developers and contributors,
-who have contributed to the success of phpMyAdmin over the years.
-A full list is maintained in the <a
-href="https://phpmyadmin.readthedocs.org/en/latest/credits.html">documentation</a>.
-</p>
     
 {% endblock %}

@@ -2,24 +2,25 @@
 {% load staticfiles %}
 
 {% block content %}
-
-{% for award in awards %}
-    <div class="row">
-      <div class="col-md-3 text-center">
-        <a href="{{award.link}}"><img class="img-margin" src="{% static award.image %}" alt="{{award.title}}" /></a>
+<div class="content">
+  {% for award in awards %}
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <a href="{{award.link}}"><img class="img-margin" src="{% static award.image %}" alt="{{award.title}}" /></a>
+        </div>
+        <div class="col-md-9">
+          {% autoescape off %}{{award.text}}{% endautoescape %}
+          {% if award.photos %}
+          <p>Photos:
+          {% for photo in award.photos %}
+          <span>
+          <a href="{% static photo.0 %}" class="colorbox" title="{{photo.2}}">{{photo.1}}</a>
+          </span>
+          {% endfor %}
+          </p>
+          {% endif %}
+        </div>
       </div>
-      <div class="col-md-9">
-        {% autoescape off %}{{award.text}}{% endautoescape %}
-        {% if award.photos %}
-        <p>Photos:
-        {% for photo in award.photos %}
-        <span>
-        <a href="{% static photo.0 %}" class="colorbox" title="{{photo.2}}">{{photo.1}}</a>
-        </span>
-        {% endfor %}
-        </p>
-        {% endif %}
-      </div>
-    </div>
-{% endfor %}
+  {% endfor %}
+</div>
 {% endblock %}

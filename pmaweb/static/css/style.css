@@ -358,6 +358,33 @@ button {
   color: var(--color-gray-300);
 }
 
+/* Card - Simple */
+.card-simple {
+  margin-bottom: 1rem;
+}
+
+.card-simple h3 {
+  margin-bottom: 0;
+}
+
+.card-simple .card-subtitle {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+
+.card-simple .card-info {
+  display: flex;
+}
+
+.card-simple .card-info .card-image {
+  margin-right: 1rem;
+}
+
+.card-simple .card-description p {
+  margin-top: 0;
+}
+
 /* Cards - List */
 .card-list {
   display: inline-block;

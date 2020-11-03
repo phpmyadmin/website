@@ -3,76 +3,76 @@
 
 {% block content %}
 <div class="content">
-<h2>Themes</h2>
-<p>
-phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
-with all phpMyAdmin versions; you should select below which version you are
-using.
-</p>
-<p>
-Please note that themes contain PHP code and you should download them only
-from trusted servers. All themes available on this page have been checked by
-phpMyAdmin team members.
-</p>
-<p>
-To install a theme, unzip your downloaded theme into the directory /themes/ of
-your phpMyAdmin folder. When you open phpMyAdmin, you should be able to select the theme.
-Please read the documentation for more details.
-</p>
-<p>
-You can try the themes in action on our <a
-href="{% url 'try' %}">demo server</a>.
-</p>
+  <h2>Themes</h2>
+  <p>
+  phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
+  with all phpMyAdmin versions; you should select below which version you are
+  using.
+  </p>
+  <p>
+  Please note that themes contain PHP code and you should download them only
+  from trusted servers. All themes available on this page have been checked by
+  phpMyAdmin team members.
+  </p>
+  <p>
+  To install a theme, unzip your downloaded theme into the directory /themes/ of
+  your phpMyAdmin folder. When you open phpMyAdmin, you should be able to select the theme.
+  Please read the documentation for more details.
+  </p>
+  <p>
+  You can try the themes in action on our <a
+  href="{% url 'try' %}">demo server</a>.
+  </p>
 
-{% include "components/_verify.html" %}
+  {% include "components/_verify.html" %}
 
-<h2>Submit Theme</h2>
-<p>
-You've made a new theme and you want to share it?  Please send your pull
-request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.com/phpmyadmin/themes/pulls</a>. The team will check and prepare your theme for downloading here.
-</p>
+  <h2>Submit Theme</h2>
+  <p>
+  You've made a new theme and you want to share it?  Please send your pull
+  request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.com/phpmyadmin/themes/pulls</a>. The team will check and prepare your theme for downloading here.
+  </p>
 
-<h2>Available Themes</h2>
-<p>Select your phpMyAdmin version:
+  <h2>Available Themes</h2>
+  <p>Select your phpMyAdmin version:
 
-<!-- TODO: Fix nav pills -->
-<ul class="nav nav-pills">
-{% for css in themecssversions %}
-<li class="nav-item" role="presentation">
-<a class="nav-link themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
-</li>
-{% endfor %}
-</ul>
-</p>
-{% for theme in themes %}
-<div class="card mb-4 themediv {{theme.get_css}}">
-  <div class="card-header">
-    <h3 class="card-title">{{ theme }}</h3>
-  </div>
-  <div class="card-body">
-            <div class="pull-right thumbnail">
-                <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
-                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
-                </a>
-            </div>
-            <p>Released on {{theme.date|date:"Y-m-d"}}</p>
-            <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
-            {% if theme.author %}
-            {% if theme.url %}
-            <p>Author: <a href="{{ theme.url }}">{{theme.author}}</a></p>
-            {% else %}
-            <p>Author: {{theme.author}}</p>
-            {% endif %}
-            {% endif %}
-            <p>{{ theme.description }}</p>
-
-            {% include 'components\_dltable.html' with download_item=theme %}
+  <!-- TODO: Fix nav pills -->
+  <ul class="nav nav-pills">
+  {% for css in themecssversions %}
+  <li class="nav-item" role="presentation">
+  <a class="nav-link themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
+  </li>
+  {% endfor %}
+  </ul>
+  </p>
+  {% for theme in themes %}
+  <div class="card mb-4 themediv {{theme.get_css}}">
+    <div class="card-header">
+      <h3 class="card-title">{{ theme }}</h3>
     </div>
-</div>
-{% endfor %}
+    <div class="card-body">
+              <div class="pull-right thumbnail">
+                  <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
+                      <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
+                  </a>
+              </div>
+              <p>Released on {{theme.date|date:"Y-m-d"}}</p>
+              <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
+              {% if theme.author %}
+              {% if theme.url %}
+              <p>Author: <a href="{{ theme.url }}">{{theme.author}}</a></p>
+              {% else %}
+              <p>Author: {{theme.author}}</p>
+              {% endif %}
+              {% endif %}
+              <p>{{ theme.description }}</p>
 
-<h2>Support for themes</h2>
+              {% include 'components\_dltable.html' with download_item=theme %}
+      </div>
+  </div>
+  {% endfor %}
 
-<p>Themes are provided by third parties and the phpMyAdmin team does not provide any support for them, please contact original authors for improvements or security fixes.</p>
+  <h2>Support for themes</h2>
+
+  <p>Themes are provided by third parties and the phpMyAdmin team does not provide any support for them, please contact original authors for improvements or security fixes.</p>
 </div>
 {% endblock %}
