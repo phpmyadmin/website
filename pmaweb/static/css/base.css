@@ -87,6 +87,10 @@ body {
   padding: 0;
 }
 
+main {
+  min-height: calc(100vh - 70px - 80px); /* (100% - header - footer) */
+}
+
 a {
   text-decoration: none;
 }
@@ -101,6 +105,10 @@ a:visited {
   color: var(--color-link-default);
 }
 
+p {
+  margin-top: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -109,9 +117,13 @@ h4 {
   padding: 0;
 }
 
-p {
-  margin-top: 1rem;
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+  margin-top: 0;
 }
+
 
 h2 {
   margin-top: 1rem;

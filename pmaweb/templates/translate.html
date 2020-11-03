@@ -3,68 +3,70 @@
 
 {% block content %}
 
-<h2>Translating phpMyAdmin</h2>
+<div class="content">
+  <h2>Translating phpMyAdmin</h2>
 
-<p>
-For localization, phpMyAdmin uses Gettext; you can find po files for each
-translation in the <code>po</code> directory in phpMyAdmin sources. You can
-translate them using the usual tools for handling Gettext translations or use our
-<a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>.
-</p>
+  <p>
+  For localization, phpMyAdmin uses Gettext; you can find po files for each
+  translation in the <code>po</code> directory in phpMyAdmin sources. You can
+  translate them using the usual tools for handling Gettext translations or use our
+  <a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>.
+  </p>
 
-<p>
-The phpMyAdmin's documentation is being translated using Sphinx and gettext (see
-<a href="{% url 'docs' %}">documentation</a> for existing
-translations) and the process here is pretty much the same as translating
-phpMyAdmin itself.
-</p>
+  <p>
+  The phpMyAdmin's documentation is being translated using Sphinx and gettext (see
+  <a href="{% url 'docs' %}">documentation</a> for existing
+  translations) and the process here is pretty much the same as translating
+  phpMyAdmin itself.
+  </p>
 
-<p>
-It would be a good idea to subscribe to the <a
-href="https://lists.phpmyadmin.net/mailman/listinfo/translators">phpmyadmin-translators</a>
-mailing list, because this is where we ask for translations of new messages.
-</p>
+  <p>
+  It would be a good idea to subscribe to the <a
+  href="https://lists.phpmyadmin.net/mailman/listinfo/translators">phpmyadmin-translators</a>
+  mailing list, because this is where we ask for translations of new messages.
+  </p>
 
-<h3>Using translation server</h3>
+  <h3>Using translation server</h3>
 
-<p>
-The <a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a> 
-includes various subprojects, you should always focus on
-the latest stable branch. Once this one is complete you might want to continue
-translating <code>master</code> branch (which stands for the current development branch)
-or documentation. The changes are automatically propagated, so you don't have 
-to fear having to translate a message more than once.
-</p>
+  <p>
+  The <a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a> 
+  includes various subprojects, you should always focus on
+  the latest stable branch. Once this one is complete you might want to continue
+  translating <code>master</code> branch (which stands for the current development branch)
+  or documentation. The changes are automatically propagated, so you don't have 
+  to fear having to translate a message more than once.
+  </p>
 
-<h3>Offline translating</h3>
+  <h3>Offline translating</h3>
 
-<p>
-As phpMyAdmin uses standard Gettext files, you can use your favorite editor to
-edit them. There are various editors for translations which you can use for
-offline translating.
-</p>
+  <p>
+  As phpMyAdmin uses standard Gettext files, you can use your favorite editor to
+  edit them. There are various editors for translations which you can use for
+  offline translating.
+  </p>
 
-<p>
-You can download po files either directly from Git (see 
-<a href="{% url 'develop' %}">developer instructions for more
-details</a>) or use the <a
-href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>,
-which allows you to directly download the latest po file of the desired version.
-</p>
+  <p>
+  You can download po files either directly from Git (see 
+  <a href="{% url 'develop' %}">developer instructions for more
+  details</a>) or use the <a
+  href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>,
+  which allows you to directly download the latest po file of the desired version.
+  </p>
 
-<p>
-To submit your changes, you can either use the <a
-href="https://github.com/phpmyadmin/phpmyadmin/issues">issue 
-tracker at GitHub</a> or the <a
-href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>,
-which can merge back your changed po file to the existing sources.
-</p>
+  <p>
+  To submit your changes, you can either use the <a
+  href="https://github.com/phpmyadmin/phpmyadmin/issues">issue 
+  tracker at GitHub</a> or the <a
+  href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>,
+  which can merge back your changed po file to the existing sources.
+  </p>
 
-<h3>More information</h3>
+  <h3>More information</h3>
 
-<p>
-You can find more information on <a
-href="https://wiki.phpmyadmin.net/pma/Translating">our wiki</a>.
-</p>
+  <p>
+  You can find more information on <a
+  href="https://wiki.phpmyadmin.net/pma/Translating">our wiki</a>.
+  </p>
+</div>
 
 {% endblock %}
