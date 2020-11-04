@@ -38,6 +38,7 @@ import django.contrib.sitemaps.views
 
 TRANSLATIONS_RSS = 'https://hosted.weblate.org/exports/rss/phpmyadmin/'
 
+# TODO: Handle custom error pages: https://github.com/phpmyadmin/website/issues/30
 handler404 = 'pmaweb.views.notfound'
 
 urlpatterns = [
