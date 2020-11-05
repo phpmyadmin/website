@@ -1,7 +1,7 @@
-<ul>
-{% for demo in demos %}
-<li>
-<a href="{{ demo.get_absolute_url }}">{{ demo.get_description }}</a>
-</li>
-{% endfor %}
+<ul class="card-list">
+  {% for demo in demos %}
+    <li>
+      <a href="{{ demo.get_absolute_url }}">{{ demo.get_description }}</a>
+    </li>
+  {% endfor %}    
 </ul>
