@@ -15,9 +15,14 @@
   overflow: auto;
 }
 
+.content-row .col-centered {
+  text-align: center;
+}
+
 /* A bit different from Bootstrap approach, but easily to remember.
 * If you need more than 1 column on screen, you can split with `<div class="content content-row">` in the parent
 * And use some of column combinations below in child column to create your screen. The columns are in percent, totalizing 9, from 10% to 90% wide.
+* If you need a 100% column, you doesn't need `.content-row` class. ¯\_(ツ)_/¯
 */
 .content-row .col-md-1 {
   width: calc(10% - 2rem);
@@ -46,7 +51,7 @@
 .content-row .col-md-9 {
   width: calc(90% - 2rem);
 }
-/* if you need 100%, you doesn't need .content-row class! */
+/* if you need 100%, you doesn't need `.content-row` approach! */
 
 
 /* Navbar */
@@ -429,6 +434,12 @@ button {
 
 .card-list-side li {
   display: inline-block;
+}
+
+.award-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Accordion */
