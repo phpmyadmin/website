@@ -192,7 +192,3 @@ code:empty {
 .table .td-size {
   text-align: right;
 }
-
-.select-all {
-  user-select: all;
-}

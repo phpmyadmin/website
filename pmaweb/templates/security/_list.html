@@ -1,7 +1,7 @@
 <div class="col-md-3">
   <h2>Announcements</h2>
 
-  <!-- {% regroup pmasas by year as pmasa_list %}
+  {% regroup pmasas by year as pmasa_list %}
   <div class="accordion" id="announcementsAccordion">
     {% for year in pmasa_list %}
     <div class="accordion-item">
@@ -11,44 +11,12 @@
           <span class="badge badge-primary">{{ year.list|length }}</span>
         </button>
       </div>
-      <div id="collapse{{ year.grouper }}" class="accordion-list isHidden{% if year.grouper == pmasa_year %} isVisible{% endif %}" aria-labelledby="heading{{ year.grouper }}" data-parent="#announcementsAccordion">
-        <div class="list-group">
+      <div id="collapse{{ year.grouper }}" class="accordion-list is-hidden{% if year.grouper == pmasa_year %} isVisible{% endif %}" aria-labelledby="heading{{ year.grouper }}" data-parent="#announcementsAccordion">
         {% for item in year.list %}
-          <a href="{{ item.get_absolute_url }}" class="list-group-item list-group-item-action{% if pmasa == item %} active{% endif %}">{{ item }}</a>
+          <a href="{{ item.get_absolute_url }}" class="accordion-list-item{% if pmasa == item %} accordion-list-item-isActive{% endif %}">{{ item }}</a>
         {% endfor %}
-        </div>
       </div>
     </div>
     {% endfor %}
-  </div>-->
-
-  <div class="accordion" id="announcementsAccordion">  
-    <div class="accordion-item">
-      <div class="accordion-header" id="heading2020">
-        <button class="btn btn-link" type="button" data-toggle="collapse"
-          data-target="#collapse2020" aria-expanded="true" aria-controls="collapse2020">
-          2020
-          <span class="badge badge-primary">6</span>
-        </h2>
-      </div>
-      <div id="collapse2020" class="accordion-list isHidden isVisible" aria-labelledby="heading2020" data-parent="#announcementsAccordion">
-        <div class="list-group list-group-flush">
-  
-          <a href="/security/PMASA-2020-6/" class="list-group-item list-group-item-action">PMASA-2020-6</a>
-  
-          <a href="/security/PMASA-2020-5/" class="list-group-item list-group-item-action">PMASA-2020-5</a>
-  
-          <a href="/security/PMASA-2020-4/" class="list-group-item list-group-item-action">PMASA-2020-4</a>
-  
-          <a href="/security/PMASA-2020-3/" class="list-group-item list-group-item-action">PMASA-2020-3</a>
-  
-          <a href="/security/PMASA-2020-2/" class="list-group-item list-group-item-action">PMASA-2020-2</a>
-  
-          <a href="/security/PMASA-2020-1/" class="list-group-item list-group-item-action">PMASA-2020-1</a>
-  
-        </div>
-      </div>
-    </div>
-  
   </div>
 </div>
