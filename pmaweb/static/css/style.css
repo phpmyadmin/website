@@ -554,6 +554,34 @@ button {
   color: var(--color-yellow-200);
 }
 
+/* Nav Nav-pills */
+.nav-pills {
+  display: flex;
+  width: max-content;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.nav-pills .nav-link {
+  padding: 1rem 1.5rem;
+  color: var(--color-text-default);
+}
+
+.nav-pills .nav-link:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #ccc;
+}
+
+.nav-pills .nav-link.is-active {
+  background-color: var(--brand-primary);
+  color: #fff;
+}
+
+
+
 
 /* Footer */
 footer {

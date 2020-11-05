@@ -1,19 +1,19 @@
 
-<table class="table table-condensed table-striped">
-<thead>
+<table class="table">
+  <thead>
     <tr>
-        <th>File</th>
-        <th>Size</th>
-        <th>Verification</th>
+      <th>File</th>
+      <th class="td-size">Size</th>
+      <th>Verification</th>
     </tr>
-</thead>
-<tbody>
-{% for file in download_list %}
-{% include 'components\_dlrow.html' %}
-{% endfor %}
-{% if download_item %}
-{% include 'components\_dlrow.html' with file=download_item%}
-{% endif %}
-</tbody>
+  </thead>
+  <tbody>
+  {% for file in download_list %}
+    {% include 'components\_dlrow.html' %}
+  {% endfor %}
+  {% if download_item %}
+    {% include 'components\_dlrow.html' with file=download_item%}
+  {% endif %}
+  </tbody>
 </table> 
 

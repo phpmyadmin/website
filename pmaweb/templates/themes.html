@@ -33,43 +33,41 @@
   </p>
 
   <h2>Available Themes</h2>
-  <p>Select your phpMyAdmin version:
+  <p>Select your phpMyAdmin version:</p>
+  <nav class="nav-pills">
+    {% for css in themecssversions %}
+      <a class="nav-link themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}" role="presentation">{{css.name}}</a>
+    {% endfor %}
+  </nav>
 
-  <!-- TODO: Fix nav pills -->
-  <ul class="nav nav-pills">
-  {% for css in themecssversions %}
-  <li class="nav-item" role="presentation">
-  <a class="nav-link themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
-  </li>
-  {% endfor %}
-  </ul>
-  </p>
-  {% for theme in themes %}
-  <div class="card mb-4 themediv {{theme.get_css}}">
-    <div class="card-header">
-      <h3 class="card-title">{{ theme }}</h3>
-    </div>
-    <div class="card-body">
-              <div class="pull-right thumbnail">
-                  <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
-                      <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
-                  </a>
-              </div>
-              <p>Released on {{theme.date|date:"Y-m-d"}}</p>
-              <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
-              {% if theme.author %}
-              {% if theme.url %}
-              <p>Author: <a href="{{ theme.url }}">{{theme.author}}</a></p>
-              {% else %}
-              <p>Author: {{theme.author}}</p>
-              {% endif %}
-              {% endif %}
-              <p>{{ theme.description }}</p>
-
-              {% include 'components\_dltable.html' with download_item=theme %}
+  <div>
+    {% for theme in themes %}
+    <div class="card-bordered themediv {{theme.get_css}}">
+      <div class="card-header">
+        <h3 class="card-title">{{ theme }}</h3>
       </div>
+      <div class="card-body">
+        <div class="thumbnail">
+            <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
+                <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
+            </a>
+        </div>
+        <p>Released on {{theme.date|date:"Y-m-d"}}</p>
+        <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
+        {% if theme.author %}
+          {% if theme.url %}
+            <p>Author: <a href="{{ theme.url }}">{{theme.author}}</a></p>
+          {% else %}
+            <p>Author: {{theme.author}}</p>
+          {% endif %}
+        {% endif %}
+        <p>{{ theme.description }}</p>
+
+        {% include 'components\_dltable.html' with download_item=theme %}
+        </div>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 
   <h2>Support for themes</h2>
 
