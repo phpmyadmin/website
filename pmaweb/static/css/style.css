@@ -601,6 +601,7 @@ button {
 .alert {
   padding: 2rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   border-left: 4px solid;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -640,7 +641,6 @@ button {
 .alert.alert-warning {
   background: var(--alert-warning);
   border-color: var(--color-yellow-200);
-  color: #FFFFFF;
 }
 
 .alert.alert-warning h4 {

@@ -71,6 +71,10 @@ body {
   flex-direction: column;
 }
 
+.hero-description-actions {
+  margin-top: 2rem;
+}
+
 .sponsor-list a.link-external {
   margin-bottom: 1rem;
 }
