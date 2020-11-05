@@ -11,41 +11,43 @@
 .content-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   overflow: auto;
 }
 
 /* A bit different from Bootstrap approach, but easily to remember.
 * If you need more than 1 column on screen, you can split with `<div class="content content-row">` in the parent
-* And use some of column combinations below in child column to create your screen.
+* And use some of column combinations below in child column to create your screen. The columns are in percent, totalizing 9, from 10% to 90% wide.
 */
 .content-row .col-md-1 {
-  width: 10%;
+  width: calc(10% - 2rem);
 }
 .content-row .col-md-2 {
-  width: 20%;
+  width: calc(20% - 2rem);
 }
 .content-row .col-md-3 {
-  width: 30%;
+  width: calc(30% - 2rem);
 }
 .content-row .col-md-4 {
-  width: 40%;
+  width: calc(40% - 2rem);
 }
 .content-row .col-md-5 {
-  width: 50%;
+  width: calc(50% - 2rem);
 }
 .content-row .col-md-6 {
-  width: 60%;
+  width: calc(60% - 2rem);
 }
 .content-row .col-md-7 {
-  width: 70%;
+  width: calc(70% - 2rem);
 }
 .content-row .col-md-8 {
-  width: 80%;
+  width: calc(80% - 2rem);
 }
 .content-row .col-md-9 {
-  width: 90%;
+  width: calc(90% - 2rem);
 }
 /* if you need 100%, you doesn't need .content-row class! */
+
 
 /* Navbar */
 .navbar-toggler {
@@ -427,6 +429,11 @@ button {
 
 .card-list-side li {
   display: inline-block;
+}
+
+/* Accordion */
+.accordion {
+  overflow: hidden;
 }
 
 /* Alert */

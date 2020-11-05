@@ -1,21 +1,18 @@
 <div class="col-md-3">
   <h2>Announcements</h2>
 
-  {% regroup pmasas by year as pmasa_list %}
-  <!-- TODO: Fix this layout -->
+  <!-- {% regroup pmasas by year as pmasa_list %}
   <div class="accordion" id="announcementsAccordion">
     {% for year in pmasa_list %}
-    <div class="card">
-      <div class="card-header" id="heading{{ year.grouper }}">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left{% if year.grouper != pmasa_year %} collapsed{% endif %}" type="button" data-toggle="collapse" data-target="#collapse{{ year.grouper }}" aria-expanded="{% if year.grouper == pmasa_year %}true{% else %}false{% endif %}" aria-controls="collapse{{ year.grouper }}">
-            {{ year.grouper }}
-            <span class="badge badge-dark float-right">{{ year.list|length }}</span>
-          </button>
-        </h2>
+    <div class="accordion-item">
+      <div class="accordion-header" id="heading{{ year.grouper }}">
+        <button class="btn btn-link {% if year.grouper != pmasa_year %} collapsed{% endif %}" type="button" data-toggle="collapse" data-target="#collapse{{ year.grouper }}" aria-expanded="{% if year.grouper == pmasa_year %}true{% else %}false{% endif %}" aria-controls="collapse{{ year.grouper }}">
+          {{ year.grouper }}
+          <span class="badge badge-primary">{{ year.list|length }}</span>
+        </button>
       </div>
-      <div id="collapse{{ year.grouper }}" class="collapse{% if year.grouper == pmasa_year %} show{% endif %}" aria-labelledby="heading{{ year.grouper }}" data-parent="#announcementsAccordion">
-        <div class="list-group list-group-flush">
+      <div id="collapse{{ year.grouper }}" class="accordion-list isHidden{% if year.grouper == pmasa_year %} isVisible{% endif %}" aria-labelledby="heading{{ year.grouper }}" data-parent="#announcementsAccordion">
+        <div class="list-group">
         {% for item in year.list %}
           <a href="{{ item.get_absolute_url }}" class="list-group-item list-group-item-action{% if pmasa == item %} active{% endif %}">{{ item }}</a>
         {% endfor %}
@@ -23,5 +20,35 @@
       </div>
     </div>
     {% endfor %}
+  </div>-->
+
+  <div class="accordion" id="announcementsAccordion">  
+    <div class="accordion-item">
+      <div class="accordion-header" id="heading2020">
+        <button class="btn btn-link" type="button" data-toggle="collapse"
+          data-target="#collapse2020" aria-expanded="true" aria-controls="collapse2020">
+          2020
+          <span class="badge badge-primary">6</span>
+        </h2>
+      </div>
+      <div id="collapse2020" class="accordion-list isHidden isVisible" aria-labelledby="heading2020" data-parent="#announcementsAccordion">
+        <div class="list-group list-group-flush">
+  
+          <a href="/security/PMASA-2020-6/" class="list-group-item list-group-item-action">PMASA-2020-6</a>
+  
+          <a href="/security/PMASA-2020-5/" class="list-group-item list-group-item-action">PMASA-2020-5</a>
+  
+          <a href="/security/PMASA-2020-4/" class="list-group-item list-group-item-action">PMASA-2020-4</a>
+  
+          <a href="/security/PMASA-2020-3/" class="list-group-item list-group-item-action">PMASA-2020-3</a>
+  
+          <a href="/security/PMASA-2020-2/" class="list-group-item list-group-item-action">PMASA-2020-2</a>
+  
+          <a href="/security/PMASA-2020-1/" class="list-group-item list-group-item-action">PMASA-2020-1</a>
+  
+        </div>
+      </div>
+    </div>
+  
   </div>
 </div>
