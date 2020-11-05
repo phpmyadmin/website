@@ -64,6 +64,17 @@
   .content-masonry .masonry-item > a {
     display: block;
   }
+
+  .content-masonry .masonry-item figure {
+    height: 20rem;
+    width: 20rem;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .content-masonry .masonry-item figure > img {
+    width: 20rem;
+  }
 }
 
 @supports not (display: grid) {
@@ -83,7 +94,8 @@
   }
 }
 
-.content-masonry .masonry-item img {
+.content-masonry .masonry-item img,
+.content-masonry .masonry-item figure {
   border-radius: 5px;
 }
 
@@ -437,7 +449,7 @@ button {
   padding: 0;
   margin-bottom: 2rem;
   list-style-type: none;
-  width: auto;
+  width: max-content;
 }
 
 .card-list li {  
@@ -463,6 +475,10 @@ button {
 
 .card-list li > a.link-main {
   font-weight: bold;
+}
+
+.card-list-side {
+  width: auto;
 }
 
 .card-list-side li {

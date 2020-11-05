@@ -3,84 +3,85 @@
 
 {% block content %}
 
-<h2>Demo Server</h2>
+<div class="content">
+  <h2>Demo Server</h2>
 
-<p>
-The best way to see phpMyAdmin in action is to try it on our demo server, where you have
-full control on MySQL.
-</p>
-
-
-<p>
-Please not change root, debian-sys-maint or pma user password or limit their
-permissions. If you do so, demo can not be accessed  until privileges are
-restored, so you just break things for you and other users. Feel free to try
-any of the phpMyAdmin features. If you break something, just wait a while. The
-database configuration resets every hour. Databases are cleaned weekly, so do
-not expect that your data will stay there forever.
-</p>
-
-<p>
-Demo is running on <a href="https://www.mysql.com/">MySQL</a> and
-<a href="https://mariadb.org/">MariaDB</a>.
-phpMyAdmin has enabled additional relational features
-and MIME transformations.
-</p>
-
-<h3>Login information</h3>
-<p>
-Login is root with empty password or any user you create.
-</p>
-
-<h3>Available demo versions</h3>
-
-<p>
-Please note that git versions don't have to be working, that's why it's development version :-).
-</p>
+  <p>
+  The best way to see phpMyAdmin in action is to try it on our demo server, where you have
+  full control on MySQL.
+  </p>
 
 
-<h4>Releases and maintenance branches</h4>
+  <p>
+  Please not change root, debian-sys-maint or pma user password or limit their
+  permissions. If you do so, demo can not be accessed  until privileges are
+  restored, so you just break things for you and other users. Feel free to try
+  any of the phpMyAdmin features. If you break something, just wait a while. The
+  database configuration resets every hour. Databases are cleaned weekly, so do
+  not expect that your data will stay there forever.
+  </p>
 
-{% with demo_stable as demos %}
-{% include 'components\_list-demos.html' %}
-{% endwith %}
+  <p>
+  Demo is running on <a href="https://www.mysql.com/">MySQL</a> and
+  <a href="https://mariadb.org/">MariaDB</a>.
+  phpMyAdmin has enabled additional relational features
+  and MIME transformations.
+  </p>
 
-<h4>Development version (future {{ demo_devel.0.master_version }})</h4>
+  <h3>Login information</h3>
+  <p>
+  Login is root with empty password or any user you create.
+  </p>
 
-{% with demo_devel as demos %}
-{% include 'components\_list-demos.html' %}
-{% endwith %}
+  <h3>Available demo versions</h3>
+
+  <p>
+  Please note that git versions don't have to be working, that's why it's development version :-).
+  </p>
 
 
-<h4>Current documentation and tools</h4>
-<ul>
-<li>
-  <a href="https://docs.phpmyadmin.net/">Main documentation (including FAQ)</a>
-</li>
-<li>
-  <a href="https://demo.phpmyadmin.net/master-config/index.php?route=/changelog">ChangeLog (preprocessed to be user friendly)</a>
-</li>
-<li>
-  <a href="https://demo.phpmyadmin.net/master-config/index.php?route=/license">License</a>
-</li>
-<li>
-  <a href="https://demo.phpmyadmin.net/master-config/setup/">Setup script</a>
-</li>
-</ul>
+  <h4>Releases and maintenance branches</h4>
 
-<h2>Screenshots</h2>
+  {% with demo_stable as demos %}
+  {% include 'components\_list-demos.html' %}
+  {% endwith %}
 
-<div class="row row-cols-4">
-{% for screen in screenshots %}
-  <div class="col">
-    <a class="colorbox" href="{% static screen.image %}" title="{{ screen.title }}">
-      <figure class="figure">
-        <img src="{% static screen.image %}" class="figure-img img-thumbnail rounded" alt="{{ screen.title }}">
-        <figcaption class="figure-caption">{{ screen.title }}</figcaption>
-      </figure>
-    </a>
+  <h4>Development version (future {{ demo_devel.0.master_version }})</h4>
+
+  {% with demo_devel as demos %}
+  {% include 'components\_list-demos.html' %}
+  {% endwith %}
+
+
+  <h4>Current documentation and tools</h4>
+  <ul class="card-list">
+    <li>
+      <a href="https://docs.phpmyadmin.net/">Main documentation (including FAQ)</a>
+    </li>
+    <li>
+      <a href="https://demo.phpmyadmin.net/master-config/index.php?route=/changelog">ChangeLog (preprocessed to be user friendly)</a>
+    </li>
+    <li>
+      <a href="https://demo.phpmyadmin.net/master-config/index.php?route=/license">License</a>
+    </li>
+    <li>
+      <a href="https://demo.phpmyadmin.net/master-config/setup/">Setup script</a>
+    </li>
+  </ul>
+
+  <h2>Screenshots</h2>
+
+  <div class="content-masonry">
+  {% for screen in screenshots %}
+    <div class="masonry-item">
+      <a class="colorbox" href="{% static screen.image %}" title="{{ screen.title }}">
+        <figure class="figure">
+          <img src="{% static screen.image %}" class="figure-img img-thumbnail rounded" alt="{{ screen.title }}">
+          <figcaption class="figure-caption">{{ screen.title }}</figcaption>
+        </figure>
+      </a>
+    </div>
+  {% endfor %}
   </div>
-{% endfor %}
 </div>
-
 {% endblock %}
