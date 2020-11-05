@@ -23,12 +23,10 @@
 
 # Main menu
 MENU = [
-    # ('', 'Home'),
     ('news', 'News'),
     ('docs', 'Docs'),
     ('about-website', 'About'),
     ('support', 'Support'),
-    # ('security/', 'Security'),
     ('contribute', 'Contribute'),
     ('sponsors', 'Sponsors'),
 ]

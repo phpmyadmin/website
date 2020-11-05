@@ -68,7 +68,7 @@
         </div>
 
         <div class="nav-actions">
-          <div id="navbarSupportedContent" class="nav-menu collapse navbar-collapse">
+          <div id="navbarSupportedContent" class="nav-menu navbar-collapse">
             {% for item in menu %}
               <div class="nav-item{% if item.active %} nav-active{% endif %}">
                 <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if item.active %} <span class="sr-only">(current)</span>{% endif %}</a>

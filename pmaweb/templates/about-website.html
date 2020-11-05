@@ -7,12 +7,9 @@
 <h2>About Website</h2>
 
 <p>
-This website is implemented in <a href="https://www.python.org/">Python</a>, uses
-<a href="https://github.com/kurtmckee/feedparser/">FeedParser</a> to grab 
-external data and <a href="https://www.djangoproject.com/">Django</a> to generate 
-web pages. Source code of it is available in the Github repository 
-<code><a href="https://github.com/phpmyadmin/website">phpmyadmin/website</a></code> 
- (see <a href="{% url 'develop' %}">developer information</a> 
+This website is implemented in <a href="https://www.python.org/">Python</a>, uses <a href="https://github.com/kurtmckee/feedparser/">FeedParser</a> to grab 
+external data and <a href="https://www.djangoproject.com/">Django</a> to generate web pages. Source code of it is available in the Github repository 
+<code><a href="https://github.com/phpmyadmin/website">phpmyadmin/website</a></code> (see <a href="{% url 'develop' %}">developer information</a> 
 for information how to access it).
 </p>
 
@@ -20,6 +17,10 @@ for information how to access it).
 Site original design and logic has been created by <a href="{% url 'team' %}#michal">Michal
 Čihař</a>. New design (2020) has been created and implemented by <a href="{% url 'team' %}#design">Adriano Cahete</a>.<br>
 It is powered by <a href="https://www.cdn77.com/">CDN77.com</a>.
+</p>
+
+<p>
+  Illustrations are from <a href="https://undraw.co/">Undraw.co</a>. Github logo is from <a href="https://iconmonstr.com">Iconmonstr</a>.
 </p>
 
 <p>
@@ -67,7 +68,7 @@ history</a>.
 
 {% include 'components\_stable-download.html' %}
 
-{% include "components/_verify.html" %}
+{% include "components\_verify.html" %}
 
 </div>
 
