@@ -24,30 +24,29 @@
   <thead>
   <tr>
       <th>Translation</th>
-      <th>Strings</th>
+      <th class="td-size">Strings</th>
       <th>Translated strings percent</th>
       <th>Last modification</th>
   </tr>
   </thead>
-
-  <tbody>
-  {% for translation in translations %}
-  <tr>
-  <td class="name">
-  <a href="{{ translation.get_absolute_url }}">{{ translation }}</a>
-  </td>
-  <td class="td-size">{{ translation.translated }}</td>
-  <td class="td-bar">
-  <div class="progress">
-    <div class="progress-bar {{ translation.css }}" role="progressbar" aria-valuenow="{{ translation.percent|floatformat:"0" }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ translation.percent|floatformat:"0" }}%;">
-      {{ translation.percent }}%
-    </div>
-  </div>
-  </td>
-  <td class="date">{{ translation.updated|date:"Y-m-d" }}</td>
-  </tr>
-  {% endfor %}
-  </tbody>
+    <tbody>
+    {% for translation in translations %}
+      <tr>
+        <td class="name">
+          <a href="{{ translation.get_absolute_url }}">{{ translation }}</a>
+        </td>
+        <td class="td-size">{{ translation.translated }}</td>
+        <td class="td-bar">
+          <div class="progress">
+            <div class="progress-bar {{ translation.css }}" role="progressbar" aria-valuenow="{{ translation.percent|floatformat:"0" }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ translation.percent|floatformat:"0" }}%;">
+              {{ translation.percent }}%
+            </div>
+          </div>
+        </td>
+      <td class="date">{{ translation.updated|date:"Y-m-d" }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
   </table>
 </div>
 {% endblock %}

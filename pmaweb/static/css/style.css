@@ -548,6 +548,39 @@ button {
 }
 
 
+/* Progress Bar */
+.progress {
+  display: flex;
+  height: 2rem;
+  overflow: hidden;
+  font-size: 1.3rem;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.progress .progress-bar {
+  min-width: 3rem;
+  background-color: var(--brand-primary);
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.progress .progress-bar-success {
+  background-color: var(--alert-success);
+  color: var(--color-text-default);
+}
+
+.progress .progress-bar-danger {
+  background-color: var(--alert-error);
+}
+
+.progress .progress-bar-warning {
+  background-color: var(--alert-warning);
+  color: var(--color-text-default);
+}
+
+
 /* Alert */
 .alert {
   padding: 2rem;
