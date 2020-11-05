@@ -47,10 +47,10 @@
         <h3 class="card-title">{{ theme }}</h3>
       </div>
       <div class="card-body">
-        <div class="thumbnail">
-            <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
-                <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
-            </a>
+        <div class="card-thumbnail">
+          <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
+            <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
+          </a>
         </div>
         <p>Released on {{theme.date|date:"Y-m-d"}}</p>
         <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>

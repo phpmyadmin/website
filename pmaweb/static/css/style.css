@@ -51,8 +51,41 @@
 .content-row .col-md-9 {
   width: calc(90% - 2rem);
 }
-/* if you need 100%, you doesn't need `.content-row` approach! */
+/* If you need 100%, you doesn't need `.content-row` approach! */
 
+/* Content Masonry -- For image album content */
+@supports (display: grid) {
+  .content-masonry {
+    display: grid;
+    grid-gap: 1rem 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+
+  .content-masonry .masonry-item > a {
+    display: block;
+  }
+}
+
+@supports not (display: grid) {
+  .content-masonry {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -0.8rem;
+    width: 100%;
+  }
+
+  .content-masonry .masonry-item {
+    flex: auto;
+    height: 18rem;
+    min-width: 15rem;
+    margin: 0 .6rem 0.9rem 0;
+    overflow: hidden;
+  }
+}
+
+.content-masonry .masonry-item img {
+  border-radius: 5px;
+}
 
 /* Navbar */
 .navbar-toggler {
