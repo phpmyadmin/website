@@ -485,6 +485,32 @@ button {
   display: inline-block;
 }
 
+/* Card -- Bordered */
+.card-bordered {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.card-bordered h2 {
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 1rem 0;
+  padding-bottom: 1rem;
+}
+
+.card-bordered .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-bordered .card-thumbnail .themeimg {
+  max-height: 12rem;
+}
+
+
+/* Award */
 .award-item {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
