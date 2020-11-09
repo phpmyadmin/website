@@ -56,6 +56,8 @@
   --brand-primary: var(--color-primary-100);
   --brand-secondary: var(--color-secondary-100);
 
+  --background-page: rgba(255, 255, 255, 1);
+
   --alert-info: var(--color-blue-100);
   --alert-error: var(--color-red);
   --alert-success: var(--color-green-50);

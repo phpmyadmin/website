@@ -5,16 +5,19 @@
 
 <div class="content content-row">
   <div class="col-md-7">
-    <h2 id="docs">Documentation</h2>    
+    <h2 id="docs">Documentation</h2>
 
     <h3 id="docs-official">Official Documentation</h3>
     <ul class="card-list">
-      <li><a href="https://docs.phpmyadmin.net/" class="link-main">Main documentation (from the development version)</a></li>
-      <li><a href="https://readthedocs.org/projects/phpmyadmin/downloads/" class="link-main">Downloadable documentation (from the development version)</a></li>
+      <li><a href="https://docs.phpmyadmin.net/" class="link-main">Main documentation (from the development version)</a>
+      </li>
+      <li><a href="https://readthedocs.org/projects/phpmyadmin/downloads/" class="link-main">Downloadable documentation
+          (from the development version)</a></li>
       <li><a href="https://wiki.phpmyadmin.net/" class="link-main">Official phpMyAdmin wiki</a></li>
-      <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html">Frequently Asked Questions</a></li>      
-      <li><a href="https://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>  
+      <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html">Frequently Asked Questions</a></li>
+      <li><a href="https://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
       <li><a href="{% url 'downloads' %}">Download stable and other versions</a></li>
+      <li><a href="{% url 'license' %}" rel="license" title="License">License</a></li>
     </ul>
 
     <h3 id="docs-official">Other links</h3>
@@ -24,12 +27,13 @@
       <li><a href="{% url 'security' %}">Security Announcements</a></li>
       <li><a href="{% url 'awards' %}">Awards</a></li>
       <li><a href="{% url '15-years' %}">15 years</a></li>
+      <li><a href="https://planet.phpmyadmin.net/">Planet phpMyAdmin</a>.</li>
     </ul>
 
 
     <h3 class="docs-loc">Localized Documentation</h3>
     <p>Please note that these translations are not always complete, but you can <a
-    href="{% url 'contribute' %}#translate">help</a>.</p>
+        href="{% url 'contribute' %}#translate">help</a>.</p>
 
     <ul class="card-list card-list-side">
       <li><a href="https://docs.phpmyadmin.net/zh_CN/latest/">Chinese (Simplified)</a></li>
@@ -51,8 +55,10 @@
 
     <h3 id="docs-thirdparty">Third Party Tutorials and Articles</h3>
     <ul class="card-list">
-      <li><a href="https://cloud.google.com/sql/docs/phpmyadmin-on-app-engine">Using phpMyAdmin with Google Cloud SQL on Google App Engine</a></li>
-      <li><a href="https://garv.in/tops/texte/mimetutorial">Having fun with phpMyAdmin's MIME-transformations &amp; PDF-features</a></li>
+      <li><a href="https://cloud.google.com/sql/docs/phpmyadmin-on-app-engine">Using phpMyAdmin with Google Cloud SQL on
+          Google App Engine</a></li>
+      <li><a href="https://garv.in/tops/texte/mimetutorial">Having fun with phpMyAdmin's MIME-transformations &amp;
+          PDF-features</a></li>
       <li><a href="https://archiv.linuxsoft.cz/article_list.php?id_kategory=215">Seriál o phpMyAdminovi (Česky)</a></li>
       <li><a href="http://www.php-editors.com/articles/sql_phpmyadmin.php">Learning SQL Using phpMyAdmin</a></li>
       <li><a href="https://blog.apkmonk.com/how-to-install-phpmyadmin-on-aws/">How to install phpMyAdmin on AWS</a></li>
@@ -60,7 +66,7 @@
 
     <h3 id="docs-sites">Sites Dedicated to phpMyAdmin</h3>
     <ul class="card-list">
-        <li><a href="https://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
+      <li><a href="https://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
     </ul>
   </div>
 
@@ -72,7 +78,8 @@
     <div class="card-simple">
       <h4>Mastering phpMyAdmin 3.4 for Effective MySQL Management</h4>
       <div class="card-info">
-        <a class="card-image" href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-phpmyadmin-34-effective-mysql-management">
+        <a class="card-image"
+          href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-phpmyadmin-34-effective-mysql-management">
           <img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" />
         </a>
         <p class="card-description">
@@ -83,32 +90,43 @@
 
     <div class="card-simple">
       <h4>phpMyAdmin Starter</h4>
-      <a class="pull-left img-margin" href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1">
-        <img src="{% static 'images/books/pma_starter_150x184.jpg' %}" alt="Book cover" />
-      </a>
-      <p class="card-description">
-        A percentage of the book's sales is donated to help phpMyAdmin.
-      </p>
+      <div class="card-info">
+        <a class="card-image"
+          href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1">
+          <img src="{% static 'images/books/pma_starter_150x184.jpg' %}" alt="Book cover" />
+        </a>
+        <p class="card-description">
+          A percentage of the book's sales is donated to help phpMyAdmin.
+        </p>
+      </div>
     </div>
 
     <div class="card-simple">
-      <h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
-      <a class="pull-left img-margin" href="https://www.packtpub.com/web-development/mastering-phpmyadmin-211-effective-mysql-management">
-        <img src="{% static 'images/books/pma_en_100x123.png' %}" alt="Book cover"  />
-      </a>
-      <p class="card-description">
-        A percentage of the book's sales is donated to help phpMyAdmin.
-      </p>
+      <h4>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h4>
+      <div class="card-info">
+        <a class="card-image"
+          href="https://www.packtpub.com/web-development/mastering-phpmyadmin-211-effective-mysql-management">
+          <img src="{% static 'images/books/pma_en_100x123.png' %}" alt="Book cover" />
+        </a>
+        <p class="card-description">
+          A percentage of the book's sales is donated to help phpMyAdmin.
+        </p>
+      </div>
     </div>
 
     <div class="card-simple">
-      <h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
-      <a class="pull-left img-margin" href="https://www.packtpub.com/web-development/dominar-phpmyadmin-para-una-administracion-efectiva-de-mysql-espanol">
-        <img src="{% static 'images/books/pma_es_100x123.png' %}" alt="Book cover" />
-      </a>
-      <p xml:lang="es">
-      Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencial de phpMyAdmin. Ya sea un programador experimentado, un administrador de sistemas, un dise&ntilde;ador Web o nuevo a las tecnolog&iacute;as de MySQL y phpMyAdmin, este libro le mostrar&aacute; como aumentar su productividad y control cuando trabaje con MySQL. Por ello se ha traducido, de modo que esta gu&iacute;a completa sea m&aacute;s accesible al lector espa&ntilde;ol.
-      </p>
+      <h4>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h4>
+      <div class="card-info">
+        <a class="card-image"
+          href="https://www.packtpub.com/web-development/dominar-phpmyadmin-para-una-administracion-efectiva-de-mysql-espanol">
+          <img src="{% static 'images/books/pma_es_100x123.png' %}" alt="Book cover" />
+        </a>
+        <p xml:lang="es" class="card-description">
+          Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencial de phpMyAdmin, como aumentar su productividad y
+          control cuando trabaje con MySQL. Por ello se ha traducido, de modo que esta gu&iacute;a completa sea m&aacute;s
+          accesible al lector espa&ntilde;ol.
+        </p>
+      </div>
     </div>
   </div>
 </div>

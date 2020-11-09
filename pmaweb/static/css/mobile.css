@@ -42,8 +42,8 @@ body {
   top: 7rem;  
   width: 100%;
   height: auto;
-  background: #fff; 
-  border-bottom: 1px solid #ccc; 
+  background: var(--background-page); 
+  border-bottom: 1px solid var(--color-gray-200); 
 }
 
 .nav-menu.navbar-collapse:not(.show) {

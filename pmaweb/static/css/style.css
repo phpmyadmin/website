@@ -326,7 +326,7 @@ button {
   flex-direction: column;
   justify-content: space-evenly;
   flex: 1;
-  background-color: #fff;
+  background-color: var(--background-page);
   border: 1px solid var(--color-gray-200);
   padding: 1rem;
   border-radius: 10px;  
@@ -438,7 +438,8 @@ button {
   margin-right: 1rem;
 }
 
-.card-simple .card-description p {
+.card-simple .card-description p,
+.card-simple p.card-description {
   margin-top: 0;
 }
 
@@ -529,7 +530,7 @@ button {
 }
 
 .accordion .accordion-header {
-  background-color: #f2f2f2;
+  background-color: var(--color-gray-100);
 }
 
 .accordion .accordion-header button {
@@ -556,7 +557,7 @@ button {
 }
 
 .accordion .accordion-list .accordion-list-item:hover {
-  background-color: #f2f2f2;
+  background-color: var(--color-gray-100);
   transition: .3s ease all;
 }
 
@@ -699,7 +700,44 @@ button {
   color: #fff;
 }
 
+/* History View */
+.history-view {
+  list-style-type: none;
+  padding: 0;
+  border-left: 1px solid var(--color-gray-200);
+}
 
+.history-view li {
+  display: flex;
+  padding: 1rem;
+  position: relative;
+}
+
+.history-view .history-date {
+  margin-right: 1rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  background-color: var(--color-gray-100);
+}
+
+.history-view .history-date::before {
+  display: flex;
+  align-self: center;
+  top: 1.7rem;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  border: 3px solid var(--brand-primary);  
+  position: absolute;
+  left: -0.6rem;
+  border-radius: 50%;
+  background-color: var(--background-page);
+}
+
+.history-view .history-link {
+  color: var(--brand-primary);
+  font-weight: bold;
+}
 
 
 /* Footer */
