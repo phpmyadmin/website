@@ -1,86 +1,164 @@
-body {
-  overflow-x: hidden;
-  overflow-y: visible;
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .hero-content,
+  .content {
+    width: 90vw;
+    max-width: 90%;
+  }
+
+  .content-row .col-md-1,
+  .content-row .col-md-2,
+  .content-row .col-md-3,
+  .content-row .col-md-4,
+  .content-row .col-md-5,
+  .content-row .col-md-6,
+  .content-row .col-md-7,
+  .content-row .col-md-8,
+  .content-row .col-md-9 {
+    width: 100%;
+  }
+
+  .hero-image,
+  .hero-image svg,
+  .nav-buttons {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+    height: 100%;
+    width: 5rem;
+    background-color: #ccc; /* TODO: Move to white after add icon */
+    border: 0;
+  }
+
+  .menuHandle {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    height: 100%;
+    position: relative;
+    border: none;
+    position: relative;  
+    background-color: transparent;
+  }
+
+  .menuHandle .nav-icon {
+    display: flex;
+    align-self: center;
+    width: 23px;
+    height: 14px;
+    position: relative;
+  }
+
+  .menuHandle .line {
+    display: block;
+    background: var(--brand-primary);
+    width: 100%;
+    height: .2rem;
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+    transition:all .4s;
+  }
+
+  .menuHandle .line.line-1 {
+    top: 0
+  }
+  .menuHandle .line.line-2 {
+    top: 50%
+  }
+  .menuHandle .line.line-3 {
+    top: 100%
+  }
+
+  .menuHandle:hover .line-1 {
+    transform: translateY(-1px);
+  }
+
+  .menuHandle:hover .line-3 {
+    transform: translateY(1px);
+  }
+
+  .menuHandle.active .line-1,
+  .menuHandle:not(.collapsed) .line-1 {
+    transform: translateY(.6rem) translateX(0) rotate(45deg);
+  }
+
+  .menuHandle.active .line-2,
+  .menuHandle:not(.collapsed) .line-2 {
+    opacity: 0;
+  }
+
+  .menuHandle.active .line-3,
+  .menuHandle:not(.collapsed) .line-3 {
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 7rem;  
+    width: 100%;
+    height: auto;
+    background: var(--background-page); 
+    border-bottom: 1px solid var(--color-gray-200);
+    box-shadow: 0 1.4rem 2rem -1rem rgba(0, 0, 0, .8);  
+  }
+
+  .nav-menu.navbar-collapse:not(.show) {
+    display: none;
+  }
+
+  .nav-brand {
+    margin-left: -5rem; /* Button width */
+  }
+
+  .nav-menu .nav-item {
+    width: 100%;
+    height: 4rem;
+    border-bottom: 0;
+    border-left: 3px solid transparent;  
+  }
+
+  .nav-item.nav-active {
+    border-color: var(--brand-primary);
+  }
+
+  .content-row,
+  .box .box-horz,
+  .sponsor-list {
+    flex-direction: column;
+  }
+
+  .hero-description-actions {
+    margin-top: 2rem;
+  }
+
+  .sponsor-list a.link-external {
+    margin-bottom: 1rem;
+  }
+
+  .box .box-item,
+  .box .box-item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+
+    
 }
 
-.hero-content,
-.content {
-  width: 90vw;
-  max-width: 90%;
-}
-
-.content-row .col-md-1,
-.content-row .col-md-2,
-.content-row .col-md-3,
-.content-row .col-md-4,
-.content-row .col-md-5,
-.content-row .col-md-6,
-.content-row .col-md-7,
-.content-row .col-md-8,
-.content-row .col-md-9 {
-  width: 100%;
-}
-
-.hero-image,
-.hero-image svg,
-.nav-buttons {
-  display: none;
-}
-
-.navbar-toggler {
-  display: block;
-  height: 100%;
-  width: 5rem;
-  background-color: #ccc; /* TODO: Move to white after add icon */
-  border: 0;
-}
-
-.nav-menu {
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  top: 7rem;  
-  width: 100%;
-  height: auto;
-  background: var(--background-page); 
-  border-bottom: 1px solid var(--color-gray-200); 
-}
-
-.nav-menu.navbar-collapse:not(.show) {
-  display: none;
-}
-
-.nav-brand {
-  margin-left: -5rem; /* Button width */
-}
-
-.nav-menu .nav-item {
-  width: 100%;
-  height: 4rem;
-  border-bottom: 0;
-  border-left: 3px solid transparent;  
-}
-
-.nav-item.nav-active {
-  border-color: var(--brand-primary);
-}
-
-.content-row,
-.box .box-horz,
-.sponsor-list {
-  flex-direction: column;
-}
-
-.hero-description-actions {
-  margin-top: 2rem;
-}
-
-.sponsor-list a.link-external {
-  margin-bottom: 1rem;
-}
-
-.box .box-item,
-.box .box-item:not(:nth-child(3n)) {
-  margin-right: 0;
+@media screen and (max-width: 600px) {
+  .card-list {
+    width: auto;
+  }
+  
+  .copyright > span {
+    display: none;
+  }
 }
 
