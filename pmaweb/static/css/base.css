@@ -1,16 +1,24 @@
 :root {
+  --font-family-sans-serif: 'OpenSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --background-page: rgba(255, 255, 255, 1);
+
+  --color-text-default: rgba(0, 0, 0, 1);
+  --color-link-default: var(--color-blue-200);
+
+  --color-background-section: var(--background-page);
+  --color-background-section-stripe: rgba(242, 242, 242, 1);
+
+  --border-default: var(--color-gray-100);
+  --border-darker: var(--color-gray-200);
+
   --color-primary-50:  rgba(145, 154, 195, 1);
   --color-primary-100: rgba(108, 120, 175, 1);
   --color-primary-200: rgba(84, 93, 134, 1);
 
   --color-secondary-100: rgba(248, 156, 14, 1);
   --color-secondary-200: rgba(228, 139, 2, 1);
-
-  --color-text-default: rgba(0, 0, 0, 1);
-  --color-link-default: var(--color-blue-200);
-  
-  --color-background-section: rgba(255, 255, 255, 1);
-  --color-background-section-stripe: rgba(242, 242, 242, 1);
   
   --color-gray-50:  rgba(248, 248, 248, 1);
   --color-gray-100: rgba(242, 242, 242, 1);
@@ -42,9 +50,6 @@
   --color-ghost-100: rgba(0, 0, 0, 0.35);
   --color-ghost-200: rgba(0, 0, 0, 0.6);
 
-  --font-family-sans-serif: 'OpenSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
   /* Bootstrap Breakpoints */
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -55,18 +60,39 @@
   /* Shortcuts */
   --brand-primary: var(--color-primary-100);
   --brand-secondary: var(--color-secondary-100);
-
-  --background-page: rgba(255, 255, 255, 1);
-
-  --alert-info: var(--color-blue-100);
-  --alert-error: var(--color-red);
-  --alert-success: var(--color-green-50);
-  --alert-warning: var(--color-yellow-100);    
 }
 
-/* TODO: Dark Mode -- Future */
+/* Light Theme -- just enable if Dark Theme is enabled */
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --background-page: rgba(255, 255, 255, 1);
+
+    --color-text-default: rgba(0, 0, 0, 1);
+    --color-link-default: var(--color-blue-200);
+    
+    --color-background-section-stripe: rgba(242, 242, 242, 1);
+
+    --border-default: var(--color-gray-100);
+    --border-darker: var(--color-gray-200);
+  }
+} */
+
+/* TODO: Dark Theme -- Future (Heavly untested) */
 /* @media (prefers-color-scheme: dark) {
-  
+  :root {
+    --background-page: rgba(19, 19, 19, 1);
+
+    --color-text-default: rgba(255, 255, 255, 1);
+    --color-link-default: var(--color-blue-100);
+
+    --color-background-section-stripe: rgba(25, 25, 25, 1);
+
+    --border-default: var(--color-background-section-stripe);
+    --border-darker: rgba(49, 49, 49, 1);
+
+    --brand-primary: var(--color-primary-200);
+    --brand-secondary: var(--color-secondary-100);
+  }  
 } */
 
 /* Global */
@@ -88,6 +114,8 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  background-color: var(--background-page);
+  color: var(--color-text-default);
 }
 
 main {
@@ -157,7 +185,7 @@ ul {
 
 code {
   font-family: var(--font-family-monospace);
-  background-color: var(--color-gray-100);
+  background-color: var(--color-background-section-stripe);
   font-size: 1.4rem;
   padding: 0.5rem;
 }

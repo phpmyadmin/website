@@ -108,7 +108,7 @@
     width: 100%;
     height: auto;
     background: var(--background-page); 
-    border-bottom: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--border-default);
     box-shadow: 0 1.4rem 2rem -1rem rgba(0, 0, 0, .8);  
   }
 
