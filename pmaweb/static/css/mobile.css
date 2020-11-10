@@ -45,6 +45,7 @@
     border: none;
     position: relative;  
     background-color: transparent;
+    outline: 0;
   }
 
   .menuHandle .nav-icon {
@@ -156,7 +157,7 @@
   .card-list {
     width: auto;
   }
-  
+
   .copyright > span {
     display: none;
   }
