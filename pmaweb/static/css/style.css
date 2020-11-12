@@ -101,7 +101,7 @@
 
 /* Navbar */
 .navbar-toggler {
-  display: none; /* TODO: Show only in small screens, test on mobile screens */
+  display: none; /* Mobile Only */
 }
 
 .navbar {
@@ -132,10 +132,9 @@
   color: inherit;
 }
 
-.nav-brand .brand-symbol {
-  width: 6rem;
-  height: 4.4rem;
-  margin-right: 10px;
+.nav-brand svg {
+  width: 13rem;
+  margin-right: 1rem;
 }
 
 .nav-menu,
