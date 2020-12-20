@@ -161,8 +161,8 @@ COMPRESS_CSS_FILTERS = [
     'compressor.filters.cssmin.CSSCompressorFilter',
 ]
 
-# List of major versions to offer for download
-LISTED_BRANCHES = ('4.9','5.0')
+# List of major versions to offer for download in descending order.
+LISTED_BRANCHES = ('5.0','4.9')
 
 CDN_LOGIN = 'admins@phpmyadmin.net'
 CDN_PASSWORD = ''
