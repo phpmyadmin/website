@@ -1,0 +1,31 @@
+name: Run tests
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
+
+jobs:
+    test-python:
+        name: Test on python ${{ matrix.python-version }} and ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                python-version: ["2.x"]
+                os: [ubuntu-latest]
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use python ${{ matrix.python-version }}
+              uses: actions/setup-python@v2
+              with:
+                python-version: ${{ matrix.python-version }}
+            - name: Install requirements
+              run: pip install -r requirements-test.txt
+            - name: Run python checks
+              run: ./manage.py check
+            - name: Run python tests and coverage
+              run: coverage run --source=. ./manage.py test
+            - name: Send coverage
+              uses: codecov/codecov-action@v1
