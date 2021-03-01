@@ -156,7 +156,9 @@ class Release(models.Model):
         return ''
 
     def get_php_versions(self):
-        if self.version[:3] == '5.1':
+        if self.version[:3] == '5.2':
+            return '>=7.2,<8.1'
+        elif self.version[:3] == '5.1':
             return '>=7.1,<8.1'
         elif self.version[:3] == '5.0':
             return '>=7.1,<8.0'
@@ -182,7 +184,9 @@ class Release(models.Model):
             return '>=5.2,<5.3'
 
     def get_mysql_versions(self):
-        if self.version[:3] == '5.1':
+        if self.version[:3] == '5.2':
+            return '>=5.5'
+        elif self.version[:3] == '5.1':
             return '>=5.5'
         elif self.version[:3] == '5.0':
             return '>=5.5'
@@ -223,6 +227,10 @@ class Release(models.Model):
                 'Frames version not requiring Javascript. ' +
                 'Requires PHP 5.2 and MySQL 5. ' +
                 'Supported for security fixes only, until Jan 1, 2014.'
+            )
+        elif self.version[:3] == '5.2':
+            text = (
+                'Future version compatible with PHP 7.2 and newer and MySQL 5.5 and newer. '
             )
         elif self.version[:3] == '5.1':
             text = (
