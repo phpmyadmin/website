@@ -26,6 +26,20 @@ from cgi import escape
 # List of awards
 AWARDS = [
     {
+        'image': 'images/awards/2021-database-management-software.png',
+        'link': (
+            'https://digital.com/database-management-software/#phpMyAdmin'
+        ),
+        'title': 'Best Database Management Software of 2021',
+        'text': '''
+<p>phpMyAdmin was listed in
+<a href="https://digital.com/">Digital.com's</a></p>
+<p class="award"><a href="%(link)s">Best Database Management Software list</a></p>.
+<p>in January 2021.</p>
+''',
+        'photos': [],
+    },
+    {
         'image': 'images/awards/2017-hosting-advice.png',
         'link': (
             'https://www.hostingadvice.com/blog/'
