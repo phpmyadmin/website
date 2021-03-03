@@ -230,65 +230,65 @@ class Release(models.Model):
             )
         elif self.version[:3] == '5.2':
             text = (
-                'Future version compatible with PHP 7.2 and newer and MySQL 5.5 and newer. '
+                'Future version compatible with PHP 7.2 and newer and MySQL/MariaDB 5.5 and newer. '
             )
         elif self.version[:3] == '5.1':
             text = (
-                'Current version compatible with PHP 7.1 and newer and MySQL 5.5 and newer. '
+                'Current version compatible with PHP 7.1 and newer and MySQL/MariaDB 5.5 and newer. '
             )
         elif self.version[:3] == '5.0':
             text = (
-                'Older version compatible with PHP 7.1 and newer and MySQL 5.5 and newer. ' +
+                'Older version compatible with PHP 7.1 and newer and MySQL/MariaDB 5.5 and newer. ' +
                 'Was supported until February 24, 2021.'
             )
         elif self.version[:3] == '4.9':
             text = (
-                'Older version compatible with PHP 5.5 to 7.4 and MySQL 5.5 and newer. ' +
+                'Older version compatible with PHP 5.5 to 7.4 and MySQL/MariaDB 5.5 and newer. ' +
                 'Currently supported for security fixes only. '
             )
         elif self.version[:3] == '4.8':
             text = (
-                'Older version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. ' +
+                'Older version compatible with PHP 5.5 to 7.2 and MySQL/MariaDB 5.5 and newer. ' +
                 'Was supported until June 4, 2019.'
             )
         elif self.version in ('4.7.0', '4.7.1', '4.7.2', '4.7.3', '4.7.0-rc1', '4.7.0-beta1'):
             text = (
-                'Older version compatible with PHP 5.5 to 7.1 and MySQL 5.5 and newer. ' +
+                'Older version compatible with PHP 5.5 to 7.1 and MySQL/MariaDB 5.5 and newer. ' +
                 'Was supported until April 7, 2018.'
             )
         elif self.version[:3] == '4.7':
             text = (
-                'Older version compatible with PHP 5.5 to 7.2 and MySQL 5.5 and newer. ' +
+                'Older version compatible with PHP 5.5 to 7.2 and MySQL/MariaDB 5.5 and newer. ' +
                 'Was supported until April 7, 2018.'
             )
         elif self.version[:3] == '4.6':
             text = (
-                'Older version compatible with PHP 5.5 to 7.1 and MySQL 5.5 and newer. ' +
+                'Older version compatible with PHP 5.5 to 7.1 and MySQL/MariaDB 5.5 and newer. ' +
                 'Was supported until April 1, 2017.'
             )
         elif self.version[:3] == '4.5':
             text = (
-                'Older version compatible with PHP 5.5 to 7.0 and MySQL 5.5. ' +
+                'Older version compatible with PHP 5.5 to 7.0 and MySQL/MariaDB 5.5. ' +
                 'Was supported until April 1, 2016.'
             )
         elif self.version[:3] == '4.4':
             text = (
-                'Older version compatible with PHP 5.3.7 to 7.0 and MySQL 5.5. ' +
+                'Older version compatible with PHP 5.3.7 to 7.0 and MySQL/MariaDB 5.5. ' +
                 'Was supported until October 1, 2016.'
             )
         elif self.version[:3] == '4.3':
             text = (
-                'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
+                'Older version compatible with PHP 5.3 and MySQL/MariaDB 5.5. ' +
                 'Was supported until October 1, 2015.'
             )
         elif self.version[:3] == '4.2':
             text = (
-                'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
+                'Older version compatible with PHP 5.3 and MySQL/MariaDB 5.5. ' +
                 'Was supported until July 1, 2015.'
             )
         elif self.version[:3] == '4.1':
             text = (
-                'Older version compatible with PHP 5.3 and MySQL 5.5. ' +
+                'Older version compatible with PHP 5.3 and MySQL/MariaDB 5.5. ' +
                 'Was supported until January 1, 2015.'
             )
         elif self.version[:3] == '4.0':
