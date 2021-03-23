@@ -27,7 +27,7 @@
     {% include "_verify.html" %}
 
     {% for release in releases %}
-    <h2>phpMyAdmin {{ release.version }}</h2>
+    <h2 id="release_{{ release.version }}">phpMyAdmin {{ release.version }}</h2>
     {% include "_release.html" %}
     {% endfor %}
 
@@ -47,7 +47,7 @@
     </p>
 
     {% for release in all_snapshots %}
-    <h3>phpMyAdmin {{ release.version }}</h3>
+    <h3 id="snapshot_{{ release.version }}">phpMyAdmin {{ release.version }}</h3>
     {% include "_release.html" %}
     {% endfor %}
 
