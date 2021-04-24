@@ -24,9 +24,12 @@ Django settings for pmaweb project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
+https://django.readthedocs.io/en/1.7.x/topics/settings.html
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
+https://django.readthedocs.io/en/1.7.x/ref/settings.html
+
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -39,6 +42,7 @@ ADMINS = (
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+# https://django.readthedocs.io/en/1.7.x/howto/deployment/checklist.html
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'n$6di6axa*m5)$%yzhl6xhe%^b4t^)6#sbz_b5_7&ga@12(+_h'
@@ -107,14 +111,12 @@ TEMPLATES = [
 ]
 
 ROOT_URLCONF = 'pmaweb.urls'
-
 WSGI_APPLICATION = 'pmaweb.wsgi.application'
-
 SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
+# https://django.readthedocs.io/en/1.7.x/ref/databases.html
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -124,20 +126,16 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
-
+# https://django.readthedocs.io/en/1.7.x/topics/i18n/index.html
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
+# https://django.readthedocs.io/en/1.7.x/howto/static-files/
 
 STATIC_URL = '/static/'
 

@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<div id="sponsors" class="sponsors">
+  <h2>
+    <a href="{% url 'sponsors' %}">Sponsors</a>
+  </h2>
+
+  <div class="content-row">
+
+    <div class="sponsors-diamond">
+      <h3>Diamond sponsor</h3>
+      <div class="sponsor-list">
+        <span>
+          This space is available, <a href="{% url 'sponsors' %}">contact us</a> to get listed here.
+        </span>        
+      </div>
+    </div>
+
+    <!--
+    <div class="sponsors-platinum">
+      <h3>Platinum sponsors</h3>
+      <div class="sponsor-list"></div>
+    </div>
+    -->
+
+    <div class="sponsors-gold">
+      <h3>Gold sponsors</h3>
+      <div class="sponsor-list">
+        <a href="http://www.trialpro.com/" class="link-external"><img src="{% static 'images/trialpro.png' %}" alt="TrialPro" /></a>
+        <a href="https://www.vapehuset.se/" class="link-external"><img src="{% static 'images/vapehuset.png' %}" alt="Vapehuset" /></a>
+      </div>
+
+      <div>
+        <a href="https://www.vapehuset.se/"><img src="{% static 'images/vapehuset.png' %}" alt="Vapehuset" /></a>
+      </div>
+
+      <div>
+        <a href="https://www.4kdownload.com/"><img src="{% static 'images/4kdownload.png' %}" alt="4K Download" /></a>
+      </div>
+
+      <div>
+        <a href="https://goread.io/"><img src="{% static 'images/goread.png' %}" alt="goread" /></a>
+      </div>
+    </div>
+
+  </div>
+</div>

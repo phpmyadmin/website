@@ -23,14 +23,10 @@
 
 # Main menu
 MENU = [
-    ('', 'Home'),
     ('news', 'News'),
-    ('security/', 'Security'),
-    ('support', 'Support'),
     ('docs', 'Docs'),
-    ('try', 'Try'),
+    ('about-website', 'About'),
+    ('support', 'Support'),
     ('contribute', 'Contribute'),
     ('sponsors', 'Sponsors'),
-    ('themes', 'Themes'),
-    ('downloads', 'Download'),
 ]

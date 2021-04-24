@@ -89,7 +89,7 @@
 			<Application_Info_URL>https://www.phpmyadmin.net/</Application_Info_URL>
 			<Application_Order_URL>https://www.phpmyadmin.net{% url 'donate' %}</Application_Order_URL>
 			<Application_Screenshot_URL>https://www.phpmyadmin.net/static/images/screenshots/monitor.png</Application_Screenshot_URL>
-			<Application_Icon_URL>https://www.phpmyadmin.net/static/images/icon.png</Application_Icon_URL>
+			<Application_Icon_URL>https://www.phpmyadmin.net/static/images/brand/icon.png</Application_Icon_URL>
 			<Application_XML_File_URL>https://www.phpmyadmin.net{% url 'pad' %}</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>

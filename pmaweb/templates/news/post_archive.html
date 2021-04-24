@@ -3,40 +3,42 @@
 
 {% block content %}
 
-<p>Bored of official project news? Then check out developers blogs at
-<a href="https://planet.phpmyadmin.net/">planet phpMyAdmin</a>.</p>
+<div class="content">
+  <p>Bored of official project news? Then check out developers blogs at
+  <a href="https://planet.phpmyadmin.net/">planet phpMyAdmin</a>.</p>
 
-<p>You can also follow us on <a
-href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486">Facebook</a> or <a
-href="https://twitter.com/phpmya">Twitter</a>. The news are also available in a
-<a href="{% url 'feed-news' %}">RSS feed</a>.
-</p>
+  <p>You can also follow us on <a
+  href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486">Facebook</a> or <a
+  href="https://twitter.com/phpmya">Twitter</a>. The news are also available in a
+  <a href="{% url 'feed-news' %}">RSS feed</a>.
+  </p>
 
-{% for item in latest %}
-<div class="hentry">
-        <h2 class="entry-title"><a rel="bookmark" href="{{ item.get_absolute_url }}">{{ item.title }}</a></h2>
-        <p class="date"><abbr class="published" title="{{ item.date.isoformat }}">{{item.date|date:"Y-m-d"}}</abbr></p>
-        <p class="entry-content">{{ item.body }}</p>
+  {% for item in latest %}
+  <div class="hentry">
+          <h2 class="entry-title"><a rel="bookmark" href="{{ item.get_absolute_url }}">{{ item.title }}</a></h2>
+          <p class="date"><abbr class="published" title="{{ item.date.isoformat }}">{{item.date|date:"Y-m-d"}}</abbr></p>
+          <p class="entry-content">{{ item.body }}</p>
+  </div>
+  {% endfor %}
+
+  <nav aria-label="News page navigation">
+    <ul class="pagination">
+      <li class="page-item{% if page_obj.number == 1 %} disabled{% endif %}">
+        <a class="page-link" href="{% url 'news' %}"{% if page_obj.number == 1 %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-step-backward"></i></a>
+      </li>
+      <li class="page-item{% if not page_obj.has_previous %} disabled{% endif %}">
+        <a class="page-link"{% if page_obj.has_previous %} href="{% url 'news-page' page=page_obj.previous_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-backward"></i></a>
+      </li>
+      <li class="page-item">
+        <span class="page-link">{{ page_obj.number }} / {{ paginator.num_pages }}</span>
+      </li>
+      <li class="page-item{% if not page_obj.has_next %} disabled{% endif %}">
+        <a class="page-link"{% if page_obj.has_next %} href="{% url 'news-page' page=page_obj.next_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-forward"></i></a>
+      </li>
+      <li class="page-item{% if page_obj.paginator.num_pages == page_obj.number %} disabled{% endif %}">
+        <a class="page-link" href="{% url 'news-page' page=page_obj.paginator.num_pages %}"{% if page_obj.paginator.num_pages == page_obj.number %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-step-forward"></i></a>
+      </li>
+    </ul>
+  </nav>
 </div>
-{% endfor %}
-
-<nav aria-label="News page navigation">
-  <ul class="pagination">
-    <li class="page-item{% if page_obj.number == 1 %} disabled{% endif %}">
-      <a class="page-link" href="{% url 'news' %}"{% if page_obj.number == 1 %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-step-backward"></i></a>
-    </li>
-    <li class="page-item{% if not page_obj.has_previous %} disabled{% endif %}">
-      <a class="page-link"{% if page_obj.has_previous %} href="{% url 'news-page' page=page_obj.previous_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-backward"></i></a>
-    </li>
-    <li class="page-item">
-      <span class="page-link">{{ page_obj.number }} / {{ paginator.num_pages }}</span>
-    </li>
-    <li class="page-item{% if not page_obj.has_next %} disabled{% endif %}">
-      <a class="page-link"{% if page_obj.has_next %} href="{% url 'news-page' page=page_obj.next_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-forward"></i></a>
-    </li>
-    <li class="page-item{% if page_obj.paginator.num_pages == page_obj.number %} disabled{% endif %}">
-      <a class="page-link" href="{% url 'news-page' page=page_obj.paginator.num_pages %}"{% if page_obj.paginator.num_pages == page_obj.number %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-step-forward"></i></a>
-    </li>
-  </ul>
-</nav>
 {% endblock %}

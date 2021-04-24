@@ -4,78 +4,458 @@
 
 {% block content %}
 
-<h2>History</h2>
+<div class="content">
+  <h2>History</h2>
 
-<p>
-Tobias Ratschiller, then an IT consultant and later founder of the software
-company Maguma, started to work on a PHP-based web front-end to MySQL in 1998,
-inspired by Peter Kuppelwieser's MySQL-Webadmin. He gave up the project (and
-phpAdsNew, of which he was also the original author) in 2000 because of lack
-of time.
-</p>
+  <p>
+    Tobias Ratschiller, then an IT consultant and later founder of the software
+    company Maguma, started to work on a PHP-based web front-end to MySQL in 1998,
+    inspired by Peter Kuppelwieser's MySQL-Webadmin. He gave up the project (and
+    phpAdsNew, of which he was also the original author) in 2000 because of lack
+    of time.
+  </p>
 
-<p>
-By that time, phpMyAdmin had already become one of the most popular PHP
-applications and MySQL administration tools, with a large community of users
-and contributors. In order to coordinate the growing number of patches, a
-group of three developers, Olivier Müller, Marc Delisle and Loïc Chapeaux,
-registered the phpMyAdmin project at <a
-href="https://sourceforge.net/">SourceForge.net</a> and took over the
-development in 2001. Since 2015 the development is completely based
-on <a href="https://github.com/phpmyadmin">GitHub</a>.
-</p>
+  <p>
+    By that time, phpMyAdmin had already become one of the most popular PHP
+    applications and MySQL administration tools, with a large community of users
+    and contributors. In order to coordinate the growing number of patches, a
+    group of three developers, Olivier Müller, Marc Delisle and Loïc Chapeaux,
+    registered the phpMyAdmin project at <a href="https://sourceforge.net/">SourceForge.net</a> and took over the
+    development in 2001. Since 2015 the development is completely based
+    on <a href="https://github.com/phpmyadmin">GitHub</a>.
+  </p>
 
+  <p>The phpMyAdmin project is a member of <a href="https://sfconservancy.org/">Software Freedom Conservancy</a>. SFC is a not-for-profit organization that helps
+    promote, improve, develop, and defend Free, Libre, and Open Source Software (FLOSS) projects.</p>
 
-<h2>Milestone releases</h2>
-
-<ul>
-<li>1998-09-09 {% releaselink '0.9.0' %}: First internal release.</li>
-<li>1998-11-03 {% releaselink '1.1.0' %}: Added first confirmations for DROP commands.</li>
-<li>1998-11-29 {% releaselink '1.2.0' %}: Added possibility to import from text files.</li>
-<li>1998-12-16 {% releaselink '1.3.0' %}: Added query by example functionality.</li>
-<li>1998-12-27 {% releaselink '1.3.1' %}: First multi-lingual version.</li>
-<li>1999-01-16 {% releaselink '1.4.0' %}: Added support for renaming and copying tables.</li>
-<li>1999-04-11 {% releaselink '2.0.0' %}: Major layout changes.</li>
-<li>2000-06-08 {% releaselink '2.1.0' %}: Last release by the original developer Tobias Ratschiller.</li>
-<li>2001-08-31 {% releaselink '2.2.0' %}: First stable release made by the phpMyAdmin project.</li>
-<li>2001-11-08 {% releaselink '2.3.0' %}: Database and table views were split into smaller sections.</li>
-<li>2003-11-05 {% releaselink '2.5.0' %}: Introduction of the MIME-based transformation system.</li>
-<li>2004-09-27 {% releaselink '2.6.0' %}: Improved character set handling and support for MySQL 4.</li>
-<li>2005-12-04 {% releaselink '2.7.0' %}: Improved importing capabilities, simplified configuration and interface cleanup.</li>
-<li>2006-03-06 {% releaselink '2.8.0' %}: Compatibility updates, hiding databases, configurable memory limits, web-based setup.</li>
-<li>2006-09-20 {% releaselink '2.9.0' %}: Added export to OpenDocument Text and Spreadsheet.</li>
-<li>2007-02-27 {% releaselink '2.10.0' %}: GUI for relations, called Database Designer.</li>
-<li>2007-08-22 {% releaselink '2.11.0' %}: Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers handling large number of databases/tables.</li>
-<li>2008-09-27 {% releaselink '3.0.0' %}: Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</li>
-<li>2008-11-28 {% releaselink '3.1.0' %}: Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</li>
-<li>2009-06-09 {% releaselink '3.2.0' %}: Added many small features.</li>
-<li>2010-03-07 {% releaselink '3.3.0' %}: Added new import and export modules, changes tracking, synchronization and support for replication configuration.</li>
-<li>2001-05-11 {% releaselink '3.4.0' %}: AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</li>
-<li>2012-04-07 {% releaselink '3.5.0' %}: Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle support.</li>
-<li>2013-05-03 {% releaselink '4.0.0' %}: Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</li>
-<li>2013-12-12 {% releaselink '4.1.0' %}: Requires PHP 5.3 and MySQL 5.5. Added ReCAPTCHA support, configurable menus, and an error reporting component.</li>
-<li>2014-05-08 {% releaselink '4.2.0' %}: Added fixed navigation tabs, favorites table and a quick filter for displayed rows.</li>
-<li>2014-12-05 {% releaselink '4.3.0' %}: Added SQL preview mode, central list of columns, normalization and the new console.</li>
-<li>2015-04-01 {% releaselink '4.4.0' %}: Various improvements to the table structure page, the console and the ZeroConf features.</li>
-<li>2015-09-23 {% releaselink '4.5.0' %}: Various improvements to export, import, table partitions or the console features. Requires PHP 5.5 or newer</li>
-<li>2016-03-22 {% releaselink '4.6.0' %}: Improved support for SSL connections to MySQL and many bugfixes.</li>
-<li>2017-03-29 {% releaselink '4.7.0' %}: Added database and table filtering, changes to JSON export, and begin using Composer to manage library dependencies.</li>
-<li>2018-04-07 {% releaselink '4.8.0' %}: Support for two&ndash;factor authentication, added a mobile&ndash;friendly interface.</li>
-<li>2019-06-04 {% releaselink '4.9.0' %}: "Long Term Support" (LTS) version providing security fixes for PHP 5.5 through 7.4 and MySQL 5.5 and newer.</li>
-<li>2019-12-26 {% releaselink '5.0.0' %}: Added the Metro theme as well as modernizing many aspects of the codebase. PHP 7.1 or newer is now required.</li>
-<li>2021-02-24 {% releaselink '5.1.0' %}: Added a routing system and re-worked all the route endpoints. Babel is now used to transpile JS files and Bootstrap is used more and more in our Twig templates. A lot of codebase modernizing and some performance improvements.</li>
-</ul>
+  <h2>Team</h2>
+  <p>
+    You can find more about the Team in <a href="{% url 'team' %}">Team</a> page.
+  </p>
 
 
-<h2>Name</h2>
+  <h2>Milestone releases</h2>
 
-<p>
-The phpMyAdmin name is obviously a mixture of PHP as the language it uses, MySQL as the
-database it manages and administration as the activity it handles. Even though
-the name seems to be quite simple, many people mix it up and they refer to
-phpMyAdmin under different names, such as myphpadmin, phpadmin, phpmysqladmin
-(these are the three most frequent Google searches going to this website aside from the
-correctly spelled variant).
-</p>
+  <ul class="history-view">
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1998</div>
+        <div class="history-date-month">09</div>
+        <div class="history-date-day">09</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '0.9.0' %}</div>
+        <div class="history-desc">First internal release.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1998</div>
+        <div class="history-date-month">11</div>
+        <div class="history-date-day">03</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '1.1.0' %}</div>
+        <div class="history-desc">Added first confirmations for DROP commands.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1998</div>
+        <div class="history-date-month">11</div>
+        <div class="history-date-day">29</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '1.2.0' %}</div>
+        <div class="history-desc">Added possibility to import from text files.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1998</div>
+        <div class="history-date-month">12</div>
+        <div class="history-date-day">16</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '1.3.0' %}</div>
+        <div class="history-desc">Added query by example functionality.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1998</div>
+        <div class="history-date-month">12</div>
+        <div class="history-date-day">27</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '1.3.1' %}</div>
+        <div class="history-desc">First multi-lingual version.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1999</div>
+        <div class="history-date-month">01</div>
+        <div class="history-date-day">16</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '1.4.0' %}</div>
+        <div class="history-desc">Added support for renaming and copying tables.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">1999</div>
+        <div class="history-date-month">04</div>
+        <div class="history-date-day">11</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.0.0' %}</div>
+        <div class="history-desc">Major layout changes.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2000</div>
+        <div class="history-date-month">06</div>
+        <div class="history-date-day">08</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.1.0' %}</div>
+        <div class="history-desc">Last release by the original developer Tobias Ratschiller.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2001</div>
+        <div class="history-date-month">08</div>
+        <div class="history-date-day">31</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.2.0' %}</div>
+        <div class="history-desc">First stable release made by the phpMyAdmin project.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2001</div>
+        <div class="history-date-month">11</div>
+        <div class="history-date-day">08</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.3.0' %}</div>
+        <div class="history-desc">Database and table views were split into smaller sections.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2003</div>
+        <div class="history-date-month">11</div>
+        <div class="history-date-day">05</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.5.0' %}</div>
+        <div class="history-desc">Introduction of the MIME-based transformation system.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2004</div>
+        <div class="history-date-month">09</div>
+        <div class="history-date-day">27</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.6.0' %}</div>
+        <div class="history-desc">Improved character set handling and support for MySQL 4.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2005</div>
+        <div class="history-date-month">12</div>
+        <div class="history-date-day">04</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.7.0' %}</div>
+        <div class="history-desc">Improved importing capabilities, simplified configuration and interface cleanup.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2006</div>
+        <div class="history-date-month">03</div>
+        <div class="history-date-day">06</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.8.0' %}</div>
+        <div class="history-desc">Compatibility updates, hiding databases, configurable memory limits, web-based setup.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2006</div>
+        <div class="history-date-month">09</div>
+        <div class="history-date-day">20</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.9.0' %}</div>
+        <div class="history-desc">Added export to OpenDocument Text and Spreadsheet.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2007</div>
+        <div class="history-date-month">02</div>
+        <div class="history-date-day">27</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.10.0' %}</div>
+        <div class="history-desc">GUI for relations, called Database Designer.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2007</div>
+        <div class="history-date-month">08</div>
+        <div class="history-date-day">22</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '2.11.0' %}</div>
+        <div class="history-desc">Supports creating VIEWS from query results, manages triggers, procedures and functions. Improved interface for servers
+        handling large number of databases/tables.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2008</div>
+        <div class="history-date-month">09</div>
+        <div class="history-date-day">27</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '3.0.0' %}</div>
+        <div class="history-desc">Requires PHP 5.2 and MySQL 5+. Supports EVENT and TRIGGER.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2008</div>
+        <div class="history-date-month">11</div>
+        <div class="history-date-day">28</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '3.1.0' %}</div>
+        <div class="history-desc">Added support for BLOBStreaming, Swekey hardware authentication and rewritten setup script.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2009</div>
+        <div class="history-date-month">06</div>
+        <div class="history-date-day">09</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '3.2.0' %}</div>
+        <div class="history-desc">Added many small features.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2010</div>
+        <div class="history-date-month">03</div>
+        <div class="history-date-day">07</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '3.3.0' %}</div>
+        <div class="history-desc">Added new import and export modules, changes tracking, synchronization and support for replication configuration.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2001</div>
+        <div class="history-date-month">05</div>
+        <div class="history-date-day">11</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '3.4.0' %}</div>
+        <div class="history-desc">AJAXification of some parts, charts, visual query builder, user preferences, ENUM/SET editor.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2012</div>
+        <div class="history-date-month">04</div>
+        <div class="history-date-day">07</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '3.5.0' %}</div>
+        <div class="history-desc">Improved browsing, server monitoring, support for stored routines, events and triggers, openGIS support, Drizzle
+        support.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2013</div>
+        <div class="history-date-month">05</div>
+        <div class="history-date-day">03</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.0.0' %}</div>
+        <div class="history-desc">Removal of HTML frames, switch to tree-based navigation, and new look for the documentation.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2013</div>
+        <div class="history-date-month">12</div>
+        <div class="history-date-day">12</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.1.0' %}</div>
+        <div class="history-desc">Requires PHP 5.3 and MySQL 5.5. Added ReCAPTCHA support, configurable menus, and an error reporting component.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2014</div>
+        <div class="history-date-month">05</div>
+        <div class="history-date-day">08</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.2.0' %}</div>
+        <div class="history-desc">Added fixed navigation tabs, favorites table and a quick filter for displayed rows.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year"></div>
+        <div class="history-date-month"></div>
+        <div class="history-date-day"></div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink 'x' %}</div>
+        <div class="history-desc"></div>
+      </div>2014-12-05 {% releaselink '4.3.0' %}: Added SQL preview mode, central list of
+      columns, normalization and the new console.
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2015</div>
+        <div class="history-date-month">04</div>
+        <div class="history-date-day">01</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.4.0' %}</div>
+        <div class="history-desc">Various improvements to the table structure page, the console and the ZeroConf features.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2015</div>
+        <div class="history-date-month">09</div>
+        <div class="history-date-day">23</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.5.0' %}</div>
+        <div class="history-desc">Various improvements to export, import, table partitions or the console features. Requires PHP 5.5 or newer</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2016</div>
+        <div class="history-date-month">03</div>
+        <div class="history-date-day">22</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.6.0' %}</div>
+        <div class="history-desc">Improved support for SSL connections to MySQL and many bugfixes.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2017</div>
+        <div class="history-date-month">03</div>
+        <div class="history-date-day">29</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.7.0' %}</div>
+        <div class="history-desc">Added database and table filtering, changes to JSON export, and begin using Composer to manage library dependencies.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2018</div>
+        <div class="history-date-month">04</div>
+        <div class="history-date-day">07</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.8.0' %}</div>
+        <div class="history-desc">Support for two&ndash;factor authentication, added a mobile&ndash;friendly interface.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2019</div>
+        <div class="history-date-month">06</div>
+        <div class="history-date-day">04</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '4.9.0' %}</div>
+        <div class="history-desc">"Long Term Support" (LTS) version providing security fixes for PHP 5.5 through 7.4 and MySQL 5.5 and newer.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2019</div>
+        <div class="history-date-month">12</div>
+        <div class="history-date-day">26</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '5.0.0' %}</div>
+        <div class="history-desc">Added the Metro theme as well as modernizing many aspects of the codebase. PHP 7.1 or newer is now required.</div>
+      </div>
+    </li>
+    <li>
+      <div class="history-date">
+        <div class="history-date-year">2021</div>
+        <div class="history-date-month">02</div>
+        <div class="history-date-day">24</div>
+      </div>
+      <div class="history-info">
+        <div class="history-link">{% releaselink '5.1.0' %}</div>
+        <div class="history-desc">Added a routing system and re-worked all the route endpoints. Babel is now used to transpile JS files and Bootstrap is used more and more in our Twig templates. A lot of codebase modernizing and some performance improvements.</div>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Name</h2>
+  <p>
+    The phpMyAdmin name is obviously a mixture of PHP as the language it uses, MySQL as the
+    database it manages and administration as the activity it handles. Even though
+    the name seems to be quite simple, many people mix it up and they refer to
+    phpMyAdmin under different names, such as myphpadmin, phpadmin, phpmysqladmin
+    (these are the three most frequent Google searches going to this website aside from the
+    correctly spelled variant).
+  </p>
+
+  <h2>Logo</h2>
+  <p>
+    The logo is meant to show how phpMyAdmin helps you "sail the turbulent seas" of using MySQL, in that time (1998).
+  </p>
+  <p>
+    The rebranded logo (2020) was made by Adriano Cahete and Beatriz Fazolo, based on the original logo with more design
+    key points in mind.
+  </p>
+
+  <h2>Website</h2>
+  <p>
+    You can find more info about this website in the <a href="{% url 'about-website' %}">About Website</a> page.
+  </p>
+
+  <h2>Social</h2>
+  <p>
+    You can find us in Social Networks like as <a href="https://www.facebook.com/pmyadmin/" target="_blank" rel="noopener noreferrer">Facebook</a> and <a href="https://twitter.com/phpmya" target="_blank" rel="noopener noreferrer">Twitter</a> too.
+  </p>
+
+</div>
 
 {% endblock %}
