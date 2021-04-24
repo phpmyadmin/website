@@ -127,10 +127,11 @@
             <div class="news-month" title="{{ item.date|date:'mmmm' }}">
               {{ item.date|date:"mm" }}
             </div>
-            <div class="news-year">
-              <!-- TODO: Needs a if(item.date|date:'yyyy' == current_year) {display:none;} -->
-              {{ item.date|date:"yyyy" }}
-            </div>
+            {% if item.date|date:"Y" != current_year %}
+              <div class="news-year">
+                {{ item.date|date:"Y" }}
+              </div>
+            {% endif %}
           </div>
           <div class="news-info">
             <div class="news-title">
