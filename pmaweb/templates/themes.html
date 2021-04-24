@@ -24,7 +24,7 @@
   href="{% url 'try' %}">demo server</a>.
   </p>
 
-  {% include "components\_verify.html" %}
+  {% include "components/_verify.html" %}
 
   <h2>Submit Theme</h2>
   <p>
@@ -65,7 +65,7 @@
           </a>
         </div>
       </div>
-      {% include 'components\_dltable.html' with download_item=theme %}
+      {% include 'components/_dltable.html' with download_item=theme %}
     </div>
     {% endfor %}
   </div>
