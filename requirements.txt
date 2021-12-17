@@ -1,7 +1,7 @@
 Django>=1.11,<2.0
 python-dateutil
 feedparser
-django-markupfield
+django-markupfield<2.0
 docutils
 Markdown
 pytz
