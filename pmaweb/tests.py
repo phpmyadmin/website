@@ -112,7 +112,7 @@ class CDNTest(TestCase):
             body=self.cdn_response,
         )
         self.trigger_urls = []
-        with self.settings(CDN_PASSWORD='x'):
+        with self.settings(CDN_API_TOKEN='x'):
             model.objects.create(**kwargs)
         for url in urls:
             self.assertIn(

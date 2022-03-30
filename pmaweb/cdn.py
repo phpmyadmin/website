@@ -4,6 +4,7 @@
 # phpMyAdmin web site
 #
 # Copyright (C) 2008 - 2016 Michal Cihar <michal@cihar.com>
+# Copyright (C) 2022 William Desportes <williamdes@wdes.fr>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,20 +22,31 @@
 #
 """CDN integration"""
 from django.conf import settings
-from urllib2 import urlopen
-from urllib import urlencode
+
+import urllib2
 import json
 
-URL = 'https://api.cdn77.com/v2.0/data/purge'
-URL_ALL = 'https://api.cdn77.com/v2.0/data/purge-all'
+URL = 'https://api.cdn77.com/v3/cdn/{id}/job/purge'
+URL_ALL = 'https://api.cdn77.com/v3/cdn/{id}/job/purge-all'
 
 
-def perform(url, data):
+def perform(url, paths):
     """Perform CDN POST request"""
-    handle = urlopen(url, urlencode(data))
+
+    data = json.dumps({'paths': paths})
+    req = urllib2.Request(url, data, {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer {token}'.replace('{token}', settings.CDN_API_TOKEN),
+            'User-Agent': 'phpMyAdmin/website script',
+        })
+
+    handle = urllib2.urlopen(req)
     response = handle.read()
     decoded = json.loads(response)
-    if decoded['status'] != 'ok':
+    handle.close()
+
+    if decoded['state'] != 'done':
         if 'errors' in decoded:
             raise Exception(decoded['errors'])
         raise Exception(decoded)
@@ -43,39 +55,24 @@ def perform(url, data):
 
 def purge_cdn(*pages):
     """Purges page on CDN"""
-    if not settings.CDN_PASSWORD:
+    if not settings.CDN_API_TOKEN:
         return
-    data = [
-        ('login', settings.CDN_LOGIN),
-        ('passwd', settings.CDN_PASSWORD),
-        ('cdn_id', settings.CDN_ID),
-    ]
-    for page in pages:
-        data.append(('url[]', page))
-    return perform(URL, data)
+
+    return perform(URL.replace('{id}', settings.CDN_ID), pages)
 
 
 def purge_files_cdn(*pages):
     """Purges page on CDN"""
-    if not settings.CDN_PASSWORD:
+    if not settings.CDN_API_TOKEN:
         return
-    data = [
-        ('login', settings.CDN_LOGIN),
-        ('passwd', settings.CDN_PASSWORD),
-        ('cdn_id', settings.FILES_CDN_ID),
-    ]
-    for page in pages:
-        data.append(('url[]', page))
-    return perform(URL, data)
+
+    return perform(URL.replace('{id}', settings.FILES_CDN_ID), pages)
 
 
 def purge_all_cdn():
     """Purges all pages on CDN"""
-    if not settings.CDN_PASSWORD:
+    if not settings.CDN_API_TOKEN:
         return
-    data = [
-        ('login', settings.CDN_LOGIN),
-        ('passwd', settings.CDN_PASSWORD),
-        ('cdn_id', settings.CDN_ID),
-    ]
-    return perform(URL_ALL, data)
+
+    return perform(URL_ALL.replace('{id}', settings.CDN_ID), [])
+
