@@ -46,7 +46,7 @@ def perform(url, paths):
     decoded = json.loads(response)
     handle.close()
 
-    if decoded['state'] != 'done':
+    if decoded['state'] != 'done' and decoded['state'] != 'queued':
         if 'errors' in decoded:
             raise Exception(decoded['errors'])
         raise Exception(decoded)
