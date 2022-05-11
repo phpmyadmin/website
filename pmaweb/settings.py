@@ -162,7 +162,7 @@ COMPRESS_CSS_FILTERS = [
 ]
 
 # List of major versions to offer for download in descending order.
-LISTED_BRANCHES = ('5.1','4.9')
+LISTED_BRANCHES = ('5.2','4.9')
 
 CDN_API_TOKEN = None
 CDN_ID = '41205'
