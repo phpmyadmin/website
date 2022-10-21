@@ -184,3 +184,8 @@ footer li{
 .images .col-md-3 {
     min-height: 300px;
 }
+#download-modal-close-button {
+ padding: 10px;
+ padding-right:20px;
+ text-align: right;
+}
