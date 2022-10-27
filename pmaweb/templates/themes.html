@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load file_check %}
 
 {% block content %}
 <h2>Themes</h2>
@@ -49,9 +50,11 @@ request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.c
   </div>
   <div class="card-body">
             <div class="pull-right thumbnail">
-                <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
-                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
-                </a>
+              {% if theme.imgname|image_exists %}
+              <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
+                <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
+              </a>
+              {% endif %}
             </div>
             <p>Released on {{theme.date|date:"Y-m-d"}}</p>
             <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
