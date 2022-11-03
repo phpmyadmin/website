@@ -138,6 +138,14 @@ div.subscribe {
 .sfc-logo {
     text-align: center;
 }
+
+footer {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right:50px;
+}
 footer ul {
     padding:0;
     margin:1em;

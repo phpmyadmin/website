@@ -3,15 +3,17 @@
 
 {% block content %}
 
-<h2>Page Not Found</h2>
+
+<h3>
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+   Page Not Found
+</h3>
 
 <p>
-The requested URL was not found on this server. This might have several
-causes, but if you found this link on some page, you should notify its author
-that it no longer works. Please follow to our <a href="{% url 'home' %}">main
+The requested URL was not found on this server. Please visit our <a href="{% url 'home' %}">main
 page</a> to find information you were looking for or use the navigation bar above.
 </p>
-
+<p>If you want to report the missing page. Please visit  <a href="{% url 'support' %}">Support</a> </p>
 <script type="text/javascript">
 var GOOG_FIXURL_LANG = 'en';
 var GOOG_FIXURL_SITE = 'https://www.phpmyadmin.net/';

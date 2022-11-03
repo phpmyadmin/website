@@ -44,7 +44,7 @@ ADMINS = (
 SECRET_KEY = 'n$6di6axa*m5)$%yzhl6xhe%^b4t^)6#sbz_b5_7&ga@12(+_h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = (
     '127.0.0.1',
@@ -172,3 +172,5 @@ DOCKERHUB_TOKEN = None
 
 GITHUB_USER = 'phpmyadmin-bot'
 GITHUB_TOKEN = None
+
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
