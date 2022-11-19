@@ -140,6 +140,7 @@ class Command(BaseCommand):
                     filename = download.__unicode__()
                     purge.extend([
                         filename,
+                        '/snapshots/phpMyAdmin-{}.json'.format(version),
                         '{}.sha1'.format(filename),
                         '{}.sha256'.format(filename),
                     ])
