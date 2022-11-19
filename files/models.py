@@ -495,6 +495,17 @@ def purge_release(sender, instance, **kwargs):
         reverse('files'),
         reverse('feed-files'),
         reverse('downloads'),
+        reverse('doap'),
+        reverse('pad'),
+        # This release
+        instance.get_absolute_url(),
+    )
+
+    # Do not purge all links if it is a snapshot build
+    if instance.snapshot:
+        return
+
+    purge_cdn(
         # Version dumps
         '/downloads/list.txt',
         '/home_page/version.txt',
@@ -509,10 +520,6 @@ def purge_release(sender, instance, **kwargs):
         '/downloads/phpMyAdmin-latest-english.tar.xz',
         '/downloads/phpMyAdmin-latest-english.zip',
         '/downloads/phpMyAdmin-latest-source.tar.xz',
-        reverse('doap'),
-        reverse('pad'),
-        # This release
-        instance.get_absolute_url(),
     )
     # Purge all pages as every page contains download link
     purge_all_cdn()
