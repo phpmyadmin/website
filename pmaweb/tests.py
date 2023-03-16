@@ -32,7 +32,8 @@ from pmaweb.cdn import URL as CDN_URL, URL_ALL as CDN_URL_ALL
 from files.models import Release, Download, Theme
 from news.models import Post, Planet
 from security.models import PMASA
-
+import json
+from django.conf import settings
 
 class ViewTest(TestCase):
     fixtures = ['test_data.json']
@@ -87,28 +88,32 @@ class CDNTest(TestCase):
     trigger_urls = []
 
     def cdn_response(self, request, uri, headers):
-        if uri == CDN_URL_ALL:
+        cdn_url = CDN_URL.replace('{id}', settings.CDN_ID)
+        cdn_url_all = CDN_URL_ALL.replace('{id}', settings.CDN_ID)
+        if uri == cdn_url_all:
             self.trigger_urls.append('__ALL__')
-        elif uri == CDN_URL:
-            params = parse_qs(request.body.decode('utf-8'))
-            self.trigger_urls.extend(params['url[]'])
+        elif uri == cdn_url:
+            params = json.loads(request.body)
+            self.trigger_urls.extend(params['paths'])
         else:
             raise ValueError('Not supported URL: {0}'.format(uri))
         return (
             200, headers,
-            '{"status":"ok"}',
+            '{"state":"done"}',
         )
 
     @httpretty.activate
     def cdn_tester(self, model, urls, **kwargs):
+        cdn_url = CDN_URL.replace('{id}', settings.CDN_ID)
+        cdn_url_all = CDN_URL_ALL.replace('{id}', settings.CDN_ID)
         httpretty.register_uri(
             httpretty.POST,
-            CDN_URL,
+            cdn_url,
             body=self.cdn_response,
         )
         httpretty.register_uri(
             httpretty.POST,
-            CDN_URL_ALL,
+            cdn_url_all,
             body=self.cdn_response,
         )
         self.trigger_urls = []
