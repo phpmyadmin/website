@@ -59,6 +59,18 @@ class ViewTest(TestCase):
 
     def test_non_existing(self):
         response = self.client.get(
-            '/home_page/security.php?issue=PMASA-2011-1_2', follow=True
+            '/home_page/security.php?issue=PMASA-2011-22', follow=True
+        )
+        self.assertRedirects(response, '/security/')
+
+    def test_invalid_issue(self):
+        response = self.client.get(
+            '/home_page/security.php?issue=PMASA20111', follow=True
+        )
+        self.assertRedirects(response, '/security/')
+
+    def test_invalid_issue_prefix(self):
+        response = self.client.get(
+            '/home_page/security.php?issue=SA-2011-1', follow=True
         )
         self.assertRedirects(response, '/security/')
