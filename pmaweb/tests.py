@@ -21,7 +21,7 @@
 #
 
 from xml.etree import cElementTree as ElementTree
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.core.urlresolvers import reverse
 from django.utils.timezone import utc, make_aware
 import httpretty
@@ -32,7 +32,6 @@ from files.models import Release, Download, Theme
 from news.models import Post, Planet
 from security.models import PMASA
 import json
-from django.conf import settings
 
 class ViewTest(TestCase):
     fixtures = ['test_data.json']
@@ -87,8 +86,8 @@ class CDNTest(TestCase):
     trigger_urls = []
 
     def cdn_response(self, request, uri, headers):
-        cdn_url = CDN_URL.replace('{id}', settings.CDN_ID)
-        cdn_url_all = CDN_URL_ALL.replace('{id}', settings.CDN_ID)
+        cdn_url = CDN_URL.replace('{id}', '12345')
+        cdn_url_all = CDN_URL_ALL.replace('{id}', '12345')
         if uri == cdn_url_all:
             self.trigger_urls.append('__ALL__')
         elif uri == cdn_url:
@@ -103,8 +102,8 @@ class CDNTest(TestCase):
 
     @httpretty.activate
     def cdn_tester(self, model, urls, **kwargs):
-        cdn_url = CDN_URL.replace('{id}', settings.CDN_ID)
-        cdn_url_all = CDN_URL_ALL.replace('{id}', settings.CDN_ID)
+        cdn_url = CDN_URL.replace('{id}', '12345')
+        cdn_url_all = CDN_URL_ALL.replace('{id}', '12345')
         httpretty.register_uri(
             httpretty.POST,
             cdn_url,
@@ -124,6 +123,7 @@ class CDNTest(TestCase):
                 self.trigger_urls,
             )
 
+    @override_settings(CDN_ID='12345')
     def test_pmasa(self):
         self.cdn_tester(
             PMASA,
@@ -133,6 +133,7 @@ class CDNTest(TestCase):
             draft=False,
         )
 
+    @override_settings(CDN_ID='12345')
     def test_theme(self):
         self.cdn_tester(
             Theme,
@@ -140,6 +141,7 @@ class CDNTest(TestCase):
             name='themeeee',
         )
 
+    @override_settings(CDN_ID='12345')
     def test_release(self):
         self.cdn_tester(
             Release,
@@ -151,6 +153,7 @@ class CDNTest(TestCase):
             version='0.1',
         )
 
+    @override_settings(CDN_ID='12345')
     def test_download(self):
         release = Release.objects.create(version='0.2')
         release.purged = False
@@ -164,6 +167,7 @@ class CDNTest(TestCase):
             release=release,
         )
 
+    @override_settings(CDN_ID='12345')
     def test_news_post(self):
         self.cdn_tester(
             Post,
@@ -174,6 +178,7 @@ class CDNTest(TestCase):
             ),
         )
 
+    @override_settings(CDN_ID='12345')
     def test_news_planet(self):
         self.cdn_tester(
             Planet,
