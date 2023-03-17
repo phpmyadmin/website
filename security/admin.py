@@ -24,7 +24,7 @@ from security.models import PMASA
 
 
 class PMASAAdmin(admin.ModelAdmin):
-    list_display = ('__unicode__', 'date', 'updated', 'summary', 'draft')
+    list_display = ('__str__', 'date', 'updated', 'summary', 'draft')
     search_fields = ('summary', 'description')
     date_hierarchy = 'date'
     list_filter = ('draft',)

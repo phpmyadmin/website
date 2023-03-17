@@ -137,7 +137,7 @@ class Command(BaseCommand):
             )
             if modified:
                 for download in release.download_set.all():
-                    filename = download.__unicode__()
+                    filename = download.__str__()
                     purge.extend([
                         filename,
                         '/snapshots/phpMyAdmin-{}.json'.format(version),
