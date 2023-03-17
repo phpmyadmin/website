@@ -33,7 +33,7 @@ URL_ALL = 'https://api.cdn77.com/v3/cdn/{id}/job/purge-all'
 def perform(url, paths):
     """Perform CDN POST request"""
 
-    data = json.dumps({'paths': paths})
+    data = json.dumps({'paths': paths}).encode('utf-8')
     req = urllib2.Request(url, data, {
             'Content-Type': 'application/json',
             'Accept': 'application/json',

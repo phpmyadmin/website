@@ -24,7 +24,6 @@ from xml.etree import cElementTree as ElementTree
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from django.utils.timezone import utc, make_aware
-from urlparse import parse_qs
 import httpretty
 import datetime
 from pmaweb.views import REDIRECT_MAP
