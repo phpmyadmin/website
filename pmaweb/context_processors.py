@@ -24,7 +24,7 @@ from news.models import Post, Planet
 from translations.models import Translation
 from security.models import PMASA
 from demo.models import Demo
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils import timezone
 import datetime
 

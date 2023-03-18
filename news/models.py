@@ -21,7 +21,7 @@
 #
 
 from django.dispatch import receiver
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db.models.signals import post_save
 from django.db import models
 from django.utils import timezone
