@@ -83,7 +83,7 @@ def redirect_home_page(request, page):
         raise Http404('Not existing page: {0}'.format(page))
 
 
-def notfound(request):
+def notfound(request, exception=None):
     return render(
         request,
         '404.html',
