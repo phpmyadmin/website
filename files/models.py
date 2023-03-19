@@ -319,7 +319,7 @@ class Release(models.Model):
 
 
 class Download(models.Model):
-    release = models.ForeignKey(Release)
+    release = models.ForeignKey(Release, on_delete=models.CASCADE)
     filename = models.CharField(max_length=50)
     size = models.IntegerField(default=0)
     sha1 = models.CharField(max_length=40)

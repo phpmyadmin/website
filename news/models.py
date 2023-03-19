@@ -37,7 +37,7 @@ class Post(models.Model):
     )
     date = models.DateTimeField(db_index=True, default=timezone.now)
     body = MarkupField(default_markup_type='markdown')
-    author = models.ForeignKey(User, editable=False)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
 
     class Meta(object):
         ordering = ['-date']
