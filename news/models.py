@@ -21,7 +21,7 @@
 #
 
 from django.dispatch import receiver
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db.models.signals import post_save
 from django.db import models
 from django.utils import timezone
@@ -37,7 +37,7 @@ class Post(models.Model):
     )
     date = models.DateTimeField(db_index=True, default=timezone.now)
     body = MarkupField(default_markup_type='markdown')
-    author = models.ForeignKey(User, editable=False)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
 
     class Meta(object):
         ordering = ['-date']
@@ -45,12 +45,10 @@ class Post(models.Model):
     def __unicode__(self):
         return self.title
 
-    @models.permalink
     def get_absolute_url(self):
-        return (
+        return reverse(
             'news-item',
-            (),
-            {
+            kwargs={
                 'day': self.date.day,
                 'month': self.date.month,
                 'year': self.date.year,

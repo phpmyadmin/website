@@ -23,7 +23,7 @@ import json
 import urllib2
 from django.dispatch import receiver
 from django.db.models.signals import post_save
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
@@ -319,7 +319,7 @@ class Release(models.Model):
 
 
 class Download(models.Model):
-    release = models.ForeignKey(Release)
+    release = models.ForeignKey(Release, on_delete=models.CASCADE)
     filename = models.CharField(max_length=50)
     size = models.IntegerField(default=0)
     sha1 = models.CharField(max_length=40)

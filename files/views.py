@@ -22,7 +22,7 @@
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import HttpResponse, Http404
 from django.shortcuts import redirect
 from files.models import Release, get_current_releases, Download

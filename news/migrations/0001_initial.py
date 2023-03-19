@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
                 ('body', markupfield.fields.MarkupField(rendered_field=True)),
                 ('body_markup_type', models.CharField(default=b'markdown', max_length=30, choices=[(b'', b'--'), (b'html', 'HTML'), (b'plain', 'Plain'), (b'markdown', 'Markdown'), (b'restructuredtext', 'Restructured Text')])),
                 ('_body_rendered', models.TextField(editable=False)),
-                ('author', models.ForeignKey(editable=False, to=settings.AUTH_USER_MODEL)),
+                ('author', models.ForeignKey(editable=False, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'ordering': ['-date'],

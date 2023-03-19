@@ -21,7 +21,7 @@
 #
 from django.dispatch import receiver
 from django.db.models.signals import post_save
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db import models
 from django.utils import timezone
 from markupfield.fields import MarkupField
@@ -89,16 +89,14 @@ class PMASA(models.Model):
     def __unicode__(self):
         return 'PMASA-{0}-{1}'.format(self.year, self.sequence)
 
-    @models.permalink
     def get_absolute_url(self):
         if self.draft:
             page = 'security-issue-draft'
         else:
             page = 'security-issue'
-        return (
+        return reverse(
             page,
-            (),
-            {'year': self.year, 'sequence': self.sequence}
+            kwargs={'year': self.year, 'sequence': self.sequence}
         )
 
     def get_cves(self):

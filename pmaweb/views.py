@@ -26,7 +26,7 @@ import base64
 
 from django.conf import settings
 from django.shortcuts import redirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import HttpResponse, Http404, HttpResponseServerError
 from django.views.decorators.cache import cache_control
 from django.views.generic import TemplateView

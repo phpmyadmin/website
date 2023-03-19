@@ -22,7 +22,7 @@
 
 from xml.etree import cElementTree as ElementTree
 from django.test import TestCase, override_settings
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils.timezone import utc, make_aware
 import httpretty
 import datetime

@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from django.contrib.sitemaps import GenericSitemap, Sitemap
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils import timezone
 from news.models import Post
 from security.models import PMASA
