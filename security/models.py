@@ -89,16 +89,14 @@ class PMASA(models.Model):
     def __unicode__(self):
         return 'PMASA-{0}-{1}'.format(self.year, self.sequence)
 
-    @models.permalink
     def get_absolute_url(self):
         if self.draft:
             page = 'security-issue-draft'
         else:
             page = 'security-issue'
-        return (
+        return reverse(
             page,
-            (),
-            {'year': self.year, 'sequence': self.sequence}
+            kwargs={'year': self.year, 'sequence': self.sequence}
         )
 
     def get_cves(self):
