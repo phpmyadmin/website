@@ -50,19 +50,19 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-bars"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav me-auto">
             {% for item in menu %}
-            <li class="nav-item{% if item.active %} active{% endif %}">
-              <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if item.active %} <span class="sr-only">(current)</span>{% endif %}</a>
+            <li class="nav-item">
+              <a class="nav-link{% if item.active %} active{% endif %}" href="{{ item.url }}">{{ item.title }}{% if item.active %} <span class="visually-hidden">(current)</span>{% endif %}</a>
             </li>
             {% endfor %}
           </ul>
-          <ul class="navbar-nav mr-0">
+          <ul class="navbar-nav me-0">
             <li class="nav-item">
               <a class="nav-link" href="https://github.com/phpmyadmin/phpmyadmin" title="phpMyAdmin is developed on GitHub"><i class="fa fa-github"></i> GitHub</a>
             </li>
@@ -94,12 +94,12 @@
   </content>
 
 <!-- Modal -->
-<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="downloadModalLabel">Thank you for downloading phpMyAdmin</h3>
+        <h1 class="modal-title fs-5" id="downloadModalLabel">Thank you for downloading phpMyAdmin</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>
@@ -132,7 +132,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
         <a href="{% url 'donate' %}" class="btn btn-primary">Donate to phpMyAdmin</a>
       </div>
     </div>
