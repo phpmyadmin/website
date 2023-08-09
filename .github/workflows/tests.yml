@@ -42,7 +42,7 @@ jobs:
                 sed -i 's/from collections import Counter, Iterator, Mapping, OrderedDict/from collections import Counter, OrderedDict\nfrom collections.abc import Iterator, Mapping/' ./django/db/models/sql/query.py
                 sed -i 's/import collections/import collections.abc as collections/' ./django/core/paginator.py
                 sed -i 's/import collections/import collections.abc as collections/' ./django/db/models/fields/__init__.py
-                sed -i 's/self.set_output_charset/#self.set_output_charset/'./django/utils/translation/trans_real.py
+                sed -i 's/self.set_output_charset/#self.set_output_charset/' ./django/utils/translation/trans_real.py
                 sed -i "s/codeset='utf-8',/#codeset='utf-8',/" ./django/utils/translation/trans_real.py
             - name: Run the migrations
               run: ./manage.py migrate
