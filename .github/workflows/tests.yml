@@ -14,7 +14,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                python-version: ["3.8", "3.9", "3.10", "3.11"]
+                python-version: ["3.10", "3.11"]
                 os: [ubuntu-latest]
         steps:
             - uses: actions/checkout@v3
@@ -29,12 +29,21 @@ jobs:
             # https://patch-diff.githubusercontent.com/raw/django/django/pull/11986.diff
             - name: Apply a patch for ticket 29182 from Django
               run: |
-                set -x
+                set -eux
                 cd "$(python -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])')"
                 sed -i "/PRAGMA foreign_keys = 0/a \ \ \ \ \ \ \ \ \ \ \ \ c.execute\('PRAGMA legacy_alter_table = ON'\)" ./django/db/backends/sqlite3/schema.py
                 sed -i "/PRAGMA foreign_keys = %s/a \ \ \ \ \ \ \ \ \ \ \ \ c.execute\('PRAGMA legacy_alter_table = OFF'\)" ./django/db/backends/sqlite3/schema.py
                 head -n 50 ./django/db/backends/sqlite3/schema.py
                 cd - > /dev/null
+            - name: Apply a patch for Python (> 3.9) collections & gettext
+              run: |
+                set -eux
+                cd "$(python -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])')"
+                sed -i 's/from collections import Counter, Iterator, Mapping, OrderedDict/from collections import Counter, OrderedDict\nfrom collections.abc import Iterator, Mapping/' ./django/db/models/sql/query.py
+                sed -i 's/import collections/import collections.abc as collections/' ./django/core/paginator.py
+                sed -i 's/import collections/import collections.abc as collections/' ./django/db/models/fields/__init__.py
+                sed -i 's/self.set_output_charset/#self.set_output_charset/'./django/utils/translation/trans_real.py
+                sed -i "s/codeset='utf-8',/#codeset='utf-8',/" ./django/utils/translation/trans_real.py
             - name: Run the migrations
               run: ./manage.py migrate
             - name: Run python checks
