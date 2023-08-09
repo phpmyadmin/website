@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 import json
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.urls import reverse
@@ -85,7 +85,7 @@ class Release(models.Model):
     class Meta(object):
         ordering = ['-version_num']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.version
 
     def get_absolute_url(self):
@@ -330,7 +330,7 @@ class Download(models.Model):
         ordering = ['-release__version_num', 'filename']
         unique_together = ['release', 'filename']
 
-    def __unicode__(self):
+    def __str__(self):
         if self.release.snapshot:
             return '/snapshots/{0}'.format(
                 self.filename
@@ -358,24 +358,24 @@ class Download(models.Model):
 
     def get_absolute_url(self):
         return 'https://files.phpmyadmin.net{0}'.format(
-            self.__unicode__()
+            self.__str__()
         )
 
     def get_signed_url(self):
         if not self.signed:
             return ''
         return 'https://files.phpmyadmin.net{0}.asc'.format(
-            self.__unicode__()
+            self.__str__()
         )
 
     def get_checksum_url(self):
         return 'https://files.phpmyadmin.net{0}.sha256'.format(
-            self.__unicode__()
+            self.__str__()
         )
 
     def get_alternate_url(self):
         return 'https://1126968067.rsc.cdn77.org{0}'.format(
-            self.__unicode__()
+            self.__str__()
         )
 
     @property
@@ -433,8 +433,8 @@ class Theme(models.Model):
     class Meta(object):
         ordering = ['name', 'version']
 
-    def __unicode__(self):
-        return u'{0} {1}'.format(self.display_name, self.version)
+    def __str__(self):
+        return '{0} {1}'.format(self.display_name, self.version)
 
     @property
     def imgname(self):
@@ -473,12 +473,12 @@ class Theme(models.Model):
 def dockerhub_trigger(tag):
     if settings.DOCKERHUB_TOKEN is None:
         return
-    request = urllib2.Request(
+    request = urllib.request.Request(
         DOCKER_TRIGGER.format(settings.DOCKERHUB_TOKEN),
         json.dumps({'docker_tag': tag}),
         {'Content-Type': 'application/json'}
     )
-    handle = urllib2.urlopen(request)
+    handle = urllib.request.urlopen(request)
     handle.read()
 
 

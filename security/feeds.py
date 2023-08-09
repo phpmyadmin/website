@@ -33,7 +33,7 @@ class PMASAFeed(Feed):
         return PMASA.objects.filter(draft=False)[:10]
 
     def item_title(self, item):
-        return unicode(item)
+        return str(item)
 
     def item_pubdate(self, item):
         return item.date

@@ -86,7 +86,7 @@ class PMASA(models.Model):
         verbose_name = 'PMASA'
         verbose_name_plural = 'PMASAs'
 
-    def __unicode__(self):
+    def __str__(self):
         return 'PMASA-{0}-{1}'.format(self.year, self.sequence)
 
     def get_absolute_url(self):

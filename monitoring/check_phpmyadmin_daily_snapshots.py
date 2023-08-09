@@ -46,8 +46,8 @@ for substring in split:
     # We give an extra day as a buffer to account for time zones
     if difference > datetime.timedelta(days=1):
       print("Problem found")
-      print("Current date: " + today_date.strftime('%Y-%m-%d'))
-      print("Snapshot date: " + generated_date)
+      print(("Current date: " + today_date.strftime('%Y-%m-%d')))
+      print(("Snapshot date: " + generated_date))
       exit_code = 1
     else:
       print("Everything is groovy")

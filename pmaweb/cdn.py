@@ -23,7 +23,7 @@
 """CDN integration"""
 from django.conf import settings
 
-import urllib2
+import urllib.request
 import json
 
 URL = 'https://api.cdn77.com/v3/cdn/{id}/job/purge'
@@ -34,14 +34,14 @@ def perform(url, paths):
     """Perform CDN POST request"""
 
     data = json.dumps({'paths': paths}).encode('utf-8')
-    req = urllib2.Request(url, data, {
+    req = urllib.request.Request(url, data, {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
             'Authorization': 'Bearer {token}'.replace('{token}', settings.CDN_API_TOKEN),
             'User-Agent': 'phpMyAdmin/website script',
         })
 
-    handle = urllib2.urlopen(req)
+    handle = urllib.request.urlopen(req)
     response = handle.read()
     decoded = json.loads(response)
     handle.close()

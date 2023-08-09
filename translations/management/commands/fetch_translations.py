@@ -23,7 +23,7 @@ from django.core.management.base import BaseCommand
 from translations.models import Translation
 import json
 from dateutil import parser
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 URL = 'https://hosted.weblate.org/exports/stats/phpmyadmin/master/'
 
@@ -32,13 +32,13 @@ class Command(BaseCommand):
     help = 'Downloads translation stats'
 
     def handle(self, *args, **options):
-        handle = urllib.urlopen(URL)
+        handle = urllib.request.urlopen(URL)
         data = handle.read()
         try:
             content = json.loads(data)
         except ValueError:
             print("There was a problem parsing the data from Hosted Weblate.")
-            print("Check the status of the feed page: " + URL)
+            print(("Check the status of the feed page: " + URL))
             import sys
             sys.exit(1)
 

@@ -42,7 +42,7 @@ class Post(models.Model):
     class Meta(object):
         ordering = ['-date']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     def get_absolute_url(self):
@@ -66,7 +66,7 @@ class Planet(models.Model):
     class Meta(object):
         ordering = ['-date']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     def get_absolute_url(self):
@@ -75,7 +75,7 @@ class Planet(models.Model):
 
 @receiver(post_save, sender=Post)
 def purge_post(sender, instance, **kwargs):
-    num_pages = 1 + (Post.objects.count() / 10)
+    num_pages = 1 + (Post.objects.count() // 10)
     pages = [
         reverse('home'),
         reverse('news'),
