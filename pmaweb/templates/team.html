@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block content %}
 
@@ -9,14 +9,14 @@
 The phpMyAdmin development team is responsible for the development of phpMyAdmin
 and represents the project at various conferences. The project used <a
 href="https://sourceforge.net/projects/phpmyadmin/">SourceForge.net</a> services from
-2001 to 2015, with a transition to <a href="https://github.com/phpmyadmin">GitHub</a> 
+2001 to 2015, with a transition to <a href="https://github.com/phpmyadmin">GitHub</a>
 starting in 2012 and completed by 2015. You can find more about the <a href="{% url 'about' %}">project and its history</a>.
 </p>
 
 <p>
-You can contact the team on the <a href="mailto:developers@phpmyadmin.net">development 
+You can contact the team on the <a href="mailto:developers@phpmyadmin.net">development
 mailing list</a> (<a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">subscription and archives</a>).
-You can follow the developers blogs at 
+You can follow the developers blogs at
 <a href="https://planet.phpmyadmin.net/">planet phpMyAdmin</a>.
 </p>
 
@@ -26,7 +26,7 @@ You can follow the developers blogs at
 <img class="pull-left img-rounded img-margin" src="{% static 'images/heads/isaac.jpg' %}" alt="Photo of Isaac Bennetch" />
 <p>
 Isaac has been helping out with <span class="org">phpMyAdmin</span> since 2005 by helping with user
-support and improving the documentation. He officially joined the development team in April, 2013. 
+support and improving the documentation. He officially joined the development team in April, 2013.
 Isaac enjoys being able to give back to the Open Source community and is thrilled to be a part of
 the <span class="org">phpMyAdmin</span> community.
 </p>
@@ -89,11 +89,11 @@ team meetings in real life have happened.
 of PHP and MySQL at the <a href="https://www.linuxtag.org/2005">LinuxTag</a> 2005
 LAMP Area, with some special guests.
 </p>
-<p>The second meeting took place in Brussels, Belgium during 
+<p>The second meeting took place in Brussels, Belgium during
 <a href="https://fosdem.org/2010">FOSDEM 2010</a>. Marc Delisle talked
 about &quot;State of phpMyAdmin&quot; in the MySQL developer room.
 </p>
-<p>The third meeting took place in Brussels, Belgium during 
+<p>The third meeting took place in Brussels, Belgium during
 <a href="https://fosdem.org/2012">FOSDEM 2012</a>. The team talked about
 future directions for the project.
 </p>
@@ -193,5 +193,5 @@ who have contributed to the success of phpMyAdmin over the years.
 A full list is maintained in the <a
 href="https://phpmyadmin.readthedocs.org/en/latest/credits.html">documentation</a>.
 </p>
-    
+
 {% endblock %}

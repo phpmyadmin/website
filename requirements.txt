@@ -1,4 +1,4 @@
-Django>=2.2,<3.0
+Django>=3.2,<4.0
 python-dateutil
 feedparser
 django-markupfield
@@ -6,5 +6,5 @@ docutils
 Markdown
 pytz
 beautifulsoup4
-django_compressor<4.0
+django_compressor
 django-appconf
