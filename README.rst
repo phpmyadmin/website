@@ -97,6 +97,11 @@ To run test-suite execute:
 
     ./manage.py test
 
+To add a new user (for `/admin/`):
+
+.. code-block:: sh
+
+    ./manage.py createsuperuser
 
 Deployment
 ----------
