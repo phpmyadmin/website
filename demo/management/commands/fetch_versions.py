@@ -47,14 +47,18 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         handle = urllib.request.urlopen(URL)
-        config = RawConfigParser(dict_type=MultiOrderedDict)
+        config = RawConfigParser(dict_type=MultiOrderedDict, strict=False)
         try:
-          config.readfp(handle)
-        except:
-          print("Failed to read the version configuration file. ")
-          print(("Check the status of " + URL))
-          import sys
-          sys.exit(1)
+            config.read_string(handle.read().decode('utf-8'))
+        except Exception as e:
+            if hasattr(e, 'message'):
+                print('Error:', e.message)
+            else:
+                print('Error:', e)
+            print("Failed to read the version configuration file. ")
+            print(("Check the status of " + URL))
+            import sys
+            sys.exit(1)
 
         master = config.get('demo', 'master-release')[0]
 
