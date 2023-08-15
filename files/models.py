@@ -438,7 +438,12 @@ class Theme(models.Model):
 
     @property
     def imgname(self):
-        return 'images/themes/{0}.png'.format(self.name)
+        filepath = 'images/themes/{0}.png'.format(self.name)
+        imagePath = settings.STATIC_ROOT + '/' + filepath;
+
+        if os.path.exists(imagePath):
+            return filepath
+        return ''
 
     def get_absolute_url(self):
         return 'https://files.phpmyadmin.net/themes/{0}/{1}/{2}'.format(
