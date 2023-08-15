@@ -105,7 +105,7 @@ class PMASA(models.Model):
             if cve[-1] == '-':
                 yield '', 'Not yet assigned'
             else:
-                yield 'https://cve.mitre.org/cgi-bin/cvename.cgi?name={0}'. format(cve), cve
+                yield 'https://www.cve.org/CVERecord?id={0}'. format(cve), cve
 
     def get_cwes(self):
         return self.cwe.split()
