@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block content %}
 
@@ -29,7 +29,7 @@ Interested in helping other users with phpMyAdmin? Visit our <a href="{% url 'su
 <h3 id="translate">Localization</h3>
 
 <p>
-phpMyAdmin is being translated to many languages, but maybe your language is not 
+phpMyAdmin is being translated to many languages, but maybe your language is not
 really up to date? You can easily contribute on our
 <a href="https://hosted.weblate.org/engage/phpmyadmin/">translation server</a>.
 You can find out more on the <a href="{% url 'translate' %}">translation
@@ -48,9 +48,9 @@ you face with them.
 <h3>Documentation writer/tutorial creator</h3>
 
 <p>
-Do you 
+Do you
 feel our documentation misses some points? We welcome additions; just
-let us know how you think the documentation can be improved. 
+let us know how you think the documentation can be improved.
 The best way is to <a href="https://wiki.phpmyadmin.net/pma/Pull_request">submit a pull request</a>
 against our <a href="https://github.com/phpmyadmin/">GitHub repository</a>.
 If you don't know how to make these changes, we still want to hear your input.
@@ -66,8 +66,8 @@ video tutorials giving users hints how to do specific tasks inside phpMyAdmin.
 <h3 id="devel">Developing</h3>
 
 <p>
-Coding contributions are very welcome, the easiest way is to fork our code on github 
-and submit a pull request. We really welcome bug fixes or new features. 
+Coding contributions are very welcome, the easiest way is to fork our code on github
+and submit a pull request. We really welcome bug fixes or new features.
 You can find out more on the <a href="{% url 'develop' %}">developers
 page</a>.
 </p>
@@ -78,7 +78,7 @@ page</a>.
 Our trackers, especially the
 <a href="https://github.com/phpmyadmin/phpmyadmin/labels/enhancement">feature tracker</a>,
 contain dozens of entries which might already be implemented or don't make much sense after years.
-You can go through reported issues, verify if they still apply to latest version and 
+You can go through reported issues, verify if they still apply to latest version and
 check whether they would be still useful. Also checking incoming reports for all required
 information or whether they were already reported is welcome help.
 </p>

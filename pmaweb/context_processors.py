@@ -44,7 +44,7 @@ def basic(request):
         'themecssversions': CSSVERSIONS,
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
-        'pmasa_year': PMASA.objects.filter(draft=False).order_by('-year').values_list('year', flat=True)[0],
+        'pmasa_year': PMASA.objects.filter(draft=False).order_by('-year').values_list('year', flat=True).first(),
         'translations': Translation.objects.all(),
         'demo_stable': Demo.objects.exclude(name__startswith='master'),
         'demo_devel': Demo.objects.filter(name__startswith='master'),
@@ -78,7 +78,7 @@ def menu(request):
 
 def releases(request=None):
 
-    latest = Release.objects.filter(stable=True)[0]
+    latest = Release.objects.filter(stable=True).first()
     if Release.objects.filter(stable=False, snapshot=False).exists():
         beta = Release.objects.filter(stable=False, snapshot=False)[0]
         if beta.version_num < latest.version_num:
