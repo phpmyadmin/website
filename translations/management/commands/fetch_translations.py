@@ -25,23 +25,28 @@ import json
 from dateutil import parser
 import urllib.request, urllib.parse, urllib.error
 
-URL = 'https://hosted.weblate.org/exports/stats/phpmyadmin/master/'
-
-
 class Command(BaseCommand):
     help = 'Downloads translation stats'
+    API_URL = 'https://hosted.weblate.org/api/components/phpmyadmin/master/statistics/'
 
     def handle(self, *args, **options):
-        handle = urllib.request.urlopen(URL)
-        data = handle.read()
-        try:
-            content = json.loads(data)
-        except ValueError:
-            print("There was a problem parsing the data from Hosted Weblate.")
-            print(("Check the status of the feed page: " + URL))
-            import sys
-            sys.exit(1)
 
+        has_next = True
+        while has_next:
+            try:
+                handle = urllib.request.urlopen(self.API_URL)
+                data = handle.read()
+                content = json.loads(data)
+                has_next = content['next'] is not None
+                self.API_URL = content['next']
+            except ValueError:
+                print("There was a problem parsing the data from Hosted Weblate.")
+                print(("Check the status of the feed page: " + URL))
+                import sys
+                sys.exit(1)
+            self.handle_content(content['results'])
+
+    def handle_content(self, content):
         for item in content:
             updated = None
             if item['last_change']:
@@ -53,7 +58,7 @@ class Command(BaseCommand):
                 'updated': updated,
             }
             translation, created = Translation.objects.get_or_create(
-                url=item['url_translate'],
+                url=item['translate_url'],
                 defaults=params
             )
             if not created:
