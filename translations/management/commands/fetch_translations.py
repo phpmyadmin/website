@@ -53,12 +53,14 @@ class Command(BaseCommand):
                 updated = parser.parse(item['last_change'])
             params = {
                 'name': item['name'],
+                'code': item['code'],
+                'url': item['translate_url'],
                 'translated': item['translated'],
                 'percent': item['translated_percent'],
                 'updated': updated,
             }
             translation, created = Translation.objects.get_or_create(
-                url=item['translate_url'],
+                code=item['code'],
                 defaults=params
             )
             if not created:
