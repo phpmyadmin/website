@@ -25,7 +25,7 @@ from django.db import models
 class Translation(models.Model):
     url = models.URLField(unique=True)
     name = models.CharField(max_length=100)
-    code = models.CharField(max_length=15, unique=True, default='')
+    code = models.CharField(max_length=15, unique=True)
     translated = models.IntegerField()
     percent = models.DecimalField(max_digits=4, decimal_places=1)
     updated = models.DateTimeField(null=True, blank=True)
