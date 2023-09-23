@@ -29812,6 +29812,7 @@
   "pk": 81,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/af/",
+    "code": "af",
     "name": "Afrikaans",
     "translated": 299,
     "percent": "9.5",
@@ -29823,6 +29824,7 @@
   "pk": 82,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sq/",
+    "code": "sq",
     "name": "Albanian",
     "translated": 3058,
     "percent": "97.8",
@@ -29834,6 +29836,7 @@
   "pk": 83,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ar/",
+    "code": "ar",
     "name": "Arabic",
     "translated": 1160,
     "percent": "37.1",
@@ -29845,6 +29848,7 @@
   "pk": 84,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hy/",
+    "code": "hy",
     "name": "Armenian",
     "translated": 99,
     "percent": "3.1",
@@ -29856,6 +29860,7 @@
   "pk": 85,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/az/",
+    "code": "az",
     "name": "Azerbaijani",
     "translated": 1770,
     "percent": "56.6",
@@ -29867,6 +29872,7 @@
   "pk": 86,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/eu/",
+    "code": "eu",
     "name": "Basque",
     "translated": 518,
     "percent": "16.5",
@@ -29878,6 +29884,7 @@
   "pk": 87,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/be/",
+    "code": "be",
     "name": "Belarusian",
     "translated": 816,
     "percent": "26.1",
@@ -29889,6 +29896,7 @@
   "pk": 88,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/be%40latin/",
+    "code": "be%40latin",
     "name": "Belarusian (latin)",
     "translated": 799,
     "percent": "25.5",
@@ -29900,6 +29908,7 @@
   "pk": 89,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/bn/",
+    "code": "bn",
     "name": "Bengali",
     "translated": 2492,
     "percent": "79.7",
@@ -29911,6 +29920,7 @@
   "pk": 90,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/bs/",
+    "code": "bs",
     "name": "Bosnian",
     "translated": 424,
     "percent": "13.5",
@@ -29922,6 +29932,7 @@
   "pk": 91,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/br/",
+    "code": "br",
     "name": "Breton",
     "translated": 575,
     "percent": "18.4",
@@ -29933,6 +29944,7 @@
   "pk": 92,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/bg/",
+    "code": "bg",
     "name": "Bulgarian",
     "translated": 1884,
     "percent": "60.2",
@@ -29944,6 +29956,7 @@
   "pk": 93,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ca/",
+    "code": "ca",
     "name": "Catalan",
     "translated": 3050,
     "percent": "97.6",
@@ -29955,6 +29968,7 @@
   "pk": 94,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/km/",
+    "code": "km",
     "name": "Central Khmer",
     "translated": 179,
     "percent": "5.7",
@@ -29966,6 +29980,7 @@
   "pk": 95,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/zh_CN/",
+    "code": "zh_CN",
     "name": "Chinese (China)",
     "translated": 2426,
     "percent": "77.7",
@@ -29977,6 +29992,7 @@
   "pk": 96,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/zh_TW/",
+    "code": "zh_TW",
     "name": "Chinese (Taiwan)",
     "translated": 3053,
     "percent": "97.8",
@@ -29988,6 +30004,7 @@
   "pk": 97,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ksh/",
+    "code": "ksh",
     "name": "Colognian",
     "translated": 32,
     "percent": "1.0",
@@ -29999,6 +30016,7 @@
   "pk": 98,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hr/",
+    "code": "hr",
     "name": "Croatian",
     "translated": 970,
     "percent": "31.0",
@@ -30010,6 +30028,7 @@
   "pk": 99,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/cs/",
+    "code": "cs",
     "name": "Czech",
     "translated": 2927,
     "percent": "93.6",
@@ -30021,6 +30040,7 @@
   "pk": 100,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/da/",
+    "code": "da",
     "name": "Danish",
     "translated": 3017,
     "percent": "96.5",
@@ -30032,6 +30052,7 @@
   "pk": 101,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/nl/",
+    "code": "nl",
     "name": "Dutch",
     "translated": 3124,
     "percent": "100.0",
@@ -30043,6 +30064,7 @@
   "pk": 102,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/en_GB/",
+    "code": "en_GB",
     "name": "English (United Kingdom)",
     "translated": 2656,
     "percent": "84.9",
@@ -30054,6 +30076,7 @@
   "pk": 103,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/eo/",
+    "code": "eo",
     "name": "Esperanto",
     "translated": 76,
     "percent": "2.4",
@@ -30065,6 +30088,7 @@
   "pk": 104,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/et/",
+    "code": "et",
     "name": "Estonian",
     "translated": 3115,
     "percent": "99.6",
@@ -30076,6 +30100,7 @@
   "pk": 105,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fi/",
+    "code": "fi",
     "name": "Finnish",
     "translated": 1903,
     "percent": "60.8",
@@ -30087,6 +30112,7 @@
   "pk": 106,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fr/",
+    "code": "fr",
     "name": "French",
     "translated": 3125,
     "percent": "100.0",
@@ -30098,6 +30124,7 @@
   "pk": 107,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fy/",
+    "code": "fy",
     "name": "Frisian",
     "translated": 636,
     "percent": "20.3",
@@ -30109,6 +30136,7 @@
   "pk": 108,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/gl/",
+    "code": "gl",
     "name": "Galician",
     "translated": 2300,
     "percent": "73.6",
@@ -30120,6 +30148,7 @@
   "pk": 109,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ka/",
+    "code": "ka",
     "name": "Georgian",
     "translated": 462,
     "percent": "14.7",
@@ -30131,6 +30160,7 @@
   "pk": 110,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/de/",
+    "code": "de",
     "name": "German",
     "translated": 3125,
     "percent": "100.0",
@@ -30142,6 +30172,7 @@
   "pk": 111,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/el/",
+    "code": "el",
     "name": "Greek",
     "translated": 3125,
     "percent": "100.0",
@@ -30153,6 +30184,7 @@
   "pk": 112,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/he/",
+    "code": "he",
     "name": "Hebrew",
     "translated": 570,
     "percent": "18.2",
@@ -30164,6 +30196,7 @@
   "pk": 113,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hi/",
+    "code": "hi",
     "name": "Hindi",
     "translated": 1253,
     "percent": "40.0",
@@ -30175,6 +30208,7 @@
   "pk": 114,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/hu/",
+    "code": "hu",
     "name": "Hungarian",
     "translated": 3125,
     "percent": "100.0",
@@ -30186,6 +30220,7 @@
   "pk": 115,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/id/",
+    "code": "id",
     "name": "Indonesian",
     "translated": 2299,
     "percent": "73.5",
@@ -30197,6 +30232,7 @@
   "pk": 116,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ia/",
+    "code": "ia",
     "name": "Interlingua",
     "translated": 2173,
     "percent": "69.5",
@@ -30208,6 +30244,7 @@
   "pk": 117,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/it/",
+    "code": "it",
     "name": "Italian",
     "translated": 3125,
     "percent": "100.0",
@@ -30219,6 +30256,7 @@
   "pk": 118,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ja/",
+    "code": "ja",
     "name": "Japanese",
     "translated": 2208,
     "percent": "70.6",
@@ -30230,6 +30268,7 @@
   "pk": 119,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/kn/",
+    "code": "kn",
     "name": "Kannada",
     "translated": 83,
     "percent": "2.6",
@@ -30241,6 +30280,7 @@
   "pk": 120,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/kk/",
+    "code": "kk",
     "name": "Kazakh",
     "translated": 316,
     "percent": "10.1",
@@ -30252,6 +30292,7 @@
   "pk": 121,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ko/",
+    "code": "ko",
     "name": "Korean",
     "translated": 2463,
     "percent": "78.8",
@@ -30263,6 +30304,7 @@
   "pk": 122,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ckb/",
+    "code": "ckb",
     "name": "Kurdish Sorani",
     "translated": 620,
     "percent": "19.8",
@@ -30274,6 +30316,7 @@
   "pk": 123,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ky/",
+    "code": "ky",
     "name": "Kyrgyz",
     "translated": 56,
     "percent": "1.7",
@@ -30285,6 +30328,7 @@
   "pk": 124,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/lv/",
+    "code": "lv",
     "name": "Latvian",
     "translated": 646,
     "percent": "20.6",
@@ -30296,6 +30340,7 @@
   "pk": 125,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/li/",
+    "code": "li",
     "name": "Limburgish",
     "translated": 50,
     "percent": "1.6",
@@ -30307,6 +30352,7 @@
   "pk": 126,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/lt/",
+    "code": "lt",
     "name": "Lithuanian",
     "translated": 1456,
     "percent": "46.5",
@@ -30318,6 +30364,7 @@
   "pk": 127,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/mk/",
+    "code": "mk",
     "name": "Macedonian",
     "translated": 539,
     "percent": "17.2",
@@ -30329,6 +30376,7 @@
   "pk": 128,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ms/",
+    "code": "ms",
     "name": "Malay",
     "translated": 341,
     "percent": "10.9",
@@ -30340,6 +30388,7 @@
   "pk": 129,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ml/",
+    "code": "ml",
     "name": "Malayalam",
     "translated": 52,
     "percent": "1.6",
@@ -30351,6 +30400,7 @@
   "pk": 130,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/mn/",
+    "code": "mn",
     "name": "Mongolian",
     "translated": 682,
     "percent": "21.8",
@@ -30362,6 +30412,7 @@
   "pk": 131,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ne/",
+    "code": "ne",
     "name": "Nepali",
     "translated": 52,
     "percent": "1.6",
@@ -30373,6 +30424,7 @@
   "pk": 132,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/nb/",
+    "code": "nb",
     "name": "Norwegian Bokmål",
     "translated": 1943,
     "percent": "62.1",
@@ -30384,6 +30436,7 @@
   "pk": 133,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/fa/",
+    "code": "fa",
     "name": "Persian",
     "translated": 838,
     "percent": "26.8",
@@ -30395,6 +30448,7 @@
   "pk": 134,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pl/",
+    "code": "pl",
     "name": "Polish",
     "translated": 2602,
     "percent": "83.2",
@@ -30406,6 +30460,7 @@
   "pk": 135,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pt/",
+    "code": "pt",
     "name": "Portuguese",
     "translated": 1784,
     "percent": "57.0",
@@ -30417,6 +30472,7 @@
   "pk": 136,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pt_BR/",
+    "code": "pt_BR",
     "name": "Portuguese (Brazil)",
     "translated": 3031,
     "percent": "97.0",
@@ -30428,6 +30484,7 @@
   "pk": 137,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/pa/",
+    "code": "pa",
     "name": "Punjabi",
     "translated": 85,
     "percent": "2.7",
@@ -30439,6 +30496,7 @@
   "pk": 138,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ro/",
+    "code": "ro",
     "name": "Romanian",
     "translated": 1776,
     "percent": "56.8",
@@ -30450,6 +30508,7 @@
   "pk": 139,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ru/",
+    "code": "ru",
     "name": "Russian",
     "translated": 2935,
     "percent": "93.9",
@@ -30461,6 +30520,7 @@
   "pk": 140,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sr/",
+    "code": "sr",
     "name": "Serbian",
     "translated": 753,
     "percent": "24.0",
@@ -30472,6 +30532,7 @@
   "pk": 141,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sr%40latin/",
+    "code": "sr%40latin",
     "name": "Serbian (latin)",
     "translated": 1508,
     "percent": "48.2",
@@ -30483,6 +30544,7 @@
   "pk": 142,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/si/",
+    "code": "si",
     "name": "Sinhala",
     "translated": 1965,
     "percent": "62.8",
@@ -30494,6 +30556,7 @@
   "pk": 143,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sk/",
+    "code": "sk",
     "name": "Slovak",
     "translated": 2606,
     "percent": "83.3",
@@ -30505,6 +30568,7 @@
   "pk": 144,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sl/",
+    "code": "sl",
     "name": "Slovenian",
     "translated": 3125,
     "percent": "100.0",
@@ -30516,6 +30580,7 @@
   "pk": 145,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/es/",
+    "code": "es",
     "name": "Spanish",
     "translated": 3060,
     "percent": "97.9",
@@ -30527,6 +30592,7 @@
   "pk": 146,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/sv/",
+    "code": "sv",
     "name": "Swedish",
     "translated": 2656,
     "percent": "84.9",
@@ -30538,6 +30604,7 @@
   "pk": 147,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ta/",
+    "code": "ta",
     "name": "Tamil",
     "translated": 1160,
     "percent": "37.1",
@@ -30549,6 +30616,7 @@
   "pk": 148,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/tt/",
+    "code": "tt",
     "name": "Tatar",
     "translated": 548,
     "percent": "17.5",
@@ -30560,6 +30628,7 @@
   "pk": 149,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/te/",
+    "code": "te",
     "name": "Telugu",
     "translated": 322,
     "percent": "10.3",
@@ -30571,6 +30640,7 @@
   "pk": 150,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/th/",
+    "code": "th",
     "name": "Thai",
     "translated": 1048,
     "percent": "33.5",
@@ -30582,6 +30652,7 @@
   "pk": 151,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/tr/",
+    "code": "tr",
     "name": "Turkish",
     "translated": 3125,
     "percent": "100.0",
@@ -30593,6 +30664,7 @@
   "pk": 152,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/tk/",
+    "code": "tk",
     "name": "Turkmen",
     "translated": 9,
     "percent": "0.2",
@@ -30604,6 +30676,7 @@
   "pk": 153,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ug/",
+    "code": "ug",
     "name": "Uighur",
     "translated": 340,
     "percent": "10.8",
@@ -30615,6 +30688,7 @@
   "pk": 154,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/uk/",
+    "code": "uk",
     "name": "Ukrainian",
     "translated": 2701,
     "percent": "86.4",
@@ -30626,6 +30700,7 @@
   "pk": 155,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/ur/",
+    "code": "ur",
     "name": "Urdu",
     "translated": 601,
     "percent": "19.2",
@@ -30637,6 +30712,7 @@
   "pk": 156,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/uz/",
+    "code": "uz",
     "name": "Uzbek",
     "translated": 1092,
     "percent": "34.9",
@@ -30648,6 +30724,7 @@
   "pk": 157,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/uz%40latin/",
+    "code": "uz%40latin",
     "name": "Uzbek (latin)",
     "translated": 1065,
     "percent": "34.1",
@@ -30659,6 +30736,7 @@
   "pk": 158,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/vi/",
+    "code": "vi",
     "name": "Vietnamese",
     "translated": 70,
     "percent": "2.2",
@@ -30670,6 +30748,7 @@
   "pk": 159,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/cy/",
+    "code": "cy",
     "name": "Welsh",
     "translated": 592,
     "percent": "18.9",
@@ -30681,6 +30760,7 @@
   "pk": 160,
   "fields": {
     "url": "https://hosted.weblate.org/projects/phpmyadmin/master/vls/",
+    "code": "vls",
     "name": "West Flemish",
     "translated": 92,
     "percent": "2.9",
