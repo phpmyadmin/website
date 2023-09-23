@@ -26,12 +26,21 @@ from django.urls import reverse
 from django.utils.timezone import utc, make_aware
 import httpretty
 import datetime
-from pmaweb.views import REDIRECT_MAP
+from pmaweb.views import REDIRECT_MAP, github_tree, github_commit
 from pmaweb.cdn import URL as CDN_URL, URL_ALL as CDN_URL_ALL
 from files.models import Release, Download, Theme
 from news.models import Post, Planet
 from security.models import PMASA
 import json
+
+class GitHubAPITest(TestCase):
+    def test_github_tree(self):
+        res = github_tree(None, "RELEASE_5_2_1")
+        self.assertEqual(200, res.status_code)
+
+    def test_github_commit(self):
+        res = github_commit(None, "5b5e444adfb36905d3f04b19d973d5d26e60407d")
+        self.assertEqual(200, res.status_code)
 
 class ViewTest(TestCase):
     fixtures = ['test_data.json']
