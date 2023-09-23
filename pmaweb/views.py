@@ -97,7 +97,7 @@ def proxy_request(url):
     try:
         request = urllib.request.Request(url)
         if settings.GITHUB_USER and settings.GITHUB_TOKEN:
-            base64string = base64.b64encode('%s:%s' % (settings.GITHUB_USER, settings.GITHUB_TOKEN))
+            base64string = base64.b64encode('{0}:{1}'.format(settings.GITHUB_USER, settings.GITHUB_TOKEN).encode("utf-8"))
             request.add_header('Authorization', 'Basic %s' % base64string)
         handle = urllib.request.urlopen(request)
         code = handle.getcode()
