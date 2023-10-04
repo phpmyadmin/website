@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from collections import OrderedDict
-from configparser import RawConfigParser
+from configparser import ConfigParser
 import urllib.request, urllib.parse, urllib.error
 
 from django.core.management.base import BaseCommand
@@ -47,7 +47,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         handle = urllib.request.urlopen(URL)
-        config = RawConfigParser(dict_type=MultiOrderedDict, strict=False)
+        config = ConfigParser(dict_type=MultiOrderedDict, strict=False, empty_lines_in_values=False, interpolation=None)
         try:
             config.read_string(handle.read().decode('utf-8'))
         except Exception as e:
@@ -60,13 +60,13 @@ class Command(BaseCommand):
             import sys
             sys.exit(1)
 
-        master = config.get('demo', 'master-release')[0]
+        master = config['demo']['master-release'][0]
 
         modified = False
 
         processed = set()
 
-        for version in config.get('demo', 'branches[]'):
+        for version in config['demo']['branches[]']:
             demo, created = Demo.objects.get_or_create(
                 name=version,
                 defaults={'master_version': master}
