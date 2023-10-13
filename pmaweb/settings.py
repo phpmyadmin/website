@@ -173,5 +173,4 @@ FILES_CDN_ID = '40483'
 
 DOCKERHUB_TOKEN = None
 
-GITHUB_USER = 'phpmyadmin-bot'
 GITHUB_TOKEN = None
