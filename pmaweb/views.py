@@ -22,7 +22,6 @@
 """Compatibility redirect handlers"""
 
 import urllib.request, urllib.error, urllib.parse
-import base64
 
 from django.conf import settings
 from django.shortcuts import redirect
@@ -72,7 +71,7 @@ REDIRECT_MAP = {
     'ownloads': 'downloads',
 }
 
-GITHUB_API = 'https://api.github.com/repos/phpmyadmin/phpmyadmin/git/'
+GITHUB_API = 'https://api.github.com/'
 
 
 def redirect_home_page(request, page):
@@ -96,9 +95,9 @@ def proxy_request(url):
     """Helper for proxying requests"""
     try:
         request = urllib.request.Request(url)
-        if settings.GITHUB_USER and settings.GITHUB_TOKEN:
-            base64string = base64.b64encode('{0}:{1}'.format(settings.GITHUB_USER, settings.GITHUB_TOKEN).encode("utf-8"))
-            request.add_header('Authorization', 'Basic %s' % base64string)
+        request.add_header('User-Agent', 'phpMyAdmin/website API proxy')
+        if settings.GITHUB_TOKEN:
+            request.add_header('Authorization', 'Bearer {0}'.format(settings.GITHUB_TOKEN))
         handle = urllib.request.urlopen(request)
         code = handle.getcode()
         content = handle.read()
@@ -118,14 +117,13 @@ def proxy_request(url):
 @cache_control(max_age=600)
 def github_tree(request, name):
     """Proxy for GitHub tree API"""
-    return proxy_request('{0}trees/{1}'.format(GITHUB_API, name))
+    return proxy_request('{0}repos/phpmyadmin/phpmyadmin/git/trees/{1}'.format(GITHUB_API, name))
 
 
 @cache_control(max_age=86400)
 def github_commit(request, name):
     """Proxy for GitHub commit API"""
-    return proxy_request('{0}commits/{1}'.format(GITHUB_API, name))
-
+    return proxy_request('{0}repos/phpmyadmin/phpmyadmin/git/commits/{1}'.format(GITHUB_API, name))
 
 class PMAView(TemplateView):
     title = ''
