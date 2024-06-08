@@ -1,0 +1,19 @@
+name: "Close stale PRs"
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-pr-message: >
+            This pull request has been automatically marked as stale because there has been
+            no recent activity. It will be closed if there is no further activity. Thank you
+            for your contributions.
+          stale-pr-label: "wontfix"
+          days-before-stale: 60
+          days-before-close: 7

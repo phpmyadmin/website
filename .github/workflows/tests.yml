@@ -8,29 +8,39 @@ on:
       - master
 
 jobs:
-    test-python:
-        name: Test on python ${{ matrix.python-version }} and ${{ matrix.os }}
-        runs-on: ${{ matrix.os }}
-        strategy:
-            fail-fast: false
-            matrix:
-                python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
-                os: [ubuntu-latest]
-        steps:
-            - uses: actions/checkout@v3
-            - name: Use python ${{ matrix.python-version }}
-              uses: actions/setup-python@v4
-              with:
-                python-version: ${{ matrix.python-version }}
-            - name: Install requirements
-              run: pip install -r requirements-test.txt
-            - name: Run the migrations
-              run: ./manage.py migrate
-            - name: Check missing migrations
-              run: ./manage.py makemigrations --check
-            - name: Run python checks
-              run: ./manage.py check
-            - name: Run python tests and coverage
-              run: coverage run --source=. ./manage.py test
-            - name: Send coverage
-              uses: codecov/codecov-action@v3
+  test-python:
+    name: Test on Python ${{ matrix.python-version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+        os: [ubuntu-latest]
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+
+      - name: Use Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install requirements
+        run: pip install -r requirements-test.txt
+
+      - name: Run the migrations
+        run: ./manage.py migrate
+
+      - name: Check missing migrations
+        run: ./manage.py makemigrations --check
+
+      - name: Run Python checks
+        run: ./manage.py check
+
+      - name: Run Python tests and coverage
+        run: coverage run --source=. ./manage.py test
+
+      - name: Send coverage
+        uses: codecov/codecov-action@v3
