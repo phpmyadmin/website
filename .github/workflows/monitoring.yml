@@ -23,5 +23,4 @@ jobs:
         run: pip install beautifulsoup4
 
       - name: "Check daily snapshots"
-        run: |
-          ./monitoring/check_phpmyadmin_daily_snapshots.py
+        run: ./monitoring/check_phpmyadmin_daily_snapshots.py
