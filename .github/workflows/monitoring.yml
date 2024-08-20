@@ -1,5 +1,8 @@
 name: "Monitoring"
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
   schedule:
@@ -12,17 +15,15 @@ jobs:
 
     steps:
       - name: "Checkout code"
-        uses: "actions/checkout@v3"
+        uses: actions/checkout@v4
 
       - name: "Set up Python"
-        uses: "actions/setup-python@v2"
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
       - name: "Install requirements"
-        run: |
-          pip install beautifulsoup4
+        run: pip install beautifulsoup4
 
       - name: "Check daily snapshots"
-        run: |
-          ./monitoring/check_phpmyadmin_daily_snapshots.py
+        run: ./monitoring/check_phpmyadmin_daily_snapshots.py
