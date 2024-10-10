@@ -365,17 +365,17 @@ class Download(models.Model):
         if not self.signed:
             return ''
         return 'https://files.phpmyadmin.net{0}.asc'.format(
-            self.__str__()
+            self.__str__().replace('+', '%2b')
         )
 
     def get_checksum_url(self):
         return 'https://files.phpmyadmin.net{0}.sha256'.format(
-            self.__str__()
+            self.__str__().replace('+', '%2b')
         )
 
     def get_alternate_url(self):
         return 'https://1126968067.rsc.cdn77.org{0}'.format(
-            self.__str__()
+            self.__str__().replace('+', '%2b')
         )
 
     @property
