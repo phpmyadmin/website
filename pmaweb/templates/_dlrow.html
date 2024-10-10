@@ -15,7 +15,7 @@
         {% if file.signed %}
         [<a href="{{ file.get_signed_url }}">PGP</a>]
         {% endif %}
-        [<a href="{{ file.get_absolute_url }}.sha256">SHA256</a>]
+        [<a href="{{ file.get_checksum_url }}">SHA256</a>]
     {% endif %}
         </td>
     </tr>
