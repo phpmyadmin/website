@@ -66,9 +66,9 @@ class Command(BaseCommand):
 
         processed = set()
 
-        for version in config['demo']['branches[]']:
+        for variant in config['demo']['variants[]']:
             demo, created = Demo.objects.get_or_create(
-                name=version,
+                name=variant.split(':')[0],
                 defaults={'master_version': master}
             )
             modified |= created
