@@ -89,7 +89,7 @@ Once you have all dependencies, you can start the development server:
 
     ./manage.py runserver
 
-It will listen on port 8000 by default (you can change this by parameters).
+It will listen on port 8000 by default (or use: `./manage.py runserver 127.0.0.1:8080` for a different port).
 
 To run the test-suite execute:
 
