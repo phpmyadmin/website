@@ -2,85 +2,83 @@
 {% load static %}
 
 {% block content %}
-
-<h2>Demo Server</h2>
-
-<p>
-The best way to see phpMyAdmin in action is to try it on our demo server, where you have
-full control on MySQL.
-</p>
-
+<h2>Try phpMyAdmin</h2>
 
 <p>
-Please not change root, debian-sys-maint or pma user password or limit their
-permissions. If you do so, demo can not be accessed  until privileges are
-restored, so you just break things for you and other users. Feel free to try
-any of the phpMyAdmin features. If you break something, just wait a while. The
-database configuration resets every hour. Databases are cleaned weekly, so do
-not expect that your data will stay there forever.
+  The best way to see phpMyAdmin in action is to try it on our demo server, where you have
+  full control over MySQL.
 </p>
 
 <p>
-Demo is running on <a href="https://www.mysql.com/">MySQL</a> and
-<a href="https://mariadb.org/">MariaDB</a>.
-phpMyAdmin has enabled additional relational features
-and MIME transformations.
+  Please do not change the root, debian-sys-maint, or pma user passwords or limit their
+  permissions. If you do so, the demo cannot be accessed until privileges are
+  restored, which disrupts access for yourself and other users. Feel free to explore
+  any of the phpMyAdmin features. If you break something, just wait a while. The
+  database configuration resets every hour. Databases are cleaned weekly, so do
+  not expect that your data will stay there forever.
 </p>
-
-<h3>Login information</h3>
-<p>
-Login is root with empty password or any user you create.
-</p>
-
-<h3>Available demo versions</h3>
 
 <p>
-Please note that git versions don't have to be working, that's why it's development version :-).
+  The demo is running on <a href="https://www.mysql.com" target="_blank" rel="noopener">MySQL</a> and
+  <a href="https://mariadb.org" target="_blank" rel="noopener">MariaDB</a>.
+  phpMyAdmin has enabled additional relational features
+  and MIME transformations.
 </p>
 
+<h3>Login Information</h3>
 
-<h4>Releases and maintenance branches</h4>
+<p>
+  Login as root with an empty password or any user you create.
+</p>
+
+<h3>Available Demo Versions</h3>
+
+<p>
+  Please note that development versions may not always be stable, as they represent the latest changes.
+</p>
+
+<h4>Releases and Maintenance Branches</h4>
 
 {% with demo_stable as demos %}
-{% include '_list-demos.html' %}
+  {% include '_demo_list.html' %}
 {% endwith %}
 
-<h4>Development version (future {{ demo_devel.0.master_version }})</h4>
+{% if demo_devel %}
+  <h4>Development Version (future {{ demo_devel.0.master_version }})</h4>
+  {% with demo_devel as demos %}
+    {% include '_demo_list.html' %}
+  {% endwith %}
+{% endif %}
 
-{% with demo_devel as demos %}
-{% include '_list-demos.html' %}
-{% endwith %}
+<h3>Current Documentation and Tools</h3>
 
-
-<h4>Current documentation and tools</h4>
 <ul>
-<li>
-  <a href="https://docs.phpmyadmin.net/">Main documentation (including FAQ)</a>
-</li>
-<li>
-  <a href="https://demo.phpmyadmin.net/master-config/public/index.php?route=/changelog">ChangeLog (preprocessed to be user friendly)</a>
-</li>
-<li>
-  <a href="https://demo.phpmyadmin.net/master-config/public/index.php?route=/license">License</a>
-</li>
-<li>
-  <a href="https://demo.phpmyadmin.net/master-config/public/setup/">Setup script</a>
-</li>
+  <li>
+    <a href="https://docs.phpmyadmin.net/" target="_blank" rel="noopener">Main documentation (including FAQ)</a>
+  </li>
+  <li>
+    <a href="https://demo.phpmyadmin.net/master-config/public/index.php?route=/changelog" target="_blank" rel="noopener">ChangeLog (preprocessed to be user friendly)</a>
+  </li>
+  <li>
+    <a href="https://demo.phpmyadmin.net/master-config/public/index.php?route=/license" target="_blank" rel="noopener">License</a>
+  </li>
+  <li>
+    <a href="https://demo.phpmyadmin.net/master-config/public/setup/" target="_blank" rel="noopener">Setup script</a>
+  </li>
 </ul>
 
-<h2>Screenshots</h2>
+<h3>Screenshots</h3>
 
 <div class="row row-cols-4">
-{% for screen in screenshots %}
-  <div class="col">
-    <a class="colorbox" href="{% static screen.image %}" title="{{ screen.title }}">
-      <figure class="figure">
-        <img src="{% static screen.image %}" class="figure-img img-thumbnail rounded" alt="{{ screen.title }}">
-        <figcaption class="figure-caption">{{ screen.title }}</figcaption>
-      </figure>
-    </a>
-  </div>
-{% endfor %}
+  {% for screen in screenshots %}
+    <div class="col">
+      <a href="{% static screen.image %}" data-toggle="lightbox" data-gallery="screenshots" title="{{ screen.title }}">
+        <figure class="figure">
+          <img src="{% static screen.image %}" class="figure-img img-thumbnail rounded" alt="{{ screen.title }}">
+          <figcaption class="figure-caption">{{ screen.title }}</figcaption>
+        </figure>
+      </a>
+    </div>
+  {% endfor %}
 </div>
-
 {% endblock %}

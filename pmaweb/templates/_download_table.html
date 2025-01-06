@@ -1,0 +1,19 @@
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>Size</th>
+        <th>Verification <a href="#verify" class="text-decoration-none">*</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for file in download_list %}
+        {% include '_download_row.html' %}
+      {% endfor %}
+      {% if download_item %}
+        {% include '_download_row.html' with file=download_item %}
+      {% endif %}
+    </tbody>
+  </table>
+</div>

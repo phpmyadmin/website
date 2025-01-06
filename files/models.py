@@ -28,9 +28,9 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 import os.path
-from data.themes import CSSMAP
 from markupfield.fields import MarkupField
 from pmaweb.cdn import purge_cdn, purge_all_cdn
+from data.themes import ALL_PMA_VERSIONS
 
 # Naming of versions
 VERSION_INFO = (
@@ -368,6 +368,18 @@ class Download(models.Model):
             self.__str__()
         )
 
+    def get_stable_signed_url(self):
+        if not self.signed:
+            return ''
+        return '{0}.asc'.format(
+            self.get_stable_url
+        )
+
+    def get_stable_checksum_url(self):
+        return '{0}.sha256'.format(
+            self.get_stable_url
+        )
+
     def get_checksum_url(self):
         return 'https://files.phpmyadmin.net{0}.sha256'.format(
             self.__str__()
@@ -471,8 +483,19 @@ class Theme(models.Model):
         )
 
     @property
-    def get_css(self):
-        return CSSMAP[self.supported_versions]
+    def supported_versions_list(self) -> list[str]:
+        if ',' in self.supported_versions:
+            return [v.strip() for v in self.supported_versions.split(',')]
+
+        if '-' in self.supported_versions:
+            start, end = self.supported_versions.split(' - ')
+            if start in ALL_PMA_VERSIONS and end in ALL_PMA_VERSIONS:
+                start_idx = ALL_PMA_VERSIONS.index(start)
+                end_idx = ALL_PMA_VERSIONS.index(end)
+                return ALL_PMA_VERSIONS[start_idx:end_idx + 1]
+            return []
+
+        return [self.supported_versions] if self.supported_versions else []
 
 
 def dockerhub_trigger(tag):

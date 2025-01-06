@@ -1,0 +1,9 @@
+<ul>
+  {% for demo in demos %}
+    <li>
+      <a href="{{ demo.get_absolute_url }}" target="_blank" rel="noopener">
+        {{ demo.get_description }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

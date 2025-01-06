@@ -2,24 +2,28 @@
 {% load static %}
 
 {% block content %}
+<h2 class="mb-3">Awards</h2>
 
-{% for award in awards %}
-    <div class="row">
-      <div class="col-md-3 text-center">
-        <a href="{{award.link}}"><img class="img-margin" src="{% static award.image %}" alt="{{award.title}}" /></a>
-      </div>
-      <div class="col-md-9">
-        {% autoescape off %}{{award.text}}{% endautoescape %}
-        {% if award.photos %}
-        <p>Photos:
-        {% for photo in award.photos %}
-        <span>
-        <a href="{% static photo.0 %}" class="colorbox" title="{{photo.2}}">{{photo.1}}</a>
-        </span>
-        {% endfor %}
-        </p>
-        {% endif %}
-      </div>
+<div class="row">
+  {% for award in awards %}
+    <div class="col-md-4 mb-3 d-flex align-items-center">
+      <figure class="figure border rounded p-3 text-center d-flex flex-column justify-content-center w-100">
+        <a href="{{ award.link }}" target="_blank" rel="noopener" class="mb-3 order-md-1 order-2">
+          <img src="{% static award.image %}" alt="{{ award.title }}" style="max-width: 100%; height: auto;" class="figure-img img-fluid rounded mx-auto d-block">
+        </a>
+        <figcaption class="figure-caption order-md-2 order-1">
+          <h5>{{ award.title }}</h5>
+          {{ award.text|safe }}
+          {% if award.photos %}
+            <p class="text-muted">Photos:
+              {% for photo in award.photos %}
+                <a href="{% static photo.0 %}" data-toggle="lightbox" data-gallery="gallery-{{ forloop.parentloop.counter }}">{{ photo.1 }}</a>{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </p>
+          {% endif %}
+        </figcaption>
+      </figure>
     </div>
-{% endfor %}
+  {% endfor %}
+</div>
 {% endblock %}
