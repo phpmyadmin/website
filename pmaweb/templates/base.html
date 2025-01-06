@@ -47,11 +47,12 @@
   <meta name="robots" content="index, follow" />
  </head>
  <body>
+   {% include '_svg_symbols.html' %}
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fa fa-bars"></span>
+          <span><svg class="bi"><use href="#menu"></use></svg></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -64,7 +65,7 @@
           </ul>
           <ul class="navbar-nav me-0">
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/phpmyadmin/phpmyadmin" title="phpMyAdmin is developed on GitHub"><i class="fa fa-github"></i> GitHub</a>
+              <a class="nav-link" href="https://github.com/phpmyadmin/phpmyadmin" title="phpMyAdmin is developed on GitHub"><svg class="bi"><use href="#github"></use></svg> GitHub</a>
             </li>
           </ul>
         </div>
@@ -145,8 +146,8 @@
     <li><a href="{% url 'license' %}" rel="license">License</a></li>
     <li><a href="{% url 'donate' %}" rel="payment" title="Support phpMyAdmin by donating money!">Donate</a></li>
     <li><a href="{% url 'about-website' %}" title="Information about website">About</a></li>
-    <li class="logo"><a href="https://twitter.com/phpmya"><i class="fa fa-twitter-square"></i></a></li>
-    <li class="logo"><a href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486"><i class="fa fa-facebook-official"></i></a></li>
+    <li class="logo"><a href="https://twitter.com/phpmya"><svg class="bi"><use href="#twitter-x"></use></svg></a></li>
+    <li class="logo"><a href="https://www.facebook.com/pages/PhpMyAdmin/157021164334486"><svg class="bi"><use href="#facebook"></use></svg></a></li>
   </ul>
   </footer>
 <script>
@@ -161,4 +162,3 @@
 </script>
  </body>
 </html>
-

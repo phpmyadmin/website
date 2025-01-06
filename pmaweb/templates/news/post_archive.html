@@ -20,19 +20,19 @@ href="https://twitter.com/phpmya">Twitter</a>. The news are also available in a
 <nav aria-label="News page navigation">
   <ul class="pagination">
     <li class="page-item{% if page_obj.number == 1 %} disabled{% endif %}">
-      <a class="page-link" href="{% url 'news' %}"{% if page_obj.number == 1 %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-step-backward"></i></a>
+      <a class="page-link" href="{% url 'news' %}"{% if page_obj.number == 1 %} tabindex="-1" aria-disabled="true"{% endif %}><</a>
     </li>
     <li class="page-item{% if not page_obj.has_previous %} disabled{% endif %}">
-      <a class="page-link"{% if page_obj.has_previous %} href="{% url 'news-page' page=page_obj.previous_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-backward"></i></a>
+      <a class="page-link"{% if page_obj.has_previous %} href="{% url 'news-page' page=page_obj.previous_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><<</a>
     </li>
     <li class="page-item">
       <span class="page-link">{{ page_obj.number }} / {{ paginator.num_pages }}</span>
     </li>
     <li class="page-item{% if not page_obj.has_next %} disabled{% endif %}">
-      <a class="page-link"{% if page_obj.has_next %} href="{% url 'news-page' page=page_obj.next_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-forward"></i></a>
+      <a class="page-link"{% if page_obj.has_next %} href="{% url 'news-page' page=page_obj.next_page_number %}"{% else %} tabindex="-1" aria-disabled="true"{% endif %}>></a>
     </li>
     <li class="page-item{% if page_obj.paginator.num_pages == page_obj.number %} disabled{% endif %}">
-      <a class="page-link" href="{% url 'news-page' page=page_obj.paginator.num_pages %}"{% if page_obj.paginator.num_pages == page_obj.number %} tabindex="-1" aria-disabled="true"{% endif %}><i class="fa fa-step-forward"></i></a>
+      <a class="page-link" href="{% url 'news-page' page=page_obj.paginator.num_pages %}"{% if page_obj.paginator.num_pages == page_obj.number %} tabindex="-1" aria-disabled="true"{% endif %}>>></a>
     </li>
   </ul>
 </nav>

@@ -122,19 +122,14 @@ em.big {
 div.subscribe {
     text-align: center;
 }
-.fa-google-plus-square {
-    color: #dd4b39;
+
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+  fill: currentcolor;
 }
-.fa-twitter-square {
-    color: #55acee;
-}
-.fa-facebook-official {
-    color: #3b5998;
-}
-.logo .fa {
-    text-decoration: none;
-    font-size: 150%;
-}
+
 .sfc-logo {
     text-align: center;
 }
