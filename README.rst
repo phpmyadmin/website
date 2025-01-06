@@ -83,15 +83,15 @@ You might want to import some data to have at least some content on the website:
 
     ./manage.py loaddata pmaweb/fixtures/test_data.json
 
-Once you have all dependencies, you can start development server:
+Once you have all dependencies, you can start the development server:
 
 .. code-block:: sh
 
     ./manage.py runserver
 
-It will listed on port 8080 by default (you can change this by parameters).
+It will listen on port 8000 by default (you can change this by parameters).
 
-To run test-suite execute:
+To run the test-suite execute:
 
 .. code-block:: sh
 
