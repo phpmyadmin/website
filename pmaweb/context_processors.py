@@ -60,10 +60,13 @@ def menu(request):
         else:
             urlname = 'home'
 
-        active = (
-            request.resolver_match and
-            urlname == request.resolver_match.url_name
-        )
+        if urlname == 'home':
+            active = request.path == reverse(urlname)
+        else:
+            active = (
+                request.resolver_match and
+                request.path.startswith(reverse(urlname))
+            )
 
         result.append({
             'title': title,
