@@ -1,0 +1,17 @@
+{% with release.simpledownload as file %}
+  <a 
+    id="downloadBtn"
+    class="btn btn-success" 
+    href="{{ file.get_absolute_url }}" 
+    download 
+    data-sha256="{{ file.sha256 }}" 
+    data-pgp="{{ file.get_signed_url }}" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="left" 
+    data-bs-delay='{"show":500}' 
+    title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}"
+  >
+    <svg class="bi"><use href="#download"></use></svg>
+    Download {{ release.version }}
+  </a>
+{% endwith %}

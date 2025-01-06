@@ -3,15 +3,13 @@
 
 {% block content %}
 <div class="row">
-
-<div class="col-md-9">
-
+  <div class="col-md-9">
     <h2>{{ pmasa }}</h2>
 
     <p><strong>Announcement-ID:</strong> {{ pmasa }}</p>
     <p><strong>Date:</strong> {{ pmasa.date|date:"Y-m-d" }}</p>
     {% if pmasa.updated %}
-    <p><strong>Updated:</strong> {{ pmasa.updated|date:"Y-m-d" }}</p>
+      <p><strong>Updated:</strong> {{ pmasa.updated|date:"Y-m-d" }}</p>
     {% endif %}
 
     <h3>Summary</h3>
@@ -24,75 +22,75 @@
     <p>{{ pmasa.severity }}</p>
 
     {% if pmasa.mitigation %}
-    <h3>Mitigation factor</h3>
-    <p>{{ pmasa.mitigation }}</p>
+      <h3>Mitigation factor</h3>
+      <p>{{ pmasa.mitigation }}</p>
     {% endif %}
 
     <h3>Affected Versions</h3>
     <p>{{ pmasa.affected }}</p>
 
     {% if pmasa.unaffected %}
-    <h3>Unaffected Versions</h3>
-    <p>{{ pmasa.unaffected }}</p>
+      <h3>Unaffected Versions</h3>
+      <p>{{ pmasa.unaffected }}</p>
     {% endif %}
 
     <h3>Solution</h3>
     <p>{{ pmasa.solution }}</p>
 
     {% if pmasa.references or pmasa.cve or pmasa.cwe %}
-    <h3>References</h3>
-    {% if pmasa.references %}
-    <p>{% autoescape off %}{{ pmasa.references }}{% endautoescape %}</p>
-    {% endif %}
-    {% if pmasa.cve %}
-    <p>
-    Assigned CVE ids:
-    {% for cve in pmasa.get_cves %}
-    {% if cve.0 %}
-    <a href="{{ cve.0 }}">{{ cve.1 }}</a>
-    {% else %}
-    {{ cve.1 }}
-    {% endif %}
-    {% endfor %}
-    </p>
-    {% endif %}
-    {% if pmasa.cwe %}
-    <p>
-    CWE ids:
-    {% for cwe in pmasa.get_cwes %}
-    <a href="https://cwe.mitre.org/data/definitions/{{cwe}}.html">CWE-{{cwe}}</a>
-    {% endfor %}
-    </p>
-    {% endif %}
+      <h3>References</h3>
+      {% if pmasa.references %}
+        <p>{% autoescape off %}{{ pmasa.references }}{% endautoescape %}</p>
+      {% endif %}
+      {% if pmasa.cve %}
+        <p>
+          Assigned CVE IDs:
+          {% for cve in pmasa.get_cves %}
+            {% if cve.0 %}
+              <a href="{{ cve.0 }}">{{ cve.1 }}</a>
+            {% else %}
+              {{ cve.1 }}
+            {% endif %}
+          {% endfor %}
+        </p>
+      {% endif %}
+      {% if pmasa.cwe %}
+        <p>
+          CWE IDs:
+          {% for cwe in pmasa.get_cwes %}
+            <a href="https://cwe.mitre.org/data/definitions/{{cwe}}.html">CWE-{{cwe}}</a>
+          {% endfor %}
+        </p>
+      {% endif %}
     {% endif %}
 
     {% if pmasa.commits %}
-    <h3>Patches</h3>
+      <h3>Patches</h3>
 
-    {% for commits in pmasa.get_commits %}
-    {% if commits.branch %}
-    <p>The following commits have been made on the {{ commits.branch }} branch to fix this issue:</p>
-    {% else %}
-    <p>The following commits have been made to fix this issue:</p>
-    {% endif %}
+      {% for commits in pmasa.get_commits %}
+        {% if commits.branch %}
+          <p>The following commits have been made on the {{ commits.branch }} branch to fix this issue:</p>
+        {% else %}
+          <p>The following commits have been made to fix this issue:</p>
+        {% endif %}
 
-    <ul>
-    {% for hash in commits.commits %}
-    <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/{{hash}}">{{hash}}</a></li>
-    {% endfor %}
-    </ul>
-    {% endfor %}
+        <ul>
+          {% for hash in commits.commits %}
+            <li><a href="https://github.com/phpmyadmin/phpmyadmin/commit/{{hash}}">{{hash}}</a></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     {% endif %}
 
     <h3>More information</h3>
 
     <p>
-    For further information and in case of questions, please contact the
-    phpMyAdmin team. Our website is <a href="https://www.phpmyadmin.net/">
-    phpmyadmin.net</a>.
+      For further information and in case of questions, please contact the
+      phpMyAdmin security team at <a href="mailto:security@phpmyadmin.net">security@phpmyadmin.net</a>.
     </p>
-
-</div>
-{% include "security/_list.html" %}
+  </div>
+  <div class="col-md-3">
+    {% include "security/_list.html" %}
+  </div>
 </div>
 {% endblock %}

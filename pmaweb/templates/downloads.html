@@ -2,214 +2,192 @@
 {% load static %}
 
 {% block content %}
+<h2>Download</h2>
+<p>
+  Many operating systems already include a phpMyAdmin package and will automatically keep it updated. However, these versions are sometimes slightly outdated and may be missing the latest features. Additionally, the configuration process varies widely by package and may not adhere to the official phpMyAdmin documentation. That being said, it is usually the quickest and easiest way of keeping an updated installation. Please contact your OS vendor for more information. Some additional information is also available 
+  <a href="https://docs.phpmyadmin.net/en/latest/setup.html" target="_blank" rel="noopener noreferrer">in our documentation</a>. If you just want to try phpMyAdmin in a virtual machine, you might want to check the 
+  <a href="#appliances">available software appliances which provide phpMyAdmin</a>.
+</p>
+<p>
+  If you do not find a suitable package or wish to install your own phpMyAdmin, you can download one of the following kits. Please note that each version has requirements for the minimum PHP and MySQL versions.
+</p>
 
-    <h2>Download</h2>
-    <p>
-    Many operating systems already include a phpMyAdmin package and will
-    automatically keep it updated, however these versions are sometimes
-    slightly outdated and therefore may be missing the latest features.
-    Additionally, the configuration process varies widely by package and
-    may not adhere to the official phpMyAdmin documentation. That being said,
-    it is usually the quickest and easiest way of keeping an updated installation. Please contact your OS
-    vendor for more information. Some additional information is also available <a
-    href="https://docs.phpmyadmin.net/en/latest/setup.html">in our documentation</a>. If you just want to
-    try phpMyAdmin in a virtual machine, you might want to check the <a
-    href="#appliances">available software appliances which provide
-    phpMyAdmin</a>.
-    </p>
-    <p>
-    If you do not find a suitable package or wish to install your own phpMyAdmin,
-    you can download one of the following
-    kits. Please note that each version has requirements for the minimum PHP
-    and MySQL versions.
-    </p>
+{% for release in releases %}
+  <h3>phpMyAdmin {{ release.version }}</h3>
+  {% include "_release.html" %}
+{% endfor %}
 
-    {% include "_verify.html" %}
-
-    {% for release in releases %}
-    <h2 id="release_{{ release.version }}">phpMyAdmin {{ release.version }}</h2>
+{% if beta_release %}
+  {% with beta_release as release %}
+    <h3>Testing: phpMyAdmin {{ release.version }}</h3>
     {% include "_release.html" %}
-    {% endfor %}
+  {% endwith %}
+{% endif %}
 
-    {% if beta_release %}
-    {% with beta_release as release %}
-    <h2>Testing: phpMyAdmin {{ release.version }}</h2>
-    {% include "_release.html" %}
-    {% endwith %}
-    {% endif %}
+<h3>Development Versions</h3>
+{% include "_gitdl.html" %}
 
-    <h2 id="devel">Development Versions</h2>
-    {% include "_gitdl.html" %}
+<p>
+  More information about using Git is available on the 
+  <a href="{% url 'develop' %}">development page</a>.
+</p>
 
-    <p>
-    More information about using Git is available on <a
-    href="{% url 'develop' %}">development page</a>.
-    </p>
+{% for release in all_snapshots %}
+  <h3>phpMyAdmin {{ release.version }}</h3>
+  {% include "_release.html" %}
+{% endfor %}
 
-    {% for release in all_snapshots %}
-    <h3 id="snapshot_{{ release.version }}">phpMyAdmin {{ release.version }}</h3>
-    {% include "_release.html" %}
-    {% endfor %}
+<h2>Latest Stable Version</h2>
 
-    <h2 id="stable">Latest Stable Version</h2>
+<p>You can also directly download the latest version from the following URLs:</p>
 
-    <p>You can also directly download latest version on following URLs:</p>
+{% include '_stable_download.html' %}
 
-    {% include '_stable-download.html' %}
+<p>
+  We also publish a variety of formats intended for parsing by scripts to download the latest version. Read more about those on our 
+  <a href="{% url 'about-website' %}#syndicate">syndication page</a>.
+</p>
 
-    <p>
-    We also publish a variety of formats intended for parsing by scripts to download the latest version.
-    Read more about those on our <a href="{% url 'about-website' %}#syndicate">syndication page</a>.
-    </p>
+<h2>Older Releases</h2>
+<p>
+  You can find older releases on the 
+  <a href="{% url 'files' %}">separate files page</a>. You can also get them from our Git repository (check the 
+  <a href="{% url 'develop' %}">developer information</a> for instructions). Older releases are unsupported.
+</p>
 
-    <h2>Older Releases</h2>
-    <p>
-    You can find older releases on <a href="{% url 'files' %}">separate files page</a>. You can also get them
-    from our Git repository (check <a href="{% url 'develop' %}">developer information</a> for instructions). Older releases are unsupported.
-    </p>
+<h2 id="distributions">Installing phpMyAdmin</h2>
 
-    <h2><a id="distributions"></a>Installing phpMyAdmin</h2>
+<p>
+  The full process of installing phpMyAdmin is described in our 
+  <a href="https://docs.phpmyadmin.net/en/latest/setup.html" target="_blank" rel="noopener noreferrer">manual</a>. You can also find information there about how to install phpMyAdmin on your Linux distribution.
+</p>
 
-    <p>
-        The full process of installing phpMyAdmin is described in our <a
-        href="https://docs.phpmyadmin.net/en/latest/setup.html">manual</a>.  You
-        can also find information there about how to install phpMyAdmin on your Linux
-        distribution.
-    </p>
+<h2>Official Docker image</h2>
 
-    <h2><a id="docker"></a>Official Docker image</h2>
+<p>
+  The phpMyAdmin team maintains an 
+  <a href="https://hub.docker.com/_/phpmyadmin" target="_blank" rel="noopener noreferrer">official Docker image for phpMyAdmin</a>. It is fully documented in 
+  <a href="https://docs.phpmyadmin.net/en/latest/setup.html#docker" target="_blank" rel="noopener noreferrer">our manual</a> and you can install it using:
+</p>
 
-    <p>
-        The phpMyAdmin team maintains an <a href="https://hub.docker.com/_/phpmyadmin">official Docker image for phpMyAdmin</a>.
-        It is fully documented in <a href="https://docs.phpmyadmin.net/en/latest/setup.html#docker">our manual</a>
-        and you can install it using:
-    </p>
+<pre>docker pull phpmyadmin</pre>
 
-    <pre>docker pull phpmyadmin</pre>
+<h2>Installing using Composer</h2>
 
-    <h2><a id="composer"></a>Installing using Composer</h2>
+<p>
+  It is possible to install phpMyAdmin from Packagist or our own Composer repository. Please check 
+  <a href="https://docs.phpmyadmin.net/en/latest/setup.html#composer" target="_blank" rel="noopener noreferrer">our manual</a> for more information.
+</p>
 
-    <p>
-        It is possible to install phpMyAdmin from Packagist or our own
-        Composer repository. Please check
-        <a href="https://docs.phpmyadmin.net/en/latest/setup.html#composer">our manual</a>
-        for more information.
-    </p>
+<pre>composer create-project phpmyadmin/phpmyadmin</pre>
 
-    <h2><a id="appliances"></a>Appliances</h2>
-    <p>
-        <a href="https://en.wikipedia.org/wiki/Software_appliance">Software appliances</a>
-        are becoming a popular way of distributing software. They are
-        distributed as an image, which can be directly used by system (be it
-        ISO image for bootable CD or virtual disks for some type of
-        virtualization).
-    </p>
-    <p>
-        There are quite many appliances which provide phpMyAdmin as a
-        management tool for MySQL. It usually comes as part of LAMP stack
-        but there might be other offerings as well. Please check your
-        favorite appliance provider, ISV or app store for it. Some of the
-        appliances are <a href="https://en.wikipedia.org/wiki/List_of_AMP_packages">
-        listed on Wikipedia</a>.
-    </p>
+<h2 id="appliances">Appliances</h2>
+<p>
+  <a href="https://en.wikipedia.org/wiki/Software_appliance" target="_blank" rel="noopener noreferrer">Software appliances</a> are becoming a popular way of distributing software. They are distributed as an image, which can be directly used by the system (be it an ISO image for a bootable CD or virtual disks for some type of virtualization).
+</p>
+<p>
+  There are quite a few appliances that provide phpMyAdmin as a management tool for MySQL. It usually comes as part of a LAMP stack, but there might be other offerings as well. Please check your favorite appliance provider, ISV, or app store for it. Some of the appliances are 
+  <a href="https://en.wikipedia.org/wiki/List_of_AMP_packages" target="_blank" rel="noopener noreferrer">listed on Wikipedia</a>.
+</p>
 
-    <h2 id="support">Supported versions</h2>
+<h2 id="support">Supported versions</h2>
 
-    <p>
-    Generally only last stable branch is supported, but there are LTS branches
-    to support older PHP versions. Current stable branch is supported for bug
-    fixes, LTS branches for security fixes only.
-    </p>
+<p>
+  Generally, only the last stable branch is supported, but there are LTS branches to support older PHP versions. The current stable branch is supported for bug fixes, and LTS branches for security fixes only.
+</p>
 
-    <table class="table table-condensed table-striped">
-        <thead>
-            <tr>
-                <th>Version</th>
-                <th>End of regular<br />support</th>
-                <th>End of extended<br />security support (LTS)</th>
-                <th>Note</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>5.2</td>
-                <td>TBD</td>
-                <td></td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>5.1</td>
-                <td>May 10, 2022</td>
-                <td></td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>5.0</td>
-                <td>February 24, 2021</td>
-                <td></td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>4.9</td>
-                <td>December 31, 2019</td>
-                <td>TBD</td>
-                <td>LTS to support PHP 5.5-7.4</td>
-            </tr>
-            <tr>
-                <td>4.8</td>
-                <td>June 4, 2019</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.7</td>
-                <td>April 7, 2018</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.6</td>
-                <td>April 1, 2017</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.5</td>
-                <td>April 1, 2016</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.4</td>
-                <td>October 1, 2016</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.3</td>
-                <td>October 1, 2015</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.2</td>
-                <td>July 1, 2015</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.1</td>
-                <td>January 1, 2015</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.0</td>
-                <td>December 31, 2013</td>
-                <td>April 1, 2017</td>
-                <td>LTS to support PHP 5.2-5.4.</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Version</th>
+        <th scope="col">End of regular support</th>
+        <th scope="col">End of extended security support (LTS)</th>
+        <th scope="col">Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">5.2</th>
+        <td>TBD</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5.1</th>
+        <td>May 10, 2022</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5.0</th>
+        <td>February 24, 2021</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.9</th>
+        <td>December 31, 2019</td>
+        <td>TBD</td>
+        <td>LTS to support PHP 5.5-7.4</td>
+      </tr>
+      <tr>
+        <th scope="row">4.8</th>
+        <td>June 4, 2019</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.7</th>
+        <td>April 7, 2018</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.6</th>
+        <td>April 1, 2017</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.5</th>
+        <td>April 1, 2016</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.4</th>
+        <td>October 1, 2016</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.3</th>
+        <td>October 1, 2015</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.2</th>
+        <td>July 1, 2015</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.1</th>
+        <td>January 1, 2015</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.0</th>
+        <td>December 31, 2013</td>
+        <td>April 1, 2017</td>
+        <td>LTS to support PHP 5.2-5.4</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
+{% include '_verify.html' %}
 {% endblock %}
