@@ -3,8 +3,9 @@ Website for phpMyAdmin
 
 Django code for phpMyAdmin's website.
 
-.. image:: https://github.com/phpmyadmin/website/workflows/Run%20tests/badge.svg
-    :target: https://github.com/phpmyadmin/website/actions
+.. image:: https://github.com/phpmyadmin/website/actions/workflows/tests.yml/badge.svg?branch=master
+    :alt: Tests
+    :target: https://github.com/phpmyadmin/website/actions/workflows/tests.yml?query=branch%3Amaster
 
 .. image:: https://codecov.io/github/phpmyadmin/website/coverage.svg?branch=master
     :target: https://codecov.io/github/phpmyadmin/website?branch=master
