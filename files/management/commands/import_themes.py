@@ -50,8 +50,6 @@ class Command(BaseCommand):
         try:
             metadata = zipfile.open(os.path.join(name, 'theme.json'), 'r')
             data = json.load(metadata)
-            data['support'] = ','.join(data['supports'])
-            data['info' ] = data['description']
         except KeyError:
             self.stderr.write('Missing theme.json in {0}'.format(fullname))
             try:
@@ -70,8 +68,8 @@ class Command(BaseCommand):
             defaults={
                 'size': os.path.getsize(complete_name),
                 'display_name': data['name'],
-                'supported_versions': data['support'],
-                'description': data['info'],
+                'supported_versions': ','.join(data['supports']),
+                'description': data['description'],
                 'url': data['url'] if 'url' in data else '',
                 'author': data['author'],
                 'sha256': read_sum(

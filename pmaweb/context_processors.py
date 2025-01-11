@@ -30,7 +30,7 @@ import datetime
 
 from data.menu import MENU
 from data.screenshots import SCREENSHOTS
-from data.themes import CSSVERSIONS
+from data.themes import PMA_VERSIONS
 from data.awards import AWARDS
 
 
@@ -41,7 +41,7 @@ def basic(request):
         'short_planet': Planet.objects.all()[:5],
         'screenshots': SCREENSHOTS,
         'themes': Theme.objects.filter(show=True),
-        'themecssversions': CSSVERSIONS,
+        'pma_versions': PMA_VERSIONS,
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
         'pmasa_year': PMASA.objects.filter(draft=False).order_by('-year').values_list('year', flat=True).first(),

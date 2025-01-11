@@ -1,14 +1,11 @@
-{% if release.snapshot %}
-  <p>
-    Daily snapshot, generated {{ release.date|date:"Y-m-d" }}, from 
-    <a href="https://github.com/phpmyadmin/phpmyadmin/commit/{{ release.release_notes.raw }}" target="_blank" rel="noopener noreferrer">Git commit {{ release.release_notes.raw }}</a>.
+<div class="mb-3">
+  <p class="text-muted">
+    {% if release.snapshot %}
+      Daily snapshot from {{ release.date|date:'F j, Y' }}. Generated from <a href="https://github.com/phpmyadmin/phpmyadmin/commit/{{ release.release_notes.raw }}" target="_blank" rel="noopener noreferrer">Git commit {{ release.release_notes.raw }}</a>.
+    {% else %}
+      Released {{ release.date|date:'F j, Y' }}. See <a href="{{ release.get_absolute_url }}">release notes</a> for details.
+    {% endif %}
   </p>
-{% else %}
-  <p>
-    Released {{ release.date|date:"Y-m-d" }}, see 
-    <a href="{{ release.get_absolute_url }}" target="_blank" rel="noopener noreferrer">release notes</a> 
-    for details.
-  </p>
-{% endif %}
+</div>
 
 {% include "_download_list.html" %}

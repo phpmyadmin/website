@@ -4,15 +4,15 @@
 {% block content %}
 <h2 class="mb-3">Awards</h2>
 
-{% for award in awards %}
-  <div class="card mb-3">
-    <div class="row">
-      <div class="col-md-4 d-flex align-items-center justify-content-center">
-        <a href="{{ award.link }}" target="_blank" rel="noopener noreferrer"><img src="{% static award.image %}" alt="{{ award.title }}" style="max-width: 100%; height: auto;"></a>
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{ award.title }}</h5>
+<div class="row">
+  {% for award in awards %}
+    <div class="col-md-4 mb-3 d-flex align-items-center">
+      <figure class="figure border rounded p-3 text-center d-flex flex-column justify-content-center w-100">
+        <a href="{{ award.link }}" target="_blank" rel="noopener noreferrer" class="mb-3 order-md-1 order-2">
+          <img src="{% static award.image %}" alt="{{ award.title }}" style="max-width: 100%; height: auto;" class="figure-img img-fluid rounded mx-auto d-block">
+        </a>
+        <figcaption class="figure-caption order-md-2 order-1">
+          <h5>{{ award.title }}</h5>
           {{ award.text|safe }}
           {% if award.photos %}
             <p class="text-muted">Photos:
@@ -21,9 +21,9 @@
               {% endfor %}
             </p>
           {% endif %}
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     </div>
-  </div>
-{% endfor %}
+  {% endfor %}
+</div>
 {% endblock %}

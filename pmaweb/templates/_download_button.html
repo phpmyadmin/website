@@ -3,7 +3,6 @@
     id="downloadBtn"
     class="btn btn-success" 
     href="{{ file.get_absolute_url }}" 
-    download 
     data-sha256="{{ file.sha256 }}" 
     data-pgp="{{ file.get_signed_url }}" 
     data-bs-toggle="tooltip" 
