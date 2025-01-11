@@ -161,7 +161,8 @@ The website generator is licensed under GNU GPL version 2 or later.
 Website itself uses some MIT licensed frontend libraries:
 
 * `jQuery <https://jquery.com/>`_
-* `Bootstrap <https://getbootstrap.com/>`_
+* `Bootstrap 5 <https://getbootstrap.com>`_
+* `Bootstrap Icons <https://icons.getbootstrap.com>`_
 * `Colorbox <https://www.jacklmoore.com/colorbox/>`_
 
 The website content is licensed under Creative Commons
