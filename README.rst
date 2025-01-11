@@ -89,7 +89,7 @@ Once you have all dependencies, you can start development server:
 
     ./manage.py runserver
 
-It will listed on port 8080 by default (you can change this by parameters).
+It will listen on port 8000 by default (you can change this by parameters).
 
 To run test-suite execute:
 
@@ -129,11 +129,11 @@ License
 
 The website generator is licensed under GNU GPL version 2 or later.
 
-Website itself uses some MIT licensed Javascript libraries:
+Website itself uses some MIT licensed frontend libraries:
 
-* jQuery <https://jquery.com/>
-* Bootstrap <https://getbootstrap.com/>
-* Colorbox <https://www.jacklmoore.com/colorbox/>
+* Bootstrap 5 <https://getbootstrap.com>
+* Bootstrap Icons <https://icons.getbootstrap.com>
+* bs5-lightbox <https://trvswgnr.github.io/bs5-lightbox/>
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
