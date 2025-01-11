@@ -158,7 +158,7 @@ License
 
 The website generator is licensed under GNU GPL version 2 or later.
 
-Website itself uses some MIT licensed Javascript libraries:
+Website itself uses some MIT licensed frontend libraries:
 
 * `jQuery <https://jquery.com/>`_
 * `Bootstrap <https://getbootstrap.com/>`_
