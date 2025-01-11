@@ -2,20 +2,13 @@
 {% load static %}
 
 {% block content %}
-
 <h2>Page Not Found</h2>
-
-<p>
-The requested URL was not found on this server. This might have several
-causes, but if you found this link on some page, you should notify its author
-that it no longer works. Please follow to our <a href="{% url 'home' %}">main
-page</a> to find information you were looking for or use the navigation bar above.
+<p class="lead">
+  The requested URL was not found on this server. This might have several
+  causes, but if you found this link on some page, you should notify its author
+  that it no longer works.
 </p>
-
-<script type="text/javascript">
-var GOOG_FIXURL_LANG = 'en';
-var GOOG_FIXURL_SITE = 'https://www.phpmyadmin.net/';
-</script>
-<script type="text/javascript" src="https://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
-
+<p>
+  Please go to our <a href="{% url 'home' %}">home page</a> to find the information you were looking for or use the navigation bar above.
+</p>
 {% endblock %}

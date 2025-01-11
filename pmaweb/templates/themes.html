@@ -4,75 +4,81 @@
 {% block content %}
 <h2>Themes</h2>
 <p>
-phpMyAdmin supports themes since version 2.6.0. All themes are not compatible
-with all phpMyAdmin versions; you should select below which version you are
-using.
+  phpMyAdmin has supported themes since version 2.6.0. Not all themes are compatible
+  with every phpMyAdmin version; please select the version you are using below.
 </p>
 <p>
-Please note that themes contain PHP code and you should download them only
-from trusted servers. All themes available on this page have been checked by
-phpMyAdmin team members.
+  Please note that themes contain PHP code and should only be downloaded from trusted servers. All themes available on this page have been checked by
+  phpMyAdmin team members.
+</p>
+
+<h3>Installation</h3>
+<p>
+  To install a theme, unzip your downloaded theme into the directory /themes/ of
+  your phpMyAdmin folder. When you open phpMyAdmin, you should be able to select the theme.
+  Please read the documentation for more details.
 </p>
 <p>
-To install a theme, unzip your downloaded theme into the directory /themes/ of
-your phpMyAdmin folder. When you open phpMyAdmin, you should be able to select the theme.
-Please read the documentation for more details.
+  You can see the themes in action on our <a href="{% url 'try' %}">demo server</a>.
 </p>
+
+<h3>Support for Themes</h3>
+<p>Themes are provided by third parties and the phpMyAdmin team does not provide any support for them. Please contact the original authors for improvements or security fixes.</p>
+
+<h3>Submit a Theme</h3>
 <p>
-You can try the themes in action on our <a
-href="{% url 'try' %}">demo server</a>.
+  You've made a new theme and you want to share it? Please submit a pull
+  request to our <a href="https://github.com/phpmyadmin/themes/pulls" target="_blank" rel="noopener">GitHub repository</a>. The team will check and prepare your theme for downloading here.
 </p>
+
+<h3>Available Themes</h3>
+<p>Select your phpMyAdmin version:</p>
+
+<ul class="nav nav-pills mb-3" id="versionTab" role="tablist">
+  {% for version in pma_versions reversed %}
+    <li class="nav-item" role="presentation">
+      <button class="nav-link {% if forloop.first %}active{% endif %}" id="{{ version }}-tab" data-bs-toggle="pill" data-bs-target="#{{ version }}-content" type="button" role="tab" aria-controls="{{ version }}-content" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ version }}</button>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="tab-content" id="versionTabContent">
+  {% for version in pma_versions reversed %}
+    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{ version }}-content" role="tabpanel" aria-labelledby="{{ version }}-tab">
+      {% for theme in themes %}
+        {% if version in theme.supported_versions_list %}
+          <div class="card mb-3">
+            <div class="card-header">
+              <h4 class="card-title mb-0">{{ theme }}</h4>
+            </div>
+            <div class="card-body">
+              {% if theme.preview_image_path %}
+                <div class="mb-3 float-md-end text-center">
+                  <a href="{% static theme.preview_image_path %}" data-toggle="lightbox">
+                    <img src="{% static theme.preview_image_path %}" class="img-thumbnail" style="width: 220px; height: 128px;">
+                  </a>
+                </div>
+              {% endif %}
+              <p><strong>Released on:</strong> {{ theme.date|date:'F j, Y' }}</p>
+              <p><strong>Supported versions:</strong> {{ theme.supported_versions }}</p>
+              {% if theme.author %}
+                <p><strong>Author:</strong> 
+                  {% if theme.url %}
+                    <a href="{{ theme.url }}" target="_blank" rel="noopener">{{ theme.author }}</a>
+                  {% else %}
+                    {{ theme.author }}
+                  {% endif %}
+                </p>
+              {% endif %}
+              <p>{{ theme.description }}</p>
+              {% include '_download_table.html' with download_item=theme %}
+            </div>
+          </div>        
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
 
 {% include "_verify.html" %}
-
-<h2>Submit Theme</h2>
-<p>
-You've made a new theme and you want to share it?  Please send your pull
-request to <a href="https://github.com/phpmyadmin/themes/pulls">https://github.com/phpmyadmin/themes/pulls</a>. The team will check and prepare your theme for downloading here.
-</p>
-
-<h2>Available Themes</h2>
-<p>Select your phpMyAdmin version:
-
-<ul class="nav nav-pills">
-{% for css in themecssversions %}
-<li class="nav-item" role="presentation">
-<a class="nav-link themelink {{css.css}}" href="#{{css.css}}" data-theme="{{ css.css }}">{{css.name}}</a>
-</li>
-{% endfor %}
-</ul>
-</p>
-{% for theme in themes %}
-<div class="card mb-4 themediv {{theme.get_css}}">
-  <div class="card-header">
-    <h3 class="card-title">{{ theme }}</h3>
-  </div>
-  <div class="card-body">
-            {% if theme.imgname %}
-            <div class="pull-right thumbnail">
-                <a href="{% static theme.imgname %}" class="colorbox" title="{{theme.name}} theme">
-                    <img src="{% static theme.imgname %}" alt="{{theme.display_name}} thumbnail" class="themeimg" />
-                </a>
-            </div>
-            {% endif %}
-            <p>Released on {{theme.date|date:"Y-m-d"}}</p>
-            <p>Compatible with phpMyAdmin <strong>{{theme.supported_versions}}</strong>.</p>
-            {% if theme.author %}
-            {% if theme.url %}
-            <p>Author: <a href="{{ theme.url }}">{{theme.author}}</a></p>
-            {% else %}
-            <p>Author: {{theme.author}}</p>
-            {% endif %}
-            {% endif %}
-            <p>{{ theme.description }}</p>
-
-            {% include '_dltable.html' with download_item=theme %}
-    </div>
-</div>
-{% endfor %}
-
-<h2>Support for themes</h2>
-
-<p>Themes are provided by third parties and the phpMyAdmin team does not provide any support for them, please contact original authors for improvements or security fixes.</p>
-
 {% endblock %}

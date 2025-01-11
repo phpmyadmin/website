@@ -1,99 +1,113 @@
 {% load static %}
 <div class="sponsors">
+  <h3>Diamond Sponsors</h3>
+  <div class="border rounded mb-3 p-3 text-center">
+    This space is available &mdash; <a href="{% url 'sponsors' %}#process">contact us</a> to get listed here.
+  </div>
 
-<h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>
-
-<h3>Diamond sponsor</h3>
-
-<div class="sp diamond">
-This space is available &mdash; contact us to get listed here.
-</div>
-
-<!--<h3>Platinum sponsor</h3>-->
-<!--<h3>Platinum sponsors</h3>-->
-
-<h3>Gold sponsors</h3>
-
-<div class="sp gold">
-  <a href="https://www.vapehuset.se/"><img src="{% static 'images/vapehuset.png' %}" alt="Vapehuset" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.4kdownload.com/"><img src="{% static 'images/4kdownload.png' %}" alt="4K Download" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://vape.se/"><img src="{% static 'images/vape.png' %}" alt="Vape.se" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://superviral.io"><img src="{% static 'images/superviral.png' %}" alt="Superviral.io" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.ramotion.com/"><img src="{% static 'images/ramotion.png' %}" alt="Ramotion.com" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://megafamous.com/"><img src="{% static 'images/megafamous.png' %}" alt="MegaFamous" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://socialboss.org/"><img src="{% static 'images/socialboss.png' %}" alt="Social Boss" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://quickbookstoolhub.com/"><img src="{% static 'images/quickbookstoolhub.png' %}" alt="Quickbooks Tool Hub" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://buzzoid.com/"><img src="{% static 'images/buzzoid.png' %}" alt="Buy Instagram Followers & Likes" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://twicsy.com/"><img src="{% static 'images/twicsy.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.famety.com/"><img src="{% static 'images/famety.png' %}" alt="buy real Instagram followers" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://copycopter.ai/"><img src="{% static 'images/copycopter.png' %}" alt="CopyCopter.ai" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.idigic.net/"><img src="{% static 'images/idigic.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://buycheapestfollowers.com"><img src="{% static 'images/buycheapestfollowers.png' %}" alt="buycheapestfollowers.com" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://bountii.co"><img src="{% static 'images/bountii.png' %}" alt="bountii.co" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://celebian.com"><img src="{% static 'images/celebian.png' %}" alt="celebian.com" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.follower24.de/"><img src="{% static 'images/follower24.png' %}" alt="Buy followers, likes and views for Instagram and TikTok" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://views4you.com/"><img src="{% static 'images/views4you.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://viralyft.com/"><img src="{% static 'images/viralyft.png' %}" alt="Viralyft" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.socialboosting.com"><img src="{% static 'images/socialboosting.png' %}" alt="Social Boosting" /></a>
-</div>
-
-{% include '_sponsorship_note.html' %}
-
+  <h3>Gold Sponsors</h3>
+  <div class="border rounded mb-3 p-3">
+    <div class="row {{ row_cols|default:'row-cols-1 row-cols-md-2' }} g-3">
+      <div class="col text-center">
+        <a href="https://www.vapehuset.se" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/vapehuset.png' %}" alt="Vapehuset" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://www.4kdownload.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/4kdownload.png' %}" alt="4K Download" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://vape.se" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/vape.png' %}" alt="Vape.se" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://superviral.io" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/superviral.png' %}" alt="Superviral.io" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://www.ramotion.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/ramotion.png' %}" alt="Ramotion.com" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://megafamous.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/megafamous.png' %}" alt="MegaFamous" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://socialboss.org" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/socialboss.png' %}" alt="Social Boss" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://quickbookstoolhub.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/quickbookstoolhub.png' %}" alt="Quickbooks Tool Hub" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://buzzoid.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/buzzoid.png' %}" alt="Buy Instagram Followers & Likes" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://twicsy.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/twicsy.png' %}" alt="Buy Instagram Followers, Likes & Views" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://www.famety.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/famety.png' %}" alt="buy real Instagram followers" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://copycopter.ai" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/copycopter.png' %}" alt="CopyCopter.ai" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://www.idigic.net" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/idigic.png' %}" alt="Buy Instagram Followers, Likes & Views" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://buycheapestfollowers.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/buycheapestfollowers.png' %}" alt="buycheapestfollowers.com" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://bountii.co" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/bountii.png' %}" alt="bountii.co" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://celebian.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/celebian.png' %}" alt="celebian.com" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://www.follower24.de" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/follower24.png' %}" alt="Buy followers, likes and views for Instagram and TikTok" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://views4you.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/views4you.png' %}" alt="Buy Instagram Followers, Likes & Views" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://viralyft.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/viralyft.png' %}" alt="Viralyft" class="img-fluid">
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="https://www.socialboosting.com" target="_blank" rel="noopener">
+          <img src="{% static 'images/sponsors/socialboosting.png' %}" alt="Social Boosting" class="img-fluid">
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

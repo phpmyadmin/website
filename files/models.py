@@ -28,9 +28,9 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 import os.path
-from data.themes import CSSMAP
 from markupfield.fields import MarkupField
 from pmaweb.cdn import purge_cdn, purge_all_cdn
+from data.themes import PMA_VERSIONS
 
 # Naming of versions
 VERSION_INFO = (
@@ -436,10 +436,10 @@ class Theme(models.Model):
     def __str__(self):
         return '{0} {1}'.format(self.display_name, self.version)
 
-    @property
-    def imgname(self):
+    @property 
+    def preview_image_path(self):
         filepath = 'images/themes/{0}.png'.format(self.name)
-        imagePath = settings.STATIC_ROOT + '/' + filepath;
+        imagePath = settings.STATIC_ROOT + '/' + filepath
 
         if os.path.exists(imagePath):
             return filepath
@@ -471,8 +471,19 @@ class Theme(models.Model):
         )
 
     @property
-    def get_css(self):
-        return CSSMAP[self.supported_versions]
+    def supported_versions_list(self) -> list[str]:
+        if ',' in self.supported_versions:
+            return [v.strip() for v in self.supported_versions.split(',')]
+
+        if '-' in self.supported_versions:
+            start, end = self.supported_versions.split(' - ')
+            if start in PMA_VERSIONS and end in PMA_VERSIONS:
+                start_idx = PMA_VERSIONS.index(start)
+                end_idx = PMA_VERSIONS.index(end)
+                return PMA_VERSIONS[start_idx:end_idx + 1]
+            return []
+
+        return [self.supported_versions] if self.supported_versions else []
 
 
 def dockerhub_trigger(tag):

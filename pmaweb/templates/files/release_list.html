@@ -1,41 +1,47 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<p>Archive of phpMyAdmin releases. You can find currently supported versions on the <a href="{% url 'downloads' %}">downloads page</a>.</p>
 
-<p>Archive of phpMyAdmin releases, you can find currently supported versions <a href="{% url 'downloads' %}">on downloads page</a>.</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover"> 
+    <thead>
+      <tr>
+        <th scope="col">Release</th>
+        <th scope="col">Date</th>
+        <th scope="col">Quick Download</th>
+        <th scope="col">Size</th>
+        <th scope="col">Verification <a href="#verify" class="text-decoration-none">*</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for object in object_list %}
+        <tr>
+          <th scope="row">
+            <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+          </th>
+          <td>
+            <time datetime="{{ object.date|date:'c' }}">{{ object.date|date:'F j, Y' }}</time>
+          </td>
+          {% with object.simpledownload as file %}
+            {% if file %}
+              <td><a href="{{ file.get_absolute_url }}">{{ file.filename }}</a></td>
+              <td>{{ file.size|filesizeformat }}</td>
+              <td>
+                {% if file.signed %}
+                  [<a href="{{ file.get_signed_url }}">PGP</a>]
+                {% endif %}
+                [<a href="{{ file.get_absolute_url }}.sha256">SHA256</a>]
+              </td>
+            {% else %}
+              <td colspan="3" class="text-center text-muted">Download not available</td>
+            {% endif %}
+          {% endwith %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
-<table class="table table-condensed table-striped"> 
-<thead>
-<tr>
-    <th>Release</th>
-    <th>Date</th>
-    <th>Quick download</th>
-    <th>Size</th>
-    <th>Verification</th>
-</tr>
-</thead>
-<tbody>
-{% for object in object_list %}
-<tr>
-    <th><a href="{{ object.get_absolute_url }}">{{ object }}</a></th>
-    <td>{{ object.date|date:"Y-m-d" }}</td>
-{% with object.simpledownload as file %}
-{% if file %}
-    <td><a href="{{ file.get_absolute_url }}">{{ file.filename }}</a></td>
-        <td class="size">{{ file.size | filesizeformat }}</td>
-        <td>
-        {% if file.signed %}
-        [<a href="{{ file.get_signed_url }}">PGP</a>]
-        {% endif %}
-        [<a href="{{ file.get_absolute_url }}.sha256">SHA256</a>]
-        </td>
-{% else %}
-     <td colspan="3">Download not available</td>
-{% endif %}
-{% endwith %}
-</tr>
-{% endfor %}
-</tbody>
-</table>
-
+{% include "_verify.html" %}
 {% endblock %}

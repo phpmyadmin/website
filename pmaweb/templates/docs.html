@@ -4,112 +4,103 @@
 {% block content %}
 
 <div class="row">
+  <div class="col-md-6">
+    <h2>Documentation</h2>
 
-<div class="col-md-6">
+    <h3>Official Documentation</h3>
+    <ul>
+      <li><b><a href="https://docs.phpmyadmin.net/" target="_blank" rel="noopener">Main documentation</a></b> (from the development version)</li>
+      <li><b><a href="https://readthedocs.org/projects/phpmyadmin/downloads/" target="_blank" rel="noopener">Downloadable documentation</a></b> (from the development version)</li>
+      <li><b><a href="https://wiki.phpmyadmin.net/" target="_blank" rel="noopener">Official phpMyAdmin wiki</a></b></li>
+      <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html" target="_blank" rel="noopener">Frequently Asked Questions</a></li>
+      <li><a href="https://www.phpmyadmin.net/documentation/changelog.php" target="_blank" rel="noopener">ChangeLog</a></li>
+      <li><a href="{% url 'translations' %}">Translations overview</a></li>
+    </ul>
 
-<h2>Documentation</h2>
+    <h3>Localized Documentation</h3>
+    <p>Please note that these translations are not always complete, but you can <a href="{% url 'contribute' %}#translate">help</a>.</p>
+    <ul>
+      <li><a href="https://docs.phpmyadmin.net/zh_CN/latest/" target="_blank" rel="noopener">Chinese (Simplified)</a></li>
+      <li><a href="https://docs.phpmyadmin.net/cs/latest/" target="_blank" rel="noopener">Czech</a></li>
+      <li><a href="https://docs.phpmyadmin.net/nl/latest/" target="_blank" rel="noopener">Dutch</a></li>
+      <li><a href="https://docs.phpmyadmin.net/et/latest/" target="_blank" rel="noopener">Estonian</a></li>
+      <li><a href="https://docs.phpmyadmin.net/fr/latest/" target="_blank" rel="noopener">French</a></li>
+      <li><a href="https://docs.phpmyadmin.net/de/latest/" target="_blank" rel="noopener">German</a></li>
+      <li><a href="https://docs.phpmyadmin.net/el/latest/" target="_blank" rel="noopener">Greek</a></li>
+      <li><a href="https://docs.phpmyadmin.net/hu/latest/" target="_blank" rel="noopener">Hungarian</a></li>
+      <li><a href="https://docs.phpmyadmin.net/id/latest/" target="_blank" rel="noopener">Indonesian</a></li>
+      <li><a href="https://docs.phpmyadmin.net/ja/latest/" target="_blank" rel="noopener">Japanese</a></li>
+      <li><a href="https://docs.phpmyadmin.net/pt_BR/latest/" target="_blank" rel="noopener">Portuguese (Brazil)</a></li>
+      <li><a href="https://docs.phpmyadmin.net/es/latest/" target="_blank" rel="noopener">Spanish</a></li>
+      <li><a href="https://docs.phpmyadmin.net/tr/latest/" target="_blank" rel="noopener">Turkish</a></li>
+      <li><a href="https://docs.phpmyadmin.net/uk/latest/" target="_blank" rel="noopener">Ukrainian</a></li>
+    </ul>
 
-<h3>Official Documentation</h3>
-<ul>
-    <li><b><a href="https://docs.phpmyadmin.net/">Main documentation</a></b> (from the development version)</li>
-    <li><b><a href="https://readthedocs.org/projects/phpmyadmin/downloads/">Downloadable documentation</a></b> (from the development version)</li>
-    <li><b><a href="https://wiki.phpmyadmin.net/">Official phpMyAdmin wiki</a></b></li>
-    <li><a href="https://phpmyadmin.readthedocs.org/en/latest/faq.html">Frequently Asked Questions</a></li>
-    <li><a href="https://www.phpmyadmin.net/documentation/changelog.php">ChangeLog</a></li>
-    <li><a href="{% url 'translations' %}">Translations overview</a></li>
-</ul>
+    <h3>Third Party Tutorials and Articles</h3>
+    <ul>
+      <li><a href="https://supporthost.com/it/phpmyadmin/" target="_blank" rel="noopener">phpMyAdmin: guida completa (Italian)</a></li>
+      <li><a href="https://cloud.google.com/sql/docs/phpmyadmin-on-app-engine" target="_blank" rel="noopener">Using phpMyAdmin with Google Cloud SQL on Google App Engine</a></li>
+      <li><a href="https://garv.in/tops/texte/mimetutorial" target="_blank" rel="noopener">Having fun with phpMyAdmin's MIME-transformations &amp; PDF-features</a></li>
+      <li><a href="https://archiv.linuxsoft.cz/article_list.php?id_kategory=215" target="_blank" rel="noopener">Seriál o phpMyAdminovi (Česky)</a></li>
+      <li><a href="http://www.php-editors.com/articles/sql_phpmyadmin.php" target="_blank" rel="noopener">Learning SQL Using phpMyAdmin</a></li>
+    </ul>
 
-<h3>Localized Documentation</h3>
+    <h3>Sites Dedicated to phpMyAdmin</h3>
+    <ul>
+      <li><a href="https://php-myadmin.ru" target="_blank" rel="noopener">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
+    </ul>
+  </div>
 
-<p>Please note that these translations are not always complete, but you can <a
-href="{% url 'contribute' %}#translate">help</a>.</p>
+  <div class="col-md-6">
+    <h2><a id="books"></a>Books</h2>
 
-<ul>
-    <li><a href="https://docs.phpmyadmin.net/zh_CN/latest/">Chinese (Simplified)</a></li>
-    <li><a href="https://docs.phpmyadmin.net/cs/latest/">Czech</a></li>
-    <li><a href="https://docs.phpmyadmin.net/nl/latest/">Dutch</a></li>
-    <li><a href="https://docs.phpmyadmin.net/et/latest/">Estonian</a></li>
-    <li><a href="https://docs.phpmyadmin.net/fr/latest/">French</a></li>
-    <li><a href="https://docs.phpmyadmin.net/de/latest/">German</a></li>
-    <li><a href="https://docs.phpmyadmin.net/el/latest/">Greek</a></li>
-    <li><a href="https://docs.phpmyadmin.net/hu/latest/">Hungarian</a></li>
-    <li><a href="https://docs.phpmyadmin.net/id/latest/">Indonesian</a></li>
-    <li><a href="https://docs.phpmyadmin.net/ja/latest/">Japanese</a></li>
-    <li><a href="https://docs.phpmyadmin.net/pt_BR/latest/">Portuguese (Brazil)</a></li>
-    <li><a href="https://docs.phpmyadmin.net/es/latest/">Spanish</a></li>
-    <li><a href="https://docs.phpmyadmin.net/tr/latest/">Turkish</a></li>
-    <li><a href="https://docs.phpmyadmin.net/uk/latest/">Ukrainian</a></li>
-</ul>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <a href="https://www.packtpub.com/en-us/product/mastering-phpmyadmin-34-for-effective-mysql-management-9781849517782" target="_blank" rel="noopener">
+            <img src="{% static 'images/books/pma_en_mastering_3.4.png' %}" class="card-img" alt="Book cover">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Mastering phpMyAdmin 3.4 for Effective MySQL Management</h5>
+            <p class="card-text">A percentage of the book's sales is donated to help phpMyAdmin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h3>Third Party Tutorials and Articles</h3>
-<ul>
-    <li><a href="https://supporthost.com/it/phpmyadmin/">phpMyAdmin: guida completa (Italian)</a>
-    <li><a href="https://cloud.google.com/sql/docs/phpmyadmin-on-app-engine">Using phpMyAdmin with Google Cloud SQL on Google App Engine</a></li>
-    <li><a href="https://garv.in/tops/texte/mimetutorial">Having fun with phpMyAdmin's MIME-transformations &amp; PDF-features</a></li>
-    <li><a href="https://archiv.linuxsoft.cz/article_list.php?id_kategory=215">Seriál o phpMyAdminovi (Česky)</a></li>
-    <li><a href="http://www.php-editors.com/articles/sql_phpmyadmin.php">Learning SQL Using phpMyAdmin</a></li>
-    <li><a href="https://blog.apkmonk.com/how-to-install-phpmyadmin-on-aws/">How to install phpMyAdmin on AWS</a></li>
-</ul>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <a href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1" target="_blank" rel="noopener">
+            <img src="{% static 'images/books/pma_en_starter.jpg' %}" class="card-img" alt="Book cover">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">phpMyAdmin Starter</h5>
+            <p class="card-text">A percentage of the book's sales is donated to help phpMyAdmin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h3>Sites Dedicated to phpMyAdmin</h3>
-<ul>
-    <li><a href="https://php-myadmin.ru">php-myadmin.ru: Russian site dedicated to phpMyAdmin</a></li>
-</ul>
-
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <a href="https://www.packtpub.com/en-us/product/mastering-phpmyadmin-211-for-effective-mysql-management-9781847194190" target="_blank" rel="noopener">
+            <img src="{% static 'images/books/pma_en_mastering_2.11.png' %}" class="card-img" alt="Book cover">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Mastering phpMyAdmin 2.11 for Effective MySQL Management</h5>
+            <p class="card-text">A percentage of the book's sales is donated to help phpMyAdmin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div class="col-md-6">
-
-<h2><a id="books"></a>Books</h2>
-
-<div class="row">
-
-<h3>Mastering phpMyAdmin 3.4 for Effective MySQL Management</h3>
-
-<a class="pull-left img-margin" href="https://www.packtpub.com/en-us/product/mastering-phpmyadmin-34-for-effective-mysql-management-9781849517782"><img src="{% static 'images/books/pma_en_3.4_150x185.png' %}" alt="Book cover" /></a>
-
-<p>
-A percentage of the book's sales is donated to help phpMyAdmin.
-</p>
-
-</div>
-
-<div class="row">
-
-<h3>phpMyAdmin Starter</h3>
-
-<a class="pull-left img-margin" href="https://www.amazon.com/phpMyAdminStarter-ebook/dp/B007RMWJSA/ref=sr_1_1?ie=UTF8&amp;qid=1333715561&amp;sr=8-1"><img src="{% static 'images/books/pma_starter_150x184.jpg' %}" alt="Book cover" /></a>
-
-<p>
-A percentage of the book's sales is donated to help phpMyAdmin.
-</p>
-
-</div>
-
-<div class="row">
-
-<h3>Mastering phpMyAdmin 2.11 for Effective MySQL Management</h3>
-
-<a class="pull-left img-margin" href="https://www.packtpub.com/web-development/mastering-phpmyadmin-211-effective-mysql-management"><img src="{% static 'images/books/pma_en_100x123.png' %}" alt="Book cover"  /></a>
-
-<p>
-A percentage of the book's sales is donated to help phpMyAdmin.
-</p>
-
-</div>
-
-<div class="row">
-<h3>Dominar phpMyAdmin para una administraci&oacute;n efectiva de MySQL</h3>
-
-<a class="pull-left img-margin" href="https://www.packtpub.com/web-development/dominar-phpmyadmin-para-una-administracion-efectiva-de-mysql-espanol"><img src="{% static 'images/books/pma_es_100x123.png' %}" alt="Book cover" /></a>
-
-<p xml:lang="es">
-Este libro es una gu&iacute;a completa que le ayuda a sacar partido del potencial de phpMyAdmin. Ya sea un programador experimentado, un administrador de sistemas, un dise&ntilde;ador Web o nuevo a las tecnolog&iacute;as de MySQL y phpMyAdmin, este libro le mostrar&aacute; como aumentar su productividad y control cuando trabaje con MySQL. Por ello se ha traducido, de modo que esta gu&iacute;a completa sea m&aacute;s accesible al lector espa&ntilde;ol.
-</p>
-
-</div>
-
-</div>
-</div>
-
 {% endblock %}

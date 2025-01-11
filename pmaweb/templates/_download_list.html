@@ -1,0 +1,11 @@
+<p>{{ release.get_version_info }}</p>
+
+{% with release.get_downloads as download_list %}
+  {% if download_list %}
+    {% include '_download_table.html' %}
+  {% else %}
+    <div class="alert alert-warning">
+      Sorry, but no files are available for download for this release. This might be because the release is too old and we couldn't find it in our archives.
+    </div>
+  {% endif %}
+{% endwith %}
