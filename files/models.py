@@ -437,9 +437,9 @@ class Theme(models.Model):
         return '{0} {1}'.format(self.display_name, self.version)
 
     @property
-    def imgname(self):
+    def preview_image_path(self):
         filepath = 'images/themes/{0}.png'.format(self.name)
-        imagePath = settings.STATIC_ROOT + '/' + filepath;
+        imagePath = settings.STATIC_ROOT + '/' + filepath
 
         if os.path.exists(imagePath):
             return filepath
