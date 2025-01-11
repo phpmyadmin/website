@@ -8,7 +8,7 @@
   {% for award in awards %}
     <div class="col-md-4 mb-3 d-flex align-items-center">
       <figure class="figure border rounded p-3 text-center d-flex flex-column justify-content-center w-100">
-        <a href="{{ award.link }}" target="_blank" rel="noopener noreferrer" class="mb-3 order-md-1 order-2">
+        <a href="{{ award.link }}" target="_blank" rel="noopener" class="mb-3 order-md-1 order-2">
           <img src="{% static award.image %}" alt="{{ award.title }}" style="max-width: 100%; height: auto;" class="figure-img img-fluid rounded mx-auto d-block">
         </a>
         <figcaption class="figure-caption order-md-2 order-1">

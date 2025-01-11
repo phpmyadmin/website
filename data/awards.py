@@ -31,8 +31,8 @@ AWARDS = [
         'title': 'Best Database Management Software of 2021',
         'text': '''
 <p>phpMyAdmin was listed in
-<a href="https://digital.com/" target="_blank" rel="noopener noreferrer">Digital.com's</a>
-<a href="%(link)s" target="_blank" rel="noopener noreferrer">Best Database Management Software list</a>
+<a href="https://digital.com/" target="_blank" rel="noopener">Digital.com's</a>
+<a href="%(link)s" target="_blank" rel="noopener">Best Database Management Software list</a>
 in January 2021.</p>
 ''',
         'photos': [],
@@ -43,8 +43,8 @@ in January 2021.</p>
         'title': 'Best Database Admin Tool for Business Hosting',
         'text': '''
 <p>phpMyAdmin was awarded
-<a href="https://www.hostingadvice.com/" target="_blank" rel="noopener noreferrer">HostingAdvice</a>'s
-<a href="%(link)s" target="_blank" rel="noopener noreferrer">Best Database Admin Tool for Business Hosting</a>
+<a href="https://www.hostingadvice.com/" target="_blank" rel="noopener">HostingAdvice</a>'s
+<a href="%(link)s" target="_blank" rel="noopener">Best Database Admin Tool for Business Hosting</a>
 in January 2017.</p>
 ''',
         'photos': [],
@@ -54,7 +54,7 @@ in January 2017.</p>
         'link': 'https://openlife.cc/blogs/2013/april/mysql-community-awards-2013-and-winners-are',
         'title': '2013 MySQL Community Awards',
         'text': '''
-<p>At the <a href="%(link)s" target="_blank" rel="noopener noreferrer">2013 MySQL Community Awards</a> ceremony, our
+<p>At the <a href="%(link)s" target="_blank" rel="noopener">2013 MySQL Community Awards</a> ceremony, our
 project has won MySQL Application of the year 2013.</p>
 ''',
         'photos': [
@@ -80,7 +80,7 @@ project has won MySQL Application of the year 2013.</p>
         'link': 'https://sourceforge.net/blog/cca06/',
         'title': '2009 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the <a href="%(link)s" target="_blank" rel="noopener noreferrer">2009 SourceForge.net Community Choice Awards</a>,
+<p>For the <a href="%(link)s" target="_blank" rel="noopener">2009 SourceForge.net Community Choice Awards</a>,
 phpMyAdmin was present in two categories: Best Tool or Utility for Developers (finalist) and Best Tool or Utility for SysAdmins (winner).</p>
 ''',
         'photos': [
@@ -96,7 +96,7 @@ phpMyAdmin was present in two categories: Best Tool or Utility for Developers (f
         'link': 'http://www.infoworld.com/',
         'title': 'InfoWorld 2008 Best of Open Source Awards',
         'text': '''
-<p>Our project has won this <a href="%(link)s" target="_blank" rel="noopener noreferrer">Infoworld 2008 award:</a>
+<p>Our project has won this <a href="%(link)s" target="_blank" rel="noopener">Infoworld 2008 award:</a>
 Best of open source platforms and middleware (MySQL administration).</p>
 ''',
         'photos': [],
@@ -106,7 +106,7 @@ Best of open source platforms and middleware (MySQL administration).</p>
         'link': 'https://sourceforge.net/blog/cca08',
         'title': '2008 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the <a href="%(link)s" target="_blank" rel="noopener noreferrer">2008 SourceForge.net Community Choice Awards</a>,
+<p>For the <a href="%(link)s" target="_blank" rel="noopener">2008 SourceForge.net Community Choice Awards</a>,
 phpMyAdmin was present in three categories: Best Tool or Utility for Developers (finalist), Best Tool or Utility for SysAdmins (winner), and Most Likely to Be the Next $1B Acquisition (winner).</p>
 ''',
         'photos': [
@@ -122,7 +122,7 @@ phpMyAdmin was present in three categories: Best Tool or Utility for Developers 
         'link': 'https://sourceforge.net/blog/cca07',
         'title': '2007 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the <a href="%(link)s" target="_blank" rel="noopener noreferrer">2007 SourceForge.net Community Choice Awards</a>,
+<p>For the <a href="%(link)s" target="_blank" rel="noopener">2007 SourceForge.net Community Choice Awards</a>,
 phpMyAdmin was present in two categories: Best Tool or Utility for Developers (nominated) and Best Tool or Utility for SysAdmins (winner).</p>
 ''',
         'photos': [
@@ -155,7 +155,7 @@ phpMyAdmin was present in two categories: Best Tool or Utility for Developers (n
         'link': 'https://www.os2world.com/',
         'title': '2005 OS2World.com Awards',
         'text': '''
-<p>For the <a href="%(link)s" target="_blank" rel="noopener noreferrer">5th Annual OS/2 World Awards</a>,
+<p>For the <a href="%(link)s" target="_blank" rel="noopener">5th Annual OS/2 World Awards</a>,
 phpMyAdmin won in the category Best PHP Application.</p>
 ''',
         'photos': [],
@@ -165,7 +165,7 @@ phpMyAdmin won in the category Best PHP Application.</p>
         'link': 'https://sourceforge.net/blog/cca06/',
         'title': '2006 SourceForge.net Community Choice Awards',
         'text': '''
-<p>For the first annual SourceForge.net <a href="%(link)s" target="_blank" rel="noopener noreferrer">Community Choice
+<p>For the first annual SourceForge.net <a href="%(link)s" target="_blank" rel="noopener">Community Choice
 Awards</a>, phpMyAdmin won the first place in two categories: Databases and Sysadmin.</p>
 ''',
         'photos': [],
@@ -176,7 +176,7 @@ Awards</a>, phpMyAdmin won the first place in two categories: Databases and Sysa
         'title': 'PHP Magazin Reader\'s Choice Award 2006',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2006 in the category Best PHP-Tool / Best PHP-Application
-by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferrer">German PHP Magazin</a>.</p>
+by the readers of the <a href="%(link)s" target="_blank" rel="noopener">German PHP Magazin</a>.</p>
 ''',
         'photos': [],
     },
@@ -186,7 +186,7 @@ by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferre
         'title': 'PHP Magazin Reader\'s Choice Award 2005',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2005 in the category Best PHP-Tool / Best PHP-Application
-by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferrer">German PHP Magazin</a>.</p>
+by the readers of the <a href="%(link)s" target="_blank" rel="noopener">German PHP Magazin</a>.</p>
 ''',
         'photos': [],
     },
@@ -196,7 +196,7 @@ by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferre
         'title': 'PHP Magazin Reader\'s Choice Award 2003',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2003 in the category Best PHP-Tool / Best PHP-Application
-by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferrer">German PHP Magazin</a>.</p>
+by the readers of the <a href="%(link)s" target="_blank" rel="noopener">German PHP Magazin</a>.</p>
 ''',
         'photos': [
             (
@@ -214,7 +214,7 @@ by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferre
         'title': 'International PHP Magazine Reader\'s Choice Award 2003',
         'text': '''
 <p>phpMyAdmin was awarded the Reader's Choice Award 2003 in the category Best PHP-Tool / Best PHP-Application
-by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferrer">International PHP Magazine</a>.</p>
+by the readers of the <a href="%(link)s" target="_blank" rel="noopener">International PHP Magazine</a>.</p>
 ''',
         'photos': [
             (
@@ -232,9 +232,9 @@ by the readers of the <a href="%(link)s" target="_blank" rel="noopener noreferre
         'title': 'Sourceforge.net project of the month',
         'text': '''
 <p>phpMyAdmin was awarded
-<a href="https://sourceforge.net" target="_blank" rel="noopener noreferrer">Sourceforge.net</a>'s
-<a href="%(link)s" target="_blank" rel="noopener noreferrer">Project of the month</a>
-in December 2002. Have a look at that <a href="%(link)s" target="_blank" rel="noopener noreferrer">article</a>, if you
+<a href="https://sourceforge.net" target="_blank" rel="noopener">Sourceforge.net</a>'s
+<a href="%(link)s" target="_blank" rel="noopener">Project of the month</a>
+in December 2002. Have a look at that <a href="%(link)s" target="_blank" rel="noopener">article</a>, if you
 want to learn about the early years of phpMyAdmin.</p>
 ''',
         'photos': [],
