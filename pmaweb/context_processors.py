@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from files.models import Release, Theme, get_current_releases
-from news.models import Post, Planet
+from news.models import Post
 from translations.models import Translation
 from security.models import PMASA
 from demo.models import Demo
@@ -38,7 +38,6 @@ def basic(request):
     return {
         'current_year': datetime.datetime.now().year,
         'short_news': Post.objects.filter(date__lt=timezone.now())[:5],
-        'short_planet': Planet.objects.all()[:5],
         'screenshots': SCREENSHOTS,
         'themes': Theme.objects.filter(show=True),
         'pma_versions': PMA_VERSIONS,

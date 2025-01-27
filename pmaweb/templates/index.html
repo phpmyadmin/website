@@ -92,26 +92,6 @@
       </ul>
       <p><a href="{% url 'news' %}">...more news</a></p>
     </div>
-
-    <div class="mt-4">
-      <h2><a href="https://planet.phpmyadmin.net" target="_blank" rel="noopener">Latest Posts in Developers Blogs</a></h2>
-      <ul class="list-unstyled">
-        {% for item in short_planet %}
-          <li class="media mb-3">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1"><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h5>
-              <small class="text-muted">
-                <time datetime="{{ item.date|date:'c' }}" title="{{ item.date|date:'Y-m-d H:i' }}">
-                  <svg class="bi"><use href="#calendar-event"></use></svg>
-                  {{ item.date|date:'F j, Y' }}
-                </time>
-              </small>
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-      <p><a href="https://planet.phpmyadmin.net" target="_blank" rel="noopener">...more blogs</a></p>
-    </div>
   </div>
   <div class="col-md-3">
     <h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>

@@ -57,22 +57,6 @@ class Post(models.Model):
         )
 
 
-class Planet(models.Model):
-    """Cache for planet phpMyAdmin posts"""
-    url = models.URLField(unique=True)
-    title = models.CharField(max_length=150)
-    date = models.DateTimeField(db_index=True, default=timezone.now)
-
-    class Meta(object):
-        ordering = ['-date']
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return self.url
-
-
 @receiver(post_save, sender=Post)
 def purge_post(sender, instance, **kwargs):
     num_pages = 1 + (Post.objects.count() // 10)
@@ -87,8 +71,3 @@ def purge_post(sender, instance, **kwargs):
         for x in range(num_pages)
     ])
     purge_cdn(*pages)
-
-
-@receiver(post_save, sender=Planet)
-def purge_planet(sender, instance, **kwargs):
-    purge_cdn(reverse('home'))

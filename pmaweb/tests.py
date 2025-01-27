@@ -29,7 +29,7 @@ import datetime
 from pmaweb.views import REDIRECT_MAP, github_tree, github_commit
 from pmaweb.cdn import URL as CDN_URL, URL_ALL as CDN_URL_ALL
 from files.models import Release, Download, Theme
-from news.models import Post, Planet
+from news.models import Post
 from security.models import PMASA
 import json
 
@@ -183,17 +183,6 @@ class CDNTest(TestCase):
             Post,
             ['/', '/news/', '/news/feed/', '/news/2000/1/1/slug/', '/news/1/'],
             title='title', slug='slug', author_id=1,
-            date=make_aware(
-                datetime.datetime(year=2000, month=1, day=1), utc
-            ),
-        )
-
-    @override_settings(CDN_ID='12345')
-    def test_news_planet(self):
-        self.cdn_tester(
-            Planet,
-            ['/'],
-            title='title', url='https://example.net/',
             date=make_aware(
                 datetime.datetime(year=2000, month=1, day=1), utc
             ),

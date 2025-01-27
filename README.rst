@@ -112,8 +112,6 @@ Cron jobs:
 
     # Update translation stats
     ./manage.py fetch_translations
-    # Update planet posts
-    ./manage.py fetch_planet
 
 File releases scan:
 
