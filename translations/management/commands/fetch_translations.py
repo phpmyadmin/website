@@ -33,6 +33,7 @@ class Command(BaseCommand):
 
         has_next = True
         while has_next:
+            data = ''
             try:
                 handle = urllib.request.urlopen(self.API_URL)
                 data = handle.read()
@@ -41,7 +42,8 @@ class Command(BaseCommand):
                 self.API_URL = content['next']
             except ValueError:
                 print("There was a problem parsing the data from Hosted Weblate.")
-                print(("Check the status of the feed page: " + URL))
+                print(("Check the status of the feed page: " + self.API_URL))
+                print(("Data: " + data))
                 import sys
                 sys.exit(1)
             self.handle_content(content['results'])
