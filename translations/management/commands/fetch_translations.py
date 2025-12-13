@@ -20,22 +20,31 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from django.core.management.base import BaseCommand
+from django.conf import settings
 from translations.models import Translation
 import json
 from dateutil import parser
-import urllib.request, urllib.parse, urllib.error
+from urllib.request import urlopen, Request
 
 class Command(BaseCommand):
     help = 'Downloads translation stats'
     API_URL = 'https://hosted.weblate.org/api/components/phpmyadmin/master/statistics/'
 
     def handle(self, *args, **options):
+        if not settings.WEBLATE_TOKEN:
+            print(("Missing a Weblate token (WEBLATE_TOKEN) in the settings."))
+            return
 
+        headers = {
+            'User-Agent': 'phpMyAdmin website',
+            'Accept': 'application/json',
+            'Authorization': 'Token ' + settings.WEBLATE_TOKEN
+        }
         has_next = True
         while has_next:
             data = ''
             try:
-                handle = urllib.request.urlopen(self.API_URL)
+                handle = urlopen(Request(self.API_URL, headers=headers))
                 data = handle.read()
                 content = json.loads(data)
                 has_next = content['next'] is not None
@@ -43,7 +52,7 @@ class Command(BaseCommand):
             except ValueError:
                 print("There was a problem parsing the data from Hosted Weblate.")
                 print(("Check the status of the feed page: " + self.API_URL))
-                print(("Data: " + data))
+                print(("Data: " + data.decode("utf-8")))
                 import sys
                 sys.exit(1)
             self.handle_content(content['results'])
