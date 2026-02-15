@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v6
+        with:
+          # Fetch some commits for Scrutinizer coverage upload
+          fetch-depth: 15
 
       - name: Use Python ${{ matrix.python-version }}
         uses: actions/setup-python@v6
