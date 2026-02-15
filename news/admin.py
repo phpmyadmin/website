@@ -23,6 +23,7 @@ from django.contrib import admin
 from news.models import Post, Planet
 
 
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'date', 'author')
     list_filter = ('author',)
@@ -36,11 +37,10 @@ class PostAdmin(admin.ModelAdmin):
         obj.save()
 
 
+@admin.register(Planet)
 class PlanetAdmin(admin.ModelAdmin):
     list_display = ('title', 'date', 'url')
     date_hierarchy = 'date'
     search_fields = ['title', 'url']
 
 
-admin.site.register(Planet, PlanetAdmin)
-admin.site.register(Post, PostAdmin)

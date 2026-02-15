@@ -20,7 +20,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 from django.core.management.base import BaseCommand
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 
 from security.models import PMASA
 
@@ -30,7 +30,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         for pmasa in PMASA.objects.filter(draft=True):
-            name = force_text(pmasa)
+            name = force_str(pmasa)
             self.stdout.write(name)
             self.stdout.write('-' * len(name))
             self.stdout.write('')

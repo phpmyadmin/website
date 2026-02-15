@@ -13,7 +13,7 @@ Django code for phpMyAdmin's website.
 Requirements
 ------------
 
-Website needs Python 3.7, additional dependencies are listed in `requirements.txt`.
+Website needs Python 3.13, additional dependencies are listed in `requirements.txt`.
 
 
 Security announcements and news

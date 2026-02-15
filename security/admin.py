@@ -23,6 +23,7 @@ from django.contrib import admin
 from security.models import PMASA
 
 
+@admin.register(PMASA)
 class PMASAAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'date', 'updated', 'summary', 'draft')
     search_fields = ('summary', 'description')
@@ -30,4 +31,3 @@ class PMASAAdmin(admin.ModelAdmin):
     list_filter = ('draft',)
 
 
-admin.site.register(PMASA, PMASAAdmin)

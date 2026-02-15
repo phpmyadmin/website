@@ -24,17 +24,20 @@ from django.contrib import admin
 from files.models import Release, Download, Theme
 
 
+@admin.register(Release)
 class ReleaseAdmin(admin.ModelAdmin):
     date_hierarchy = 'date'
     list_display = ('version', 'stable', 'date')
     search_fields = ('version',)
 
 
+@admin.register(Download)
 class DownloadAdmin(admin.ModelAdmin):
     list_display = ('filename', 'release', 'size', 'signed')
     search_fields = ('filename',)
 
 
+@admin.register(Theme)
 class ThemeAdmin(admin.ModelAdmin):
     list_display = (
         'display_name', 'version', 'filename', 'supported_versions', 'size',
@@ -43,15 +46,16 @@ class ThemeAdmin(admin.ModelAdmin):
     list_filter = ('supported_versions', 'show')
     actions = ('do_show', 'do_hide')
 
+    @admin.action(
+        description="Mark selected themes as shown"
+    )
     def do_show(self, request, queryset):
         queryset.update(show=True)
-    do_show.short_description = "Mark selected themes as shown"
 
+    @admin.action(
+        description="Mark selected themes as hidden"
+    )
     def do_hide(self, request, queryset):
         queryset.update(show=False)
-    do_hide.short_description = "Mark selected themes as hidden"
 
 
-admin.site.register(Release, ReleaseAdmin)
-admin.site.register(Download, DownloadAdmin)
-admin.site.register(Theme, ThemeAdmin)

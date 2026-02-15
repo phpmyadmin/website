@@ -23,7 +23,7 @@
 from xml.etree import cElementTree as ElementTree
 from django.test import TestCase, override_settings
 from django.urls import reverse
-from django.utils.timezone import utc, make_aware
+from django.utils.timezone import make_aware
 import httpretty
 import datetime
 from pmaweb.views import REDIRECT_MAP, github_tree, github_commit
@@ -184,7 +184,7 @@ class CDNTest(TestCase):
             ['/', '/news/', '/news/feed/', '/news/2000/1/1/slug/', '/news/1/'],
             title='title', slug='slug', author_id=1,
             date=make_aware(
-                datetime.datetime(year=2000, month=1, day=1), utc
+                datetime.datetime(year=2000, month=1, day=1), datetime.timezone.utc
             ),
         )
 
@@ -195,6 +195,6 @@ class CDNTest(TestCase):
             ['/'],
             title='title', url='https://example.net/',
             date=make_aware(
-                datetime.datetime(year=2000, month=1, day=1), utc
+                datetime.datetime(year=2000, month=1, day=1), datetime.timezone.utc
             ),
         )

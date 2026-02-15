@@ -19,7 +19,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from django.conf.urls import url
+from django.urls import path, re_path
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.views.generic import TemplateView
@@ -42,61 +42,61 @@ handler404 = 'pmaweb.views.notfound'
 
 urlpatterns = [
     # Feeds
-    url(
-        r'news/feed/$',
+    path(
+        'news/feed/',
         NewsFeed(),
         name='feed-news',
     ),
-    url(
-        r'files/feed/$',
+    path(
+        'files/feed/',
         ReleaseFeed(),
         name='feed-files',
     ),
-    url(
-        r'security/feed/$',
+    path(
+        'security/feed/',
         PMASAFeed(),
         name='feed-security',
     ),
 
     # XML sitemap
-    url(
-        r'^sitemap.xml$',
+    path(
+        'sitemap.xml',
         django.contrib.sitemaps.views.index,
         {'sitemaps': SITEMAPS},
         name='sitemap',
     ),
-    url(
-        r'^sitemap-(?P<section>.+)\.xml$',
+    path(
+        'sitemap-<path:section>.xml',
         django.contrib.sitemaps.views.sitemap,
         {'sitemaps': SITEMAPS},
         name='django.contrib.sitemaps.views.sitemap',
     ),
 
     # Pages
-    url(
-        r'^$',
+    path(
+        '',
         PMAView.as_view(
             template_name='index.html',
         ),
         name='home'
     ),
-    url(
-        r'^news/$',
+    path(
+        'news/',
         PostArchive.as_view(),
         name='news'
     ),
-    url(
-        r'^news/(?P<page>[0-9]+)/$',
+    path(
+        'news/<int:page>/',
         PostArchive.as_view(),
         name='news-page'
     ),
-    url(
-        r'^news/(?P<year>\d+)/(?P<month>\d+)/(?P<day>\d+)/(?P<slug>[^/]+)/$',
+    path(
+        'news/<int:year>/<int:month>/<int:day>/<str:slug>/',
         PostDetail.as_view(),
         name='news-item'
     ),
-    url(
-        r'^security/$',
+    path(
+        'security/',
         PMAView.as_view(
             template_name='security/index.html',
             title='Security',
@@ -105,34 +105,34 @@ urlpatterns = [
         ),
         name='security'
     ),
-    url(
+    re_path(
         r'^security/PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)/$',
         PMASAView.as_view(),
         name='security-issue'
     ),
-    url(
+    re_path(
         r'^security/PMASA-(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)/draft/$',
         PMASADraftView.as_view(),
         name='security-issue-draft'
     ),
-    url(
-        r'^support/$',
+    path(
+        'support/',
         PMAView.as_view(
             template_name='support.html',
             title='Support',
         ),
         name='support'
     ),
-    url(
-        r'^docs/$',
+    path(
+        'docs/',
         PMAView.as_view(
             template_name='docs.html',
             title='Documentation',
         ),
         name='docs'
     ),
-    url(
-        r'^try/$',
+    path(
+        'try/',
         PMAView.as_view(
             template_name='try.html',
             title='Try',
@@ -140,64 +140,64 @@ urlpatterns = [
         ),
         name='try'
     ),
-    url(
-        r'^contribute/$',
+    path(
+        'contribute/',
         PMAView.as_view(
             template_name='contribute.html',
             title='Contribute',
         ),
         name='contribute'
     ),
-    url(
-        r'^contractor/$',
+    path(
+        'contractor/',
         PMAView.as_view(
             template_name='contractor.html',
             title='Work for us',
         ),
         name='contractor'
     ),
-    url(
-        r'^sponsors/$',
+    path(
+        'sponsors/',
         PMAView.as_view(
             template_name='sponsors.html',
             title='Sponsors',
         ),
         name='sponsors'
     ),
-    url(
-        r'^sponsors/subscribe/$',
+    path(
+        'sponsors/subscribe/',
         PMAView.as_view(
             template_name='sponsors-subscribe.html',
             title='Subscribe to sponsorship',
         ),
         name='sponsors-subscribe'
     ),
-    url(
-        r'^themes/$',
+    path(
+        'themes/',
         PMAView.as_view(
             template_name='themes.html',
             title='Themes',
         ),
         name='themes'
     ),
-    url(
-        r'^license/$',
+    path(
+        'license/',
         PMAView.as_view(
             template_name='license.html',
             title='License',
         ),
         name='license'
     ),
-    url(
-        r'^team/$',
+    path(
+        'team/',
         PMAView.as_view(
             template_name='team.html',
             title='Team',
         ),
         name='team'
     ),
-    url(
-        r'^translations/$',
+    path(
+        'translations/',
         PMAView.as_view(
             template_name='translations.html',
             title='Translations',
@@ -206,48 +206,48 @@ urlpatterns = [
         ),
         name='translations'
     ),
-    url(
-        r'^awards/$',
+    path(
+        'awards/',
         PMAView.as_view(
             template_name='awards.html',
             title='Awards',
         ),
         name='awards'
     ),
-    url(
-        r'^about/$',
+    path(
+        'about/',
         PMAView.as_view(
             template_name='about.html',
             title='About',
         ),
         name='about'
     ),
-    url(
-        r'^15-years/$',
+    path(
+        '15-years/',
         PMAView.as_view(
             template_name='15-years.html',
             title='15 years',
         ),
         name='15-years'
     ),
-    url(
-        r'^donate/$',
+    path(
+        'donate/',
         PMAView.as_view(
             template_name='donate.html',
             title='Donate',
         ),
         name='donate'
     ),
-    url(
-        r'^about-website/$',
+    path(
+        'about-website/',
         PMAView.as_view(
             template_name='about-website.html',
             title='About website',
         ),
         name='about-website'
     ),
-    url(
-        r'^downloads/$',
+    path(
+        'downloads/',
         PMAView.as_view(
             template_name='downloads.html',
             title='Downloads',
@@ -256,8 +256,8 @@ urlpatterns = [
         ),
         name='downloads'
     ),
-    url(
-        r'^translate/$',
+    path(
+        'translate/',
         PMAView.as_view(
             template_name='translate.html',
             title='Translating',
@@ -266,35 +266,35 @@ urlpatterns = [
         ),
         name='translate'
     ),
-    url(
-        r'^develop/$',
+    path(
+        'develop/',
         PMAView.as_view(
             template_name='develop.html',
             title='Developing',
         ),
         name='develop'
     ),
-    url(
-        r'^contest/$',
+    path(
+        'contest/',
         PMAView.as_view(
             template_name='contest.html',
             title='Contest',
         ),
         name='contest'
     ),
-    url(
-        r'^files/$',
+    path(
+        'files/',
         ReleaseList.as_view(),
         name='files'
     ),
-    url(
+    re_path(
         r'^files/(?P<version>[a-z0-9.-]*)/$',
         ReleaseDetail.as_view(),
         name='release'
     ),
 
     # Swekey link from our documentation
-    url(
+    re_path(
         r'auth_key',
         RedirectView.as_view(
             pattern_name='home',
@@ -303,7 +303,7 @@ urlpatterns = [
     ),
 
     # favicon.ico
-    url(
+    re_path(
         r'^(?:home_page/)favicon\.ico$',
         RedirectView.as_view(
             url='/static/favicon.ico',
@@ -312,8 +312,8 @@ urlpatterns = [
     ),
 
     # robots.txt
-    url(
-        r'^robots.txt$',
+    path(
+        'robots.txt',
         TemplateView.as_view(
             template_name='robots.txt',
             content_type='text/plain'
@@ -321,16 +321,16 @@ urlpatterns = [
     ),
 
     # Machine parsable output
-    url(
-        r'^home_page/phpmyadmin.xml$',
+    path(
+        'home_page/phpmyadmin.xml',
         TemplateView.as_view(
             template_name='phpmyadmin.xml',
             content_type='application/xml'
         ),
         name='pad',
     ),
-    url(
-        r'^home_page/phpmyadmin-doap.xml$',
+    path(
+        'home_page/phpmyadmin-doap.xml',
         TemplateView.as_view(
             template_name='phpmyadmin-doap.xml',
             content_type='application/xml'
@@ -339,21 +339,21 @@ urlpatterns = [
     ),
 
     # Version information
-    url(
+    re_path(
         r'^(home_page/)?(latest|version)\.(php|txt)$',
         TemplateView.as_view(
             template_name='version/version.txt',
             content_type='text/plain'
         )
     ),
-    url(
-        r'^downloads/list\.txt$',
+    path(
+        'downloads/list.txt',
         TemplateView.as_view(
             template_name='version/list.txt',
             content_type='text/plain'
         )
     ),
-    url(
+    re_path(
         r'^downloads/phpMyAdmin-latest-'
         r'(?P<flavor>all-languages|english)'
         r'(?P<extension>\.zip|\.tar\.gz|\.tar\.xz|\.7z|\.tar\.bz2)'
@@ -361,7 +361,7 @@ urlpatterns = [
         latest_download,
         name='latest-download'
     ),
-    url(
+    re_path(
         r'^downloads/phpMyAdmin-latest-'
         r'(?P<flavor>source)'
         r'(?P<extension>\.tar\.xz)'
@@ -369,32 +369,32 @@ urlpatterns = [
         latest_download,
         name='latest-download'
     ),
-    url(
+    re_path(
         r'^(home_page/)?version\.js$',
         TemplateView.as_view(
             template_name='version/version.js',
             content_type='application/javascript'
         )
     ),
-    url(
+    re_path(
         r'^(?:home_page/)?version\.json$',
         version_json,
     ),
 
     # GiHub API proxy
-    url(
+    re_path(
         r'^api/commit/(?P<name>[a-f0-9]{40})/',
         github_commit,
     ),
-    url(
+    re_path(
         r'^api/tree/(?P<name>[a-zA-Z0-9_]*)/',
         github_tree,
     ),
 
 
     # Composer packages
-    url(
-        r'^packages\.json$',
+    path(
+        'packages.json',
         TemplateView.as_view(
             template_name='version/packages.json',
             content_type='application/json'
@@ -402,8 +402,8 @@ urlpatterns = [
     ),
 
     # Test backend
-    url(
-        r'^test/data$',
+    path(
+        'test/data',
         TemplateView.as_view(
             template_name='test-data',
             content_type='text/plain'
@@ -411,77 +411,77 @@ urlpatterns = [
     ),
 
     # Compatibility redirects
-    url(
+    re_path(
         r'^(?:documentation/changelog.php|[cC]hange[Ll]og.txt|ANNOUNCE.txt)',
         RedirectView.as_view(
             url='https://demo.phpmyadmin.net/master-config/index.php?route=/changelog',
             permanent=True,
         )
     ),
-    url(
-        r'^documentation/scripts/setup.php$',
+    path(
+        'documentation/scripts/setup.php',
         RedirectView.as_view(
             url='https://demo.phpmyadmin.net/master-config/setup/',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^phpdoc',
         RedirectView.as_view(
             url='https://develdocs.phpmyadmin.net/',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^(?:phpMyAdmin/)?Documentation.html$',
         RedirectView.as_view(
             url='https://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^(?:documentation|pma_localized_docs|localized_|manual/)',
         RedirectView.as_view(
             url='https://docs.phpmyadmin.net/',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^(?:snapshot|cvs)',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/phpmyadmin/',
             permanent=True,
         )
     ),
-    url(
-        r'^old-stuff/$',
+    path(
+        'old-stuff/',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/history',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^old-stuff/ChangeLogs/',
         RedirectView.as_view(
             url='https://github.com/phpmyadmin/history/tree/master/ChangeLogs',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^home_page/security/(?:index.php)?$',
         RedirectView.as_view(
             pattern_name='security',
             permanent=True,
         )
     ),
-    url(
-        r'^home_page/security/index.xml$',
+    path(
+        'home_page/security/index.xml',
         RedirectView.as_view(
             pattern_name='feed-security',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^home[_ ]?page/' +
         r'(?:security/PMASA|security/pmasa|\.\.\.ASA)-'
         r'(?P<year>20[0-9][0-9])-(?P<sequence>[0-9]+)\)?(\.php.*)?$',
@@ -490,43 +490,43 @@ urlpatterns = [
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^home[_ ]?page/security\.php$',
         redirect_security,
     ),
-    url(
+    re_path(
         r'^home[_ ]?page/$',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
         )
     ),
-    url(
-        r'^search/$',
+    path(
+        'search/',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
         )
     ),
-    url(
-        r'^home_page/sitemap\.xml$',
+    path(
+        'home_page/sitemap.xml',
         RedirectView.as_view(
             pattern_name='sitemap',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^home[_ /]?page/(?P<page>[a-z0-9-]*)\.php(.*)?$',
         redirect_home_page,
     ),
-    url(
+    re_path(
         r'gophp5',
         RedirectView.as_view(
             pattern_name='home',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'cgi-bin/mailman/listinfo/mailman',
         RedirectView.as_view(
             url='https://lists.phpmyadmin.net/',
@@ -534,21 +534,21 @@ urlpatterns = [
         )
     ),
     # Some weird URLs seen in wild
-    url(
+    re_path(
         r'^news/&.*',
         RedirectView.as_view(
             pattern_name='news',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^(?:download|files/\*/|downloads/\.PhpMyAdmin)$',
         RedirectView.as_view(
             pattern_name='download',
             permanent=True,
         )
     ),
-    url(
+    re_path(
         r'^(?:https?://www\.phpmyadmin\.net/|index\.html|' +
         r'logout|auth|login|auth_|auth%5C_key|' +
         r'SignonURL.*|logoutURL.*|' +
@@ -560,5 +560,5 @@ urlpatterns = [
     ),
 
     # Admin interface
-    url(r'^admin/', admin.site.urls),
+    re_path(r'^admin/', admin.site.urls),
 ]
