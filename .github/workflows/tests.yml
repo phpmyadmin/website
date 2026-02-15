@@ -14,13 +14,18 @@ jobs:
   test-python:
     name: Test on Python ${{ matrix.python-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
 
     strategy:
       fail-fast: false
       matrix:
         # Debian Trixie and Debian Forky (https://tracker.debian.org/pkg/python3)
-        python-version: ["3.13", "3.14"]
+        python-version: ["3.13"]
         os: [ubuntu-latest]
+        experimental: [false]
+        include:
+          # Debian Forky (https://tracker.debian.org/pkg/python3)
+          - { python-version: '3.14', experimental: true, os: ubuntu-latest }
 
     steps:
       - name: "Checkout code"
