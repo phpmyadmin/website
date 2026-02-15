@@ -61,9 +61,12 @@ Development
 -----------
 
 For development, first install dependencies. The ones needed for running the
-server are listed in ``requirements.txt``, for running testsuite in
-``requirements-test.txt``. You can install them using your distribution (the
-package names will usually add python- prefix) or using pip:
+server are listed in ``requirements.txt`` and the ones for running the testsuite are in
+``requirements-test.txt``.
+
+You can install them using pip or using packages from your distribution
+(see `Debian packages`_)
+to avoid to have to use ``--break-system-packages``.
 
 .. code-block:: sh
 
@@ -103,6 +106,34 @@ To add a new user (for `/admin/`):
 
 Deployment
 ----------
+
+On a Debian Trixie server:
+
+.. _Debian packages:
+
+.. code-block:: sh
+
+    # Install Python pip
+    apt install -y \
+    python3-django \
+    python3-dateutil \
+    python3-feedparser \
+    python3-django-markupfield \
+    python3-docutils \
+    python3-markdown \
+    python3-pytz \
+    python3-bs4 \
+    python3-django-compressor \
+    python3-django-appconf \
+    python3-mysqldb
+
+You might need to ensure the `PYTHONPATH` ENV variable is set to the correct value.
+Or commands will output ``ModuleNotFoundError: No module named 'django'`` or something very similar.
+
+.. code-block:: sh
+    # Define the PYTHONPATH variable
+    # Maybe add this to your ~/.bashrc ?
+    export PYTHONPATH="/usr/local/lib/python3.13/site-packages/:/usr/lib/python3/dist-packages/:${PYTHONPATH}"
 
 Cron jobs:
 
