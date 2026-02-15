@@ -129,9 +129,9 @@ The website generator is licensed under GNU GPL version 2 or later.
 
 Website itself uses some MIT licensed Javascript libraries:
 
-* jQuery <https://jquery.com/>
-* Bootstrap <https://getbootstrap.com/>
-* Colorbox <https://www.jacklmoore.com/colorbox/>
+* `jQuery <https://jquery.com/>`_
+* `Bootstrap <https://getbootstrap.com/>`_
+* `Colorbox <https://www.jacklmoore.com/colorbox/>`_
 
 The website content is licensed under Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported License.
