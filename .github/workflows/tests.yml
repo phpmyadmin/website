@@ -65,4 +65,4 @@ jobs:
         # Do not run this step on forked versions of the main repository (example: contributor forks)
         if: github.repository == 'phpmyadmin/website'
         with:
-          cli-args: "--format=php-clover build/logs/clover.xml --revision=${{ github.event.pull_request.head.sha || github.sha }}"
+          cli-args: "--format=php-clover coverage.xml --revision=${{ github.event.pull_request.head.sha || github.sha }}"
