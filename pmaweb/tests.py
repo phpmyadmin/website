@@ -24,6 +24,7 @@ from xml.etree import cElementTree as ElementTree
 from django.test import TestCase, override_settings
 from django.urls import reverse
 from django.utils.timezone import make_aware
+from django.http import HttpRequest
 import httpretty
 import datetime
 from pmaweb.views import REDIRECT_MAP, github_tree, github_commit
@@ -35,11 +36,13 @@ import json
 
 class GitHubAPITest(TestCase):
     def test_github_tree(self):
-        res = github_tree(None, "RELEASE_5_2_1")
+        req = HttpRequest()
+        res = github_tree(req, "RELEASE_5_2_1")
         self.assertEqual(200, res.status_code)
 
     def test_github_commit(self):
-        res = github_commit(None, "5b5e444adfb36905d3f04b19d973d5d26e60407d")
+        req = HttpRequest()
+        res = github_commit(req, "5b5e444adfb36905d3f04b19d973d5d26e60407d")
         self.assertEqual(200, res.status_code)
 
 class ViewTest(TestCase):
