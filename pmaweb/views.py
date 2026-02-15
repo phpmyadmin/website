@@ -73,6 +73,8 @@ REDIRECT_MAP = {
 
 GITHUB_API = 'https://api.github.com/'
 
+class InvalidGitHubToken(HttpResponse):
+    status_code = 503
 
 def redirect_home_page(request, page):
     """Redirect handled for old website links"""
@@ -99,7 +101,6 @@ def proxy_request(url):
         if settings.GITHUB_TOKEN:
             request.add_header('Authorization', 'Bearer {0}'.format(settings.GITHUB_TOKEN))
         handle = urllib.request.urlopen(request)
-        code = handle.getcode()
         content = handle.read()
     except IOError as err:
         content = str(err)
@@ -107,6 +108,9 @@ def proxy_request(url):
             content = err.fp.read()
         if hasattr(err, 'code') and err.code == 404:
             raise Http404(content)
+        if hasattr(err, 'code') and err.code == 401:
+            return InvalidGitHubToken(content)
+
         return HttpResponseServerError(content)
     return HttpResponse(
         content,
