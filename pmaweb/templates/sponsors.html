@@ -2,82 +2,72 @@
 {% load static %}
 
 {% block content %}
-
 <h2>Sponsors</h2>
+<p>The phpMyAdmin project extends a special thanks to the companies who wish to support us in a recurring way.</p>
 
-<p>
-The phpMyAdmin project extends a special thanks to the companies who wish to support us in a recurring way.
-</p>
-
-<h3>Diamond sponsor</h3>
-
-{% if sponsors.diamond|length == 0 %}
-Contact us to have your company listed here!
-{% endif %}
-
-{% for sponsor in sponsors.diamond %}
-{% include '_sponsor.html' with isList=True %}
-{% endfor %}
-
-{% if sponsors.platinum|length > 0 %}
-<h3>Platinum sponsor{% if sponsors.platinum|length > 1 %}s{% endif %}</h3>
-{% endif %}
-
-{% for sponsor in sponsors.platinum %}
-{% include '_sponsor.html' with isList=True %}
-{% endfor %}
-
-{% if sponsors.gold|length > 0 %}
-<h3>Gold sponsor{% if sponsors.gold|length > 1 %}s{% endif %}</h3>
-{% endif %}
-
-{% for sponsor in sponsors.gold %}
-{% include '_sponsor.html' with isList=True %}
-{% endfor %}
+{% include '_sponsors.html' with row_cols="row-cols-1 row-cols-md-4" isList=True %}
 
 <h3>Silver sponsor{% if sponsors.silver|length > 1 %}s{% endif %}</h3>
+<div class="border rounded mb-3 p-3 text-center">
+  {% if sponsors.silver|length == 0 %}
+  This space is available &mdash; <a href="{% url 'sponsors' %}#process">contact us</a> to get listed here.
+  {% endif %}
 
-<div class="logos">
-  {% for sponsor in sponsors.silver %}
-  {% include '_sponsor.html' with isList=True %}
-  {% endfor %}
+  <div class="row g-3">
+    {% for sponsor in sponsors.silver %}
+    {% include '_sponsor.html' with isList=True imgClass="silver" %}
+    {% endfor %}
+  </div>
 </div>
 
 <h3>Bronze sponsor{% if sponsors.bronze|length > 1 %}s{% endif %}</h3>
-
-<div class="logos">
+<div class="border rounded mb-3 p-3">
+  <div class="row g-3">
     {% for sponsor in sponsors.bronze %}
-    {% include '_sponsor.html' with isList=True %}
+    {% include '_sponsor.html' with isList=True imgClass="bronze" %}
     {% endfor %}
+  </div>
 </div>
 
-<h2 id="conditions">Becoming a sponsor</h2>
-
+<h2 id="process">Becoming a Sponsor</h2>
 {% include '_sponsorship_conditions.html' %}
 
-<h2 id="partners">Technology partners</h2>
+<h2 id="partners">Technology Partners</h2>
+<p>The phpMyAdmin project is grateful to our technology partners for their services.</p>
 
-<p>
-The phpMyAdmin project is grateful to our technology partners for their services.</p>
-
-<h3><a href="https://www.cdn77.com/"><img src="{% static 'images/cdn77_logo.png' %}" alt="CDN77.com" /></a></h3>
-
-<p>Our downloads are accelerated by <a href="https://www.cdn77.com/">content delivery network</a>.</p>
-
-<h3><a href="https://github.com/phpmyadmin"><img src="{% static 'images/github.png' %}" alt="GitHub" /></a></h3>
-
-<p>GitHub provides hosting for our source code and issue tracker.</p>
-
-<h3><a href="https://browserstack.com"><img src="{% static 'images/BrowserStackLogo.png' %}" alt="BrowserStack" /></a></h3>
-
-<p>BrowserStack is running our Selenium tests in real browsers.</p>
-
-<h3><a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin/"><img src="{% static 'images/scrutinizer.png' %}" alt="Scrutinizer" /></a></h3>
-
-<p>Scrutinizer helps us improve code quality.</p>
-
-<h3><a href="https://weblate.org/"><img src="{% static 'images/weblate-button.png' %}" alt="Weblate" /></a></h3>
-
-<p>Our translations are being done on <a href="https://hosted.weblate.org/">Hosted Weblate</a>.</p>
-
+<div class="row text-center">
+  <div class="col-12 col-md-6 col-lg-3 mb-3">
+    <a href="https://www.cdn77.com" target="_blank" rel="noopener" class="d-block bg-secondary bg-opacity-50 p-3 rounded shadow-sm">
+      <img src="{% static 'images/cdn77.svg' %}" alt="CDN77" class="img-fluid mx-auto d-block" style="height: 30px;">
+    </a>
+    <p class="mt-2">CDN77 provides a content delivery network to accelerate our downloads.</p>
+  </div>
+  <div class="col-12 col-md-6 col-lg-3 mb-3">
+    <a href="https://github.com/phpmyadmin" target="_blank" rel="noopener" class="d-block bg-secondary bg-opacity-50 p-3 rounded shadow-sm">
+      <img src="{% static 'images/github.svg' %}" alt="GitHub" class="img-fluid mx-auto d-block" style="height: 30px;">
+    </a>
+    <p class="mt-2">GitHub provides hosting for our source code and issue tracker.</p>
+  </div>
+  <div class="col-12 col-md-6 col-lg-3 mb-3">
+    <a href="https://browserstack.com" target="_blank" rel="noopener" class="d-block bg-secondary bg-opacity-50 p-3 rounded shadow-sm">
+      <img src="{% static 'images/browserstack.svg' %}" alt="BrowserStack" class="img-fluid mx-auto d-block" style="height: 30px;">
+    </a>
+    <p class="mt-2">BrowserStack is running our Selenium tests in real browsers.</p>
+  </div>
+  <div class="col-12 col-md-6 col-lg-3 mb-3">
+    <a href="https://scrutinizer-ci.com/g/phpmyadmin/phpmyadmin" target="_blank" rel="noopener" class="d-block bg-secondary bg-opacity-50 p-3 rounded shadow-sm">
+      <img src="{% static 'images/scrutinizer.svg' %}" alt="Scrutinizer" class="img-fluid mx-auto d-block" style="height: 30px;">
+    </a>
+    <p class="mt-2">Scrutinizer helps us improve code quality.</p>
+  </div>
+  <div class="col-12 col-md-6 col-lg-3 mb-3">
+    <a href="https://weblate.org" target="_blank" rel="noopener" class="d-block bg-secondary bg-opacity-50 p-3 rounded shadow-sm">
+      <img src="{% static 'images/weblate.svg' %}" alt="Weblate" class="img-fluid mx-auto d-block" style="height: 30px;">
+    </a>
+    <p class="mt-2">
+      Our translations are managed on
+      <a href="https://hosted.weblate.org/projects/phpmyadmin/" target="_blank" rel="noopener">Hosted Weblate</a>.
+    </p>
+  </div>
+</div>
 {% endblock %}

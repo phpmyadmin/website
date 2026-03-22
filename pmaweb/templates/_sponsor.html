@@ -1,11 +1,15 @@
 {% if isList == True and sponsor.sponsorList and sponsor.sponsorList == 'skip' %}
 {% else %}
 {% load static %}
+{% if divClass %}<div class="{{ divClass }}">{% endif %}
 {% if sponsor.logo %}
 <div class="logos">
-  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+  <a href="{{ sponsor.url }}" rel="{{ sponsor.rel }} noopener" target="_blank"><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="{{ imgClass }}"/></a>
 </div>
 {% else %}
- <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}>{{ sponsor.name }}</a>
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ sponsor.url }}" rel="{{ sponsor.rel }} noopener" target="_blank">{{ sponsor.name }}</a>
+    </div>
 {% endif %}
+{% if divClass %}</div>{% endif %}
 {% endif %}

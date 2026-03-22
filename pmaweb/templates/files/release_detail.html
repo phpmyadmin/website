@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
 
+{% block ogtags %}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ release.date|date:'c' }}">
+<meta property="article:author" content="https://www.facebook.com/pmyadmin/">
+<meta property="article:publisher" content="https://www.facebook.com/pmyadmin/">
+{% endblock %}
+
 {% block content %}
-
-<h2>phpMyAdmin {{ release.version }}</h2>
-
-<p>Released {{release.date|date:"Y-m-d"}}.</p>
-
-{{ release.release_notes }}
-
-{% include "_dllist.html" %}
-
-{% include "_verify.html" %}
-
+<article>
+  <header>
+    <h2>
+      <a href="{{ release.get_absolute_url }}">phpMyAdmin {{ release.version }}</a>
+    </h2>
+    <p class="text-muted mb-3">
+      <time datetime="{{ release.date|date:'c' }}" title="{{ release.date|date:'Y-m-d H:i' }}">
+        <svg class="bi"><use href="#calendar-event"></use></svg>
+        {{ release.date|date:'F j, Y' }}
+      </time>
+    </p>
+  </header>
+  <div>
+    {{ release.release_notes }}
+  </div>
+  {% include "_download_list.html" %}
+</article>
 {% endblock %}

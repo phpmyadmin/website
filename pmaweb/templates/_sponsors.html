@@ -1,42 +1,52 @@
 {% load static %}
 <div class="sponsors">
+  <h3>Diamond sponsor{% if sponsors.diamond|length > 1 %}s{% endif %}</h3>
+  <div class="border rounded mb-3 p-3">
+    {% if sponsors.diamond|length == 0 %}
+    This space is available &mdash; <a href="{% url 'sponsors' %}#process">contact us</a> to get listed here.
+    {% endif %}
+  </div>
 
-<h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>
+  {% if sponsors.diamond|length > 0 %}
+  <div class="border rounded mb-3 p-3">
+    <div class="row {{ row_cols|default:'row-cols-1 row-cols-md-2' }} g-3">
 
-<h3>Diamond sponsor{% if sponsors.diamond|length > 1 %}s{% endif %}</h3>
+      {% for sponsor in sponsors.diamond %}
+      {% include '_sponsor.html' with isList=isList imgClass="img-fluid diamond" divClass="col text-center" %}
+      {% endfor %}
 
-<div class="sp diamond">
-{% if sponsors.diamond|length == 0 %}
-This space is available &mdash; contact us to get listed here.
-{% endif %}
+    </div>
+  </div>
 
-{% for sponsor in sponsors.diamond %}
-<div class="sp diamond">
-  {% include '_sponsor.html' with isList=False %}
-</div>
-{% endfor %}
-</div>
+  {% endif %}
 
-{% if sponsors.platinum|length > 0 %}
-<h3>Platinum sponsor{% if sponsors.platinum|length > 1 %}s{% endif %}</h3>
-{% endif %}
+  {% if sponsors.platinum|length > 0 %}
+  <h3>Platinum Sponsor{% if sponsors.platinum|length > 1 %}s{% endif %}</h3>
 
-{% for sponsor in sponsors.platinum %}
-<div class="sp platinum">
-  {% include '_sponsor.html' with isList=False %}
-</div>
-{% endfor %}
+  <div class="border rounded mb-3 p-3">
+    <div class="row {{ row_cols|default:'row-cols-1 row-cols-md-2' }} g-3">
 
-{% if sponsors.gold|length > 0 %}
-<h3>Gold sponsor{% if sponsors.gold|length > 1 %}s{% endif %}</h3>
-{% endif %}
+      {% for sponsor in sponsors.platinum %}
+      {% include '_sponsor.html' with isList=isList imgClass="img-fluid platinum" divClass="col text-center" %}
+      {% endfor %}
 
-{% for sponsor in sponsors.gold %}
-<div class="sp gold">
-  {% include '_sponsor.html' with isList=False %}
-</div>
-{% endfor %}
+    </div>
+  </div>
 
-{% include '_sponsorship_note.html' %}
+  {% endif %}
 
+  {% if sponsors.gold|length > 0 %}
+  <h3>Gold Sponsor{% if sponsors.gold|length > 1 %}s{% endif %}</h3>
+
+  <div class="border rounded mb-3 p-3">
+    <div class="row {{ row_cols|default:'row-cols-1 row-cols-md-2' }} g-3">
+
+      {% for sponsor in sponsors.gold %}
+      {% include '_sponsor.html' with isList=isList imgClass="img-fluid gold"  divClass="col text-center" %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+  {% endif %}
 </div>

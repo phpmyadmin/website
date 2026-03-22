@@ -51,7 +51,7 @@ class PMASABaseView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PMASABaseView, self).get_context_data(**kwargs)
-        context['page_title'] = 'Security - {0}'.format(self.object)
+        context['page_title'] = self.object
         context['page_rss'] = reverse('feed-security')
         context['page_rss_title'] = 'phpMyAdmin security announcements'
         context['pmasa_year'] = self.object.year

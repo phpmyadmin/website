@@ -2,91 +2,81 @@
 {% load static %}
 
 {% block content %}
-
 <div class="row">
+  <div class="col-md-6">
+    <h2>Donations</h2>
 
-<div class="col-md-6">
+    <p>
+      As a free and open source software project, phpMyAdmin itself has almost no revenue. On the
+      other hand, we do have some expenses. Currently, most of the project's funds are
+      used to hire contractors for development and bug-fixing, and for travel expenses to allow team members to meet at conferences.
+    </p>
 
-<h2>Donations</h2>
+    <p>
+      For the general public, the suggested donation amount is 10 USD.
+    </p>
 
-{% include "_conservancy.html" %}
+    <h3>PayPal</h3>
 
-<p>
-As a free software project, phpMyAdmin has almost no revenues itself. On the
-other side, we have some expenses. Currently most of the project's funds are
-used to hire contractors for development and bug fixes, and for travel costs to allow team members to meet at conferences.
-</p>
+    <div class="text-center">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="UUZWPJLQ9D4E8" />
+        <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+      </form>
+    </div>
 
-<p>
-For the general public, the suggested donation amount is 10 USD.
-</p>
+    <p>
+      We invite you to contribute money to our project using the above PayPal button.
+      PayPal is one of the most used online payment methods, it also accepts all
+      major credit cards.
+    </p>
 
-<h3>PayPal</h3>
+    <h3>Check or Wire</h3>
 
-<div class="subscribe">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick" />
-<input type="hidden" name="hosted_button_id" value="UUZWPJLQ9D4E8" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form>
+    <p>
+      We can also accept donations drawn in USD from banks in the USA (donations from
+      banks outside of the US or not in USD should be handled by wire). Make checks
+      payable to "Software Freedom Conservancy, Inc." and place "Directed donation:
+      phpMyAdmin" in the memo field. Checks should be mailed to:
+    </p>
+
+    <p>
+      Software Freedom Conservancy, Inc.<br />
+      137 Montague ST STE 380<br />
+      BROOKLYN, NY 11201 USA<br />
+    </p>
+
+    <p>
+      Conservancy can accept wire donations, but the instructions vary depending on
+      the country of origin. Please contact
+      <a href="mailto:accounting@sfconservancy.org">accounting@sfconservancy.org</a>
+      for instructions.
+    </p>
+
+    <h3>Stock donations</h3>
+
+    <p>
+      Conservancy also accepts stock donations on behalf of the phpMyAdmin project.
+      If you would like to donate stock, please contact
+      <a href="mailto:accounting@sfconservancy.org">accounting@sfconservancy.org</a>
+      for instructions on how to initiate the transfer.
+    </p>
+
+    <p>
+      Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
+    </p>
+  </div>
+  <div class="col-md-6">
+    <h2 id="sponsors">Sponsorship</h2>
+
+    <p>
+      We welcome corporations (or individuals) to sponsor phpMyAdmin in a recurring way. The company can
+      receive various benefits depending on sponsorship level.
+    </p>
+
+    {% include '_sponsorship_conditions.html' %}
+  </div>
 </div>
-
-<p>
-We invite you to contribute money to our project using the above PayPal button.
-PayPal is one of the most used online payments methods, it also accepts all
-major credit cards.
-</p>
-
-<h3>Check or Wire</h3>
-
-<p>
-We can also accept donations drawn in USD from banks in the USA (donations from
-banks outside of the US or not in USD should be handled by wire). Make checks
-payable to "Software Freedom Conservancy, Inc." and place "Directed donation:
-phpMyAdmin" in the memo field. Checks should be mailed to:
-</p>
-
-<p>
-  Software Freedom Conservancy, Inc.<br />
-  137 Montague ST STE 380<br />
-  BROOKLYN, NY 11201 USA<br />
-</p>
-
-<p>
-Conservancy can accept wire donations, but the instructions vary depending on
-the country of origin. Please contact
-<a href="mailto:accounting@sfconservancy.org">accounting@sfconservancy.org</a>
-for instructions.
-</p>
-
-<h3>Stock donations</h3>
-
-<p>
-Conservancy also accepts stock donations on behalf of the phpMyAdmin project.
-If you would like to donate stock, please contact
-<a href="mailto:accounting@sfconservancy.org">accounting@sfconservancy.org</a>
-for instructions on how to initiate the transfer.
-</p>
-
-<p>
-Donations will be used for the promotion of phpMyAdmin, mostly by allowing team members to visit various conferences. Thanks.
-</p>
-
-</div>
-
-<div class="col-md-6">
-<h2 id="sponsors">Sponsorship</h2>
-
-
-<p>
-We welcome corporations (or individuals) to sponsor phpMyAdmin in a recurring way. The company can
-receive various benefits depending on sponsorship level.
-</p>
-
-{% include '_sponsorship_conditions.html' %}
-
-</div>
-</div>
-
 {% endblock %}

@@ -3,80 +3,71 @@
 
 {% block content %}
 
-<div class="floatbox">
 <h2>Getting help with phpMyAdmin</h2>
 
 <p>
-phpMyAdmin strives to be as helpful as possible during the install, but
-sometimes it happens: it just won't work. Here's a list of resources and
-information you can use when you're trying to get it working:
+  phpMyAdmin strives to be as helpful as possible during the install, but
+  sometimes it happens: it just won't work. Here's a list of resources and
+  information you can use when you're trying to get it working:
 </p>
 
 <h3>Recent versions of all programs</h3>
 
 <p>
-It's true, software has bugs. Those bugs get fixed, but if you're still running
-a broken version of PHP that doesn't handle arrays correctly, you'll never get
-phpMyAdmin (or any other PHP script) working properly. If at all possible try
-to run the most recent versions of MySQL, PHP, and phpMyAdmin.
+  It's true, software has bugs. Those bugs get fixed, but if you're still running
+  a broken version of PHP that doesn't handle arrays correctly, you'll never get
+  phpMyAdmin (or any other PHP script) working properly. If at all possible try
+  to run the most recent versions of MySQL, PHP, and phpMyAdmin.
 </p>
 
 <h3>Use the phpMyAdmin source</h3>
 
 <p>
-Many distributions ship with binary installs for phpMyAdmin (Gentoo's
-portage/emerge, Debian's dpkg/apt, etc). If you have a problem with one of
-those, seek help from the package maintainer. If you want to ask us, first get
-the source from <a href="{% url 'downloads' %}">our downloads page</a> and run through the
-<a href="https://docs.phpmyadmin.net/en/latest/setup.html#quick-install">quick install guide</a>.
+  Many distributions ship with binary installs for phpMyAdmin (Gentoo's
+  portage/emerge, Debian's dpkg/apt, etc). If you have a problem with one of
+  those, seek help from the package maintainer. If you want to ask us, first get
+  the source from <a href="{% url 'downloads' %}" target="_blank" rel="noopener">our downloads page</a> and run through the
+  <a href="https://docs.phpmyadmin.net/en/latest/setup.html#quick-install" target="_blank" rel="noopener">quick install guide</a>.
 </p>
 
 <h3>Read the documentation!</h3>
 
 <p>
-Yes, <a href="https://docs.phpmyadmin.net/">the documentation</a> is large, but
-that's because it has a lot of information in it. Search for your error message
-or problem. Read the <a href="https://docs.phpmyadmin.net/en/latest/faq.html">frequently asked questions</a> — many
-common problems are answered there.
+  Yes, <a href="https://docs.phpmyadmin.net/" target="_blank" rel="noopener">the documentation</a> is large, but
+  that's because it has a lot of information in it. Search for your error message
+  or problem. Read the <a href="https://docs.phpmyadmin.net/en/latest/faq.html" target="_blank" rel="noopener">frequently asked questions</a> — many
+  common problems are answered there.
 </p>
-</div>
 
-<div class="floatbox">
 <h2>Types of questions and where to ask</h2>
-<ul>
-  <li>How do I? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
-  <li>I got this error, why? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info">Stack Overflow</a></li>
-  <li>I got this web server error (like "404 - Not Found") &mdash; <a href="https://serverfault.com/tags/phpmyadmin">serverfault.com</a> or <a href="https://webmasters.stackexchange.com/tags/phpmyadmin">webmasters.stackexchange.com</a></li>
-  <li>I got this error on the current stable version and I'm sure it's a bug &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues">issue</a></li>
-  <li>I have an idea/request &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues">issue</a></li>
-  <li>I have found a security issue &mdash; Please see <a href="{% url 'security' %}">security page</a> for instructions how to report that</li>
-  <li>I have a question about the code itself &mdash; Use our <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">developers@phpmyadmin.net</a> mailing list</li>
-</ul>
-</div>
 
-<div class="floatbox">
+<ul>
+  <li>How do I? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info" target="_blank" rel="noopener">Stack Overflow</a></li>
+  <li>I got this error, why? &mdash; <a href="https://stackoverflow.com/tags/phpmyadmin/info" target="_blank" rel="noopener">Stack Overflow</a></li>
+  <li>I got this web server error (like "404 - Not Found") &mdash; <a href="https://serverfault.com/tags/phpmyadmin" target="_blank" rel="noopener">serverfault.com</a> or <a href="https://webmasters.stackexchange.com/tags/phpmyadmin" target="_blank" rel="noopener">webmasters.stackexchange.com</a></li>
+  <li>I got this error on the current stable version and I'm sure it's a bug &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues" target="_blank" rel="noopener">issue</a></li>
+  <li>I have an idea/request &mdash; Please file an <a href="https://github.com/phpmyadmin/phpmyadmin/issues" target="_blank" rel="noopener">issue</a></li>
+  <li>I have found a security issue &mdash; Please see <a href="{% url 'security' %}" target="_blank" rel="noopener">security page</a> for instructions how to report that</li>
+  <li>I have a question about the code itself &mdash; Use our <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers" target="_blank" rel="noopener">developers@phpmyadmin.net</a> mailing list</li>
+</ul>
+
 <h2>Mailing Lists</h2>
-<ul>
-    <li>For news/announcements: <a href="https://lists.phpmyadmin.net/mailman/listinfo/news">news@phpmyadmin.net</a></li>
-    <li>For developers: <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">developers@phpmyadmin.net</a></li>
-    <li>For translators: <a href="https://lists.phpmyadmin.net/mailman/listinfo/translators">translators@phpmyadmin.net</a></li>
-    <li>Git commit notifications: <a href="https://lists.phpmyadmin.net/mailman/listinfo/git">git@phpmyadmin.net</a></li>
-    <li><a href="https://lists.phpmyadmin.net/">Mailing lists overview</a></li>
-</ul>
-</div>
 
-<div class="floatbox">
+<ul>
+  <li>For news/announcements: <a href="https://lists.phpmyadmin.net/mailman/listinfo/news" target="_blank" rel="noopener">news@phpmyadmin.net</a></li>
+  <li>For developers: <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers" target="_blank" rel="noopener">developers@phpmyadmin.net</a></li>
+  <li>For translators: <a href="https://lists.phpmyadmin.net/mailman/listinfo/translators" target="_blank" rel="noopener">translators@phpmyadmin.net</a></li>
+  <li>Git commit notifications: <a href="https://lists.phpmyadmin.net/mailman/listinfo/git" target="_blank" rel="noopener">git@phpmyadmin.net</a></li>
+  <li><a href="https://lists.phpmyadmin.net/" target="_blank" rel="noopener">Mailing lists overview</a></li>
+</ul>
+
 <h2>Commercial Support</h2>
 
 <p>
-If you want to receive commercial support for phpMyAdmin, either as help with
-installation or implementing custom features, do not hesitate to contact the
-<a href="https://lists.phpmyadmin.net/mailman/listinfo/developers">development mailing list</a>.
-Please note that these services are not in any way connected with the phpMyAdmin team and we can not guarantee accurate information or quality of service for them.
+  If you want to receive commercial support for phpMyAdmin, either as help with
+  installation or implementing custom features, do not hesitate to contact the
+  <a href="https://lists.phpmyadmin.net/mailman/listinfo/developers" target="_blank" rel="noopener">development mailing list</a>.
+  Please note that these services are not in any way connected with the phpMyAdmin team and we can not guarantee accurate information or quality of service for them.
 </p>
-
-</div>
-
-<div class="clearer"></div>
 
 {% endblock %}

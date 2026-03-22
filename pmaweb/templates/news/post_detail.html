@@ -2,15 +2,27 @@
 {% load static %}
 
 {% block ogtags %}
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="{{post.date.isoformat }}" />
-<meta property="article:author" content="https://www.facebook.com/phpMyAdmin-157021164334486/" />
-<meta property="article:publisher" content="https://www.facebook.com/phpMyAdmin-157021164334486/" />
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ post.date|date:'c' }}">
+<meta property="article:author" content="https://www.facebook.com/pmyadmin/">
+<meta property="article:publisher" content="https://www.facebook.com/pmyadmin/">
 {% endblock %}
 
 {% block content %}
-
-<h2 class="entry-title"><a rel="bookmark" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-<p class="date"><abbr class="published" title="{{ post.date.isoformat }}">{{post.date|date:"Y-m-d"}}</abbr></p>
-<p class="entry-content">{{ post.body }}</p>
+<article>
+  <header>
+    <h2>
+      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </h2>
+    <p class="text-muted mb-3">
+      <time datetime="{{ post.date|date:'c' }}" title="{{ post.date|date:'Y-m-d H:i' }}">
+        <svg class="bi"><use href="#calendar-event"></use></svg>
+        {{ post.date|date:'F j, Y' }}
+      </time>
+    </p>
+  </header>
+  <div>
+    {{ post.body|safe }}
+  </div>
+</article>
 {% endblock %}

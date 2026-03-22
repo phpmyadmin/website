@@ -2,80 +2,75 @@
 {% load static %}
 
 {% block content %}
-
 <h2>Developing phpMyAdmin</h2>
-
 <p>
-phpMyAdmin is (as the name says) written in PHP and uses MySQL. Besides this,
-we also need people skilled in HTML, JavaScript and CSS, as these are all parts
-that make our user interface. You don't have to be an expert in all these areas
-- even knowing only one of them, you can still provide substantial help in
-creating or debugging some features.
+  phpMyAdmin is (as the name says) written in PHP and uses MySQL. Besides this,
+  we also need people skilled in HTML, JavaScript, and CSS, as these are all parts
+  that make our user interface. You don't have to be an expert in all these areas
+  - even knowing only one of them, you can still provide substantial help in
+  creating or debugging some features.
 </p>
 
 <h3>Source Code Repository</h3>
-{% include "_gitdl.html" %}
+{% include "_git_download.html" %}
 
 <p>
-To checkout the code you can use one of the following examples:
+  To get a copy of the code, you can use the following command:
 </p>
 
 <pre>
 git clone https://github.com/phpmyadmin/phpmyadmin.git
 </pre>
 
-<h3>Contributing code</h3>
+<h3>Contributing Code</h3>
 <p>
-The easiest way to contribute is to <a href="https://github.com/phpmyadmin">fork our code on github</a>
-and initiate a <a href="https://help.github.com/articles/using-pull-requests">pull request</a>
-once you are done with some feature/bugfix. Please keep your changes as small as possible; do not include unrelated changes like formatting, whitespace and new line characters.
+  The easiest way to contribute is to <a href="https://github.com/phpmyadmin" target="_blank" rel="noopener">fork our code on GitHub</a>
+  and submit a <a href="https://help.github.com/articles/using-pull-requests" target="_blank" rel="noopener">pull request</a>
+  once you are done with some feature/bugfix. Please keep your changes as small as possible; do not include unrelated changes like formatting, whitespace, and new line characters.
 </p>
 <p>
-Our developers will then merge your code or will guide you through
-improving the patch. The patch will be of course committed under your
-name and mail, so that you receive appropriate credits. Generally after
-merging several good patches you will be offered write access to our
-repository.
-</p>
-
-<h3>Simple tasks to start</h3>
-<p>
-If you are looking for some simple task where you can start, check out
-<a href="https://github.com/phpmyadmin/phpmyadmin/issues?q=is%3Aopen+is%3Aissue+label%3Anewbie">newbie tagged issues in our tracker</a>
-where you can find issues which might be good starting point for you.
+  Our developers will then merge your code or will guide you through
+  improving the patch. The patch will be, of course, committed under your
+  name and email, so that you receive appropriate credits. Generally, after
+  merging several good patches, you will be offered write access to our
+  repository.
 </p>
 
+<h3>Simple Tasks to Start</h3>
+<p>
+  If you are looking for some simple tasks where you can start, check out
+  <a href="https://github.com/phpmyadmin/phpmyadmin/issues?q=is%3Aopen+is%3Aissue+label%3Anewbie" target="_blank" rel="noopener">newbie tagged issues in our tracker</a>
+  where you can find issues which might be a good starting point for you.
+</p>
 
 <h3>Coding Standards</h3>
 <p>
-Standards should be obeyed in all cases when possible. Generated content
-should be valid XHTML 1.0 and CSS. PHP code should match <a
-href="https://pear.php.net/manual/en/standards.php">PEAR Coding Standards</a>
-and documented using <a href="https://www.phpdoc.org/">phpDocumentator</a>.
-More information about coding is available on <a href="https://wiki.phpmyadmin.net/pma/Developer_guidelines">
-our wiki</a>.
+  Standards should be obeyed in all cases when possible. Generated content
+  should be valid XHTML 1.0 and CSS. PHP code should match <a
+  href="https://pear.php.net/manual/en/standards.php" target="_blank" rel="noopener">PEAR Coding Standards</a>
+  and documented using <a href="https://www.phpdoc.org/" target="_blank" rel="noopener">phpDocumentor</a>.
+  More information about coding is available on <a href="https://wiki.phpmyadmin.net/pma/Developer_guidelines" target="_blank" rel="noopener">
+  our wiki</a>.
 </p>
 
-<h3>Documentation and other resources</h3>
-
+<h3>Documentation and Other Resources</h3>
 <p>
-If you don't know much about <a href="https://git-scm.com/">Git</a>,
-you can get some basic facts in
-<a href="https://en.wikipedia.org/wiki/Git_software">Wikipedia</a> or
-reference in the comprehensive book <a href="https://progit.org/">Pro Git</a>.
+  If you don't know much about <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>,
+  you can get some basic facts in
+  <a href="https://en.wikipedia.org/wiki/Git_software" target="_blank" rel="noopener">Wikipedia</a> or
+  reference in the comprehensive book <a href="https://progit.org" target="_blank" rel="noopener">Pro Git</a>.
 </p>
 
 <p>More documentation for developers can be found in the following places:</p>
 <ul>
-<li><a href="https://wiki.phpmyadmin.net/pma/Development">Developers wiki</a></li>
-<li><a href="https://wiki.phpmyadmin.net/pma/Developer_guidelines">Developer guidelines on wiki</a></li>
-<li><a href="https://develdocs.phpmyadmin.net/">phpMyAdmin's internals (autogenerated via phpDox)</a></li>
+  <li><a href="https://wiki.phpmyadmin.net/pma/Development" target="_blank" rel="noopener">Developers wiki</a></li>
+  <li><a href="https://wiki.phpmyadmin.net/pma/Developer_guidelines" target="_blank" rel="noopener">Developer guidelines on wiki</a></li>
+  <li><a href="https://develdocs.phpmyadmin.net" target="_blank" rel="noopener">phpMyAdmin's internals (autogenerated via phpDox)</a></li>
 </ul>
 
 <p>Several statistics about the repository are available:</p>
 <ul>
-<li><a href="https://www.openhub.net/projects/phpmyadmin">Open HUB</a></li>
-<li><a href="https://github.com/phpmyadmin/">github</a></li>
+  <li><a href="https://www.openhub.net/p/phpmyadmin" target="_blank" rel="noopener">Open Hub</a></li>
+  <li><a href="https://github.com/phpmyadmin" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
-
 {% endblock %}

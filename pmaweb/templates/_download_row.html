@@ -1,0 +1,33 @@
+<tr>
+  {% if latest %}
+    <td>
+      <a download href="{{ file.get_stable_url }}" class="download-button" data-sha256="{{ file.sha256 }}"
+         data-pgp="{{ file.get_stable_signed_url }}"
+         title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}">
+        {{ file.get_stable_filename }}
+      </a>
+    </td>
+  {% else %}
+    <td>
+      <a download href="{{ file.get_absolute_url }}" class="download-button" data-sha256="{{ file.sha256 }}"
+         data-pgp="{{ file.get_signed_url }}"
+         title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}">
+        {{ file.filename }}
+      </a>
+    </td>
+  {% endif %}
+  <td class="td-size">{{ file.size | filesizeformat }}</td>
+  <td>
+    {% if latest %}
+      {% if file.signed %}
+        [<a href="{{ file.get_stable_signed_url }}" download>PGP</a>]
+      {% endif %}
+      [<a href="{{ file.get_stable_checksum_url }}" download>SHA256</a>]
+    {% else %}
+      {% if file.signed %}
+        [<a href="{{ file.get_signed_url }}" download>PGP</a>]
+      {% endif %}
+      [<a href="{{ file.get_checksum_url }}" download>SHA256</a>]
+    {% endif %}
+  </td>
+</tr>
