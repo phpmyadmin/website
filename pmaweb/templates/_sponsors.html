@@ -3,10 +3,10 @@
 
 <h2><a href="{% url 'sponsors' %}">Sponsors</a></h2>
 
-<h3>Diamond sponsor</h3>
+<h3>Diamond sponsor{% if sponsors.diamond|length > 1 %}s{% endif %}</h3>
 
 <div class="sp diamond">
-{% if sponsors.platinum|length == 0 %}
+{% if sponsors.diamond|length == 0 %}
 This space is available &mdash; contact us to get listed here.
 {% endif %}
 
@@ -18,8 +18,7 @@ This space is available &mdash; contact us to get listed here.
 </div>
 
 {% if sponsors.platinum|length > 0 %}
-<h3>Platinum sponsor</h3>
-<!--<h3>Platinum sponsors</h3>-->
+<h3>Platinum sponsor{% if sponsors.platinum|length > 1 %}s{% endif %}</h3>
 {% endif %}
 
 {% for sponsor in sponsors.platinum %}
@@ -29,7 +28,7 @@ This space is available &mdash; contact us to get listed here.
 {% endfor %}
 
 {% if sponsors.gold|length > 0 %}
-<h3>Gold sponsors</h3>
+<h3>Gold sponsor{% if sponsors.gold|length > 1 %}s{% endif %}</h3>
 {% endif %}
 
 {% for sponsor in sponsors.gold %}

@@ -20,8 +20,7 @@ Contact us to have your company listed here!
 {% endfor %}
 
 {% if sponsors.platinum|length > 0 %}
-<h3>Platinum sponsor</h3>
-<!--<h3>Platinum sponsors</h3>-->
+<h3>Platinum sponsor{% if sponsors.platinum|length > 1 %}s{% endif %}</h3>
 {% endif %}
 
 {% for sponsor in sponsors.platinum %}
@@ -29,14 +28,14 @@ Contact us to have your company listed here!
 {% endfor %}
 
 {% if sponsors.gold|length > 0 %}
-<h3>Gold sponsors</h3>
+<h3>Gold sponsor{% if sponsors.gold|length > 1 %}s{% endif %}</h3>
 {% endif %}
 
 {% for sponsor in sponsors.gold %}
 {% include '_sponsor.html' %}
 {% endfor %}
 
-<h3>Silver sponsors</h3>
+<h3>Silver sponsor{% if sponsors.silver|length > 1 %}s{% endif %}</h3>
 
 <div class="logos">
   {% for sponsor in sponsors.silver %}
@@ -44,7 +43,7 @@ Contact us to have your company listed here!
   {% endfor %}
 </div>
 
-<h3>Bronze sponsors</h3>
+<h3>Bronze sponsor{% if sponsors.bronze|length > 1 %}s{% endif %}</h3>
 
 <div class="logos">
     {% for sponsor in sponsors.bronze %}
