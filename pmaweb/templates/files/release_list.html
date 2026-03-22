@@ -4,7 +4,7 @@
 
 <p>Archive of phpMyAdmin releases, you can find currently supported versions <a href="{% url 'downloads' %}">on downloads page</a>.</p>
 
-<table class="table table-condensed table-striped"> 
+<table class="table table-condensed table-striped">
 <thead>
 <tr>
     <th>Release</th>
@@ -21,7 +21,7 @@
     <td>{{ object.date|date:"Y-m-d" }}</td>
 {% with object.simpledownload as file %}
 {% if file %}
-    <td><a href="{{ file.get_absolute_url }}">{{ file.filename }}</a></td>
+    <td><a href="{{ file.get_absolute_url }}" title="Download {{ file.archive }} compressed release, {{ file.size | filesizeformat }}" data-sha256="{{ file.sha256 }}" data-pgp="{{ file.get_signed_url }}" download>{{ file.filename }}</a></td>
         <td class="size">{{ file.size | filesizeformat }}</td>
         <td>
         {% if file.signed %}
