@@ -1,0 +1,8 @@
+{% load static %}
+{% if sponsor.logo %}
+<div class="logos">
+  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+</div>
+{% else %}
+<a href="{{ sponsor.url }}">{{ sponsor.name }}</a>
+{% endif %}

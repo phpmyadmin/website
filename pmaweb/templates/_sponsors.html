@@ -6,113 +6,37 @@
 <h3>Diamond sponsor</h3>
 
 <div class="sp diamond">
+{% if sponsors.platinum|length == 0 %}
 This space is available &mdash; contact us to get listed here.
+{% endif %}
+
+{% for sponsor in sponsors.diamond %}
+<div class="sp diamond">
+  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+</div>
+{% endfor %}
 </div>
 
-<!--<h3>Platinum sponsor</h3>-->
+{% if sponsors.platinum|length > 0 %}
+<h3>Platinum sponsor</h3>
 <!--<h3>Platinum sponsors</h3>-->
+{% endif %}
 
+{% for sponsor in sponsors.platinum %}
+<div class="sp platinum">
+  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+</div>
+{% endfor %}
+
+{% if sponsors.gold|length > 0 %}
 <h3>Gold sponsors</h3>
+{% endif %}
 
+{% for sponsor in sponsors.gold %}
 <div class="sp gold">
-  <a href="https://www.vapehuset.se/"><img src="{% static 'images/vapehuset.png' %}" alt="Vapehuset" /></a>
+  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
 </div>
-
-<div class="sp gold">
-  <a href="https://www.4kdownload.com/"><img src="{% static 'images/4kdownload.png' %}" alt="4K Download" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://vape.se/"><img src="{% static 'images/vape.png' %}" alt="Vape.se" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://superviral.io"><img src="{% static 'images/superviral.png' %}" alt="Superviral.io" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.ramotion.com/"><img src="{% static 'images/ramotion.png' %}" alt="Ramotion.com" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://unaimytext.com/"><img src="{% static 'images/unaimytext.png' %}" alt="UnAiMyText" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://socialboss.org/"><img src="{% static 'images/socialboss.png' %}" alt="SocialBoss" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://quickbookstoolhub.com/"><img src="{% static 'images/quickbookstoolhub.png' %}" alt="Quickbooks Tool Hub" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://buzzoid.com/"><img src="{% static 'images/buzzoid.png' %}" alt="Buy Instagram Followers & Likes" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://twicsy.com/"><img src="{% static 'images/twicsy.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.famety.net/" rel="sponsored"><img src="{% static 'images/famety.png' %}" alt="buy real Instagram followers from Famety" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://copycopter.ai/"><img src="{% static 'images/copycopter.png' %}" alt="CopyCopter.ai" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.idigic.net/"><img src="{% static 'images/idigic.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://buycheapestfollowers.com"><img src="{% static 'images/buycheapestfollowers.png' %}" alt="buycheapestfollowers.com" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://bountii.co"><img src="{% static 'images/bountii.png' %}" alt="bountii.co" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://celebian.com"><img src="{% static 'images/celebian.png' %}" alt="celebian.com" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.follower24.de/"><img src="{% static 'images/follower24.png' %}" alt="Buy followers, likes and views for Instagram and TikTok" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://viralyft.com/"><img src="{% static 'images/viralyft.png' %}" alt="Viralyft" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.socialboosting.com"><img src="{% static 'images/socialboosting.png' %}" alt="Social Boosting" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.vapes.se/"><img src="{% static 'images/vapes-se.png' %}" alt="Vapes.se" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://socialkings.online/"><img src="{% static 'images/socialkings.png' %}" alt="Socialkings" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://instant-famous.com"><img src="{% static 'images/instant_famous.png' %}" alt="Instant Famous" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://writehuman.ai/"><img src="{% static 'images/write_human.png' %}" alt="WriteHuman Humanize AI Text" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://freecrash.game/"><img src="{% static 'images/free_crash_game.png' %}" alt="Free to play multiplier game" /></a>
-</div>
-
-<div class="sp gold">
-  <a href="https://www.socialwick.com"><img src="{% static 'images/socialwick.png' %}" alt="Social Wick" /></a>
-</div>
+{% endfor %}
 
 {% include '_sponsorship_note.html' %}
 

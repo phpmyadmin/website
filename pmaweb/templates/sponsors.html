@@ -10,157 +10,46 @@ The phpMyAdmin project extends a special thanks to the companies who wish to sup
 </p>
 
 <h3>Diamond sponsor</h3>
+
+{% if sponsors.diamond|length == 0 %}
 Contact us to have your company listed here!
+{% endif %}
 
-<!--<h3>Platinum sponsor</h3>-->
+{% for sponsor in sponsors.diamond %}
+{% include '_sponsor.html' %}
+{% endfor %}
+
+{% if sponsors.platinum|length > 0 %}
+<h3>Platinum sponsor</h3>
 <!--<h3>Platinum sponsors</h3>-->
+{% endif %}
 
+{% for sponsor in sponsors.platinum %}
+{% include '_sponsor.html' %}
+{% endfor %}
+
+{% if sponsors.gold|length > 0 %}
 <h3>Gold sponsors</h3>
+{% endif %}
 
-<div class="logos">
-  <a href="https://www.4kdownload.com/"><img src="{% static 'images/4kdownload.png' %}" alt="4K Download" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://vape.se/"><img src="{% static 'images/vape.png' %}" alt="Vape.se" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://superviral.io"><img src="{% static 'images/superviral.png' %}" alt="Superviral.io" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.ramotion.com/"><img src="{% static 'images/ramotion.png' %}" alt="Ramotion.com" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://unaimytext.com/"><img src="{% static 'images/unaimytext.png' %}" alt="UnAiMyText" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://socialboss.org/"><img src="{% static 'images/socialboss.png' %}" alt="SocialBoss" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://quickbookstoolhub.com/"><img src="{% static 'images/quickbookstoolhub.png' %}" alt="Quickbooks Tool Hub" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://buzzoid.com/"><img src="{% static 'images/buzzoid.png' %}" alt="Buy Instagram Followers & Likes" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://twicsy.com/"><img src="{% static 'images/twicsy.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.famety.net/" rel="sponsored"><img src="{% static 'images/famety.png' %}" alt="buy real Instagram followers from Famety" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://copycopter.ai/"><img src="{% static 'images/copycopter.png' %}" alt="CopyCopter.ai" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.idigic.net/"><img src="{% static 'images/idigic.png' %}" alt="Buy Instagram Followers, Likes & Views" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://buycheapestfollowers.com"><img src="{% static 'images/buycheapestfollowers.png' %}" alt="buycheapestfollowers.com" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://bountii.co"><img src="{% static 'images/bountii.png' %}" alt="bountii.co" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://celebian.com"><img src="{% static 'images/celebian.png' %}" alt="celebian.com" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.follower24.de/"><img src="{% static 'images/follower24.png' %}" alt="Buy followers, likes and views for Instagram and TikTok" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://viralyft.com/"><img src="{% static 'images/viralyft.png' %}" alt="Viralyft" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.socialboosting.com"><img src="{% static 'images/socialboosting.png' %}" alt="Social Boosting" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.vapes.se/"><img src="{% static 'images/vapes-se.png' %}" alt="Vapes.se" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://socialkings.online/"><img src="{% static 'images/socialkings.png' %}" alt="Socialkings" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://instant-famous.com"><img src="{% static 'images/instant_famous.png' %}" alt="Instant Famous" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://writehuman.ai/"><img src="{% static 'images/write_human.png' %}" alt="WriteHuman Humanize AI Text" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://freecrash.game/"><img src="{% static 'images/free_crash_game.png' %}" alt="Free to play multiplier game" /></a>
-</div>
-
-<div class="logos">
-  <a href="https://www.socialwick.com"><img src="{% static 'images/socialwick.png' %}" alt="Social Wick" /></a>
-</div>
+{% for sponsor in sponsors.gold %}
+{% include '_sponsor.html' %}
+{% endfor %}
 
 <h3>Silver sponsors</h3>
 
 <div class="logos">
+  {% for sponsor in sponsors.silver %}
+  {% include '_sponsor.html' %}
+  {% endfor %}
 </div>
 
 <h3>Bronze sponsors</h3>
 
 <div class="logos">
-<a href="https://www.topbargains.com.au/">Australian Coupons</a>
-<a href="https://www.loadview-testing.com">Load View Testing</a>
-<a href="https://www.entertainment-nation.co.uk/">Entertainment Nation</a>
-<a href="https://www.gtxgaming.co.uk/">GTX Gaming</a>
-<a href="https://www.chefworks.com/">Chef Works Inc.</a>
-<a href="https://www.heerlaw.com">Heer Law</a>
-<a href="https://withcandour.co.uk">Candour Digital Agency</a>
-<a href="https://www.minitool.com">MiniTool</a>
-<a href="https://www.clfip.com">Chhabra Law Firm</a>
-<a href="https://www.milemarkmedia.com/">Legal Marketing</a>
-<a href="https://skepp.com/">SKEPP Office Rental</a>
-<a href="https://rabatkongen.dk">Rabatkongen rabatkoder</a>
-<a href="https://www.partitionwizard.com/">MiniTool Partition Wizard</a>
-<a href="https://comradeweb.com/">Comrade Digital Marketing Agency</a>
-<a href="https://www.lazarlaw.com">Austin Divorce Attorney</a>
-<a href="https://allelydbogapps.dk/">Lydbøger</a>
-<a href="https://www.prijsvergelijken.nl">prijsvergelijken.nl</a>
-<a href="https://www.autonomer.nl/">Autonomer</a>
-<a href="https://elavtaldirekt.se">Elavtaldirekt</a>
-<a href="https://webhostland.com/">Webhostland</a>
-<a href="https://dealspotr.com">Dealspotr Online Coupons</a>
-<a href="https://tryggvi.se">Tryggvi</a>
-<a href="https://cheatevolution.com">Cheat Evolution</a>
-<a href="https://americancardrooms.com">American Cardrooms</a>
-<a href="https://www.theory7.net">Theory7.net</a>
-<a href="https://goldstarsocial.com/">Goldstar Social</a>
-<a href="https://www.sveaiptv.com/">Bästa IPTV i Sverige</a>
-<a href="https://www.worthepenny.com/">WorthEPenny</a>
-<a href="https://www.easeus.com/">EaseUS Software</a>
-<a href="https://www.pinskylawoffice.ca">Calgary Business Lawyers</a>
-<a href="https://nodepositpromocodes.com">No Deposit Promo Codes</a>
-<a href="https://www.socialfollowers.uk">Social Followers</a>
-<a href="https://www.lambdatest.com">LambdaTest</a>
-<a href="https://iboysoft.com">iBoysoft</a>
-<a href="https://poprey.com">Poprey</a>
-<a href="https://earthweb.com">Earthweb</a>
-<a href="https://www.honrev.com">HONREV Honest Reviews</a>
-<a href="https://www.pmpmg.com/">Law Firm Marketing Services</a>
-<a href="https://tyres.co.uk/">Tyres.co.uk</a>
-
+    {% for sponsor in sponsors.bronze %}
+    {% include '_sponsor.html' %}
+    {% endfor %}
 </div>
 
 <h2 id="conditions">Becoming a sponsor</h2>

@@ -30,6 +30,7 @@ import datetime
 
 from data.menu import MENU
 from data.screenshots import SCREENSHOTS
+from data.sponsors import SPONSORS
 from data.themes import CSSVERSIONS
 from data.awards import AWARDS
 
@@ -44,6 +45,7 @@ def basic(request):
         'themecssversions': CSSVERSIONS,
         'awards': AWARDS,
         'pmasas': PMASA.objects.filter(draft=False),
+        'sponsors': SPONSORS,
         'pmasa_year': PMASA.objects.filter(draft=False).order_by('-year').values_list('year', flat=True).first(),
         'translations': Translation.objects.all(),
         'demo_stable': Demo.objects.exclude(name__startswith='master'),
