@@ -24,7 +24,7 @@ from dateutil import parser
 from news.management.commands import FeedCommand
 from news.models import Planet
 
-URL = 'https://planet.phpmyadmin.net/rss20.xml'
+URL = 'https://blog.williamdes.eu/tags/phpmyadmin/atom.xml'
 
 
 class Command(FeedCommand):
@@ -33,6 +33,7 @@ class Command(FeedCommand):
 
     def process_feed(self, feed):
         for entry in feed.entries:
+
             params = {
                 'title': entry.title,
                 'date': parser.parse(entry.published),

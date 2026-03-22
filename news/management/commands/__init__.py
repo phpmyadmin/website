@@ -21,20 +21,28 @@
 #
 from django.core.management.base import BaseCommand, CommandError
 import feedparser
-from urllib.request import urlopen
+import urllib.request
 
+def fetch_url(url: str) -> feedparser.FeedParserDict:
+    """Helper for fetch blog posts"""
+    try:
+        request = urllib.request.Request(url)
+        request.add_header('User-Agent', 'phpMyAdmin/website blog post fetcher')
+        handle = urllib.request.urlopen(request)
+        content = handle.read()
+    except IOError as err:
+        content = str(err)
+        if hasattr(err, 'fp'):
+            content = err.fp.read()
+        raise CommandError(f'[{url}] {err.code}: {content}')
+    return feedparser.parse(content)
 
 class FeedCommand(BaseCommand):
-    url = None
+    url: str = ''
 
     def process_feed(self, feed):
         raise NotImplementedError()
 
     def handle(self, *args, **options):
-        handle = urlopen(self.url)
-        data = handle.read()
-        parsed = feedparser.parse(data)
-        if parsed.bozo == 1:
-            raise CommandError(parsed.bozo_exception)
-        else:
-            self.process_feed(parsed)
+        parsed = fetch_url(self.url)
+        self.process_feed(parsed)
