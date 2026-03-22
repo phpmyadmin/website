@@ -24,6 +24,7 @@
 from django.conf import settings
 
 import urllib.request
+from urllib.error import HTTPError
 import json
 
 URL = 'https://api.cdn77.com/v3/cdn/{id}/job/purge'
@@ -41,10 +42,13 @@ def perform(url, paths):
             'User-Agent': 'phpMyAdmin/website script',
         })
 
-    handle = urllib.request.urlopen(req)
-    response = handle.read()
-    decoded = json.loads(response)
-    handle.close()
+    try:
+        handle = urllib.request.urlopen(req)
+        response = handle.read()
+        decoded = json.loads(response)
+        handle.close()
+    except HTTPError as err:
+        raise Exception(f'[CDN] ({url}) HTTP error {err.code}: {err.reason}')
 
     if decoded['state'] != 'done' and decoded['state'] != 'queued':
         if 'errors' in decoded:
@@ -75,4 +79,3 @@ def purge_all_cdn():
         return
 
     return perform(URL_ALL.replace('{id}', settings.CDN_ID), [])
-
