@@ -27,11 +27,11 @@ from html import escape
 AWARDS = [
     {
         'image': 'images/awards/2021-database-management-software.png',
-        'link': 'https://digital.com/database-management-software/#phpMyAdmin',
+        'link': 'https://web.archive.org/web/20220228152506/https://digital.com/best-database-software/',
         'title': 'Best Database Management Software of 2021',
         'text': '''
 <p>phpMyAdmin was listed in
-<a href="https://digital.com/" target="_blank" rel="noopener">Digital.com's</a>
+<a href="https://web.archive.org/web/20220228152506/https://digital.com" target="_blank" rel="noopener">Digital.com's</a>
 <a href="%(link)s" target="_blank" rel="noopener">Best Database Management Software list</a>
 in January 2021.</p>
 ''',
