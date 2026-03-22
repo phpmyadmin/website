@@ -26,6 +26,7 @@ SPONSORS = {
     'diamond': [],
     'platinum': [],
     'gold': [
+        { 'url': 'https://www.vapehuset.se/', 'logo': 'vapehuset.png', 'name': 'Vapehuset', 'sponsorList': 'skip'},
         { 'url': 'https://www.4kdownload.com/', 'logo': '4kdownload.png', 'name': '4K Download'},
         { 'url': 'https://vape.se/', 'logo': 'vape.png', 'name': 'Vape.se'},
         { 'url': 'https://superviral.io', 'logo': 'superviral.png', 'name': 'Superviral.io'},

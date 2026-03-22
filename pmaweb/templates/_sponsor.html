@@ -1,3 +1,5 @@
+{% if isList == True and sponsor.sponsorList and sponsor.sponsorList == 'skip' %}
+{% else %}
 {% load static %}
 {% if sponsor.logo %}
 <div class="logos">
@@ -5,4 +7,5 @@
 </div>
 {% else %}
  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}>{{ sponsor.name }}</a>
+{% endif %}
 {% endif %}

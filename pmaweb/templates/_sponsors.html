@@ -12,7 +12,7 @@ This space is available &mdash; contact us to get listed here.
 
 {% for sponsor in sponsors.diamond %}
 <div class="sp diamond">
-  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+  {% include '_sponsor.html' with isList=False %}
 </div>
 {% endfor %}
 </div>
@@ -23,7 +23,7 @@ This space is available &mdash; contact us to get listed here.
 
 {% for sponsor in sponsors.platinum %}
 <div class="sp platinum">
-  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+  {% include '_sponsor.html' with isList=False %}
 </div>
 {% endfor %}
 
@@ -33,7 +33,7 @@ This space is available &mdash; contact us to get listed here.
 
 {% for sponsor in sponsors.gold %}
 <div class="sp gold">
-  <a href="{{ sponsor.url }}"{% if sponsor.rel %} rel="{{ sponsor.rel }}"{% endif %}><img src="{% static 'images/' %}{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+  {% include '_sponsor.html' with isList=False %}
 </div>
 {% endfor %}
 
