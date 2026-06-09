@@ -47,7 +47,7 @@ SPONSORS = {
         { 'url': 'https://www.socialboosting.com', 'logo': 'socialboosting.png', 'name': 'Social Boosting'},
         { 'url': 'https://www.vapes.se/', 'logo': 'vapes-se.png', 'name': 'Vapes.se'},
         { 'url': 'https://socialkings.online/', 'logo': 'socialkings.png', 'name': 'Socialkings'},
-        { 'url': 'https://instant-famous.com', 'logo': 'instant_famous.png', 'name': 'Instant Famous'},
+        { 'url': 'https://www.instant-famous.com/', 'logo': 'instant_famous.png', 'name': 'Instant Famous'},
         { 'url': 'https://writehuman.ai/', 'logo': 'write_human.png', 'name': 'WriteHuman Humanize AI Text'},
         { 'url': 'https://freecrash.game/', 'logo': 'free_crash_game.png', 'name': 'Free to play multiplier game'},
         { 'url': 'https://www.socialwick.com', 'logo': 'socialwick.png', 'name': 'Social Wick'},
