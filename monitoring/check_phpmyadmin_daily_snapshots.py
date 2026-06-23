@@ -27,7 +27,7 @@ download_url = 'https://www.phpmyadmin.net/downloads/'
 page = urllib.request.urlopen(download_url)
 soup = BeautifulSoup(page, 'html.parser')
 full_text = soup.get_text()
-split = full_text.split("generated")
+split = full_text.split("Daily snapshot from")
 
 today_date = datetime.date.today()
 
@@ -35,21 +35,21 @@ exit_code = 0
 
 # Process each instance of the keyword on the page, because we can have multiple QA and master versions
 for substring in split:
+  substring_pieces = substring.split()
+  if substring_pieces[0] == 'Downloads':
+    continue
+
   # Take only the date, not the entire page following it
-  generated_date = substring.split()[0]
-  # Strip off the trailing comma
-  if generated_date.endswith(','):
-    generated_date = generated_date[:-1]
-  if generated_date != 'phpMyAdmin':
-    converted_date = datetime.datetime.strptime(generated_date, '%Y-%m-%d').date()
-    difference = today_date - converted_date
-    # We give an extra day as a buffer to account for time zones
-    if difference > datetime.timedelta(days=1):
-      print("Problem found")
-      print(("Current date: " + today_date.strftime('%Y-%m-%d')))
-      print(("Snapshot date: " + generated_date))
-      exit_code = 1
-    else:
-      print("Everything is groovy")
+  generated_date = substring_pieces[0] + ' ' + substring_pieces[1] + ' ' + substring_pieces[2][:-1]
+  converted_date = datetime.datetime.strptime(generated_date, '%B %d, %Y').date()
+  difference = today_date - converted_date
+  # We give an extra day as a buffer to account for time zones
+  if difference > datetime.timedelta(days=1):
+    print("Problem found")
+    print(("Current date: " + today_date.strftime('%Y-%m-%d')))
+    print(("Snapshot date: " + generated_date))
+    exit_code = 1
+  else:
+    print("Everything is groovy")
 
 sys.exit(exit_code)
