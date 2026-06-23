@@ -51,6 +51,7 @@ SPONSORS = {
         { 'url': 'https://writehuman.ai/', 'logo': 'write_human.png', 'name': 'WriteHuman Humanize AI Text'},
         { 'url': 'https://freecrash.game/', 'logo': 'free_crash_game.png', 'name': 'Free to play multiplier game'},
         { 'url': 'https://www.socialwick.com', 'logo': 'socialwick.png', 'name': 'Social Wick'},
+        { 'url': 'https://smmturk.org/', 'logo': 'smmturk.png', 'name': 'SMMTurk SMM Panel Buy Followers, Likes and Views for Instagram, TikTok, YouTube and Facebook'},
 
     ],
     'bronze': [
