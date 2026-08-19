@@ -35,7 +35,7 @@ jobs:
           fetch-depth: 15
 
       - name: Use Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
 
