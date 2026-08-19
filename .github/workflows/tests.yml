@@ -58,7 +58,7 @@ jobs:
         run: coverage xml
 
       - name: Send coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         # Do not run this step on forked versions of the main repository (example: contributor forks)
         if: github.repository == 'phpmyadmin/website'
         with:
