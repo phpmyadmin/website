@@ -29,13 +29,13 @@ jobs:
 
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # Fetch some commits for Scrutinizer coverage upload
           fetch-depth: 15
 
       - name: Use Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -58,7 +58,7 @@ jobs:
         run: coverage xml
 
       - name: Send coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         # Do not run this step on forked versions of the main repository (example: contributor forks)
         if: github.repository == 'phpmyadmin/website'
         with:
